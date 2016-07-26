@@ -29,63 +29,62 @@
 <div id="page">
     <!--顶部导航-->
     <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <div class="">
-                        <span class="">欢迎来到易融圈</span>
-                        <a href="#" class="">[登录]</a>
-                        <a href="#" class="important">[免费注册]</a>
-                    </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="">
+                    <span class="">欢迎来到易融圈</span>
+                    <a href="#" class="">[登录]</a>
+                    <a href="#" class="important">[免费注册]</a>
                 </div>
-                <div class="col-md-4 col-md-offset-5 col-sm-6 col-xs-6">
-                    <div class="pull-right">
-                        <a href="#" class="btn btn-danger btn-xs" target="_blank">
-                            资本机构免费入驻
-                        </a>
+            </div>
+            <div class="col-md-4 col-md-offset-5 col-sm-6 col-xs-6">
+                <div class="pull-right">
+                    <a href="#" class="btn btn-danger btn-xs" target="_blank">
+                        资本机构免费入驻
+                    </a>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline">
+                        <li class=""><a>我的易融圈</a></li>
+                        <li class=""><a>手机易融圈</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="wxImg" class="pull-right hidden"><img src="img/weixin.jpg"></div>
+    </div>
+    <!--导航条-->
+    <div id="header">
+        <div class="container">
+            <nav class="navbar navbar-default ">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6 col-sm-6">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img class="img-responsive" src="img/logo.png" alt="投融界">
+                            </a>
+                        </div>
+                        <div class="navbar-text">专业融资服务平台</div>
                     </div>
-                    <div class="pull-right">
-                        <ul class="list-inline">
-                            <li class=""><a>我的易融圈</a></li>
-                            <li class=""><a>手机易融圈</a></li>
+                    <div class="col-xs-6 col-md-6 col-sm-6">
+                        <ul class=" nav navbar-nav navbar-right">
+                            <li class="active"><a title="首页">首页</a></li>
+                            <li><a title="找资金">找资金</a></li>
+                            <li><a title="选项目">选项目</a></li>
+                            <li><a title="活动">活动</a></li>
+                            <li><a title="投融服务">投融服务</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div id="wxImg" class="pull-right hidden"><img src="img/weixin.jpg"></div>
+
+
+            </nav>
         </div>
-    <!--导航条-->
-    <div id="header" >
-            <div class="container">
-                <nav class="navbar navbar-default ">
-                    <div  class="row">
-                        <div class="col-xs-6 col-md-6 col-sm-6">
-                            <div class="navbar-header" >
-                                <a class="navbar-brand"href="#">
-                                    <img src="img/logo.png" alt="投融界">
-                                </a>
-                            </div>
-                            <div class="navbar-text">专业融资服务平台</div>
-                        </div>
-                        <div class="col-xs-6 col-md-6 col-sm-6">
-                            <ul class=" nav navbar-nav navbar-right">
-                                <li class="active"><a title="首页">首页</a></li>
-                                <li><a title="找资金">找资金</a></li>
-                                <li><a title="选项目">选项目</a></li>
-                                <li><a title="活动">活动</a></li>
-                                <li><a title="投融服务">投融服务</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-                </nav>
-            </div>
-        </div>
+    </div>
     <div id="content">
         <!--资金检所链接-->
-        <div name="funds-link" >
-            <div class="container">
+        <div name="funds-link" class="panel container">
+            <div class=" panel-body" >
                 <div>
                     <i class="fa fa-vimeo-square" aria-hidden="true"></i>
                     <span>所有资金</span>
@@ -333,9 +332,10 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-3">
                         <div class="input-group">
-                            <input type="text"  class="form-control" placeholder="在当前条件下搜索">
+                            <input type="text" class="form-control" placeholder="在当前条件下搜索">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i>
+                            </button>
                         </span>
                         </div>
                     </div>
@@ -347,131 +347,144 @@
             <div class="container">
                 <div class="row">
                     <!--资金查询结果列表-->
-                    <div class="col-md-9 col-sm-9">
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#omplex-sort" data-toggle="tab">
-                                    综合排序
-                                    <i class="glyphicon glyphicon-menu-up"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#time-sort" data-toggle="tab">
-                                    更新时间
-                                    <i class="glyphicon glyphicon-menu-down"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="complex-sort">
-                                <!--资金信息-->
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
+                    <div class="col-md-9 col-sm-9 panel">
+                        <div class="panel-body">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#omplex-sort" data-toggle="tab">
+                                        综合排序
+                                        <i class="glyphicon glyphicon-menu-up"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#time-sort" data-toggle="tab">
+                                        更新时间
+                                        <i class="glyphicon glyphicon-menu-down"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="complex-sort">
+                                    <!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <!--分页-->
-                                <div>
-                                    <span class="pull-left">共有<i class="text-danger" >3000+</i>个符合要求的资金信息</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
+                                    </div>
+                                    <!--分页-->
+                                    <div>
+                                        <span class="pull-left">共有<i class="text-danger">3000+</i>个符合要求的资金信息</span>
                                     <span class="pull-right">
                                         <nav>
                                             <ul class="pagination">
@@ -498,115 +511,127 @@
                                             </ul>
                                         </nav>
                                     </span>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="time-sort">
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
-                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
-                                    <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
                                 </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                <div class="tab-pane fade" id="time-sort">
+                                    <div>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <div class="row"><!--资金标题-->
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                            <span class="pull-right">2016-07-25</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6">
-                                            <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                            <p>	<span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span></p>
-                                            <p>	<span class="pull-left">投资地区：四川省</span><span class="pull-right">投资行业：金融投资</span></p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                            <p>陈先生</p>
-                                            <p>重庆市某金融投资公司</p>
-                                        </div>
-                                        <div class="col-md-3 col-sm-3 col-xs-3">
-                                            <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
-                                        </div>
-                                    </div><!--资金信息-->
                                     <div>
-                                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                        <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                    </div><!--投递概况-->
-                                </div>
-                                <div>
-                                    <span class="pull-left">共有<i class="text-danger">3000+</i>个符合要求的资金信息</span>
+                                        <div class="row"><!--资金标题-->
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+                                                <span class="pull-right">2016-07-25</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
+                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
+                                                </p>
+                                                <p><span class="pull-left">投资地区：四川省</span><span
+                                                        class="pull-right">投资行业：金融投资</span></p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
+                                                <p>陈先生</p>
+                                                <p>重庆市某金融投资公司</p>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <a class="btn btn-warning" role="button" data-toggle="modal"
+                                                   data-target="#fundsModal">投递项目</a>
+                                            </div>
+                                        </div><!--资金信息-->
+                                        <div>
+                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
+                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
+                                        </div><!--投递概况-->
+                                    </div>
+                                    <div>
+                                        <span class="pull-left">共有<i class="text-danger">3000+</i>个符合要求的资金信息</span>
                                     <span class="pull-right">
                                         <nav>
                                             <ul class="pagination">
@@ -633,25 +658,31 @@
                                             </ul>
                                         </nav>
                                     </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <!--优质信息推荐-->
                     <div class="col-md-3 col-sm-3">
-                        <h6>优质信息推荐</h6>
-                        <!--优质信息模块-->
-                        <div>
-                            <img src="img/quality-funds.jpg" >
-                            <p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
-                            <p>所在地区:浙江省</p>
-                            <p>所属行业:金融投资</p>
-                        </div>
-                        <div>
-                            <img src="img/quality-funds.jpg" >
-                            <p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
-                            <p>所在地区:浙江省</p>
-                            <p>所属行业:金融投资</p>
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h6>优质信息推荐</h6>
+                                <!--优质信息模块-->
+                                <div>
+                                    <img class="img-responsive" src="img/quality-funds.jpg">
+                                    <p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
+                                    <p>所在地区:浙江省</p>
+                                    <p>所属行业:金融投资</p>
+                                </div>
+                                <div>
+                                    <img class="img-responsive" src="img/quality-funds.jpg">
+                                    <p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
+                                    <p>所在地区:浙江省</p>
+                                    <p>所属行业:金融投资</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -660,7 +691,7 @@
     </div>
 </div>
 <!--投递项目模态框-->
-<div class="modal fade" id="fundsModal" role="dialog" aria-hidden="true" >
+<div class="modal fade" id="fundsModal" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -672,33 +703,38 @@
                 <img src="img/drop_in_box_step.png" class="center-block">
                 <form class="form-horizontal">
                     <div name="Contacts" class="form-group">
-                        <label for="inputContacts" class="col-sm-3 col-md-3 control-label"><span class="text-danger">*</span>联系人:</label>
+                        <label for="inputContacts" class="col-sm-3 col-md-3 control-label"><span
+                                class="text-danger">*</span>联系人:</label>
                         <div class="col-md-6 col-sm-6">
                             <input type="text" class="form-control" id="inputContacts">
                         </div>
                     </div>
-                    <div name="Phone"class="form-group">
-                        <label for="inputPhone" class="control-label col-md-3 col-sm-3"><span class="text-danger">*</span>手机号码:</label>
+                    <div name="Phone" class="form-group">
+                        <label for="inputPhone" class="control-label col-md-3 col-sm-3"><span
+                                class="text-danger">*</span>手机号码:</label>
                         <div class="col-md-6 col-sm-6">
                             <input type="text" class="form-control" id="inputPhone">
                         </div>
                     </div>
                     <div name="ProjectTittle" class="form-group">
-                        <label for="inputProjectTittle" class="control-label col-md-3 col-sm-3"><span class="text-danger">*</span>项目标题:</label>
+                        <label for="inputProjectTittle" class="control-label col-md-3 col-sm-3"><span
+                                class="text-danger">*</span>项目标题:</label>
                         <div class="col-md-6 col-sm-6">
                             <input type="text" class="form-control" id="inputProjectTittle">
                         </div>
                     </div>
-                    <div name="ProjectDescription"class="form-group">
-                        <label for="inputProjectDescription" class="control-label col-md-3 col-sm-3"><span class="text-danger">*</span>项目描述:</label>
+                    <div name="ProjectDescription" class="form-group">
+                        <label for="inputProjectDescription" class="control-label col-md-3 col-sm-3"><span
+                                class="text-danger">*</span>项目描述:</label>
                         <div class="col-md-6 col-sm-6">
-                            <textarea class="form-control" id="inputProjectDescription" maxlength="500" data-rule="required|minlength[20]|maxlength[500]"></textarea>
+                            <textarea class="form-control" id="inputProjectDescription" maxlength="500"
+                                      data-rule="required|minlength[20]|maxlength[500]"></textarea>
                         </div>
                     </div>
                     <div name="ProjectFile" class="form-group">
                         <label for="inputProjectTittle" class="control-label col-md-3 col-sm-3">商业计划书:</label>
                         <div class="col-md-3 col-sm-3">
-                            <input type="file" class="form-control" id="inputProjectFile" >
+                            <input type="file" class="form-control" id="inputProjectFile">
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <span class="help-block">为了提升资金方的回复率，请上传您的商业计划书</span>
@@ -709,19 +745,20 @@
                         <div class="col-md-3 col-sm-3">
                             <input type="text" class="form-control" id="verificationCode" placeholder="输入计算结果">
                         </div>
-                        <img alt="验证码">
+                        <img class="img-responsive" alt="验证码">
                     </div>
                     <div name="verificationPhone" class="form-group">
-                        <label for="verificationPhone" class="control-label col-md-3 col-sm-3"><span class="text-danger">*</span>手机验证</label>
+                        <label for="verificationPhone" class="control-label col-md-3 col-sm-3"><span
+                                class="text-danger">*</span>手机验证</label>
                         <div class="col-md-5 col-sm-5">
                             <input type="text" class="form-control" id="verificationPhone">
                         </div>
                         <button type="button" class="btn btn-sm btn-default">发送验证码</button>
                     </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger center-block" type="submit">投递</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger center-block">投递</button>
             </div>
         </div>
     </div>
