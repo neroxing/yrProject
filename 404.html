@@ -21,6 +21,11 @@
 
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
+
+	<!-- animate css -->
+	<link rel="stylesheet" href="css/animate.css">
+
+
 	<style type="text/css">
 		.wrapper{
 			background-color: var(--content-light-bg);
@@ -46,8 +51,9 @@
 			<div class="col-sm-5 v-outter-table">
 				<div class="v-table-cell">
 					<div id="animate-font" class="center-block">
-						<div class="fa fa-chain-broken" aria-hidden="true"></div>
-						<div class="fa fa-link hide" aria-hidden="true"></div>
+					    <div class="col-sm-12 fa fa-link animated rollOut" aria-hidden="true"></div>
+						<div class="col-sm-12 fa fa-chain-broken animated zoomIn" aria-hidden="true"></div>
+						
 					</div>
 				</div>
 			</div>
@@ -107,7 +113,7 @@
 	<script src="js/请输入.js"></script>-->
 
 	<script type="text/javascript">
-
+	//$('.fa-link').addClass('rollOut');
 	</script>
 </body>
 </html>
