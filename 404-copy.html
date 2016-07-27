@@ -22,6 +22,7 @@
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
 
+
 	<style type="text/css">
 		.wrapper{
 			background-color: var(--content-light-bg);
@@ -30,90 +31,55 @@
 		#animate-font{
 			font-size: 200px;
 			width: 200px;
+			height: 200px;
 		}
-		/*!
-		* animate.css -http://daneden.me/animate
-		* Version - 3.5.1
-		* Licensed under the MIT license - http://opensource.org/licenses/MIT
-		*
-		* Copyright (c) 2016 Daniel Eden
-		*/
-
-		.animated {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
+		#animate-font div {
+			position: absolute;
 		}
 
-		@-webkit-keyframes rollOut {
-			from {
+		/* animate.css -http://daneden.me/animate */
+			@keyframes blink-hide {
+				from {
+					opacity: 1;
+				}
+				30%{
+					opacity: 0;
+				}
+				70%{
+					opacity: 0;
+				}
+				100%{
+					opacity: 1;
+				}
+			}
+			@keyframes blink-show {
+				from {
+					opacity: 0;
+				}
+				40%{
+					opacity: 1;
+				}
+				60%{
+					opacity: 1;
+				}
+				100%{
+					opacity: 0;
+				}
+			}
+			.blink-hide{
 				opacity: 1;
 			}
-
-			to {
+			.wrapper:hover .blink-hide{
+				animation-name: blink-hide;
+				animation-duration: 0.5s;
+			}
+			.blink-show{
 				opacity: 0;
-				-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-				transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
 			}
-		}
-
-		@keyframes rollOut {
-			from {
-				opacity: 1;
+			.wrapper:hover .blink-show{
+				animation-name: blink-show;
+				animation-duration: 0.5s;
 			}
-
-			to {
-				opacity: 0;
-				-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-				transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-			}
-		}
-
-		.rollOut {
-			-webkit-animation-name: rollOut;
-			animation-name: rollOut;
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
-		}
-
-		@-webkit-keyframes zoomIn {
-			from {
-				opacity: 0;
-				bottom: 150px;
-			}
-
-			50% {
-				opacity: 1;
-				bottom: 150px;
-			}
-			100%{
-				bottom: 150px;
-			}
-		}
-
-		@keyframes zoomIn {
-			from {
-				opacity: 0;
-				bottom: 120px;
-			}
-
-			50% {
-				opacity: 1;
-				bottom: 120px;
-			}
-			100%{
-				bottom: 120px;
-			}
-		}
-
-		.zoomIn {
-		-webkit-animation-name: zoomIn;
-		animation-name: zoomIn;
-		-webkit-animation-delay: 2s;
-		animation-delay: 2s;
-
-		}
 	</style>
 
 </head>
@@ -130,9 +96,9 @@
 			<div class="col-sm-5 v-outter-table">
 				<div class="v-table-cell">
 					<div id="animate-font" class="center-block">
-					    <div class="col-sm-12 fa fa-link animated rollOut" aria-hidden="true"></div>
-						<div class="col-sm-12 fa fa-chain-broken animated zoomIn" aria-hidden="true"></div>
-						
+						<div class="fa fa-chain-broken animated blink-hide" aria-hidden="true">
+						</div>
+						<div class="fa fa-link animated blink-show" aria-hidden="true"></div>
 					</div>
 				</div>
 			</div>
@@ -192,7 +158,6 @@
 	<script src="js/请输入.js"></script>-->
 
 	<script type="text/javascript">
-	//$('.fa-link').addClass('rollOut');
 	</script>
 </body>
 </html>
