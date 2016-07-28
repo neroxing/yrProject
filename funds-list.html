@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <meta name="title" content="">
     <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-euiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="robots" content="index, follow">
 
     <!-- Bootstrap css -->
@@ -84,257 +84,601 @@
     <div id="content">
         <!--资金检所链接-->
         <div name="funds-link" class="panel container">
-            <div class=" panel-body" >
-                <div>
+            <div class=" panel-body">
+                <div class="url" property="http://115.236.94.196:30000/blade/capital/query">
                     <i class="fa fa-vimeo-square" aria-hidden="true"></i>
                     <span>所有资金</span>
-                    <a>
-                        投资方式：股权投资
-                        <i class="glyphicon glyphicon-remove"></i>
-                    </a>
+                    <!-- <a>
+                         投资方式：股权投资
+                         <i class="glyphicon glyphicon-remove"></i>
+                     </a>-->
                 </div>
-                <div class="row ">
-                    <div class="col-md-2 col-sm-2  col-xs-2">
-                        <span>投资方式:</span>
-                        <a>股权投资</a>
+                <div class="parturl">
+                    <div id="Investment" property="投资方式">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>投资方式:</span>
+                                <a property="Investment" href="title=测试">股权投资</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>债权投资</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>金融投资</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>BT/BOT 项目投资</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>其他投资</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2"></div>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-sm-2  col-xs-2">
-                        <a>债权投资</a>
+                    <div id="fundsType" property="资金类型">
+                        <div class="fundsradio">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <span>资金类型:</span>
+                                    <a property="fundsType">个人资金</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>企业资金</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>天使投资</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>VC投资</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>PE投资</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a class="btn btn-default btn-xs" onclick="checkFunstypeOpen()">
+                                        <span><i class="glyphicon glyphicon-plus"></i></span>
+                                        <span>多选</span>
+                                    </a>
+                                    <a data-toggle="collapse" href="#fundsType-hide" class="more">更多<i
+                                            class="caret"></i></a>
+                                </div>
+                            </div>
+                            <div id="fundsType-hide" class="collapse">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType">小额贷款</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>典当公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>担保公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>金融租赁</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>投资公司</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>商业银行</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>基金公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>证券公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>信托公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>资产管理</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>其他资金</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fundscheck hidden">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <span>资金类型:</span>
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            个人资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            VC投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            PE投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a data-toggle="collapse" class="less" onclick="checkFunstypeClose()">收起<i
+                                            class="fa fa-caret-up"></i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            个人资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            VC投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="funds">
+                                            PE投资
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-default btn-xs" onclick="fundsCheckSubmit()">确定</button>
+                                <button class="btn btn-default btn-xs" onclick="checkFunstypeClose()">取消</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-sm-2  col-xs-2">
-                        <a>金融投资</a>
+                    <div id="location" property="所在地区">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>所在地区:</span>
+                                <a>广东省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>北京</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>山东省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>上海</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>江苏省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a data-toggle="collapse" href="#fundsLocation" class="more">更多<i class="caret"></i></a>
+                            </div>
+                        </div>
+                        <div id="fundsLocation" class="collapse">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>浙江省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>河南省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>四川省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>河北省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>湖北省</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>福建省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>湖南省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>陕西省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>重庆</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>辽宁省</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>安徽省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>广西省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>山西省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>云南省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>江西省</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>贵州省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>广西省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>山西省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>云南省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>江西省</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-sm-2  col-xs-2">
-                        <a>BT/BOT 项目投资</a>
+                    <div id="Industry">
+                        <div class="Industryradio">
+                            <div class="row ">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <span>投资行业:</span>
+                                    <a>金融投资</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>房地产</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>能源</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>化学化工</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>节能环保</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a class="btn btn-default btn-xs" onclick="checkIndustryOpen()">
+                                        <span><i class="glyphicon glyphicon-plus"></i></span>
+                                        <span>多选</span>
+                                    </a>
+                                    <a data-toggle="collapse" href="#investmentIndustry-hide" class="more">更多<i
+                                            class="caret"></i></a>
+                                </div>
+                            </div>
+                            <div id="investmentIndustry-hide" class="collapse">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>金融投资</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>房地产</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>能源</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>化学化工</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a>节能环保</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Industrycheck hidden">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <span>投资行业:</span>
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            金融投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            房地产
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            能源
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            化学化工
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            节能环保
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a data-toggle="collapse" class="less" onclick="checkIndustryClose()">收起<i
+                                            class="fa fa-caret-up"></i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            个人资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            VC投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            企业资金
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="" name="industry">
+                                            PE投资
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-default btn-xs" onclick="industryCheckSubmit()">确定</button>
+                                <button class="btn btn-default btn-xs" onclick="checkIndustryClose()">取消</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-sm-2  col-xs-2">
-                        <a>其他投资</a>
+                    <div id="investmentLocation" property="投资地区">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>投资地区:</span>
+                                <a>广东省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>北京</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>山东省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>上海</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>江苏省</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a data-toggle="collapse" href="#investmentLocation-hide" class="more">更多<i
+                                        class="caret"></i></a>
+                            </div>
+                        </div>
+                        <div id="investmentLocation-hide" class="collapse">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>广东省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>北京</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>山东省</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>上海</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>江苏省</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-sm-2  col-xs-2"></div>
+                    <div id="investmentAmount" property="投资金额">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>投资金额:</span>
+                                <a>不限</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>1万-10万</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>10万-50万</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>50万-100万</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>100万-500万</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a data-toggle="collapse" href="#investmentAmount-hide" more>更多<i class="caret"></i></a>
+                            </div>
+                        </div>
+                        <div id="investmentAmount-hide" class="collapse">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>不限</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>1万-10万</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>10万-50万</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>50万-100万</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a>100万-500万</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="investmentType" property="投资类型">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>投资类型:</span>
+                                <a>独资/投资建厂</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>参股合作</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>收购/并购</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>其他合作方式</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="investmentStage" property="投资阶段">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>投资阶段:</span>
+                                <a>钟子期</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>初创期</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>成长期</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>扩张期</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>成熟期</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="riskControl" property="风控要求">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>风控要求:</span>
+                                <a>其他</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>信用</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>担保</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>抵押</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden" id="riskAppetite" property="风险偏好">
+                        <div class="row ">
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <span>风险偏好:</span>
+                                <a>进取型</a>
+                            </div>
+                            <div class="col-md-2 col-sm-2  col-xs-2">
+                                <a>稳健性</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="row ">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <span>资金类型:</span>
-                            <a>个人资金</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>企业资金</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>天使投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>VC投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>PE投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a class="btn btn-default btn-xs">
-                                <span><i class="glyphicon glyphicon-plus"></i></span>
-                                <span>多选</span>
-                            </a>
-                            <a>更多</a>
-                            <a><i class="caret"></i></a>
-                        </div>
-                    </div>
-                    <div class="row hidden">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>个人资金</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>企业资金</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>天使投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>VC投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>PE投资</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row ">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <span>所在地区:</span>
-                            <a>广东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>北京</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>山东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>上海</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>江苏省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a>更多</a>
-                            <a><i class="caret"></i></a>
-                        </div>
-                    </div>
-                    <div class="row hidden">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>广东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>北京</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>山东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>上海</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>江苏省</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row ">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <span>投资行业:</span>
-                            <a>金融投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>房地产</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>能源</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>化学化工</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>节能环保</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a class="btn btn-default btn-xs">
-                                <span><i class="glyphicon glyphicon-plus"></i></span>
-                                <span>多选</span>
-                            </a>
-                            <a>更多</a>
-                            <a><i class="caret"></i></a>
-                        </div>
-                    </div>
-                    <div class="row hidden">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>金融投资</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>房地产</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>能源</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>化学化工</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>节能环保</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row ">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <span>投资地区:</span>
-                            <a>广东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>北京</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>山东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>上海</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>江苏省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a>更多</a>
-                            <a><i class="caret"></i></a>
-                        </div>
-                    </div>
-                    <div class="row hidden">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>广东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>北京</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>山东省</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>上海</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>江苏省</a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="row ">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <span>投资金额:</span>
-                            <a>不限</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>1万-10万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>10万-50万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>50万-100万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>100万-500万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a>更多</a>
-                            <a><i class="caret"></i></a>
-                        </div>
-                    </div>
-                    <div class="row hidden">
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>不限</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>1万-10万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>10万-50万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>50万-100万</a>
-                        </div>
-                        <div class="col-md-2 col-sm-2  col-xs-2">
-                            <a>100万-500万</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-xs-3">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="在当前条件下搜索">
+                            <input id="inputSearch" type="text" class="form-control" placeholder="在当前条件下搜索">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i>
+                            <button class="btn btn-default" type="button" onclick="fundsSearch()"><i
+                                    class="glyphicon glyphicon-search"></i>
                             </button>
                         </span>
                         </div>
@@ -365,153 +709,6 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade in active" id="complex-sort">
-                                    <!--资金信息-->
-                                    <div>
-                                        <div class="row"><!--资金标题-->
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                                <span class="pull-right">2016-07-25</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
-                                                </p>
-                                                <p><span class="pull-left">投资地区：四川省</span><span
-                                                        class="pull-right">投资行业：金融投资</span></p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                                <p>陈先生</p>
-                                                <p>重庆市某金融投资公司</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                                <a class="btn btn-warning" role="button" data-toggle="modal"
-                                                   data-target="#fundsModal">投递项目</a>
-                                            </div>
-                                        </div><!--资金信息-->
-                                        <div>
-                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                        </div><!--投递概况-->
-                                    </div>
-                                    <div>
-                                        <div class="row"><!--资金标题-->
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                                <span class="pull-right">2016-07-25</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
-                                                </p>
-                                                <p><span class="pull-left">投资地区：四川省</span><span
-                                                        class="pull-right">投资行业：金融投资</span></p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                                <p>陈先生</p>
-                                                <p>重庆市某金融投资公司</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                                <a class="btn btn-warning" role="button" data-toggle="modal"
-                                                   data-target="#fundsModal">投递项目</a>
-                                            </div>
-                                        </div><!--资金信息-->
-                                        <div>
-                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                        </div><!--投递概况-->
-                                    </div>
-                                    <div>
-                                        <div class="row"><!--资金标题-->
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                                <span class="pull-right">2016-07-25</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
-                                                </p>
-                                                <p><span class="pull-left">投资地区：四川省</span><span
-                                                        class="pull-right">投资行业：金融投资</span></p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                                <p>陈先生</p>
-                                                <p>重庆市某金融投资公司</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                                <a class="btn btn-warning" role="button" data-toggle="modal"
-                                                   data-target="#fundsModal">投递项目</a>
-                                            </div>
-                                        </div><!--资金信息-->
-                                        <div>
-                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                        </div><!--投递概况-->
-                                    </div>
-                                    <div>
-                                        <div class="row"><!--资金标题-->
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
-                                                <span class="pull-right">2016-07-25</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <p>投资资金：<span class="text-danger">2000万-5亿</span></p>
-                                                <p><span class="pull-left">投资方式：其它投资</span><span class="pull-right">资金类型：其它资金</span>
-                                                </p>
-                                                <p><span class="pull-left">投资地区：四川省</span><span
-                                                        class="pull-right">投资行业：金融投资</span></p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3 ">
-                                                <p>陈先生</p>
-                                                <p>重庆市某金融投资公司</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-3">
-                                                <a class="btn btn-warning" role="button" data-toggle="modal"
-                                                   data-target="#fundsModal">投递项目</a>
-                                            </div>
-                                        </div><!--资金信息-->
-                                        <div>
-                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>
-                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>
-                                        </div><!--投递概况-->
-                                    </div>
-                                    <!--分页-->
-                                    <div>
-                                        <span class="pull-left">共有<i class="text-danger">3000+</i>个符合要求的资金信息</span>
-                                    <span class="pull-right">
-                                        <nav>
-                                            <ul class="pagination">
-                                                <li>
-                                                    <a href="#" aria-label="First">
-                                                        <span aria-hidden="true">首页</span>
-                                                    </a>
-                                                </li>
-                                                <li><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
-                                                <li>
-                                                    <a href="#" aria-label="Next">
-                                                        <span aria-hidden="true">下一页</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" aria-label="Last">
-                                                        <span aria-hidden="true">最后一页</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </span>
-                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="time-sort">
                                     <div>
@@ -758,6 +955,7 @@
                     <div class="modal-footer">
                         <button class="btn btn-danger center-block" type="submit">投递</button>
                     </div>
+
                 </form>
             </div>
         </div>
@@ -774,7 +972,269 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+    function ajaxLoadlist(url) {
+        $.ajax({
+            type: 'GET',
+            url: 'list.json',
+            dataType: 'json',
+            success: function (data) {
+                for (var i = data.data.rowBegin - 1; i < data.data.rows.length; i++) {
+                    var fundsinfo = $(['<div>',
+                        '                                        <div class="row">',
+                        '                                            <div class="col-md-12 col-sm-12 col-xs-12">',
+                        '                                                <a class="pull-left" href="http://115.236.94.196:30000/blade/capital/view/:' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
+                        '                                                <span class="pull-right">' + data.data.rows[i].creat_time + '</span>',
+                        '                                            </div>',
+                        '                                        </div>',
+                        '                                        <div class="row">',
+                        '                                            <div class="col-md-6 col-sm-6 col-xs-6">',
+                        '                                                <p>投资资金：<span class="text-danger">' + data.data.rows[i].down_amount + '-' + data.data.rows[i].up_amount + '</span></p>',
+                        '                                                    <div class="row">',
+                        '                                                    <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-left">',
+                        '                                                    </div>',
+                        '                                                    <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-right">',
+                        '                                                    </div>',
+                        '                                                </div>',
+                        '                                            </div>',
+                        '                                            <div class="col-md-3 col-sm-3 col-xs-3 ">',
+                        '                                                <p>' + data.data.rows[i].public_author + '</p>',
+                        '                                                <p>重庆市某金融投资公司</p>',
+                        '                                            </div>',
+                        '                                            <div class="col-md-3 col-sm-3 col-xs-3">',
+                        '                                                <a class="btn btn-warning" role="button" data-toggle="modal"',
+                        '                                                   data-target="#fundsModal">投递项目</a>',
+                        '                                            </div>',
+                        '                                        </div>',
+                        '                                        <div>',
+                        '                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>',
+                        '                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>',
+                        '                                        </div>',
+                        '                                    </div>'].join(''));
+                    $('#complex-sort').append(fundsinfo);
+                    (data.data.rows[i].capital_type) ? $('.fundsInfo-left').append($('<p>资金类型：' + data.data.rows[i].capital_type + '</p>')) : null;
+                    (data.data.rows[i].target_area) ? $('.fundsInfo-left').append($('<p>投资地区：' + data.data.rows[i].target_area + '</p>')) : null;
+                    (data.data.rows[i].equity_type) ? $('.fundsInfo-left').append($('<p>投资类型：' + data.data.rows[i].equity_type + '</p>')) : null;
+                    (data.data.rows[i].creditors_risk) ? $('.fundsInfo-left').append($('<p>风控要求：' + data.data.rows[i].creditors_risk + '</p>')) : null;
+                    (data.data.rows[i].body) ? $('.fundsInfo-right').append($('<p>资金主体：' + data.data.rows[i].body + '</p>')) : null;
+                    (data.data.rows[i].industry) ? $('.fundsInfo-right').append($('<p>投资行业：' + data.data.rows[i].industry + '</p>')) : null;
+                    (data.data.rows[i].equity_phase) ? $('.fundsInfo-right').append($('<p>投资阶段：' + data.data.rows[i].equity_phase + '</p>')) : null;
+                    (data.data.rows[i].creditors_back) ? $('.fundsInfo-right').append($('<p>最低回报要求：' + data.data.rows[i].creditors_back + '</p>')) : null;
+                    $('#complex-sort').html(fundsinfo);
+                }
 
+                var pagination = $(['<div>',
+                    '                                        <span class="pull-left">共有<i class="text-danger">' + data.data.records + '</i>个符合要求的资金信息</span>',
+                    '                                    <span class="pull-right">',
+                    '                                        <nav>',
+                    '                                            <ul class="pagination">',
+                    /*'                                                <li>',
+                     '                                                    <a href="#" aria-label="First">',
+                     '                                                      上一页',
+                     '                                                    </a>',
+                     '                                                </li>',
+                     '                                                <li class="active"><a href="#">1</a></li>',
+                     '                                                <li><a href="#">2</a></li>',
+                     '                                                <li><a href="#">3</a></li>',
+                     '                                                <li><a href="#">4</a></li>',
+                     '                                                <li><a href="#">5</a></li>',
+                     '                                                <li>',
+                     '                                                    <a href="#" aria-label="Next">',
+                     '                                                        <span aria-hidden="true">下一页</span>',
+                     '                                                    </a>',
+                     '                                                </li>',*/
+                    '                                            </ul>',
+                    '                                        </nav>',
+                    '                                    </span>',
+                    '                                    </div>'].join(""));
+                $('#complex-sort').append(pagination);
+                var total = data.data.total;
+                var page = data.data.page;
+                $('.pagination').append($('<li><a >前一页</a></li>'));
+                if (total <= 5 || page < 5) {
+                    total = Math.min(total, 5)
+                    for (var i = 1; i <= total; i++) {
+                        if (i == page) {
+                            $('.pagination').append($('<li><a>' + i + '</a></li>').addClass('active'));
+                        }
+                        else {
+                            $('.pagination').append($('<li><a>' + i + '</a></li>'));
+                        }
+                    }
+                    (total > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+                    $('pagination').append($('<li><a>后一页</a></li>'));
+                }
+                else {
+                    ((page - 2) > 0) ? $('.pagination').append($('<li><a>' + (page - 2) + '</a></li>')) : null;
+                    ((page - 1) > 0) ? $('.pagination').append($('<li><a>' + (page - 1) + '</a></li>')) : null;
+                    $('.pagination').append($('<li><a>' + page + '</a></li>').addClass('active'));
+                    ((page + 1) <= total) ? $('.pagination').append($('<li><a>' + (page + 1) + '</a></li>')) : null;
+                    ((page + 2) <= total) ? $('.pagination').append($('<li><a>' + (page + 2) + '</a></li>')) : null;
+                    (total > (page + 2)) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+                    $('.pagination').append($('<li><a>后一页</a></li>'));
+                }
+                $('.pagination li a').click(function () {
+                    var havea = $('.url a').text();
+                    var pageCount = this.text;
+                    var pageUrl = $('.url').attr('property');
+                    (this.text === '前一页') ? pageCount = (page - 1) : null;
+                    (this.text === '后一页') ? pageCount = (page + 1) : null;
+                    if (havea) {
+                        pageUrl += '&page=' + pageCount + '';
+                    }
+                    else {
+                        pageUrl += '?page=' + pageCount + '';
+                    }
+                    ajaxLoadlist(pageUrl);
+                })
+            }
+        })
+    }
+    $(document).ready(function () {
+        var url = $('.url').attr('property');
+        ajaxLoadlist(url);
+    });
+    function fundsSearch() {
+        var havea = $('.url a').text();
+        var key = $('#inputSearch').val();
+        var url = $('.url').attr('property');
+        (havea) ? url = url + '&title=' + key : url = url + '?title=' + key;
+        ajaxLoadlist(url);
+    }
+    $('.parturl a').not('.btn').not('.more').not('.less').click(function (event) {
+        event.preventDefault();
+        var havea = $('.url a').text();
+        var url = $('.url').attr('property');
+        var tagType = $('#' + $(this).attr('property') + '').attr('property');
+        var partUrl = $(this).attr('href');
+        switch (this.text) {
+            case "股权投资":
+                $('#investmentType').removeClass('hidden');
+                $('#investmentStage').removeClass('hidden');
+                break;
+            case "债权投资":
+                $('#riskControl').removeClass('hidden');
+                break;
+            case "金融投资":
+                $('#riskAppetite').removeClass('hidden');
+                break;
+        }
+        (havea) ? partUrl = '&' + partUrl : partUrl = '?' + partUrl;
+        var tag = $('<a>' + tagType + '：' + this.text + '<i class="glyphicon glyphicon-remove"></i></a>')
+                .attr('href', partUrl).attr('property', $(this).attr('property'));
+        url += partUrl;
+        $('#' + $(this).attr('property') + '').addClass('hidden');
+        ajaxLoadlist(url);
+        $('.url').attr('property', url);
+        $('.url').append(tag);
+        /*        var targetUrl = $(event.target).attr('herf'),
+         targetPer = $(event.target).attr('per'),
+         orriginUrl = $('.nav-tabs .active a').attr('herf');*/
+        $('.url a').click(function (event) {
+            switch ((this.text).substr(this.text.length - 4)) {
+                case '股权投资':
+                    $('#investmentType').addClass('hidden');
+                    $('#investmentStage').addClass('hidden');
+                    break;
+                case '债权投资':
+                    $('#riskControl').addClass('hidden');
+                    break;
+                case '金融投资':
+                    $('#riskAppetite').addClass('hidden');
+                    break;
+            }
+            event.preventDefault();
+            var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+            $('.url').attr('property', newUrl);
+            $('#' + $(this).attr('property') + '').removeClass('hidden');
+            this.remove();
+        });
+    })
+    function checkFunstypeClose() {
+        $('#fundsType .fundscheck').addClass('hidden');
+        $('#fundsType .fundsradio').removeClass('hidden');
+    }
+    function checkFunstypeOpen() {
+        $('#fundsType .fundsradio').addClass('hidden');
+        $('#fundsType .fundscheck').removeClass('hidden');
+    }
+    function checkIndustryOpen() {
+        $('#Industry .Industryradio').addClass('hidden');
+        $('#Industry .Industrycheck').removeClass('hidden');
+    }
+    function checkIndustryClose() {
+        $('#Industry .Industryradio').removeClass('hidden');
+        $('#Industry .Industrycheck').addClass('hidden');
+    }
+    function fundsCheckSubmit() {
+        var count = 0;
+        var fundsUrl = '';
+        var funds = '';
+        $('input:checkbox[name="funds"]:checked').each(function () {
+            funds = funds + ($(this).parent().text()) + ' ';
+            if (count == 0) {
+                ($('.url a').text()) ? fundsUrl = fundsUrl + '&body=' + $(this).val() : fundsUrl = fundsUrl + '?body=' + $(this).val();
+            }
+            else {
+                fundsUrl = fundsUrl + '-' + $(this).val()
+            }
+            count++;
+        });
+        if (count != 0) {
+            var url = $('.url').attr('property') + fundsUrl;
+            var tag = $('<a>资金类型：' + funds + '<i class="glyphicon glyphicon-remove"></i></a>')
+                    .attr('href', fundsUrl).attr('property', 'fundsType');
+            $('.url').attr('property', url);
+            $('.url').append(tag);
+            ajaxLoadlist(url);
+            $('#fundsType').addClass('hidden');
+            checkFunstypeClose();
+            $('.url a').click(function (event) {
+                event.preventDefault();
+                var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+                $('.url').attr('property', newUrl);
+                $('#' + $(this).attr('property') + '').removeClass('hidden');
+                this.remove();
+            });
+        }
+        else {
+            checkFunstypeClose();
+        }
+    }
+    function industryCheckSubmit() {
+        var count = 0;
+        var industryUrl = '';
+        var industry = '';
+        $('input:checkbox[name="industry"]:checked').each(function () {
+            industry = industry + ($(this).parent().text()) + ' ';
+            if (count == 0) {
+                ($('.url a').text()) ? industryUrl = industryUrl + '&industry=' + $(this).val() : industryUrl = industryUrl + '?industry=' + $(this).val();
+            }
+            else {
+                industryUrl = industryUrl + '-' + $(this).val()
+            }
+            count++;
+        });
+        if (count != 0) {
+            var url = $('.url').attr('property') + industryUrl;
+            var tag = $('<a>资金类型：' + industry + '<i class="glyphicon glyphicon-remove"></i></a>')
+                    .attr('href', industryUrl).attr('property', 'Industry');
+            $('.url').attr('property', url);
+            $('.url').append(tag);
+            ajaxLoadlist(url);
+            $('#Industry').addClass('hidden');
+            checkIndustryClose();
+            $('.url a').click(function (event) {
+                event.preventDefault();
+                var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+                $('.url').attr('property', newUrl);
+                $('#' + $(this).attr('property') + '').removeClass('hidden');
+                this.remove();
+            });
+        }
+        else {
+            checkFunstypeClose();
+        }
+    }
 </script>
 </body>
 </html>
