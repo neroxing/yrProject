@@ -1466,7 +1466,7 @@
                         '                                        </div>',
                         '                                        <div class="row">',
                         '                                            <div class="col-md-6 col-sm-6 col-xs-6">',
-                        '                                                <p>投资资金：<span class="text-danger">' + data.data.rows[i].down_amount + '-' + data.data.rows[i].up_amount + '</span></p>',
+                        '                                                <p class="amount">投资资金：<span class="text-danger">' + (data.data.rows[i].down_amount) + '</span>-<span class="text-danger">' + data.data.rows[i].up_amount + '</span></p>',
                         '                                                    <div class="row">',
                         '                                                    <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-left">',
                         '                                                    </div>',
@@ -1497,6 +1497,11 @@
                     (data.data.rows[i].industry) ? $('.fundsInfo-right').append($('<p>投资行业：' + data.data.rows[i].industry + '</p>')) : null;
                     (data.data.rows[i].equity_phase) ? $('.fundsInfo-right').append($('<p>投资阶段：' + data.data.rows[i].equity_phase + '</p>')) : null;
                     (data.data.rows[i].creditors_back) ? $('.fundsInfo-right').append($('<p>最低回报要求：' + data.data.rows[i].creditors_back + '</p>')) : null;
+                    $(".amount span").each(function () {
+                        var amount = $(this).text();
+                        (amount>100000000)?amount=amount/100000000+"亿":amount = amount/10000+"万";
+                        $(this).text(amount);
+                    })
                     $('#complex-sort').html(fundsinfo);
                 }
 
@@ -1539,7 +1544,7 @@
                         }
                     }
                     (total > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
-                    $('pagination').append($('<li><a>后一页</a></li>'));
+                    $('.pagination').append($('<li><a>后一页</a></li>'));
                 }
                 else {
                     ((page - 2) > 0) ? $('.pagination').append($('<li><a>' + (page - 2) + '</a></li>')) : null;
@@ -1732,6 +1737,13 @@
             checkFunstypeClose();
         }
     }
+    (function () {
+       $(".amount span").each(function () {
+           var amount = $(this).text();
+           (amount>100000000)?amount=amount/100000000+"亿":amount = amount/10000+"万";
+       })
+
+    })
 </script>
 </body>
 </html>
