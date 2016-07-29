@@ -85,7 +85,7 @@
         <!--资金检所链接-->
         <div name="funds-link" class="panel container">
             <div class=" panel-body">
-                <div class="url" property="http://115.236.94.196:30000/blade/capital/query">
+                <div class="url" property="http://115.236.94.196:30000/blade/capital/query?">
                     <i class="fa fa-vimeo-square" aria-hidden="true"></i>
                     <span>所有资金</span>
                     <!-- <a>
@@ -94,45 +94,45 @@
                      </a>-->
                 </div>
                 <div class="parturl">
-                    <div id="Investment" property="投资方式">
+                    <div id="Investment" property="资金类型">
                         <div class="row">
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 <span>投资方式:</span>
-                                <a property="Investment" href="title=测试">股权投资</a>
+                                <a property="Investment" href="type=1">股权投资</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>债权投资</a>
+                                <a property="Investment" href="type=2">债权投资</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>金融投资</a>
+                                <a property="Investment" href="type=3">金融投资</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>BT/BOT 项目投资</a>
+                                <a property="Investment" href="type=4">BT/BOT项目投资</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>其他投资</a>
+                                <a property="Investment" href="type=5">其它投资</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2"></div>
                         </div>
                     </div>
-                    <div id="fundsType" property="资金类型">
+                    <div id="fundsType" property="资金主体">
                         <div class="fundsradio">
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <span>资金类型:</span>
-                                    <a property="fundsType">个人资金</a>
+                                    <a property="fundsType" href="body=1">个人资金</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>企业资金</a>
+                                    <a property="fundsType" href="body=2">企业资金</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>天使投资</a>
+                                    <a property="fundsType" href="body=3">天使投资</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>VC投资</a>
+                                    <a property="fundsType" href="body=4">VC投资</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>PE投资</a>
+                                    <a property="fundsType" href="body=5">PE投资</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <a class="btn btn-default btn-xs" onclick="checkFunstypeOpen()">
@@ -146,41 +146,41 @@
                             <div id="fundsType-hide" class="collapse">
                                 <div class="row">
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a property="fundsType">小额贷款</a>
+                                        <a property="fundsType" href="body=6">小额贷款</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>典当公司</a>
+                                        <a property="fundsType" href="body=7">典当公司</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>担保公司</a>
+                                        <a property="fundsType" href="body=8">担保公司</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>金融租赁</a>
+                                        <a property="fundsType" href="body=9">金融租赁</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>投资公司</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>商业银行</a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>基金公司</a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>证券公司</a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>信托公司</a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>资产管理</a>
+                                        <a property="fundsType" href="body=10">投资公司</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>其他资金</a>
+                                        <a property="fundsType" href="body=11">商业银行</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType" href="body=12">基金公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType" href="body=13">证券公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType" href="body=14">信托公司</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType" href="body=15">资产管理</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="fundsType" href="body=16">其他资金</a>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@
                                     <div class="checkbox">
                                         <span>资金类型:</span>
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
+                                            <input type="checkbox" value="1" name="funds">
                                             个人资金
                                         </label>
                                     </div>
@@ -199,7 +199,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
+                                            <input type="checkbox" value="2" name="funds">
                                             企业资金
                                         </label>
                                     </div>
@@ -207,7 +207,15 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
+                                            <input type="checkbox" value="3" name="funds">
+                                            天使投资
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="4" name="funds">
                                             VC投资
                                         </label>
                                     </div>
@@ -215,15 +223,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            企业资金
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="" name="funds">
+                                            <input type="checkbox" value="5" name="funds">
                                             PE投资
                                         </label>
                                     </div>
@@ -237,40 +237,92 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            个人资金
+                                            <input type="checkbox" value="6" name="funds">
+                                            小额贷款
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            企业资金
+                                            <input type="checkbox" value="7" name="funds">
+                                            典当公司
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            VC投资
+                                            <input type="checkbox" value="8" name="funds">
+                                            担保公司
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            企业资金
+                                            <input type="checkbox" value="9" name="funds">
+                                            金融租凭
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="funds">
-                                            PE投资
+                                            <input type="checkbox" value="10" name="funds">
+                                            投资公司
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="11" name="funds">
+                                            商业银行
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="12" name="funds">
+                                            基金公司
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="13" name="funds">
+                                            证券公司
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="14" name="funds">
+                                            信托公司
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="15" name="funds">
+                                             资产管理
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="16" name="funds">
+                                            其他资金
                                         </label>
                                     </div>
                                 </div>
@@ -285,114 +337,148 @@
                         <div class="row">
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 <span>所在地区:</span>
-                                <a>广东省</a>
+                                <a property="location" href="province=1">北京</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>北京</a>
+                                <a property="location" href="province=2">上海</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>山东省</a>
+                                <a property="location" href="province=3">江苏</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>上海</a>
+                                <a property="location" href="province=4">浙江</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>江苏省</a>
+                                <a property="location" href="province=5">广东</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a data-toggle="collapse" href="#fundsLocation" class="more">更多<i class="caret"></i></a>
+                                <a data-toggle="collapse" href="#location-hide" class="more">更多<i class="caret"></i></a>
                             </div>
                         </div>
-                        <div id="fundsLocation" class="collapse">
+                        <div id="location-hide" class="collapse">
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>浙江省</a>
+                                    <a property="location" href="province=6">山东</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>河南省</a>
+                                    <a property="location" href="province=7">河南</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>四川省</a>
+                                    <a property="location" href="province=8">四川</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>河北省</a>
+                                    <a property="location" href="province=9">河北</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>湖北省</a>
+                                    <a property="location" href="province=10">湖北</a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>福建省</a>
+                                    <a property="location" href="province=11">福建</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>湖南省</a>
+                                    <a property="location" href="province=12">湖南</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>陕西省</a>
+                                    <a property="location" href="province=13">陕西</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>重庆</a>
+                                    <a property="location" href="province=14">重庆</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>辽宁省</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>安徽省</a>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>广西省</a>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>山西省</a>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>云南省</a>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>江西省</a>
+                                    <a property="location" href="province=15">辽宁</a>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>贵州省</a>
+                                    <a property="location" href="province=16">安徽</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>广西省</a>
+                                    <a property="location" href="province=17">广西</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>山西省</a>
+                                    <a property="location" href="province=18">山西</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>云南省</a>
+                                    <a property="location" href="province=19">云南</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>江西省</a>
+                                    <a property="location" href="province=20">江西</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=21">贵州</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=22">天津</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=23">黑龙江</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=24">吉林</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=25">内蒙古</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=26">新疆</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=27">甘肃</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=28">海南</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=29">宁夏</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=30">海外</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=31">青海</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=32">西藏</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=33">澳门</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=34">台湾</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="location" href="province=35">香港</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="Industry">
+                    <div id="Industry" property="投资行业">
                         <div class="Industryradio">
                             <div class="row ">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <span>投资行业:</span>
-                                    <a>金融投资</a>
+                                    <a property="Industry" href="industry=1">金融投资</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>房地产</a>
+                                    <a property="Industry" href="industry=2">房地产</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>能源</a>
+                                    <a property="Industry" href="industry=3">能源</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>化学化工</a>
+                                    <a property="Industry" href="industry=4">化学化工</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>节能环保</a>
+                                    <a property="Industry" href="industry=5">节能环保</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <a class="btn btn-default btn-xs" onclick="checkIndustryOpen()">
@@ -406,19 +492,109 @@
                             <div id="investmentIndustry-hide" class="collapse">
                                 <div class="row">
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>金融投资</a>
+                                        <a property="Industry" href="industry=6">建筑建材</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>房地产</a>
+                                        <a property="Industry" href="industry=7">矿产冶金</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>能源</a>
+                                        <a property="Industry" href="industry=8">基础设施</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>化学化工</a>
+                                        <a property="Industry" href="industry=9">农林牧渔</a>
                                     </div>
                                     <div class="col-md-2 col-sm-2  col-xs-2">
-                                        <a>节能环保</a>
+                                        <a property="Industry" href="industry=10">国防军工</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=11">航空航天</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=12">电气设备</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=13">机械机电</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=14">交通运输</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=15">仓储物流</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=16">汽车汽配</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=17">纺织服装饰品</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=18">旅游酒店</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=19">餐饮休闲娱乐</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=20">教育培训体育</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=21">文化传媒广告</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=22">批发零售</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=23">家电数码</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=24">家用日用</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=25">食品饮料烟草</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=26">医疗保健</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=27">生物医药</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=28">IT互联网</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=29">电子通信</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=30">海洋开发</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=31">商务贸易</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=32">家政服务</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=33">园林园艺</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=34">收藏品</a>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=35">行政事业机构</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2  col-xs-2">
+                                        <a property="Industry" href="industry=36">其他行业</a>
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +605,7 @@
                                     <div class="checkbox">
                                         <span>投资行业:</span>
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
+                                            <input type="checkbox" value="1" name="industry">
                                             金融投资
                                         </label>
                                     </div>
@@ -437,7 +613,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
+                                            <input type="checkbox" value="2" name="industry">
                                             房地产
                                         </label>
                                     </div>
@@ -445,7 +621,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
+                                            <input type="checkbox" value="3" name="industry">
                                             能源
                                         </label>
                                     </div>
@@ -453,7 +629,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
+                                            <input type="checkbox" value="4" name="industry">
                                             化学化工
                                         </label>
                                     </div>
@@ -461,7 +637,7 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
+                                            <input type="checkbox" value="5" name="industry">
                                             节能环保
                                         </label>
                                     </div>
@@ -475,40 +651,260 @@
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
-                                            个人资金
+                                            <input type="checkbox" value="6" name="industry">
+                                            建筑建材
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
-                                            企业资金
+                                            <input type="checkbox" value="7" name="industry">
+                                            矿产冶金
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
-                                            VC投资
+                                            <input type="checkbox" value="8" name="industry">
+                                            基础设施
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
-                                            企业资金
+                                            <input type="checkbox" value="9" name="industry">
+                                            农林牧渔
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" value="" name="industry">
-                                            PE投资
+                                            <input type="checkbox" value="10" name="industry">
+                                            国防军工
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="11" name="industry">
+                                            航空航天
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="12" name="industry">
+                                            电气设备
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="13" name="industry">
+                                            机械机电
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="14" name="industry">
+                                            交通运输
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="15" name="industry">
+                                            仓储物流
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="16" name="industry">
+                                            汽车汽配
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="17" name="industry">
+                                            纺织服装饰品
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="18" name="industry">
+                                            旅游酒店
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="19" name="industry">
+                                            餐饮休闲娱乐
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="20" name="industry">
+                                            教育培训体育
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="21" name="industry">
+                                            文化传媒广告
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="22" name="industry">
+                                            批发零售
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="23" name="industry">
+                                            家电数码
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="24" name="industry">
+                                            家居日用
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="25" name="industry">
+                                            食品饮料烟草
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="26" name="industry">
+                                            医疗保健
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="27" name="industry">
+                                            生物医疗
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="28" name="industry">
+                                            IT互联网
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="29" name="industry">
+                                            电子通信
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="30" name="industry">
+                                            海洋开发
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="31" name="industry">
+                                            商务贸易
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="32" name="industry">
+                                            家政服务
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="33" name="industry">
+                                            园林园艺
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="34" name="industry">
+                                            收藏品
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="35" name="industry">
+                                            行政事业机构
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="36" name="industry">
+                                            商务贸易
                                         </label>
                                     </div>
                                 </div>
@@ -522,20 +918,20 @@
                     <div id="investmentLocation" property="投资地区">
                         <div class="row">
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <span>投资地区:</span>
-                                <a>广东省</a>
+                                <span>所在地区:</span>
+                                <a property="investmentLocation" href="target=1">北京</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>北京</a>
+                                <a property="investmentLocation" href="target=2">上海</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>山东省</a>
+                                <a property="investmentLocation" href="target=3">江苏</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>上海</a>
+                                <a property="investmentLocation" href="target=4">浙江</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>江苏省</a>
+                                <a property="investmentLocation" href="target=5">广东</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -546,19 +942,104 @@
                         <div id="investmentLocation-hide" class="collapse">
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>广东省</a>
+                                    <a property="investmentLocation" href="target=6">山东</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>北京</a>
+                                    <a property="investmentLocation" href="target=7">河南</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>山东省</a>
+                                    <a property="investmentLocation" href="target=8">四川</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>上海</a>
+                                    <a property="investmentLocation" href="target=9">河北</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>江苏省</a>
+                                    <a property="investmentLocation" href="target=10">湖北</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=11">福建</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=12">湖南</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=13">陕西</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=14">重庆</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=15">辽宁</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=16">安徽</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=17">广西</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=18">山西</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=19">云南</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=20">江西</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=21">贵州</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=22">天津</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=23">黑龙江</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=24">吉林</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=25">内蒙古</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=26">新疆</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=27">甘肃</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=28">海南</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=29">宁夏</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=30">海外</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=31">青海</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=32">西藏</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=33">澳门</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=34">台湾</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2  col-xs-2">
+                                    <a property="investmentLocation" href="target=35">香港</a>
                                 </div>
                             </div>
                         </div>
@@ -567,41 +1048,38 @@
                         <div class="row ">
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 <span>投资金额:</span>
-                                <a>不限</a>
+                                <a property="investmentAmount" href="m=1">不限</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>1万-10万</a>
+                                <a property="investmentAmount" href="m=2">1万-10万</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>10万-50万</a>
+                                <a property="investmentAmount" href="m=3">10万-50万</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>50万-100万</a>
+                                <a property="investmentAmount" href="m=4">50万-100万</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
-                                <a>100万-500万</a>
+                                <a property="investmentAmount" href="m=5">100万-500万</a>
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a data-toggle="collapse" href="#investmentAmount-hide" more>更多<i class="caret"></i></a>
+                                <a data-toggle="collapse" href="#investmentAmount-hide" class="more">更多<i class="caret"></i></a>
                             </div>
                         </div>
                         <div id="investmentAmount-hide" class="collapse">
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>不限</a>
+                                    <a property="investmentAmount" href="m=6">500万-1000万</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>1万-10万</a>
+                                    <a property="investmentAmount" href="m=7">1000万-5000万</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>10万-50万</a>
+                                    <a property="investmentAmount" href="m=8">5000万-1亿</a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>50万-100万</a>
-                                </div>
-                                <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a>100万-500万</a>
+                                    <a property="investmentAmount" href="m=9">大于1亿</a>
                                 </div>
                             </div>
                         </div>
@@ -982,7 +1460,7 @@
                     var fundsinfo = $(['<div>',
                         '                                        <div class="row">',
                         '                                            <div class="col-md-12 col-sm-12 col-xs-12">',
-                        '                                                <a class="pull-left" href="http://115.236.94.196:30000/blade/capital/view/:' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
+                        '                                                <a class="pull-left" href="http://115.236.94.196:30000/blade/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
                         '                                                <span class="pull-right">' + data.data.rows[i].creat_time + '</span>',
                         '                                            </div>',
                         '                                        </div>',
@@ -1079,10 +1557,10 @@
                     (this.text === '前一页') ? pageCount = (page - 1) : null;
                     (this.text === '后一页') ? pageCount = (page + 1) : null;
                     if (havea) {
-                        pageUrl += '&page=' + pageCount + '';
+                        pageUrl += '&start=' + pageCount + '&size=30';
                     }
                     else {
-                        pageUrl += '?page=' + pageCount + '';
+                        pageUrl += 'start=' + pageCount + '&size=30';
                     }
                     ajaxLoadlist(pageUrl);
                 })
@@ -1096,9 +1574,25 @@
     function fundsSearch() {
         var havea = $('.url a').text();
         var key = $('#inputSearch').val();
-        var url = $('.url').attr('property');
-        (havea) ? url = url + '&title=' + key : url = url + '?title=' + key;
-        ajaxLoadlist(url);
+        if(key!=''&&key!=undefined&&key!=null){
+            var url = $('.url').attr('property');
+            var partUrl = '';
+            (havea) ? partUrl = '&title=' + key : 'title=' + key;
+            var tag = $('<a>关键词：' + key + '<i class="glyphicon glyphicon-remove"></i></a>')
+                    .attr('href', partUrl);
+            url+=partUrl;
+            $('.url').attr('property',url);
+            $('.url').append(tag);
+            ajaxLoadlist(url);
+        }
+        $('.url a').click(function (event) {
+            event.preventDefault();
+            var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+            ajaxLoadlist(newUrl);
+            $('.url').attr('property', newUrl);
+            $('#' + $(this).attr('property') + '').removeClass('hidden');
+            this.remove();
+        });
     }
     $('.parturl a').not('.btn').not('.more').not('.less').click(function (event) {
         event.preventDefault();
@@ -1118,7 +1612,7 @@
                 $('#riskAppetite').removeClass('hidden');
                 break;
         }
-        (havea) ? partUrl = '&' + partUrl : partUrl = '?' + partUrl;
+        (havea) ? partUrl = '&' + partUrl : null;
         var tag = $('<a>' + tagType + '：' + this.text + '<i class="glyphicon glyphicon-remove"></i></a>')
                 .attr('href', partUrl).attr('property', $(this).attr('property'));
         url += partUrl;
@@ -1144,6 +1638,7 @@
             }
             event.preventDefault();
             var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+            ajaxLoadlist(newUrl);
             $('.url').attr('property', newUrl);
             $('#' + $(this).attr('property') + '').removeClass('hidden');
             this.remove();
@@ -1172,7 +1667,7 @@
         $('input:checkbox[name="funds"]:checked').each(function () {
             funds = funds + ($(this).parent().text()) + ' ';
             if (count == 0) {
-                ($('.url a').text()) ? fundsUrl = fundsUrl + '&body=' + $(this).val() : fundsUrl = fundsUrl + '?body=' + $(this).val();
+                ($('.url a').text()) ? fundsUrl = fundsUrl + '&body=' + $(this).val() : fundsUrl = fundsUrl + 'body=' + $(this).val();
             }
             else {
                 fundsUrl = fundsUrl + '-' + $(this).val()
@@ -1191,6 +1686,7 @@
             $('.url a').click(function (event) {
                 event.preventDefault();
                 var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+                ajaxLoadlist(newUrl);
                 $('.url').attr('property', newUrl);
                 $('#' + $(this).attr('property') + '').removeClass('hidden');
                 this.remove();
@@ -1207,7 +1703,7 @@
         $('input:checkbox[name="industry"]:checked').each(function () {
             industry = industry + ($(this).parent().text()) + ' ';
             if (count == 0) {
-                ($('.url a').text()) ? industryUrl = industryUrl + '&industry=' + $(this).val() : industryUrl = industryUrl + '?industry=' + $(this).val();
+                ($('.url a').text()) ? industryUrl = industryUrl + '&industry=' + $(this).val() : industryUrl = industryUrl + 'industry=' + $(this).val();
             }
             else {
                 industryUrl = industryUrl + '-' + $(this).val()
@@ -1226,6 +1722,7 @@
             $('.url a').click(function (event) {
                 event.preventDefault();
                 var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
+                ajaxLoadlist(newUrl);
                 $('.url').attr('property', newUrl);
                 $('#' + $(this).attr('property') + '').removeClass('hidden');
                 this.remove();
