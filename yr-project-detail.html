@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="title" content="">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- customized css -->
+    <link rel="stylesheet" href="css/yr.css">
+
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb">
+                <i class="fa fa-home"></i>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">选项目</a></li>
+                <li><a href="#">项目信息</a></li>
+                <li class="active">${inProject.title}</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-sm-10 col-xs-10">
+            <div class="row">
+                <div class="row">
+                    <div>
+                        <p>
+                            <a href="javascript:void(0);">${inProject.title}</a>
+                        </p>
+                        <div>
+                            <div class="pull-left">
+                                <time>${inProject.createTime}</time>
+                                浏览数：666人
+                            </div>
+                            <div class="pull-right">
+                                <span>
+                                    <i class="fa fa-mobile-phone"></i>
+                                    <a href="javascript:void(0);" id="J_send_to_phone" title="免费发送至手机">免费发送至手机</a>
+                                </span>
+                                <span>
+                                    <i class="fa fa-heart"></i>
+                			        <a href="javascript:void(0);" data-id="${inProject.pkProject}" id="J_addfav" title="收藏">收藏</a>
+                                </span>
+                                <span>
+                                    <i class="fa fa-exclamation"></i>
+                                    <a href="#" target="_blank" rel="nofollow" title="举报">举报</a>
+                                </span>
+                                <span>
+                                    <i class="fa fa-share"></i>
+                                    <a href="#" class="bds_more" data-cmd="more" title="分享">分享</a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <dl>
+                            <dt>项目类型：</dt>
+                            <dd ><a href="#" target="_blank">${inProject.fkType}</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>所在地区：</dt>
+                            <dd >${inProject.areaId}</dd>
+                        </dl>
+                        <dl>
+                            <dt>融资主体：</dt>
+                            <dd>${inProject.pjFinancing.body}</dd>
+                        </dl>
+                        <dl>
+                            <dt>所属行业：</dt>
+                            <dd ><a href="#" target="_blank">${inProject.pjFinancing.industry}</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>融资用途：</dt>
+                            <dd >${inProject.pjFinancing.purposes}</dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <dl>
+                            <dt>融资金额：</dt>
+                            <dd >${inProject.pjFinancing.financingAmountMin}-${inProject.pjFinancing.financingAmountMax}</dd>
+                        </dl>
+                        <dl>
+                            <dt>意向资金：</dt>
+                            <dd >${inProject.pjFinancing.intentionFund}</dd>
+                        </dl>
+                        <dl>
+                            <dt>融资方式：</dt>
+                            <dd ><a href="#" target="_blank">${inProject.pjFinancing.means}</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>可提供资料：</dt>
+                            <dd >${inProject.pjFinancing.availableData}</dd>
+                        </dl>
+                    </div>
+                </div>
+               <% if(${inProject.pjFinancing.means}=='股权融资'){%>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p><span>股权融资</span></p>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <dl>
+                                <dt>项目所处阶段：</dt>
+                                <dd >${inProject.pjFinancing.period}</dd>
+                            </dl>
+                            <dl>
+                                <dt>资金方占股比例：</dt>
+                                <dd >${inProject.pjFinancing.transferRatioMin}-${inProject.pjFinancing.transferRatioMax}</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <dl>
+                                <dt>投资退出方式：</dt>
+                                <dd >${inProject.pjFinancing.exitMode}</dd>
+                            </dl>
+                            <dl>
+                                <dt>最短退出年限：</dt>
+                                <dd >${inProject.pjFinancing.exitDeadline}年</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <% }%>
+                <%if(${inProject.pjFinancing.means}=='债权融资'){%>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <p><span>债权融资</span></p>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <dl>
+                                <dt>可承担最高利息：</dt>
+                                <dd >${inProject.pjFinancing.interest}</dd>
+                            </dl>
+                            <dl>
+                                <dt>资金占用时长：</dt>
+                                <dd >${inProject.pjFinancing.capitalEnd - inProject.pjFinancing.capitalFrom} ${inProject.pjFinancing.capitalUnit}</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <dl>
+                                <dt>可提供风控：</dt>
+                                <dd >${inProject.pjFinancing.creditorsRisk}</dd>
+                            </dl>
+                            <dl>
+                                <dt>还款来源：</dt>
+                                <dd >${inProject.pjFinancing.repaySrc}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <% }%>
+                <div class="row">
+                    <div>
+                        <table width="100%">
+                            <tbody>
+                            <tr>
+                                <td width="120"><img src="${inProject.title}" alt="约谈项目方"></td>
+                                <td>
+                                    <article>
+                                        <h5>昨日投资人发出约谈共计666次</h5>
+                                        <p>对该项目感兴趣？快来约谈项目方吧，让项目方主动联系您！</p>
+                                    </article>
+                                </td>
+                                <td width="116" class="fn-pr">
+                                    <a href="javascript:void(0);"
+                                       data-title="江苏某一站式企业服务平台项目股权融资8000万-1亿元"
+                                       data-zjxm-id="505361"
+                                       data-user-id="1232446"
+                                       title="约谈项目方">
+                                        <button type="button" class="btn btn-warning">约谈项目方</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div>
+                        <span>项目概述 </span>
+                    </div>
+                    <div>
+                        <p>项目内容简介：<br>
+                            ${inProject.pjFinancing.projectRequirements.}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>项目优势 </span>
+                    </div>
+                    <div>
+                        <p>
+                            ${inProject.pjFinancing.projectBenefits}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>其他备注 </span>
+                    </div>
+                    <div>
+                        <p>　
+                            ${inProject.note}
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>项目附件 </span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="#">商业计划书一</a>
+                                <a href="${inProject.attach}"><button type="button" class="btn btn-warning pull-right">立即下载</button></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <div>标签：
+                            <a href="#" target="_blank">${inProject.tag}</a>，
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="i-zjxm-comment">
+                        <a name="comments"></a>
+                        <div>
+                            <div>
+
+                                <p><span>用户留言</span>
+                                    （<span id="leave_msg_num">1</span>）
+                                </p>
+                                <p id="leave_msg_input_tip" class="pull-right">您还可以输入<span>300</span>个字</p>
+                            </div>
+                            <div>
+                                <div>
+                                <textarea class="input" maxlength="300" name="leave_msg" id="leave_msg_content"
+                                          placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+                                    <!--   <span>提示：严禁发布含有联系方式和广告性质的内容，违者一律删除 !</span>-->
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0);">
+                                        <button type="button" class="btn btn-danger pull-right">发布留言</button>
+                                    </a>
+
+                                    <li class="dropdown pull-right">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            公开
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">公开</a></li>
+                                            <li><a href="#">仅对方可见</a></li>
+                                            <li><a href="#">会员可见</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <input type="hidden" id="public" name="public" value="0">
+                                    <div id="comment_login_reg" class="hidden">
+                                        <input type="hidden" id="reg_or_login" name="reg_or_login">
+                                        <form id="frmRegOrLogin" name="frmRegOrLogin" method="post">
+                                            <div>
+                                                <input type="text" id="J_name" name="name" placeholder="姓名">
+                                                <span>姓名</span>
+                                            </div>
+                                            <div>
+                                                <input type="text" id="J_mobile_msg" name="mobile" placeholder="手机号码">
+                                                <span>手机号码</span>
+                                            </div>
+                                            <div>输入姓名与电话留言后方便对方与您联系!</div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="J_mobile_msg_info"></p>
+                            <div id="leave_messages">
+                                <ul>
+                                    <li>
+                                        <aside>
+                                            <img src=" ">
+                                        </aside>
+                                        <article>
+                                            <section>
+                                                <div class="pull-right">2016-07-12 23:59:17</div>
+                                                <h6>
+                                                    <a rel="nofollow" href="#" target="_blank">某先生</a>
+                                                    <span>某公司&nbsp;</span>
+                                                </h6>
+                                            </section>
+                                            <p> 关注行业：金融投资 房地产 能源 化学化工 节能环保 建筑建材 矿产冶金 基础设施
+                                                农林牧渔 国防军工 航空航天 电气设备 机械机电 交通运输 仓储物流 汽车汽配 纺织服装饰品 旅游酒店 餐饮休闲娱乐 教育培训体育 文化传媒广告
+                                                批发零售 家电数码 家居日用 食品饮料烟草 医疗保健 生物医药 IT互联网 电子通信 海洋开发 商务贸易 家政服务 园林园艺 收藏品
+                                                行政事业机构
+                                                其他行业 </p>
+                                            <p>
+                                                你好！我是北京一家大型直投融资公司。我公司对贵公司的项目非常感兴趣。希望把贵公司的相关资料发到我邮箱里。谢谢！ </p>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-2 col-sm-2 col-xs-2">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="pull-left">会员名片</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <div data-id="1232446">
+                            <a href="javascript:void(0);" alt="交换名片" event="click.exchange">
+                            <span><button type="button" class="btn btn-primary pull-right">
+                                <i class="fa fa-exchange"></i>交换名片
+                            </button></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p><a href="#"><img src=" "></a></p>
+                        <p id="J_view_contact_name"><span>杨先生</span>
+                            <i title="易融宝黄金版"></i></p>
+                        <div>
+                            <p>
+                                所在公司：<span id="J_view_company_name">江苏省扬州市某公司</span><br>
+                                职位：董事长<br>
+                                所在地区：江苏省扬州市邗江区<br>
+                                所属行业：其他行业<br>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p data-id="123244642078688ee37ce1f62e14a66abe417c8">
+                                <a href="javascript:void(0);" event="click.getcontact">
+                                    <button type="button" class="btn btn-danger center-block">查看联系方式</button>
+                                </a>
+                            </p>
+                            <!--       <p>联系时请说明来自投融界</p>-->
+                        </div>
+                        <div class="row">
+                            <p><a href="#">
+                                <button type="button" class="btn btn-primary center-block">进入展厅</button>
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <span>相似的项目</span>
+                        <div class="row">
+                            <p><a href="#">山东某3D打印技术应用开发有限公司股权融资50万-100万元</a>
+                            </p>
+                            <p>融资金额：50万-100万</p>
+                            <p>股权融资 | 种子期 | 其他行业 | 山东省</p>
+                        </div>
+                        <div class="row">
+                            <p><a href="#">陕西某公司农产品电商项目融资500万元</a>
+                            </p>
+                            <p>融资金额：500万</p>
+                            <p>债权融资,股权融资 | 初创期 | 其他行业 | 陕西省</p>
+                        </div>
+                        <div class="row">
+                            <p><a href="#">内蒙古某高空清洗项目股权融资100万-200万元</a></p>
+                            <p>融资金额：100万-200万</p>
+                            <p>股权融资 | 其他行业 | 内蒙古</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <span>最近浏览的项目</span>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">湖南某科技产品交易平台项目股权融资600万-5000万元</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">山东某农业养殖销售一体化项目股权融资200万元</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">河南洛阳某无线充电桩项目股权融资500万元</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">上海某稳健性投资私募基金100万元起投</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">广东某生物医疗大健康项目20万元起投</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">山东某校园管道直饮水热水工程BOT项目融资1300万元</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">四川绵阳某高速公路项目股权融资3000万-5000万元</a>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div>·</div>
+                            <p><a href="#">江西生物柴油和桐油提油漆项目寻资金合作</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery-1.11.3.js"></script>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="js/bootstrap.js"></script>
+
+        <!-- custom js
+        <script src="js/请输入.js"></script>-->
+
+        <script type="text/javascript">
+
+
+
+
+        </script>
+</body>
+</html>
