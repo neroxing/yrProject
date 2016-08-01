@@ -4,7 +4,7 @@
  -->
 @layout("/common/_curd/_container.html"){
 
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <title></title>
@@ -17,16 +17,16 @@
     <meta name="robots" content="index, follow">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
 
     <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/bootstrap-theme.min.css">
 
     <!-- fontawesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
 
     <!-- customized css -->
-    <link rel="stylesheet" href="css/yr.css">
+    <link rel="stylesheet" href="${basePath}/static/css/yr.css">
 
     <style type="text/css">
 
@@ -94,7 +94,7 @@
             <li><a href="#">首页</a></li>
             <li><a href="#">找资金</a></li>
             <li><a href="#">资金信息</a></li>
-            <li class="active">上海某投资公司100万-1亿元寻国内新能源等项目股权投资</li>
+            <li class="active">${model.title}</li>
         </ol>
     </div>
     <div id="content">
@@ -102,11 +102,11 @@
             <div class="row">
                 <div class="col-md-9 col-sm-9">
                     <!--资金信息-->
-                    <div class="panel">
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             <p>${model.title}</p>
                             <div>
-                                <span class="pull-left"><time>${model.creat_time}</time>浏览数:1861人</span>
+                                <span class="pull-left"><time>${model.creat_time,dateFormat='yyyy-MM-dd'}</time>浏览数:1861人</span>
                             <span class="pull-right">
                                 <i class="fa fa-mobile-phone" aria-hidden="true"></i>
                                 <a href="#">免费发送至手机</a>
@@ -161,20 +161,20 @@
                                 </div>
                             </div>
                             <div>
-                               	<span id="fundtype">${model.capital_type}</span>
-                               	@ var fundtype = model.capital_type;
-                               	@ if(fundtype==("金融投资")){
+                                <span id="fundtype">${model.capital_type}</span>
+                                @ var fundtype = model.capital_type;
+                                @ if(fundtype==("金融投资")){
                                 <div class="row financial-investment ">
                                     <div class="col-md-6 col-sm-6">
                                         <dl>
                                             <dt>风险偏好:</dt>
-                                            <dd>${model.finance_product}</dd>
+                                            <dd>${model.finance_risk}</dd>
                                         </dl>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <dl>
                                             <dt>产品偏好:</dt>
-                                            <dd>${model.finance_risk}</dd>
+                                            <dd>${model.finance_product}</dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -198,7 +198,7 @@
                                         </dl>
                                         <dl>
                                             <dt>参股比例:</dt>
-                                            <dd></dd>
+                                            <dd>${model.equity_ratio}</dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -226,40 +226,41 @@
                                         </dl>
                                         <dl>
                                             <dt>抵押物品类型:</dt>
-                                            <dd>固定资产</dd>
+                                            <dd>${model.creditors_pawn}</dd>
                                         </dl>
                                     </div>
                                 </div>
                                 @ }
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <img class="img-responsive" alt="投递项目">
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <h4>昨日项目方投递项目共计2584次</h4>
-                                    <p>立即投递项目，将信息直接发送到投资人手机，融资更主动！</p>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-3">
+                                        <img class="img-responsive" alt="投递项目">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <h4>昨日项目方投递项目共计2584次</h4>
+                                        <p>立即投递项目，将信息直接发送到投资人手机，融资更主动！</p>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--投资要求-->
-                    <div class="panel">
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             <p>投资要求概述</p>
                             <p>${model.capital_requirements}</p>
                         </div>
                     </div>
                     <!--标签-->
-                    <div class="panel">
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             <p>标签：<a href="">北京</a>，<a href="">企业资金</a>，<a href="">房地产</a></p>
                         </div>
                     </div>
                     <!--留言-->
-                    <div class="panel">
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             <div>
                                 <span class="pull-left">用户留言<small class="text-danger">(16)</small></span>
@@ -416,8 +417,8 @@
                             </div>
                         </div>
                     </div>
-                   <!--最近浏览的资金-->
-                    <div class="panel">
+                    <!--最近浏览的资金-->
+                    <div class="panel panel-default">
                         <div class="panel-body">
                             <h4>最近浏览的资金</h4>
                             <ul class="list-unstyled">
@@ -514,11 +515,11 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
-	$(".amount span").each(function () {
-                        var amount = $(this).text();
-                        (amount>100000000)?amount=amount/100000000+"亿":amount = amount/10000+"万";
-                        $(this).text(amount);
-                    })
+    $(".amount span").each(function () {
+        var amount = $(this).text();
+        (amount>100000000)?amount=amount/100000000+"亿":amount = amount/10000+"万";
+        $(this).text(amount);
+    })
 </script>
 </body>
 </html>
