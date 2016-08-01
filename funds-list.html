@@ -1543,10 +1543,10 @@
                     str += fundsinfo;
                 }
                 $('#complex-sort').html($(str));
-                $(".amount span").each(function () {
+                $('.amount span').each(function () {
                     var amount = $(this).text();
                     if (!isNaN(amount)) {
-                        (amount > 100000000) ? amount = amount / 100000000 + "亿" : amount = amount / 10000 + "万";
+                        (amount > 100000000) ? amount = amount / 100000000 + '亿' : amount = amount / 10000 + '万';
                         $(this).text(amount);
                     }
                 })
