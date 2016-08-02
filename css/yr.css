@@ -1,20 +1,27 @@
 /* tool belt */
 	/* color */
 		:root{
-			--page-bg:				#eee;
-			--dark-bg:				#f8f8f8;
-			--light-bg:				#fff;
-			--footer-light-bg:		#484b54;
-			--footer-dark-bg:		#3b3d45;
-			/* button */
-			--hot-bg:			#609acb;
-			--cold-bg:			#ef4349;
+			--white-max:		#fff;		/**/
+			--white-bright:		#f8f8f8; 	/**/
+			--white-light:		#eee;		/**/
+			--white-dark:		#ddd;		/*use in font color with deep bg?(might change)*/
 
-			--dark-text:			#333;
-			--light-text:			#666; /*also can use as incative*/
-			--bright-text:			#ddd;
-			--hot-text:				#ef4349;
-			--cold-text:			#609acb;
+			--gray-light:		#888;
+			--gray:				#777;
+			--gray-dark:		#666;
+
+			--black-bright:		#333;
+			--black-light:		#222;
+			--black-dark:		#111;
+			--black-max:		#000;
+			/* colored */
+			--hot-dark:			#c44;	/*red?*/
+			--hot-light:		#f43;	/**/
+			--cold-dark:		#458;	/*blue?*/
+			--cold-light:		#6ab;
+
+			--footer-light:	#484b54;
+			--footer-dark:	#3b3d45;
 		}
 	/* vertical middle */
 		.v-outter-table{
@@ -25,11 +32,11 @@
 			vertical-align: middle !important;
 		}
 	/* background color */
-		.light-bg{
-			background-color: var(--light-bg);
-		}
-		.dark-bg{
-			background-color: var(--dark-bg);
+		.box-bg{
+			background-color: var(--white-max);
+		} 
+		.title-bg{
+			background-color: var(--white-bright);
 		}
 /* universal */
 	*{
@@ -37,37 +44,23 @@
 		margin: 0;
 	}
 	html, body{
-		color: var(--light-text);
-		background-color: var(--page-bg);
+		color: var(--gray-dark);
+		background-color: var(--white-light);
 		font-family: Arial, 'Microsoft YaHei', 'STHeiti';
-	}
-	a{
-		color: var(--light-text);
-		cursor: pointer;
-	}
-	a:hover{
-		color: var(--dark-text);
-	}
-	/* emphasis the link */
-	a.emphasis{
-		color: var(--cold-text);
-	}
-	a.emphasis:hover{
-		color: var(--hot-text);
 	}
 	p{
 		font-size: 1em;
-		margin: 0.5em 0 0.5em;
-		padding: 0.5em 0 0.5em;
+		margin: 0.5em 0;
+		padding: 0.5em 0;
 		line-height: 1.5em;
 	}
 	h1{
-		color: var(--dark-text);
+		color: var(--black-bright);
 		font-size: 2em;
 		margin: 20px 0;
 	}
 	h2{
-		color: var(--dark-text);
+		color: var(--black-bright);
 		font-size: 1.4em;
 	}
 	ol{
@@ -79,7 +72,46 @@
 		border: none;
 		overflow: hidden;
 	}
-/* header */
+	/* a tag classes */
+		a{
+			color: var(--gray-dark);
+			cursor: pointer;
+		}
+		a:hover{
+			color: var(--black-bright);
+		}
+		a.title{/* emphasis the link */
+			color: var(--cold-dark);
+		}
+		a.title:hover{
+			color: var(--hot-dark);
+		}
+
+		a.to-hot:hover{
+			color: var(--hot-light);
+		}
+		a.to-cold:hover{
+			color: var(--cold-light);
+		}
+		a.from-hot{/* emphasis the link */
+			color: var(--hot-light);
+		}
+		a.from-hot:hover{
+			color: var(--black-bright);
+		}
+		a.from-cold{/* emphasis the link */
+			color: var(--cold-light);
+		}
+		a.from-cold:hover{
+			color: var(--black-bright);
+		}
+		a.animated{/* animated the link */
+			transition-duration: 0.5s;
+		}
+		a.animated:hover{
+			color: var(--hot-dark);
+		}
+/* home-banner */
 	#home-banner .row{
 		padding: 7px 0;
 		line-height: 1.6em;
@@ -87,7 +119,7 @@
 	#home-banner .row span{
 		font-size: 1.6em;
 		vertical-align: middle;
-		color: var(--hot-text);
+		color: var(--hot-dark);
 	}
 	#home-banner a.fa{
 		text-decoration: none;
@@ -99,20 +131,16 @@
 	#home-banner a.fa-weixin:hover{
 		color: #86C610;
 	}
+/* header */
+	#header, #header-menu{
+		height: 70px;
+	}
 	#header #slogan{
 		line-height: 70px;
 	}
-/* footer */
-	#footer h3{
-		font-size: 1.2em;
-		color: var(--bright-text);
-	}
-	#footer span{
-		font-size: 1.4em;
-		color: var(--bright-text);
-	}
-	#sites-links .row, #footer-copyright .row {
-		padding:20px 0;
+/* sites-links */
+	#sites-links .row .row {
+		padding: 25px 0;
 	}
 	#sites-links a{
 		line-height: 2em;
@@ -120,23 +148,32 @@
 	#sites-links a:not(:first-child){
 		padding: 3px;
 	}
-	#footer-contact .row{
-		margin-bottom: 20px;
+/* footer */
+	#footer h3{/*footer-links header*/
+		margin-top: 0px;
+		font-size: 1.2em;
+	}
+	#footer span{/*footer-links phone number*/
+		font-size: 1.4em;
+	}
+	#footer .row .row {
+		padding: 25px 0;
 	}
 	.footer-light-bg{
-		color: var(--bright-text);
-		background-color: var(--footer-light-bg);
-	}.footer-light-bg a{
-		color: var(--bright-text);
+		color: var(--white-light);
+		background-color: var(--footer-light);
+	}
+	.footer-light-bg a{
+		color: var(--white-light);
 		font-size: 0.9em;
 		line-height: 1.5em;
 	}
 	.footer-dark-bg{
-		color: var(--bright-text);
-		background-color: var(--footer-dark-bg);
+		color: var(--white-dark);
+		background-color: var(--footer-dark);
 	}
 	.footer-dark-bg a{
-		color: var(--bright-text);
+		color: var(--white-dark);
 	}
 /* content */
 /* bootstrap over write */
