@@ -11,16 +11,16 @@
     <meta name="robots" content="index, follow">
 
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
 
     <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/bootstrap-theme.min.css">
 
     <!-- fontawesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
 
     <!-- customized css -->
-    <link rel="stylesheet" href="css/yr.css">
+    <link rel="stylesheet" href="${basePath}/static/css/yr.css">
 
     <style type="text/css">
     </style>
@@ -85,7 +85,7 @@
         <!--资金检所链接-->
         <div name="funds-link" class="panel container">
             <div class=" panel-body">
-                <div class="url" property="http://115.236.94.196:30000/blade/capital/query?">
+                <div class="url" property="${basePath}/capital/query?">
                     <i class="fa fa-vimeo-square" aria-hidden="true"></i>
                     <span>所有资金</span>
                     <!-- <a>
@@ -1064,8 +1064,7 @@
                             </div>
                             <div class="col-md-2 col-sm-2  col-xs-2">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a data-toggle="collapse" href="#investmentAmount-hide" class="more">更多<i
-                                        class="caret"></i></a>
+                                <a data-toggle="collapse" href="#investmentAmount-hide" class="more">更多<i class="caret"></i></a>
                             </div>
                         </div>
                         <div id="investmentAmount-hide" class="collapse">
@@ -1176,7 +1175,7 @@
                         <div id="product-hide" class="collapse">
                             <div class="row">
                                 <div class="col-md-2 col-sm-2  col-xs-2">
-                                    <a property="productAppetite" href="finance_product=6" 券商集合></a>
+                                    <a property="productAppetite" href="finance_product=6"券商集合></a>
                                 </div>
                                 <div class="col-md-2 col-sm-2  col-xs-2">
                                     <a property="productAppetite" href="finance_product=7">一对多</a>
@@ -1482,10 +1481,10 @@
 </div>
 
 <!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
+<script src="${basePath}/static/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
+<script src="${basePath}/static/js/bootstrap.js"></script>
 
 <!-- custom js
 <script src="js/请输入.js"></script>-->
@@ -1494,16 +1493,16 @@
     function ajaxLoadlist(url) {
         $.ajax({
             type: 'GET',
-            url: 'list.json',
+            url: url,
             dataType: 'json',
             success: function (data) {
                 var str = '';
-                for (var i = data.data.rowBegin - 1; i < data.data.rows.length; i++) {
+                for (var i = 0; i < data.data.rows.length; i++) {
                     var fundsinfo = (['<div>',
                         '                                        <div class="row">',
                         '                                            <div class="col-md-12 col-sm-12 col-xs-12">',
-                        '                                                <a class="pull-left" href="http://115.236.94.196:30000/blade/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
-                        '                                                <span class="pull-right">' + data.data.rows[i].update_time.substring(0, 10) + '</span>',
+                        '                                                <a class="pull-left" href="${basePath}/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
+                        '                                                <span class="pull-right">' + data.data.rows[i].update_time.substring(0,10) + '</span>',
                         '                                            </div>',
                         '                                        </div>',
                         '                                        <div class="row">',
@@ -1543,10 +1542,10 @@
                     str += fundsinfo;
                 }
                 $('#complex-sort').html($(str));
-                $('.amount span').each(function () {
+                $(".amount span").each(function () {
                     var amount = $(this).text();
                     if (!isNaN(amount)) {
-                        (amount > 100000000) ? amount = amount / 100000000 + '亿' : amount = amount / 10000 + '万';
+                        (amount > 100000000) ? amount = amount / 100000000 + "亿" : amount = amount / 10000 + "万";
                         $(this).text(amount);
                     }
                 })
@@ -1592,10 +1591,10 @@
                     (this.text === '前一页') ? pageCount = (page - 1) : null;
                     (this.text === '后一页') ? pageCount = (page + 1) : null;
                     if (havea) {
-                        pageUrl += '&start=' + pageCount + '&size=30';
+                        pageUrl += '&page=' + pageCount + '&size=30';
                     }
                     else {
-                        pageUrl += 'start=' + pageCount + '&size=30';
+                        pageUrl += 'page=' + pageCount + '&size=30';
                     }
                     ajaxLoadlist(pageUrl);
                 })
@@ -1607,7 +1606,7 @@
         ajaxLoadlist(url);
     });
     function cancelUrla(str) {
-        $('.url a[property=' + str + ']').each(function () {
+        $('.url a[property='+str+']').each(function () {
             var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
             $('.url').attr('property', newUrl);
             this.remove();
@@ -1617,17 +1616,12 @@
         var havea = $('.url a').text();
         var key = $('#inputSearch').val();
         if (key != '' && key != undefined && key != null) {
-            /* $('.url a[property="title"]').each(function () {
-             var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
-             $('.url').attr('property', newUrl);
-             this.remove();
-             })*/
             cancelUrla('title');
             var url = $('.url').attr('property');
             var partUrl = '';
-            (havea) ? partUrl = '&title=' + key : partUrl = 'title=' + key;
+            (havea)?partUrl = '&title=' + key : partUrl='title=' + key;
             var tag = $('<a>关键词：' + key + '<i class="glyphicon glyphicon-remove"></i></a>')
-                    .attr('href', partUrl).attr('property', 'title');
+                    .attr('href', partUrl).attr('property','title');
             url += partUrl;
             $('.url').attr('property', url);
             $('.url').append(tag);
@@ -1657,7 +1651,6 @@
                 break;
             case "金融投资":
                 $('#riskAppetite').removeClass('hidden');
-                $('#productAppetite').removeClass('hidden');
                 break;
         }
         (havea) ? partUrl = '&' + partUrl : null;
