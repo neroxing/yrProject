@@ -135,7 +135,8 @@
 									<dl>
 										<dt>投资金额:</dt>
 										<dd>
-											<p class="amount"><span>${model.down_amount}</span>-<span>${model.up_amount}</span></p>
+											<p class="amount">
+												<span>${model.down_amount}</span>-<span>${model.up_amount}</span></p>
 										</dd>
 									</dl>
 								</div>
@@ -240,7 +241,8 @@
 										<p>立即投递项目，将信息直接发送到投资人手机，融资更主动！</p>
 									</div>
 									<div class="col-md-3 col-sm-3">
-										<a class="btn btn-warning" role="button" data-toggle="modal" data-target="#fundsModal">投递项目</a>
+										<a class="btn btn-warning" role="button" data-toggle="modal"
+										   data-target="#capitalModal">投递项目</a>
 									</div>
 								</div>
 							</div>
@@ -271,7 +273,7 @@
 								<form>
 									<div class="form-group">
 									<textarea class="form-control"
-											  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+									          placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
 										<div class="col-md-2">
 											<input type="text" placeholder="姓名" class="form-control">
 										</div>
@@ -284,10 +286,11 @@
 										<div class="col-md-2">
 											<div class="btn-group">
 												<button type="button" class="btn btn-default dropdown-toggle"
-														data-toggle="dropdown">公开
+												        data-toggle="dropdown">公开
 												</button>
 												<button type="button" class="btn btn-default dropdown-toggle"
-														data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												        data-toggle="dropdown" aria-haspopup="true"
+												        aria-expanded="false">
 													<span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu">
@@ -395,7 +398,9 @@
 						<div class="panel-body">
 							<p>
 								<span class="pull-left">会员名片</span>
-								<span class="pull-right"><button type="button" class="btn btn-primary btn-xs" ><i class="fa fa-exchange"></i>交换名片</button></span>
+                                <span class="pull-right"><button type="button" class="btn btn-primary btn-xs"><i
+		                                class="fa fa-exchange"></i>交换名片
+                                </button></span>
 							</p>
 							<p class="center-block"><img class="img-circle" alt="头像"></p>
 							<p>所在公司：北京市某公司</p>
@@ -422,8 +427,8 @@
 						<div class="panel-body">
 							<h4>最近浏览的资金</h4>
 							<ul class="list-unstyled">
-								<li> <a>上海某投资公司100万-1亿元寻国内新能源等项目股权投资</a></li>
-								<li> <a>上海某投资公司100万-1亿元寻国内新能源等项目股权投资</a></li>
+								<li><a>上海某投资公司100万-1亿元寻国内新能源等项目股权投资</a></li>
+								<li><a>上海某投资公司100万-1亿元寻国内新能源等项目股权投资</a></li>
 							</ul>
 						</div>
 					</div>
@@ -433,7 +438,7 @@
 	</div>
 </div>
 <!--投递项目模态框-->
-<div class="modal fade" id="fundsModal" role="dialog" aria-hidden="true">
+<div class="modal fade" id="capitalModal" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -470,7 +475,7 @@
 								class="text-danger">*</span>项目描述:</label>
 						<div class="col-md-6 col-sm-6">
 							<textarea class="form-control" id="inputProjectDescription" maxlength="500"
-									  data-rule="required|minlength[20]|maxlength[500]"></textarea>
+							          data-rule="required|minlength[20]|maxlength[500]"></textarea>
 						</div>
 					</div>
 					<div name="ProjectFile" class="form-group">
@@ -517,7 +522,7 @@
 <script type="text/javascript">
 	$(".amount span").each(function () {
 		var amount = $(this).text();
-		(amount>100000000)?amount=amount/100000000+"亿":amount = amount/10000+"万";
+		(amount > 100000000) ? amount = amount / 100000000 + "亿" : amount = amount / 10000 + "万";
 		$(this).text(amount);
 	})
 </script>
