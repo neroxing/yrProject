@@ -83,7 +83,7 @@
 	</div>
 	<div id="content">
 		<!--资金检所链接-->
-		<div name="funds-link" class="panel container">
+		<div name="capital-link" class="panel container">
 			<div class=" panel-body">
 				<div class="url" property="http://115.236.94.196:30000/blade/capital/query?">
 					<i class="fa fa-vimeo-square" aria-hidden="true"></i>
@@ -115,83 +115,83 @@
 							<div class="col-md-2 col-sm-2  col-xs-2"></div>
 						</div>
 					</div>
-					<div id="fundsType" property="资金主体">
-						<div class="fundsradio">
+					<div id="capitalType" property="资金主体">
+						<div class="capitalradio">
 							<div class="row">
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<span>资金类型:</span>
-									<a property="fundsType" href="body=1">个人资金</a>
+									<a property="capitalType" href="body=1">个人资金</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
-									<a property="fundsType" href="body=2">企业资金</a>
+									<a property="capitalType" href="body=2">企业资金</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
-									<a property="fundsType" href="body=3">天使投资</a>
+									<a property="capitalType" href="body=3">天使投资</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
-									<a property="fundsType" href="body=4">VC投资</a>
+									<a property="capitalType" href="body=4">VC投资</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
-									<a property="fundsType" href="body=5">PE投资</a>
+									<a property="capitalType" href="body=5">PE投资</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<a class="btn btn-default btn-xs" onclick="checkFunstypeOpen()">
 										<span><i class="glyphicon glyphicon-plus"></i></span>
 										<span>多选</span>
 									</a>
-									<a data-toggle="collapse" href="#fundsType-hide" class="more">更多<i
+									<a data-toggle="collapse" href="#capitalType-hide" class="more">更多<i
 											class="caret"></i></a>
 								</div>
 							</div>
-							<div id="fundsType-hide" class="collapse">
+							<div id="capitalType-hide" class="collapse">
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=6">小额贷款</a>
+										<a property="capitalType" href="body=6">小额贷款</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=7">典当公司</a>
+										<a property="capitalType" href="body=7">典当公司</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=8">担保公司</a>
+										<a property="capitalType" href="body=8">担保公司</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=9">金融租赁</a>
+										<a property="capitalType" href="body=9">金融租赁</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=10">投资公司</a>
+										<a property="capitalType" href="body=10">投资公司</a>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=11">商业银行</a>
+										<a property="capitalType" href="body=11">商业银行</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=12">基金公司</a>
+										<a property="capitalType" href="body=12">基金公司</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=13">证券公司</a>
+										<a property="capitalType" href="body=13">证券公司</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=14">信托公司</a>
+										<a property="capitalType" href="body=14">信托公司</a>
 									</div>
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=15">资产管理</a>
+										<a property="capitalType" href="body=15">资产管理</a>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<a property="fundsType" href="body=16">其他资金</a>
+										<a property="capitalType" href="body=16">其他资金</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="fundscheck hidden">
+						<div class="capitalcheck hidden">
 							<div class="row">
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<span>资金类型:</span>
 										<label>
-											<input type="checkbox" value="1" name="funds">
+											<input type="checkbox" value="1" name="capital">
 											个人资金
 										</label>
 									</div>
@@ -199,7 +199,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="2" name="funds">
+											<input type="checkbox" value="2" name="capital">
 											企业资金
 										</label>
 									</div>
@@ -207,7 +207,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="3" name="funds">
+											<input type="checkbox" value="3" name="capital">
 											天使投资
 										</label>
 									</div>
@@ -215,7 +215,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="4" name="funds">
+											<input type="checkbox" value="4" name="capital">
 											VC投资
 										</label>
 									</div>
@@ -223,7 +223,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="5" name="funds">
+											<input type="checkbox" value="5" name="capital">
 											PE投资
 										</label>
 									</div>
@@ -237,7 +237,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="6" name="funds">
+											<input type="checkbox" value="6" name="capital">
 											小额贷款
 										</label>
 									</div>
@@ -245,7 +245,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="7" name="funds">
+											<input type="checkbox" value="7" name="capital">
 											典当公司
 										</label>
 									</div>
@@ -253,7 +253,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="8" name="funds">
+											<input type="checkbox" value="8" name="capital">
 											担保公司
 										</label>
 									</div>
@@ -261,7 +261,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="9" name="funds">
+											<input type="checkbox" value="9" name="capital">
 											金融租凭
 										</label>
 									</div>
@@ -269,7 +269,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="10" name="funds">
+											<input type="checkbox" value="10" name="capital">
 											投资公司
 										</label>
 									</div>
@@ -279,7 +279,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="11" name="funds">
+											<input type="checkbox" value="11" name="capital">
 											商业银行
 										</label>
 									</div>
@@ -287,7 +287,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="12" name="funds">
+											<input type="checkbox" value="12" name="capital">
 											基金公司
 										</label>
 									</div>
@@ -295,7 +295,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="13" name="funds">
+											<input type="checkbox" value="13" name="capital">
 											证券公司
 										</label>
 									</div>
@@ -303,7 +303,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="14" name="funds">
+											<input type="checkbox" value="14" name="capital">
 											信托公司
 										</label>
 									</div>
@@ -311,7 +311,7 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="15" name="funds">
+											<input type="checkbox" value="15" name="capital">
 											资产管理
 										</label>
 									</div>
@@ -321,14 +321,14 @@
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" value="16" name="funds">
+											<input type="checkbox" value="16" name="capital">
 											其他资金
 										</label>
 									</div>
 								</div>
 							</div>
 							<div class="row">
-								<button class="btn btn-default btn-xs" onclick="fundsCheckSubmit()">确定</button>
+								<button class="btn btn-default btn-xs" onclick="capitalCheckSubmit()">确定</button>
 								<button class="btn btn-default btn-xs" onclick="checkFunstypeClose()">取消</button>
 							</div>
 						</div>
@@ -1196,7 +1196,7 @@
 						<div class="input-group">
 							<input id="inputSearch" type="text" class="form-control" placeholder="在当前条件下搜索">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" onclick="fundsSearch()"><i
+							<button class="btn btn-default" type="button" onclick="capitalSearch()"><i
 									class="glyphicon glyphicon-search"></i>
 							</button>
 						</span>
@@ -1206,7 +1206,7 @@
 			</div>
 		</div>
 		<!--资金信息-->
-		<div name="funds-body">
+		<div name="capital-body">
 			<div class="container">
 				<div class="row">
 					<!--资金查询结果列表-->
@@ -1251,7 +1251,7 @@
 											</div>
 											<div class="col-md-3 col-sm-3 col-xs-3">
 												<a class="btn btn-warning" role="button" data-toggle="modal"
-												   data-target="#fundsModal">投递项目</a>
+												   data-target="#capitalModal">投递项目</a>
 											</div>
 										</div><!--资金信息-->
 										<div>
@@ -1280,7 +1280,7 @@
 											</div>
 											<div class="col-md-3 col-sm-3 col-xs-3">
 												<a class="btn btn-warning" role="button" data-toggle="modal"
-												   data-target="#fundsModal">投递项目</a>
+												   data-target="#capitalModal">投递项目</a>
 											</div>
 										</div><!--资金信息-->
 										<div>
@@ -1309,7 +1309,7 @@
 											</div>
 											<div class="col-md-3 col-sm-3 col-xs-3">
 												<a class="btn btn-warning" role="button" data-toggle="modal"
-												   data-target="#fundsModal">投递项目</a>
+												   data-target="#capitalModal">投递项目</a>
 											</div>
 										</div><!--资金信息-->
 										<div>
@@ -1338,7 +1338,7 @@
 											</div>
 											<div class="col-md-3 col-sm-3 col-xs-3">
 												<a class="btn btn-warning" role="button" data-toggle="modal"
-												   data-target="#fundsModal">投递项目</a>
+												   data-target="#capitalModal">投递项目</a>
 											</div>
 										</div><!--资金信息-->
 										<div>
@@ -1407,7 +1407,7 @@
 	</div>
 </div>
 <!--投递项目模态框-->
-<div class="modal fade" id="fundsModal" role="dialog" aria-hidden="true">
+<div class="modal fade" id="capitalModal" role="dialog" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -1444,7 +1444,7 @@
 								class="text-danger">*</span>项目描述:</label>
 						<div class="col-md-6 col-sm-6">
 							<textarea class="form-control" id="inputProjectDescription" maxlength="500"
-									  data-rule="required|minlength[20]|maxlength[500]"></textarea>
+							          data-rule="required|minlength[20]|maxlength[500]"></textarea>
 						</div>
 					</div>
 					<div name="ProjectFile" class="form-group">
@@ -1499,7 +1499,7 @@
 			success: function (data) {
 				var str = '';
 				for (var i = data.data.rowBegin - 1; i < data.data.rows.length; i++) {
-					var fundsinfo = (['<div>',
+					var capitalinfo = (['<div>',
 						'							  <div class="row">',
 						'								 <div class="col-md-12 col-sm-12 col-xs-12">',
 						'									<a class="pull-left" href="http://115.236.94.196:30000/blade/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
@@ -1510,14 +1510,14 @@
 						'								 <div class="col-md-6 col-sm-6 col-xs-6">',
 						'									<p class="amount">投资资金：<span class="text-danger">' + (data.data.rows[i].down_amount) + '</span>-<span class="text-danger">' + data.data.rows[i].up_amount + '</span></p>',
 						'									   <div class="row">',
-						'									   <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-left">',
+						'									   <div class="col-md-6 col-sm-6 col-xs-6 capitalInfo-left">',
 						'' + ((data.data.rows[i].capital_type) ? '<p>资金类型：' + data.data.rows[i].capital_type + '</p>' : '') + '',
 						'' + (data.data.rows[i].target_area) ? '<p>投资地区：' + data.data.rows[i].target_area + '</p>' : '' + '',
 						'' + ((data.data.rows[i].equity_type) ? '<p>投资类型：' + data.data.rows[i].equity_type + '</p>' : '') + '',
 						'' + ((data.data.rows[i].creditors_risk) ? '<p>风控要求：' + data.data.rows[i].creditors_risk + '</p>' : '') + '',
 						'' + ((data.data.rows[i].finance_risk) ? '<p>风险偏好：' + data.data.rows[i].finance_risk + '</p>' : '') + '',
 						'									   </div>',
-						'									   <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-right">',
+						'									   <div class="col-md-6 col-sm-6 col-xs-6 capitalInfo-right">',
 						'' + ((data.data.rows[i].body) ? '<p>资金主体：' + data.data.rows[i].body + '</p>' : '') + '',
 						'' + ((data.data.rows[i].industry) ? '<p>投资行业：' + data.data.rows[i].industry + '</p>' : '') + '',
 						'' + ((data.data.rows[i].equity_phase) ? '<p>投资阶段：' + data.data.rows[i].equity_phase + '</p>' : '') + '',
@@ -1532,7 +1532,7 @@
 						'								 </div>',
 						'								 <div class="col-md-3 col-sm-3 col-xs-3">',
 						'									<a class="btn btn-warning" role="button" data-toggle="modal"',
-						'									   data-target="#fundsModal">投递项目</a>',
+						'									   data-target="#capitalModal">投递项目</a>',
 						'								 </div>',
 						'							  </div>',
 						'							  <div>',
@@ -1540,7 +1540,7 @@
 						'								 <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>',
 						'							  </div>',
 						'						   </div>'].join(''));
-					str += fundsinfo;
+					str += capitalinfo;
 				}
 				$('#complex-sort').html($(str));
 				$('.amount span').each(function () {
@@ -1613,7 +1613,7 @@
 			this.remove();
 		})
 	}
-	function fundsSearch() {
+	function capitalSearch() {
 		var havea = $('.url a').text();
 		var key = $('#inputSearch').val();
 		if (key != '' && key != undefined && key != null) {
@@ -1699,12 +1699,12 @@
 		});
 	})
 	function checkFunstypeClose() {
-		$('#fundsType .fundscheck').addClass('hidden');
-		$('#fundsType .fundsradio').removeClass('hidden');
+		$('#capitalType .capitalcheck').addClass('hidden');
+		$('#capitalType .capitalradio').removeClass('hidden');
 	}
 	function checkFunstypeOpen() {
-		$('#fundsType .fundsradio').addClass('hidden');
-		$('#fundsType .fundscheck').removeClass('hidden');
+		$('#capitalType .capitalradio').addClass('hidden');
+		$('#capitalType .capitalcheck').removeClass('hidden');
 	}
 	function checkIndustryOpen() {
 		$('#Industry .Industryradio').addClass('hidden');
@@ -1714,28 +1714,28 @@
 		$('#Industry .Industryradio').removeClass('hidden');
 		$('#Industry .Industrycheck').addClass('hidden');
 	}
-	function fundsCheckSubmit() {
+	function capitalCheckSubmit() {
 		var count = 0;
-		var fundsUrl = '';
-		var funds = '';
-		$('input:checkbox[name="funds"]:checked').each(function () {
-			funds = funds + ($(this).parent().text()) + ' ';
+		var capitalUrl = '';
+		var capital = '';
+		$('input:checkbox[name="capital"]:checked').each(function () {
+			capital = capital + ($(this).parent().text()) + ' ';
 			if (count == 0) {
-				($('.url a').text()) ? fundsUrl = fundsUrl + '&body=' + $(this).val() : fundsUrl = fundsUrl + 'body=' + $(this).val();
+				($('.url a').text()) ? capitalUrl = capitalUrl + '&body=' + $(this).val() : capitalUrl = capitalUrl + 'body=' + $(this).val();
 			}
 			else {
-				fundsUrl = fundsUrl + '-' + $(this).val()
+				capitalUrl = capitalUrl + '-' + $(this).val()
 			}
 			count++;
 		});
 		if (count != 0) {
-			var url = $('.url').attr('property') + fundsUrl;
-			var tag = $('<a>资金类型：' + funds + '<i class="glyphicon glyphicon-remove"></i></a>')
-					.attr('href', fundsUrl).attr('property', 'fundsType');
+			var url = $('.url').attr('property') + capitalUrl;
+			var tag = $('<a>资金类型：' + capital + '<i class="glyphicon glyphicon-remove"></i></a>')
+					.attr('href', capitalUrl).attr('property', 'capitalType');
 			$('.url').attr('property', url);
 			$('.url').append(tag);
 			ajaxLoadlist(url);
-			$('#fundsType').addClass('hidden');
+			$('#capitalType').addClass('hidden');
 			checkFunstypeClose();
 			$('.url a').click(function (event) {
 				event.preventDefault();
