@@ -1499,46 +1499,46 @@
                 var str = '';
                 for (var i = 0; i < data.data.rows.length; i++) {
                     var fundsinfo = (['<div>',
-                        '                                        <div class="row">',
-                        '                                            <div class="col-md-12 col-sm-12 col-xs-12">',
-                        '                                                <a class="pull-left" href="${basePath}/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
-                        '                                                <span class="pull-right">' + data.data.rows[i].update_time.substring(0,10) + '</span>',
-                        '                                            </div>',
-                        '                                        </div>',
-                        '                                        <div class="row">',
-                        '                                            <div class="col-md-6 col-sm-6 col-xs-6">',
-                        '                                                <p class="amount">投资资金：<span class="text-danger">' + (data.data.rows[i].down_amount) + '</span>-<span class="text-danger">' + data.data.rows[i].up_amount + '</span></p>',
-                        '                                                    <div class="row">',
-                        '                                                    <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-left">',
+                        '                              <div class="row">',
+                        '                                 <div class="col-md-12 col-sm-12 col-xs-12">',
+                        '                                    <a class="pull-left" href="${basePath}/capital/view/' + data.data.rows[i].pk_capital + '">' + data.data.rows[i].title + '</a>',
+                        '                                    <span class="pull-right">' + data.data.rows[i].update_time.substring(0,10) + '</span>',
+                        '                                 </div>',
+                        '                              </div>',
+                        '                              <div class="row">',
+                        '                                 <div class="col-md-6 col-sm-6 col-xs-6">',
+                        '                                    <p class="amount">投资资金：<span class="text-danger">' + (data.data.rows[i].down_amount) + '</span>-<span class="text-danger">' + data.data.rows[i].up_amount + '</span></p>',
+                        '                                       <div class="row">',
+                        '                                       <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-left">',
                         '' + ((data.data.rows[i].capital_type) ? '<p>资金类型：' + data.data.rows[i].capital_type + '</p>' : '') + '',
                         '' + (data.data.rows[i].target_area) ? '<p>投资地区：' + data.data.rows[i].target_area + '</p>' : '' + '',
                         '' + ((data.data.rows[i].equity_type) ? '<p>投资类型：' + data.data.rows[i].equity_type + '</p>' : '') + '',
                         '' + ((data.data.rows[i].creditors_risk) ? '<p>风控要求：' + data.data.rows[i].creditors_risk + '</p>' : '') + '',
                         '' + ((data.data.rows[i].finance_risk) ? '<p>风险偏好：' + data.data.rows[i].finance_risk + '</p>' : '') + '',
-                        '                                                    </div>',
-                        '                                                    <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-right">',
+                        '                                       </div>',
+                        '                                       <div class="col-md-6 col-sm-6 col-xs-6 fundsInfo-right">',
                         '' + ((data.data.rows[i].body) ? '<p>资金主体：' + data.data.rows[i].body + '</p>' : '') + '',
                         '' + ((data.data.rows[i].industry) ? '<p>投资行业：' + data.data.rows[i].industry + '</p>' : '') + '',
                         '' + ((data.data.rows[i].equity_phase) ? '<p>投资阶段：' + data.data.rows[i].equity_phase + '</p>' : '') + '',
                         '' + ((data.data.rows[i].creditors_back) ? '<p>最低回报要求：' + data.data.rows[i].creditors_back + '</p>' : '') + '',
                         '' + ((data.data.rows[i].finance_product) ? '<p>产品偏好：' + data.data.rows[i].finance_product + '</p>' : '') + '',
-                        '                                                    </div>',
-                        '                                                </div>',
-                        '                                            </div>',
-                        '                                            <div class="col-md-3 col-sm-3 col-xs-3 ">',
-                        '                                                <p>' + data.data.rows[i].public_author + '</p>',
-                        '                                                <p>重庆市某金融投资公司</p>',
-                        '                                            </div>',
-                        '                                            <div class="col-md-3 col-sm-3 col-xs-3">',
-                        '                                                <a class="btn btn-warning" role="button" data-toggle="modal"',
-                        '                                                   data-target="#fundsModal">投递项目</a>',
-                        '                                            </div>',
-                        '                                        </div>',
-                        '                                        <div>',
-                        '                                            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>',
-                        '                                            <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>',
-                        '                                        </div>',
-                        '                                    </div>'].join(''));
+                        '                                       </div>',
+                        '                                    </div>',
+                        '                                 </div>',
+                        '                                 <div class="col-md-3 col-sm-3 col-xs-3 ">',
+                        '                                    <p>' + data.data.rows[i].public_author + '</p>',
+                        '                                    <p>重庆市某金融投资公司</p>',
+                        '                                 </div>',
+                        '                                 <div class="col-md-3 col-sm-3 col-xs-3">',
+                        '                                    <a class="btn btn-warning" role="button" data-toggle="modal"',
+                        '                                       data-target="#fundsModal">投递项目</a>',
+                        '                                 </div>',
+                        '                              </div>',
+                        '                              <div>',
+                        '                                 <span><i class="fa fa-envelope-o" aria-hidden="true"></i>11条留言</span>',
+                        '                                 <span><i class="fa fa-paper-plane-o" aria-hidden="true"></i>2次投递</span>',
+                        '                              </div>',
+                        '                           </div>'].join(''));
                     str += fundsinfo;
                 }
                 $('#complex-sort').html($(str));
@@ -1550,14 +1550,14 @@
                     }
                 })
                 var pagination = $(['<div>',
-                    '                                        <span class="pull-left">共有<i class="text-danger">' + data.data.records + '</i>个符合要求的资金信息</span>',
-                    '                                    <span class="pull-right">',
-                    '                                        <nav>',
-                    '                                            <ul class="pagination">',
-                    '                                            </ul>',
-                    '                                        </nav>',
-                    '                                    </span>',
-                    '                                    </div>'].join(""));
+                    '                              <span class="pull-left">共有<i class="text-danger">' + data.data.records + '</i>个符合要求的资金信息</span>',
+                    '                           <span class="pull-right">',
+                    '                              <nav>',
+                    '                                 <ul class="pagination">',
+                    '                                 </ul>',
+                    '                              </nav>',
+                    '                           </span>',
+                    '                           </div>'].join(""));
                 $('#complex-sort').append(pagination);
                 var total = data.data.total;
                 var page = data.data.page;
@@ -1661,7 +1661,7 @@
         ajaxLoadlist(url);
         $('.url').attr('property', url);
         $('.url').append(tag);
-        /*        var targetUrl = $(event.target).attr('herf'),
+        /*    var targetUrl = $(event.target).attr('herf'),
          targetPer = $(event.target).attr('per'),
          orriginUrl = $('.nav-tabs .active a').attr('herf');*/
         $('.url a').click(function (event) {
