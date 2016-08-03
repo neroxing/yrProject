@@ -1,158 +1,163 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Login</title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="title" content="">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="index, follow">
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index, follow">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
 
-    <!-- fontawesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!-- customized css -->
-    <link rel="stylesheet" href="css/yr.css">
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
 
-    <style type="text/css">
+	<style type="text/css">
 
-    </style>
+	</style>
 </head>
 <body>
 <div id="page">
-    <!--顶部标题栏-->
-    <div id="top-bar" class="container-fluid">
-        <div class="container">
-            <div class="pull-left">
-                <img alt="logo">
-                <span>会员登录</span>
-            </div>
-            <div class="pull-right">
-                <i class="glyphicon glyphicon-earphone"></i>
-                <span>服务热线：400 858 9000</span>
-            </div>
-        </div>
-    </div>
-    <!--登录面板-->
-    <div id="content" class="container">
-        <!--登录标示栏-->
-        <div class="row">
-            <div class="col-sm-12">
-                <span class="pull-left">会员登录</span>
-                <div class="pull-right">
-                    <a href="#">返回首页</a>|
-                    <a href="#">帮助中心</a>
-                </div>
-            </div>
-        </div>
-        <!--登录框-->
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-6 col-md-8">
-                        <img alt="login-logo">
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <ul class="nav nav-tabs">
-                                    <li class="active">
-                                        <a href="#normal-login" data-toggle="tab">普通登录方式</a>
-                                    </li>
-                                    <li>
-                                        <a href="#phone-login" data-toggle="tab">手机验证码登录</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <!--普通登录-->
-                                    <div class="tab-pane fade" id="normal-login">
-                                        <form class="form-horizontal center-block">
-                                            <div name="input-username" class="form-group">
-                                                <label class=" control-label col-sm-3" for="input-username">账号:</label>
-                                                <div class="col-sm-8">
-                                                    <input id="input-username" class="form-control" type="text"
-                                                           placeholder="账号/手机号码/电子邮箱">
-                                                </div>
-                                            </div>
-                                            <div name="input-pwd" class="form-group">
-                                                <label class="control-label col-sm-3"for="input-pwd">密码:</label>
-                                                <div class="col-sm-8">
-                                                    <input id="input-pwd" class="form-control" type="password"
-                                                           placeholder="请输入密码">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-3 col-sm-8">
-                                                    <input type="checkbox" class="radio-inline">两周内自动登录
-                                                    <a href="#" class="pull-right">忘记密码？</a>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-3 col-sm-8">
-                                                    <button class="btn btn-primary btn-block" type="submit">登录</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <!--手机登录-->
-                                    <div class="tab-pane fade in active" id="phone-login">
-                                        <form class="form-horizontal center-block">
-                                            <div class="form-group">
-                                                <label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
-                                                <div class="col-sm-8">
-                                                    <input id="input-phone" type="text" class="form-control"
-                                                           placeholder="请输入手机号码">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-4 control-label">图片验证:</label>
-                                                <div class="col-sm-4">
-                                                    <input id="input-compute" class="form-control" type="text"
-                                                           placeholder="输入结果">
-                                                </div>
-                                                <img alt="验证码" class="col-sm-4">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-4 control-label"
-                                                       for="phone-verification">手机验证:</label>
-                                                <div class="col-sm-8">
-                                                    <div class="input-group">
-                                                        <input id="phone-verification" class="form-control" type="text"
-                                                               placeholder="输入验证码">
-                                                    <span class="input-group-btn">
-                                                        <a class="btn btn-default" role="button">获取手机验证码</a>
-                                                    </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-4 col-sm-8">
-                                                    <button class="btn btn-primary btn-block" type="submit">登录</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-footer text-center">
-                                <span>没有投融界账号？</span>&nbsp;|&nbsp;<a href="#">免费注册</a>&nbsp;|&nbsp;<a href="#">客服咨询</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--页脚-->
-    <div id="footer" class="container"></div>
+	<!--顶部标题栏-->
+	<div id="login-banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					LOGO | 
+					会员登录	
+				</div>
+				<div class="col-sm-6">
+					<div class="pull-right">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<span>服务热线：000 000 0000</span>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--登录面板-->
+	<div id="content" class="container">
+		<div class="panel panel-default">
+			<!--登录标示栏-->
+			<div class="row panel-heading">
+				<div class="col-sm-12">
+					<span class="pull-left">会员登录</span>
+					<div class="pull-right">
+						<a href="#">返回首页</a> |
+						<a href="#">帮助中心</a>
+					</div>
+				</div>
+			</div>
+			<!--登录框-->
+
+			<div class="row panel-body">
+				<div class="">
+					<div class="col-sm-6 col-md-8">
+						<img alt="login-logo">
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a href="#normal-login" data-toggle="tab">普通登录方式</a>
+									</li>
+									<li>
+										<a href="#phone-login" data-toggle="tab">手机验证码登录</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<!--普通登录-->
+									<div class="tab-pane fade" id="normal-login">
+										<form class="form-horizontal center-block">
+											<div name="input-username" class="form-group">
+												<label class=" control-label col-sm-3" for="input-username">账号:</label>
+												<div class="col-sm-8">
+													<input id="input-username" class="form-control" type="text"
+														   placeholder="账号/手机号码/电子邮箱">
+												</div>
+											</div>
+											<div name="input-pwd" class="form-group">
+												<label class="control-label col-sm-3"for="input-pwd">密码:</label>
+												<div class="col-sm-8">
+													<input id="input-pwd" class="form-control" type="password"
+														   placeholder="请输入密码">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-3 col-sm-8">
+													<input type="checkbox" class="radio-inline">两周内自动登录
+													<a href="#" class="pull-right">忘记密码？</a>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-3 col-sm-8">
+													<button class="btn btn-primary btn-block" type="submit">登录</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!--手机登录-->
+									<div class="tab-pane fade in active" id="phone-login">
+										<form class="form-horizontal center-block">
+											<div class="form-group">
+												<label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
+												<div class="col-sm-8">
+													<input id="input-phone" type="text" class="form-control"
+														   placeholder="请输入手机号码">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label">图片验证:</label>
+												<div class="col-sm-4">
+													<input id="input-compute" class="form-control" type="text"
+														   placeholder="输入结果">
+												</div>
+												<img alt="验证码" class="col-sm-4">
+											</div>
+											<div class="form-group">
+												<label class="col-sm-4 control-label"
+													   for="phone-verification">手机验证:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input id="phone-verification" class="form-control" type="text"
+															   placeholder="输入验证码">
+													<span class="input-group-btn">
+														<a class="btn btn-default" role="button">获取手机验证码</a>
+													</span>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-4 col-sm-8">
+													<button class="btn btn-primary btn-block" type="submit">登录</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer text-center">
+								<span>没有投融界账号？</span>&nbsp;|&nbsp;<a href="#">免费注册</a>&nbsp;|&nbsp;<a href="#">客服咨询</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<div id="footer" class="container"></div>
 </div>
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
