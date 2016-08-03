@@ -25,7 +25,7 @@
 
 	<style type="text/css">
 		.wrapper{
-			background-color: var(--light-bg);
+			background-color: var(--white-max);
 			height: 600px;
 		}
 		.wrapper .v-outter-table{
@@ -108,7 +108,12 @@
 			<div class="col-sm-7 v-outter-table">
 				<div class="v-table-cell">
 					<h1>
-						您浏览的页面暂时未找到，您可继续访问其他页面！
+						<div class="visible-sm-block visible-md-block">
+							您浏览的页面暂时未找到，</br>您可继续访问其他页面！
+						</div>
+						<div class="hidden-sm hidden-md">
+							您浏览的页面暂时未找到，您可继续访问其他页面！
+						</div>
 					</h1>
 					<ol>
 						<li>检查网址是否正确</li>
