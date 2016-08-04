@@ -14,8 +14,8 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<!-- Bootstrap theme
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
 
 	<!-- fontawesome css -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -25,15 +25,12 @@
 
 	<style type="text/css">
 		#content{
-			height: 300px;
-		}
-		#menu{
-			height: 70px;
+			height: 600px;
 		}
 	</style>
 </head>
 <body>
-	<!--header-->
+	<!-- header -->
 	<div id="home-banner" class="container">
 		<div class="row">
 			<div class="col-sm-5">
@@ -53,12 +50,12 @@
 		</div>
 	</div>
 	<div id="header">
-		<div class="row light-bg">
+		<div class="row box-bg">
 			<div class="container">
 				<div class="row">
 					<div id="logo" class="col-sm-2"><h1>LOGO</h1></div>
 					<div id="slogan" class="col-sm-4">专业的融资服务平台</div>
-					<div id="menu" class="v-outter-table pull-right">
+					<div id="header-menu" class="v-outter-table pull-right">
 						<div class="v-table-cell">
 							<ul class="nav nav-pills">
 								<li class="active"><a href="#">首页</a></li>
@@ -74,40 +71,93 @@
 		</div>
 	</div>
 
-	<!--home-carousel-->
-	<div id="home-carousel" class="container-fuid"></div>
+	<!-- home-carousel -->
+	<div id="home-carousel"></div>
+	<!-- content -->
 	<div id="content" class="container">
-		<!--search-->
-		<div class="col-sm-8">
-			<h1>这是h1</h1>
-		</div>
+		<div class="row">
+			<!-- search -->
+			<div class="col-sm-8">
+				<h1>这是h1</h1>
+			</div>
 
-		<!--report-->
-		<div class="col-sm-4">
-			<h2>这是h2</h2>
-		</div>
+			<!-- report -->
+			<div class="col-sm-4">
+				<h2>这是h2</h2>
+			</div>
 
-		<!--news_list-->
-		<div class="col-sm-12">
-			<a>这是a</a>
-		</div>
-
-		<!--project_list-->
-		<div class="col-sm-12">
-			<a class="emphasis">这是a.emphasis</a>
-			<p>这是段落</p>
-			<ol>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-			</ol>
+			<!-- capital-list -->
+			<div class="col-sm-12">
+				<div class="panel">
+					<div class="panel-heading">
+						这是一个panel
+					</div>
+					<div class="row panel-body">
+						<div class="col-sm-4">
+							<div class="panel">
+								<div class="panel-heading">
+									<a>这是a</a>
+								</div>
+								<div class="panel-body">
+									<a class="title">这是a.title</a></br>
+									<a class="to-cold">这是a.to-cold</a></br>
+									<a class="to-hot">这是a.to-hot</a></br>
+									<a class="from-cold">这是a.from-cold</a></br>
+									<a class="from-hot">这是a.from-hot</a></br>
+									<a class="animated">这是a.animated</a></br>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel">
+								<div class="panel-heading">
+									<a class="btn btn-default">这是btn按钮</a>
+								</div>
+								<div class="panel-body">
+									<a class="btn btn-cold-to-hot">这是.btn-cold-to-hot</a></br>
+									<a class="btn btn-cold-to-lighter">这是.btn-cold-to-lighter</a></br>
+									<a class="btn btn-hot-to-lighter">这是.btn-hot-to-lighter</a></br>
+									<a class="btn btn-to-cold">这是.to-cold</a></br>
+									<a class="btn btn-to-hot">这是.to-hot</a></br>
+									<a class="btn btn-from-cold">这是.from-cold</a></br>
+									<a class="btn btn-from-hot">这是.from-hot</a></br>
+									<a class="btn btn-animated">这是.animated</a></br>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel">
+								<div class="panel-heading">
+									<a>这是a</a>
+								</div>
+								<div class="panel-body">
+									<a class="title">这是a.title</a></br>
+									<a class="to-cold">这是a.to-cold</a></br>
+									<a class="to-hot">这是a.to-hot</a></br>
+									<a class="from-cold">这是a.from-cold</a></br>
+									<a class="from-hot">这是a.from-hot</a></br>
+									<a class="animated">这是a.animated</a></br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<!-- project-list -->
+			<div class="col-sm-12">
+				<p>这是段落</p>
+				<ol>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ol>
+			</div>
 		</div>
 	</div>
-
-	<!--footer-->
-	<div class="container-fuid">
-		<div id="sites-links" class="row light-bg">
+	<!-- sites-links -->
+	<div id="sites-links">
+		<div class="row box-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2 col-md-2">
@@ -154,8 +204,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="footer" class="container-fuid">
-		<div id="footer-contact" class="row footer-light-bg">
+	<!-- footer -->
+	<div id="home-footer">
+		<div id="footer-links" class="row footer-light-bg">
 			<div class="container">
 				<div class="row">
 					<div class="visible-sm-block">
@@ -202,7 +253,7 @@
 					</div>
 					<div class="hidden-sm">
 						<div class="col-md-2 text-nowrap">
-							<div><h1>Logo</h1></div>
+							<div><h1>LOGO</h1></div>
 							<div>免费服务热线</div>
 							<div><span>400-858-9000</span></div>
 							<div>投诉电话：0571-56132500</div>
