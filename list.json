@@ -1,0 +1,74 @@
+{
+    "code": 0,
+    "data": {
+<<<<<<< HEAD
+        "page": 1,
+=======
+        "page": 6,
+>>>>>>> origin/master
+        "pageSize": 30,
+        "records": 1,
+        "rowBegin": 1,
+        "rowEnd": 30,
+        "rows": [
+            {
+                "ext": {
+                    "means": "股权融资",
+                    "financing_amount_max": 100000,
+                    "financing_amount_min": 10000,
+                    "industry": "轻工业"
+                },
+                "province_id": "省份代码",
+                "public_author": "管先生",
+                "title": "浙江海宁某皮革服装互联网项目融资2000万-3000万元",
+                "update_time": "2016-07-25 09:21:48"
+            },
+            {
+                "ext": {
+                    "means": "股权融资2",
+                    "financing_amount_max": 1000002,
+                    "financing_amount_min": 100002,
+                    "industry": "轻工业2"
+                },
+                "province_id": "省份代码2",
+                "public_author": "管先生2",
+                "title": "浙江海宁某皮革服装互联网项目融资2000万-3000万元2",
+                "update_time": "2016-07-25 09:21:482"
+            }
+<<<<<<< HEAD
+        ,
+            {
+                "ext": {
+                    "means": "股权融资2",
+                    "financing_amount_max": 1000002,
+                    "financing_amount_min": 100002,
+                    "industry": "轻工业2"
+                },
+                "province_id": "省份代码2",
+                "public_author": "管先生2",
+                "title": "浙江海宁某皮革服装互联网项目融资2000万-3000万元2",
+                "update_time": "2016-07-25 09:21:482"
+            }
+        ,
+            {
+                "ext": {
+                    "means": "股权融资2",
+                    "financing_amount_max": 1000002,
+                    "financing_amount_min": 100002,
+                    "industry": "轻工业2"
+                },
+                "province_id": "省份代码2",
+                "public_author": "管先生2",
+                "title": "浙江海宁某皮革服装互联网项目融资2000万-3000万元2",
+                "update_time": "2016-07-25 09:21:482"
+            }
+        ],
+        "total":66
+=======
+        ],
+        "total": 1
+>>>>>>> origin/master
+    },
+    "message": "success",
+    "success": true
+}
