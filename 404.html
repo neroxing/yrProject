@@ -24,7 +24,6 @@
 
 	<style type="text/css">
 		.wrapper{
-			background-color: var(--white-max);
 			height: 600px;
 		}
 		.wrapper .v-outter-table{
@@ -34,89 +33,82 @@
 			font-size: 200px;
 			width: 200px;
 		}
-		/*!
-		* animate.css -http://daneden.me/animate
-		* Version - 3.5.1
-		* Licensed under the MIT license - http://opensource.org/licenses/MIT
-		*
-		* Copyright (c) 2016 Daniel Eden
-		*/
-
-		.animated {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-		}
-
-		@-webkit-keyframes rollOut {
-			from {
-				opacity: 1;
+		/* animate.css -http://daneden.me/animate */
+			.animated {
+				-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
 			}
 
-			to {
-				opacity: 0;
-				-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-				transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-			}
-		}
+			@-webkit-keyframes rollOut {
+				from {
+					opacity: 1;
+				}
 
-		@keyframes rollOut {
-			from {
-				opacity: 1;
-			}
-
-			to {
-				opacity: 0;
-				-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-				transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
-			}
-		}
-
-		.rollOut {
-			-webkit-animation-name: rollOut;
-			animation-name: rollOut;
-			-webkit-animation-delay: 1s;
-			animation-delay: 1s;
-		}
-
-		@-webkit-keyframes zoomIn {
-			from {
-				opacity: 0;
-				bottom: 150px;
+				to {
+					opacity: 0;
+					-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
+					transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
+				}
 			}
 
-			50% {
-				opacity: 1;
-				bottom: 150px;
-			}
-			100%{
-				bottom: 150px;
-			}
-		}
+			@keyframes rollOut {
+				from {
+					opacity: 1;
+				}
 
-		@keyframes zoomIn {
-			from {
-				opacity: 0;
-				bottom: 120px;
+				to {
+					opacity: 0;
+					-webkit-transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
+					transform: translate3d(0, 130%, 0) rotate3d(0, 0, 1, -150deg);
+				}
 			}
 
-			50% {
-				opacity: 1;
-				bottom: 120px;
+			.rollOut {
+				-webkit-animation-name: rollOut;
+				animation-name: rollOut;
+				-webkit-animation-delay: 1s;
+				animation-delay: 1s;
 			}
-			100%{
-				bottom: 120px;
+
+			@-webkit-keyframes zoomIn {
+				from {
+					opacity: 0;
+					bottom: 150px;
+				}
+
+				50% {
+					opacity: 1;
+					bottom: 150px;
+				}
+				100%{
+					bottom: 150px;
+				}
 			}
-		}
 
-		.zoomIn {
-		-webkit-animation-name: zoomIn;
-		animation-name: zoomIn;
-		-webkit-animation-delay: 2s;
-		animation-delay: 2s;
+			@keyframes zoomIn {
+				from {
+					opacity: 0;
+					bottom: 120px;
+				}
 
-		}
+				50% {
+					opacity: 1;
+					bottom: 120px;
+				}
+				100%{
+					bottom: 120px;
+				}
+			}
+
+			.zoomIn {
+			-webkit-animation-name: zoomIn;
+			animation-name: zoomIn;
+			-webkit-animation-delay: 2s;
+			animation-delay: 2s;
+
+			}
 	</style>
 
 </head>
@@ -129,7 +121,7 @@
 			</div>
 		</div>
 		<!-- end of header -->
-		<div class="wrapper row">
+		<div class="row panel wrapper">
 			<div class="col-sm-5 v-outter-table">
 				<div class="v-table-cell">
 					<div id="animate-font" class="center-block">

@@ -1,10 +1,10 @@
 /* tool belt */
 	/* color */
 		:root{
-			--white-max:		#fff;		/**/
-			--white-bright:		#f8f8f8; 	/**/
+			--white-max:		#fff;		/*@panel-bg*/
+			--white-bright:		#f5f5f5; 	/*@panel-default-heading-bg @panel-footer-bg*/
 			--white-light:		#eee;		/*@body-bg*/
-			--white-dark:		#ddd;		/*use in font color with deep bg?(might change)*/
+			--white-dark:		#ddd;		/*@panel-default-border @panel-inner-border use in font color with deep bg?(might change)*/
 
 			--gray-light:		#888;
 			--gray:				#777;
@@ -20,8 +20,8 @@
 			--cold-dark:		#457;		/*blue?*/
 			--cold-light:		#679;
 
-			--banner-light:	#484b54;
-			--banner-dark:	#3b3d45;
+			--banner-light:		#484b54;
+			--banner-dark:		#3b3d45;
 		}
 	/* vertical middle */
 		.v-outter-table{
@@ -38,6 +38,7 @@
 		.title-bg{
 			background-color: var(--white-bright);
 		}
+
 /* universal */
 	*{
 		padding: 0;
@@ -93,13 +94,13 @@
 		a.to-cold:hover{
 			color: var(--cold-light);
 		}
-		a.from-hot{/* emphasis the link */
+		a.from-hot{/*  */
 			color: var(--hot-light);
 		}
 		a.from-hot:hover{
 			color: var(--black-bright);
 		}
-		a.from-cold{/* emphasis the link */
+		a.from-cold{/*  */
 			color: var(--cold-light);
 		}
 		a.from-cold:hover{
@@ -112,6 +113,121 @@
 		a.animated:hover{
 			color: var(--hot-dark);
 		}
+	/* boot btn overrite */
+		.btn {
+			color: var(--black-bright);
+			background-color: var(--white-max);
+			border-color: var(--white-dark);
+		}
+		.btn:hover {
+			color: var(--black-bright);
+			background-color: var(--white-light);
+			border-color: var(--gray-light);
+		}
+
+		.btn.btn-cold-to-hot {/* emphasis the link */
+			background-color: var(--cold-dark);
+			border-color: var(--white-dark);
+			color: var(--white-light);
+		}
+		.btn.btn-cold-to-hot:hover{
+			background-color: var(--hot-dark);
+		}
+
+		.btn.btn-cold-to-lighter {/* emphasis the link */
+			background-color: var(--cold-dark);
+			border-color: var(--white-dark);
+			color: var(--white-light);
+		}
+		.btn.btn-cold-to-lighter:hover{
+			background-color: var(--cold-light);
+		}
+		.btn.btn-hot-to-lighter {/* emphasis the link */
+			background-color: var(--hot-dark);
+			border-color: var(--white-dark);
+			color: var(--white-light);
+		}
+		.btn.btn-hot-to-lighter:hover{
+			background-color: var(--hot-light);
+		}
+
+		.btn.btn-to-hot:hover{
+			background-color: var(--hot-light);
+			color: var(--white-light);
+		}
+		.btn.btn-to-cold:hover{
+			background-color: var(--cold-light);
+			color: var(--white-light);
+		}
+
+		.btn.btn-from-hot{/* emphasis the link */
+			background-color: var(--hot-light);
+			color: var(--white-light);
+		}
+		.btn.btn-from-hot:hover{
+			background-color: var(--white-max);
+			color: var(--black-light);
+		}
+
+		.btn.btn-from-cold{/* emphasis the link */
+			background-color: var(--cold-light);
+			color: var(--white-light);
+		}
+		.btn.btn-from-cold:hover{
+			background-color: var(--white-max);
+			color: var(--black-light);
+		}
+
+		.btn.btn-animated{/* animated the link */
+			transition-duration: 0.5s;
+		}
+		.btn.btn-animated:hover{
+			background-color: var(--hot-dark);
+		}
+	/* bootstrap panel over write */
+		.panel {
+			margin: 10px 0;
+			background-color: var(--white-max);
+			border: 1px solid var(--white-dark);
+			border-radius: 3px;
+			-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+		}
+		.panel-heading {
+			padding: 10px 0px;
+			background-color: var(--white-bright);
+			background-image: none;
+			border-bottom: 1px solid var(--white-dark);
+			border-top-right-radius: 3px;
+			border-top-left-radius: 3px;
+		}
+		.panel-footer {
+			padding: 10px 0px;
+			background-color: var(--white-bright);
+			border-top: 1px solid var(--white-dark);
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		/* sub panel */
+		.panel .panel {
+			margin: 0px;
+			border-radius: 0px;
+		}
+		.panel .panel .panel-heading {
+			padding: 5px 0px 5px 5px;
+		}
+		.panel .panel .panel-footer {
+			padding: 5px 0px;
+		}
+
+		.panel-default {
+			border-color: var(--white-dark);
+		}
+		.panel-default > .panel-heading {
+			background-color: var(--white-bright);
+			border-color: var(--white-dark);
+		}
+
 /* banner */
 	#home-banner .row{
 		padding: 7px 0;
@@ -183,34 +299,3 @@
 		color: var(--white-dark);
 	}
 /* content */
-/* bootstrap over write */
-	.panel {
-		margin-bottom: 20px;
-		background-color: #fff;
-		border: 1px solid transparent;
-		border-radius: 4px;
-		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-		box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-	}
-	.panel-default {
-		border-color: #ddd;
-	}
-.panel-default > .panel-heading {
-background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
-background-image: -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
-background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e8e8e8));
-background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
-background-repeat: repeat-x;
-}
-.panel-default > .panel-heading {
-color: #333;
-background-color: #f5f5f5;
-border-color: #ddd;
-}
-.panel-heading {
-padding: 10px 15px;
-border-bottom: 1px solid transparent;
-border-top-left-radius: 3px;
-border-top-right-radius: 3px;
-}
