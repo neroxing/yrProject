@@ -1,0 +1,35 @@
+{
+	"code": 0,
+	"data": [
+		{
+			"content": "国会过会就",
+			"create_time": "2016-08-17 13:12:27",
+			"creator": 1,
+			"ext": {
+				"city_id":"杭州市",
+				"area_id":"拱墅区",
+				"area": 1,
+				"pk_meta": 1,
+				"province_id":"浙江省",
+				"company":"xxx公司",
+				"company_title":"经理",
+				"pk_user":1,
+				"avatar":"img/man100.jpg",
+				"follow": 1
+			},
+			"name": "NAME",
+			"phone": "676868",
+			"pk_message": 1,
+			"replay": {
+				"content": "回家回家看",
+				"pk_message": 3,
+				"replay": {
+					"content": "户籍科户籍科",
+					"pk_message": 4
+				}
+			}
+		}
+	],
+	"message": "success",
+	"success": true
+}

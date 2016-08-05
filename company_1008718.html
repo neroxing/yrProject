@@ -30,6 +30,7 @@
 	}
 	.message-textarea{
 		height: 95px;
+		border: none;
 	}
 	</style>
 </head>
@@ -110,14 +111,39 @@
 							</div>
 							<!-- 动态 -->
 							<div class="tab-pane" id="dynamic">
-								<div>
+								<div id="new-project">
 									<p>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></p>
 									<div>所属行业：节能环保 | 融资金额：3000万-5亿<div class="pull-right">07月12日</div></div>
 								</div>
-								<div>
+								<div id="send-card">
 									<p>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></p>
 									<div>所属行业：节能环保 | 融资金额：3000万-5亿<div class="pull-right">07月12日</div></div>
 								</div>
+								<div id="change-card">
+									
+								</div>
+								<div id="dynamic-message">
+									
+								</div>
+								<nav>
+									<ul class="pagination">
+										<li>
+											<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+											</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li>
+											<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 							<!-- 人脉 -->
 							<div class="tab-pane" id="contacts">
@@ -159,35 +185,46 @@
 							<!-- 留言 -->
 							<div class="tab-pane" id="message">
 								<div class="col-xs-12">
-									<div>
-										<h2>用户留言</h2>
-										<div class="pull-right"></div><span>还可以输入x字</span>
-									</div>
-									<div>
-										<input type="textarea" name="" class="col-xs-12 message-textarea">
-									</div>
-									<div class="col-xs-12">
-										<button class="btn btn-hot-to-lighter pull-right" type="submit">发布留言</button>
-										<div class="col-xs-3 pull-right">
-											<select class="form-control">
-												<option value="one">公开</option>
-												<option value="two">仅对方可见</option>
-												<option value="three">会员可见</option>
-											</select>
+									<form id="send-message">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<span>用户留言</span>
+												<div class="pull-right"><span>还可以输入x字</span></div>
+											</div>
+											<div class="panel-body">
+												<textarea name="message.content" class="col-xs-12 message-textarea"></textarea>
+												<input type="hidden" name="message.fk_type" value="1">
+											</div>
+											<div class="col-xs-12 panel-footer">
+												<button class="btn btn-hot-to-lighter pull-right" type="submit" id="submit-message">发布留言</button>
+												<div class="col-xs-3 pull-right">
+													<select class="form-control" name="message.target">
+														<option value="1">公开</option>
+														<option value="2">仅对方可见</option>
+														<option value="3">会员可见</option>
+													</select>
+												</div>
+											</div>
 										</div>
-									</div>
-									
+									</form>
 								</div>
-								<div>
-									<p class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言</p>
-
+								<div id="message-board">
 									<div>
+										<p class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言</p>
 										<div class="col-xs-1"><img src="img/man100.jpg" class="img-sm"></div>
 										<div class="col-xs-8">
-											<a href="" class="title">吴先生</a>&nbsp;安徽省合肥市某IT互联网公司&nbsp;董事长<br>所在地区：安徽省合肥市瑶海区<br>您好&nbsp;安徽首家VR应用技术公司需求合作
+											<div>
+												<div id="message-name" class="col-xs-2"><a href="" class="title">吴先生</a></div>
+												<div id="message-company" class="col-xs-10">安徽省合肥市某IT互联网公司&nbsp;董事长</div>
+											</div>
+											
+											<div id="message-area">所在地区：安徽省合肥市瑶海区</div>
+											<div id="message-content">您好&nbsp;安徽首家VR应用技术公司需求合作</div>
+											<div id="message-reply"><span>回复：</span>你好 ABC</div>
 										</div>
 										<div class="col-xs-3">2016-07-27 12:11:50</div>
 									</div>
+									<!-- <div class="col-xs-12"></div> -->
 								</div>
 							</div>
 						</div>
@@ -259,6 +296,83 @@
 	<script src="js/请输入.js"></script>-->
 
 	<script type="text/javascript">
+
+
+
+	$(document).ready(function(){
+		// ajax get message
+		function getMessage(){
+			$.ajax({ 
+				type: 'GET', 
+				// url: '115.236.94.196:30000/blade/message/list/1/1',
+				url: 'mlist.json',
+				dataType: 'json', 
+				contentType: 'application/json;charset=UTF-8',
+				success: function (mdata) {
+					var str = '';
+					// set html
+					if(mdata.data[0] == undefined){
+						var str = '<p class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言</p>';
+					}else{
+						$.each(mdata.data, function (index, object){
+							// if (true) {
+								//pk-user link href=115.236.94.196:30000/blade/user
+								var messageInfo = '<div><div class="col-xs-1"><img src="'+object.avatar+'" class="img-sm"></div><div class="col-xs-8"><div><div id="message-name" class="col-xs-2"><a href=115.236.94.196:30000/blade/user/"'+object.ext.pk_user+'" class="title">'+object.name+'</a></div><div id="message-company" class="col-xs-10">'+object.ext.company+'&nbsp;'+object.ext.company_title+'</div></div><div id="message-area">所在地区：'+object.ext.province_id+object.ext.city_id+object.ext.area_id+'</div><div id="message-content">'+object.content+'</div>';
+								if (object.replay!=undefined) {
+									messageInfo = messageInfo + '<div id="message-reply"><span>回复：</span>'+object.replay.content+'</div>';
+								}
+								str += messageInfo + '</div><div class="col-xs-3">'+object.create_time+'</div></div>';
+							// }
+						});
+					}
+					// insert str to html div
+					$('#message-board').html($(str));
+
+				},
+				error: function () {
+					
+				}
+			});
+		};
+
+		// post
+		$('#submit-message').click(function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			formData = $('#send-message').serialize();
+			getMessage();
+			$.ajax({
+				url: 'http://115.236.94.196:30000/blade/message/save',
+				dataType: 'text',
+				type: 'post',
+				data: formData,
+				contentType: 'application/json;charset=UTF-8',
+				success: function( data, textStatus, jQxhr ){
+					getMessage();
+				},
+				error: function( jqXhr, textStatus, errorThrown ){
+					console.log( errorThrown );
+				}
+			});
+		});
+
+
+		// pagination
+		$.ajax({ 
+				type: 'GET', 
+				// url: '115.236.94.196:30000/blade/message/list/1/1',
+				url: 'mlist.json',
+				dataType: 'json', 
+				contentType: 'application/json;charset=UTF-8',
+				success: function (mdata) {
+					
+				},
+				error: function () {
+					
+				}
+			});
+
+	});
 
 	</script>
 </body>
