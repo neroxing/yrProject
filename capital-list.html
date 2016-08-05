@@ -30,25 +30,31 @@
 		.num-lineheight {
 			line-height: 79px;
 		}
+
 		.col-sm-2dot4 {
 			position: relative;
 			min-height: 1px;
 			padding-right: 15px;
 			padding-left: 15px;
 		}
+
 		@media (min-width: 768px) {
 			.col-sm-2dot4 {
 				float: left;
 			}
+
 			.col-sm-2dot4 {
 				width: 20%;
 			}
+
 			.col-sm-pull-2dot4 {
 				right: 20%;
 			}
+
 			.col-sm-push-2dot4 {
 				left: 20%;
 			}
+
 			.col-sm-offset-2dot4 {
 				margin-left: 20%;
 			}
@@ -127,7 +133,7 @@
 							<div class="row">
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<span>投资方式:</span>
-									<a  class="to-hot" property="Investment" href="type=1">股权投资</a>
+									<a class="to-hot" property="Investment" href="type=1">股权投资</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<a property="Investment" href="type=2">债权投资</a>
@@ -1606,10 +1612,10 @@
 				$('#complex-sort').append(pagination);
 				var total = data.data.total;
 				var page = data.data.page;
-				$('.pagination').append($('<li><a >前一页</a></li>'));
+				(total > 1) ? $('.pagination').append($('<li><a >前一页</a></li>')) : null;
 				if (total <= 5 || page < 5) {
-					total = Math.min(total, 5)
-					for (var i = 1; i <= total; i++) {
+
+					for (var i = 1; i <= Math.min(total, 5); i++) {
 						if (i == page) {
 							$('.pagination').append($('<li><a>' + i + '</a></li>').addClass('active'));
 						}
@@ -1617,7 +1623,7 @@
 							$('.pagination').append($('<li><a>' + i + '</a></li>'));
 						}
 					}
-					(total > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+					(total > 5) ? $('.pagination').append($('<li><span>···</span></li><li><a>' + total + '</a></li>')) : null;
 					$('.pagination').append($('<li><a>后一页</a></li>'));
 				}
 				else {
@@ -1626,7 +1632,7 @@
 					$('.pagination').append($('<li><a>' + page + '</a></li>').addClass('active'));
 					((page + 1) <= total) ? $('.pagination').append($('<li><a>' + (page + 1) + '</a></li>')) : null;
 					((page + 2) <= total) ? $('.pagination').append($('<li><a>' + (page + 2) + '</a></li>')) : null;
-					(total > (page + 2)) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+					(total > (page + 2)) ? $('.pagination').append($('<li><span>···</span></li></li><li><a>' + total + '</a></li>')) : null;
 					$('.pagination').append($('<li><a >后一页</a></li>'));
 				}
 				$('.pagination li a').click(function () {
@@ -1659,7 +1665,7 @@
 	$('.more').click(function () {
 		$(this).children('i').toggleClass("caret")
 		$(this).children('i').toggleClass("fa fa-caret-up")
-	})
+	});
 	function cancelUrla(str) {
 		$('.url a[property=' + str + ']').each(function () {
 			var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
