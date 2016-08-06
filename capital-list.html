@@ -30,6 +30,35 @@
 		.num-lineheight {
 			line-height: 79px;
 		}
+
+		.col-sm-2dot4 {
+			position: relative;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+
+		@media (min-width: 768px) {
+			.col-sm-2dot4 {
+				float: left;
+			}
+
+			.col-sm-2dot4 {
+				width: 20%;
+			}
+
+			.col-sm-pull-2dot4 {
+				right: 20%;
+			}
+
+			.col-sm-push-2dot4 {
+				left: 20%;
+			}
+
+			.col-sm-offset-2dot4 {
+				margin-left: 20%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -83,8 +112,6 @@
 						</ul>
 					</div>
 				</div>
-
-
 			</nav>
 		</div>
 	</div>
@@ -104,9 +131,9 @@
 					<div class="parturl">
 						<div id="Investment" property="资金类型">
 							<div class="row">
-								<div class="col-md-2 col-sm-3  col-xs-2">
+								<div class="col-md-2 col-sm-2  col-xs-2">
 									<span>投资方式:</span>
-									<a property="Investment" href="type=1" class="to-hot">股权投资</a>
+									<a class="to-hot" property="Investment" href="type=1">股权投资</a>
 								</div>
 								<div class="col-md-2 col-sm-2  col-xs-2">
 									<a property="Investment" href="type=2">债权投资</a>
@@ -154,7 +181,7 @@
 								<div id="capitalType-hide" class="collapse">
 									<div class="row">
 										<div class="col-md-2 col-sm-2  col-xs-2">
-											<a property="capitalType" class="link-pd" href="body=6">小额贷款</a>
+											<a property="capitalType" href="body=6">小额贷款</a>
 										</div>
 										<div class="col-md-2 col-sm-2  col-xs-2">
 											<a property="capitalType" href="body=7">典当公司</a>
@@ -171,7 +198,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-2 col-sm-2  col-xs-2">
-											<a property="capitalType" class="link-pd" href="body=11">商业银行</a>
+											<a property="capitalType" href="body=11">商业银行</a>
 										</div>
 										<div class="col-md-2 col-sm-2  col-xs-2">
 											<a property="capitalType" href="body=12">基金公司</a>
@@ -188,7 +215,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-2 col-sm-2  col-xs-2">
-											<a property="capitalType" class="link-pd" href="body=16">其他资金</a>
+											<a property="capitalType" href="body=16">其他资金</a>
 										</div>
 									</div>
 								</div>
@@ -243,7 +270,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<div class="checkbox link-pd">
+										<div class="checkbox">
 											<label>
 												<input type="checkbox" value="6" name="capital">
 												小额贷款
@@ -285,7 +312,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<div class="checkbox link-pd">
+										<div class="checkbox">
 											<label>
 												<input type="checkbox" value="11" name="capital">
 												商业银行
@@ -327,7 +354,7 @@
 								</div>
 								<div class="row">
 									<div class="col-md-2 col-sm-2  col-xs-2">
-										<div class="checkbox link-pd">
+										<div class="checkbox">
 											<label>
 												<input type="checkbox" value="16" name="capital">
 												其他资金
@@ -925,8 +952,15 @@
 									</div>
 								</div>
 								<div class="row">
-									<button class="btn btn-default btn-xs" onclick="industryCheckSubmit()">确定</button>
-									<button class="btn btn-default btn-xs" onclick="checkIndustryClose()">取消</button>
+									<div class="col-sm-offset-5 col-sm-2">
+										<button class="btn btn-hot-to-lighter btn-sm pull-left"
+										        onclick="capitalCheckSubmit()">
+											确定
+										</button>
+										<button class="btn btn-default btn-sm pull-right"
+										        onclick="checkFunstypeClose()">取消
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1265,7 +1299,7 @@
 													<p>重庆市某金融投资公司</p>
 												</div>
 												<div class="col-md-3 col-sm-3 col-xs-3">
-													<a class="btn btn-warning" role="button" data-toggle="modal"
+													<a class="btn btn-hot-to-lighter" role="button" data-toggle="modal"
 													   data-target="#capitalModal">投递项目</a>
 												</div>
 											</div><!--资金信息-->
@@ -1277,7 +1311,7 @@
 										<div>
 											<div class="row"><!--资金标题-->
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+													<a class="pull-left title"><strong>重庆某资金2000万-5亿元寻优质贷款项目投资</strong></a>
 													<span class="pull-right">2016-07-25</span>
 												</div>
 											</div>
@@ -1306,7 +1340,7 @@
 										<div>
 											<div class="row"><!--资金标题-->
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+													<a class="pull-left title"><strong>重庆某资金2000万-5亿元寻优质贷款项目投资</strong></a>
 													<span class="pull-right">2016-07-25</span>
 												</div>
 											</div>
@@ -1323,7 +1357,7 @@
 													<p>重庆市某金融投资公司</p>
 												</div>
 												<div class="col-md-3 col-sm-3 col-xs-3">
-													<a class="btn btn-warning" role="button" data-toggle="modal"
+													<a class="btn btn-hot-to-lighter" role="button" data-toggle="modal"
 													   data-target="#capitalModal">投递项目</a>
 												</div>
 											</div><!--资金信息-->
@@ -1335,7 +1369,7 @@
 										<div>
 											<div class="row"><!--资金标题-->
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<span class="pull-left">重庆某资金2000万-5亿元寻优质贷款项目投资</span>
+													<a class="pull-left title"><strong>重庆某资金2000万-5亿元寻优质贷款项目投资</strong></a>
 													<span class="pull-right">2016-07-25</span>
 												</div>
 											</div>
@@ -1352,7 +1386,7 @@
 													<p>重庆市某金融投资公司</p>
 												</div>
 												<div class="col-md-3 col-sm-3 col-xs-3">
-													<a class="btn btn-warning" role="button" data-toggle="modal"
+													<a class="btn btn-hot-to-lighter" role="button" data-toggle="modal"
 													   data-target="#capitalModal">投递项目</a>
 												</div>
 											</div><!--资金信息-->
@@ -1404,13 +1438,13 @@
 								<!--优质信息模块-->
 								<div>
 									<img class="img-responsive" src="img/quality-funds.jpg">
-									<p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
+									<a class="title">寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</a>
 									<p>所在地区:浙江省</p>
 									<p>所属行业:金融投资</p>
 								</div>
 								<div>
 									<img class="img-responsive" src="img/quality-funds.jpg">
-									<p>寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</p>
+									<a class="title">寻浙江省内500万-5亿银行转贷项目及固定资产抵押项目 联系人：周总：13484281106</a>
 									<p>所在地区:浙江省</p>
 									<p>所属行业:金融投资</p>
 								</div>
@@ -1578,10 +1612,10 @@
 				$('#complex-sort').append(pagination);
 				var total = data.data.total;
 				var page = data.data.page;
-				$('.pagination').append($('<li><a >前一页</a></li>'));
+				(total > 1) ? $('.pagination').append($('<li><a >前一页</a></li>')) : null;
 				if (total <= 5 || page < 5) {
-					total = Math.min(total, 5)
-					for (var i = 1; i <= total; i++) {
+
+					for (var i = 1; i <= Math.min(total, 5); i++) {
 						if (i == page) {
 							$('.pagination').append($('<li><a>' + i + '</a></li>').addClass('active'));
 						}
@@ -1589,7 +1623,7 @@
 							$('.pagination').append($('<li><a>' + i + '</a></li>'));
 						}
 					}
-					(total > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+					(total > 5) ? $('.pagination').append($('<li><span>···</span></li><li><a>' + total + '</a></li>')) : null;
 					$('.pagination').append($('<li><a>后一页</a></li>'));
 				}
 				else {
@@ -1598,7 +1632,7 @@
 					$('.pagination').append($('<li><a>' + page + '</a></li>').addClass('active'));
 					((page + 1) <= total) ? $('.pagination').append($('<li><a>' + (page + 1) + '</a></li>')) : null;
 					((page + 2) <= total) ? $('.pagination').append($('<li><a>' + (page + 2) + '</a></li>')) : null;
-					(total > (page + 2)) ? $('.pagination').append($('<li><span>···</span></li>')) : null;
+					(total > (page + 2)) ? $('.pagination').append($('<li><span>···</span></li></li><li><a>' + total + '</a></li>')) : null;
 					$('.pagination').append($('<li><a >后一页</a></li>'));
 				}
 				$('.pagination li a').click(function () {
@@ -1619,6 +1653,7 @@
 		})
 	}
 	$(document).ready(function () {
+		$('.parturl a').not('.btn').not('.more').not('.less').addClass('to-hot')
 		var searchHref = (window.location.search).replace('?', '');
 		if (searchHref != '' && searchHref != undefined && searchHref != null) {
 			var a = $('a[href=\"' + searchHref + '\"]');
@@ -1630,7 +1665,7 @@
 	$('.more').click(function () {
 		$(this).children('i').toggleClass("caret")
 		$(this).children('i').toggleClass("fa fa-caret-up")
-	})
+	});
 	function cancelUrla(str) {
 		$('.url a[property=' + str + ']').each(function () {
 			var newUrl = $('.url').attr('property').replace($(this).attr('href'), '');
