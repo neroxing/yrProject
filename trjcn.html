@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投融界首页</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css" />
+<style type="text/css">
+    body{
+         background-color: #f1f1f1;
+    }
+    .colorGray{
+        background-color: #f1f1f1;
+    }
+    .help{
+        background-color: dimgray;
+    }
+    .login{
+        z-index:100;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 80px;
+        left:900px; 
+         filter:alpha(opacity=50);   
+      -moz-opacity:0.5;   
+      -khtml-opacity: 0.5;   
+      opacity: 0.5;
+    }
+    .footer{
+        background-color: dimgrey;
+    }
+    .carousel-indicators li {background-color:white;}
+    .carousel-indicators .active {background-color:red;}
+    .carousel .item img {
+        width: 100%;
+    }
+    .tel{
+        color: red;
+        font-size: 20px;
+        text-align: center;
+    }
+    .colorChange a:hover{
+            background-color:red;
+        }
+    .btn-red{
+        color: red;
+    }
+
+    .box{
+        border: 1px solid dimgray;
+        margin-top: 20px;
+    }
+    .car{
+        margin: 0 -15px;
+    }
+    .findCap{
+        margin: 0 -15px; 
+    }
+    .findCapital{
+        list-style: none;
+        margin-left: -30px;
+    }
+    .findCapital li{
+        padding: 23px 0;
+    }
+    .zzj{
+        border-top: 1px solid black;
+    }
+    .selectItems{
+        display: none;
+    }
+    dd{
+        display:inline-block;
+    }
+    dl{
+   height:auto; overflow:hidden;
+    }
+    .middleDl{
+        width: 200px;
+    }
+    .middleDl dd{
+        width:60px;
+    }
+    .rightDl{
+        width: 210px;
+    }
+    .rightDl dd{
+        width:100px;
+    }
+    .jxzj{
+        clear:left;
+        border: 1px solid dimgray;
+    }
+    .jxzj dt{
+        float: left;
+    }
+     .jxzj dd{
+        float: left;
+    }
+    .boxDistance{
+        margin-bottom: 30px;
+        
+    }
+    .textLinks{
+        line-height: 26px;
+        font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "Hiragino Sans GB", \5b8b\4f53;
+        margin-right:-10px;
+        margin-left: 25px;
+        padding-left: 10px;
+    }
+    .textLinks a{
+        display: inline-block;
+         color:dimgrey;
+        cursor: pointer;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+    .textFooter p,a{
+        color: white;
+        font: 12px/1.5 tahoma, arial, "Microsoft Yahei", "Hiragino Sans GB", \5b8b\4f53;
+        cursor: pointer;
+    }
+    .colorWhite{
+        background-color: white;
+    }
+    .colorWhite dd a{
+        color: black;
+    }
+    .colorWhite dt a{
+        color:dodgerblue;
+    }
+    .textBlack{
+        color:black; 
+    }
+    .titlecolorGray{
+        background-color: #f1f1f1;
+        margin-top:15px;
+        padding:3px  5px;
+    }
+    .linkb{
+        padding-bottom:50px;
+        margin-bottom: -30px;
+    }
+</style>
+<body>
+ <!--header欢迎致电 -->
+  <div class="container-fluid colorGray">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <span class="text-center">欢迎致电</span>
+        <span class="tel">400-858-9000</span>
+        <span>
+            <a href="http://weibo.com/trjcn1" target="_blank" >微博</a>
+        </span>
+        <span>
+            <a href="#">微信</a>
+        </span>
+        <div class="pull-right">
+            <a href="http://www.trjcn.com/capital/zjrz.html" class="btn btn-red">资本机构免费入驻</a>
+        </div>
+        <div class="pull-right colorChange">
+           <ul class="nav nav-pills">
+               <li>
+                   <a href="http://www.trjcn.com/manage/home.html">我的投融界</a>
+               </li>
+               <li>
+                   <a href="http://www.trjcn.com/help.html">新手指导</a>
+               </li>
+               <li>
+                   <a href="">手机投融界</a>
+               </li>
+           </ul>
+        </div>
+    </div>
+      </div>
+   </div> 
+   <!--header投融界 -->
+   <div class="container-fluid colorWhite">
+   <div class="row">  
+    <div id="header" class="col-md-10 col-md-offset-1">
+     <div class="pull-left">
+          <div class="pull-left">
+          <a href="http://www.trjcn.com" title="投融界">
+          <img src="../img/logo.png" class="center-block" alt="投融界">
+          </a>
+          </div>
+       
+     <div class=" pull-left">
+         专业的融资服务平台
+     </div>
+     </div>
+  
+       <div class="pull-right">
+             <ul class="list-inline colorChange">
+                <li class="current"><a href="http://www.trjcn.com" title="首页"  class="btn active">首页</a></li>
+                <li><a href="http://zijin.trjcn.com" title="找资金" class="btn">找资金</a></li>
+                <li><a href="http://www.trjcn.com/investor/home.html" title="约见投资人"  class="btn">约见投资人</a></li>
+                <li><a href="http://xiangmu.trjcn.com" title="选项目"  class="btn">选项目</a></li>
+                <li><a href="http://huodong.trjcn.com" title="活动"  class="btn">活动</a></li>
+                <li><a href="http://zhiku.trjcn.com" title="投融学院"  class="btn">投融学院</a></li>
+                <li><a href="http://www.trjcn.com/service.html" title="投融服务"  class="btn">投融服务</a></li>
+        </ul>
+       </div>
+      
+    </div>
+       </div>
+    </div>
+    <!--滚动条 -->
+    <div class="container-fluid car">
+       <div id="images">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+             <!--login-->
+             <div class="login">
+          <ul>
+              <li>登录</li>
+              <li>免费注册</li>
+          </ul>
+          <ul>
+              <li >
+                  <input type="text" value="" class="form-control" placeholder="手机号码">
+              </li>
+              <li>
+                  <input type="password" class="form-control" value="密码" placeholder="密码">
+              </li>
+              <li>
+                  <div>
+                      <label for="">
+                  <input type="checkbox">
+                  两周内自动登录
+              </label>
+              <p><a href="http://www.trjcn.com/login/forget.html" target="_blank">忘记密码？</a></p>
+                  </div>
+                  <button type="button" class="btn">登录</button>
+              </li>
+                 
+              
+          </ul>
+      </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="../img/401_1470222173.jpg" alt="...">
+      <div class="carousel-caption">
+  
+      </div>
+    </div>
+    <div class="item">
+      <img src="../img/401_1469533344.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+    <div class="item">
+      <img src="../img/401_1470130953.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <div class="item">
+      <img src="../img/401_1469249789.jpg" alt="...">
+      <div class="carousel-caption">
+      
+      </div>
+    </div>
+      <div class="item">
+      <img src="../img/401_1469793335.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+      <div class="item">
+      <img src="../img/401_1470215430.jpg" alt="...">
+      <div class="carousel-caption">
+ 
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+   </div>
+    </div>
+    <div class="container-fluid colorGray boxDistance">
+    <div class="row">
+    <div class="col-md-10 col-md-offset-1 ">
+        <div class="col-md-8 ">
+            <div class="pull-left col-md-1 findCap">
+                <ul class="findCapital">
+                    <li><span >找资金</span></li>
+                    <li><span>选项目</span></li>
+                </ul>
+            </div>
+            <div class="pull-right col-md-11 colorWhite">
+               <div>
+                  <form action="" class="form-inline col-md-12">
+                      <input type="text" class="form-control" placeholder="输入你想找的资金，来试试吧...">
+                      <button type="submit" class="btn btn-default">搜资金</button>
+                  </form>
+               </div> 
+               <div class="test">
+                          <div class="col-md-2">
+                                <dl >
+                                    <dt>投资方式</dt>
+                                    <dd><a href="http://zijin.trjcn.com/list_2010.html" target="_blank">股权投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_2011.html" target="_blank">债权投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_2012.html" target="_blank">金融投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_2013.html" target="_blank">BT/BOT投资</a></dd>
+                                </dl>
+                             </div> 
+                             <div class="col-md-5">     
+                                <dl class="middleDl">
+                                    <dt>资金主体</dt>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=600" target="_blank">个人资金</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=601" target="_blank">企业资金</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=602" target="_blank">天使投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=603" target="_blank">VC投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=604" target="_blank">PE投资</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=605" target="_blank">小额贷款</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=609" target="_blank">投资公司</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=610" target="_blank">商业银行</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=611" target="_blank">基金公司</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=612" target="_blank">证券公司</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?d94=607" target="_blank">担保公司</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html" target="_blank">更多</a></dd>
+                                </dl>
+                            </div>  
+                            <div class="col-md-5">  
+                                <dl class="rightDl">
+                                    <dt>投资金额</dt>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=2" target="_blank">1万-10万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=3" target="_blank">10万-50万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=4" target="_blank">50万-100万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=5" target="_blank">100万-500万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=6" target="_blank">500万-1000万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=7" target="_blank">1000万-5000万</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=8" target="_blank">5000万-1亿</a></dd>
+                                    <dd><a href="http://zijin.trjcn.com/list_1000.html?m=9" target="_blank">1亿以上</a></dd>
+                                </dl>
+                            </div>  
+               </div>
+               <div class="col-md-12 zzj">
+                        <span>不知道怎么找？</span>
+                    <a href="###" class="btn btn-primary">填写项目信息，帮您找资金</a>
+               </div>
+            </div>
+               <div class="pull-right col-md-11 selectItems">
+               <div>
+                  <form action="" class="form-inline col-md-12">
+                      <input type="text" class="form-control" placeholder="输入你想找的项目，来试试吧...">
+                      <button type="submit" class="btn btn-default">找项目</button>
+                  </form>
+               </div> 
+               <div class="test">
+                          <div class="col-md-2">
+                               <dl class="leftDl1">
+                                    <dt>融资方式</dt>
+                                    <dd><a href="http://xiangmu.trjcn.com/list_1.html?d146=618" target="_blank">债权融资</a></dd>
+                                    <dd><a href="http://xiangmu.trjcn.com/list_1.html?d146=619" target="_blank">股权融资</a></dd>
+                                    <dd><a href="http://xiangmu.trjcn.com/list_1.html?d146=892" target="_blank">其他融资</a></dd>
+                                    <dd><a href="http://xiangmu.trjcn.com/list_1.html?d146=891" target="_blank">整体转让</a></dd>
+                                </dl>
+                             </div> 
+                             <div class="col-md-5">     
+                                <dl class="middleDl1">
+                                    <dt></dt>
+                                    <dd><a href="#" target="_blank">IT互联网</a></dd>
+                                    <dd><a href="#" target="_blank">农林牧渔</a></dd>
+                                    <dd><a href="#" target="_blank">房地产</a></dd>
+                                    <dd><a href="#" target="_blank">餐饮休闲娱</a></dd>
+                                    <dd><a href="#" target="_blank">建筑建材</a></dd>
+                                    <dd><a href="#" target="_blank">旅游酒店</a></dd>
+                                    <dd><a href="#" target="_blank">食品饮料烟</a></dd>
+                                    <dd><a href="#" target="_blank">节能环保</a></dd>
+                                </dl>
+                            </div>  
+                            <div class="col-md-5">  
+                                <dl class="rightDl1">
+                                    <dt>热门地区</dt>
+                                    <dd><a href="#" target="_blank">广东省</a></dd>
+                                    <dd><a href="#" target="_blank">北京</a></dd>
+                                    <dd><a href="#" target="_blank">山东省</a></dd>
+                                    <dd><a href="#" target="_blank">浙江省</a></dd>
+                                    <dd><a href="#" target="_blank">上海</a></dd>
+                                    <dd><a href="#" target="_blank">江苏省</a></dd>
+                                    <dd><a href="#" target="_blank">四川省</a></dd>
+                                    <dd><a href="#" target="_blank">河南省</a></dd>
+                                    <dd><a href="#" target="_blank">陕西省</a></dd>
+                                    <dd><a href="#" target="_blank">福建省</a></dd>
+                                    <dd><a href="#" target="_blank">河北省</a></dd>
+                                    <dd><a href="#" target="_blank">湖南省</a></dd>
+                                </dl>
+                            </div>  
+               </div>
+               <div class="col-md-12">
+                        <span>让项目方主动找您？</span>
+                    <a href="###" class="btn btn-primary">申请成为投资人</a>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-4 colorWhite">
+            <div>今日新增资金</div>
+            <div>
+            <span>融资报告</span>
+            <span>成功案例</span>
+            </div>
+        </div>  
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid  boxDistance ">
+    <div class="row ">
+    <div class="col-md-10 col-md-offset-1 jxzj ">
+       <div class="">
+                <span class="box-title"><i class="icon-box-money"></i>*精选资金</span>
+                <a href="http://zijin.trjcn.com" target="_blank" class="box-more pull-right">查看更多+<i class="icon-box-more"></i></a>
+        </div> 
+                        <div >
+                            <ul class="list-inline">
+                                <div class="col-md-4 colorWhite">
+                                        <li class="">
+                                    <div class="titlecolorGray">
+                                        <a href="http://zijin.trjcn.com/list_2010.html" target="_blank" class="textBlack">股权投资</a>
+                                        <a href="http://zijin.trjcn.com/list_2010.html" target="_blank"  class="textBlack pull-right">更多</a>
+                                    </div>
+                                    <dl class="classify-cont fn-clear ">
+                					   <dt class=""><a href="http://zijin.trjcn.com?d94=603" title="VC" target="_blank">VC...</a></dt>
+                                        <dd class=""><a href="http://zijin.trjcn.com/detail_525015.html" title="江苏某VC投资1000万-3000万元寻" target="_blank">江苏某VC投资1000万-3000万元寻...</a></dd>
+                                        <dt class=""><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class=""><a href="http://zijin.trjcn.com/detail_524986.html" title="上海某企业资金3000万-10亿元寻" target="_blank">上海某企业资金3000万-10亿元寻...</a></dd>
+                                        <dt class=""><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class=""><a href="http://zijin.trjcn.com/detail_525021.html" title="贵州某企业资金5000万-2亿元寻" target="_blank">贵州某企业资金5000万-2亿元寻...</a></dd>
+                                        <dt class=""><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class=""><a href="http://zijin.trjcn.com/detail_525159.html" title="广东某企业资金1000万-1亿元寻" target="_blank">广东某企业资金1000万-1亿元寻...</a></dd>
+                                        <dt class=""><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class=""><a href="http://zijin.trjcn.com/detail_524850.html" title="上海某企业资金500万-5000万元寻" target="_blank">上海某企业资金500万-5000万...</a></dd>
+                                    </dl>
+                                </li>
+                                   </div>  
+                                <div class="col-md-4 colorWhite">   
+                                    <li class="">
+                                    <div class="titlecolorGray">
+                                        <a href="http://zijin.trjcn.com/list_2011.html" target="_blank" class="textBlack">债权投资</a>
+                                        <a href="http://zijin.trjcn.com/list_2011.html" target="_blank"  class="textBlack pull-right">更多</a>
+                                    </div>
+                                    <dl class="">
+                					   <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class="classify-info-name"><a href="http://zijin.trjcn.com/detail_525013.html" title="广东某企业资金1000万-5亿元寻" target="_blank">广东某企业资金1000万-5亿元寻...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class="classify-info-name"><a href="http://zijin.trjcn.com/detail_439791.html" title="四川某企业资金1000万-3亿元寻" target="_blank">四川某企业资金1000万-3亿元寻...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=600" title="个人资金" target="_blank">个人...</a></dt>
+                                        <dd class="classify-info-name"><a href="http://zijin.trjcn.com/detail_524772.html" title="四川某个人资金1000万-10亿元寻" target="_blank">四川某个人资金1000万-10亿元...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class="classify-info-name"><a href="http://zijin.trjcn.com/detail_524642.html" title="浙江某企业资金500万-5亿元寻" target="_blank">浙江某企业资金500万-5亿元寻...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class="classify-info-name"><a href="http://zijin.trjcn.com/detail_524639.html" title="浙江某企业资金5000万-5亿元寻" target="_blank">浙江某企业资金5000万-5亿元寻...</a></dd>
+                                                                         </dl>
+                                </li>
+                                </div>
+                                <div class="col-md-4 colorWhite">   
+                                    <li class="">
+                                    <div class="titlecolorGray">
+                                      <a href="http://zijin.trjcn.com" target="_blank" class="textBlack">其它投资</a>
+                                        <a href="http://zijin.trjcn.com" target="_blank" class="textBlack pull-right">更多</a>
+                                    </div>
+                                    <dl class="">
+                					   <dt class="classify-info-region"><a href="#" title="金融租赁" target="_blank">金融...</a></dt>
+                                        <dd class=""><a href="#" title="浙江某金融租赁公司500万-5000万元寻本地能源等项目合作" target="_blank">浙江某金融租赁公司500万-500...</a></dd>
+                                        <dt class="classify-info-region"><a href="#" title="投资公司" target="_blank">投资...</a></dt>
+                                        <dd class=""><a href="#" title="天津某投资公司1000万-10亿元寻公共停车场项目投资" target="_blank">天津某投资公司1000万-10亿元...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=608" title="金融租赁" target="_blank">金融..</a></dt>
+                                        <dd class=""><a href="#" title="上海某金融租赁公司1000万-1亿元寻西南地区政府项目合作" target="_blank">上海某金融租赁公司1000万-10...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=600" title="个人资金" target="_blank">个人...</a></dt>
+                                        <dd class=""><a href="" title="山东某个人资金4亿-5亿元寻房地产项目投资" target="_blank">山东某个人资金4亿-5亿元寻房...</a></dd>
+                                        <dt class="classify-info-region"><a href="http://zijin.trjcn.com?d94=601" title="企业资金" target="_blank">企业...</a></dt>
+                                        <dd class=""><a href="#" title="江苏某企业资金1亿元寻全国房地产等项目投资" target="_blank">江苏某企业资金1亿元寻全国房...</a></dd>
+                                    </dl>
+                                </li>
+                                </div>
+                            </ul>
+                        </div>
+    </div>
+    </div>
+    </div>
+      <div class="container-fluid colorGray boxDistance">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1 jxzj">
+                  <div>优质项目</div>
+                  <div>滚动条</div>
+                  <div>
+                      <ul class="list-inline">
+                            <div class="col-md-4 colorWhite">
+                                <li class="">
+                                <div class="titlecolorGray">
+                                    <a href="http://xiangmu.trjcn.com?y=23" target="_blank" class="textBlack">IT互联网</a>
+                                    <a href="http://xiangmu.trjcn.com?y=23" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                   <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2760" title="四川省" target="_blank">四川...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_525951.html" title="四川某互联网众筹平台项目股权融资100万-200万元" target="_blank">四川某互联网众筹平台项0000000</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1440" title="湖北省" target="_blank">湖北...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526258.html" title="武汉某创新智能服务平台项目股权融资100万-200万元" target="_blank">武汉某创新智能服务平台项目股...</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=777" title="贵州省" target="_blank">贵州...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526429.html" title="贵州某互联网项目股权融资500万元" target="_blank">贵州某互联网项目股权融资500万...</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2965" title="天津" target="_blank">天津...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526221.html" title="天津某情趣O2O项目股权融资162万-300万元" target="_blank">天津某情趣O2O项目股权融资1.....</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2316" title="山东省" target="_blank">山东...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_525395.html" title="青岛某代购平台项目股权融资1000万-2000万元" target="_blank">青岛某代购平台项目股权融资1...</a></dd>
+                                                                 </dl>
+                            </li>
+                               </div>  
+                                <div class="col-md-4 colorWhite">                     
+                                 <li class="">
+                                <div class="titlecolorGray">
+                                    <a href="http://xiangmu.trjcn.com?y=16" target="_blank" class="textBlack">农林牧渔</a>
+                                    <a href="http://xiangmu.trjcn.com?y=16" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=8" title="福建省" target="_blank">福建省</a></dt>
+                                    <dd class="classify-info-name"><a href="#" title="福建某农业生态园项目债权融资2000万-3000万元" target="_blank">福建某农业生态园项目债权融资...</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1105" title="河南省" target="_blank">河南省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526439.html" title="河南某养殖项目股权融资100万元" target="_blank">河南某养殖项目股权融资..........</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1700" title="吉林省" target="_blank">吉林省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526394.html" title="吉林某人参种植项目股权融资1000万-3000万元" target="_blank">吉林某人参种植项目股权融资....</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=3413" title="安徽省" target="_blank">安徽省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526389.html" title="安徽黄山某大型生态农庄扩建项目融资1亿元" target="_blank">安徽黄山某大型生态农.............</a></dd>
+                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=5" title="浙江省" target="_blank">浙江省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526281.html" title="浙江某香榧生态栽培示范项目股权融资1000万-3000万元" target="_blank">浙江某香榧生态栽培示范项...</a></dd>
+                                                                 </dl>
+                            </li>
+                          </div>
+                                <div class="col-md-4 colorWhite">
+                                <li class="">
+                                <div class="titlecolorGray">
+                                   <a href="http://xiangmu.trjcn.com?y=13" target="_blank" class="textBlack">房地产</a>
+                                    <a href="http://xiangmu.trjcn.com?y=13" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=507" title="广东省" target="_blank">广东省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526285.html" title="广东某房地产开发项目股权融资2亿-2.5亿元" target="_blank">广东某房地产开发项目股权融.......</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1561" title="湖南省" target="_blank">湖南省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526418.html" title="湖南某文化创业园项目债权融资6000万元" target="_blank">湖南某文化创业园项目债..........</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1105" title="河南省" target="_blank">河南省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526393.html" title="河南省某地级市商住项目债权融资6000万-8000万元" target="_blank">河南省某地级市商住项目债权融...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1770" title="江苏省" target="_blank">江苏省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_525031.html" title="江苏某小城市建设项目政府招商" target="_blank">江苏某小城市建设项目政府招商...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1105" title="河南省" target="_blank">河南省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526319.html" title="河南某棚户区改造项目股权融资2000万元" target="_blank">河南某棚户区改造项目股权融资2</a></dd>
+                                                                 </dl>
+                            </li>
+                          </div>
+                            <div class="col-md-4 colorWhite">
+                                <li class="classify-item">
+                                <div class="titlecolorGray">
+                                  <a href="http://xiangmu.trjcn.com?y=41" target="_blank" class="textBlack">餐饮休闲娱乐</a>
+                                    <a href="http://xiangmu.trjcn.com?y=41" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=652" title="广西省" target="_blank">广西省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526347.html" title="广西某棋牌娱乐项目股权融资100万元" target="_blank">广西某棋牌娱乐项目股权融资10</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1289" title="黑龙江省" target="_blank">黑龙...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526333.html" title="黑龙江某餐饮项目股权融资300万元" target="_blank">黑龙江某餐饮项目股权融资300....</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=3072" title="新疆" target="_blank">新疆</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526307.html" title="新疆某快餐项目股权融资200万元" target="_blank">新疆某快餐项目股权融资200万元....</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=7" title="重庆" target="_blank">重庆</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526261.html" title="重庆某餐饮项目股权融资200万元" target="_blank">重庆某餐饮项目股权融资200万元...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=3413" title="安徽省" target="_blank">安徽省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_525689.html" title="安徽某差异化经营休闲养生农庄项目股权融资300万-500万元" target="_blank">安徽某差异化经营休闲养生农庄...</a></dd>
+                                                                 </dl>
+                            </li>
+                          </div>
+                                 <div class="col-md-4 colorWhite">                      
+                            <li class="classify-item">
+                                <div class="titlecolorGray">
+                                    <a href="http://xiangmu.trjcn.com?y=19" target="_blank" class="textBlack">建筑建材</a>
+                                    <a href="http://xiangmu.trjcn.com?y=19" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2614" title="陕西省" target="_blank">陕西省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_493543.html" title="陕西某建材项目融资1.3亿元" target="_blank">陕西某建材项目融资1.3亿元.....</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=5" title="浙江省" target="_blank">浙江省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526279.html" title="浙江某新型建筑装配式组装房屋项目股权融资1400万元" target="_blank">浙江某新型建筑装配式组装房屋...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=3072" title="新疆" target="_blank">新疆...</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_521826.html" title="新疆某红枣交易市场项目融资300万元" target="_blank">新疆某红枣交易市场项目融资30</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2117" title="内蒙古" target="_blank">内蒙古</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526277.html" title="内蒙古某旧房改造项目债权融资5000万元" target="_blank">内蒙古某旧房改造项目债权融....</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1561" title="湖南省" target="_blank">湖南省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526354.html" title="湖南某铝合金模板项目债权融资100万元" target="_blank">湖南某铝合金模板项目债权融...</a></dd>
+                                                                 </dl>
+                            </li>
+                          </div>
+                           <div class="col-md-4 colorWhite">
+                            <li class="classify-item">
+                                <div class="titlecolorGray">
+                                   <a href="http://xiangmu.trjcn.com" target="_blank" class="textBlack">其他行业</a>
+                                    <a href="http://xiangmu.trjcn.com" target="_blank"  class="textBlack pull-right">更多</a>
+                                </div>
+                                <dl class="classify-cont fn-clear">
+                                                                    <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1770" title="江苏省" target="_blank">江苏省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526411.html" title="苏州某经络养生会馆项目股权融资100万-300万元" target="_blank">苏州某经络养生会馆项目股权融资...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=1770" title="江苏省" target="_blank">江苏省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_523717.html" title="江苏某室内装修技师培训项目股权融资500万元" target="_blank">江苏某室内装修技师培训项目股...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=5" title="浙江省" target="_blank">浙江省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526441.html" title="浙江某节能发电电动机项目股权融资3000万元" target="_blank">浙江某节能发电电动机项目元....</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=652" title="广西省" target="_blank">广西省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_472097.html" title="广西某发电系统项目股权融资500万元" target="_blank">广西某发电系统项目股权融资500万...</a></dd>
+                                                                     <dt class="classify-info-region"><a href="http://xiangmu.trjcn.com?a=2477" title="山西省" target="_blank">山西省</a></dt>
+                                    <dd class="classify-info-name"><a href="http://xiangmu.trjcn.com/detail_526440.html" title="山西省某青少年文化宫教育项目股权融资50万-200万元" target="_blank">山西省某青少年文化宫教育项目股...</a></dd>
+                                                                 </dl>
+                            </li>
+                          </div>
+                            
+                            </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+			<div class="container-fluid boxDistance colorWhite linkb">
+			<div class="row ">
+			  <div class="col-md-10 col-md-offset-1">
+				<div class=" col-md-1 colorGray">LINKS<br>友情链接</div>
+				<div class="col-md-10 col-md-offset-1 textLinks">
+					<a href="" target="_blank" title="">投融界专题</a> 
+					<a href="" target="_blank" title="">金价查询</a> <a href="" target="_blank" title="">私募基金</a> <a href="" target="_blank" title="">韬客外汇论坛</a> <a href="" target="_blank" title="">小算盘财富</a> <a href="" target="_blank" title="">东方财富网</a> <a href="" target="_blank" title="">汇金网</a> <a href="" target="_blank" title="">慧聪企业管理</a> <a href="" target="_blank" title="">第一金融网</a> <a href="" target="_blank" title="">股城财经</a> <a href="" target="_blank" title="">前瞻财经</a> <a href="" target="_blank" title="">国鑫黄金</a> <a href="" target="_blank" title="">中投顾问</a> <a href="" target="_blank" title="">小额贷款</a> <a href="" target="_blank" title="">金海贷</a> <a href="" target="_blank" title="">第一纸白银</a> <a href="" target="_blank" title="">投资理财导航</a> <a href="" target="_blank" title="">贷款网站</a> <a href="" target="_blank" title="">金羊网理财</a> <a href="" target="_blank" title="">叩富网模拟炒股</a> <a href="" target="_blank" title="">理想股票论坛</a> <a href="" target="_blank" title="">招商引资</a> <a href="" target="_blank" title="">爱股股票网</a> <a href="" target="_blank" title="">中国期货信息网</a> <a href="" target="_blank" title="">创业板</a> <a href="" target="_blank" title="">投资创业</a> <a href="" target="_blank" title="">投资移民</a> <a href="" target="_blank" title="">MACD股票论坛</a> <a href="" target="_blank" title="">浙商网</a> <a href="" target="_blank" title="">股票网</a> <a href="" target="_blank" title="">新一站保险网</a> <a href="" target="_blank" title="">P2P理财</a> <a href="" target="_blank" title="">酷基金网</a> <a href="" target="_blank" title="">赢家财富网</a> <a href="" target="_blank" title="更多友情链接>>>">更多友情链接&gt;&gt;&gt;</a>		
+                 </div>
+                 </div>      
+			  </div>
+			</div>
+    
+    <div class="col-md-12 footer textFooter">
+       <div class="col-md-12 help"></div>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-2">
+                <div>投融界</div>
+                <p>免费服务热线</p>
+                <p>400-858-9000</p>
+                <p>投诉电话：0571-56132500</p>
+                <p>周一到周六 9:00-20:00</p>
+                <p>邮箱:kefu@trjcn.com</p>
+            </div>
+           <div class="col-md-2">
+                <dl>
+                    <dt>平台保障</dt>
+                    <dd><a href="">会员身份实名认证</a></dd>
+                    <dd><a href="">举报投诉违规处罚</a></dd>
+                </dl>
+           </div>
+            <div class="col-md-2">
+                 <dl>
+                     <dt>新手指导</dt>
+                     <dd><a href="">免费注册生成名片</a></dd>
+                     <dd><a href="">免费发布投融信息</a></dd>
+                     <dd><a href="">常见问题解答</a></dd>
+                </dl>
+            </div> 
+         <div class="col-md-2">
+             <dl>
+                <dt>投融服务</dt>
+                <dd><a href="">投融宝</a></dd>
+                <dd><a href="">委托刷新</a></dd>
+                <dd><a href="">投递项目</a></dd>
+             </dl>
+         </div>
+           <div class="col-md-2">
+               <dl>
+                   <dt>关于投融界</dt>
+                   <dd><a href="">投融界介绍</a></dd>
+                   <dd><a href="">联系我们</a></dd>
+                   <dd><a href="">网站公告</a></dd>
+                   <dd><a href="">隐私条款</a></dd>
+                   <dd><a href="">网站地图</a></dd>
+               </dl>
+           </div>
+           <div class="col-md-2">
+               <dl>
+                   <dt>微信订阅</dt>
+                   <dd>
+                       <img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码" height="97" width="97">
+                       <span>扫描二维码，加关注</span>
+                   </dd>
+               </dl>
+           </div>
+        </div>
+        <div class="copyright col-md-8 col-md-offset-2">
+            <p >Copyright © 2016 杭州投融界互联网金融服务有限公司（www.trjcn.com） 版权所有 | ICP经营许可证:
+            <a href="http://www.trjcn.com/about_notice_153497.html" target="_blank">浙B2-20130239</a> | 浙公网安备:
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602000758">33010602000758号</a>
+            </p>
+            <p >
+            <a href="http://122.224.75.236/wzba/login.domethod=hdurl&amp;doamin=http://www.trjcn.com&amp;id=330103000101378&amp;SHID=1223.0AFF_NAME=com.rouger.%0Ags.main.UserInfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail" target="_blank" rel="nofollow" class="mod moda"></a>
+            <a href="javascript:;" rel="nofollow" class="mod mod-b"></a>
+            <a href="https://ss.knet.cn/verifyseal.dll?sn=e13020633010039151s9hn000000&amp;ct=df&amp;a=1&amp;pa=243344" target="_blank" rel="nofollow" class="mod mod-c"></a>
+            <a href="https://search.szfw.org/cert/l/CX20140808008687008783" target="_blank" rel="nofollow" class="mod mod-d"></a>
+            <a href="http://www.anquan.org/authenticate/cert/?site=www.trjcn.com&amp;at=business" target="_blank"><img alt="安全联盟" src="/assets/src/images/hy.png"></a></p>
+        </div>
+    </div>
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

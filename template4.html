@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index, follow">
+
+
+
+	<style type="text/css">
+        body{
+            width:800px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+         .linker{
+            text-align: center;
+        }
+        .send{
+            padding:0 20px 20px 70px;
+        }
+        .speak{
+            margin:10px 0 10px 5px;
+        }
+         .gly1{
+            position:relative;
+            top:-45px;
+        }
+         textarea{
+             resize:none;
+        }
+        .commentInfo{
+             padding: 5px;
+             color:white;   
+        }
+       .main .h{
+            background:url(http://www.trjcn.com/static/images/zhuanti/template16/title_bg.png) no-repeat left bottom; 
+            color:#3e311e;
+            font:bold 16px/38px Microsoft Yahei,Simsun,arial;
+            padding-left:10px ;
+        }
+        .main{
+            padding: 10px;
+            background-color:forestgreen;
+        }
+        .main .m{
+            background-color: white;
+            padding:10px 0 10px 18px;
+        }
+        .main .t{
+        
+            width:760px; 
+        }
+        .main .text{
+            font-size: 15px;
+            font-family: "楷体";
+            text-indent:30px;
+            line-height:2;
+        }
+    
+         .main1 .m{
+            border: 1px solid darkgray;
+        }
+        .main1 .h{
+            background-color:darkgray;
+            height: 40px;
+            padding: 5px 0;
+            padding-left: 10px;
+            font-size: 15px;
+            font-family:"楷体";
+        }
+          .main1 .text{
+            font-size: 15px;
+            line-height:2;
+            text-indent:20px;
+        }
+          .main1 .t{
+            background-color: white;
+            padding: 15px 20px;
+        }
+          .main2{
+            background-color:darkgray;
+        }
+        .main2 .m{
+
+        }
+        .main2 .m .unit{
+            border-radius: 10px;
+            background-color: white;
+        }
+        .main2 .head{
+            margin:10px 30px;
+            padding-top:4px; 
+        }
+         .main2 .gly{
+            position: relative;
+            float: left; 
+            margin-right: 10px;
+            margin-top: 23px;
+            width: 3px;
+            height:23px;
+            background:red;
+        }
+        .main2 .h{
+            color:red;
+            padding-bottom: 10px;
+            border-bottom: 2px solid darkgray;
+        }
+        .main2 .text{    
+            font-size: 15px;
+            line-height:2;
+            text-indent:20px;
+        }
+        .main2 .t{    
+             padding: 0 20px 15px 20px;
+        }
+        .main3{
+            margin: 0 200px;
+          
+        }
+        .main3 .m{
+            background-color:floralwhite;
+            margin: 0 10px; 
+        }
+        .main3 .h{
+            height: 40px;
+            background:url(http://www.trjcn.com/static/images/zhuanti/template2/title_ico.png) no-repeat left center; padding-left:15px; font:bold 16px/40px Microsoft yahei,simhei,simsun,arial; color:#4d3d0b;
+        }
+        .main3 .text{
+             
+            font-size: 15px;
+            line-height:2;
+            text-indent:20px;
+        }
+        .main4{
+             background-color: aliceblue;
+        }
+         .main4 .head{
+            background-color: aquamarine;
+            height: 40px;
+            margin: 3px; 
+            padding-left:10px; 
+          
+        }
+        .main4 .gly{
+            position: relative;
+            float: left; 
+            padding-top: 10px;
+            padding-left: 5px;
+            margin-top: 3px;
+            width: 1px;
+            height:20px;
+            background:blue;
+
+        }
+        .main4 .h{
+            padding: 5px 10px;
+            color:blue;
+            
+        }
+        .main4 .t{
+            background-color: white;
+             border-bottom: 1px solid darkblue;
+        }
+        .main4 .text{
+            font-size: 15px;
+            text-indent:20px;
+            
+        }
+        .main5{
+            margin: 0 290px;
+            background-color:floralwhite; 
+        }
+        .main5 .head{
+            border: 1px  solid darkblue;
+        }
+        .main5 .t{
+            background-color: white;
+            border-left: 1px  solid darkblue;
+            border-right:1px  solid darkblue;
+        }
+        .main5 .text{
+            font-size: 15px;
+            text-indent:20px;
+        }
+        
+         .main6{
+             background-color: aliceblue;
+        }
+        .main6 .m{
+            background-color: aqua;
+          padding:3px 0;
+        }
+        .main6 .unit{
+            border: 1px solid darkblue;
+            margin: 10px;
+            background-color: aquamarine;
+        }
+         .main6 .head{
+            height: 40px;
+            margin: 3px; 
+            padding-left:10px; 
+          
+        }
+        .main6 .h{
+            background:url(http://www.trjcn.com/static/images/zhuanti/template17/title_bg.png) no-repeat 10px 18px; 
+            color:#554327; 
+            font:bold 16px/38px Microsoft Yahei,Simsun,arial;
+            padding:20px 10px 0 50px;        
+        }
+        .main6 .t{
+            background-color: white;
+            margin: 0 30px;
+
+        }
+        .main6 .text{
+            font-size: 15px;
+            text-indent:20px;
+            
+        }
+        .main7{
+             background-color: aliceblue;
+        }
+        .main7 .m{
+            background-color:blue;
+          padding:3px 0;
+        }
+        .main7 .unit{
+            border: 1px solid darkblue;
+            margin: 10px;
+            background-color:white;
+        }
+         .main7 .head{
+
+        }
+        .main7 .h{
+            color:blue; 
+            font:bold 30px/38px ; 
+            padding-left: 30px;
+
+        }
+        .main7 .t{
+            margin: 0 30px;
+
+        }
+        .main7 .text{
+            font-size: 15px;
+            text-indent:20px;
+            
+        }
+	</style>
+</head>
+<body class="main6">
+     <div class="m">
+        <div class="unit">
+              <div class="head">
+                 <div class="gly"></div>
+                 <h2 class="h">项目背景</h2>
+              </div>
+              <div class="t">
+                <p class="text">自古珍宝山中藏。地处浙西南山区的丽水市，过去山地是最大制约，经济发展犹如“螺狮壳里做道场”；但谁曾想到，如今山地竟成为当地最大发展特色。生长于一方青山绿水间的生态农产品，犹如散布于大山里的珍珠，熠熠生辉。“短板”成“跳板”，丽水也由此成为生产优质农产品的理想之地。</p>
+                <p class="text">2012年，当地确立“生态精品农业”发展目标，并提出“生态化规划、标准化生产、品牌化经营和电商化营销”的具体路径，同时创建“丽水山耕”区域公用品牌，自此酒香开始飘出“深巷子”。</p>
+              </div>
+        </div>
+           <div class="unit">
+              <div class="head">
+                 <div class="gly"></div>
+                 <h2 class="h"  >项目背景</h2>
+              </div>
+              <div class="t">
+                <p class="text">自古珍宝山中藏。地处浙西南山区的丽水市，过去山地是最大制约，经济发展犹如“螺狮壳里做道场”；但谁曾想到，如今山地竟成为当地最大发展特色。生长于一方青山绿水间的生态农产品，犹如散布于大山里的珍珠，熠熠生辉。“短板”成“跳板”，丽水也由此成为生产优质农产品的理想之地。</p>
+                <p class="text">2012年，当地确立“生态精品农业”发展目标，并提出“生态化规划、标准化生产、品牌化经营和电商化营销”的具体路径，同时创建“丽水山耕”区域公用品牌，自此酒香开始飘出“深巷子”。</p>
+              </div>
+        </div>
+           <div class="unit">
+              <div class="head">
+                   <div class="gly"></div>
+                   <h2 class="h"  >项目背景</h2>
+              </div>
+              <div class="t">
+                  <p class="text">自古珍宝山中藏。地处浙西南山区的丽水市，过去山地是最大制约，经济发展犹如“螺狮壳里做道场”；但谁曾想到，如今山地竟成为当地最大发展特色。生长于一方青山绿水间的生态农产品，犹如散布于大山里的珍珠，熠熠生辉。“短板”成“跳板”，丽水也由此成为生产优质农产品的理想之地。</p>
+                  <p class="text">2012年，当地确立“生态精品农业”发展目标，并提出“生态化规划、标准化生产、品牌化经营和电商化营销”的具体路径，同时创建“丽水山耕”区域公用品牌，自此酒香开始飘出“深巷子”。</p>
+              </div>
+        </div>
+     </div>
+  <div class="panel panel-default">
+       <div class="panel-body linker">
+           <span style="font-weight:900">联系人:谢先生</span>
+           <a class="btn btn-danger" href="#" role="btn"><span class="glyphicon glyphicon-user"></span>立即投递</a>
+       </div>
+  </div>
+  <div class="panel panel-default">
+      <div class="panel-body">
+              <span class="glyphicon glyphicon-edit"></span> <span>我要评论</span>
+         <div class="speak">
+              <span class="glyphicon glyphicon-lg glyphicon-user gly1 " style="font-size:50px;color:#567"></span>
+         <textarea rows="5" cols="109"></textarea>
+   </div>
+      </div>
+  <div class="send">
+       <span>  (请文明发言，并遵守相关规定)</span>
+       <a class="btn btn-danger pull-right" role="btn" href="#">我要评论</a>
+  </div>
+      <div style=" background-color:red" >
+             <div class="commentInfo">用户评论</div>
+      </div>
+      <div class="speak">暂无评论</div>
+   </div>
+
+
+
+	
+</body>
+</html>
