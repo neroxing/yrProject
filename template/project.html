@@ -1,1060 +1,1020 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="title" content="">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="index, follow">
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index, follow">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
 
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="${basePath}/static/css/bootstrap-theme.min.css">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="${basePath}/static/css/bootstrap-theme.min.css">
 
-    <!-- fontawesome css -->
-    <link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
 
-    <!-- customized css -->
-    <link rel="stylesheet" href="${basePath}/static/css/yr.css">
+	<!-- customized css -->
+	<link rel="stylesheet" href="${basePath}/static/css/yr.css">
 
-    <style type="text/css">
+	<style type="text/css">
 
-        .select {
-            display: block;
-        }
+		.select {
+			display: block;
+		}
 
-        .mselect {
-            display: none;
-        }
+		.mselect {
+			display: none;
+		}
 
-        .choose .select {
-            display: none;
-        }
+		.choose .select {
+			display: none;
+		}
 
-        .choose .mselect {
-            display: block;
-        }
+		.choose .mselect {
+			display: block;
+		}
 
-        .select1 {
-            display: block;
-        }
+		.select1 {
+			display: block;
+		}
 
-        .mselect1 {
-            display: none;
-        }
+		.mselect1 {
+			display: none;
+		}
 
-        .choose1 .select1 {
-            display: none;
-        }
+		.choose1 .select1 {
+			display: none;
+		}
 
-        .choose1 .mselect1 {
-            display: block;
-        }
+		.choose1 .mselect1 {
+			display: block;
+		}
 
-        .select2 {
-            display: block;
-        }
+		.select2 {
+			display: block;
+		}
 
-        .mselect2 {
-            display: none;
-        }
+		.mselect2 {
+			display: none;
+		}
 
-        .choose2 .select2 {
-            display: none;
-        }
+		.choose2 .select2 {
+			display: none;
+		}
 
-        .choose2 .mselect2 {
-            display: block;
-        }
+		.choose2 .mselect2 {
+			display: block;
+		}
 
-        .select3 {
-            display: block;
-        }
+		.select3 {
+			display: block;
+		}
 
-        .mselect3 {
-            display: none;
-        }
+		.mselect3 {
+			display: none;
+		}
 
-        .choose3 .select3 {
-            display: none;
-        }
+		.choose3 .select3 {
+			display: none;
+		}
 
-        .choose3 .mselect3 {
-            display: block;
-        }
+		.choose3 .mselect3 {
+			display: block;
+		}
 
-    </style>
+	</style>
 </head>
 <body>
 
 
 <div class="container">
-    <div class="panel">
-        <div class="panel-heading">
-            <table>
-                <tbody>
-                <tr id="condition">
-                    <td><p><i class="fa fa-cog"></i></p></td>
-                    <td><a href="#" target="_blank">所有项目</a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="panel-body">
-            <div class="panel-body industry0">
-                <div class="col-md-2 col-sm-2">
-                    <span>所属类型:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["201"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span onclick="search($(this),'${dict.num}','所属类型',0)">${dict.name}</span></a>
-                                </div>
-                                @}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="industry" class="panel-body industry1" style="display: none;">
-                <div class="col-md-2 col-sm-2">
-                    <span>所属行业:</span>
-                </div>
-                <div class="col-md-10 col-sm-10 mchoose" style=" margin-left: -50px;">
-                    <!-- 1;-->
-                    <div class="row select">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @var i=1;
-                                @for(dict in dicts["13"]){
-                                @if(i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="collapse" id="collapseExample1">
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=6&&i<=10){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=11&&i<=15){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=16&&i<=20){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=21&&i<=25){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=26&&i<=30){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=31&&i<=35){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["13"]){
-                                    @if(i>=36&&i<=40){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button id="choosebotton" class="pull-left">多选</button>
-                            <button data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
-                                    aria-controls="collapseExample1" class="pull-right changeFont more1"
-                                    onclick="changeFont($(this),1)">更多
-                            </button>
-                        </div>
-                    </div>
-                    <!-- 2;-->
-                    <div class="row mselect">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=6&&i<=10){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=11&&i<=15){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=16&&i<=20){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=21&&i<=25){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=26&&i<=30){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=31&&i<=35){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["13"]){
-                                @if(i>=36&&i<=40){
-                                <div class="col-md-2 col-sm-2">
-                                    <a class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button class="choosebotton1">收起</button>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <button type="button" class="btn btn-from-hot" onclick="sure('所属行业:',1)">确定</button>
-                                <button type="button" class="btn btn-to-cold choosebotton1 ">取消</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="province" class="panel-body industry2">
-                <div class="col-md-2 col-sm-2">
-                    <span>所在地区:</span>
-                </div>
-                <div class="col-md-10 col-sm-10 mchoose1" style=" margin-left: -50px;">
-                    <div class="row select1">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="collapse" id="collapseExample2">
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=6&&i<=10){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=11&&i<=15){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=16&&i<=20){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=21&&i<=25){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=26&&i<=30){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["001"]){
-                                    @if(i>=31&&i<=35){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}'','所在地区',2,null,null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button id="choosebotton2" class="pull-left">多选</button>
-                            <button data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
-                                    aria-controls="collapseExample2" class="pull-right changeFont more2"
-                                    onclick="changeFont($(this),2)">更多
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row mselect1">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=6&&i<=10){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=11&&i<=15){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=16&&i<=20){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=21&&i<=25){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=26&&i<=30){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["001"]){
-                                @if(i>=31&&i<=35){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button class="choosebotton3">收起</button>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <button type="button" class="btn btn-from-hot" onclick="sure('所属地区:',2)">确定</button>
-                                <button type="button" class="btn btn-to-cold choosebotton3">取消</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="financing_means" class="panel-body industry3" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>融资方式:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
-                    <!-- 1;-->
-                    <div class="row select2">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["19"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','融资方式',3,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
+	<div class="panel">
+		<div class="panel-heading">
+			<table>
+				<tbody>
+				<tr id="condition">
+					<td><p><i class="fa fa-cog"></i></p></td>
+					<td><a href="#" target="_blank">所有项目</a></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="panel-body">
+			<div class="panel-body industry0">
+				<div class="col-md-2 col-sm-2">
+					<span>所属类型:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["201"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span onclick="search($(this),'${dict.num}','所属类型',0)">${dict.name}</span></a>
+								</div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="industry" class="panel-body industry1" style="display: none;">
+				<div class="col-md-2 col-sm-2">
+					<span>所属行业:</span>
+				</div>
+				<div class="col-md-10 col-sm-10 mchoose" style=" margin-left: -50px;">
+					<!-- 1;-->
+					<div class="row select">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@var i=1;
+								@for(dict in dicts["13"]){
+								@if(i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample1">
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=11&&i<=15){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=16&&i<=20){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=21&&i<=25){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=26&&i<=30){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=31&&i<=35){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["13"]){
+									@if(i>=36&&i<=40){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所属行业',1,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button id="choosebotton" class="pull-left">多选</button>
+							<button data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
+							        aria-controls="collapseExample1" class="pull-right changeFont more1"
+							        onclick="changeFont($(this),1)">更多
+							</button>
+						</div>
+					</div>
+					<!-- 2;-->
+					<div class="row mselect">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=6&&i<=10){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=11&&i<=15){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=16&&i<=20){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=21&&i<=25){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=26&&i<=30){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=31&&i<=35){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["13"]){
+								@if(i>=36&&i<=40){
+								<div class="col-md-2 col-sm-2">
+									<a class="to-hot"><input type="checkbox"
+									                         value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button class="choosebotton1">收起</button>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<button type="button" class="btn btn-from-hot" onclick="sure('所属行业:',1)">确定</button>
+								<button type="button" class="btn btn-to-cold choosebotton1 ">取消</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="province" class="panel-body industry2">
+				<div class="col-md-2 col-sm-2">
+					<span>所在地区:</span>
+				</div>
+				<div class="col-md-10 col-sm-10 mchoose1" style=" margin-left: -50px;">
+					<div class="row select1">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample2">
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=11&&i<=15){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=16&&i<=20){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=21&&i<=25){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=26&&i<=30){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["001"]){
+									@if(i>=31&&i<=35){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','所在地区',2,null,null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button id="choosebotton2" class="pull-left">多选</button>
+							<button data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
+							        aria-controls="collapseExample2" class="pull-right changeFont more2"
+							        onclick="changeFont($(this),2)">更多
+							</button>
+						</div>
+					</div>
+					<div class="row mselect1">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=6&&i<=10){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=11&&i<=15){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=16&&i<=20){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=21&&i<=25){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=26&&i<=30){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["001"]){
+								@if(i>=31&&i<=35){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button class="choosebotton3">收起</button>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<button type="button" class="btn btn-from-hot" onclick="sure('所属地区:',2)">确定</button>
+								<button type="button" class="btn btn-to-cold choosebotton3">取消</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="financing_means" class="panel-body industry3" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>融资方式:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
+					<!-- 1;-->
+					<div class="row select2">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["19"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','融资方式',3,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2;-->
-                </div>
-            </div>
-            <div class="panel-body industry4" id="interest" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>最高利息:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),1,'最高利息',4,'type_remove','con1')">12%以内</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),2,'最高利息',4,'type_remove','con1')">12%-15%</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),3,'最高利息',4,'type_remove','con1')">15%-20%</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),4,'最高利息',4,'type_remove','con1')">20%以上</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body industry5" id="creditors_risk" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>提供风控:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["25"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','提供风控',5,'type_remove','con1')">${dict.name}</span></a>
-                                </div>
+							</div>
+						</div>
+					</div>
+					<!-- 2;-->
+				</div>
+			</div>
+			<div class="panel-body industry4" id="interest" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>最高利息:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style=" margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["26"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','最高利息',4,'type_remove','con1')">${dict.name}</span></a>
+								</div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body industry5" id="creditors_risk" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>提供风控:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["25"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','提供风控',5,'type_remove','con1')">${dict.name}</span></a>
+								</div>
 
-                                @}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body industry6" id="period" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>项目阶段:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["27"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','项目阶段',6,'type_remove','con2')">${dict.name}</span></a>
-                                </div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body industry6" id="period" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>项目阶段:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["27"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','项目阶段',6,'type_remove','con2')">${dict.name}</span></a>
+								</div>
 
-                                @}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body industry7" id="transfer_ratio" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>出让比例:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),1,'出让比例',7,'type_remove','con2')">15%以内</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),2,'出让比例',7,'type_remove','con2')">15%-30%</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),3,'出让比例',7,'type_remove','con2')">30%-50%</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),4,'出让比例',7,'type_remove','con2')">50%以上</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="financing_amount" class="panel-body industry8" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>融资金额:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),1,'融资金额',8,'type_remove',null)">不限</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),2,'融资金额',8,'type_remove',null)">1万-10万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),3,'融资金额',8,'type_remove',null)">10万-50万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),4,'融资金额',8,'type_remove',null)">50万-100万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),5,'融资金额',8,'type_remove',null)">100万-500万</span></a>
-                                </div>
-                            </div>
-                            <div class="collapse" id="collapseExample3">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span>500万-1000万</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span>1000万-5000万</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span>5000万-1亿</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span>大于1亿</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button data-toggle="collapse" href="#collapseExample3" aria-expanded="false"
-                                    aria-controls="collapseExample3" class="pull-right more3"
-                                    onclick="changeFont($(this),3)">更多
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="deal_type" class="panel-body industry9" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>交易类别:</span>
-                </div>
-                <div class="col-md-10 col-sm-10 mchoose2" style="margin-left: -50px;">
-                    <div class="row select2">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["21"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="collapse" id="collapseExample4">
-                                <div class="row">
-                                    @for(dict in dicts["21"]){
-                                    @if(i>=6&&i<=10){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                                <div class="row">
-                                    @for(dict in dicts["21"]){
-                                    @if(i>=11&&i<=15){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button id="choosebotton4" class="pull-left">多选</button>
-                            <button data-toggle="collapse" href="#collapseExample4" aria-expanded="false"
-                                    aria-controls="collapseExample4" class="pull-right changeFont more4"
-                                    onclick="changeFont($(this),1)">更多
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row mselect2">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["21"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["21"]){
-                                @if(i>=6&&i<=10){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["21"]){
-                                @if(i>=11&&i<=15){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button class="choosebotton5">收起</button>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <button type="button" class="btn btn-from-hot" onclick="sure('交易类别:',9)">确定</button>
-                                <button type="button" class="btn btn-to-cold choosebotton5">取消</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="deal_means" class="panel-body industry10" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>交易方式:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["22"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','交易方式',10,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="investment_means" class="panel-body industry11" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>招商方式:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["23"]){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','招商方式',11,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="product_type" class="panel-body industry12" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>产品类型:</span>
-                </div>
-                <div class="col-md-10 col-sm-10 mchoose3" style="margin-left: -50px;">
-                    <div class="row select3">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["24"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),'${dict.num}','产品类型',12,'type_remove',null)">${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="collapse" id="collapseExample5">
-                                <div class="row">
-                                    @for(dict in dicts["24"]){
-                                    @if(i>=6&&i<=10){
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),'${dict.num}','产品类型',12,'type_remove',null)">${dict.name}</span></a>
-                                    </div>
-                                    @}
-                                    @i=i+1;
-                                    @}
-                                    @i=1;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button id="choosebotton6" class="pull-left">多选</button>
-                            <button data-toggle="collapse" href="#collapseExample5" aria-expanded="false"
-                                    aria-controls="collapseExample5" class="pull-right changeFont more5"
-                                    onclick="changeFont($(this),1)">更多
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row mselect3">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                @for(dict in dicts["24"]){
-                                @if(i>=1&&i<=5){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                            <div class="row">
-                                @for(dict in dicts["24"]){
-                                @if(i>=6&&i<=10){
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
-                                </div>
-                                @}
-                                @i=i+1;
-                                @}
-                                @i=1;
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button class="choosebotton7">收起</button>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <button type="button" class="btn btn-from-hot" onclick="sure('产品类型:',12)">确定</button>
-                                <button type="button" class="btn btn-to-cold choosebotton7">取消</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="threshold" class="panel-body industry13" style="display: none">
-                <div class="col-md-2 col-sm-2">
-                    <span>投资门槛:</span>
-                </div>
-                <div class="col-md-10 col-sm-10" style="margin-left: -50px;">
-                    <div class="row">
-                        <div class="col-md-10 col-sm-10">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),1,'投资门槛',13,'type_remove',null)">不限</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),2,'投资门槛',13,'type_remove',null)">1万-10万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),3,'投资门槛',13,'type_remove',null)">10万-50万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),4,'投资门槛',13,'type_remove',null)">50万-100万</span></a>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <a href="#" class="to-hot"><span
-                                        onclick="search($(this),5,'投资门槛',13,'type_remove',null)">100万-500万</span></a>
-                                </div>
-                            </div>
-                            <div class="collapse" id="collapseExample6">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),6,'投资门槛',13,'type_remove',null)">500万-1000万</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),7,'投资门槛',13,'type_remove',null)">1000万-5000万</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),8,'投资门槛',13,'type_remove',null)">5000万-1亿</span></a>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2">
-                                        <a href="#" class="to-hot"><span
-                                            onclick="search($(this),9,'投资门槛',13,'type_remove',null)">大于1亿</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <button data-toggle="collapse" href="#collapseExample6" aria-expanded="false"
-                                    aria-controls="collapseExample6" class="pull-right more6"
-                                    onclick="changeFont($(this),3)">更多
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-body">
-                <input type="text" name="keyword" id="keyword" placeholder="在当前条件下搜索">
-                <button id="dosearch"><i class="fa fa-search"></i></button>
-            </div>
-        </div>
-    </div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body industry7" id="transfer_ratio" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>出让比例:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["28"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','出让比例',7,'type_remove','con2')">${dict.name}</span></a>
+								</div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="financing_amount" class="panel-body industry8" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>融资金额:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["18"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','融资金额',8,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample3">
+								<div class="row">
+									@for(dict in dicts["18"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','融资金额',8,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button data-toggle="collapse" href="#collapseExample3" aria-expanded="false"
+							        aria-controls="collapseExample3" class="pull-right more3"
+							        onclick="changeFont($(this),3)">更多
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="deal_type" class="panel-body industry9" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>交易类别:</span>
+				</div>
+				<div class="col-md-10 col-sm-10 mchoose2" style="margin-left: -50px;">
+					<div class="row select2">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["21"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample4">
+								<div class="row">
+									@for(dict in dicts["21"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+								<div class="row">
+									@for(dict in dicts["21"]){
+									@if(i>=11&&i<=15){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','交易类别',9,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button id="choosebotton4" class="pull-left">多选</button>
+							<button data-toggle="collapse" href="#collapseExample4" aria-expanded="false"
+							        aria-controls="collapseExample4" class="pull-right changeFont more4"
+							        onclick="changeFont($(this),1)">更多
+							</button>
+						</div>
+					</div>
+					<div class="row mselect2">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["21"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["21"]){
+								@if(i>=6&&i<=10){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["21"]){
+								@if(i>=11&&i<=15){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button class="choosebotton5">收起</button>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<button type="button" class="btn btn-from-hot" onclick="sure('交易类别:',9)">确定</button>
+								<button type="button" class="btn btn-to-cold choosebotton5">取消</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="deal_means" class="panel-body industry10" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>交易方式:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["22"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','交易方式',10,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="investment_means" class="panel-body industry11" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>招商方式:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["23"]){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','招商方式',11,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="product_type" class="panel-body industry12" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>产品类型:</span>
+				</div>
+				<div class="col-md-10 col-sm-10 mchoose3" style="margin-left: -50px;">
+					<div class="row select3">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["24"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','产品类型',12,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample5">
+								<div class="row">
+									@for(dict in dicts["24"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','产品类型',12,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button id="choosebotton6" class="pull-left">多选</button>
+							<button data-toggle="collapse" href="#collapseExample5" aria-expanded="false"
+							        aria-controls="collapseExample5" class="pull-right changeFont more5"
+							        onclick="changeFont($(this),1)">更多
+							</button>
+						</div>
+					</div>
+					<div class="row mselect3">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["24"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="row">
+								@for(dict in dicts["24"]){
+								@if(i>=6&&i<=10){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><input type="checkbox" value="${dict.num}"/><span>${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button class="choosebotton7">收起</button>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<button type="button" class="btn btn-from-hot" onclick="sure('产品类型:',12)">确定</button>
+								<button type="button" class="btn btn-to-cold choosebotton7">取消</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="threshold" class="panel-body industry13" style="display: none">
+				<div class="col-md-2 col-sm-2">
+					<span>投资门槛:</span>
+				</div>
+				<div class="col-md-10 col-sm-10" style="margin-left: -50px;">
+					<div class="row">
+						<div class="col-md-10 col-sm-10">
+							<div class="row">
+								@for(dict in dicts["18"]){
+								@if(i>=1&&i<=5){
+								<div class="col-md-2 col-sm-2">
+									<a href="#" class="to-hot"><span
+										onclick="search($(this),'${dict.num}','融资金额',8,'type_remove',null)">${dict.name}</span></a>
+								</div>
+								@}
+								@i=i+1;
+								@}
+								@i=1;
+							</div>
+							<div class="collapse" id="collapseExample6">
+								<div class="row">
+									@for(dict in dicts["18"]){
+									@if(i>=6&&i<=10){
+									<div class="col-md-2 col-sm-2">
+										<a href="#" class="to-hot"><span
+											onclick="search($(this),'${dict.num}','融资金额',8,'type_remove',null)">${dict.name}</span></a>
+									</div>
+									@}
+									@i=i+1;
+									@}
+									@i=1;
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-2">
+							<button data-toggle="collapse" href="#collapseExample6" aria-expanded="false"
+							        aria-controls="collapseExample6" class="pull-right more6"
+							        onclick="changeFont($(this),3)">更多
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<input type="text" name="keyword" id="keyword" placeholder="在当前条件下搜索">
+				<button id="dosearch"><i class="fa fa-search"></i></button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-9 col-sm-9 col-xs-9">
-            <div class="panel panel-default">
-                <div class="panel">
-                    <ul id="myTab" class="nav nav-tabs">
-                        <li class="active"><a href="#home" data-toggle="tab" onclick="changeTab(1)">
-                            综合排序</a></li>
-                        <li><a href="#ios" data-toggle="tab" onclick="changeTab(2)">更新时间</a></li>
-                        <p class="pull-right">共有&nbsp;<span class="totalNum"></span>&nbsp;个符合要求的项目信息</p>
-                    </ul>
-                    <div id="myTabContent" class="tab-content">
-                        <div class="tab-pane fade in active panel-body" id="home">
-                        </div>
-                        <div class="tab-pane fade panel-body" id="ios">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12" id="pages">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2>项目推荐</h2>
-                </div>
-                @for(data in recommend.rows){
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div>
-                                <a href="#">
-                                    <img src="#" alt="项目图片">
-                                </a>
-                            </div>
-                            <p><a href="#" class="to-hot">${data.title}</a></p>
-                            <p>所在地区：${data.area}<br>
-                                所属行业：${data.industry}</p>
-                        </div>
-                    </div>
-                </div>
-                @}
-            </div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-9 col-sm-9 col-xs-9">
+			<div class="panel panel-default">
+				<div class="panel">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active"><a href="#home" data-toggle="tab" onclick="changeTab(1)">
+							综合排序</a></li>
+						<li><a href="#ios" data-toggle="tab" onclick="changeTab(2)">更新时间</a></li>
+						<p class="pull-right">共有&nbsp;<span class="totalNum"></span>&nbsp;个符合要求的项目信息</p>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active panel-body" id="home">
+						</div>
+						<div class="tab-pane fade panel-body" id="ios">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12" id="pages">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2>项目推荐</h2>
+				</div>
+				@for(data in recommend.rows){
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div>
+								<a href="#">
+									<img src="#" alt="项目图片">
+								</a>
+							</div>
+							<p><a href="#" class="to-hot">${data.title}</a></p>
+							<p>所在地区：${data.area}<br>
+								所属行业：${data.industry}</p>
+						</div>
+					</div>
+				</div>
+				@}
+			</div>
+		</div>
+	</div>
 </div>
 
 <input type="hidden" id="type0"/>
@@ -1090,489 +1050,514 @@
 
 <script type="text/javascript">
 
-    $(function () {
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            // 获取已激活的标签页的名称
-            var activeTab = $(e.target).text();
-            // 获取前一个激活的标签页的名称
-            var previousTab = $(e.relatedTarget).text();
-            $('.active-tab span').html(activeTab);
-            $('.previous-tab span').html(previousTab);
-        });
+	$(function () {
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+			// 获取已激活的标签页的名称
+			alert(1);
+			var activeTab = $(e.target).text();
+			// 获取前一个激活的标签页的名称
+			var previousTab = $(e.relatedTarget).text();
+			$('.active-tab span').html(activeTab);
+			$('.previous-tab span').html(previousTab);
+		});
 
-        /* var url=/blade/project/query;
-         var canshu=location.search.split();
-         if(canshu != null || canshu != ""){
-         url=url+canshu;
-         }
-         myAjax(url, 'home'); //首次进入页面加载数据 */
+		var url = '${basePath}/project/query';
+		var canshu = window.location.search;
+		var arr = window.location.search.split('=');
+		console.log(url)
+		if (canshu != null || canshu != "") {
+			url = url + canshu;
+			if (arr[0].indexOf("industry") != -1) {
+				@for (dict in dicts["13"]) {
+					if (arr[1] ==${dict.num}) {
+						alert('${dict.name}');
+						var str = '<td onclick="del($(this),1)" class="type_remove"><a href="#" class="to-hot"><span>所属行业:${dict.name} X' + '</span></a></td>';
+						alert(0);
+						$('#condition').append(str);
+					}
+				@}
+			}
+			if (arr[0].indexOf("province") != -1) {
+				@for (dict in dicts["001"]) {
+					if (arr[1] ==${dict.num}) {
+						alert('${dict.name}');
+						var str = '<td onclick="del($(this),3)"><a href="#" class="to-hot"><span>所在地区:${dict.name} X' + '</span></a></td>';
+						alert(0);
+						$('#condition').append(str);
+					}
+				@}
+			}
+		}
+		myAjax(url, 'home'); //首次进入页面加载数据
 
-        myAjax('/blade/project/query', 'home'); //首次进入页面加载数据
-    });
-    var judgeName = 'home';//用来判断tab;
-    var pageIndex = '';//当前页码
-    var pageCount = '';
-    //修复bug所用的值
-    var judge1 = 0;
-    var judge2 = 0;
-    var judge3 = 0;
-    var judge4 = 0;
-    var judge5 = 0;
-    var judge6 = 0;
-    //ajax方法封装
-    function myAjax(url, tabName) {
-        $.ajax({
-            type: 'GET',
-            url: url,
-            dataType: 'json',
-            success: function (data) {
-                if (data.data.records == 0) {
-                    $('#' + tabName).html('未搜索到任何数据！');
-                    $('.totalNum').text(data.data.records);
-                    return;
-                }
-                if (data.code == 0) {
-                    $('.totalNum').text(data.data.records);
-                    var str = '';
-                    $.each(data.data.rows, function (index, object) {
-                        if (index <= (data.data.pageSize - 1)) {
-                            str += '<div> <div> <a href="#" class="to-hot"> ' + object.title +
-                                '</a> <time class="pull-right">' + object.update_time +
-                                ' </time> </div> <table> <tbody> <tr> <td>'
-                            if (object.ext.financing_amount_min != null && object.ext.financing_amount_max != null) {
-                                var time1 = object.ext.financing_amount_max - object.ext.financing_amount_min;
-                                str += '<p> <span>融资资金：' + time1 + '</span></p>'
-                            }
-                            if (object.province != null) {
-                                str += ' <p> <span>所在地区：' + object.province + '</span></p>'
-                            }
-                            if (object.ext.industry != null) {
-                                str += ' <p> <span>所属行业：' + object.ext.industry + '</span></p>'
-                            }
-                            if (object.ext.financing_means != null) {
-                                str += ' <p> <span>项目融资方式：' + object.ext.financing_means + '</span> </p>'
-                            }
-                            if (object.ext.asset_valuation != null) {
+		/*   myAjax('/blade/project/query', 'home'); //首次进入页面加载数据  */
+	});
+	var judgeName = 'home';//用来判断tab;
+	var pageIndex = '';//当前页码
+	var pageCount = '';
+	//修复bug所用的值
+	var judge1 = 0;
+	var judge2 = 0;
+	var judge3 = 0;
+	var judge4 = 0;
+	var judge5 = 0;
+	var judge6 = 0;
+	//ajax方法封装
+	function myAjax(url, tabName) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				if (data.data.records == 0) {
+					$('#' + tabName).html('未搜索到任何数据！');
+					$('.totalNum').text(data.data.records);
+					return;
+				}
+				if (data.code == 0) {
+					$('.totalNum').text(data.data.records);
+					var str = '';
+					$.each(data.data.rows, function (index, object) {
+						if (index <= (data.data.pageSize - 1)) {
+							str += '<div> <div> <a href="#" class="to-hot"> ' + object.title +
+								'</a> <time class="pull-right">' + object.update_time +
+								' </time> </div> <table> <tbody> <tr> <td>'
+							if (object.ext.financing_amount_min != null && object.ext.financing_amount_max != null) {
+								var time1 = object.ext.financing_amount_max - object.ext.financing_amount_min;
+								str += '<p> <span>融资资金：' + time1 + '</span></p>'
+							}
+							if (object.province != null) {
+								str += ' <p> <span>所在地区：' + object.province + '</span></p>'
+							}
+							if (object.ext.industry != null) {
+								str += ' <p> <span>所属行业：' + object.ext.industry + '</span></p>'
+							}
+							if (object.ext.financing_means != null) {
+								str += ' <p> <span>项目融资方式：' + object.ext.financing_means + '</span> </p>'
+							}
+							if (object.ext.asset_valuation != null) {
 
-                                str += ' <p> <span>估价：' + object.ext.asset_valuation + '</span> </p>'
-                            }
-                            if (object.ext.trans_price != null) {
+								str += ' <p> <span>估价：' + object.ext.asset_valuation + '</span> </p>'
+							}
+							if (object.ext.trans_price != null) {
 
-                                str += ' <p> <span>转让：' + object.ext.trans_price + '</span> </p>'
-                            }
-                            if (object.ext.deal_type != null) {
+								str += ' <p> <span>转让：' + object.ext.trans_price + '</span> </p>'
+							}
+							if (object.ext.deal_type != null) {
 
-                                str += ' <p> <span>交易类别：' + object.ext.deal_type + '</span> </p>'
-                            }
-                            if (object.ext.deal_means != null) {
-                                str += ' <p> <span>交易方式：' + object.ext.deal_means + '</span> </p>'
-                            }
-                            if (object.ext.investment_estimate != null) {
-                                str += ' <p> <span>投资估算：' + object.ext.investment_estimate + '</span> </p>'
-                            }
-                            if (object.ext.investment_means != null) {
-                                str += ' <p> <span>招商方式：' + object.ext.investment_means + '</span> </p>'
-                            }
-                            if (object.ext.threshold != null) {
-                                str += ' <p> <span>投资门槛：' + object.ext.threshold + '</span> </p>'
-                            }
-                            if (object.ext.product_type != null) {
-                                str += ' <p> <span>产品类型：' + object.ext.product_type + '</span> </p>'
-                            }
-                            if (object.ext.invest_start_time != null && object.ext.invest_end_time != null) {
-                                var invest_time = object.ext.invest_start_time - object.ext.invest_end_time
-                                str += ' <p> <span>投资期限：' + invest_time + '</span> </p>'
-                            }
-                            str += '</td> <td><p><strong>' + object.public_author +
-                                '</strong> <br></p></td> <td ><a href="#"><button type="button" class="btn btn-from-hot">约谈项目方</button></a></td> </tr> </tbody> </table> </div>'
-                            $('#pages').html("");
-                            $('#' + tabName).html(str);
-                            pageIndex = data.data.page;
-                            pageCount = data.data.total;
-                            var total = data.data.total;
+								str += ' <p> <span>交易类别：' + object.ext.deal_type + '</span> </p>'
+							}
+							if (object.ext.deal_means != null) {
+								str += ' <p> <span>交易方式：' + object.ext.deal_means + '</span> </p>'
+							}
+							if (object.ext.investment_estimate != null) {
+								str += ' <p> <span>投资估算：' + object.ext.investment_estimate + '</span> </p>'
+							}
+							if (object.ext.investment_means != null) {
+								str += ' <p> <span>招商方式：' + object.ext.investment_means + '</span> </p>'
+							}
+							if (object.ext.threshold != null) {
+								str += ' <p> <span>投资门槛：' + object.ext.threshold + '</span> </p>'
+							}
+							if (object.ext.product_type != null) {
+								str += ' <p> <span>产品类型：' + object.ext.product_type + '</span> </p>'
+							}
+							if (object.ext.invest_start_time != null && object.ext.invest_end_time != null) {
+								var invest_time = object.ext.invest_start_time - object.ext.invest_end_time
+								str += ' <p> <span>投资期限：' + invest_time + '</span> </p>'
+							}
+							str += '</td> <td><p><strong>' + object.public_author +
+								'</strong> <br></p></td> <td ><a href="#"><button type="button" class="btn btn-from-hot">约谈项目方</button></a></td> </tr> </tbody> </table> </div>'
+							$('#pages').html("");
+							$('#' + tabName).html(str);
+							pageIndex = data.data.page;
+							pageCount = data.data.total;
+							var total = data.data.total;
 //                          var page = data.data.page;
-                            var pagination = '<div><span class="pull-left">共有<i class="totalNum">' + data.data.records + '</i>个符合要求的资金信息</span><span class="pull-right"><nav><ul class="pagination"></ul></nav></span></div>';
-                            $('#pages').append(pagination);
-                            $('.pagination').append($('<span>' + pageIndex + '/' + pageCount + '&nbsp;&nbsp;当前页数/总页数' + '</span>' + '<li><a onclick="pageChange($(this))">首页</a></li>'));
-                            (pageIndex != 1) ? $('.pagination').append('<li><a onclick="pageChange($(this))">上一页</a></li>') : null;
-                            if (total <= 5 || pageIndex <= 3) {
-                                total = Math.min(total, 5);
-                                for (var i = 1; i <= total; i++) {
-                                    if (i == pageIndex) {
-                                        $('.pagination').append($('<li><a onclick="pageChange($(this))">' + i + '</a></li>').addClass('active'));
-                                    } else {
-                                        $('.pagination').append($('<li><a onclick="pageChange($(this))">' + i + '</a></li>'));
-                                    }
-                                }
-                                /*        (pageCount > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;  */
-                                (pageIndex >= pageCount) ? null : $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
-                                $('.pagination').append('<li><a onclick="pageChange($(this))">末页</a></li>');
-                            }
-                            else if ((pageIndex + 2) == total) {
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 2) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
-                            }
-                            else if ((pageIndex + 1) == total) {
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 3) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
-                            }
-                            else if (pageIndex == total) {
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 4) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 3) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
-                            }
-                            else {
-                                ((pageIndex - 2) > 0) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>')) : null;
-                                ((pageIndex - 1) > 0) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>')) : null;
-                                $('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
-                                ((pageIndex + 1) <= total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>')) : null;
-                                ((pageIndex + 2) <= total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 2) + '</a></li>')) : null;
-                                /*    (pageCount > (pageIndex + 2)) ? $('.pagination').append($('<li><span>···</span></li>')) : null; */
-                                ((pageIndex + 2) < total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>')) : null;
-                                (pageIndex == total) ? null : $('.pagination').append('<li><a onclick="pageChange($(this))">末页</a></li>');
-                            }
-                        }
-                    });
-                }
-                else {
-                    alert('fail');
-                }
-            }
-        });
-    }
-    //点击切换tab
-    function changeTab(num) {
-        if (num == 1) {
-            judgeName = 'home';
-        } else {
-            judgeName = 'ios';
-        }
-        var url = createUrl();
-        myAjax(url, judgeName);
-    }
-    //点击搜索事件
-    $('#dosearch').click(function () {
-        var url = createUrl();
-        url += '&title=' + $('#keyword').val();
-        if ($('#onlyone').text() != null && $('#onlyone').text() != "") {
-            $('#onlyone').text('关键词：' + $('#keyword').val() + ' X');
-            myAjax(url, judgeName);
-            return;
-        }
-        var str = '<td onclick="del($(this),-1)"><a href="#" class="to-hot" ><span id="onlyone">关键词：' + $('#keyword').val() + ' X' + '</span></a></td>';
-        $('#condition').append(str);
-        myAjax(url, judgeName);
-    })
-    //第一个多选搜索确定事件
-    function sure(str, num) {
-        var canshu = "";
-        var name = "";
-        $('input[type="checkbox"]:checked').each(function () {
-            canshu += $(this).val() + "-";
-            name += $(this).next().text() + "、";
-        });
-        $('#type' + num).val(canshu);
-        var str = '<td onclick="del($(this),num)"><a href="#" class="to-hot" ><span>' + str + '' + name + ' X' + '</span></a></td>';
-        $('#condition').append(str);
-        $('.industry' + num).hide();
-        var url = createUrl();
-        myAjax(url, judgeName);
-    }
+							var pagination = '<div><span class="pull-left">共有<i class="totalNum">' + data.data.records + '</i>个符合要求的资金信息</span><span class="pull-right"><nav><ul class="pagination"></ul></nav></span></div>';
+							$('#pages').append(pagination);
+							$('.pagination').append($('<span>' + pageIndex + '/' + pageCount + '&nbsp;&nbsp;当前页数/总页数' + '</span>' + '<li><a onclick="pageChange($(this))">首页</a></li>'));
+							(pageIndex != 1) ? $('.pagination').append('<li><a onclick="pageChange($(this))">上一页</a></li>') : null;
+							if (total <= 5 || pageIndex <= 3) {
+								total = Math.min(total, 5);
+								for (var i = 1; i <= total; i++) {
+									if (i == pageIndex) {
+										$('.pagination').append($('<li><a onclick="pageChange($(this))">' + i + '</a></li>').addClass('active'));
+									} else {
+										$('.pagination').append($('<li><a onclick="pageChange($(this))">' + i + '</a></li>'));
+									}
+								}
+								/*        (pageCount > 5) ? $('.pagination').append($('<li><span>···</span></li>')) : null;  */
+								(pageIndex >= pageCount) ? null : $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
+								$('.pagination').append('<li><a onclick="pageChange($(this))">末页</a></li>');
+							}
+							else if ((pageIndex + 2) == total) {
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 2) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
+							}
+							else if ((pageIndex + 1) == total) {
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 3) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>'));
+							}
+							else if (pageIndex == total) {
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 4) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 3) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>'));
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
+							}
+							else {
+								((pageIndex - 2) > 0) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 2) + '</a></li>')) : null;
+								((pageIndex - 1) > 0) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex - 1) + '</a></li>')) : null;
+								$('.pagination').append($('<li><a onclick="pageChange($(this))">' + pageIndex + '</a></li>').addClass('active'));
+								((pageIndex + 1) <= total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 1) + '</a></li>')) : null;
+								((pageIndex + 2) <= total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">' + (pageIndex + 2) + '</a></li>')) : null;
+								/*    (pageCount > (pageIndex + 2)) ? $('.pagination').append($('<li><span>···</span></li>')) : null; */
+								((pageIndex + 2) < total) ? $('.pagination').append($('<li><a onclick="pageChange($(this))">下一页</a></li>')) : null;
+								(pageIndex == total) ? null : $('.pagination').append('<li><a onclick="pageChange($(this))">末页</a></li>');
+							}
+						}
+					});
+				}
+				else {
+					alert('fail');
+				}
+			}
+		});
+	}
+	//点击切换tab
+	function changeTab(num) {
+		if (num == 1) {
+			judgeName = 'home';
+		} else {
+			judgeName = 'ios';
+		}
+		var url = createUrl();
+		myAjax(url, judgeName);
+	}
+	//点击搜索事件
+	$('#dosearch').click(function () {
+		var url = createUrl();
+		url += '&title=' + $('#keyword').val();
+		if ($('#onlyone').text() != null && $('#onlyone').text() != "") {
+			$('#onlyone').text('关键词：' + $('#keyword').val() + ' X');
+			myAjax(url, judgeName);
+			return;
+		}
+		var str = '<td onclick="del($(this),-1)"><a href="#" class="to-hot" ><span id="onlyone">关键词：' + $('#keyword').val() + ' X' + '</span></a></td>';
+		$('#condition').append(str);
+		myAjax(url, judgeName);
+	})
+	//第一个多选搜索确定事件
+	function sure(str, num) {
+		var canshu = "";
+		var name = "";
+		$('input[type="checkbox"]:checked').each(function () {
+			canshu += $(this).val() + "-";
+			name += $(this).next().text() + "、";
+		});
+		$('#type' + num).val(canshu);
+		var str = '<td onclick="del($(this),num)"><a href="#" class="to-hot" ><span>' + str + '' + name + ' X' + '</span></a></td>';
+		$('#condition').append(str);
+		$('.industry' + num).hide();
+		var url = createUrl();
+		myAjax(url, judgeName);
+	}
 
-    //更多/收起文字改变事件
-    function changeFont(obj, num) {
-        if (num == 1) {
-            judge1 = 1;
-        }
-        if (num == 2) {
-            judge2 = 1;
-        }
-        if (num == 3) {
-            judge3 = 1;
-        }
-        if (obj.text() == "更多") {
-            obj.text("收起");
-            return;
-        }
-        if (obj.text() == "收起") {
-            obj.text("更多")
-        }
-    }
-    //拼接url的方法
-    function createUrl() {
-        var url = "/blade/project/query?";
+	//更多/收起文字改变事件
+	function changeFont(obj, num) {
+		if (num == 1) {
+			judge1 = 1;
+		}
+		if (num == 2) {
+			judge2 = 1;
+		}
+		if (num == 3) {
+			judge3 = 1;
+		}
+		if (obj.text() == "更多") {
+			obj.text("收起");
+			return;
+		}
+		if (obj.text() == "收起") {
+			obj.text("更多")
+		}
+	}
+	//拼接url的方法
+	function createUrl() {
+		var url = "/blade/project/query?";
 //       var url="list.json";
-        var obj = new Object();
-        if ($('#type0').val() != "") {
-            obj.type = $('#type0').val();
-        }
-        if ($('#type1').val() != "") {
-            obj.industry = $('#type1').val();
-        }
-        if ($('#type2').val() != "") {
-            obj.province = $('#type2').val();
-        }
-        if ($('#type3').val() != "") {
-            obj.financing_means = $('#type3').val();
-        }
-        if ($('#type4').val() != "") {
-            obj.interest = $('#type4').val();
-        }
-        if ($('#type5').val() != "") {
-            obj.creditors_risk = $('#type5').val();
-        }
-        if ($('#type6').val() != "") {
-            obj.period = $('#type6').val();
-        }
-        if ($('#type7').val() != "") {
-            obj.transfer_ratio = $('#type7').val();
-        }
-        if ($('#type8').val() != "") {
-            obj.financing_amount = $('#type8').val();
-        }
-        if ($('#type9').val() != "") {
-            obj.deal_type = $('#type9').val();
-        }
-        if ($('#type10').val() != "") {
-            obj.deal_means = $('#type10').val();
-        }
-        if ($('#type11').val() != "") {
-            obj.investment_means = $('#type11').val();
-        }
-        if ($('#type12').val() != "") {
-            obj.product_type = $('#type12').val();
-        }
-        if ($('#type13').val() != "") {
-            obj.threshold = $('#type13').val();
-        }
-        if (judgeName == "home") {
-            obj.order = 'score';
-        } else {
-            obj.order = 'time';
-        }
-        return url + $.param(obj);
-    }
+		var obj = new Object();
+		if ($('#type0').val() != "") {
+			obj.type = $('#type0').val();
+		}
+		if ($('#type1').val() != "") {
+			obj.industry = $('#type1').val();
+		}
+		if ($('#type2').val() != "") {
+			obj.province = $('#type2').val();
+		}
+		if ($('#type3').val() != "") {
+			obj.financing_means = $('#type3').val();
+		}
+		if ($('#type4').val() != "") {
+			obj.interest = $('#type4').val();
+		}
+		if ($('#type5').val() != "") {
+			obj.creditors_risk = $('#type5').val();
+		}
+		if ($('#type6').val() != "") {
+			obj.period = $('#type6').val();
+		}
+		if ($('#type7').val() != "") {
+			obj.transfer_ratio = $('#type7').val();
+		}
+		if ($('#type8').val() != "") {
+			obj.financing_amount = $('#type8').val();
+		}
+		if ($('#type9').val() != "") {
+			obj.deal_type = $('#type9').val();
+		}
+		if ($('#type10').val() != "") {
+			obj.deal_means = $('#type10').val();
+		}
+		if ($('#type11').val() != "") {
+			obj.investment_means = $('#type11').val();
+		}
+		if ($('#type12').val() != "") {
+			obj.product_type = $('#type12').val();
+		}
+		if ($('#type13').val() != "") {
+			obj.threshold = $('#type13').val();
+		}
+		if (judgeName == "home") {
+			obj.order = 'score';
+		} else {
+			obj.order = 'time';
+		}
+		return url + $.param(obj);
+	}
 
-    //删除搜索条件方法
-    function del(obj, index) {
-        if (index == -1) {
-            $('#keyword').val("");
-        }
-        if (obj.text().indexOf("所属类型") != -1) {
-            $('#industry').hide();
-            $('#financing_means').hide();
-            $('#financing_amount').hide();
-            $('#deal_type').hide();
-            $('#deal_means').hide();
-            $('#investment_means').hide();
-            $('.type_remove').remove();
-            $('#product_type').hide();
-            $('#threshold').hide();
-            $('#interest').hide();
-            $('#creditors_risk').hide();
-            $('.con1').remove();
-            $('#period').hide();
-            $('#transfer_ratio').hide();
-            $('.con2').remove();
-            $('#type1').val("");
-            $('#type3').val("");
-            $('#type4').val("");
-            $('#type5').val("");
-            $('#type6').val("");
-            $('#type7').val("");
-            $('#type8').val("");
-            $('#type9').val("");
-            $('#type10').val("");
-            $('#type11').val("");
-            $('#type12').val("");
-            $('#type13').val("");
-        }
-        if (obj.text().indexOf("债权融资") != -1) {
-            $('#interest').hide();
-            $('#creditors_risk').hide();
-            $('.con1').remove();
-            $('#type4').val("");
-            $('#type5').val("");
-        }
-        if (obj.text().indexOf("股权融资") != -1) {
-            $('#period').hide();
-            $('#transfer_ratio').hide();
-            $('.con2').remove();
-            $('#type6').val("");
-            $('#type7').val("");
-        }
-        //多选搜索时的事件
-        if (index == 1 && $('#type1').val().indexOf("-") != -1) {
-            $('[type=checkbox]:checkbox').attr('checked', false);
-            $('.mchoose').toggleClass('choose');
-        }
-        if (index == 2 && $('#type2').val().indexOf("-") != -1) {
-            $('[type=checkbox]:checkbox').attr('checked', false);
-            $('.mchoose1').toggleClass('choose1');
-        }
-        if (index == 10 && $('#type9').val().indexOf("-") != -1) {
-            $('[type=checkbox]:checkbox').attr('checked', false);
-            $('.mchoose2').toggleClass('choose2');
-        }
-        if (index == 13 && $('#type12').val().indexOf("-") != -1) {
-            $('[type=checkbox]:checkbox').attr('checked', false);
-            $('.mchoose3').toggleClass('choose3');
-        }
-        //更多展开后 删除搜索条件后 收起
-        if (obj.text().indexOf("所属行业") != -1 && judge1 == 1) {
-            $('.more1').trigger('click');
-            judge1 = 0;
-        }
-        if (obj.text().indexOf("所在地区") != -1 && judge2 == 1) {
-            $('.more2').trigger('click');
-            judge2 = 0;
-        }
-        if (obj.text().indexOf("融资金额") != -1 && judge3 == 1) {
-            $('.more3').trigger('click');
-            judge3 = 0;
-        }
-        if (obj.text().indexOf("交易类别") != -1 && judge4 == 1) {
-            $('.more4').trigger('click');
-            judge4 = 0;
-        }
-        if (obj.text().indexOf("产品类型") != -1 && judge5 == 1) {
-            $('.more5').trigger('click');
-            judge5 = 0;
-        }
-        if (obj.text().indexOf("投资门槛") != -1 && judge6 == 1) {
-            $('.more6').trigger('click');
-            judge6 = 0;
-        }
-        //删除搜索条件
-        obj.remove();
-        var cname = 'industry' + index;
-        $('.' + cname).show();
-        //清空对应hidden的value
-        var hname = "type" + index;
-        $('#' + hname).val("");
-        var url = createUrl();
-        myAjax(url, judgeName);
-    }
+	//删除搜索条件方法
+	function del(obj, index) {
+		if (index == -1) {
+			$('#keyword').val("");
+		}
+		if (obj.text().indexOf("所属类型") != -1) {
+			$('#industry').hide();
+			$('#financing_means').hide();
+			$('#financing_amount').hide();
+			$('#deal_type').hide();
+			$('#deal_means').hide();
+			$('#investment_means').hide();
+			$('.type_remove').remove();
+			$('#product_type').hide();
+			$('#threshold').hide();
+			$('#interest').hide();
+			$('#creditors_risk').hide();
+			$('.con1').remove();
+			$('#period').hide();
+			$('#transfer_ratio').hide();
+			$('.con2').remove();
+			$('#type1').val("");
+			$('#type3').val("");
+			$('#type4').val("");
+			$('#type5').val("");
+			$('#type6').val("");
+			$('#type7').val("");
+			$('#type8').val("");
+			$('#type9').val("");
+			$('#type10').val("");
+			$('#type11').val("");
+			$('#type12').val("");
+			$('#type13').val("");
+		}
+		if (obj.text().indexOf("债权融资") != -1) {
+			$('#interest').hide();
+			$('#creditors_risk').hide();
+			$('.con1').remove();
+			$('#type4').val("");
+			$('#type5').val("");
+		}
+		if (obj.text().indexOf("股权融资") != -1) {
+			$('#period').hide();
+			$('#transfer_ratio').hide();
+			$('.con2').remove();
+			$('#type6').val("");
+			$('#type7').val("");
+		}
+		//多选搜索时的事件
+		if (index == 1 && $('#type1').val().indexOf("-") != -1) {
+			$('[type=checkbox]:checkbox').attr('checked', false);
+			$('.mchoose').toggleClass('choose');
+		}
+		if (index == 2 && $('#type2').val().indexOf("-") != -1) {
+			$('[type=checkbox]:checkbox').attr('checked', false);
+			$('.mchoose1').toggleClass('choose1');
+		}
+		if (index == 10 && $('#type9').val().indexOf("-") != -1) {
+			$('[type=checkbox]:checkbox').attr('checked', false);
+			$('.mchoose2').toggleClass('choose2');
+		}
+		if (index == 13 && $('#type12').val().indexOf("-") != -1) {
+			$('[type=checkbox]:checkbox').attr('checked', false);
+			$('.mchoose3').toggleClass('choose3');
+		}
+		//更多展开后 删除搜索条件后 收起
+		if (obj.text().indexOf("所属行业") != -1 && judge1 == 1) {
+			$('.more1').trigger('click');
+			judge1 = 0;
+		}
+		if (obj.text().indexOf("所在地区") != -1 && judge2 == 1) {
+			$('.more2').trigger('click');
+			judge2 = 0;
+		}
+		if (obj.text().indexOf("融资金额") != -1 && judge3 == 1) {
+			$('.more3').trigger('click');
+			judge3 = 0;
+		}
+		if (obj.text().indexOf("交易类别") != -1 && judge4 == 1) {
+			$('.more4').trigger('click');
+			judge4 = 0;
+		}
+		if (obj.text().indexOf("产品类型") != -1 && judge5 == 1) {
+			$('.more5').trigger('click');
+			judge5 = 0;
+		}
+		if (obj.text().indexOf("投资门槛") != -1 && judge6 == 1) {
+			$('.more6').trigger('click');
+			judge6 = 0;
+		}
+		//删除搜索条件
+		obj.remove();
+		var cname = 'industry' + index;
+		$('.' + cname).show();
+		//清空对应hidden的value
+		var hname = "type" + index;
+		$('#' + hname).val("");
+		var url = createUrl();
+		myAjax(url, judgeName);
+	}
 
-    //所属类型
-    function search(obj, num, string, index, class1, class2) {
-        if (obj.text() == '债权融资') {
-            $('#interest').show();
-            $('#creditors_risk').show();
-        }
-        if (obj.text() == '股权融资') {
-            $('#period').show();
-            $('#transfer_ratio').show();
-        }
-        if (obj.text() == '项目融资') {
-            $('#industry').show();
-            $('#financing_means').show();
-            $('#financing_amount').show();
-        }
-        if (obj.text() == '资产交易') {
-            $('#deal_type').show();
-            $('#deal_means').show();
-        }
-        if (obj.text() == '政府招商') {
-            $('#industry').show();
-            $('#investment_means').show();
-        }
-        if (obj.text() == '投资理财') {
-            $('#product_type').show();
-            $('#threshold').show();
-        }
-        var str = '<td onclick="del($(this),' + index + ')"class="' + class1 + ' ' + class2 + '" ><a href="#" class="to-hot"><span>' + string + ':' + obj.text() + ' X' + '</span></a></td>';
-        $('#type' + index).val(num);
-        $('#condition').append(str);
-        $('.industry' + index).hide();
-        var url = createUrl();
-        myAjax(url, judgeName);
-    }
+	//所属类型
+	function search(obj, num, string, index, class1, class2) {
+		/*   this.preventDefault();  */
+		if (obj.text() == '债权融资') {
+			$('#interest').show();
+			$('#creditors_risk').show();
+		}
+		if (obj.text() == '股权融资') {
+			$('#period').show();
+			$('#transfer_ratio').show();
+		}
+		if (obj.text() == '项目融资') {
+			$('#industry').show();
+			$('#financing_means').show();
+			$('#financing_amount').show();
+		}
+		if (obj.text() == '资产交易') {
+			$('#deal_type').show();
+			$('#deal_means').show();
+		}
+		if (obj.text() == '政府招商') {
+			$('#industry').show();
+			$('#investment_means').show();
+		}
+		if (obj.text() == '投资理财') {
+			$('#product_type').show();
+			$('#threshold').show();
+		}
+		var str = '<td onclick="del($(this),' + index + ')"class="' + class1 + ' ' + class2 + '" ><a href="#" class="to-hot"><span>' + string + ':' + obj.text() + ' X' + '</span></a></td>';
+		$('#type' + index).val(num);
+		$('#condition').append(str);
+		$('.industry' + index).hide();
+		var url = createUrl();
+		myAjax(url, judgeName);
 
-    //第一个多选按钮事件
-    $('#choosebotton').click(function () {
-        $('.mchoose').toggleClass('choose');
-    });
-    //第一个收起/取消按钮事件
-    $('.choosebotton1').click(function () {
-        $('.mchoose').toggleClass('choose');
-        $('[type=checkbox]:checkbox').attr('checked', false);
-    });
-    //第二个多选按钮事件
-    $('#choosebotton2').click(function () {
-        $('.mchoose1').toggleClass('choose1');
-    });
-    //第二个收起/取消按钮事件
-    $('.choosebotton3').click(function () {
-        $('.mchoose1').toggleClass('choose1');
-        $('[type=checkbox]:checkbox').attr('checked', false);
-    });
-    //第三个多选按钮事件
-    $('#choosebotton4').click(function () {
-        $('.mchoose2').toggleClass('choose2');
-    });
-    //第三个收起/取消按钮事件
-    $('.choosebotton5').click(function () {
-        $('.mchoose2').toggleClass('choose2');
-        $('[type=checkbox]:checkbox').attr('checked', false);
-    });
-    //第四个多选按钮事件
-    $('#choosebotton6').click(function () {
-        $('.mchoose3').toggleClass('choose3');
-    });
-    //第四个收起/取消按钮事件
-    $('.choosebotton7').click(function () {
-        $('.mchoose3').toggleClass('choose3');
-        $('[type=checkbox]:checkbox').attr('checked', false);
-    });
-    //页码事件
-    function pageChange(obj) {
-        if (obj.text() == '首页') {//首页
-            var url = createUrl();
-            url += "&page=1";
-            myAjax(url, judgeName);
-            return;
-        }
-        if (obj.text() == '上一页') {//上一页
-            if (pageIndex != 1) {
-                var url = createUrl();
-                url += "&page=" + (--pageIndex);
-                myAjax(url, judgeName);
-            }
-            return;
-        }
-        if (obj.text() == '下一页') {//下一页
-            if (pageIndex != pageCount) {
-                var url = createUrl();
-                url += "&page=" + (++pageIndex);
-                myAjax(url, judgeName);
-            }
-            return;
-        }
-        if (obj.text() == '末页') {//末页
-            var url = createUrl();
-            url += "&page=" + pageCount;
-            myAjax(url, judgeName);
-            return;
-        }
-        //改变active样式
-        $('.pagination li').removeClass('active');
-        obj.parent().addClass('active');
-        //点击某一页
-        var url = createUrl();
-        url += "&page=" + obj.text();
-        myAjax(url, judgeName);
-    }
+	}
+
+	//第一个多选按钮事件
+	$('#choosebotton').click(function () {
+		$('.mchoose').toggleClass('choose');
+	});
+	//第一个收起/取消按钮事件
+	$('.choosebotton1').click(function () {
+		$('.mchoose').toggleClass('choose');
+		$('[type=checkbox]:checkbox').attr('checked', false);
+	});
+	//第二个多选按钮事件
+	$('#choosebotton2').click(function () {
+		$('.mchoose1').toggleClass('choose1');
+	});
+	//第二个收起/取消按钮事件
+	$('.choosebotton3').click(function () {
+		$('.mchoose1').toggleClass('choose1');
+		$('[type=checkbox]:checkbox').attr('checked', false);
+	});
+	//第三个多选按钮事件
+	$('#choosebotton4').click(function () {
+		$('.mchoose2').toggleClass('choose2');
+	});
+	//第三个收起/取消按钮事件
+	$('.choosebotton5').click(function () {
+		$('.mchoose2').toggleClass('choose2');
+		$('[type=checkbox]:checkbox').attr('checked', false);
+	});
+	//第四个多选按钮事件
+	$('#choosebotton6').click(function () {
+		$('.mchoose3').toggleClass('choose3');
+	});
+	//第四个收起/取消按钮事件
+	$('.choosebotton7').click(function () {
+		$('.mchoose3').toggleClass('choose3');
+		$('[type=checkbox]:checkbox').attr('checked', false);
+	});
+	//页码事件
+	function pageChange(obj) {
+		if (obj.text() == '首页') {//首页
+			var url = createUrl();
+			url += "&page=1";
+			myAjax(url, judgeName);
+			return;
+		}
+		if (obj.text() == '上一页') {//上一页
+			if (pageIndex != 1) {
+				var url = createUrl();
+				url += "&page=" + (--pageIndex);
+				myAjax(url, judgeName);
+			}
+			return;
+		}
+		if (obj.text() == '下一页') {//下一页
+			if (pageIndex != pageCount) {
+				var url = createUrl();
+				url += "&page=" + (++pageIndex);
+				myAjax(url, judgeName);
+			}
+			return;
+		}
+		if (obj.text() == '末页') {//末页
+			var url = createUrl();
+			url += "&page=" + pageCount;
+			myAjax(url, judgeName);
+			return;
+		}
+		//改变active样式
+		$('.pagination li').removeClass('active');
+		obj.parent().addClass('active');
+		//点击某一页
+		var url = createUrl();
+		url += "&page=" + obj.text();
+		myAjax(url, judgeName);
+	}
 
 
 </script>
