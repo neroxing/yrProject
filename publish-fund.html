@@ -23,84 +23,100 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.show-invest-type-content{
-		display: none;
-	}
+		.show-invest-type-content {
+			display: none;
+		}
 	</style>
 </head>
 <body>
-	<!-- form -->
-	<div class="container">
-		<div><h4>发布资金信息</h4></div>
-		<div class="col-sm-12 col-md-12 col-lg-12">
-			<div class="col-sm-4 col-md-4 col-lg-4">
+<!-- form -->
+<div class="container">
+	<div><h4>发布资金信息</h4></div>
+	<div class="col-sm-12  ">
+		<div class="col-sm-4  ">
 			<form id="investRadios">
-				<label class="radio-inline"><input type="radio" name="investType" id="equityInvestment"  value="equityInvestment"/>股权投资</label><br>	<!-- 股权投资 Equity Investment -->	
-				<label class="radio-inline"><input type="radio" name="investType" id="debtInvestment" value="debtInvestment" />债权投资</label><br> <!-- 债权投资 Debt investments -->	
-				<label class="radio-inline"><input type="radio" name="investType"  id="financialInvestment" value="financialInvestment" />金融投资</label><br> <!-- 金融投资 financial investment -->		
-				<label class="radio-inline"><input type="radio" name="investType"  id="btbot" value="btbot" />BT/BOT项目投资</label><br> <!-- BT/BOT项目投资 BT/BOTproject investment-->				
-				<label class="radio-inline"><input type="radio" name="investType"  id="otherInvestment" value="otherInvestment" />其它投资</label><br> <!-- 其它投资 Other investment-->
+				<label class="radio-inline"><input type="radio" name="investType" id="equityInvestment"
+				                                   value="equityInvestment"/>股权投资</label><br>
+				<!-- 股权投资 Equity Investment -->
+				<label class="radio-inline"><input type="radio" name="investType" id="debtInvestment"
+				                                   value="debtInvestment"/>债权投资</label><br>
+				<!-- 债权投资 Debt investments -->
+				<label class="radio-inline"><input type="radio" name="investType" id="financialInvestment"
+				                                   value="financialInvestment"/>金融投资</label><br>
+				<!-- 金融投资 financial investment -->
+				<label class="radio-inline"><input type="radio" name="investType" id="btbot"
+				                                   value="btbot"/>BT/BOT项目投资</label><br>
+				<!-- BT/BOT项目投资 BT/BOTproject investment-->
+				<label class="radio-inline"><input type="radio" name="investType" id="otherInvestment"
+				                                   value="otherInvestment"/>其它投资</label><br>
+				<!-- 其它投资 Other investment-->
 			</form>
-			</div>
-			<div class="col-sm-8 col-md-8 col-lg-8">
-				<div id="equityInvestmentContent" class="show-invest-type-content"><p>您与项目方合作进行项目的投资模式，最终目的是获得较大的资金利益。其获得的利益可以通过分得项目方利润或股利获取，同时也可以以其他方式获取；通常是长期投资，以期控制或对项目方公司的财务和经营政策有参与决策的权力，但并不决定这些政策。</p></div>
-				<div id="debtInvestmentContent" class="show-invest-type-content"><p>您与项目方以合同方式的进行资金借贷的投资模式，此模式借款期间较短，且利率固定，即项目方的经营状况与您的投资所得无关，是在最初便协定好的。以此种方式投资，您无法干涉项目方的经营政策等公司运营相关事务。</p></div>
-				<div id="financialInvestmentContent" class="show-invest-type-content"><p>泛指通过银行或基金公司等其他金融公司风控后的项目，以产品模式推出的理财方式，也包含部分公司拆股后，以有限合伙形式将股份分散，从而您能持有对方公司股份的投资方式。</p></div>
-				<div id="BTBOTinvestmentContent" class="show-invest-type-content"><p>通常与政府合作，其中BT项目是指在建设完毕后，由政府补全项目建设资金，从而获得投资收益，多见于政府办公楼等建设项目。而BOT是指在建设完毕后有一定期限的经营权，如道路收费站经营等。通过经营而获取收益。</p></div>
-				<div id="otherInvestmentContent" class="show-invest-type-content"><p>如果您认为您希望的投资方式不属于股权投资/债权投资/金融投资/BT BOT项目投资，则可以在此进行您的信息发布。</p></div>
-			</div>
 		</div>
-		<div>
-			<a href="">下一步</a>
+		<div class="col-sm-8  ">
+			<div id="equityInvestmentContent" class="show-invest-type-content"><p>
+				您与项目方合作进行项目的投资模式，最终目的是获得较大的资金利益。其获得的利益可以通过分得项目方利润或股利获取，同时也可以以其他方式获取；通常是长期投资，以期控制或对项目方公司的财务和经营政策有参与决策的权力，但并不决定这些政策。</p>
+			</div>
+			<div id="debtInvestmentContent" class="show-invest-type-content"><p>
+				您与项目方以合同方式的进行资金借贷的投资模式，此模式借款期间较短，且利率固定，即项目方的经营状况与您的投资所得无关，是在最初便协定好的。以此种方式投资，您无法干涉项目方的经营政策等公司运营相关事务。</p>
+			</div>
+			<div id="financialInvestmentContent" class="show-invest-type-content"><p>
+				泛指通过银行或基金公司等其他金融公司风控后的项目，以产品模式推出的理财方式，也包含部分公司拆股后，以有限合伙形式将股份分散，从而您能持有对方公司股份的投资方式。</p></div>
+			<div id="BTBOTinvestmentContent" class="show-invest-type-content"><p>
+				通常与政府合作，其中BT项目是指在建设完毕后，由政府补全项目建设资金，从而获得投资收益，多见于政府办公楼等建设项目。而BOT是指在建设完毕后有一定期限的经营权，如道路收费站经营等。通过经营而获取收益。</p>
+			</div>
+			<div id="otherInvestmentContent" class="show-invest-type-content"><p>如果您认为您希望的投资方式不属于股权投资/债权投资/金融投资/BT
+				BOT项目投资，则可以在此进行您的信息发布。</p></div>
 		</div>
 	</div>
+	<div>
+		<a href="">下一步</a>
+	</div>
+</div>
 
 
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
 
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
 
-	<!-- jQuery -->
-	<script src="js/jquery-1.11.3.js"></script>
+<!-- custom js
+<script src="js/请输入.js"></script>-->
 
-	<!-- Bootstrap JavaScript -->
-	<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
 
-	<!-- custom js
-	<script src="js/请输入.js"></script>-->
-
-	<script type="text/javascript">
-	
-	/* show invest type content */ 
-	$(document).ready(function() {
-		$('input[type="radio"]').click(function() {
-			if($(this).attr('id') == 'equityInvestment') {
+	/* show invest type content */
+	$(document).ready(function () {
+		$('input[type="radio"]').click(function () {
+			if ($(this).attr('id') == 'equityInvestment') {
 				$('#equityInvestmentContent').show();
 				$('#debtInvestmentContent').hide();
 				$('#financialInvestmentContent').hide();
 				$('#BTBOTinvestmentContent').hide();
 				$('#otherInvestmentContent').hide();
 			}
-			else if($(this).attr('id') == 'debtInvestment'){
+			else if ($(this).attr('id') == 'debtInvestment') {
 				$('#equityInvestmentContent').hide();
 				$('#debtInvestmentContent').show();
 				$('#financialInvestmentContent').hide();
 				$('#BTBOTinvestmentContent').hide();
-				$('#otherInvestmentContent').hide();	
+				$('#otherInvestmentContent').hide();
 			}
-			else if($(this).attr('id') == 'financialInvestment'){
+			else if ($(this).attr('id') == 'financialInvestment') {
 				$('#equityInvestmentContent').hide();
 				$('#debtInvestmentContent').hide();
 				$('#financialInvestmentContent').show();
 				$('#BTBOTinvestmentContent').hide();
 				$('#otherInvestmentContent').hide();
 			}
-			else if($(this).attr('id') == 'btbot'){
+			else if ($(this).attr('id') == 'btbot') {
 				$('#equityInvestmentContent').hide();
 				$('#debtInvestmentContent').hide();
 				$('#financialInvestmentContent').hide();
 				$('#BTBOTinvestmentContent').show();
 				$('#otherInvestmentContent').hide();
 			}
-			else if($(this).attr('id') == 'otherInvestment'){
+			else if ($(this).attr('id') == 'otherInvestment') {
 				$('#equityInvestmentContent').hide();
 				$('#debtInvestmentContent').hide();
 				$('#financialInvestmentContent').hide();
@@ -112,6 +128,6 @@
 
 	/**/
 
-	</script>
+</script>
 </body>
 </html>

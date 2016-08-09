@@ -45,8 +45,8 @@
 			<!-- project choice form -->
 			<div id="project-choice-form">
 				<div><h4>发布项目信息</h4></div>
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="col-sm-12">
+					<div class="col-sm-4">
 					<form id="investRadios">
 						<label class="radio-inline"><input type="radio" name="project-type-choice" id="project-financing-choice"  value="projectFinancing"/>项目融资</label><br>	<!-- 项目融资 project Financing -->	
 						<label class="radio-inline"><input type="radio" name="project-type-choice" id="asset-deal-choice" value="assetDeal" />资产交易</label><br> <!-- 资产交易 Asset deal -->	
@@ -54,7 +54,7 @@
 						<label class="radio-inline"><input type="radio" name="project-type-choice"  id="finance-choice" value="finance" />投资理财</label><br> <!-- 投资理财 Finance -->	
 					</form>
 					</div>
-					<div class="col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-8">
 						<div id="projectFinancingContent" class="show-invest-type-content"><p>由您发起和跟进的项目需要融入资金，您可以接受股权融资、债权融资、整体转让、融资租赁等方式进行融资，请选择该类别发布项目信息。</p><p>项目融资是近些年兴起的一种融资手段，是以项目的名义筹措一年期以上的资金，以项目营运收入承担债务偿还责任的融资形式。</p></div>
 						<div id="assetDealContent" class="show-invest-type-content"><p>将您所属的大宗有形（房屋，土地，矿产等）资产或无形资产（知识产权，专利，股权等）以各种方式（协定、拍卖等）方式交易给对方，或是将您手中的在建项目易手，交易给对方，这是一种买卖的过程。但与单纯的出售，售卖并不相同。</p></div>
 						<div id="governmentInvestmentContent" class="show-invest-type-content"><p>您手中的项目是由政府主体发起的，或者您是政府主体，需要发起项目，都可以发送至这个分类。</p></div>
@@ -71,8 +71,8 @@
 			<div id="project-detail-form" class="col-sm-12">
 				<form class="form-horizontal" id="fund-info" name="fund-info" method="POST" enctype="multipart/form-data" role="form">
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">信息分类：</label>
-						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2 text-align-right">信息分类：</label>
+						<div class="col-sm-8 text-align-left">
 							<label class="radio-inline"><input type="radio" name="project-type" id="project-financing" value="project-financing"  />项目融资</label>	<!-- 项目融资 project Financing -->		
 							<label class="radio-inline"><input type="radio" name="project-type" id="asset-deal" value="asset-deal" />资产交易</label><!-- 资产交易 Asset deal -->
 							<label class="radio-inline"><input type="radio" name="project-type" id="government-investment" value="government-investment" />政府招商</label><!-- 政府招商 Government investment -->		
@@ -82,16 +82,16 @@
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">信息标题：</label>
-						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2  text-align-right">信息标题：</label>
+						<div class="col-sm-8 text-align-left">
 							<input class="" type="text" name="title" id="title">
 						</div>
 						<div id="title-error" name="title-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">所在地区：</label>
-						<div class=" col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2  text-align-right">所在地区：</label>
+						<div class=" col-sm-8 text-align-left">
 							<select name="province" class="select ">
 								<option></option>
 								<option value="01">浙江省</option>
@@ -112,14 +112,14 @@
 								<option value="03">萧山</option>
 							</select>
 						</div>
-						<div id="location-error" name="location-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+						<div id="location-error" name="location-error"  class="control-label col-sm-2  text-align-left"></div>
 					</div>
 
 					<!-- 		项目融资1	////////////////////////////////////////// -->
 					<div id="project-financing-info">
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">融资主体：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">融资主体：</label>
+							<div class="col-sm-8  text-align-left">
 								<select name="fund-body" class="" >
 									<option></option>
 									<option value="00">企业</option>
@@ -127,12 +127,12 @@
 									<option value="02">个人</option>
 								</select>
 							</div>
-							<div id="fund-body-error" name="fund-body-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="fund-body-error" name="fund-body-error"  class="control-label col-sm-2text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">所属行业：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">所属行业：</label>
+							<div class="col-sm-8 text-align-left">
 								<select name="industry-type">
 									<option></option>
 									<option value="01">金融投资</option>
@@ -140,45 +140,45 @@
 									<option value="03">能源</option>
 								</select>
 							</div>
-							<div id="industry-type-error" name="industry-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="industry-type-error" name="industry-type-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">去年营业额：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">去年营业额：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="last-turnover" type="text" name="last-turnover" class="" >
 								<select name="last-turnover-unit" class="" >
 									<option value="01">万元</option>
 									<option value="02">亿元</option>				
 								</select>
 							</div>
-							<div id="last-turnover-error" name="last-turnover-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="last-turnover-error" name="last-turnover-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">企业当前净资产：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2 text-align-right">企业当前净资产：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="net-assets" type="text" name="net-assets" class="" >
 								<select name="net-assets-unit" class="" >
 									<option value="01">万元</option>
 									<option value="02">亿元</option>				
 								</select>
 							</div>
-							<div id="net-assets-error" name="net-assets-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="net-assets-error" name="net-assets-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">融资用途：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2 text-align-right">融资用途：</label>
+							<div class="col-sm-8  text-align-left">
 								<input class="" type="text" name="
 								financing-purpose" id="financing-purpose">
 							</div>
-							<div id="financing-purpose-error" name="financing-purpose-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="financing-purpose-error" name="financing-purpose-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">融资金额：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">融资金额：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="invest-amount-min" type="text" name="invest-amount-min" class="" >
 								<select name="invest-amount-min-unit" class="" >
 									<option value="01">万元</option>
@@ -191,12 +191,12 @@
 									<option value="02">亿元</option>
 								</select>
 							</div>
-							<div id="invest-amount-error" name="invest-amount-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="invest-amount-error" name="invest-amount-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>	
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">总投金额：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">总投金额：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="total-investment-amount" type="text" name="total-investment-amount" class="" >
 								<select name="total-investment-amount-unit" class="" >
 									<option value="01">万元</option>
@@ -206,8 +206,8 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">意向资金：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">意向资金：</label>
+							<div class="col-sm-8 text-align-left">
 								<label><input type="checkbox" name="prefer-invest" id="any" class="" >不限</label>
 								<label><input type="checkbox" name="prefer-invest" id="personal-fund" class="" >个人资金</label>
 								<label><input type="checkbox" name="prefer-invest" id="enterprise-fund" class="" >企业资金</label>
@@ -227,31 +227,31 @@
 								<label><input type="checkbox" name="prefer-invest" id="pe-investment" class="" >PE投资</label>
 								<label><input type="checkbox" name="prefer-invest" id="vc-investment" class="" >VC投资</label>
 							</div>
-							<div id="prefer-invest-error" name="prefer-invest-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="prefer-invest-error" name="prefer-invest-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">融资方式：</label>
+							<label class="control-label col-sm-2   text-align-right">融资方式：</label>
 							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 								<label><input type="checkbox" name="financing-type" id="debt-financing" class="" >债权融资</label>
 								<label><input type="checkbox" name="financing-type" id="equity-financing" class="" >股权融资</label>
 								<label><input type="checkbox" name="financing-type" id="overall-transfer" class="" >整体转让</label>
 								<label><input type="checkbox" name="financing-type" id="other-financing" class="" >其他融资</label>
 							</div>
-							<div id="financing-type-error" name="financing-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="financing-type-error" name="financing-type-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 							<!-- ///////债权融资///// -->
 							<div id="debt-financing-area">
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">可承担最高利息：</label>
+									<label class="control-label col-sm-2   text-align-right">可承担最高利息：</label>
 									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 										<input type="text" name="highest-interest-bear" id="highest-interest-bear">%/年
 									</div>
-									<div id="highest-interest-bear-error" name="highest-interest-bear-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="highest-interest-bear-error" name="highest-interest-bear-error"  class="control-label col-sm-2   text-align-left"></div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">资金占用时长：</label>
-									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+									<label class="control-label col-sm-2   text-align-right">资金占用时长：</label>
+									<div class="col-sm-8   text-align-left">
 										<input type="text" name="fund-used-length-min" id="fund-used-length-min">--
 										<input type="" name="fund-used-length-max" id="fund-used-length-max">
 										<select name="fund-used-length-unit">
@@ -260,56 +260,56 @@
 											<option value="年">年</option>
 										</select>
 									</div>
-									<div id="fund-used-length-error" name="fund-used-length-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="fund-used-length-error" name="fund-used-length-error"  class="control-label col-sm-2   text-align-left"></div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">可提供风控：</label>
-									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+									<label class="control-label col-sm-2   text-align-right">可提供风控：</label>
+									<div class="col-sm-8   text-align-left">
 										<label><input type="checkbox" name="available-wind-control" id="mortgage" class="" >抵押</label>
 										<label><input type="checkbox" name="available-wind-control" id="guarantee" class="" >担保</label>
 										<label><input type="checkbox" name="available-wind-control" id="credit" class="" >信用</label>
 										<label id="other-label"><input type="checkbox" name="available-wind-control" id="other" class="" >其它</label>
 									</div>
-									<div id="available-wind-control-error" name="available-wind-control-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="available-wind-control-error" name="available-wind-control-error"  class="control-label col-sm-2  text-align-left"></div>
 								</div>
 									<!-- 抵押 -->
 								<div id="collateral-area">
 									<div class="form-group">
-										<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">抵押物类型：</label>
-										<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+										<label class="control-label col-sm-2  text-align-right">抵押物类型：</label>
+										<div class="col-sm-8  text-align-left">
 											<label><input type="checkbox" name="collateral-type" id="fixed-assets" class="" >固定资产</label>
 											<label><input type="checkbox" name="collateral-type" id="securities" class="" >有价证券</label>
 											<label><input type="checkbox" name="collateral-type" id="other-assets" class="" >其他资产</label>
 										</div>
-										<div id="collateral-type-error" name="collateral-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+										<div id="collateral-type-error" name="collateral-type-error"  class="control-label col-sm-2  text-align-left"></div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">抵押物市值：</label>
-										<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+										<label class="control-label col-sm-2  text-align-right">抵押物市值：</label>
+										<div class="col-sm-8  text-align-left">
 											<input type="text" name="collateral-market-value" id="collateral-market-value">
 											<select name="collateral-market-value-unit">
 												<option value="万元">万元</option>
 												<option value="亿元">亿元</option>
 											</select>
 										</div>
-										<div id="collateral-market-value-error" name="collateral-market-value-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+										<div id="collateral-market-value-error" name="collateral-market-value-error"  class="control-label col-sm-2  text-align-left"></div>
 									</div>
 								</div>
 									<!-- /// -->
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">还款来源：</label>
-									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+									<label class="control-label col-sm-2  text-align-right">还款来源：</label>
+									<div class="col-sm-8 text-align-left">
 										<label><input type="checkbox" name="repayment-source" id="sales-back" class="" >销售回款</label>  
 										<label><input type="checkbox" name="repayment-source" id="other-source" class="" >其它来源</label>
 									</div>
-									<div id="repayment-source-error" name="repayment-source-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="repayment-source-error" name="repayment-source-error"  class="control-label col-sm-2  text-align-left"></div>
 								</div>
 							</div>
 							<!-- ///////股权融资///// -->
 							<div id="equity-financing-area">
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目所处阶段：</label>
-									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+									<label class="control-label col-sm-2  text-align-right">项目所处阶段：</label>
+									<div class="col-sm-8  text-align-left">
 										<select name="project-stage">
 											<option></option>
 											<option>种子期</option>
@@ -320,10 +320,10 @@
 											<option>Pre-IPO</option>
 										</select>
 									</div>
-									<div id="project-stage-error" name="project-stage-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="project-stage-error" name="project-stage-error"  class="control-label col-sm-2  text-align-left"></div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">资金方占股比例：</label>
+									<label class="control-label col-sm-2  text-align-right">资金方占股比例：</label>
 									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 										<input type="text" name="funding-proportion-of-shares-min" id="funding-proportion-of-shares-min">-- 
 										<input type="text" name="funding-proportion-of-shares-max" id="funding-proportion-of-shares-max">%
@@ -331,15 +331,15 @@
 									<div id="funding-proportion-of-shares-error" name="funding-proportion-of-shares-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资退出方式：</label>
-									<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+									<label class="control-label col-sm-2  text-align-right">投资退出方式：</label>
+									<div class="col-sm-8  text-align-left">
 										<label><input type="checkbox" name="investment-exit" id="ipo" class="" >IPO</label>
 										<label><input type="checkbox" name="investment-exit" id="equity-transfer" class="" >股权转让</label>
 										<label><input type="checkbox" name="investment-exit" id="share-repurchase" class="" >股份回购</label>
 										<label><input type="checkbox" name="investment-exit" id="company-liquidation" class="" >公司清算</label>
 										<label><input type="checkbox" name="investment-exit" id="other-investment-exit" class="" >其它方式</label>
 									</div>
-									<div id="investment-exit-error" name="investment-exit-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+									<div id="investment-exit-error" name="investment-exit-error"  class="control-label col-sm-2  text-align-left"></div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">最短退出年限：</label>
@@ -351,38 +351,38 @@
 							</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">可提供资料：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">可提供资料：</label>
+							<div class="col-sm-8  text-align-left">
 								<label><input type="checkbox" name="financing-type" id="business-project-plan" class="" >商业/项目计划书</label>
 								<label><input type="checkbox" name="financing-type" id="company-documents" class="" >公司证件</label>
 								<label><input type="checkbox" name="financing-type" id="related-financial-info" class="" >相关财务资料</label>
 								<label><input type="checkbox" name="financing-type" id="other-info" class="" >其它资料</label>
 							</div>
-							<div id="financing-type-error" name="financing-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="financing-type-error" name="financing-type-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						  <div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目概述：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">项目概述：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="project-overview" class=""></textarea>
 							</div>
-							<div id="project-overview-error" name="project-overview-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="project-overview-error" name="project-overview-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目优势：</label>
+							<label class="control-label col-sm-2  text-align-right">项目优势：</label>
 							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 								<textarea name="project-advantage" class=""></textarea>
 							</div>
-							<div id="project-advantage-error" name="project-advantage-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="project-advantage-error" name="project-advantage-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 					</div>
 
 				<!-- 	///////////// 资产交易 /////////////// -->
 					<div id="asset-deal-info">
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">交易类别：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">交易类别：</label>
+							<div class="col-sm-8  text-align-left">
 								<select name="trading-category" class="" >
 									<option></option>
 									<option value="00">房屋</option>
@@ -402,73 +402,73 @@
 									<option value="14">其它</option>
 								</select>
 							</div>
-							<div id="trading-category-error" name="trading-category-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="trading-category-error" name="trading-category-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">交易方式：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">交易方式：</label>
+							<div class="col-sm-8  text-align-left">
 								<label><input type="checkbox" name="transaction-type" id="auction" class="" >拍卖</label>
 								<label><input type="checkbox" name="transaction-type" id="agreement" class="" >协议</label>
 								<label><input type="checkbox" name="transaction-type" id="price-auction" class="" >竞价</label>
 								<label><input type="checkbox" name="transaction-type" id="bidding" class="" >招标</label>
 							</div>
-							<div id="transaction-type-error" name="transaction-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="transaction-type-error" name="transaction-type-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">转让范围：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">转让范围：</label>
+							<div class="col-sm-8  text-align-left">
 								<label><input type="checkbox" name="transfer-range" id="all" class="" >整体</label>
 								<label><input type="checkbox" name="transfer-range" id="part" class="" >部份</label>
 							</div>
-							<div id="transfer-range-error" name="transfer-range-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="transfer-range-error" name="transfer-range-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">资产估价：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">资产估价：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="asset-valuation" type="text" name="asset-valuation" class="" >
 								<select name="asset-valuation-unit" class="" >
 									<option value="01">万元</option>
 									<option value="02">亿元</option>				
 								</select>
 							</div>
-							<div id="asset-valuation-error" name="asset-valuation-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="asset-valuation-error" name="asset-valuation-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">转让价格：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2 text-align-right">转让价格：</label>
+							<div class="col-sm-8  text-align-left">
 								<input id="asking-price" type="text" name="asking-price" class="" >
 								<select name="asking-price-unit" class="" >
 									<option value="01">万元</option>
 									<option value="02">亿元</option>				
 								</select>
 							</div>
-							<div id="asking-price-error" name="asking-price-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="asking-price-error" name="asking-price-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">截止时间：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">截止时间：</label>
+							<div class="col-sm-8 text-align-left">
 								<input type="text" id="deadline-time" data-provide="datepicker">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">资产概况：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">资产概况：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="assets-overview" class=""></textarea>
 							</div>
-							<div id="assets-overview-error" name="assets-overview-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="assets-overview-error" name="assets-overview-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 					</div>
 				<!-- ////////////政府招商/////////////// -->
 					<div id="government-investment-info">
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">招商行业：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">招商行业：</label>
+							<div class="col-sm-8 text-align-left">
 								<select name="investment-industry">
 									<option></option>
 									<option value="01">金融投资</option>
@@ -476,12 +476,12 @@
 									<option value="03">能源</option>
 								</select>
 							</div>
-							<div id="investment-industry-error" name="investment-industry-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-industry-error" name="investment-industry-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资估算：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2 text-align-right">投资估算：</label>
+							<div class="col-sm-8 text-align-left">
 								<input id="investment-estimate-min" type="text" name="investment-estimate-min" class="" >
 								<select name="investment-estimate-min-unit" class="" >
 									<option value="01">万元</option>
@@ -494,74 +494,74 @@
 									<option value="02">亿元</option>
 								</select>
 							</div>
-							<div id="investment-estimate-error" name="investment-estimate-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-estimate-error" name="investment-estimate-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>	
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">招商方式：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">招商方式：</label>
+							<div class="col-sm-8   text-align-left">
 								<label><input type="checkbox" name="investment-means" id="joint" class="" >合资</label>
 								<label><input type="checkbox" name="investment-means" id="owned" class="" >独资</label>
 								<label><input type="checkbox" name="investment-means" id="btorbot" class="" >BT或BOT</label>
 								<label><input type="checkbox" name="investment-means" id="other-corp" class="" >其它合作方式</label>
 							</div>
-							<div id="investment-means-error" name="investment-means-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-means-error" name="investment-means-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目内容：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">项目内容：</label>
+							<div class="col-sm-8   text-align-left">
 								<textarea name="project-description" class=""></textarea>
 							</div>
-							<div id="project-description-error" name="project-description-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="project-description-error" name="project-description-error"  class="control-label col-sm-2 text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资环境：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">投资环境：</label>
+							<div class="col-sm-8   text-align-left">
 								<textarea name="investment-environment" class=""></textarea>
 							</div>
-							<div id="investment-environment-error" name="investment-environment-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-environment-error" name="investment-environment-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目背景：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">项目背景：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="project-background" class=""></textarea>
 							</div>
-							<div id="project-background-error" name="project-background-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="project-background-error" name="project-background-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">项目规模：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">项目规模：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="project-size" class=""></textarea>
 							</div>
-							<div id="project-size-error" name="project-size-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="project-size-error" name="project-size-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">效益预算：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">效益预算：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="benefit-budget" class=""></textarea>
 							</div>
-							<div id="benefit-budget-error" name="benefit-budget-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="benefit-budget-error" name="benefit-budget-error"  class="control-label col-sm-2  text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">优惠政策：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2  text-align-right">优惠政策：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="preferential-policies" class=""></textarea>
 							</div>
-							<div id="preferential-policies-error" name="preferential-policies-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="preferential-policies-error" name="preferential-policies-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 					</div>
 
 				<!-- /////////////////投资理财/////////////////// -->
 					<div id="finance-info">
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">产品类型：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">产品类型：</label>
+							<div class="col-sm-8   text-align-left">
 								<select name="product-type">
 									<option></option>
 									<option value="01">银行理财</option>
@@ -569,36 +569,36 @@
 									<option value="03">有限合伙</option>
 								</select>
 							</div>
-							<div id="product-type-error" name="product-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="product-type-error" name="product-type-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">风险偏好：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2 -2  text-align-right">风险偏好：</label>
+							<div class="col-sm-8   text-align-left">
 								<select name="risk-prefer" class="" > 
 									<option></option>
 									<option value="01">进取型</option>
 									<option value="02">稳健型</option>
 								</select>
 							</div>
-							<div id="risk-prefer-error" name="risk-prefer-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="risk-prefer-error" name="risk-prefer-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资门槛：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">投资门槛：</label>
+							<div class="col-sm-8   text-align-left">
 								<input id="investment-threshold" type="text" name="investment-threshold" class="" >
 								<select name="investment-threshold-unit" class="" >
 									<option value="01">万元</option>
 									<option value="02">亿元</option>				
 								</select>
 							</div>
-							<div id="investment-threshold-error" name="investment-threshold-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-threshold-error" name="investment-threshold-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资期限：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">投资期限：</label>
+							<div class="col-sm-8   text-align-left">
 								<input id="investment-period" type="text" name="investment-period" class="" >
 								<select name="investment-period-unit" class="" >
 									<option value="01">天</option>
@@ -606,66 +606,66 @@
 									<option value="03">年</option>		
 								</select>
 							</div>
-							<div id="investment-period-error" name="investment-period-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="investment-period-error" name="investment-period-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">产品概述：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">产品概述：</label>
+							<div class="col-sm-8  text-align-left">
 								<textarea name="product-description" class=""></textarea>
 							</div>
-							<div id="product-description-error" name="product-description-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="product-description-error" name="product-description-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">其他备注：</label>
-						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2   text-align-right">其他备注：</label>
+						<div class="col-sm-8   text-align-left">
 							<textarea name="additional-notes" class="" ></textarea>
 						</div>
-						<div id="additional-notes-error" name="additional-notes-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+						<div id="additional-notes-error" name="additional-notes-error"  class="control-label col-sm-2   text-align-left"></div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">标签：</label>
-						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2   text-align-right">标签：</label>
+						<div class="col-sm-8   text-align-left">
 							<input type="text" name="label" class="" >
 						</div>
-						<div id="label-error" name="label-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+						<div id="label-error" name="label-error"  class="control-label col-sm-2  text-align-left"></div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">缩略图：</label>
-						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+						<label class="control-label col-sm-2   text-align-right">缩略图：</label>
+						<div class="col-sm-8   text-align-left">
 							<input type="file" name="thumbnail-image" class="" >
 						</div>
-						<div id="thumbnail-image-error" name="thumbnail-image-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+						<div id="thumbnail-image-error" name="thumbnail-image-error"  class="control-label col-sm-2   text-align-left"></div>
 					</div>
 
 					<div id="info-file"> 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">商业计划书：</label>
+							<label class="control-label col-sm-2   text-align-right">商业计划书：</label>
 							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 								<input type="file" name="business-proposal" class="" >
 							</div>
-							<div id="business-proposal-error" name="business-proposal-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="business-proposal-error" name="business-proposal-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">路演ppt：</label>
-							<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+							<label class="control-label col-sm-2   text-align-right">路演ppt：</label>
+							<div class="col-sm-8   text-align-left">
 								<input type="file" name="ppt" class="" >
 							</div>
-							<div id="ppt-error" name="ppt-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+							<div id="ppt-error" name="ppt-error"  class="control-label col-sm-2   text-align-left"></div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">附件：</label>
+						<label class="control-label col-sm-2   text-align-right">附件：</label>
 						<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
 							<input type="file" name="annex" class="" >
 						</div>
-						<div id="annex-error" name="annex-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+						<div id="annex-error" name="annex-error"  class="control-label col-sm-2   text-align-left"></div>
 					</div>
 					<button type="submit" value="submit" class="btn">立即发布资金信息</button>
 					<button class="btn">预览</button>
