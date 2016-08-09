@@ -12,16 +12,16 @@
 	<meta name="robots" content="index, follow">
 
 	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
 
 	<!-- Bootstrap theme
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 
 	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
 
 	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
+	<link rel="stylesheet" href="${basePath}/static/css/yr.css">
 
 	<style type="text/css">
 		#content {
@@ -89,11 +89,11 @@
 		<!--news-list-->
 		<div class="col-sm-12">
 			<div class="panel panel-default">
-				<div class="panel-heading">
+				<div class="panel-title">
 					<div class="row">
 						<div class="col-sm-12">
-							<span class="pull-left panel-title">精选资金</span>
-							<a class="pull-right panel-title">查看更多</a>
+							<span class="pull-left">精选资金</span>
+							<a class="pull-right">查看更多</a>
 						</div>
 					</div>
 				</div>
@@ -101,68 +101,70 @@
 					<ul class="list-unstyled list-inline">
 						<div class="row">
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class="panel-title ">股权投资</a>
-											<a class="panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">股权投资</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_capital.type1){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.body}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class="panel-title ">股权投资</a>
-											<a class="panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">债权投资</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_capital.type2){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.body}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class="panel-title ">股权投资</a>
-											<a class="panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">其他投资</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_capital.type3){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.body}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 						</div>
 					</ul>
 				</div>
 			</div>
+		
+			<a>这是a</a></br>
+			<a class="title">这是a.title</a></br>
+			<a class="to-cold">这是a.to-cold</a></br>
+			<a class="to-hot">这是a.to-hot</a></br>
+			<a class="from-cold">这是a.from-cold</a></br>
+			<a class="from-hot">这是a.from-hot</a></br>
+			<a class="animated">这是a.animated</a></br>
 		</div>
 
 		<!--project-list-->
 		<div class="col-sm-12">
 			<div class="panel panel-default">
-				<div class="panel-heading">
+				<div class="panel-title">
 					<div class="row">
 						<div class="col-sm-12">
-							<span class="pull-left panel-title">优质项目</span>
+							<span class="pull-left">优质项目</span>
 							<button class="btn btn-sm btn-to-hot pull-left">重点项目推荐</button>
-							<a class="pull-right panel-title">查看更多</a>
+							<a class="pull-right">查看更多</a>
 						</div>
 					</div>
 				</div>
@@ -170,106 +172,88 @@
 					<ul class="list-unstyled list-inline">
 						<div class="row">
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">IT互联网</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type1){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">农林牧渔</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type2){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">房地产</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type3){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">餐饮休闲娱乐</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type4){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">建筑建材</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type5){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<li>
+									<div class="row">
+										<div class="col-sm-12">
+											<a class="pull-left">其他行业</a>
+											<a class="pull-right">更多</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
+										@for(data in selected_project.type6){
+										<div class="col-sm-5 col-md-4"><a class="from-cold">${data.area}</a></div>
+										<div class="col-sm-7 col-md-8"><a class="pull-left"href="${data.url}">${data.title}</a></div>
+										@}
+									</div>
+								</li>
 							</div>
 						</div>
 					</ul>
@@ -287,7 +271,7 @@
 					LINKS<br>友情链接
 				</div>
 				<div class="col-xs-10 col-md-10 text-justify">
-					<a href="" target="_blank" title="">投融界专题</a>
+					<a href="" target="_blank" title="">易融圈专题</a>
 					<a href="" target="_blank" title="">金价查询</a>
 					<a href="" target="_blank" title="">私募基金</a>
 					<a href="" target="_blank" title="">韬客外汇论坛</a>
@@ -339,7 +323,7 @@
 						<div><span>400-858-9000</span></div>
 						<div>投诉电话：0571-56132500</div>
 						<div>周一到周六 9:00-20:00</div>
-						<div>邮箱：kefu@trjcn.com</div>
+						<div>邮箱：kefu\@trjcn.com</div>
 					</div>
 					<div class="col-sm-4">
 						<div><h3>平台保障</h3></div>
@@ -359,8 +343,8 @@
 						<div><a>投递项目</a></div>
 					</div>
 					<div class="col-sm-4">
-						<div><h3>关于投融界</h3></div>
-						<div><a>投融界介绍</a></div>
+						<div><h3>关于易融圈</h3></div>
+						<div><a>易融圈介绍</a></div>
 						<div><a>联系我们</a></div>
 						<div><a>网站公告</a></div>
 						<div><a>隐私条款</a></div>
@@ -382,7 +366,7 @@
 						<div><span>400-858-9000</span></div>
 						<div>投诉电话：0571-56132500</div>
 						<div>周一到周六 9:00-20:00</div>
-						<div>邮箱：kefu@trjcn.com</div>
+						<div>邮箱：kefu\@trjcn.com</div>
 					</div>
 					<div class="col-md-2 text-center">
 						<div><h3>平台保障</h3></div>
@@ -402,8 +386,8 @@
 						<div><a>融资宝</a></div>
 					</div>
 					<div class="col-md-2 text-center">
-						<div><h3>关于投融界</h3></div>
-						<div><a>投融界介绍</a></div>
+						<div><h3>关于易融圈</h3></div>
+						<div><a>易融圈介绍</a></div>
 						<div><a>联系我们</a></div>
 						<div><a>网站公告</a></div>
 						<div><a>隐私条款</a></div>
@@ -436,10 +420,10 @@
 
 
 <!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
+<script src="${basePath}/static/js/jquery-1.11.3.js"></script>
 
 <!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
+<script src="${basePath}/static/js/bootstrap.js"></script>
 
 <!-- custom js
 <script src="js/请输入.js"></script>-->
