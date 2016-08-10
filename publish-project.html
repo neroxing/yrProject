@@ -23,70 +23,81 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.show-invest-type-content{
-		display: none;
-	}
+		.show-invest-type-content {
+			display: none;
+		}
 	</style>
 </head>
 <body>
 
-	<div class="container">
-		<!-- project choice form -->
-		<div><h4>发布项目信息</h4></div>
-		<div class="col-sm-12 col-md-12 col-lg-12">
-			<div class="col-sm-4 col-md-4 col-lg-4">
+<div class="container">
+	<!-- project choice form -->
+	<div><h4>发布项目信息</h4></div>
+	<div class="col-sm-12  ">
+		<div class="col-sm-4  ">
 			<form id="investRadios">
-				<label class="radio-inline"><input type="radio" name="projectType" id="projectFinancing"  value="projectFinancing"/>项目融资</label><br>	<!-- 项目融资 project Financing -->	
-				<label class="radio-inline"><input type="radio" name="projectType" id="assetDeal" value="assetDeal" />资产交易</label><br> <!-- 资产交易 Asset deal -->	
-				<label class="radio-inline"><input type="radio" name="projectType"  id="governmentInvestment" value="governmentInvestment" />政府招商</label><br> <!-- 政府招商 Government investment -->
-				<label class="radio-inline"><input type="radio" name="projectType"  id="finance" value="finance" />投资理财</label><br> <!-- 投资理财 Finance -->	
+				<label class="radio-inline"><input type="radio" name="projectType" id="projectFinancing"
+				                                   value="projectFinancing"/>项目融资</label><br>
+				<!-- 项目融资 project Financing -->
+				<label class="radio-inline"><input type="radio" name="projectType" id="assetDeal" value="assetDeal"/>资产交易</label><br>
+				<!-- 资产交易 Asset deal -->
+				<label class="radio-inline"><input type="radio" name="projectType" id="governmentInvestment"
+				                                   value="governmentInvestment"/>政府招商</label><br>
+				<!-- 政府招商 Government investment -->
+				<label class="radio-inline"><input type="radio" name="projectType" id="finance"
+				                                   value="finance"/>投资理财</label><br> <!-- 投资理财 Finance -->
 			</form>
-			</div>
-			<div class="col-sm-8 col-md-8 col-lg-8">
-				<div id="projectFinancingContent" class="show-invest-type-content"><p>由您发起和跟进的项目需要融入资金，您可以接受股权融资、债权融资、整体转让、融资租赁等方式进行融资，请选择该类别发布项目信息。</p><p>项目融资是近些年兴起的一种融资手段，是以项目的名义筹措一年期以上的资金，以项目营运收入承担债务偿还责任的融资形式。</p></div>
-				<div id="assetDealContent" class="show-invest-type-content"><p>将您所属的大宗有形（房屋，土地，矿产等）资产或无形资产（知识产权，专利，股权等）以各种方式（协定、拍卖等）方式交易给对方，或是将您手中的在建项目易手，交易给对方，这是一种买卖的过程。但与单纯的出售，售卖并不相同。</p></div>
-				<div id="governmentInvestmentContent" class="show-invest-type-content"><p>您手中的项目是由政府主体发起的，或者您是政府主体，需要发起项目，都可以发送至这个分类。</p></div>
-				<div id="financeContent" class="show-invest-type-content"><p>您手中有通过银行或者基金公司的项目已转化为产品可以发送至这个分类。</p></div>
-			</div>
 		</div>
-		<div>
-			<a href="">下一步</a>
+		<div class="col-sm-8  ">
+			<div id="projectFinancingContent" class="show-invest-type-content"><p>
+				由您发起和跟进的项目需要融入资金，您可以接受股权融资、债权融资、整体转让、融资租赁等方式进行融资，请选择该类别发布项目信息。</p>
+				<p>项目融资是近些年兴起的一种融资手段，是以项目的名义筹措一年期以上的资金，以项目营运收入承担债务偿还责任的融资形式。</p></div>
+			<div id="assetDealContent" class="show-invest-type-content"><p>
+				将您所属的大宗有形（房屋，土地，矿产等）资产或无形资产（知识产权，专利，股权等）以各种方式（协定、拍卖等）方式交易给对方，或是将您手中的在建项目易手，交易给对方，这是一种买卖的过程。但与单纯的出售，售卖并不相同。</p>
+			</div>
+			<div id="governmentInvestmentContent" class="show-invest-type-content"><p>
+				您手中的项目是由政府主体发起的，或者您是政府主体，需要发起项目，都可以发送至这个分类。</p></div>
+			<div id="financeContent" class="show-invest-type-content"><p>您手中有通过银行或者基金公司的项目已转化为产品可以发送至这个分类。</p></div>
 		</div>
 	</div>
-	
-	<!-- jQuery -->
-	<script src="js/jquery-1.11.3.js"></script>
+	<div>
+		<a href="">下一步</a>
+	</div>
+</div>
 
-	<!-- Bootstrap JavaScript -->
-	<script src="js/bootstrap.js"></script>
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
 
-	<!-- custom js
-	<script src="js/请输入.js"></script>-->
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
 
-	<script type="text/javascript">
-	
-	/* show invest type content */ 
-	$(document).ready(function() {
-		$('input[type="radio"]').click(function() {
-			if($(this).attr('id') == 'projectFinancing') {
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+	/* show invest type content */
+	$(document).ready(function () {
+		$('input[type="radio"]').click(function () {
+			if ($(this).attr('id') == 'projectFinancing') {
 				$('#projectFinancingContent').show();
 				$('#assetDealContent').hide();
 				$('#governmentInvestmentContent').hide();
 				$('#financeContent').hide();
 			}
-			else if($(this).attr('id') == 'assetDeal'){
+			else if ($(this).attr('id') == 'assetDeal') {
 				$('#projectFinancingContent').hide();
 				$('#assetDealContent').show();
 				$('#governmentInvestmentContent').hide();
 				$('#financeContent').hide();
 			}
-			else if($(this).attr('id') == 'governmentInvestment'){
+			else if ($(this).attr('id') == 'governmentInvestment') {
 				$('#projectFinancingContent').hide();
 				$('#assetDealContent').hide();
 				$('#governmentInvestmentContent').show();
 				$('#financeContent').hide();
 			}
-			else if($(this).attr('id') == 'finance'){
+			else if ($(this).attr('id') == 'finance') {
 				$('#projectFinancingContent').hide();
 				$('#assetDealContent').hide();
 				$('#governmentInvestmentContent').hide();
@@ -97,6 +108,6 @@
 
 	/**/
 
-	</script>
+</script>
 </body>
 </html>

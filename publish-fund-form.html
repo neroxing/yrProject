@@ -24,386 +24,419 @@
 
 	<style type="text/css">
 		label.error {
-			color:Red;
-			font-size:13px;
-			margin-left:5px;
-			padding-left:16px;
-			background:url("error.png") left no-repeat;
+			color: Red;
+			font-size: 13px;
+			margin-left: 5px;
+			padding-left: 16px;
+			background: url("error.png") left no-repeat;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<form class="form-horizontal" id="fund-info" name="fund-info" method="POST" enctype="multipart/form-data" role="form">
+<div class="container">
+	<form class="form-horizontal" id="fund-info" name="fund-info" method="POST" enctype="multipart/form-data"
+	      role="form">
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">信息分类：</label>
+			<div class="col-sm-8   text-align-left">
+				<label class="radio-inline"><input type="radio" name="invest-type" id="equity-inv" value="equity-inv"/>股权投资</label>
+				<!-- 股权投资 Equity Investment -->
+				<label class="radio-inline"><input type="radio" name="invest-type" id="debt-inv" value="debt-inv"/>债权投资</label>
+				<!-- 债权投资 Debt investments -->
+				<label class="radio-inline"><input type="radio" name="invest-type" id="financial-inv"
+				                                   value="financial-inv"/>金融投资</label><!-- 金融投资 financial investment -->
+				<label class="radio-inline"><input type="radio" name="invest-type" id="btbot" value="btbot"/>BT/BOT项目投资</label>
+				<!-- BT/BOT项目投资 BT/BOTproject investment-->
+				<label class="radio-inline"><input type="radio" name="invest-type" id="other-inv" value="other-inv"/>其它投资</label>
+				<!-- 其它投资 Other investment-->
+			</div>
+			<div id="invest-type-error" name="invest-type-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">标题：</label>
+			<div class="col-sm-8   text-align-left">
+				<input class="" type="text" name="title" id="title">
+			</div>
+			<div id="title-error" name="title-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">资金主体：</label>
+			<div class="col-sm-8   text-align-left">
+				<select name="fund-body" class="">
+					<option></option>
+					<option value="00">个人资金</option>
+					<option value="01">企业资金</option>
+					<option value="02">天使投资</option>
+					<option value="03">VC投资</option>
+					<option value="04">PE投资</option>
+					<option value="05">小额贷款</option>
+					<option value="06">典当公司</option>
+					<option value="07">担保公司</option>
+					<option value="08">金融租赁</option>
+					<option value="09">投资公司</option>
+					<option value="10">商业银行</option>
+					<option value="11">基金公司</option>
+					<option value="12">证券公司</option>
+					<option value="13">信托公司</option>
+					<option value="14">保险公司</option>
+					<option value="15">资产管理</option>
+					<option value="16">其它资金</option>
+				</select>
+			</div>
+			<div id="fund-body-error" name="fund-body-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">所在地区：</label>
+			<div class=" col-sm-8   text-align-left">
+				<select name="province" class="select ">
+					<option></option>
+					<option value="01">浙江省</option>
+					<option value="02">福建省</option>
+					<option value="03">江苏省</option>
+					<option value="04">广东省</option>
+				</select>
+				<select name="city" class="select ">
+					<option></option>
+					<option value="01">杭州</option>
+					<option value="02">厦门</option>
+					<option value="03">福州</option>
+				</select>
+				<select name="area" class="select ">
+					<option></option>
+					<option value="01">拱墅区</option>
+					<option value="02">滨江区</option>
+					<option value="03">萧山</option>
+				</select>
+			</div>
+			<div id="location-error" name="location-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资行业：</label>
+			<div class="col-sm-8   text-align-left">
+				<select name="invest-industry">
+					<option></option>
+					<option value="01">金融投资</option>
+					<option value="02">房地产</option>
+					<option value="03">能源</option>
+				</select>
+			</div>
+			<div id="invest-industry-error" name="invest-industry-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资地区：</label>
+			<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
+				<select name="invest-area">
+					<option></option>
+					<option value="01">浙江省</option>
+					<option value="02">上海</option>
+					<option value="03">广东省</option>
+				</select>
+			</div>
+			<div id="invest-area-error" name="invest-area-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资金额：</label>
+			<div class="col-sm-8   text-align-left">
+				<input id="invest-amount-min" type="text" name="invest-amount-min" class="">
+				<select name="invest-amount-min-unit" class="">
+					<option value="01">万元</option>
+					<option value="02">亿元</option>
+				</select>
+				--
+				<input id="invest-amount-max" type="text" name="invest-amount-max" class="">
+				<select name="invest-amount-max-unit" class="">
+					<option value="01">万元</option>
+					<option value="02">亿元</option>
+				</select>
+			</div>
+			<div id="invest-amount-error" name="invest-amount-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
+
+		<!-- 股权投资 -->
+		<div id="equity-invest-info">
 			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">信息分类：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<label class="radio-inline"><input type="radio" name="invest-type" id="equity-inv" value="equity-inv"  />股权投资</label>	<!-- 股权投资 Equity Investment -->	
-					<label class="radio-inline"><input type="radio" name="invest-type" id="debt-inv" value="debt-inv" />债权投资</label><!-- 债权投资 Debt investments -->	
-					<label class="radio-inline"><input type="radio" name="invest-type" id="financial-inv" value="financial-inv" />金融投资</label><!-- 金融投资 financial investment -->				
-					<label class="radio-inline"><input type="radio" name="invest-type" id="btbot" value="btbot" />BT/BOT项目投资</label><!-- BT/BOT项目投资 BT/BOTproject investment-->				
-					<label class="radio-inline"><input type="radio" name="invest-type" id="other-inv" value="other-inv" />其它投资</label><!-- 其它投资 Other investment-->
+				<label for="equity-invest-type" class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">股权投资类型：</label>
+				<div class="col-sm-8   text-align-left">
+					<label><input type="checkbox" name="equity-invest-type" id="owned-invest-factory"
+					              class="">独资/投资建厂</label>
+					<label><input type="checkbox" name="equity-invest-type" id="equity-cooperation"
+					              class="">参股合作</label>
+					<label><input type="checkbox" name="equity-invest-type" id="acquisition" class="">收购/并购</label>
+					<label id="other-cooperation-label"><input type="checkbox" name="equity-invest-type"
+					                                           id="other-cooperation" class="">其它合作方式</label>
 				</div>
-				<div id="invest-type-error" name="invest-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+				<div id="equity-invest-type-error" name="equity-invest-type-error"
+				     class="control-label col-sm-2   text-align-left"></div>
 			</div>
 
 			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">标题：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input class="" type="text" name="title" id="title">
+				<label for="invest-stage"
+				       class="control-label col-sm-2   text-align-right">投资阶段：</label>
+				<div class="col-sm-8   text-align-left">
+					<label><input type="checkbox" name="invest-stage" id="seed-period" class="">种子期</label>
+					<label><input type="checkbox" name="invest-stage" id="start-period" class="">初创期</label>
+					<label><input type="checkbox" name="invest-stage" id="develop-period" class="">成长期</label>
+					<label><input type="checkbox" name="invest-stage" id="expansion-period" class="">扩张期</label>
+					<label><input type="checkbox" name="invest-stage" id="maturity-period" class="">成熟期</label>
+					<label id="preipo-period-label"><input type="checkbox" name="invest-stage" id="preipo-period"
+					                                       class="">Pre-IPO</label>
 				</div>
-				<div id="title-error" name="title-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+				<div id="invest-stage-error" name="invest-stage-error"
+				     class="control-label col-sm-2   text-align-left"></div>
 			</div>
+		</div>
 
+
+		<!--债权投资-->
+		<div id="debt-invest-info">
 			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">资金主体：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<select name="fund-body" class="" >
-						<option></option>
-						<option value="00">个人资金</option>
-						<option value="01">企业资金</option>
-						<option value="02">天使投资</option>
-						<option value="03">VC投资</option>
-						<option value="04">PE投资</option>
-						<option value="05">小额贷款</option>
-						<option value="06">典当公司</option>
-						<option value="07">担保公司</option>
-						<option value="08">金融租赁</option>
-						<option value="09">投资公司</option>
-						<option value="10">商业银行</option>
-						<option value="11">基金公司</option>
-						<option value="12">证券公司</option>
-						<option value="13">信托公司</option>
-						<option value="14">保险公司</option>
-						<option value="15">资产管理</option>
-						<option value="16">其它资金</option>
+				<label class="control-label col-sm-2   text-align-right">最低回报要求：</label>
+				<div class="col-sm-8   text-align-left">
+					<input type="text" name="return-require-min" class="">
+					<span id="return-require-min-unit">%/年</span>
+				</div>
+				<div id="return-require-min-error" name="return-require-min-error"
+				     class="control-label col-sm-2   text-align-left"></div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2   text-align-right">风控要求：</label>
+				<div class="col-sm-8   text-align-left">
+					<label><input type="checkbox" name="risk-require" id="mortgage" class="">抵押</label>
+					<label><input type="checkbox" name="risk-require" id="guarantee" class="">担保</label>
+					<label><input type="checkbox" name="risk-require" id="credit" class="">信用</label>
+					<label id="other-label"><input type="checkbox" name="risk-require" id="other" class="">其它</label>
+				</div>
+				<div id="risk-require-error" name="risk-require-error"
+				     class="control-label col-sm-2   text-align-left"></div>
+			</div>
+		</div>
+
+		<!-- 金融投资-->
+		<div id="financialInvest">
+			<div class="form-group">
+				<label class="control-label col-sm-2   text-align-right">风险偏好：</label>
+				<div class="col-sm-8   text-align-left">
+					<select name="risk-prefer" class="">
+						<option value="01">进取型</option>
+						<option value="02">稳健型</option>
 					</select>
 				</div>
-				<div id="fund-body-error" name="fund-body-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+				<div id="risk-prefer-error" name="risk-prefer-error"
+				     class="control-label col-sm-2   text-align-left"></div>
 			</div>
-
 			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">所在地区：</label>
-				<div class=" col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<select name="province" class="select ">
-						<option></option>
-						<option value="01">浙江省</option>
-						<option value="02">福建省</option>
-						<option value="03">江苏省</option>
-						<option value="04">广东省</option>
-					</select>
-					<select name="city" class="select " >
-						<option></option>
-						<option value="01">杭州</option>
-						<option value="02">厦门</option>
-						<option value="03">福州</option>
-					</select>
-					<select name="area" class="select " >
-						<option></option>
-						<option value="01">拱墅区</option>
-						<option value="02">滨江区</option>
-						<option value="03">萧山</option>
-					</select>
+				<label class="control-label col-sm-2   text-align-right">产品偏好：</label>
+				<div class="col-sm-8   text-align-left">
+					<label><input type="checkbox" name="product-prefer" id="bank-financing" class="">银行理财</label>
+					<label><input type="checkbox" name="product-prefer" id="trust-products" class="">信托产品</label>
+					<label><input type="checkbox" name="product-prefer" id="limited-partnership" class="">有限合伙</label>
+					<label><input type="checkbox" name="product-prefer" id="sun-private" class="">阳光私募</label>
+					<label><input type="checkbox" name="product-prefer" id="private-equity" class="">私募股权</label>
+					<label><input type="checkbox" name="product-prefer" id="brokerage-collection" class="">券商集合</label>
+					<label><input type="checkbox" name="product-prefer" id="one-many" class="">一对多</label>
+					<label><input type="checkbox" name="product-prefer" id="private-debt" class="">私募债</label>
+					<label><input type="checkbox" name="product-prefer" id="other" class="">其它</label>
 				</div>
-				<div id="location-error" name="location-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+				<div id="product-prefer-error" name="product-prefer-error"
+				     class="control-label col-sm-2   text-align-left"></div>
 			</div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资行业：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<select name="invest-industry">
-						<option></option>
-						<option value="01">金融投资</option>
-						<option value="02">房地产</option>
-						<option value="03">能源</option>
-					</select>
-				</div>
-				<div id="invest-industry-error" name="invest-industry-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<!-- BT/BOT 项目投资 -->
+		<!--  其它投资 -->
+
+		<!-- 股权投资 -->
+		<!--债权投资-->
+		<div id="invest-period" class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资期限：</label>
+			<div class="col-sm-8   text-align-left">
+				<input type="text" name="invest-period-min" class="">
+				<span>--</span>
+				<input type="text" name="invest-period-max" class="">
+				<select name="invest-period-unit" class="">
+					<option value="01">年</option>
+					<option value="02">月</option>
+					<option value="03">日</option>
+				</select>
 			</div>
+			<div id="invest-period-error" name="invest-period-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资地区：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<select name="invest-area">
-						<option></option>
-						<option value="01">浙江省</option>
-						<option value="02">上海</option>
-						<option value="03">广东省</option>
-					</select>
-				</div>
-				<div id="invest-area-error" name="invest-area-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">前期费用：</label>
+			<div class="col-sm-8   text-align-left">
+				<label><input type="checkbox" name="pre-fee" id="assess" class="">评估</label>
+				<label><input type="checkbox" name="pre-fee" id="guarantee" class="">担保</label>
+				<label><input type="checkbox" name="pre-fee" id="intermediary-service" class="">居间服务费</label>
+				<label><input type="checkbox" name="pre-fee" id="other-fee" class="">其他费用</label>
+				<label id="no-upfront-cost-label"><input type="checkbox" name="pre-fee" id="no-upfront-cost" class="">无任何前期费用</label>
 			</div>
+			<div id="pre-fee-error" name="pre-fee-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资金额：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input id="invest-amount-min" type="text" name="invest-amount-min" class="" >
-					<select name="invest-amount-min-unit" class="" >
-						<option value="01">万元</option>
-						<option value="02">亿元</option>				
-					</select>
-					--
-					<input id="invest-amount-max" type="text" name="invest-amount-max" class="" >
-					<select name="invest-amount-max-unit" class="" >
-						<option value="01">万元</option>
-						<option value="02">亿元</option>
-					</select>
-				</div>
-				<div id="invest-amount-error" name="invest-amount-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>		
 
-			<!-- 股权投资 -->
-			<div id="equity-invest-info">
-				<div class="form-group">
-					<label for="equity-invest-type" class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">股权投资类型：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<label><input type="checkbox" name="equity-invest-type" id="owned-invest-factory" class="" >独资/投资建厂</label>
-						<label><input type="checkbox" name="equity-invest-type" id="equity-cooperation" class="" >参股合作</label>
-						<label><input type="checkbox" name="equity-invest-type" id="acquisition" class="" >收购/并购</label>
-						<label id="other-cooperation-label"><input type="checkbox" name="equity-invest-type" id="other-cooperation" class="" >其它合作方式</label>
-					</div>
-					<div id="equity-invest-type-error" name="equity-invest-type-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-				</div>
-
-				<div class="form-group">
-					<label for="invest-stage" class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资阶段：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<label><input type="checkbox" name="invest-stage" id="seed-period" class="" >种子期</label>
-						<label><input type="checkbox" name="invest-stage" id="start-period" class="" >初创期</label>
-						<label><input type="checkbox" name="invest-stage" id="develop-period" class="" >成长期</label>
-						<label><input type="checkbox" name="invest-stage" id="expansion-period" class="" >扩张期</label>
-						<label><input type="checkbox" name="invest-stage" id="maturity-period" class="" >成熟期</label>
-						<label id="preipo-period-label" ><input type="checkbox" name="invest-stage" id="preipo-period" class="" >Pre-IPO</label>
-					</div>
-					<div id="invest-stage-error" name="invest-stage-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-				</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">需提供资料：</label>
+			<div class="col-sm-8   text-align-left">
+				<label><input type="checkbox" name="business-project-plan" class="">商业/项目计划书</label>
+				<label><input type="checkbox" name="company-documents" class="">公司证件</label>
+				<label><input type="checkbox" name="related-financial-info" class="">相关财务资料</label>
+				<label><input type="checkbox" name="other-info" class="">其它资料</label>
 			</div>
+			<div id="material-require-error" name="material-require-error"
+			     class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		</div>
 
-
-			<!--债权投资-->
-			<div id="debt-invest-info">
-				<div class="form-group">
-					<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">最低回报要求：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<input type="text" name="return-require-min" class="" >
-						<span id="return-require-min-unit">%/年</span>
-					</div>
-					<div id="return-require-min-error" name="return-require-min-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">风控要求：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<label><input type="checkbox" name="risk-require" id="mortgage" class="" >抵押</label>
-						<label><input type="checkbox" name="risk-require" id="guarantee" class="" >担保</label>
-						<label><input type="checkbox" name="risk-require" id="credit" class="" >信用</label>
-						<label id="other-label"><input type="checkbox" name="risk-require" id="other" class="" >其它</label>
-					</div>
-					<div id="risk-require-error" name="risk-require-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-				</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资要求概述：</label>
+			<div class="col-sm-8   text-align-left">
+				<textarea name="investment-requirements-overview" class=""></textarea>
 			</div>
+			<div id="investment-requirements-overview-error" name="investment-requirements-overview-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<!-- 金融投资-->
-			<div id="financialInvest">
-				<div class="form-group">
-					<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">风险偏好：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<select name="risk-prefer" class="" > 
-							<option value="01">进取型</option>
-							<option value="02">稳健型</option>
-						</select>
-					</div>
-					<div id="risk-prefer-error" name="risk-prefer-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">产品偏好：</label>
-					<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-						<label><input type="checkbox" name="product-prefer" id="bank-financing" class="" >银行理财</label>
-						<label><input type="checkbox" name="product-prefer" id="trust-products" class="" >信托产品</label>
-						<label><input type="checkbox" name="product-prefer" id="limited-partnership" class="" >有限合伙</label>
-						<label><input type="checkbox" name="product-prefer" id="sun-private" class="" >阳光私募</label>
-						<label><input type="checkbox" name="product-prefer" id="private-equity" class="" >私募股权</label>
-						<label><input type="checkbox" name="product-prefer" id="brokerage-collection" class="" >券商集合</label>
-						<label><input type="checkbox" name="product-prefer" id="one-many" class="" >一对多</label>
-						<label><input type="checkbox" name="product-prefer" id="private-debt" class="" >私募债</label>
-						<label><input type="checkbox" name="product-prefer" id="other" class="" >其它</label>		
-					</div>	
-					<div id="product-prefer-error" name="product-prefer-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>	
-				</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">投资案例：</label>
+			<div class="col-sm-8   text-align-left">
+				<textarea name="investment-case" class=""></textarea>
 			</div>
+			<div id="investment-case-error" name="investment-case-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<!-- BT/BOT 项目投资 -->
-			<!--  其它投资 -->
-
-			<!-- 股权投资 -->
-			<!--债权投资-->
-			<div id="invest-period" class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资期限：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input type="text" name="invest-period-min" class="" >
-					<span>--</span>
-					<input type="text" name="invest-period-max" class="" >
-					<select name="invest-period-unit" class="" >
-						<option value="01">年</option>
-						<option value="02">月</option>
-						<option value="03">日</option>
-					</select>
-				</div>
-				<div id="invest-period-error" name="invest-period-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">其他备注：</label>
+			<div class="col-sm-8   text-align-left">
+				<textarea name="additional-notes" class=""></textarea>
 			</div>
+			<div id="additional-notes-error" name="additional-notes-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">前期费用：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<label><input type="checkbox" name="pre-fee" id="assess" class="" >评估</label>
-					<label><input type="checkbox" name="pre-fee" id="guarantee" class="" >担保</label>
-					<label><input type="checkbox" name="pre-fee" id="intermediary-service" class="" >居间服务费</label>
-					<label><input type="checkbox" name="pre-fee" id="other-fee" class="" >其他费用</label>
-					<label id="no-upfront-cost-label"><input type="checkbox" name="pre-fee" id="no-upfront-cost" class="" >无任何前期费用</label>
-				</div>
-				<div id="pre-fee-error" name="pre-fee-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">标签：</label>
+			<div class="col-sm-8   text-align-left">
+				<input type="text" name="label" class="">
 			</div>
+			<div id="label-error" name="label-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">需提供资料：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<label><input type="checkbox" name="business-project-plan" class="" >商业/项目计划书</label>
-					<label><input type="checkbox" name="company-documents" class="" >公司证件</label>
-					<label><input type="checkbox" name="related-financial-info" class="" >相关财务资料</label>
-					<label><input type="checkbox" name="other-info" class="" >其它资料</label>
-				</div>
-				<div id="material-require-error" name="material-require-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">缩略图：</label>
+			<div class="col-sm-8   text-align-left">
+				<input type="file" name="thumbnail-image" class="">
 			</div>
+			<div id="thumbnail-image-error" name="thumbnail-image-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资要求概述：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<textarea name="investment-requirements-overview" class=""></textarea>
-				</div>
-				<div id="investment-requirements-overview-error" name="investment-requirements-overview-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
+		<div class="form-group">
+			<label class="control-label col-sm-2   text-align-right">附件：</label>
+			<div class="col-sm-8   text-align-left">
+				<input type="file" name="annex" class="">
 			</div>
+			<div id="annex-error" name="annex-error"
+			     class="control-label col-sm-2   text-align-left"></div>
+		</div>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">投资案例：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<textarea name="investment-case" class="" ></textarea>
-				</div>
-				<div id="investment-case-error" name="investment-case-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>
+		<button type="submit" value="submit" class="btn">立即发布资金信息</button>
+		<button class="btn">预览</button>
+		<button class="btn">保存暂不发布</button>
+	</form>
+</div>
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">其他备注：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<textarea name="additional-notes" class="" ></textarea>
-				</div>
-				<div id="additional-notes-error" name="additional-notes-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">标签：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input type="text" name="label" class="" >
-				</div>
-				<div id="label-error" name="label-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>
+<!-- custom js
+<script src="js/请输入.js"></script>-->
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">缩略图：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input type="file" name="thumbnail-image" class="" >
-				</div>
-				<div id="thumbnail-image-error" name="thumbnail-image-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>
+<!--script type="js/jquery.validate.min.js"></script-->
 
-			<div class="form-group">
-				<label class="control-label col-sm-2 col-md-2 col-lg-2 text-align-right">附件：</label>
-				<div class="col-sm-8 col-md-8 col-lg-8 text-align-left">
-					<input type="file" name="annex" class="" >
-				</div>
-				<div id="annex-error" name="annex-error"  class="control-label col-sm-2 col-md-2 col-lg-2 text-align-left"></div>
-			</div>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 
-			<button type="submit" value="submit" class="btn">立即发布资金信息</button>
-			<button class="btn">预览</button>
-			<button class="btn">保存暂不发布</button>
-		</form>
-	</div>
-	<!-- jQuery -->
-	<script src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
 
-	<!-- Bootstrap JavaScript -->
-	<script src="js/bootstrap.js"></script>
-
-	<!-- custom js
-	<script src="js/请输入.js"></script>-->
-
-	<!--script type="js/jquery.validate.min.js"></script-->
-
-	<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-
-	<script type="text/javascript">
-
-		/* show invest type info */
-		$(document).ready(function() {
-			/* show fund type content */
-			$('input[type="radio"]').click(function() {
-				if($(this).attr('id') == 'equity-inv') {
-					$('#equity-invest-info').show();
-					$('#invest-period').show();
-					$('#debt-invest-info').hide();
-					$('#financialInvest').hide();
-				}
-				else if($(this).attr('id') == 'debt-inv'){
-					$('#debt-invest-info').show();
-					$('#invest-period').show();
-					$('#equity-invest-info').hide();
-					$('#financialInvest').hide();
-				}
-				else if($(this).attr('id') == 'financial-inv'){
-					$('#financialInvest').show();
-					$('#equity-invest-info').hide();
-					$('#invest-period').hide();
-					$('#debt-invest-info').hide();
-				}
-				else if($(this).attr('id') == 'btbot'){
-					$('#financialInvest').hide();
-					$('#equity-invest-info').hide();
-					$('#invest-period').hide();
-					$('#debt-invest-info').hide();
-				}
-				else if($(this).attr('id') == 'other-inv'){
-					$('#financialInvest').hide();
-					$('#equity-invest-info').hide();
-					$('#invest-period').hide();
-					$('#debt-invest-info').hide();
-				}
-			});
-
-
-			function createOption (items, name) {
-				var provinceHtml = ''
-				for ( var index in items){
-					provinceHtml += '<option value="'+index+'">'+items[index].name+'</option>';
-				}
-				$('[name="'+name+'"]').html(provinceHtml);
+	/* show invest type info */
+	$(document).ready(function () {
+		/* show fund type content */
+		$('input[type="radio"]').click(function () {
+			if ($(this).attr('id') == 'equity-inv') {
+				$('#equity-invest-info').show();
+				$('#invest-period').show();
+				$('#debt-invest-info').hide();
+				$('#financialInvest').hide();
 			}
+			else if ($(this).attr('id') == 'debt-inv') {
+				$('#debt-invest-info').show();
+				$('#invest-period').show();
+				$('#equity-invest-info').hide();
+				$('#financialInvest').hide();
+			}
+			else if ($(this).attr('id') == 'financial-inv') {
+				$('#financialInvest').show();
+				$('#equity-invest-info').hide();
+				$('#invest-period').hide();
+				$('#debt-invest-info').hide();
+			}
+			else if ($(this).attr('id') == 'btbot') {
+				$('#financialInvest').hide();
+				$('#equity-invest-info').hide();
+				$('#invest-period').hide();
+				$('#debt-invest-info').hide();
+			}
+			else if ($(this).attr('id') == 'other-inv') {
+				$('#financialInvest').hide();
+				$('#equity-invest-info').hide();
+				$('#invest-period').hide();
+				$('#debt-invest-info').hide();
+			}
+		});
 
-			$.ajax({ 
-				type: 'GET', 
-				url: 'http://115.236.94.196:30000/blade/dict/location', 
-				success: function (data) { 
 
-					var items = data.data['0'].itemDicts, city;
-					createOption (items, 'province');
-					$('[name="province"] option').click(function (event) {
-						city = items[this.val()].itemDicts;
-						createOption (city, 'city'); 
-					}) 
-					$('[name="city"] option').click(function (event) {
-						createOption (city[this.val()].itemDicts, 'area');
-					})
-				}
-			});
+		function createOption(items, name) {
+			var provinceHtml = ''
+			for (var index in items) {
+				provinceHtml += '<option value="' + index + '">' + items[index].name + '</option>';
+			}
+			$('[name="' + name + '"]').html(provinceHtml);
+		}
+
+		$.ajax({
+			type: 'GET',
+			url: 'http://115.236.94.196:30000/blade/dict/location',
+			success: function (data) {
+
+				var items = data.data['0'].itemDicts, city;
+				createOption(items, 'province');
+				$('[name="province"] option').click(function (event) {
+					city = items[this.val()].itemDicts;
+					createOption(city, 'city');
+				})
+				$('[name="city"] option').click(function (event) {
+					createOption(city[this.val()].itemDicts, 'area');
+				})
+			}
+		});
 
 		//form validation
 		$("#fund-info").validate({
@@ -418,32 +451,32 @@
 				"invest-area": "required",
 				"invest-amount-min": "required",
 				"invest-amount-max": "required",
-				"equity-invest-type":{
-					required:"#equity-inv:checked"
+				"equity-invest-type": {
+					required: "#equity-inv:checked"
 				},
-				"invest-stage":{
-					required:"#equity-inv:checked"
+				"invest-stage": {
+					required: "#equity-inv:checked"
 				},
-				"return-require-min":{
-					required:"#debt-inv:checked"
+				"return-require-min": {
+					required: "#debt-inv:checked"
 				},
-				"risk-require":{
-					required:"#debt-inv:checked"
+				"risk-require": {
+					required: "#debt-inv:checked"
 				},
-				"risk-prefer":{
-					required:"#financial-inv:checked"
+				"risk-prefer": {
+					required: "#financial-inv:checked"
 				},
-				"invest-period-min":{
-					required:"#equity-inv:checked"	//debt
+				"invest-period-min": {
+					required: "#equity-inv:checked"	//debt
 				},
-				"invest-period-max":{
-					required:"#equity-inv:checked"	//debt
+				"invest-period-max": {
+					required: "#equity-inv:checked"	//debt
 				},
-				"pre-fee":"required",
+				"pre-fee": "required",
 				"investment-requirements-overview": "required"
-			}, 
+			},
 			messages: {
-				"invest-type":{
+				"invest-type": {
 					required: "请选择类型"
 				},
 				title: {
@@ -473,31 +506,31 @@
 				"invest-amount-max": {
 					required: "请输入投资金额"
 				},
-				"equity-invest-type":{
-					required:"请选择股权投资类型"
+				"equity-invest-type": {
+					required: "请选择股权投资类型"
 				},
-				"invest-stage":{
-					required:"请选择投资阶段"
+				"invest-stage": {
+					required: "请选择投资阶段"
 				},
-				"return-require-min":{
-					required:"请输入最低回报要求"
+				"return-require-min": {
+					required: "请输入最低回报要求"
 				},
-				"risk-require":{
-					required:"请选择风控要求"
+				"risk-require": {
+					required: "请选择风控要求"
 				},
-				"risk-prefer":{
-					required:"请选择风险偏好"
+				"risk-prefer": {
+					required: "请选择风险偏好"
 				},
-				"invest-period-min":{
-					required:"请输入投资期限"
+				"invest-period-min": {
+					required: "请输入投资期限"
 				},
-				"invest-period-max":{
-					required:"请输入投资期限"
+				"invest-period-max": {
+					required: "请输入投资期限"
 				},
-				"pre-fee":{
+				"pre-fee": {
 					required: "请选择前期费用"
 				},
-				"investment-requirements-overview":{
+				"investment-requirements-overview": {
 					required: "请输入投资要求概述"
 				}
 			},
@@ -506,16 +539,16 @@
 				gamount: "invest-amount-min invest-amount-max",
 				gperiod: "invest-period-min invest-period-max"
 			},
-			errorPlacement: function(error, element) {
+			errorPlacement: function (error, element) {
 				if (element.attr("name") == "equity-invest-type") {
 					error.insertAfter("#equity-invest-type-error");
 				}
 				else if (element.attr("name") == "province" || element.attr("name") == "city" || element.attr("name") == "area") {
 					error.insertAfter("#location-error");
-				} 
+				}
 				else if (element.attr("name") == "invest-amount-min" || element.attr("name") == "invest-amount-max") {
 					error.insertAfter("#invest-amount-error");
-				} 
+				}
 				else if (element.attr("name") == "invest-stage") {
 					error.insertAfter("#invest-stage-error");
 				}
@@ -525,7 +558,7 @@
 				else if (element.attr("name") == "risk-require") {
 					error.insertAfter("#risk-require-error");
 				}
-				else if (element.attr("name") == "invest-period-min" || element.attr("name") == "invest-period-max" ) {
+				else if (element.attr("name") == "invest-period-min" || element.attr("name") == "invest-period-max") {
 					error.insertAfter("#invest-period-error");
 				}
 				else if (element.attr("name") == "pre-fee") {
@@ -543,7 +576,7 @@
 				else if (element.attr("name") == "invest-area") {
 					error.insertAfter("#invest-area-error");
 				}
-				
+
 				else if (element.attr("name") == "investment-requirements-overview") {
 					error.insertAfter("#investment-requirements-overview-error");
 				}
@@ -551,56 +584,48 @@
 					error.insertAfter(element);
 				}
 			},
-			debug:true
+			debug: true
 		});
 	});
 
 	/* ajax submit */
-	$("#fund-info").submit(function(e)
-	{
+	$("#fund-info").submit(function (e) {
 		var formObj = $(this);
-		var formURL = "http://115.236.94.196:30000/blade/capital/save"; 
+		var formURL = "http://115.236.94.196:30000/blade/capital/save";
 		var formData = $('#fund-info').serialize();
 		$.ajax({
 			url: formURL,
 			type: 'POST',
-			data:  formData,
-			mimeType:"multipart/form-data",
+			data: formData,
+			mimeType: "multipart/form-data",
 			contentType: false,
 			cache: false,
-			processData:false,
-			success: function(data, textStatus, jqXHR)
-			{
+			processData: false,
+			success: function (data, textStatus, jqXHR) {
 
 			},
-			error: function(jqXHR, textStatus, errorThrown) 
-			{
+			error: function (jqXHR, textStatus, errorThrown) {
 			}
 		});
-			e.preventDefault(); //Prevent Default action. 
-			//e.unbind();
-		}); 
-	if ("invest-amount-min-unit"=="01") {
+		e.preventDefault(); //Prevent Default action.
+		//e.unbind();
+	});
+	if ("invest-amount-min-unit" == "01") {
 		var min = $('#invest-amount-min').val();
-			//$('#invest-amount-min').val(min*10000);
-			//document.fund-info.invest-amount-min.value=min*10000;
-		} else{
-			var min = $('#invest-amount-min').val();
-			//$('#invest-amount-min').val(min*100000000);
-		}
-		if ("invest-amount-max-unit"=="01") {
-			var max = $('#invest-amount-max').val();
-			$('#invest-amount-max').val(max*10000);
-		} else{
-			var max = $('#invest-amount-max').val();
-			$('#invest-amount-max').val(max*100000000);
-		}
-		$("#fund-info").submit(); //Submit the form
-
-
-
-
-
+		//$('#invest-amount-min').val(min*10000);
+		//document.fund-info.invest-amount-min.value=min*10000;
+	} else {
+		var min = $('#invest-amount-min').val();
+		//$('#invest-amount-min').val(min*100000000);
+	}
+	if ("invest-amount-max-unit" == "01") {
+		var max = $('#invest-amount-max').val();
+		$('#invest-amount-max').val(max * 10000);
+	} else {
+		var max = $('#invest-amount-max').val();
+		$('#invest-amount-max').val(max * 100000000);
+	}
+	$("#fund-info").submit(); //Submit the form
 
 
 </script>
