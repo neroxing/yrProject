@@ -118,6 +118,7 @@
 			color: var(--black-bright);
 			background-color: var(--white-max);
 			border-color: var(--white-dark);
+			text-decoration: none;
 		}
 		.btn:hover {
 			color: var(--black-bright);
@@ -201,6 +202,14 @@
 			border-top-right-radius: 3px;
 			border-top-left-radius: 3px;
 		}
+		.panel-title {
+			line-height: 20px;
+			font-size: 1.2em;
+			font-weight: bolder;
+		}
+		.panel-body {
+			padding: 10px;
+		}
 		.panel-footer {
 			padding: 10px 0px;
 			background-color: var(--white-bright);
@@ -208,18 +217,6 @@
 			border-bottom-right-radius: 3px;
 			border-bottom-left-radius: 3px;
 		}
-		/* sub panel */
-		.panel .panel {
-			margin: 0px;
-			border-radius: 0px;
-		}
-		.panel .panel .panel-heading {
-			padding: 5px 0px 5px 5px;
-		}
-		.panel .panel .panel-footer {
-			padding: 5px 0px;
-		}
-
 		.panel-default {
 			border-color: var(--white-dark);
 		}
@@ -227,6 +224,43 @@
 			background-color: var(--white-bright);
 			border-color: var(--white-dark);
 		}
+		/* sub panel */
+		.panel .panel {
+			margin: 5px 0;
+			border-radius: 0px;
+			border: none;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+			font-size: 0.8em;
+		}
+		.panel .panel .panel-heading {
+			padding: 5px 0px 5px 5px;
+			border: none;
+			font-size: 1em;
+			line-height: 15px;
+		}
+		.panel .panel .panel-heading .panel-title {
+			font-size: 1.1em;
+			line-height: 15px;
+			font-weight: bolder;
+		}
+		.panel .panel .panel-body {
+			padding: 5px;
+			border: none;
+		}
+		.panel .panel .panel-footer {
+			padding: 5px 0px;
+			border: none;
+		}
+	/* inner col */
+		.row .row {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		.row .row .col-xs-1, .row .row .col-sm-1, .row .row .col-md-1, .row .row .col-lg-1, .row .row .col-xs-2, .row .row .col-sm-2, .row .row .col-md-2, .row .row .col-lg-2, .row .row .col-xs-3, .row .row .col-sm-3, .row .row .col-md-3, .row .row .col-lg-3, .row .row .col-xs-4, .row .row .col-sm-4, .row .row .col-md-4, .row .row .col-lg-4, .row .row .col-xs-5, .row .row .col-sm-5, .row .row .col-md-5, .row .row .col-lg-5, .row .row .col-xs-6, .row .row .col-sm-6, .row .row .col-md-6, .row .row .col-lg-6, .row .row .col-xs-7, .row .row .col-sm-7, .row .row .col-md-7, .row .row .col-lg-7, .row .row .col-xs-8, .row .row .col-sm-8, .row .row .col-md-8, .row .row .col-lg-8, .row .row .col-xs-9, .row .row .col-sm-9, .row .row .col-md-9, .row .row .col-lg-9, .row .row .col-xs-10, .row .row .col-sm-10, .row .row .col-md-10, .row .row .col-lg-10, .row .row .col-xs-11, .row .row .col-sm-11, .row .row .col-md-11, .row .row .col-lg-11, .row .row .col-xs-12, .row .row .col-sm-12, .row .row .col-md-12, .row .row .col-lg-12 {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
 
 /* banner */
 	#home-banner .row{
