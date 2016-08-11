@@ -24,17 +24,18 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	/******flip css************************************/
+		/******flip css************************************/
 		/* entire container, keeps perspective */
 		.flip-container {
 			perspective: 1000;
 		}
+
 		/* flip the pane when hovered */
 		.flip-container:hover .flipper, .flip-container.hover .flipper {
 			transform: rotateY(180deg);
 		}
 
-		.flip-container, .flip-container .front, .flip-container  .back, .flip-container img {
+		.flip-container, .flip-container .front, .flip-container .back, .flip-container img {
 			width: 100%;
 			height: 118px;
 		}
@@ -64,7 +65,8 @@
 		.back {
 			transform: rotateY(180deg);
 		}
-	/******************************************/
+
+		/******************************************/
 		#home-tab li a {
 			height: 155px;
 			font-size: 18px;
@@ -118,24 +120,24 @@
 </div>
 
 <!-- home-carousel -->
-<div  class="container-fuid">
+<div class="container-fuid">
 	<div id="home-carousel" class="carousel slide" data-ride="carousel">
 		<!-- Carousel 指标 -->
 		<ol class="carousel-indicators">
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>
 			<li data-target="#home-carousel" data-slide-to="2"></li>
-		</ol>   
+		</ol>
 		<!-- Carousel 项目 -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="img/lunbo1.jpg" alt="">
+				<img src="img/lunbo1.jpg">
 			</div>
 			<div class="item">
-				<img src="img/lunbo2.jpg" alt="">
+				<img src="img/lunbo2.jpg">
 			</div>
 			<div class="item">
-				<img src="img/lunbo3.jpg" alt="">
+				<img src="img/lunbo3.jpg">
 			</div>
 		</div>
 		<!-- Carousel 导航 -->
@@ -166,7 +168,8 @@
 							<div class="row">
 								<div class="col-md-12">
 									<form class="look-form fn-clear" action="http://zijin.trjcn.com">
-										<input type="text" maxlength="30" tip="输入你想找的资金，来试试吧…" placeholder="输入你想找的资金，来试试吧…">
+										<input type="text" maxlength="30" tip="输入你想找的资金，来试试吧…"
+										       placeholder="输入你想找的资金，来试试吧…">
 										<button type="submit">搜资金</button>
 									</form>
 								</div>
@@ -246,11 +249,8 @@
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<div class="row">
-						<div class="col-sm-12">
-							<span class="pull-left panel-title">精选资金</span>
-							<a class="pull-right panel-title">查看更多</a>
-						</div>
+					<div class="panel-title">
+						精选资金<a href="#" class="pull-right">查看更多</a>
 					</div>
 				</div>
 				<div class="panel-body">
@@ -356,12 +356,10 @@
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<div class="row">
-						<div class="col-sm-12">
-							<span class="pull-left panel-title">优质项目</span>
-							<button class="btn btn-sm btn-to-hot pull-left">重点项目推荐</button>
-							<a class="pull-right panel-title">查看更多</a>
-						</div>
+					<div class="panel-title">
+						优质项目
+						<button class="btn btn-sm btn-to-hot">重点项目推荐</button>
+						<a class="pull-right">查看更多</a>
 					</div>
 				</div>
 				<div class="panel-body">
@@ -639,10 +637,10 @@
 	<div class="row box-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-2 col-md-2">
+				<div class="col-sm-2">
 					LINKS<br>友情链接
 				</div>
-				<div class="col-xs-10 col-md-10 text-justify">
+				<div class="col-sm-10 text-justify">
 					<a href="" target="_blank" title="">易融圈专题</a>
 					<a href="" target="_blank" title="">金价查询</a>
 					<a href="" target="_blank" title="">私募基金</a>
@@ -684,7 +682,7 @@
 	</div>
 </div>
 <!-- footer -->
-<div id="home-footer" class="container-fuid">
+<div id="home-footer" class="container-fluid">
 	<div id="footer-links" class="row footer-light-bg">
 		<div class="container">
 			<div class="row">
@@ -692,10 +690,10 @@
 					<div class="col-sm-4 text-nowrap">
 						<div><h1>LOGO</h1></div>
 						<div>免费服务热线</div>
-						<div><span>400-858-9000</span></div>
-						<div>投诉电话：0571-56132500</div>
+						<div><span>000-000-0000</span></div>
+						<div>投诉电话：0000-00000000</div>
 						<div>周一到周六 9:00-20:00</div>
-						<div>邮箱：kefu@trjcn.com</div>
+						<div>邮箱：kefu@yrcn.com</div>
 					</div>
 					<div class="col-sm-4">
 						<div><h3>平台保障</h3></div>
@@ -726,7 +724,7 @@
 						<div><h3>微信订阅</h3></div>
 						<div>
 							<img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码"
-								 height="97" widh="97">
+							     height="97" widh="97">
 						</div>
 						<div>扫二维码,加关注</div>
 					</div>
@@ -770,7 +768,7 @@
 							<div><h3>微信订阅</h3></div>
 							<div>
 								<img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码"
-									 width="100%">
+								     width="100%">
 							</div>
 							<div>扫二维码,加关注</div>
 						</div>
