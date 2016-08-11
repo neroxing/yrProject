@@ -30,133 +30,138 @@
 <body>
 <div class="container-fluid">
 	<div class="row">
-		<a href=""><img src="img/service-banner7.jpg" alt=""></a>
+		<a href=""><img class="img-responsive" src="img/service-banner7.jpg" alt=""></a>
 	</div>
 </div>
 <div class="container">
-	<div class="row">
-		<div>热门搜索>><span><a href="" class="to-hot">股权转让 </a></span><span><a href="" class="to-hot">债权合作</a></span><span><a
-			href="" class="to-hot">房地产</a></span><span><a href="" class="to-hot">矿产</a></span><span><a href=""
-		                                                                                               class="to-hot">bt</a></span><span><a
-			href="" class="to-hot">农业</a></span><span><a href="" class="to-hot">互联网</a></span><span><a href=""
-		                                                                                               class="to-hot">实业发展</a></span><span><a
-			href="" class="to-hot">政府引导</a></span><span><a href="" class="to-hot">医院</a></span></div>
+	<!--热门搜索-->
+	<div>
+		热门搜索>><a href="" class="to-hot">股权转让 </a>
+		<a href="" class="to-hot">债权合作</a>
+		<a href="" class="to-hot">房地产</a>
+		<a href="" class="to-hot">矿产</a>
+		<a href="" class="to-hot">bt</a>
+		<a href="" class="to-hot">农业</a>
+		<a href="" class="to-hot">互联网</a>
+		<a href="" class="to-hot">实业发展</a>
+		<a href="" class="to-hot">政府引导</a>
+		<a href="" class="to-hot">医院</a>
 	</div>
-	<div class="row">
-		<div class="col-md-4"><span>时间:</span><input type="date">——<input type="date"></div>
-		<!-- Single button -->
-		<div class="btn-group col-md-2">
-			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-			        aria-expanded="false">
-				--选择行业-- <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu">
-				<li><a href="#">金融资产</a></li>
-				<li><a href="#">房地产</a></li>
-				<li><a href="#">房地产</a></li>
-				<li><a href="#">金融资产</a></li>
-				<li><a href="#">房地产</a></li>
-				<li><a href="#">房地产</a></li>
-				<li><a href="#">金融资产</a></li>
-				<li><a href="#">房地产</a></li>
-				<li><a href="#">房地产</a></li>
-			</ul>
-		</div>
-		<div class="col-md-3"><input type="text" placeholder="请输入关键字">
-			<button type="submit" class="btn btn-default">serch</button>
+	<!--查询-->
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<form class="row form-inline">
+				<div class="form-group col-sm-7">
+					<span>时间:</span><input class="form-control" type="date">&nbsp;—&nbsp;<input class="form-control"
+					                                                                            type="date">
+				</div>
+				<div class="form-group col-sm-2">
+					<select class="form-control">
+						<option selected="selected">--选择行业--</option>
+						<option value="金融资产" selected="selected">金融资产</option>
+						<option value="房地产">房地产</option>
+						<option value="会员可见">会员可见</option>
+					</select>
+				</div>
+				<div class="form-group col-sm-3">
+					<div class="input-group">
+						<input class="form-control" type="text" placeholder="请输入关键字">
+						<div class="input-group-btn">
+							<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
-	<div class="row">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-
-				<ul class="pagination ">
-					<li>
-						<a href="#" aria-label="Previous">
-							<span aria-hidden="true"><span class="glyphicon glyphicon-chevron-left"></span></span>
-						</a>
-					</li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span aria-hidden="true"><span class="glyphicon glyphicon-chevron-right"></span></span>
-						</a>
-					</li>
-				</ul>
+	<!--查寻结果-->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="btn-group pull-right">
+						<button class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i></button>
+						<button class="btn btn-default"><i class="glyphicon glyphicon-chevron-right"></i></button>
+					</div>
+					<div class="pull-right">1/166</div>
+				</div>
 			</div>
-			<div class="panel-body">
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
+			<!--<ul class="pagination ">
+				<li>
+					<a href="#" aria-label="Previous">
+						<span aria-hidden="true"><span class="glyphicon glyphicon-chevron-left"></span></span>
+					</a>
+				</li>
+				<li>
+					<a href="#" aria-label="Next">
+						<span aria-hidden="true"><span class="glyphicon glyphicon-chevron-right"></span></span>
+					</a>
+				</li>
+			</ul>-->
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class=" col-sm-3">
+					<img class="img-responsive center-block" src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="">周先生</div>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-xs btn-cold-to-lighter pull-right">交换名片</button>
+						</div>
 					</div>
 					<div>某生物医药公司</div>
 				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
+				<div class=" col-sm-3">
+					<img class="img-responsive center-block" src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="">周先生</div>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-xs btn-cold-to-lighter pull-right">交换名片</button>
+						</div>
 					</div>
 					<div>某生物医药公司</div>
 				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
+				<div class=" col-sm-3">
+					<img class="img-responsive center-block" src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="">周先生</div>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-xs btn-cold-to-lighter pull-right">交换名片</button>
+						</div>
 					</div>
 					<div>某生物医药公司</div>
 				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
+				<div class=" col-sm-3">
+					<img class="img-responsive center-block" src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="">周先生</div>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-xs btn-cold-to-lighter pull-right">交换名片</button>
+						</div>
 					</div>
 					<div>某生物医药公司</div>
 				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
+				<div class=" col-sm-3">
+					<img class="img-responsive center-block" src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="">周先生</div>
+						</div>
+						<div class="col-sm-6">
+							<button class="btn btn-xs btn-cold-to-lighter pull-right">交换名片</button>
+						</div>
 					</div>
 					<div>某生物医药公司</div>
 				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="col-md-2 col-sm-4"><img src="img/a45ba94350ac01f56852e265f82eae02.jpg" alt="">
-					<div><span>周先生</span>
-						<button type="btn btn-primary" class="pull-right">交换名片</button>
-					</div>
-					<div>某生物医药公司</div>
-				</div>
-				<div class="panel-body">
+				<div class="col-sm-12">
 					<nav>
 						<ul class="pagination pull-right">
 							<li>

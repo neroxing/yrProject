@@ -30,240 +30,242 @@
 <body>
 
 <div class="container">
-	<div class="row">
-		<div class="panel panel-default">
-			<div class="panel-heading">订单信息：</div>
-			<div class="panel-body">
-				<table class="table table-bordered">
-					<tr>
-						<th>订单号：</th>
-						<td>20160810135320850515</td>
-					</tr>
-					<tr>
-						<th>购买服务：</th>
-						<td>融资宝</td>
-					</tr>
-					<tr>
-						<th>购买数量：</th>
-						<td>1</td>
-					</tr>
-					<tr>
-						<th>金额：</th>
-						<td>￥12800.00</td>
-					</tr>
-				</table>
-			</div>
+	<!--订单信息-->
+	<div class="panel panel-default">
+		<div class="panel-heading">订单信息：</div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<tr>
+					<th>订单号：</th>
+					<td>20160810135320850515</td>
+				</tr>
+				<tr>
+					<th>购买服务：</th>
+					<td>融资宝</td>
+				</tr>
+				<tr>
+					<th>购买数量：</th>
+					<td>1</td>
+				</tr>
+				<tr>
+					<th>金额：</th>
+					<td>￥12800.00</td>
+				</tr>
+			</table>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<span>实际应付金额：<span>￥12800.00元</span></span>
-			</div>
+	</div>
+	<!--应付金额-->
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div>实际应付金额：<span>￥12800.00元</span></div>
 		</div>
-		<!--支付方式-->
-		<div class="panel panel-default">
-			<div class="panel-heading">支付方式</div>
-			<div class="panel-body">
-				<div>
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-						                                          data-toggle="tab">网银在线支付</a></li>
-						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">快捷支付</a>
-						</li>
-						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-						                           data-toggle="tab">第三方平台支付</a></li>
-						<li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
-						                           data-toggle="tab">柜台汇款</a></li>
-						<li role="presentation"><a href="#settings1" aria-controls="settings" role="tab"
-						                           data-toggle="tab">微信支付</a></li>
-					</ul>
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<!-- 网银在线支付-->
-						<div role="tabpanel" class="tab-pane active" id="home">
-							<div><span class="glyphicon glyphicon-bullhorn"></span>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="checkbox"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-12">
-								<button class="btn btn-primary">下一步<span
-									class="glyphicon glyphicon-chevron-right"></span></button>
-							</div>
-							<div><input type="checkbox"><span>已阅读并同意<a href="#">《投融界在线服务协议》</a></span></div>
-						</div>
-						<!--快捷支付-->
-						<div role="tabpanel" class="tab-pane" id="profile">
-							<div>
-								<span class="glyphicon glyphicon-bullhorn"></span>
-								<span>无需网银，单笔最高50万。</span>
-								支付前需确认您的身份信息，如所填的信息与开卡信息不一致将无法支付成功。
-							</div>
-							<div><img src="img/recharge-step.png" alt=""></div>
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<h4>支付前需确认您的身份信息</h4>
-									<ul>
-										<li>
-											<div>姓名: <input type="text">
-												<span class="glyphicon glyphicon-exclamation-sign"></span>请输入身份证上的名字
-											</div>
-										</li>
-										<li>
-											<div>身份证号： <input type="text">
-												<span class="glyphicon glyphicon-exclamation-sign"></span>请输入正确的身份证号
-											</div>
-										</li>
-										<li>
-											<div>选择银行：
-												<div class="dropdown">
-													<button class="btn btn-default dropdown-toggle" type="button"
-													        id="dropdownMenu1" data-toggle="dropdown"
-													        aria-haspopup="true" aria-expanded="true">请选择<span
-														class="caret"></span>
-													</button>
-													<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-														<li><a href="#">中国建设银行</a></li>
-													</ul>
-												</div>
-												<span class="glyphicon glyphicon-exclamation-sign"></span>请选择充值银行
-											</div>
-										</li>
-										<li>
-											<div>银行卡号： <input type="text">
-												<span class="glyphicon glyphicon-exclamation-sign"></span>请确保您输的卡号户名与您的身份信息一致
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!--第三方支付-->
-						<div role="tabpanel" class="tab-pane" id="messages">
-							<div><span class="glyphicon glyphicon-bullhorn"></span>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
-							<div><input type="checkbox"><img src="img/cft.gif" alt=""></div>
-							<div>
-								<button class="btn btn-primary">下一步<span
-									class="glyphicon glyphicon-chevron-right"></span></button>
-								<span class="">订单支付完成后请点击银行支付页“返回按钮”确保顺利完成订单确认！</span></div>
-							<div><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
-						</div>
-						<!--柜台支付-->
-						<div role="tabpanel" class="tab-pane" id="settings">
-							<div><span class="glyphicon glyphicon-bullhorn"></span>友情提示：银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
-							</div>
-							<table class="table table-hover">
-								<tr>
-									<th>银行名称</th>
-									<th>汇款帐号</th>
-									<th>开户行</th>
-									<th>户名</th>
-									<th>短信发送帐号</th>
-								</tr>
-								<tr>
-									<td>招商银行</td>
-									<td>5719 0717 7110 200</td>
-									<td>招商银行杭州分行高新支行</td>
-									<td>杭州投融界互联网金融服务有限公司</td>
-									<td><a href="" class="title">发送短信</a></td>
-								</tr>
-								<tr>
-									<td>招商银行</td>
-									<td>5719 0717 7110 200</td>
-									<td>招商银行杭州分行高新支行</td>
-									<td>杭州投融界互联网金融服务有限公司</td>
-									<td><a href="" class="title">发送短信</a></td>
-								</tr>
-								<tr>
-									<td>招商银行</td>
-									<td>5719 0717 7110 200</td>
-									<td>招商银行杭州分行高新支行</td>
-									<td>杭州投融界互联网金融服务有限公司</td>
-									<td><a href="" class="title">发送短信</a></td>
-								</tr>
-								<tr>
-									<td>招商银行</td>
-									<td>5719 0717 7110 200</td>
-									<td>招商银行杭州分行高新支行</td>
-									<td>杭州投融界互联网金融服务有限公司</td>
-									<td><a href="" class="title">发送短信</a></td>
-								</tr>
-								<tr>
-									<td>招商银行</td>
-									<td>5719 0717 7110 200</td>
-									<td>招商银行杭州分行高新支行</td>
-									<td>杭州投融界互联网金融服务有限公司</td>
-									<td><a href="" class="title">发送短信</a></td>
-								</tr>
-							</table>
-							<div><span>提示：在</span><a href="" class="title">“未完成订单列表”</a>上传汇款凭证</div>
-							<div>
-								<span>请您汇款后将汇款信息（<span>汇款方式、日期、金额、购买的服务名称、汇款人真实姓名、会员ID、昵称</span>）通过以下任一方式告之投融界。</span>
-								<ol>
-									<li>周一至周五致电400 858 9000</li>
-									<li>将汇款信息发送至kefu@trjcn.com</li>
-									<li>将汇款底单并附上汇款信息发传真至0571-88368015</li>
-								</ol>
-								<span>如果收到您的款项，我们会电话联系您，并发通知信到您的站内信箱中，同时我们将为您开通所购买的对应服务。</span>
-							</div>
-						</div>
-						<!--  微信支付-->
-						<div role="tabpanel" class="tab-pane" id="settings1">
-							<div><span class="glyphicon glyphicon-bullhorn"></span>友情提示：请使用微信扫一扫，扫描二维码支付</div>
-							<div class="col-md-4 col-sm-12"><img src="img/wxxz.gif" alt="">
-								<button class="btn btn btn-primary">扫完支付成功，点此查看订单状态</button>
-							</div>
-							<div class="col-md-4 col-sm-12"><img src="img/phone-scan.png" alt=""></div>
+	</div>
+	<!--支付方式-->
+	<div class="panel panel-default">
+		<div class="panel-heading">支付方式</div>
+		<div class="panel-body">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+				                                          data-toggle="tab">网银在线支付</a></li>
+				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">快捷支付</a>
+				</li>
+				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">第三方平台支付</a>
+				</li>
+				<li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+				                           data-toggle="tab">柜台汇款</a></li>
+				<li role="presentation"><a href="#settings1" aria-controls="settings" role="tab"
+				                           data-toggle="tab">微信支付</a></li>
+			</ul>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<!-- 网银在线支付-->
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<div><span class="glyphicon glyphicon-bullhorn"></span>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+					<div class="col-md-12">
+						<button class="btn btn-primary">下一步<span
+								class="glyphicon glyphicon-chevron-right"></span></button>
+					</div>
+					<div><input type="checkbox">已阅读并同意<a href="#">《投融界在线服务协议》</a></div>
+				</div>
+				<!--快捷支付-->
+				<div role="tabpanel" class="tab-pane" id="profile">
+					<div>
+						<i class="glyphicon glyphicon-bullhorn"></i>
+						<span>无需网银，单笔最高50万。</span>
+						支付前需确认您的身份信息，如所填的信息与开卡信息不一致将无法支付成功。
+					</div>
+					<div><img src="img/recharge-step.png" alt=""></div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h4>支付前需确认您的身份信息</h4>
+							<ul>
+								<li>
+									<div>姓名: <input type="text">
+										<span class="glyphicon glyphicon-exclamation-sign"></span>请输入身份证上的名字
+									</div>
+								</li>
+								<li>
+									<div>身份证号： <input type="text">
+										<span class="glyphicon glyphicon-exclamation-sign"></span>请输入正确的身份证号
+									</div>
+								</li>
+								<li>
+									<div>选择银行：
+										<div class="dropdown">
+											<button class="btn btn-default dropdown-toggle" type="button"
+											        id="dropdownMenu1" data-toggle="dropdown"
+											        aria-haspopup="true" aria-expanded="true">请选择<span
+													class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+												<li><a href="#">中国建设银行</a></li>
+											</ul>
+										</div>
+										<span class="glyphicon glyphicon-exclamation-sign"></span>请选择充值银行
+									</div>
+								</li>
+								<li>
+									<div>银行卡号： <input type="text">
+										<span class="glyphicon glyphicon-exclamation-sign"></span>请确保您输的卡号户名与您的身份信息一致
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
+				<!--第三方支付-->
+				<div role="tabpanel" class="tab-pane" id="messages">
+					<div><i class="glyphicon glyphicon-bullhorn"></i>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
+					<div><input type="checkbox"><img src="img/cft.gif" alt=""></div>
+					<div>
+						<button class="btn btn-primary">
+							下一步<i class="glyphicon glyphicon-chevron-right"></i>
+						</button>
+						订单支付完成后请点击银行支付页“返回按钮”确保顺利完成订单确认！
+					</div>
+					<div><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
+				</div>
+				<!--柜台支付-->
+				<div role="tabpanel" class="tab-pane" id="settings">
+					<div>
+						<i class="glyphicon glyphicon-bullhorn"></i>友情提示：银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
+					</div>
+					<table class="table table-hover">
+						<tr>
+							<th>银行名称</th>
+							<th>汇款帐号</th>
+							<th>开户行</th>
+							<th>户名</th>
+							<th>短信发送帐号</th>
+						</tr>
+						<tr>
+							<td>招商银行</td>
+							<td>5719 0717 7110 200</td>
+							<td>招商银行杭州分行高新支行</td>
+							<td>杭州投融界互联网金融服务有限公司</td>
+							<td><a href="" class="title">发送短信</a></td>
+						</tr>
+						<tr>
+							<td>招商银行</td>
+							<td>5719 0717 7110 200</td>
+							<td>招商银行杭州分行高新支行</td>
+							<td>杭州投融界互联网金融服务有限公司</td>
+							<td><a href="" class="title">发送短信</a></td>
+						</tr>
+						<tr>
+							<td>招商银行</td>
+							<td>5719 0717 7110 200</td>
+							<td>招商银行杭州分行高新支行</td>
+							<td>杭州投融界互联网金融服务有限公司</td>
+							<td><a href="" class="title">发送短信</a></td>
+						</tr>
+						<tr>
+							<td>招商银行</td>
+							<td>5719 0717 7110 200</td>
+							<td>招商银行杭州分行高新支行</td>
+							<td>杭州投融界互联网金融服务有限公司</td>
+							<td><a href="" class="title">发送短信</a></td>
+						</tr>
+						<tr>
+							<td>招商银行</td>
+							<td>5719 0717 7110 200</td>
+							<td>招商银行杭州分行高新支行</td>
+							<td>杭州投融界互联网金融服务有限公司</td>
+							<td><a href="" class="title">发送短信</a></td>
+						</tr>
+					</table>
+					<div><span>提示：在</span><a href="" class="title">“未完成订单列表”</a>上传汇款凭证</div>
+					<div>
+						<div>请您汇款后将汇款信息（<span>汇款方式、日期、金额、购买的服务名称、汇款人真实姓名、会员ID、昵称</span>）通过以下任一方式告之投融界。</div>
+						<ol>
+							<li>周一至周五致电400 858 9000</li>
+							<li>将汇款信息发送至kefu@trjcn.com</li>
+							<li>将汇款底单并附上汇款信息发传真至0571-88368015</li>
+						</ol>
+						<div>如果收到您的款项，我们会电话联系您，并发通知信到您的站内信箱中，同时我们将为您开通所购买的对应服务。</div>
+					</div>
+				</div>
+				<!--  微信支付-->
+				<div role="tabpanel" class="tab-pane" id="settings1">
+					<div><i class="glyphicon glyphicon-bullhorn"></i>友情提示：请使用微信扫一扫，扫描二维码支付</div>
+					<div class="col-md-4 col-sm-12">
+						<img class="img-responsive" src="img/wxxz.gif" alt="">
+						<button class="btn btn btn-primary">扫完支付成功，点此查看订单状态</button>
+					</div>
+					<div class="col-md-4 col-sm-12"><img class="img-responsive" src="img/phone-scan.png" alt=""></div>
+				</div>
 			</div>
 		</div>
-		<!--支付提示-->
-		<div class="panel panel-default">
-			<div class="panel-heading">支付提示</div>
-			<div class="panel-body">
-				<div class="col-md-12">付款遇到问题：</div>
-				<ol>
-					<li>
-						<div>为什么我不能在银行页面进行付款？</div>
-						<div>答：请确认您的银行卡是否开启网上支付功能，如没有开通网上支付功能，请到相应银行的网上银行进行开通再付款。</div>
-					</li>
-					<li>
-						<div>怎么查看我已经购买的订单？</div>
-						<div>
-							答：在“订单管理”页面点击“已完成订单”可以查看已经完成付款的订单，订单详情显示“订单编号”“服务名称”“订单金额”“服务周期”“结束时间”，如到期需要继续，可点击“继续购买”，进入付款页面。
-						</div>
-					</li>
-					<li>
-						<div>我用信用卡支付失败是怎么回事？</div>
-						<div>
-							答：信用卡支付失败可能有以下几种原因，第一，信用卡未开通网上支付功能；第二，信用卡可用额度不足；第三，信用卡有效期填写错误；第四，信用卡支付验证码填写错误；第五，信用卡状态为锁定状态；请仔细检查信用卡是否存在以上问题，如正常依旧出现支付失败，请尽快联系客服。
-						</div>
-					</li>
-					<li>
-						<div>4.我已经付款购买了VIP，为什么没给我服务？</div>
-						<div>答：VIP服务需要进行财务确认，如您购买时间属于非工作时间，会有所延误，我们将工作第一时间为您确认，让您享受VIP会员服务。</div>
-					</li>
-					<li>
-						<div>付款完成后如何确认完成？</div>
-						<div>答：在银行支付页面完成支付后，请务必点击“返回商户”按钮，并确认已完成付款。</div>
-					</li>
-				</ol>
-				<div><a href="title">更多支付相关帮助>></a></div>
-			</div>
+	</div>
+	<!--支付提示-->
+	<div class="panel panel-default">
+		<div class="panel-heading">支付提示</div>
+		<div class="panel-body">
+			<div>付款遇到问题：</div>
+			<ol>
+				<li>
+					<div>为什么我不能在银行页面进行付款？</div>
+					<div>答：请确认您的银行卡是否开启网上支付功能，如没有开通网上支付功能，请到相应银行的网上银行进行开通再付款。</div>
+				</li>
+				<li>
+					<div>怎么查看我已经购买的订单？</div>
+					<div>
+						答：在“订单管理”页面点击“已完成订单”可以查看已经完成付款的订单，订单详情显示“订单编号”“服务名称”“订单金额”“服务周期”“结束时间”，如到期需要继续，可点击“继续购买”，进入付款页面。
+					</div>
+				</li>
+				<li>
+					<div>我用信用卡支付失败是怎么回事？</div>
+					<div>
+						答：信用卡支付失败可能有以下几种原因，第一，信用卡未开通网上支付功能；第二，信用卡可用额度不足；第三，信用卡有效期填写错误；第四，信用卡支付验证码填写错误；第五，信用卡状态为锁定状态；请仔细检查信用卡是否存在以上问题，如正常依旧出现支付失败，请尽快联系客服。
+					</div>
+				</li>
+				<li>
+					<div>4.我已经付款购买了VIP，为什么没给我服务？</div>
+					<div>答：VIP服务需要进行财务确认，如您购买时间属于非工作时间，会有所延误，我们将工作第一时间为您确认，让您享受VIP会员服务。</div>
+				</li>
+				<li>
+					<div>付款完成后如何确认完成？</div>
+					<div>答：在银行支付页面完成支付后，请务必点击“返回商户”按钮，并确认已完成付款。</div>
+				</li>
+			</ol>
+			<a href="title">更多支付相关帮助>></a>
 		</div>
 	</div>
 </div>
