@@ -33,7 +33,7 @@
 		<div class="row">
 			<div class="col-md-3 col-sm-6">
 				<div class="">
-					<span class="">欢迎来到易融圈</span>
+					<div class="">欢迎来到易融圈</div>
 					<a href="#" class="">[登录]</a>
 					<a href="#" class="important">[免费注册]</a>
 				</div>
@@ -265,26 +265,18 @@
 											<input type="text" placeholder="手机号码" class="form-control">
 										</div>
 										<div class="col-md-4">
-											<p class="help-block">输入姓名与电话留言后方便与您联系!</p>
+											<div class="help-block">输入姓名与电话留言后方便与您联系!</div>
 										</div>
-										<div class="col-md-4">
+										<div class="col-md-2">
+											<select class="form-control" name="message.target">
+												<option value="1">公开</option>
+												<option value="2">仅对方可见</option>
+												<option value="3">会员可见</option>
+											</select>
+										</div>
+										<div class="col-md-2">
 											<button type="submit" class="btn btn-hot-to-lighter pull-right">发布留言
 											</button>
-											<div class="btn-group pull-right">
-												<button type="button" class="btn btn-default dropdown-toggle"
-												        data-toggle="dropdown">公开
-												</button>
-												<button type="button" class="btn btn-default dropdown-toggle"
-												        data-toggle="dropdown" aria-haspopup="true"
-												        aria-expanded="false">
-													<span class="caret"></span>
-												</button>
-												<ul class="dropdown-menu">
-													<li><a href="#">公开</a></li>
-													<li><a href="#">仅对方可见</a></li>
-													<li><a href="#">会员可见</a></li>
-												</ul>
-											</div>
 										</div>
 									</div>
 								</form>
