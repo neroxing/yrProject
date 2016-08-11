@@ -24,13 +24,58 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		#content {
-			height: 600px;
+	/******flip css************************************/
+		/* entire container, keeps perspective */
+		.flip-container {
+			perspective: 1000;
+		}
+		/* flip the pane when hovered */
+		.flip-container:hover .flipper, .flip-container.hover .flipper {
+			transform: rotateY(180deg);
+		}
+
+		.flip-container, .flip-container .front, .flip-container  .back, .flip-container img {
+			width: 100%;
+			height: 118px;
+		}
+
+		/* flip speed goes here */
+		.flipper {
+			transition: 0.6s;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+
+		/* hide back of pane during swap */
+		.front, .back {
+			backface-visibility: hidden;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		/* front pane, placed above back */
+		.front {
+			z-index: 2;
+		}
+
+		/* back, initially hidden pane */
+		.back {
+			transform: rotateY(180deg);
+		}
+	/******************************************/
+		#home-tab li a {
+			height: 155px;
+			font-size: 18px;
+			line-height: 1;
+			padding-top: 40px;
+			font-weight: bold;
+			border-radius: 0px;
 		}
 	</style>
 </head>
 <body>
-<!-- header -->
 <div id="home-banner" class="container">
 	<div class="row">
 		<div class="col-sm-5">
@@ -49,6 +94,7 @@
 		</div>
 	</div>
 </div>
+<!-- header -->
 <div id="header">
 	<div class="row box-bg">
 		<div class="container">
@@ -72,13 +118,123 @@
 </div>
 
 <!-- home-carousel -->
-<div id="home-carousel" class="container-fuid"></div>
+<div  class="container-fuid">
+	<div id="home-carousel" class="carousel slide" data-ride="carousel">
+		<!-- Carousel 指标 -->
+		<ol class="carousel-indicators">
+			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#home-carousel" data-slide-to="1"></li>
+			<li data-target="#home-carousel" data-slide-to="2"></li>
+		</ol>   
+		<!-- Carousel 项目 -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="img/lunbo1.jpg" alt="">
+			</div>
+			<div class="item">
+				<img src="img/lunbo2.jpg" alt="">
+			</div>
+			<div class="item">
+				<img src="img/lunbo3.jpg" alt="">
+			</div>
+		</div>
+		<!-- Carousel 导航 -->
+		<a class="carousel-control left" href="#home-carousel" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#home-carousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div>
+
 <!-- content -->
-<div id="content" class="container box-bg">
+<div id="content" class="container">
 	<div class="row">
 		<!--search-->
 		<div class="col-sm-8">
-			<h1>这是h1</h1>
+			<div class="row">
+				<div class="col-sm-1">
+					<ul id="home-tab" class="nav nav-tabs">
+						<li class="active">
+							<a href="#capital" data-toggle="tab">找资金</a>
+						</li>
+						<li>
+							<a href="#project" data-toggle="tab">选项目</a>
+						</li>
+					</ul>
+				</div>
+				<div id="home-tab-content" class="col-sm-11 tab-content panel">
+					<div class="tab-pane fade in active" id="capital">
+						<div style="height: 400px;">
+							<div class="row">
+								<div class="col-md-12">
+									<form class="look-form fn-clear" action="http://zijin.trjcn.com">
+										<input type="text" maxlength="30" tip="输入你想找的资金，来试试吧…" placeholder="输入你想找的资金，来试试吧…">
+										<button type="submit">搜资金</button>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div style="height: 162px;">
+									<div class="col-md-2">
+										<dl>
+											<dt>投资方式</dt>
+											<dd><a href="#">股权投资</a></dd>
+											<dd><a href="#">债权投资</a></dd>
+											<dd><a href="#">金融投资</a></dd>
+											<dd><a href="#">BT/BOT投资</a></dd>
+										</dl>
+									</div>
+									<div class="col-md-5">
+										<dl>
+											<dt>资金主体</dt>
+											<dd><a href="#">个人资金</a>
+											</dd>
+											<dd><a href="#">企业资金</a>
+											</dd>
+											<dd><a href="#">天使投资</a>
+											</dd>
+											<dd><a href="#">VC投资</a>
+											</dd>
+											<dd><a href="#">PE投资</a>
+											</dd>
+											<dd><a href="#">小额贷款</a>
+											</dd>
+											<dd><a href="#">投资公司</a>
+											</dd>
+											<dd><a href="#">商业银行</a>
+											</dd>
+											<dd><a href="#">基金公司</a>
+											</dd>
+											<dd><a href="#">证券公司</a>
+											</dd>
+											<dd><a href="#">担保公司</a>
+											</dd>
+											<dd><a href="#">更多</a>
+											</dd>
+										</dl>
+									</div>
+									<div class="col-md-5">
+										<dl>
+											<dt>投资金额</dt>
+											<dd><a href="#">1万-10万</a></dd>
+											<dd><a href="#">10万-50万</a></dd>
+											<dd><a href="#">50万-100万</a></dd>
+											<dd><a href="#">100万-500万</a></dd>
+											<dd><a href="#">500万-1000万</a></dd>
+											<dd><a href="#">1000万-5000万</a></dd>
+											<dd><a href="#">5000万-1亿</a></dd>
+											<dd><a href="#">1亿以上</a></dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="look-tips">
+									不知道怎么找？<a href="#">填写项目信息，帮您找资金</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--report-->
@@ -110,7 +266,22 @@
 										<div class="panel-body">
 											<div class="row">
 												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a>
+												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
 												</div>
 											</div>
 										</div>
@@ -127,7 +298,22 @@
 										<div class="panel-body">
 											<div class="row">
 												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a>
+												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
 												</div>
 											</div>
 										</div>
@@ -144,7 +330,22 @@
 										<div class="panel-body">
 											<div class="row">
 												<div class="col-sm-5 col-md-4"><a class="from-cold">企业资金</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a>
+												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">广东某企业</a></div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
+												</div>
+												<div class="col-sm-12">
+													<span><a class="from-cold" href="#">企业资金</a></span>
+													<a href="#">广东某企业</a>
 												</div>
 											</div>
 										</div>
@@ -170,112 +371,270 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="list-unstyled list-inline">
-						<div class="row">
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
+					<div class="row">
+						<div id="project-carousel" class="carousel slide" data-ride="carousel">
+							<!-- Carousel 项目 -->
+							<div class="carousel-inner">
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
 											</div>
 										</div>
-									</li>
+									</div>
+								</div>
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-2 item active">
+									<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+										<div class="flipper">
+											<div class="front">
+												<!-- 前面内容 -->
+												<img src="img/flip1.jpg" alt="">
+											</div>
+											<div class="back">
+												<!-- 背面内容 -->
+												<img src="img/flip2.jpg" alt="">
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
+							<!-- Carousel 导航 
+							<a class="carousel-control left" href="#project-carousel" data-slide="prev">&lsaquo;</a>
+							<a class="carousel-control right" href="#project-carousel" data-slide="next">&rsaquo;</a>-->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
 								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
 										</div>
-									</li>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
 										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
 										</div>
-									</li>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<li>
-										<div class="panel-heading">
-											<a class=" panel-title">IT互联网</a>
-											<a class=" panel-title pull-right">更多</a>
-										</div>
-										<div class="panel-body">
-											<div class="row">
-												<div class="col-sm-5 col-md-4"><a class="from-cold">北京</a></div>
-												<div class="col-sm-7 col-md-8"><a class="pull-left" href="#">北京某汽车厂</a>
-												</div>
-											</div>
-										</div>
-									</li>
+									</div>
 								</div>
 							</div>
 						</div>
-					</ul>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<a class=" panel-title">IT互联网</a>
+									<a class=" panel-title pull-right">更多</a>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+										<div class="col-sm-12">
+											<span><a class="from-cold">北京</a></span>
+											<a href="#">北京某汽车厂</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -331,7 +690,7 @@
 	</div>
 </div>
 <!-- footer -->
-<div id="footer" class="container-fuid">
+<div id="home-footer" class="container-fuid">
 	<div id="footer-links" class="row footer-light-bg">
 		<div class="container">
 			<div class="row">
@@ -373,7 +732,7 @@
 						<div><h3>微信订阅</h3></div>
 						<div>
 							<img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码"
-							     height="97" widh="97">
+								 height="97" widh="97">
 						</div>
 						<div>扫二维码,加关注</div>
 					</div>
@@ -417,7 +776,7 @@
 							<div><h3>微信订阅</h3></div>
 							<div>
 								<img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码"
-								     width="100%">
+									 width="100%">
 							</div>
 							<div>扫二维码,加关注</div>
 						</div>
@@ -436,7 +795,6 @@
 		</div>
 	</div>
 </div>
-
 
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
