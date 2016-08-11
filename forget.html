@@ -1,182 +1,187 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Forget</title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="title" content="">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="robots" content="index, follow">
+	<title>Forget</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="robots" content="index, follow">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Bootstrap theme
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+	<!-- Bootstrap theme
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 
-    <!-- fontawesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!-- customized css -->
-    <link rel="stylesheet" href="css/yr.css">
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
 
-    <style type="text/css">
-        .bulge{
-            width: 0px;
-            height: 0px;
-            border: 17px solid transparent;
-            border-left-color: grey;
-        }
-        .bulge.active{
-            width: 0px;
-            height: 0px;
-            border: 17px solid transparent;
-            border-left-color: blue;
-        }
-        .notch{
-            margin-left: -30px;
-            width: 0px;
-            height: 0px;
-            border: 17px solid grey;
-            border-left-color: transparent;
-        }
-        .notch.active{
-            margin-left: -30px;
-            width: 0px;
-            height: 0px;
-            border: 17px solid blue;
-            border-left-color: transparent;
-        }
-        .normally{
-            width: 320px;
-            height: 34px;
-            color: whitesmoke;
-            background-color: grey;
-        }
-        .normally.active{
-            width: 320px;
-            height: 34px;
-            color: whitesmoke;
-            background-color: blue;
-        }
-    </style>
+	<style type="text/css">
+		.bulge {
+			width: 0px;
+			height: 0px;
+			border: 17px solid transparent;
+			border-left-color: grey;
+		}
+
+		.bulge.active {
+			width: 0px;
+			height: 0px;
+			border: 17px solid transparent;
+			border-left-color: blue;
+		}
+
+		.notch {
+			margin-left: -30px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid grey;
+			border-left-color: transparent;
+		}
+
+		.notch.active {
+			margin-left: -30px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid blue;
+			border-left-color: transparent;
+		}
+
+		.normally {
+			width: 28%;
+			height: 34px;
+			color: whitesmoke;
+			background-color: grey;
+		}
+
+		.normally.active {
+			width: 28%;
+			height: 34px;
+			color: whitesmoke;
+			background-color: blue;
+		}
+	</style>
 </head>
 <body>
 <div id="page">
-    <!--顶部标题栏-->
-    <div id="login-banner" class="container-fluid">
-        <div class="container">
-            <div class="pull-left">
-                LOGO|
-                <span>会员登录</span>
-            </div>
-            <div class="pull-right">
-                <i class="glyphicon glyphicon-earphone"></i>
-                <span>服务热线：400 858 9000</span>
-            </div>
-        </div>
-    </div>
-    <!--验证账号面板-->
-    <div id="content" class="container">
-        <!--找回密码标示栏-->
-        <div class="row">
-            <div class="col-sm-12">
-                <span class="pull-left">找回密码</span>
-                <div class="pull-right">
-                    <a href="#">返回首页</a>|
-                    <a href="#">帮助中心</a>
-                </div>
-            </div>
-        </div>
-        <!--验证账号框-->
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-12 ">
-                        <div class="pull-left normally active">
-                            第一步：验证账号
-                        </div>
-                        <div class="pull-left bulge active"></div>
-                        <div class="pull-left notch"></div>
-                        <div class="pull-left normally">
-                            第二步：重置密码
-                        </div>
-                        <div class="pull-left bulge"></div>
-                        <div class="pull-left notch"></div>
-                        <div class="pull-left normally">
-                            第三步：完成
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-6">
-                        <form class="form-horizontal center-block">
-                            <div class="form-group">
-                                <label class="col-sm-4 control-label">找回方式:</label>
-                                <div class="col-sm-8">
-                                    <input class="radio-inline" type="radio" name="findstyle" value="phone" checked>通过手机找回密码
-                                    <input class="radio-inline" type="radio" name="findstyle" value="email">通过邮箱找回密码
-                                </div>
-                            </div>
-                            <!--手机找回-->
-                            <div id="use-phone" >
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
-                                    <div class="col-sm-8">
-                                        <input id="input-phone" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" for="input-compute">图片验证:</label>
-                                    <div class="col-sm-4">
-                                        <input id="input-compute" class="form-control" type="text">
-                                    </div>
-                                    <img alt="验证码" class="col-sm-4">
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label"
-                                           for="phone-verification">手机验证:</label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                            <input id="phone-verification" class="form-control" type="text">
+	<!--顶部标题栏-->
+	<div id="login-banner" class="container-fluid">
+		<div class="container">
+			<div class="pull-left">
+				LOGO|
+				<span>会员登录</span>
+			</div>
+			<div class="pull-right">
+				<i class="glyphicon glyphicon-earphone"></i>
+				<span>服务热线：400 858 9000</span>
+			</div>
+		</div>
+	</div>
+	<!--验证账号面板-->
+	<div id="content" class="container">
+		<!--找回密码标示栏-->
+		<div class="row">
+			<div class="col-sm-12">
+				<span class="pull-left">找回密码</span>
+				<div class="pull-right">
+					<a href="#">返回首页</a>|
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--验证账号框-->
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-12 ">
+						<div class="pull-left normally active">
+							第一步：验证账号
+						</div>
+						<div class="pull-left bulge active"></div>
+						<div class="pull-left notch"></div>
+						<div class="pull-left normally">
+							第二步：重置密码
+						</div>
+						<div class="pull-left bulge"></div>
+						<div class="pull-left notch"></div>
+						<div class="pull-left normally">
+							第三步：完成
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-6">
+						<form class="form-horizontal center-block">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">找回方式:</label>
+								<div class="col-sm-8">
+									<input class="radio-inline" type="radio" name="findstyle" value="phone" checked>通过手机找回密码
+									<input class="radio-inline" type="radio" name="findstyle" value="email">通过邮箱找回密码
+								</div>
+							</div>
+							<!--手机找回-->
+							<div id="use-phone">
+								<div class="form-group">
+									<label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
+									<div class="col-sm-8">
+										<input id="input-phone" type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label" for="input-compute">图片验证:</label>
+									<div class="col-sm-4">
+										<input id="input-compute" class="form-control" type="text">
+									</div>
+									<img alt="验证码" class="col-sm-4">
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label"
+									       for="phone-verification">手机验证:</label>
+									<div class="col-sm-8">
+										<div class="input-group">
+											<input id="phone-verification" class="form-control" type="text">
                                                     <span class="input-group-btn">
                                                         <a class="btn btn-default" role="button">免费获取验证码</a>
                                                     </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--邮箱找回-->
-                            <div id="use-email" class="hidden">
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" for="input-email">邮箱地址:</label>
-                                    <div class="col-sm-8">
-                                        <input id="input-email" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" for="input-compute-email">图片验证:</label>
-                                    <div class="col-sm-4">
-                                        <input id="input-compute-email" class="form-control" type="text">
-                                    </div>
-                                    <img alt="验证码" class="col-sm-4">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-4 col-sm-2">
-                                    <button class="btn btn-cold-to-lighter btn-block" type="submit">下一步</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--页脚-->
-    <div id="footer" class="container"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--邮箱找回-->
+							<div id="use-email" class="hidden">
+								<div class="form-group">
+									<label class="col-sm-4 control-label" for="input-email">邮箱地址:</label>
+									<div class="col-sm-8">
+										<input id="input-email" type="text" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-4 control-label" for="input-compute-email">图片验证:</label>
+									<div class="col-sm-4">
+										<input id="input-compute-email" class="form-control" type="text">
+									</div>
+									<img alt="验证码" class="col-sm-4">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-4 col-sm-3">
+									<button class="btn btn-cold-to-lighter btn-block" type="submit">下一步</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	<div id="footer" class="container"></div>
 </div>
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
@@ -188,19 +193,19 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
-    $('input:radio[name="findstyle"]').click(function () {
-        $('input:radio[name="findstyle"]:checked').each(function () {
-            switch($(this).val()){
-                case 'phone':
-                    $('#use-phone').removeClass('hidden');
-                    $('#use-email').addClass('hidden');
-                    break;
-                case 'email':
-                    $('#use-email').removeClass('hidden');
-                    $('#use-phone').addClass('hidden');
-            }
-        })
-    })
+	$('input:radio[name="findstyle"]').click(function () {
+		$('input:radio[name="findstyle"]:checked').each(function () {
+			switch ($(this).val()) {
+				case 'phone':
+					$('#use-phone').removeClass('hidden');
+					$('#use-email').addClass('hidden');
+					break;
+				case 'email':
+					$('#use-email').removeClass('hidden');
+					$('#use-phone').addClass('hidden');
+			}
+		})
+	})
 
 </script>
 </body>
