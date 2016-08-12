@@ -107,46 +107,51 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h4>支付前需确认您的身份信息</h4>
-							<ul>
-								<li>
-									<div>姓名: <input type="text">
-										<span class="glyphicon glyphicon-exclamation-sign"></span>请输入身份证上的名字
+							<form class="form-horizontal">
+								<div class="form-group">
+									<label  class="col-sm-1 control-label">姓名:</label>
+									<div class="col-sm-3"><input type="text" class="form-control"  placeholder="Email"></div>
+									<div class="col-sm-3"><span class="glyphicon glyphicon-exclamation-sign"></span>请输入身份证上的名字</div>
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-1 control-label">身份证号:</label>
+									<div class="col-sm-3"><input type="text" class="form-control" ></div>
+									<div class="col-sm-3"><span class="glyphicon glyphicon-exclamation-sign"></span>请输入正确的身份证号</div>
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-1 control-label">选择银行:</label>
+									<div class="col-sm-3">
+										<select class="form-control">
+											<option selected="selected">请选择银行</option>
+											<option>XX银行</option>
+											<option>XX银行</option>
+											<option>XX银行</option>
+											<option>XX银行</option>
+											<option>XX银行</option>
+										</select>
 									</div>
-								</li>
-								<li>
-									<div>身份证号： <input type="text">
-										<span class="glyphicon glyphicon-exclamation-sign"></span>请输入正确的身份证号
+									<div class="col-sm-3"><span class="glyphicon glyphicon-exclamation-sign"></span>请选择充值银行</div>
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-1 control-label">银行卡号:</label>
+									<div class="col-sm-3"><input type="text" class="form-control" ></div>
+									<div class="col-sm-3"><span class="glyphicon glyphicon-exclamation-sign"></span>请确保您输的卡号户名与您的身份信息一致</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-1 col-sm-3">
+										<button type="submit" class="btn btn-default center-block">下一步<span class="glyphicon glyphicon-chevron-right"></span></button>
 									</div>
-								</li>
-								<li>
-									<div>选择银行：
-										<div class="dropdown">
-											<button class="btn btn-default dropdown-toggle" type="button"
-											        id="dropdownMenu1" data-toggle="dropdown"
-											        aria-haspopup="true" aria-expanded="true">请选择<span
-													class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-												<li><a href="#">中国建设银行</a></li>
-											</ul>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-1 col-sm-11">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">已阅读并同意<a href="" class="title">《投融界在线服务协议》</a>
+											</label>
 										</div>
-										<span class="glyphicon glyphicon-exclamation-sign"></span>请选择充值银行
 									</div>
-								</li>
-								<li>
-									<div>银行卡号： <input type="text">
-										<span class="glyphicon glyphicon-exclamation-sign"></span>请确保您输的卡号户名与您的身份信息一致
-									</div>
-								</li>
-							</ul>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
