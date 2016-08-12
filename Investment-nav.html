@@ -30,27 +30,23 @@
 <body>
 
 <div class="container">
-	<div class="panel">
-		<div class="panel-body">
-			<a href="#"><img src="#"></a>
-		</div>
-		<div class="panel-body">
-			<ol class="breadcrumb">
-				<i class="fa fa-home"></i>
-				<li><a href="#" class="title">首页</a></li>
-				<li><a href="#">投资机构导航</a></li>
-			</ol>
-		</div>
-	</div>
+	<a href="#"><img src="#"></a>
+	<!--路径导航-->
+	<ol class="breadcrumb">
+		<i class="fa fa-home"></i>
+		<li><a href="#" class="title">首页</a></li>
+		<li><a href="#">投资机构导航</a></li>
+	</ol>
 </div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-3 col-sm-4">
+			<!--投资行业-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-cog"></i><span>投资行业</span>
+					<i class="fa fa-cog"></i>投资行业
 				</div>
-				<div class="panel-body">
+				<div class="panel-body row">
 					<div class="col-sm-6">
 						<a href="#">金融投资</a><br>
 						<a href="#">房地产</a><br>
@@ -93,11 +89,12 @@
 					</div>
 				</div>
 			</div>
+			<!--投资阶段-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-cog"></i><span>投资阶段</span>
+					<i class="fa fa-cog"></i>投资阶段
 				</div>
-				<div class="panel-body">
+				<div class="panel-body row">
 					<div class="col-sm-6">
 						<a href="#">初创期</a><br>
 						<a href="#">扩张期</a><br>
@@ -108,11 +105,12 @@
 					</div>
 				</div>
 			</div>
+			<!--资金标签-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-cog"></i><span>资金标签</span>
+					<i class="fa fa-cog"></i>资金标签
 				</div>
-				<div class="panel-body">
+				<div class="panel-body row">
 					<div class="col-sm-6">
 						<a href="#">VC</a><br>
 						<a href="#">FOFs</a><br>
@@ -126,11 +124,12 @@
 					</div>
 				</div>
 			</div>
+			<!--地区-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<i class="fa fa-cog"></i><span>地区</span>
+					<i class="fa fa-cog"></i>地区
 				</div>
-				<div class="panel-body">
+				<div class="panel-body row">
 					<div class="col-sm-4">
 						<a href="#">北京市</a><br>
 						<a href="#">上海市</a><br>
@@ -174,219 +173,268 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 		<div class="col-md-9 col-sm-8">
+			<!--热门搜索-->
 			<div class="panel">
-				<div class="panel-body">
-					<input type="text" name="keyword" id="keyword" placeholder="请输入关键字...">
-					<button><i class="fa fa-search"></i>搜索</button>
-					<p>热门搜索：
+				<div class="panel-body row">
+					<div class="col-sm-8"><input type="text" name="keyword" id="keyword" placeholder="请输入关键字..."
+					                             class="form-control"></div>
+					<button class="btn"><i class="fa fa-search"></i>搜索</button>
+					<div class="col-sm-12">热门搜索：
 						<a href="#">北京投资</a>
 						<a href="#">浙江投资</a>
 						<a href="#">深圳投资公司</a>
 						<a href="#">熊晓鸽</a>
-						<a href="#">创业项目</a></p>
-				</div>
-			</div>
-			<div class="panel">
-				<div class="panel-heading">
-					<h4>推荐知名投资机构</h4>
-				</div>
-				<div class="panel-body">
-					<a href="#"><img src="#">天堂硅谷</a>
-					<a href="#"><img src="#">中科招商</a>
-					<a href="#"><img src="#">建银国际</a>
-					<a href="#"><img src="#">今日资本</a>
-					<a href="#"><img src="#">同威创投</a>
-					<a href="#"><img src="#">梅花天使创投</a>
-					<a href="#"><img src="#">凯风创投</a>
-					<a href="#"><img src="#">力合清源创投</a>
-					<a href="#"><img src="#">富坤创投</a>
-					<a href="#"><img src="#">凯旋创投</a>
-					<a href="#"><img src="#">科桥投资</a>
-					<a href="#"><img src="#">贝恩资本</a>
-					<a href="#"><img src="#">挚信资本</a>
-					<a href="#"><img src="#">金沙江创投</a>
-					<a href="#"><img src="#">天创资本</a>
-				</div>
-			</div>
-			<div class="panel">
-				<div class="panel-heading">
-					<h4>主要地区机构</h4>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-4">
-						<div class="panel-heading">
-							<p><span class="pull-left">北京</span><span class="pull-right">更多>></span></p>
-						</div>
-						<div class="panel-body">
-							<div class="col-md-6 col-sm-12">
-								<a href="#">东方摩尔</a><br>
-								<a href="#">百衲投资</a><br>
-								<a href="#">北京国资</a><br>
-								<a href="#">北京通用投资</a><br>
-								<a href="#">硅谷天堂</a><br>
-								<a href="#">高新阳光投资</a><br>
-							</div>
-							<div class="col-md-6 col-sm-12">
-								<a href="#">创新工场</a><br>
-								<a href="#">普思资本</a><br>
-								<a href="#">厚道资本</a><br>
-								<a href="#">黄杉资本</a><br>
-								<a href="#">同方创投</a><br>
-								<a href="#">绿桥资本</a><br>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-sm-4">
-						<div class="panel-heading">
-							<p><span class="pull-left">广东</span><span class="pull-right">更多>></span></p>
-						</div>
-						<div class="panel-body">
-							<div class="col-md-6 col-sm-12">
-								<a href="#">中安投资</a><br>
-								<a href="#">大正元资本</a><br>
-								<a href="#">君威投资</a><br>
-								<a href="#">粤商创投</a><br>
-								<a href="#">盈信投资</a><br>
-								<a href="#">国海创新资本</a><br>
-							</div>
-							<div class="col-md-6 col-sm-12">
-								<a href="#">点石投资</a><br>
-								<a href="#">深圳基石创投</a><br>
-								<a href="#">德信资本</a><br>
-								<a href="#">西域投资</a><br>
-								<a href="#">中南成长</a><br>
-								<a href="#">保腾创投</a><br>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="panel-heading">
-							<p><span class="pull-left">上海</span><span class="pull-right">更多>></span></p>
-						</div>
-						<div class="panel-body">
-							<div class="col-md-6 col-sm-12">
-								<a href="#">众合创投</a><br>
-								<a href="#">东兴投资</a><br>
-								<a href="#">紫江创投</a><br>
-								<a href="#">瑞基资本</a><br>
-								<a href="#">元亨祥基金</a><br>
-								<a href="#">涌铧投资</a><br>
-							</div>
-							<div class="col-md-6 col-sm-12">
-								<a href="#">黎曼投资</a><br>
-								<a href="#">赋比兴</a><br>
-								<a href="#">小村投资</a><br>
-								<a href="#">贝加资本</a><br>
-								<a href="#">磐石资本</a><br>
-								<a href="#">鼎辉投资</a><br>
-							</div>
-						</div>
+						<a href="#">创业项目</a>
 					</div>
 				</div>
 			</div>
+			<!--推荐知名投资机构-->
 			<div class="panel">
 				<div class="panel-heading">
-					<h4>主要行业机构</h4>
+					推荐知名投资机构
 				</div>
-				<div class="panel-body">
-					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>房地产</h4>
+				<div class="panel-body row">
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="#">
+							<img src="#">
+							<div>天堂硅谷</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--主要地区机构-->
+			<div class="panel">
+				<div class="panel-heading">
+					主要地区机构
+				</div>
+				<div class="panel-body row">
+					<div class="col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								北京<a class="pull-right">更多>></a>
+							</div>
+							<div class="panel-body row">
+								<div class="col-md-6 col-sm-12">
+									<a href="#">东方摩尔</a><br>
+									<a href="#">百衲投资</a><br>
+									<a href="#">北京国资</a><br>
+									<a href="#">北京通用投资</a><br>
+									<a href="#">硅谷天堂</a><br>
+									<a href="#">高新阳光投资</a><br>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<a href="#">创新工场</a><br>
+									<a href="#">普思资本</a><br>
+									<a href="#">厚道资本</a><br>
+									<a href="#">黄杉资本</a><br>
+									<a href="#">同方创投</a><br>
+									<a href="#">绿桥资本</a><br>
+								</div>
+							</div>
 						</div>
-						<div class="panel-body">
-							<a href="#">北大科技园</a><br>
-							<a href="#">基汇资本</a><br>
-							<a href="#">嘉富诚</a><br>
-							<a href="#">嘉德资产管理</a><br>
-							<a href="#">星浩资本</a><br>
-							<a href="#">汉威资本</a><br>
-							<a href="#">智盈投资</a><br>
-							<a href="#">悦榕资本</a><br>
-							<a href="#">盛诺金资产</a><br>
+					</div>
+					<div class="col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								广东<a class="pull-right">更多>></a>
+							</div>
+							<div class="panel-body row">
+								<div class="col-md-6 col-sm-12">
+									<a href="#">中安投资</a><br>
+									<a href="#">大正元资本</a><br>
+									<a href="#">君威投资</a><br>
+									<a href="#">粤商创投</a><br>
+									<a href="#">盈信投资</a><br>
+									<a href="#">国海创新资本</a><br>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<a href="#">点石投资</a><br>
+									<a href="#">深圳基石创投</a><br>
+									<a href="#">德信资本</a><br>
+									<a href="#">西域投资</a><br>
+									<a href="#">中南成长</a><br>
+									<a href="#">保腾创投</a><br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								上海<a class="pull-right">更多>></a>
+							</div>
+							<div class="panel-body row">
+								<div class="col-md-6 col-sm-12">
+									<a href="#">众合创投</a><br>
+									<a href="#">东兴投资</a><br>
+									<a href="#">紫江创投</a><br>
+									<a href="#">瑞基资本</a><br>
+									<a href="#">元亨祥基金</a><br>
+									<a href="#">涌铧投资</a><br>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<a href="#">黎曼投资</a><br>
+									<a href="#">赋比兴</a><br>
+									<a href="#">小村投资</a><br>
+									<a href="#">贝加资本</a><br>
+									<a href="#">磐石资本</a><br>
+									<a href="#">鼎辉投资</a><br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--主要行业机构-->
+			<div class="panel">
+				<div class="panel-heading">
+					主要行业机构
+				</div>
+				<div class="panel-body row">
+					<div class="col-md-2 col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>能源/矿产</h4>
-						</div>
-						<div class="panel-body">
-							<a href="#">富汇创投</a><br>
-							<a href="#">东方汇富</a><br>
-							<a href="#">联和运通</a><br>
-							<a href="#">中信证券国际</a><br>
-							<a href="#">汇泉投资</a><br>
-							<a href="#">辰能风投</a><br>
-							<a href="#">EDBI</a><br>
-							<a href="#">铂源资本</a><br>
-							<a href="#">中矿联合基金</a><br>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>IT/互联网</h4>
-						</div>
-						<div class="panel-body">
-							<a href="#">阿里资本</a><br>
-							<a href="#">兰草亚洲</a><br>
-							<a href="#">银泰资本</a><br>
-							<a href="#">同创伟业</a><br>
-							<a href="#">深圳创新投</a><br>
-							<a href="#">启明创投</a><br>
-							<a href="#">戈壁</a><br>
-							<a href="#">北极光</a><br>
-							<a href="#">DCM资本</a><br>
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>医疗健康</h4>
-						</div>
-						<div class="panel-body">
-							<a href="#">星巢创投</a><br>
-							<a href="#">泰州融众创投</a><br>
-							<a href="#">越商创投</a><br>
-							<a href="#">汇友资本</a><br>
-							<a href="#">开元创投</a><br>
-							<a href="#">信中利</a><br>
-							<a href="#">天图资本</a><br>
-							<a href="#">中信产业基金</a><br>
-							<a href="#">赛富投资基金</a><br>
-						</div>
-					</div>
-					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>建筑工程</h4>
-						</div>
-						<div class="panel-body">
-							<a href="#">美国泰山投资</a><br>
-							<a href="#">美国青锋投资</a><br>
-							<a href="#">招商昆仑</a><br>
-							<a href="#">先导创投</a><br>
-							<a href="#">盛世景投资</a><br>
-							<a href="#">通用投资</a><br>
-							<a href="#">威豪创投</a><br>
-							<a href="#">北京国资</a><br>
-							<a href="#">联投集团</a><br>
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-2 col-sm-4">
-						<div class="panel-heading">
-							<h4>化工原料</h4>
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
 						</div>
-						<div class="panel-body">
-							<a href="#">君盛投资</a><br>
-							<a href="#">经济发展局投资</a><br>
-							<a href="#">高达资本</a><br>
-							<a href="#">创佳资本</a><br>
-							<a href="#">联和运通</a><br>
-							<a href="#">安徽科投</a><br>
-							<a href="#">磐石资本</a><br>
-							<a href="#">立元创投</a><br>
-							<a href="#">国投集团</a><br>
+					</div>
+					<div class="col-md-2 col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-4">
+						<div class="panel">
+							<div class="panel-heading">
+								房地产
+							</div>
+							<div class="panel-body">
+								<a href="#">北大科技园</a><br>
+								<a href="#">基汇资本</a><br>
+								<a href="#">嘉富诚</a><br>
+								<a href="#">嘉德资产管理</a><br>
+								<a href="#">星浩资本</a><br>
+								<a href="#">汉威资本</a><br>
+								<a href="#">智盈投资</a><br>
+								<a href="#">悦榕资本</a><br>
+								<a href="#">盛诺金资产</a><br>
+							</div>
 						</div>
 					</div>
 				</div>

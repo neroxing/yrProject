@@ -28,25 +28,25 @@
 	</style>
 </head>
 <body>
-
+<!--热门&路径-->
 <div class="container">
-	<div class="panel">
-		<div class="panel-body">
-			<strong>热门搜索&gt;&gt;</strong>
-			<a href="#" class="to-hot">高盛集团</a>
-			<a href="#" class="to-hot">国家扶持的农业项目</a>
-			<a href="#" class="to-hot">矿业投资</a>
-			<a href="#" class="to-hot">创业合作伙伴</a>
-			<a href="#" class="to-hot">债权融资</a>
-		</div>
-		<div class="panel-body">
-			<ol class="breadcrumb">
-				<i class="fa fa-home"></i>
-				<li><a href="#" class="title">首页</a></li>
-				<li><a href="#" class="title">投资机构导航</a></li>
-				<li><span class="active">搜索列表</span></li>
-			</ol>
-		</div>
+	<!--热门搜索-->
+	<div>
+		<strong>热门搜索&gt;&gt;</strong>
+		<a href="#" class="to-hot">高盛集团</a>
+		<a href="#" class="to-hot">国家扶持的农业项目</a>
+		<a href="#" class="to-hot">矿业投资</a>
+		<a href="#" class="to-hot">创业合作伙伴</a>
+		<a href="#" class="to-hot">债权融资</a>
+	</div>
+	<!--路径图-->
+	<div>
+		<ol class="breadcrumb">
+			<i class="fa fa-home"></i>
+			<li><a href="#" class="title">首页</a></li>
+			<li><a href="#" class="title">投资机构导航</a></li>
+			<li><span class="active">搜索列表</span></li>
+		</ol>
 	</div>
 </div>
 
@@ -55,11 +55,12 @@
 		<div class="col-md-9 col-sm-8">
 			<div class="panel">
 				<div class="panel-body">
-					<div class="col-sm-2">
-						<span>所属行业:</span>
-					</div>
-					<div class="col-sm-10">
-						<div class="row">
+					<!--所属行业-->
+					<div class="row">
+						<div class="col-sm-2">
+							所属行业:
+						</div>
+						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-sm-2">
 									<a class="to-hot"><input type="checkbox" value="1"/><span>金融投资</span></a>
@@ -97,9 +98,9 @@
 									<a class="to-hot"><input type="checkbox" value="10"/><span>国防军工</span></a>
 								</div>
 								<div class="col-sm-2">
-									<button data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
-									        aria-controls="collapseExample1" class="btn btn-default">更多
-									</button>
+									<a data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1" class="title">
+										更多<i class="fa fa-arrow-down"></i>
+									</a>
 								</div>
 							</div>
 							<div class="collapse" id="collapseExample1">
@@ -196,14 +197,12 @@
 							</div>
 						</div>
 					</div>
-
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-2">
-						<span>投资阶段:</span>
-					</div>
-					<div class="col-sm-10">
-						<div class="row">
+					<!--投资阶段-->
+					<div class="row">
+						<div class="col-sm-2">
+							投资阶段:
+						</div>
+						<div class="col-sm-10">
 							<div class="row">
 								<div class="col-sm-2">
 									<a class="to-hot"><input type="checkbox" value="1"/><span>初创期</span></a>
@@ -226,14 +225,13 @@
 							</div>
 						</div>
 					</div>
+					<!--资金标签-->
+					<div class="row">
+						<div class="col-sm-2">
+							<span>资金标签:</span>
+						</div>
+						<div class="col-sm-10">
 
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-2">
-						<span>资金标签:</span>
-					</div>
-					<div class="col-sm-10">
-						<div class="row">
 							<div class="row">
 								<div class="col-sm-2">
 									<a class="to-hot"><input type="checkbox" value="1"/><span>VC</span></a>
@@ -262,15 +260,16 @@
 									<a class="to-hot"><input type="checkbox" value="7"/><span>VCPE</span></a>
 								</div>
 							</div>
+
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-2">
-						<span>投资地区:</span>
-					</div>
-					<div class="col-sm-10">
-						<div class="row">
+					<!--投资地区-->
+					<div class="row">
+						<div class="col-sm-2">
+							<span>投资地区:</span>
+						</div>
+						<div class="col-sm-10">
+
 							<div class="row">
 								<div class="col-sm-2">
 									<a class="to-hot"><input type="checkbox" value="1"/><span>北京市</span></a>
@@ -308,9 +307,9 @@
 									<a class="to-hot"><input type="checkbox" value="10"/><span>贵州省</span></a>
 								</div>
 								<div class="col-sm-2">
-									<button data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
-									        aria-controls="collapseExample2" class="btn btn-default">更多
-									</button>
+									<a data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" class="title">
+										更多<i class="fa fa-arrow-down"></i>
+									</a>
 								</div>
 							</div>
 							<div class="collapse" id="collapseExample2">
@@ -400,201 +399,195 @@
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-3">
-						<strong>当前搜索条件</strong>
-					</div>
-					<div class="col-sm-9">
-					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-3">
-						<a href="#"><img src="#"> </a>
-					</div>
-					<div class="col-sm-9">
-						<h4><a href="#" class="title"> 武汉经开投资有限公司</a></h4>
-						<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
-						<div>
-							武汉经开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+					<!--当前搜索条件-->
+					<div class="row">
+						<div class="col-sm-3">
+							<strong>当前搜索条件</strong>
+						</div>
+						<div class="col-sm-9">
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-3">
-						<a href="#"><img src="#"> </a>
-					</div>
-					<div class="col-sm-9">
-						<h4><a href="#" class="title"> 武汉经开投资有限公司</a></h4>
-						<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
-						<div>
-							武汉经开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+					<div class="row">
+						<div class="col-sm-3">
+							<a href="#"><img  class="img-responsive" src="#"> </a>
+						</div>
+						<div class="col-sm-9">
+							<div><a href="#" class="title"> 武汉经开投资有限公司</a></div>
+							<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
+							<p>
+								武汉经p开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+							</p>
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-3">
-						<a href="#"><img src="#"> </a>
-					</div>
-					<div class="col-sm-9">
-						<h4><a href="#" class="title"> 武汉经开投资有限公司</a></h4>
-						<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
-						<div>
-							武汉经开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+					<div class="row">
+						<div class="col-sm-3">
+							<a href="#"><img  class="img-responsive" src="#"> </a>
+						</div>
+						<div class="col-sm-9">
+							<div><a href="#" class="title"> 武汉经开投资有限公司</a></div>
+							<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
+							<p>
+								武汉经p开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+							</p>
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<div class="col-sm-3">
-						<a href="#"><img src="#"> </a>
-					</div>
-					<div class="col-sm-9">
-						<h4><a href="#" class="title"> 武汉经开投资有限公司</a></h4>
-						<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
-						<div>
-							武汉经开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+					<div class="row">
+						<div class="col-sm-3">
+							<a href="#"><img  class="img-responsive" src="#"> </a>
+						</div>
+						<div class="col-sm-9">
+							<div><a href="#" class="title"> 武汉经开投资有限公司</a></div>
+							<span>机构简称：经开投资</span> | <span>机构总部：湖北武汉市</span>
+							<p>
+								武汉经p开投资有限公司（简称经开投资）由武汉经济技术开发区管委会出资设立，是肩负开发区基础设施建设、中小企业引导性投资和中小企业综合金融服务重任的集团控股投资性公司。公司注册资本18.5亿元，现有总资产50亿元，净资产19亿元。公司本着政策引导、市场导向、建设开发区、服务开发区的...
+							</p>
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
-					<nav class="pull-right">
-						<ul class="pagination">
-							<li>
-								<a href="#" aria-label="First">
-									<span aria-hidden="true">首页</span>
-								</a>
-							</li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li>
-								<a href="#" aria-label="Next">
-									<span aria-hidden="true">下一页</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
+					<!--分页-->
+					<div >
+						<nav class="pull-right">
+							<ul class="pagination">
+								<li>
+									<a href="#" aria-label="First">
+										<span aria-hidden="true">首页</span>
+									</a>
+								</li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span aria-hidden="true">下一页</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-4">
-			<div class="panel ">
+			<!--融资加速器-->
+			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="col-md-12 col-sm-12">
-						<p class="text-center"><img src="img/accelerator-banner.png"></p>
-					</div>
-					<div class="col-sm-5">
-						<span class="pull-left">选择行业：</span>
-					</div>
-					<div class="col-sm-7">
-						<select>
-							<option selected="selected">金融投资</option>
-							<option>房地产</option>
-							<option>能源</option>
-							<option>化学化工</option>
-							<option>节能环保</option>
-							<option>建筑建材</option>
-							<option>矿产冶金</option>
-							<option>基础设施</option>
-							<option>农林牧渔</option>
-							<option>电气设备</option>
-							<option>机械机电</option>
-							<option>汽车汽配</option>
-							<option>纺织服装饰品</option>
-							<option>旅游酒店</option>
-							<option>餐饮休闲娱乐</option>
-							<option>教育培训体育</option>
-							<option>文化传媒广告</option>
-							<option>家电数码</option>
-							<option>家居日用</option>
-							<option>食品饮料烟草</option>
-							<option>医疗保健</option>
-							<option>生物医药</option>
-							<option>IT互联网</option>
-							<option>电子通信</option>
-							<option>其他行业</option>
-						</select>
-					</div>
-					<div class=" col-sm-12">
-						<div style="display: block">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="text-center"><img src="img/accelerator-banner.png"></div>
+						</div>
+						<div class="col-sm-5 ">
+							<div class="pull-left">选择行业：</div>
+						</div>
+						<div class="col-sm-7 ">
+							<select>
+								<option selected="selected">金融投资</option>
+								<option>房地产</option>
+								<option>能源</option>
+								<option>化学化工</option>
+								<option>节能环保</option>
+								<option>建筑建材</option>
+								<option>矿产冶金</option>
+								<option>基础设施</option>
+								<option>农林牧渔</option>
+								<option>电气设备</option>
+								<option>机械机电</option>
+								<option>汽车汽配</option>
+								<option>纺织服装饰品</option>
+								<option>旅游酒店</option>
+								<option>餐饮休闲娱乐</option>
+								<option>教育培训体育</option>
+								<option>文化传媒广告</option>
+								<option>家电数码</option>
+								<option>家居日用</option>
+								<option>食品饮料烟草</option>
+								<option>医疗保健</option>
+								<option>生物医药</option>
+								<option>IT互联网</option>
+								<option>电子通信</option>
+								<option>其他行业</option>
+							</select>
+						</div>
+						<div class="col-sm-5 ">
 							<span class="pull-left">查询结果：</span>
-						<span
-							class="pull-right"><strong>12238</strong>家资金方寻找此类项目<br>本周有<strong>467</strong>个项目成功对接中。</span>
 						</div>
-						<div style="display: none">
-							<span class="pull-left">查询结果：</span>
-							<span class="pull-right">加载中...</span>
+						<div class="col-sm-7 ">
+							<span class="pull-right"><strong>12238</strong>家资金方寻找此类项目<br>本周有<strong>467</strong>个项目成功对接中。</span>
 						</div>
+						<!--	<div class=" col-sm-12">
+								<div style="display: block">
+									<span class="pull-left">查询结果：</span>
+									<span class="pull-right"><strong>12238</strong>家资金方寻找此类项目<br>本周有<strong>467</strong>个项目成功对接中。</span>
+								</div>
+								<div style="display: none">
+									<span class="pull-left">查询结果：</span>
+									<span class="pull-right">加载中...</span>
+								</div>
+							</div>-->
+						<div class=" col-sm-12">
+							<p class="text-center">20多万投资人手持3万亿在等你</p>
+						</div>
+						<form>
+							<div class="form-group">
+								<input type="text" placeholder="融资金额" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="text" placeholder="手机号码" class="form-control">
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<input type="text" placeholder="输入计算结果" class="form-control">
+									<div class="input-group-addon">
+										<img class="img-responsive" src="#" alt="验证码">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="text-center">请输入真实信息，以便资金方第一时间联系</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<input type="text" placeholder="输入验证码" class="form-control">
+									<div class="input-group-btn">
+										<a class="btn btn-cold-to-lighter" href="javascript:void(0);">获取验证码</a>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<button type="button" class="btn btn-hot-to-lighter center-block">开始融资</button>
+							</div>
+						</form>
 					</div>
-					<div class=" col-sm-12">
-						<p class="text-center">20多万投资人手持3万亿在等你</p>
-					</div>
-					<form>
-						<div class=" col-sm-12">
-							<input type="text" placeholder="融资金额" class="form-control"><br>
-							<input type="text" placeholder="手机号码" class="form-control"><br>
-						</div>
-						<div class=" col-sm-7">
-							<input type="text" placeholder="输入计算结果" class="form-control pull-left">
-						</div>
-						<div class=" col-sm-5">
-							<img src="#" class="pull-right" alt="验证码">
-						</div>
-						<div class=" col-sm-12">
-							<p class="text-center">请输入真实信息，以便资金方第一时间联系</p>
-						</div>
-						<div class=" col-sm-6">
-							<input type="text" placeholder="输入验证码" class="form-control">
-						</div>
-						<div class=" col-sm-6">
-							<a href="javascript:void(0);">获取验证码</a>
-						</div>
-						<div class=" col-sm-12">
-							<button type="button" class="btn btn-from-hot center-block">发布留言</button>
-						</div>
-					</form>
 				</div>
 			</div>
-			<div class="panel ">
-				<div class="panel-heading"><span>热门投资机构</span>
+			<!--热门投资机构-->
+			<div class="panel">
+				<div class="panel-heading">
+					热门投资机构<a href="#" class="pull-right">更多</a>
 				</div>
 				<div class="panel-body">
 					<ul class="to-hot">
 						<li>
 							<div><a href="" class="to-hot"><img
-								src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
+									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
 							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
-								src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
+									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
 							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
-								src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
+									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
 							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
 						</li>
-						<li>
-							<div><a href="" class="to-hot"><img
-								src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
-							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
-						</li>
-						<li>
-							<div><a href="" class="to-hot"><img
-								src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
-							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
-						</li>
-
 					</ul>
 				</div>
 			</div>
