@@ -303,29 +303,17 @@
 			text-align: center;
 		}
 		/* for active tab */
-		.tab-hot-overline li.active{
-			margin-top: -10px;
-			padding-top: 8px;
+		.tab-hot-overline>li.active>a{
 			border-top: 2px solid var(--hot-light);
-			text-align: center;
 		}
-		.tab-hot-underline li.active{
-			margin-bottom: -10px;
-			padding-bottom: 8px;
+		.tab-hot-underline>li.active>a{
 			border-bottom: 2px solid var(--hot-light);
-			text-align: center;
 		}
-		.tab-cold-overline li.active{
-			margin-top: -10px;
-			padding-top: 8px;
+		.tab-cold-overline>li.active>a{
 			border-top: 2px solid var(--cold-light);
-			text-align: center;
 		}
-		.tab-cold-underline li.active{
-			margin-bottom: -10px;
-			padding-bottom: 8px;
+		.tab-cold-underline>li.active>a{
 			border-bottom: 2px solid var(--cold-light);
-			text-align: center;
 		}
 /* banner */
 	#home-banner .row{
