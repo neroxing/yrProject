@@ -226,7 +226,7 @@
 		}
 		/* sub panel */
 		.panel .panel {
-			margin: 5px 0;
+			margin: 5px;
 			border-radius: 0px;
 			border: none;
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
@@ -260,8 +260,25 @@
 			padding-left: 5px;
 			padding-right: 5px;
 		}
+	/* bootstrap tab overwrite */
+		.panel-heading .nav-panel-tabs{
+			margin: -10px 0; /* conpensate padding for pannel */
+		}
+		.panel-heading .nav-panel-tabs>li {
+			float: left;
+			margin-bottom: -1px;
+		}
+		.nav-panel-tabs>li.active>a, .nav-panel-tabs>li.active-default>a:hover, .nav-panel-tabs>li.active>a:focus {
+			color: var(--gray-dark);
+			background-color: var(--white-max);
+			border: 1px solid var(--white-dark);
+			margin: -1px -1px 0px -1px;
+			border-bottom-color: transparent;
+			cursor: default;
+		}
 	/* header decoration can only used in first level panel*/
 		.hot-overline{
+			/* subpanel needs adujust margin. */
 			margin-top: -10px;
 			padding-top: 8px;
 			border-top: 2px solid var(--hot-light);
@@ -285,8 +302,31 @@
 			border-bottom: 2px solid var(--cold-light);
 			text-align: center;
 		}
-
-
+		/* for active tab */
+		.tab-hot-overline li.active{
+			margin-top: -10px;
+			padding-top: 8px;
+			border-top: 2px solid var(--hot-light);
+			text-align: center;
+		}
+		.tab-hot-underline li.active{
+			margin-bottom: -10px;
+			padding-bottom: 8px;
+			border-bottom: 2px solid var(--hot-light);
+			text-align: center;
+		}
+		.tab-cold-overline li.active{
+			margin-top: -10px;
+			padding-top: 8px;
+			border-top: 2px solid var(--cold-light);
+			text-align: center;
+		}
+		.tab-cold-underline li.active{
+			margin-bottom: -10px;
+			padding-bottom: 8px;
+			border-bottom: 2px solid var(--cold-light);
+			text-align: center;
+		}
 /* banner */
 	#home-banner .row{
 		padding: 7px 0;
@@ -302,10 +342,10 @@
 		padding: 5px;
 	}
 	#home-banner a.fa-weibo:hover{
-		color: #DB2016;
+		color: #DB2016; /*special color for weibo*/
 	}
 	#home-banner a.fa-weixin:hover{
-		color: #86C610;
+		color: #86C610; /*special color for weixin*/
 	}
 	#login-banner{
 		height: 40px;
@@ -358,3 +398,5 @@
 		color: var(--white-dark);
 	}
 /* content */
+
+
