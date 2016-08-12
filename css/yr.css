@@ -251,7 +251,7 @@
 			padding: 5px 0px;
 			border: none;
 		}
-	/* inner col */
+	/* bootstrap inner colunm adding new style */
 		.row .row {
 			margin-left: -5px;
 			margin-right: -5px;
@@ -259,6 +259,31 @@
 		.row .row .col-xs-1, .row .row .col-sm-1, .row .row .col-md-1, .row .row .col-lg-1, .row .row .col-xs-2, .row .row .col-sm-2, .row .row .col-md-2, .row .row .col-lg-2, .row .row .col-xs-3, .row .row .col-sm-3, .row .row .col-md-3, .row .row .col-lg-3, .row .row .col-xs-4, .row .row .col-sm-4, .row .row .col-md-4, .row .row .col-lg-4, .row .row .col-xs-5, .row .row .col-sm-5, .row .row .col-md-5, .row .row .col-lg-5, .row .row .col-xs-6, .row .row .col-sm-6, .row .row .col-md-6, .row .row .col-lg-6, .row .row .col-xs-7, .row .row .col-sm-7, .row .row .col-md-7, .row .row .col-lg-7, .row .row .col-xs-8, .row .row .col-sm-8, .row .row .col-md-8, .row .row .col-lg-8, .row .row .col-xs-9, .row .row .col-sm-9, .row .row .col-md-9, .row .row .col-lg-9, .row .row .col-xs-10, .row .row .col-sm-10, .row .row .col-md-10, .row .row .col-lg-10, .row .row .col-xs-11, .row .row .col-sm-11, .row .row .col-md-11, .row .row .col-lg-11, .row .row .col-xs-12, .row .row .col-sm-12, .row .row .col-md-12, .row .row .col-lg-12 {
 			padding-left: 5px;
 			padding-right: 5px;
+		}
+	/* header decoration can only used in first level panel*/
+		.hot-overline{
+			margin-top: -10px;
+			padding-top: 8px;
+			border-top: 2px solid var(--hot-light);
+			text-align: center;
+		}
+		.hot-underline{
+			margin-bottom: -10px;
+			padding-bottom: 8px;
+			border-bottom: 2px solid var(--hot-light);
+			text-align: center;
+		}
+		.cold-overline{
+			margin-top: -10px;
+			padding-top: 8px;
+			border-top: 2px solid var(--cold-light);
+			text-align: center;
+		}
+		.cold-underline{
+			margin-bottom: -10px;
+			padding-bottom: 8px;
+			border-bottom: 2px solid var(--cold-light);
+			text-align: center;
 		}
 
 
