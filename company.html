@@ -30,39 +30,37 @@
 <body>
 
 <div class="container">
+	<strong>易融人脉动态&gt;&gt;</strong>
+	当前真实人脉总数 <span>4200588</span> 个,
+	当前资金方人脉 <span>746174</span> 个,
+	当前项目方人脉 <span>3454414</span> 个,
+	昨日 <span>24</span> 次项目与资金约谈记录
+
+	<!--选择框-->
 	<div class="panel">
 		<div class="panel-body">
-			<strong>投融人脉动态<span>&gt;&gt;</span></strong>
-			<span>当前真实人脉总数 <strong>4200588</strong> 个,</span>
-			<span>当前资金方人脉 <strong>746174</strong> 个,</span>
-			<span>当前项目方人脉 <strong>3454414</strong> 个,</span>
-			<span>昨日 <strong>24</strong> 次项目与资金约谈记录</span>
-		</div>
-	</div>
-	<div class="panel">
-		<div class="panel-body">
-			<div class="col-sm-2">
-				<span>人脉类型:</span>
-			</div>
-			<div class="col-sm-10">
-				<div class="row">
+			<!--人脉类型-->
+			<div class="row">
+				<div class="col-sm-2">
+					人脉类型:
+				</div>
+				<div class="col-sm-10">
 					<div class="row">
 						<div class="col-sm-2">
-							<input type="radio">资金方
+							<input type="radio" name="ContactsType">资金方
 						</div>
 						<div class="col-sm-2">
-							<input type="radio">项目方
+							<input type="radio" name="ContactsType">项目方
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel-body">
-			<div class="col-sm-2">
-				<span>所属行业:</span>
-			</div>
-			<div class="col-sm-10">
-				<div class="row">
+			<!--所属行业-->
+			<div class="row">
+				<div class="col-sm-2">
+					所属行业:
+				</div>
+				<div class="col-sm-10">
 					<div class="row">
 						<div class="col-sm-2">
 							<a class="to-hot"><input type="checkbox" value="1"/><span>金融投资</span></a>
@@ -80,9 +78,9 @@
 							<a class="to-hot"><input type="checkbox" value="5"/><span>节能环保</span></a>
 						</div>
 						<div class="col-sm-2">
-							<button data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
-							        aria-controls="collapseExample1" class="btn btn-default">更多
-							</button>
+							<a data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
+							   aria-controls="collapseExample1" class="to-hot">更多
+							</a>
 						</div>
 					</div>
 					<div class="collapse" id="collapseExample1">
@@ -199,14 +197,12 @@
 					</div>
 				</div>
 			</div>
-
-		</div>
-		<div class="panel-body">
-			<div class="col-sm-2">
-				<span>所在地区:</span>
-			</div>
-			<div class="col-sm-10">
-				<div class="row">
+			<!--所在地区-->
+			<div class="row">
+				<div class="col-sm-2">
+					所在地区:
+				</div>
+				<div class="col-sm-10">
 					<div class="row">
 						<div class="col-sm-2">
 							<a class="to-hot"><input type="checkbox" value="1"/><span>北京市</span></a>
@@ -224,9 +220,9 @@
 							<a class="to-hot"><input type="checkbox" value="5"/><span>安徽省</span></a>
 						</div>
 						<div class="col-sm-2">
-							<button data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
-							        aria-controls="collapseExample2" class="btn btn-default">更多
-							</button>
+							<a data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
+							   aria-controls="collapseExample2" class="to-hot">更多
+							</a>
 						</div>
 					</div>
 					<div class="collapse" id="collapseExample2">
@@ -340,607 +336,614 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel">
-		<div class="panel-body">
-			<!-- Nav tabs -->
-			<ul class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-				                                          data-toggle="tab">按最新动态排序</a></li>
-				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
-				                           data-toggle="tab">按最新人脉排序</a>
-				</li>
-				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-				                           data-toggle="tab">按人气排序</a>
-				</li>
-			</ul>
-
-		</div>
+	<div>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+			                                          data-toggle="tab">按最新动态排序</a>
+			</li>
+			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+			                           data-toggle="tab">按最新人脉排序</a>
+			</li>
+			<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+			                           data-toggle="tab">按人气排序</a>
+			</li>
+		</ul>
 	</div>
 	<!-- Tab panes -->
 	<div class="tab-content">
+		<!--按最新动态排序-->
 		<div role="tabpanel" class="tab-pane active" id="home">
-			<div class="col-md-3 col-sm-4">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+			<div class="row">
+				<div class="col-md-3 col-sm-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!--按最新人脉排序-->
 		<div role="tabpanel" class="tab-pane" id="profile">
-			<div class="col-md-3 col-sm-4">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+			<div class="row">
+				<div class="col-md-3 col-sm-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!--按人气排序-->
 		<div role="tabpanel" class="tab-pane" id="messages">
-			<div class="col-md-3 col-sm-4">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+			<div class="row">
+				<div class="col-md-3 col-sm-4">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在3小时前 通过个人身份认证
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+				<div class="col-md-3 col-sm-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
+							</div>
+							<div class="col-sm-12">
+								来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+					<div class="panel">
+						<div class="panel-body">
+							<div class="col-sm-2">
+								<a href="#" class="to-hot"><img src="#" alt="头像"></a>
+							</div>
+							<div class="col-sm-4">
+								黄先生<br>经理
+							</div>
+							<div class="col-sm-5">
+								<button class="btn btn-default">交换名片</button>
+							</div>
+							<div class="col-sm-12">
+								购买了服务产品 融资宝
+							</div>
+							<button class="btn btn-from-hot center-block">交换名片</button>
 						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在3小时前 通过个人身份认证
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-4">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-						</div>
-						<div class="col-sm-12">
-							来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-2">
-							<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-						</div>
-						<div class="col-sm-4">
-							黄先生<br>经理
-						</div>
-						<div class="col-sm-5">
-							<button class="btn btn-default">交换名片</button>
-						</div>
-						<div class="col-sm-12">
-							购买了服务产品 融资宝
-						</div>
-						<button class="btn btn-from-hot center-block">交换名片</button>
 					</div>
 				</div>
 			</div>
