@@ -61,19 +61,21 @@
 						<h2 class="text-center">成功融资超1000亿 21年项目与资本对接经验</h2>
 						<div class="row">
 							<div class="col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-6">
-								<form class="form-horizontal center-block">
+								<form class="form-horizontal center-block" id="register-info" name = "register-info"method="POST" enctype="multipart/form-data" role="form">
 									<div class="form-group">
 										<label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
 										<div class="col-sm-8">
 											<input id="input-phone" type="text" class="form-control"
-											       placeholder="请输入手机号码">
+											       placeholder="请输入手机号码" name="account">
+											<span id="tips-phone"></span>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-4 control-label">图片验证:</label>
 										<div class="col-sm-4">
 											<input id="input-compute" class="form-control" type="text"
-											       placeholder="输入结果">
+											       placeholder="输入结果" name="imgCode">
+											<span id="tips-icode"></span>
 										</div>
 										<img alt="验证码" class="col-sm-4">
 									</div>
@@ -83,9 +85,11 @@
 										<div class="col-sm-8">
 											<div class="input-group">
 												<input id="phone-verification" class="form-control" type="text"
-												       placeholder="输入验证码">
+												       placeholder="输入验证码" name="password">
+												       <input type="hidden" name="code" class="form-control">
+												<span id="tips-pcode"></span>
                                                     <span class="input-group-btn">
-                                                        <a class="btn btn-default" role="button">获取手机验证码</a>
+                                                        <a class="btn btn-default" role="button" onclick="getPhonecode()">获取手机验证码</a>
                                                     </span>
 											</div>
 										</div>
@@ -93,6 +97,7 @@
 									<div class="form-group">
 										<div class="col-sm-offset-4 col-sm-8">
 											<input type="checkbox" class="radio-inline">同意<a href="#" class="title">《易融圈服务协议》</a>
+											<span id="tips-rule"></span>
 										</div>
 									</div>
 									<div class="form-group">
@@ -161,7 +166,80 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+	$('#register-info').submit(function (e) {
+		$('#tips-phone').text('');
+		$('#tips-icode').text('');
+		$('#tips-pcode').text('');
+		$('#tips-rule').text('');
+		var phone = $('input[name="account"]').val();
+		var imgCode = $('input[name="imgCode"]').val();
+		var password = $('input[name="password"]').val();
+		if(	!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)){
+			$('#tips-phone').text('请输入正确手机号');
+		}
+		else if(imgCode===''){
+			$('#tips-icode').text('请输入验证码');
+		}
+		else if(password===''){
+			$('#tips-pcode').text('请输入手机验证码');
+		}
+		else if(!$("input[type='checkbox']").is(':checked')){
+			$('#tips-rule').text('您尚未同意');
+		}
+		else{
+			var formObj = $(this);
+			var formURL = "http://115.236.94.196:30000/blade/capital/save";
+			$('input[type=hidden]').val($('input[name="password"]').val());
+			var formData = $('#register-info').serialize();
+			$.ajax({
+				url:formURL,
+				type:'POST',
+				data:formData,
+				dataType:'json',
+				mimeType:'multipart/form-data',
+				contentType:"application/x-www-form-urlencoded",
+				cache:false,
+				processData:false,
+				success:function (data,textStatus, jqXHR) {
+					(data.code)?alert(data.message):null;
+				},
+				error:function (jqXHR,textStatus,errorThrown) {
 
+				},
+			});
+		}
+		e.preventDefault();
+	})
+	function getPhonecode() {
+		$('#tips-phone').text('');
+		$('#tips-icode').text('');
+		var phone = $('input[name="account"]').val();
+		var imgCode = $('input[name="imgCode"]').val();
+		if(	!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)){
+			$('#tips-phone').text('请输入正确手机号');
+		}
+		else if(imgCode===''){
+			$('#tips-icode').text('请输入验证码');
+		}
+		else{
+			$.ajax({
+				url:'${basePath}/account/sms?account='+phone+'&imgCode='+imgCode+'',
+				type:'POST',
+				data:(phone+imgCode).serialize(),
+				dataType:'json',
+				contentType: false,
+				cache:false,
+				processData:false,
+				success:function (data,textStatus, jqXHR) {
+					(data.code)?alert(data.message):null;
+				},
+				error:function (jqXHR,textStatus,errorThrown) {
+
+				},
+			})
+		}
+
+	}
 </script>
 </body>
 </html>
