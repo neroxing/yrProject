@@ -38,7 +38,6 @@
 		.title-bg{
 			background-color: var(--white-bright);
 		}
-
 /* universal */
 	*{
 		padding: 0;
@@ -151,10 +150,17 @@
 		.btn.btn-hot-to-lighter:hover{
 			background-color: var(--hot-light);
 		}
-
+		.btn.btn-to-hot{
+			border-color: var(--hot-light);
+			color: var(--hot-light);
+		}
 		.btn.btn-to-hot:hover{
 			background-color: var(--hot-light);
 			color: var(--white-light);
+		}
+		.btn.btn-to-cold{
+			border-color: var(--cold-dark);
+			color: var(--cold-dark);
 		}
 		.btn.btn-to-cold:hover{
 			background-color: var(--cold-light);
@@ -210,6 +216,9 @@
 		.panel-body {
 			padding: 10px;
 		}
+		.panel-body>. {
+			padding: 10px;
+		}
 		.panel-footer {
 			padding: 10px 0px;
 			background-color: var(--white-bright);
@@ -226,7 +235,7 @@
 		}
 		/* sub panel */
 		.panel .panel {
-			margin: 5px;
+			margin: 5px 0;
 			border-radius: 0px;
 			border: none;
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
@@ -278,7 +287,8 @@
 		}
 	/* header decoration can only used in first level panel*/
 		.hot-overline{
-			/* subpanel needs adujust margin. */
+			/* subpanel needs adujust margin.
+			if needed please report */
 			margin-top: -10px;
 			padding-top: 8px;
 			border-top: 2px solid var(--hot-light);
@@ -305,15 +315,19 @@
 		/* for active tab */
 		.tab-hot-overline>li.active>a{
 			border-top: 2px solid var(--hot-light);
+			padding-top: 9px;
 		}
 		.tab-hot-underline>li.active>a{
 			border-bottom: 2px solid var(--hot-light);
+			padding-top: 9px;
 		}
 		.tab-cold-overline>li.active>a{
 			border-top: 2px solid var(--cold-light);
+			padding-top: 9px;
 		}
 		.tab-cold-underline>li.active>a{
 			border-bottom: 2px solid var(--cold-light);
+			padding-top: 9px;
 		}
 /* banner */
 	#home-banner .row{
@@ -348,6 +362,7 @@
 	#header #slogan{
 		line-height: 70px;
 	}
+	/* header-menu */
 /* sites-links */
 	#sites-links .row .row {
 		padding: 25px 0;
@@ -360,7 +375,7 @@
 	}
 /* footer */
 	#home-footer h3{/*footer-links header*/
-		margin-top: 0px;
+		margin: 10px 0;
 		font-size: 1.2em;
 	}
 	#home-footer span{/*footer-links phone number*/
@@ -387,4 +402,72 @@
 	}
 /* content */
 
+/* home-tabs */
+	#home-tabs .panel {
+		height: 300px;
+	}
+	#home-tabs .panel-heading {
+		width: 50px; /* same with content's left margin */
+		float: left;
+		height: 300;
+	}
+	#home-tabs .nav-panel-tabs{
 
+	}
+	#home-tabs .nav-panel-tabs>li>a {
+		height: 150px; /* harf of the panel's height */
+		font-size: 1.4em;
+		line-height: 1.1em;
+		padding-top: 35px;
+		font-weight: bold;
+	}
+	#home-tabs #home-tabs-content{
+		height: 300px;
+		margin-left: 50px;
+		padding: 30px 10px;
+	}
+	#home-tabs #search-form {
+		margin-bottom: 20px;
+		height: 35px;
+	}
+	#home-tabs #search-form>input {
+		height: 35px;
+		border: 2px solid var(--hot-light);
+	}
+	#home-tabs #search-form>button {
+		height: 35px;
+		color: var(--white-light);
+		background-color: var(--hot-light);
+		border: 0;
+	}
+	#home-tabs #capital-keyword, #home-tabs #project-keyword {
+		height: 170px;
+	}
+	#home-tabs dl {
+		margin-bottom: 0px;
+	}
+	#home-tabs #capital-body dd, #home-tabs #project-body dd  {
+		width: 50%;
+		float: left;
+	}
+	#home-tabs #capital-size dd, #home-tabs #project-size dd {
+		width: 50%;
+		float: left;
+	}
+	@media (min-width: 1200px) {
+		#home-tabs #home-tabs-content{
+			padding: 35px;
+		}
+		#home-tabs #capital-body dd, #home-tabs #project-body dd {
+			width: 33%;
+		}
+		#home-tabs #capital-size dd, #home-tabs #project-size dd {
+			width: 50%;
+		}
+	}
+	#home-tabs #search-tips {
+		height: 35px;
+		line-height: 35px;
+		border-top: 1px solid var(--white-dark);
+		text-align: right;
+	}
