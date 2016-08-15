@@ -67,14 +67,7 @@
 		}
 
 		/******************************************/
-		#home-tab li a {
-			height: 155px;
-			font-size: 18px;
-			line-height: 1;
-			padding-top: 40px;
-			font-weight: bold;
-			border-radius: 0px;
-		}
+
 	</style>
 </head>
 <body>
@@ -149,109 +142,236 @@
 <!-- content -->
 <div id="content" class="container">
 	<div class="row">
+		<!--search
+		<div id="home-tab" class="col-sm-8">
+			<ul class="nav nav-tabs">
+				<li class="active">
+					<a href="#capital" data-toggle="tab">找资金</a>
+				</li>
+				<li>
+					<a href="#project" data-toggle="tab">选项目</a>
+				</li>
+			</ul>
+			<div id="home-tab-content" class="tab-content panel">
+				<div class="tab-pane fade in active" id="capital">
+					<div style="height: 400px;">
+						<div class="row">
+							<div class="col-md-12">
+								<form class="look-form fn-clear" action="http://zijin.trjcn.com">
+									<input type="text" maxlength="30" tip="输入你想找的资金，来试试吧…"
+										   placeholder="输入你想找的资金，来试试吧…">
+									<button type="submit">搜资金</button>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div style="height: 162px;">
+								<div class="col-md-2">
+									<dl>
+										<dt>投资方式</dt>
+										<dd><a href="#">股权投资</a></dd>
+										<dd><a href="#">债权投资</a></dd>
+										<dd><a href="#">金融投资</a></dd>
+										<dd><a href="#">BT/BOT投资</a></dd>
+									</dl>
+								</div>
+								<div class="col-md-5">
+									<dl>
+										<dt>资金主体</dt>
+										<dd><a href="#">个人资金</a>
+										</dd>
+										<dd><a href="#">企业资金</a>
+										</dd>
+										<dd><a href="#">天使投资</a>
+										</dd>
+										<dd><a href="#">VC投资</a>
+										</dd>
+										<dd><a href="#">PE投资</a>
+										</dd>
+										<dd><a href="#">小额贷款</a>
+										</dd>
+										<dd><a href="#">投资公司</a>
+										</dd>
+										<dd><a href="#">商业银行</a>
+										</dd>
+										<dd><a href="#">基金公司</a>
+										</dd>
+										<dd><a href="#">证券公司</a>
+										</dd>
+										<dd><a href="#">担保公司</a>
+										</dd>
+										<dd><a href="#">更多</a>
+										</dd>
+									</dl>
+								</div>
+								<div class="col-md-5">
+									<dl>
+										<dt>投资金额</dt>
+										<dd><a href="#">1万-10万</a></dd>
+										<dd><a href="#">10万-50万</a></dd>
+										<dd><a href="#">50万-100万</a></dd>
+										<dd><a href="#">100万-500万</a></dd>
+										<dd><a href="#">500万-1000万</a></dd>
+										<dd><a href="#">1000万-5000万</a></dd>
+										<dd><a href="#">5000万-1亿</a></dd>
+										<dd><a href="#">1亿以上</a></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="look-tips">
+								不知道怎么找？<a href="#">填写项目信息，帮您找资金</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
 		<!--search-->
-		<div class="col-sm-8">
-			<div class="row">
-				<div class="col-sm-1">
-					<ul id="home-tab" class="nav nav-tabs">
-						<li class="active">
+		<div id="home-tabs" class="col-sm-8">
+			<div class="panel">
+				<div class="panel-heading">
+					<ul class="nav nav-panel-tabs">
+						<li role="presentation" class="active">
 							<a href="#capital" data-toggle="tab">找资金</a>
 						</li>
-						<li>
+						<li role="presentation">
 							<a href="#project" data-toggle="tab">选项目</a>
 						</li>
 					</ul>
 				</div>
-				<div id="home-tab-content" class="col-sm-11 tab-content panel">
+				<div id="home-tabs-content" class="panel-body tab-content">
 					<div class="tab-pane fade in active" id="capital">
-						<div style="height: 400px;">
-							<div class="row">
-								<div class="col-md-12">
-									<form class="look-form fn-clear" action="http://zijin.trjcn.com">
-										<input type="text" maxlength="30" tip="输入你想找的资金，来试试吧…"
-											   placeholder="输入你想找的资金，来试试吧…">
-										<button type="submit">搜资金</button>
-									</form>
-								</div>
+						<form id="search-form" class="row">
+							<input class="col-xs-7" type="text" maxlength="30" tip="输入你想找的资金，来试试吧…"placeholder="输入你想找的资金，来试试吧…">
+							<button class="col-xs-3" type="submit">搜资金</button>
+						</form>
+						<div id="capital-keyword" class="row">
+							<div class="col-xs-3 col-ssm-2 text-nowrap">
+								<dl>
+									<dt>投资方式</dt>
+									<dd><a href="#">股权投资</a></dd>
+									<dd><a href="#">债权投资</a></dd>
+									<dd><a href="#">金融投资</a></dd>
+									<dd><a href="#">BT/BOT投资</a></dd>
+								</dl>
 							</div>
-							<div class="row">
-								<div style="height: 162px;">
-									<div class="col-md-2">
-										<dl>
-											<dt>投资方式</dt>
-											<dd><a href="#">股权投资</a></dd>
-											<dd><a href="#">债权投资</a></dd>
-											<dd><a href="#">金融投资</a></dd>
-											<dd><a href="#">BT/BOT投资</a></dd>
-										</dl>
-									</div>
-									<div class="col-md-5">
-										<dl>
-											<dt>资金主体</dt>
-											<dd><a href="#">个人资金</a>
-											</dd>
-											<dd><a href="#">企业资金</a>
-											</dd>
-											<dd><a href="#">天使投资</a>
-											</dd>
-											<dd><a href="#">VC投资</a>
-											</dd>
-											<dd><a href="#">PE投资</a>
-											</dd>
-											<dd><a href="#">小额贷款</a>
-											</dd>
-											<dd><a href="#">投资公司</a>
-											</dd>
-											<dd><a href="#">商业银行</a>
-											</dd>
-											<dd><a href="#">基金公司</a>
-											</dd>
-											<dd><a href="#">证券公司</a>
-											</dd>
-											<dd><a href="#">担保公司</a>
-											</dd>
-											<dd><a href="#">更多</a>
-											</dd>
-										</dl>
-									</div>
-									<div class="col-md-5">
-										<dl>
-											<dt>投资金额</dt>
-											<dd><a href="#">1万-10万</a></dd>
-											<dd><a href="#">10万-50万</a></dd>
-											<dd><a href="#">50万-100万</a></dd>
-											<dd><a href="#">100万-500万</a></dd>
-											<dd><a href="#">500万-1000万</a></dd>
-											<dd><a href="#">1000万-5000万</a></dd>
-											<dd><a href="#">5000万-1亿</a></dd>
-											<dd><a href="#">1亿以上</a></dd>
-										</dl>
-									</div>
-								</div>
+							<div class="col-xs-4 col-ssm-5 text-nowrap">
+								<dl id="capital-body">
+									<dt>资金主体</dt>
+									<dd><a href="#">个人资金</a>
+									</dd>
+									<dd><a href="#">企业资金</a>
+									</dd>
+									<dd><a href="#">天使投资</a>
+									</dd>
+									<dd><a href="#">VC投资</a>
+									</dd>
+									<dd><a href="#">PE投资</a>
+									</dd>
+									<dd><a href="#">小额贷款</a>
+									</dd>
+									<dd><a href="#">投资公司</a>
+									</dd>
+									<dd><a href="#">商业银行</a>
+									</dd>
+									<dd><a href="#">基金公司</a>
+									</dd>
+									<dd><a href="#">证券公司</a>
+									</dd>
+									<dd><a href="#">担保公司</a>
+									</dd>
+									<dd><a href="#">更多</a>
+									</dd>
+								</dl>
 							</div>
-							<div class="row">
-								<div class="look-tips">
-									不知道怎么找？<a href="#">填写项目信息，帮您找资金</a>
-								</div>
+							<div class="col-xs-5 col-ssm-4 text-nowrap">
+								<dl id="capital-size">
+									<dt>投资金额</dt>
+									<dd><a href="#">1万-10万</a></dd>
+									<dd><a href="#">10万-50万</a></dd>
+									<dd><a href="#">50万-100万</a></dd>
+									<dd><a href="#">100万-500万</a></dd>
+									<dd><a href="#">500万-1千万</a></dd>
+									<dd><a href="#">1千万-5千万</a></dd>
+									<dd><a href="#">5千万-1亿</a></dd>
+									<dd><a href="#">1亿以上</a></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row">
+							<div id="search-tips" class="col-xs-12">
+								不知道怎么找？<a class="btn btn-xs btn-cold-to-lighter" href="#">填写项目信息，帮您找资金</a>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="project">
+						<form id="search-form" class="row">
+							<input class="col-xs-7" type="text" maxlength="30" tip="输入你想找的项目，来试试吧…"placeholder="输入你想找的项目，来试试吧…">
+							<button class="col-xs-3" type="submit">搜资金</button>
+						</form>
+						<div id="project-keyword" class="row">
+							<div class="col-xs-3 col-ssm-2 text-nowrap">
+								<dl>
+									<dt>投资方式</dt>
+									<dd><a href="#">股权投资</a></dd>
+									<dd><a href="#">债权投资</a></dd>
+									<dd><a href="#">金融投资</a></dd>
+									<dd><a href="#">BT/BOT投资</a></dd>
+								</dl>
+							</div>
+							<div class="col-xs-5 col-ssm-4 text-nowrap">
+								<dl id="project-size">
+									<dt>热门行业</dt>
+									<dd><a href="" target="_blank">IT互联网</a></dd>
+									<dd><a href="" target="_blank">农林牧渔</a></dd>
+									<dd><a href="" target="_blank">房地产</a></dd>
+									<dd><a href="" target="_blank">餐饮休闲娱乐</a></dd>
+									<dd><a href="" target="_blank">建筑建材</a></dd>
+									<dd><a href="" target="_blank">旅游酒店</a></dd>
+									<dd><a href="" target="_blank">食品饮料烟草</a></dd>
+									<dd><a href="" target="_blank">节能环保</a></dd>
+								</dl>
+							</div>
+							<div class="col-xs-4 col-ssm-5 text-nowrap">
+								<dl id="project-body">
+									<dt>热门地区</dt>
+									<dd><a href="#" target="_blank">广东省</a></dd>
+									<dd><a href="#" target="_blank">山东省</a></dd>
+									<dd><a href="#" target="_blank">北京</a></dd>
+									<dd><a href="#" target="_blank">四川省</a></dd>
+									<dd><a href="#" target="_blank">浙江省</a></dd>
+									<dd><a href="#" target="_blank">江苏省</a></dd>
+									<dd><a href="#" target="_blank">河南省</a></dd>
+									<dd><a href="#" target="_blank">湖北省</a></dd>
+									<dd><a href="#" target="_blank">上海</a></dd>
+									<dd><a href="#" target="_blank">河北省</a></dd>
+									<dd><a href="#" target="_blank">湖南省</a></dd>
+									<dd><a href="#" target="_blank">贵州省</a></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="row">
+							<div id="search-tips" class="col-xs-12">
+								不知道怎么找？<a class="btn btn-xs btn-cold-to-lighter" href="#">填写项目信息，帮您找项目</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!--report-->
-		<div class="col-sm-4">
-			<h2>这是h2</h2>
-		</div>
+		<div class="col-sm-8"></div>
 
 		<!--news-list-->
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<div class="panel-title">
+					<strong>
 						精选资金<a href="#" class="pull-right">查看更多</a>
-					</div>
+					</strong>
 				</div>
 				<div class="panel-body">
 					<ul class="list-unstyled list-inline">
@@ -260,7 +380,7 @@
 								<div class="panel panel-default">
 									<li>
 										<div class="panel-heading">
-											<a class="panel-title ">股权投资</a>
+											<a class="panel-title">股权投资</a>
 											<a class="panel-title pull-right">更多</a>
 										</div>
 										<div class="panel-body">
@@ -356,11 +476,11 @@
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<div class="panel-title">
+					<strong>
 						优质项目
-						<button class="btn btn-sm btn-to-hot">重点项目推荐</button>
+						<button class="btn btn-xs btn-to-hot">重点项目推荐</button>
 						<a class="pull-right">查看更多</a>
-					</div>
+					</strong>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -720,7 +840,7 @@
 						<div><a>隐私条款</a></div>
 						<div><a>网站地图</a></div>
 					</div>
-					<div class="col-sm-4" style="margin-top: -70px;">
+					<div class="col-sm-4">
 						<div><h3>微信订阅</h3></div>
 						<div>
 							<img src="http://yf.trjcn.com/assets/src/images/v6/temp/wechat-qrcode.jpg" alt="微信二维码"
