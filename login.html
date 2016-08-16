@@ -23,7 +23,27 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-
+		.panel.panel{
+			border: 1px solid rgb(207,207,207);
+		}
+		.panel.panel>.panel-heading{
+			padding: 0px!important;
+			border: none;
+		}
+		.nav-tabs>li{
+			width: 50%;
+			text-align: center;
+		}
+		.nav-tabs>li a,.nav-tabs>li a:focus,.nav-tabs>li a:hover{
+			margin: -1px;
+			border: none;
+			border-radius: 0px;
+		}
+		.login-body{
+			height: 250px;
+			padding-bottom: 10px!important;
+			padding-top: 20px!important;
+		}
 	</style>
 </head>
 <body>
@@ -61,7 +81,6 @@
 				</div>
 			</div>
 			<!--登录框-->
-
 			<div class="panel-body">
 				<div class="row">
 					<div class="col-sm-6 col-md-8">
@@ -69,43 +88,51 @@
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<div class="panel panel-default">
-							<div class="panel-body">
+							<div class="panel-heading">
 								<ul class="nav nav-tabs">
-									<li class="active">
-										<a href="#normal-login" data-toggle="tab">普通登录方式</a>
+									<li role="presentation" class="active ">
+										<a href="#normal-login" data-toggle="tab" class="panel-title">普通登录方式</a>
 									</li>
-									<li>
-										<a href="#phone-login" data-toggle="tab">手机验证码登录</a>
+									<li role="presentation" class="">
+										<a href="#phone-login" data-toggle="tab" class="panel-title">手机验证码登录</a>
 									</li>
 								</ul>
+							</div>
+							<div class="panel-body login-body">
 								<div class="tab-content">
 									<!--普通登录-->
 									<div class="tab-pane fade in active" id="normal-login">
-										<form class="form-horizontal center-block" id="normally-login-info" method="POST" enctype="multipart/form-data" role="form">
+										<form class="form-horizontal center-block" id="normally-login-info"
+										      method="POST" enctype="multipart/form-data" role="form">
 											<div name="input-username" class="form-group">
 												<label class=" control-label col-sm-3" for="input-username">账号:</label>
 												<div class="col-sm-8">
 													<input id="input-username" class="form-control" type="text"
-														   placeholder="账号/手机号码/电子邮箱" name="account">
+													       placeholder="账号/手机号码/电子邮箱" name="account">
 													<span id="tips-account"></span>
 												</div>
 											</div>
 											<div name="input-pwd" class="form-group">
-												<label class="control-label col-sm-3"for="input-pwd">密码:</label>
+												<label class="control-label col-sm-3" for="input-pwd">密码:</label>
 												<div class="col-sm-8">
 													<input id="input-pwd" class="form-control" type="password"
-														   placeholder="请输入密码" name="password">
+													       placeholder="请输入密码" name="password">
 													<span id="tips-password"></span>
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-4 control-label" for="input-compute-nor">图片验证:</label>
-												<div class="col-sm-4">
-													<input id="input-compute-nor" class="form-control" type="text"
-													       placeholder="输入结果" name="imgCode">
-													<span id="tips-imgCode"></span>
+												<label class="col-sm-3 control-label"
+												       for="input-compute-nor">图片验证:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input id="input-compute-nor" class="form-control" type="text"
+														       placeholder="输入结果" name="imgCode">
+														<div class="input-group-addon">
+															<img class="img-responsive" alt="验证码">
+														</div>
+													</div>
 												</div>
-												<img alt="验证码" class="col-sm-4">
+												<div class="col-sm-offset-3 col-sm-8" id="tips-imgCode"></div>
 											</div>
 											<div class="form-group">
 												<div class="col-sm-offset-3 col-sm-8">
@@ -113,9 +140,10 @@
 													<a href="#" class="pull-right title">忘记密码？</a>
 												</div>
 											</div>
-											<div class="form-group">
+											<div class="row">
 												<div class="col-sm-offset-3 col-sm-8">
-													<button class="btn btn-cold-to-lighter btn-block" type="submit">登录</button>
+													<button class="btn btn-cold-to-lighter btn-block" type="submit">登录
+													</button>
 												</div>
 											</div>
 										</form>
@@ -124,36 +152,41 @@
 									<div class="tab-pane fade" id="phone-login">
 										<form class="form-horizontal center-block">
 											<div class="form-group">
-												<label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
+												<label class="col-sm-3 control-label" for="input-phone">手机号码:</label>
 												<div class="col-sm-8">
 													<input id="input-phone" type="text" class="form-control"
-														   placeholder="请输入手机号码" name="phone">
+													       placeholder="请输入手机号码" name="phone">
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-4 control-label">图片验证:</label>
-												<div class="col-sm-4">
-													<input id="input-compute" class="form-control" type="text"
-														   placeholder="输入结果" name="pImgcode">
-												</div>
-												<img alt="验证码" class="col-sm-4">
-											</div>
-											<div class="form-group">
-												<label class="col-sm-4 control-label"
-													   for="phone-verification">手机验证:</label>
+												<label class="col-sm-3 control-label">图片验证:</label>
 												<div class="col-sm-8">
 													<div class="input-group">
-														<input id="phone-verification" class="form-control" type="text"
-															   placeholder="输入验证码" name="pCode">
-													<span class="input-group-btn">
-														<a class="btn btn-default" role="button">获取手机验证码</a>
-													</span>
+														<input id="input-compute" class="form-control" type="text"
+														       placeholder="输入结果" name="pImgcode">
+														<div class="input-group-addon">
+															<img class="img-responsive" alt="验证码">
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="form-group">
-												<div class="col-sm-offset-4 col-sm-8">
-													<button class="btn btn-primary btn-block" type="submit">登录</button>
+												<label class="col-sm-3 control-label"
+												       for="phone-verification">手机验证:</label>
+												<div class="col-sm-8">
+													<div class="input-group">
+														<input id="phone-verification" class="form-control" type="text"
+														       placeholder="输入验证码" name="pCode">
+														<div class="input-group-btn">
+														<a class="btn btn-default" role="button">获取手机验证码</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-3 col-sm-8">
+													<button class="btn btn-cold-to-lighter btn-block" type="submit">登录
+													</button>
 												</div>
 											</div>
 										</form>
@@ -161,7 +194,8 @@
 								</div>
 							</div>
 							<div class="panel-footer text-center">
-								<span>没有投融界账号？</span>&nbsp;|&nbsp;<a href="#" class="title">免费注册</a>&nbsp;|&nbsp;<a href="#" class="title">客服咨询</a>
+								<span>没有投融界账号？</span>&nbsp;|&nbsp;<a href="#" class="title">免费注册</a>&nbsp;|&nbsp;<a
+									href="#" class="title">客服咨询</a>
 							</div>
 						</div>
 					</div>
