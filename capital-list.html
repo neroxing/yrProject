@@ -26,6 +26,9 @@
 		.num-lineheight {
 			line-height: 79px;
 		}
+		.tab-num-lineheight{
+			line-height: 41px;;
+		}
 	</style>
 </head>
 <body>
@@ -1212,7 +1215,7 @@
 							<div class="input-group">
 								<input id="inputSearch" type="text" class="form-control" placeholder="在当前条件下搜索">
 						<span class="input-group-btn">
-							<button class="btn btn-default" type="button" onclick="capitalSearch()"><i
+							<button class="btn btn-cold-to-lighter" type="button" onclick="capitalSearch()"><i
 									class="glyphicon glyphicon-search"></i>
 							</button>
 						</span>
@@ -1230,19 +1233,20 @@
 					<div class=" col-sm-9">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<ul class="nav nav-tabs">
-									<li class="active">
+								<ul class="nav nav-panel-tabs tab-cold-overline">
+									<li role="presentation" class="active">
 										<a href="#complex-sort" data-toggle="tab" class="panel-title">
 											综合排序
 											<i class="glyphicon glyphicon-menu-up"></i>
 										</a>
 									</li>
-									<li>
+									<li role="presentation">
 										<a href="#complex-sort" data-toggle="tab" class="panel-title">
 											更新时间
 											<i class="glyphicon glyphicon-menu-down"></i>
 										</a>
 									</li>
+									<div class="pull-right tab-num-lineheight">共有<span>3000+</span>个符合要求的资金信息</div>
 								</ul>
 							</div>
 							<div class="panel-body">
@@ -1397,9 +1401,9 @@
 					</div>
 					<!--优质信息推荐-->
 					<div class=" col-sm-3">
-						<div class="panel">
+						<div class="panel panel-default">
 							<div class="panel-heading">
-								<div class="panel-title">优质信息推荐</div>
+								<div class="">优质信息推荐</div>
 							</div>
 							<div class="panel-body">
 

@@ -409,7 +409,7 @@
 	#home-tabs .panel-heading {
 		width: 50px; /* same with content's left margin */
 		float: left;
-		height: 300;
+		height: 300px;
 	}
 	#home-tabs .nav-panel-tabs{
 

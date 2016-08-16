@@ -58,10 +58,11 @@
 			<div class="col-sm-8 col-md-9">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<h2 class="text-center">成功融资超1000亿 21年项目与资本对接经验</h2>
+						<h2 class="text-center">成功融资超<span>1000亿</span>  <span>21年</span>项目与资本对接经验</h2>
 						<div class="row">
 							<div class="col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-6">
-								<form class="form-horizontal center-block" id="register-info" name = "register-info"method="POST" enctype="multipart/form-data" role="form">
+								<form class="form-horizontal center-block" id="register-info" name="register-info"
+								      method="POST" enctype="multipart/form-data" role="form">
 									<div class="form-group">
 										<label class="col-sm-4 control-label" for="input-phone">手机号码:</label>
 										<div class="col-sm-8">
@@ -72,12 +73,16 @@
 									</div>
 									<div class="form-group">
 										<label class="col-sm-4 control-label">图片验证:</label>
-										<div class="col-sm-4">
-											<input id="input-compute" class="form-control" type="text"
-											       placeholder="输入结果" name="imgCode">
-											<span id="tips-icode"></span>
+										<div class="col-sm-8">
+											<div class="input-group">
+												<input id="input-compute" class="form-control" type="text"
+												       placeholder="输入结果" name="imgCode">
+												<div class="input-group-addon">
+													<img alt="验证码" class="col-sm-4">
+												</div>
+											</div>
 										</div>
-										<img alt="验证码" class="col-sm-4">
+										<div class="col-sm-offset-4 col-sm-8"  id="tips-icode"></div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-4 control-label"
@@ -86,13 +91,13 @@
 											<div class="input-group">
 												<input id="phone-verification" class="form-control" type="text"
 												       placeholder="输入验证码" name="password">
-												       <input type="hidden" name="code" class="form-control">
-												<span id="tips-pcode"></span>
-                                                    <span class="input-group-btn">
-                                                        <a class="btn btn-default" role="button" onclick="getPhonecode()">获取手机验证码</a>
-                                                    </span>
+												<input type="hidden" name="code" class="form-control">
+												<div class="input-group-btn">
+													<a class="btn btn-default" role="button" onclick="getPhonecode()">获取手机验证码</a>
+												</div>
 											</div>
 										</div>
+										<div class="col-sm-offset-4 col-sm-8" id="tips-pcode"></div>
 									</div>
 									<div class="form-group">
 										<div class="col-sm-offset-4 col-sm-8">
@@ -174,36 +179,36 @@
 		var phone = $('input[name="account"]').val();
 		var imgCode = $('input[name="imgCode"]').val();
 		var password = $('input[name="password"]').val();
-		if(	!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)){
+		if (!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)) {
 			$('#tips-phone').text('请输入正确手机号');
 		}
-		else if(imgCode===''){
+		else if (imgCode === '') {
 			$('#tips-icode').text('请输入验证码');
 		}
-		else if(password===''){
+		else if (password === '') {
 			$('#tips-pcode').text('请输入手机验证码');
 		}
-		else if(!$("input[type='checkbox']").is(':checked')){
+		else if (!$("input[type='checkbox']").is(':checked')) {
 			$('#tips-rule').text('您尚未同意');
 		}
-		else{
+		else {
 			var formObj = $(this);
 			var formURL = "http://115.236.94.196:30000/blade/capital/save";
 			$('input[type=hidden]').val($('input[name="password"]').val());
 			var formData = $('#register-info').serialize();
 			$.ajax({
-				url:formURL,
-				type:'POST',
-				data:formData,
-				dataType:'json',
-				mimeType:'multipart/form-data',
-				contentType:"application/x-www-form-urlencoded",
-				cache:false,
-				processData:false,
-				success:function (data,textStatus, jqXHR) {
-					(data.code)?alert(data.message):null;
+				url: formURL,
+				type: 'POST',
+				data: formData,
+				dataType: 'json',
+				mimeType: 'multipart/form-data',
+				contentType: "application/x-www-form-urlencoded",
+				cache: false,
+				processData: false,
+				success: function (data, textStatus, jqXHR) {
+					(data.code) ? alert(data.message) : null;
 				},
-				error:function (jqXHR,textStatus,errorThrown) {
+				error: function (jqXHR, textStatus, errorThrown) {
 
 				},
 			});
@@ -215,25 +220,25 @@
 		$('#tips-icode').text('');
 		var phone = $('input[name="account"]').val();
 		var imgCode = $('input[name="imgCode"]').val();
-		if(	!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)){
+		if (!/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone)) {
 			$('#tips-phone').text('请输入正确手机号');
 		}
-		else if(imgCode===''){
+		else if (imgCode === '') {
 			$('#tips-icode').text('请输入验证码');
 		}
-		else{
+		else {
 			$.ajax({
-				url:'${basePath}/account/sms?account='+phone+'&imgCode='+imgCode+'',
-				type:'POST',
-				data:(phone+imgCode).serialize(),
-				dataType:'json',
+				url: '${basePath}/account/sms?account=' + phone + '&imgCode=' + imgCode + '',
+				type: 'POST',
+				data: (phone + imgCode).serialize(),
+				dataType: 'json',
 				contentType: false,
-				cache:false,
-				processData:false,
-				success:function (data,textStatus, jqXHR) {
-					(data.code)?alert(data.message):null;
+				cache: false,
+				processData: false,
+				success: function (data, textStatus, jqXHR) {
+					(data.code) ? alert(data.message) : null;
 				},
-				error:function (jqXHR,textStatus,errorThrown) {
+				error: function (jqXHR, textStatus, errorThrown) {
 
 				},
 			})
