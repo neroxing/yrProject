@@ -23,6 +23,28 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+	.card{
+		background-color: #76aedf;
+		color: aliceblue;
+	}
+	#cardheading{
+		background-color: #76aedf;
+		color: aliceblue;
+	}
+	.white-underline{
+		margin-bottom: -10px;
+		padding: 0px 20px 10px 20px;
+		border-bottom: 2px solid var(--white-max);
+		text-align: center;
+	}
+	.bg-hot{
+		background-color: var(--hot-light);
+		color: var(--white-light);
+		text-align: center;
+	}
+
+
+
 
 	</style>
 </head>
@@ -78,9 +100,13 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-auto">
+							<div class="bg-hot">
 							股权融资
+							</div>
 						</div>
+					</div>
+					<div class="row">
 						<div class="col-sm-6">
 							<div>项目所处阶段：初创期</div>
 							<div>资金方占股比例：15 - 20 %</div>
@@ -110,7 +136,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-sm-2">
+						<div class="col-auto">
 							<div class="hot-underline">项目概述</div>
 						</div>
 					</div>
@@ -146,89 +172,77 @@
 			</div>
 			<!--用户留言-->
 			<div class="panel panel-default">
-				<div class="panel-body">
-					<span class="pull-left">用户留言</span>（<span>1</span>）
-					<span class="pull-right">您还可以输入<span>300</span>个字</span>
-				</div>
-				<div class="panel-body">
-					<form>
-						<div>
-							<textarea class="form-control" placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
-						</div>
-						<div class="row">
-							<form>
-								<div class="col-sm-2">
-									<input type="text" placeholder="姓名" class="form-control">
-								</div>
-								<div class="col-sm-2">
-									<input type="text" placeholder="手机号码" class="form-control">
-								</div>
-							</form>
-							<div class="col-sm-4">
+				<form>
+					<div class="panel-heading">
+						<span>用户留言</span>
+						<div class="pull-right"><span>还可以输入x字</span></div>
+					</div>
+					<div class="panel-body">
+						<textarea class="form-control"
+						          placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+					</div>
+					<div class="panel-footer col-sm-12">
+						<div class="form-group">
+							<div class="col-md-2 col-sm-6">
+								<input type="text" placeholder="姓名" class="form-control">
+							</div>
+							<div class="col-md-2 col-sm-6">
+								<input type="text" placeholder="手机号码" class="form-control">
+							</div>
+							<div class="col-md-4 col-sm-12">
 								<div>输入姓名与电话留言后方便对方与您联系!</div>
 							</div>
-							<div class="col-sm-2">
-								<select>
+							<div class="col-md-2 col-sm-6">
+								<select  class="form-control">
 									<option value="公开" selected="selected">公开</option>
 									<option value="仅对方可见">仅对方可见</option>
 									<option value="会员可见">会员可见</option>
 								</select>
 							</div>
-							<div class="col-sm-2">
+							<div class="col-md-2 col-sm-6">
 								<a href="javascript:void(0);">
-									<button type="button" class="btn btn-from-hot pull-right">发布留言</button>
+									<button type="button" class="btn btn-hot-to-lighter pull-right">发布留言
+									</button>
 								</a>
 							</div>
 						</div>
-					</form>
-				</div>
-				<div class="panel-body">
-					<div class="row panel-body">
-						<div class="col-sm-2">
-							<img src="#" alt="头像">
-						</div>
-						<div class="col-sm-10">
-							<span class="pull-right">2016-08-03 10:33:01</span>
-							<span class="pull-left"><a
-									href="#"><span>陈先生 </span></a><span>北京市某公司 经理</span></span>
-							<br>
-							<p>所在地区：江苏省南京市秦淮区 | 关注行业：房地产 矿产冶金 农林牧渔 仓储物流 教育培训体育 </p>
-							<p>你好！我方对贵公司的项目很感兴趣，我们的投资方式简便实用，有民间私人资金也有机构资金，如有意请立即与我方联系。</p>
-						</div>
 					</div>
-					<div class="row panel-body">
-						<div class="col-sm-2">
-							<img src="#" alt="头像">
+				</form>
+				<div class="row">
+					<div class="col-sm-2">
+						<img class="img-circle img-responsive" src="#" alt="头像">
+					</div>
+					<div class="col-sm-10">
+						<div class="pull-right">2016-08-03 10:33:01</div>
+						<div class="pull-left">
+							<a href="#"><span>陈先生 </span></a><span>北京市某公司 经理</span>
 						</div>
-						<div class="col-sm-10">
-							<span class="pull-right">2016-08-03 10:33:01</span>
-							<span class="pull-left"><a
-									href="#"><span>陈先生 </span></a><span>北京市某公司 经理</span></span>
-							<br>
-							<p>所在地区：江苏省南京市秦淮区 | 关注行业：房地产 矿产冶金 农林牧渔 仓储物流 教育培训体育 </p>
-							<p>你好！我方对贵公司的项目很感兴趣，我们的投资方式简便实用，有民间私人资金也有机构资金，如有意请立即与我方联系。</p>
-						</div>
+						<br>
+						<div>所在地区：江苏省南京市秦淮区 | 关注行业：房地产 矿产冶金 农林牧渔 仓储物流 教育培训体育 </div>
+						<div>你好！我方对贵公司的项目很感兴趣，我们的投资方式简便实用，有民间私人资金也有机构资金，如有意请立即与我方联系。</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-4">
 			<!--会员名片-->
-			<div class="panel panel-default">
-				<div class="panel-heading">
+			<div class="panel panel-default card">
+				<div class="panel-heading " id="cardheading">
 					<div class="row">
-						<div class="col-sm-12">
-							<div class="pull-left">会员名片</div>
-							<button type="button" class="btn btn-from-cold pull-right btn-xs"><i class="fa fa-exchange"></i>交换名片
+						<div class="col-auto">
+							<div class="white-underline">会员名片</div>
+							</div>
+							<div class="col-auto pull-right">
+							<button type="button" class="btn btn-from-cold btn-xs"><i class="fa fa-exchange"></i>交换名片
 							</button>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<div><a href="#" class="text-center"><img class="img-circle img-responsive" src="#"></a></div>
+					<div><a href="#"><img class="img-circle img-responsive" src="#"></a></div>
 					<div class="text-center">杨先生</div>
 					<div>所在公司：江苏省扬州市某公司</div>
-					<div>职位：>董事长</div>
+					<div>职位：董事长</div>
 					<div>所在地区：江苏省扬州市邗江区</div>
 					<div>所属行业：其他行业</div>
 					<a href="javascript:void(0);">
@@ -243,7 +257,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-auto">
 							<div class="hot-underline">相似的项目</div>
 						</div>
 					</div>
@@ -265,7 +279,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-auto">
 							<div class="hot-underline">最近浏览的项目</div>
 						</div>
 					</div>
