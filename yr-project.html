@@ -86,6 +86,10 @@
 		.choose3 .mselect3 {
 			display: block;
 		}
+		.linetext{
+			line-height: 40px;
+			height: 40px;
+		}
 	</style>
 </head>
 <body>
@@ -95,16 +99,17 @@
 			<table>
 				<tbody>
 				<tr id="condition">
-					<td><p><i class="fa fa-cog"></i></p></td>
+					<td><i class="fa fa-star icon-hot-light"></i></td>
 					<td><a href="#" target="_blank">所有项目</a></td>
 				</tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="panel-body">
-			<div class="panel-body industry0">
+		<!-- 所属类型 -->
+			<div class="row industry0">
 				<div class="col-sm-2">
-					<span>所属类型:</span>
+					所属类型:
 				</div>
 				<div class="col-sm-10" style=" margin-left: -50px;">
 					<div class="row">
@@ -131,12 +136,12 @@
 					</div>
 				</div>
 			</div>
-			<div id="industry" class="panel-body industry1" style="display: none;">
+		<!-- 所属行业 -->
+			<div id="industry" class="row industry1" style="display: none;">
 				<div class="col-sm-2">
-					<span>所属行业:</span>
+					所属行业:
 				</div>
 				<div class="col-sm-10 mchoose" style=" margin-left: -50px;">
-					<!-- 1;-->
 					<div class="row select">
 						<div class="col-sm-10">
 							<div class="row">
@@ -284,7 +289,6 @@
 							</button>
 						</div>
 					</div>
-					<!-- 2;-->
 					<div class="row mselect">
 						<div class="col-sm-10">
 							<div class="row">
@@ -426,9 +430,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="province" class="panel-body industry2">
+		<!-- 所在地区 -->
+			<div id="province" class="row industry2">
 				<div class=" col-sm-2">
-					<span>所在地区:</span>
+					所在地区:
 				</div>
 				<div class=" col-sm-10 mchoose1" style=" margin-left: -50px;">
 					<div class="row select1">
@@ -705,9 +710,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="financing_means" class="panel-body industry3" style="display: none">
+		<!-- 融资方式 -->
+			<div id="financing_means" class="row industry3" style="display: none">
 				<div class=" col-sm-2">
-					<span>融资方式:</span>
+					融资方式:
 				</div>
 				<div class=" col-sm-10" style=" margin-left: -50px;">
 					<!-- 1;-->
@@ -736,9 +742,10 @@
 					<!-- 2;-->
 				</div>
 			</div>
-			<div class="panel-body industry4" id="interest" style="display: none">
+		<!-- 最高利息 -->
+			<div class="row industry4" id="interest" style="display: none">
 				<div class=" col-sm-2">
-					<span>最高利息:</span>
+					最高利息:
 				</div>
 				<div class=" col-sm-10" style=" margin-left: -50px;">
 					<div class="row">
@@ -765,9 +772,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-body industry5" id="creditors_risk" style="display: none">
+		<!-- 提供风控 -->
+			<div class="row industry5" id="creditors_risk" style="display: none">
 				<div class=" col-sm-2">
-					<span>提供风控:</span>
+					提供风控:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -794,9 +802,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-body industry6" id="period" style="display: none">
+		<!-- 项目阶段 -->
+			<div class="row industry6" id="period" style="display: none">
 				<div class=" col-sm-2">
-					<span>项目阶段:</span>
+					项目阶段:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -827,9 +836,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-body industry7" id="transfer_ratio" style="display: none">
+		<!-- 出让比例 -->
+			<div class="row industry7" id="transfer_ratio" style="display: none">
 				<div class=" col-sm-2">
-					<span>出让比例:</span>
+					出让比例:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -856,9 +866,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="financing_amount" class="panel-body industry8" style="display: none">
+		<!-- 融资金额 -->
+			<div id="financing_amount" class="row industry8" style="display: none">
 				<div class=" col-sm-2">
-					<span>融资金额:</span>
+					融资金额:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -911,9 +922,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="deal_type" class="panel-body industry9" style="display: none">
+		<!-- 交易类别 -->
+			<div id="deal_type" class="row industry9" style="display: none">
 				<div class=" col-sm-2">
-					<span>交易类别:</span>
+					交易类别:
 				</div>
 				<div class=" col-sm-10 mchoose2" style="margin-left: -50px;">
 					<div class="row select2">
@@ -1058,9 +1070,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="deal_means" class="panel-body industry10" style="display: none">
+		<!-- 交易方式 -->
+			<div id="deal_means" class="row industry10" style="display: none">
 				<div class=" col-sm-2">
-					<span>交易方式:</span>
+					交易方式:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -1087,9 +1100,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="investment_means" class="panel-body industry11" style="display: none">
+		<!-- 招商方式 -->
+			<div id="investment_means" class="row industry11" style="display: none">
 				<div class=" col-sm-2">
-					<span>招商方式:</span>
+					招商方式:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -1116,9 +1130,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="product_type" class="panel-body industry12" style="display: none">
+		<!-- 产品类型 -->
+			<div id="product_type" class="row industry12" style="display: none">
 				<div class=" col-sm-2">
-					<span>产品类型:</span>
+					产品类型:
 				</div>
 				<div class=" col-sm-10 mchoose3" style="margin-left: -50px;">
 					<div class="row select3">
@@ -1222,9 +1237,10 @@
 					</div>
 				</div>
 			</div>
-			<div id="threshold" class="panel-body industry13" style="display: none">
+		<!-- 投资门槛 -->
+			<div id="threshold" class="row industry13" style="display: none">
 				<div class=" col-sm-2">
-					<span>投资门槛:</span>
+					投资门槛:
 				</div>
 				<div class=" col-sm-10" style="margin-left: -50px;">
 					<div class="row">
@@ -1281,9 +1297,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel-body">
-				<input type="text" name="keyword" id="keyword" placeholder="在当前条件下搜索">
-				<button id="dosearch"><i class="fa fa-search"></i></button>
+		<!-- 当前条件下搜索 -->
+			<div class="row">
+				<div class="col-sm-12">
+					<input type="text" name="keyword" id="keyword" placeholder="在当前条件下搜索">
+					<button id="dosearch"><i class="fa fa-search"></i></button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1293,13 +1312,15 @@
 	<div class="row">
 		<div class=" col-sm-9 ">
 			<div class="panel panel-default">
-				<div class="panel">
-					<ul id="myTab" class="nav nav-tabs">
+				<div class="panel-heading">
+					<ul id="myTab" class="nav nav-panel-tabs tab-cold-overline">
 						<li class="active"><a href="#home" data-toggle="tab" onclick="changeTab(1)">
 							综合排序</a></li>
 						<li><a href="#ios" data-toggle="tab" onclick="changeTab(2)">更新时间</a></li>
-						<p class="pull-right">共有&nbsp;<span class="totalNum"></span>&nbsp;个符合要求的项目信息</p>
+						<div class="pull-right linetext">共有&nbsp;<span class="totalNum"></span>&nbsp;个符合要求的项目信息</div>
 					</ul>
+				</div>
+				<div class="panel-body">
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade in active panel-body" id="home">
 						</div>
@@ -1316,7 +1337,7 @@
 		<div class=" col-sm-3 ">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h2>项目推荐</h2>
+					项目推荐
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -1326,13 +1347,11 @@
 									<img src="#" alt="四川某换边式汽车安全座椅专利项目转让850万元-1000万元">
 								</a>
 							</div>
-							<p><a href="#" class="to-hot">四川某换边式汽车安全座椅专利项目转让850万元-1000万元</a></p>
-							<p>所在地区：四川省<br>
-								所属行业：汽车汽配</p>
+							<div><a href="#" class="to-hot">四川某换边式汽车安全座椅专利项目转让850万元-1000万元</a></div>
+							<div>所在地区：四川省</div>
+							<div>所属行业：汽车汽配</div>
 						</div>
 					</div>
-				</div>
-				<div class="panel-body">
 					<div class="row">
 						<div class=" col-sm-12 ">
 							<div>
@@ -1340,9 +1359,9 @@
 									<img src="#" alt="浙江某“农旅融合”电商平台融资400万">
 								</a>
 							</div>
-							<p><a href="#" class="to-hot">浙江某“农旅融合”电商平台融资400万</a></p>
-							<p>所在地区：浙江省<br>
-								所属行业：IT互联网</p>
+							<div><a href="#" class="to-hot">浙江某“农旅融合”电商平台融资400万</a></div>
+							<div>所在地区：浙江省</div>
+							<div>所属行业：IT互联网</div>
 						</div>
 					</div>
 				</div>
@@ -1387,7 +1406,6 @@
 	$(function () {
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 			// 获取已激活的标签页的名称
-			alert(1);
 			var activeTab = $(e.target).text();
 			// 获取前一个激活的标签页的名称
 			var previousTab = $(e.relatedTarget).text();
@@ -1395,40 +1413,37 @@
 			$('.previous-tab span').html(previousTab);
 		});
 
-		var url = '${basePath}/project/query';
+		/*var url = '${basePath}/project/query';
 		var canshu = window.location.search;
 		var arr = window.location.search.split('=');
 		console.log(url)
 		if (canshu != null || canshu != "") {
 			url = url + canshu;
 			if (arr[0].indexOf("industry") != -1) {
-				@
-				for (dict in dicts["13"]) {
+				@for (dict in dicts["13"]) {
 					if (arr[1] ==${dict.num}) {
 						alert('${dict.name}');
 						var str = '<td onclick="del($(this),1)" class="type_remove"><a href="#" class="to-hot"><span>所属行业:${dict.name} X' + '</span></a></td>';
 						alert(0);
 						$('#condition').append(str);
 					}
-					@
-				}
+					@}
 			}
 			if (arr[0].indexOf("province") != -1) {
-				@
-				for (dict in dicts["001"]) {
+				@for (dict in dicts["001"]) {
 					if (arr[1] ==${dict.num}) {
 						alert('${dict.name}');
 						var str = '<td onclick="del($(this),3)"><a href="#" class="to-hot"><span>所在地区:${dict.name} X' + '</span></a></td>';
 						alert(0);
 						$('#condition').append(str);
 					}
-					@
-				}
+					@}
 			}
 		}
-		myAjax(url, 'home'); //首次进入页面加载数据
+		myAjax(url, 'home'); //首次进入页面加载数据*/
 
 		/*   myAjax('/blade/project/query', 'home'); //首次进入页面加载数据  */
+		 myAjax('list.json', 'home'); //首次进入页面加载数据 
 	});
 	var judgeName = 'home';//用来判断tab;
 	var pageIndex = '';//当前页码
@@ -1456,7 +1471,7 @@
 					$('.totalNum').text(data.data.records);
 					var str = '';
 					$.each(data.data.rows, function (index, object) {
-						if (index <= (data.data.pageSize - 1)) {
+						/*if (index <= (data.data.pageSize - 1)) {
 							str += '<div> <div> <a href="#" class="to-hot"> ' + object.title +
 								'</a> <time class="pull-right">' + object.update_time +
 								' </time> </div> <table> <tbody> <tr> <td>'
@@ -1505,7 +1520,59 @@
 								str += ' <p> <span>投资期限：' + invest_time + '</span> </p>'
 							}
 							str += '</td> <td><p><strong>' + object.public_author +
-								'</strong> <br></p></td> <td ><a href="#"><button type="button" class="btn btn-from-hot">约谈项目方</button></a></td> </tr> </tbody> </table> </div>'
+								'</strong> <br></p></td> <td ><a href="#"><button type="button" class="btn btn-from-hot">约谈项目方</button></a></td> </tr> </tbody> </table> </div>'*/
+
+							if (index <= (data.data.pageSize - 1)) {
+								str += '<div class="row"><div class=" col-sm-12 "><a class="pull-left title"><strong> ' + object.title +
+									'</strong></a><span class="pull-right">' + object.update_time +
+									' </span></div><div class=" col-sm-6 ">'
+								if (object.ext.financing_amount_min != null && object.ext.financing_amount_max != null) {
+									var time1 = object.ext.financing_amount_max - object.ext.financing_amount_min;
+									str += '<div>融资资金：' + time1 + '</div>'
+								}
+								if (object.province != null) {
+									str += ' <div>所在地区：' + object.province + '</div>'
+								}
+								if (object.ext.industry != null) {
+									str += ' <div>所属行业：' + object.ext.industry + '</div>'
+								}
+								if (object.ext.financing_means != null) {
+									str += ' <div>项目融资方式：' + object.ext.financing_means + '</div>'
+								}
+								if (object.ext.asset_valuation != null) {
+
+									str += ' <div>估价：' + object.ext.asset_valuation + '</div>'
+								}
+								if (object.ext.trans_price != null) {
+
+									str += ' <div>转让：' + object.ext.trans_price + '</div>'
+								}
+								if (object.ext.deal_type != null) {
+
+									str += ' <div>交易类别：' + object.ext.deal_type + '</div>'
+								}
+								if (object.ext.deal_means != null) {
+									str += ' <div>交易方式：' + object.ext.deal_means + '</div>'
+								}
+								if (object.ext.investment_estimate != null) {
+									str += ' <div>投资估算：' + object.ext.investment_estimate + '</div>'
+								}
+								if (object.ext.investment_means != null) {
+									str += ' <div>招商方式：' + object.ext.investment_means + '</div>'
+								}
+								if (object.ext.threshold != null) {
+									str += ' <div>投资门槛：' + object.ext.threshold + '</div>'
+								}
+								if (object.ext.product_type != null) {
+									str += ' <div>产品类型：' + object.ext.product_type + '</div>'
+								}
+								if (object.ext.invest_start_time != null && object.ext.invest_end_time != null) {
+									var invest_time = object.ext.invest_start_time - object.ext.invest_end_time
+									str += ' <div>投资期限：' + invest_time + '</div>'
+								}
+								str += '</div><div class=" col-sm-3  "><div>' + object.public_author +
+									'</div></div><div class=" col-sm-3 "><button type="button" class="btn btn-from-hot">约谈项目方</button></div></div>'	
+
 							$('#pages').html("");
 							$('#' + tabName).html(str);
 							pageIndex = data.data.page;

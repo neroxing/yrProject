@@ -24,9 +24,30 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.overFlow {
+		.table-overFlow {
 			height: 500px;
 			overflow-y: scroll;
+		}
+		#huiyuan{
+			line-height: 90px;
+		}
+		#huiyuan div i{
+			color: #FF0000;
+			font-size: 30px;
+		}
+		#huiyuan p{
+			margin-top: -10px;
+		}
+		.huiyuan-bg{
+			background-color: #fffee6;
+		}
+		.bg-hot{
+			background-color: var(--hot-light);
+			color: var(--white-light);
+			text-align: center;
+		}
+		.i-thumbs{
+			color: red;
 		}
 	</style>
 </head>
@@ -50,10 +71,11 @@
 			<!--投资机构or投资人物-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<div class="panel-title">投资机构</div>
+					<i class="fa fa-star icon-hot-light"></i>
+					投资机构
 				</div>
 				<div class="panel-body">
-					<ul class="nav nav-tabs">
+					<ul class="nav nav-tabs tab-cold-overline">
 						<li class="active"><a href="#" data-toggle="tab">投资机构</a></li>
 						<li><a href="#" data-toggle="tab">投资人物</a></li>
 					</ul>
@@ -119,7 +141,11 @@
 			<!--投资机构简介-->
 			<div class="panel" id="introduction">
 				<div class="panel-heading">
-					<div>软银中国机构简介</div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">软银中国机构简介</div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<p>
@@ -133,10 +159,14 @@
 			<!--投资经历-->
 			<div class="panel" id="experience">
 				<div class="panel-heading">
-					<div>软银中国投资经历</div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">软银中国投资经历</div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body ">
-					<div class="table-responsive overFlow">
+					<div class="table-responsive table-overFlow">
 						<table class="table table-bordered">
 							<tbody>
 							<tr>
@@ -300,7 +330,11 @@
 			<!--投资团队-->
 			<div class="panel" id="team">
 				<div class="panel-heading">
-					<div>软银中国投资团队</div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">软银中国投资团队</div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<div class="col-sm-4">
@@ -343,7 +377,7 @@
 				<div class="panel-body">
 					<!--交换名片-->
 					<div class="panel panel-default">
-						<div class="panel-body row">
+						<div class="panel-body row huiyuan-bg">
 							<div class="col-sm-offset-1 col-sm-4">
 								<form>
 									<div>申请交换联系方式</div>
@@ -362,14 +396,18 @@
 									</div>
 								</form>
 							</div>
-							<div class="col-sm-offset-1 col-sm-6">
-								<p class="text-center"><i class="fa fa-exclamation-circle"></i></p><br>
+							<div class="col-sm-offset-1 col-sm-6" id="huiyuan">
+								<div class="text-center"><i class="fa fa-exclamation-circle"></i></div>
 								<p class="text-center">联系方式仅对易融圈会员开放</p>
 							</div>
 						</div>
 					</div>
 					<!--留言框-->
-					<div>我要评论</div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-hot">我要评论</div>
+						</div>
+					</div>
 					<div class="row">
 						<div class="col-md-2 col-sm-3">
 							<img class="img-circle img-responsive" src="#" alt="头像">
@@ -389,7 +427,7 @@
 							<p>陈小姐您好！请关注一下我的社区O2O生鲜（连锁）超市的项目，这是一个消费者众多，能为之兴奋的项目，也是政府长期扶持的民生产业，每年有7万亿以上市场的项目。</p>
 							<div class="pull-left">2016-07-12 06:10:36</div>
 							<div class="pull-right">来自网页&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
 								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;1</a>
 							</div>
 						</div>
@@ -403,7 +441,7 @@
 							<p>陈小姐您好！请关注一下我的社区O2O生鲜（连锁）超市的项目，这是一个消费者众多，能为之兴奋的项目，也是政府长期扶持的民生产业，每年有7万亿以上市场的项目。</p>
 							<div class="pull-left">2016-07-12 06:10:36</div>
 							<div class="pull-right">来自网页&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
 								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;1</a>
 							</div>
 						</div>
@@ -439,7 +477,14 @@
 			<!--最新报道-->
 			<div class="panel" id="report">
 				<div class="panel-heading">
-					软银中国最新报道<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">软银中国最新报道</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
@@ -460,7 +505,14 @@
 			<!--相关问答-->
 			<div class="panel">
 				<div class="panel-heading">
-					相关问答<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">相关问答</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<ul>
@@ -478,7 +530,14 @@
 			<!--最新资金投资-->
 			<div class="panel">
 				<div class="panel-heading">
-					最新资金投资<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">最新资金投资</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<ul>
@@ -496,7 +555,14 @@
 			<!--热门投资人-->
 			<div class="panel">
 				<div class="panel-heading">
-					热门投资人<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">热门投资人</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body row">
 					<div class="col-sm-6">
@@ -516,7 +582,14 @@
 			<!--热门投资机构-->
 			<div class="panel">
 				<div class="panel-heading">
-					热门投资机构<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">热门投资机构</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<ul class="to-hot">
@@ -544,7 +617,14 @@
 			<!--其他投资机构-->
 			<div class="panel">
 				<div class="panel-heading">
-					其他投资机构<a href="#" class="pull-right">更多</a>
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">其他投资机构</div>
+						</div>
+						<div class="pull-right col-auto">
+							<a href="#">更多</a>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<ul>
@@ -570,7 +650,7 @@
 							<div class="pull-left">选择行业：</div>
 						</div>
 						<div class="col-sm-7 ">
-							<select>
+							<select class="form-control">
 								<option selected="selected">金融投资</option>
 								<option>房地产</option>
 								<option>能源</option>
