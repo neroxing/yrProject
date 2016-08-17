@@ -24,13 +24,26 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.heading-more{
+			padding-right:10px;
+			margin-right:10px;
+
+			/*padding-right:20px*/
+		}
 		.panel.border{
 			border: 1px solid #ddd;
 		}
 		.panel.border:hover{
 			border: 1px solid red;
 		}
-
+		.smGray span{
+			color:gray;
+			font-size: 10px;
+		}
+		.lgGreen{
+			color:#38a538;
+			font-size: 25px;
+		}
 	</style>
 </head>
 <body>
@@ -41,13 +54,13 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<div class="row">
-				<div class="col-sm-2 col-md-1">
+				<div class="col-auto">
 					<div class="hot-underline ">头条宝</div>
 				</div>
 			</div>
 		</div>
 		<div class="panel-body">
-			<div class="row">
+			<div class="row smGray">
 				<div class="col-sm-9">
 					<h2><i class="fa fa-star"></i>对您的企业/项目进行重点包装和推广<i class="fa fa-star"></i></h2>
 					<h2>提升企业/项目的知名度及品牌价值</h2>
@@ -75,7 +88,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-auto">
 					<div class="hot-underline ">服务特权介绍</div>
 				</div>
 			</div>
@@ -84,13 +97,13 @@
 			<div class="row">
 				<div class="col-sm-3">01专访</div>
 				<div class="col-sm-7">项目专访壹次，并撰写采访稿件壹篇</div>
-				<div class="col-sm-2"><span class="glyphicon glyphicon-ok"></span></div>
+				<div class="col-sm-2"><span class="glyphicon glyphicon-ok lgGreen"></span></div>
 				<div class="col-sm-3">02投融界站内推广</div>
 				<div class="col-sm-7">纳入投融界2016最具潜力企业推广板块，进行重点推广<br>
 					<img src="img/headline_1.jpg" alt="">
 					<img src="img/headline_2.jpg" alt="">
 				</div>
-				<div class="col-sm-2"><span class="glyphicon glyphicon-ok"></span></div>
+				<div class="col-sm-2"><span class="glyphicon glyphicon-ok lgGreen"></span></div>
 				<div class="col-sm-3">03站外推广</div>
 				<div class="col-sm-7">媒体联盟互推，五家以上知名媒联合推广<br>
 					<img src="img/headline_3.jpg">
@@ -98,18 +111,18 @@
 					<img src="img/headline_5.jpg">
 					<img src="img/headline_6.jpg">
 				</div>
-				<div class="col-sm-2"><span class="glyphicon glyphicon-ok"></span></div>
+				<div class="col-sm-2"><span class="glyphicon glyphicon-ok lgGreen"></span></div>
 			</div>
 		</div>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<div class="row">
-				<div class="col-sm-3 col-md-2">
+				<div class="col-auto">
 					<div class="hot-underline ">最具潜力企业案例</div>
 				</div>
-				<div class="col-sm-offset-8 col-sm-1 col-md-offset-9 col-md-1">
-					<div class=""><a href="">更多</a></div>
+				<div class="col-auto pull-right">
+					<a class="heading-more" href="">更多</a>&nbsp&nbsp
 				</div>
 			</div>
 		</div>

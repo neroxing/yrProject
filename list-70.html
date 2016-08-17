@@ -24,13 +24,15 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.cut a {
-			display: inline-block;
+		.cut li {
 			vertical-align: middle;
 			width: 95%;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
+		}
+		.cut li a{
+			display: inline-block;
 		}
 	</style>
 </head>
@@ -220,7 +222,13 @@
 			</div>
 			<!--  主编推荐-->
 			<div class="panel panel-default">
-				<div class="panel-heading">主编推荐</div>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">主编推荐</div>
+						</div>
+					</div>
+				</div>
 				<div class="panel-body">
 					<ul class="to-hot cut">
 						<li>
@@ -258,7 +266,13 @@
 			</div>
 			<!--热门资讯-->
 			<div class="panel panel-default">
-				<div class="panel-heading">热门资讯</div>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">热门资讯</div>
+						</div>
+					</div>
+				</div>
 				<div class="panel-body">
 					<ul class="cut">
 						<li><a href="#" class="to-hot">投融界大公司周报（7.5-7.11）</a></li>
@@ -272,9 +286,15 @@
 			</div>
 			<!-- 您查看过的资讯-->
 			<div class="panel panel-default">
-				<div class="panel-heading">您查看过的资讯</div>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">您查看过的资讯</div>
+						</div>
+					</div>
+				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="">
 						<li><a href="#" class="to-hot"> <span>腾百万是如何失败的：</span></a></li>
 						<li><a href="#" class="to-hot"> <span>腾百万是如何失败的：</span></a></li>
 					</ul>

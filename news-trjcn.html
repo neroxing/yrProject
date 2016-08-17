@@ -32,6 +32,12 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+		.heading-more{
+			padding-right:10px;
+			margin-right:10px;
+			text-align: center;
+			/*padding-right:20px*/
+		}
 	</style>
 </head>
 <body>
@@ -159,7 +165,14 @@
 			<!-- 易融视界-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					投融视界<div class="pull-right"><a href="" class="title">更多>></a></div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">投融视界</div>
+						</div>
+						<div class="col-auto pull-right">
+							<div ><a href="" class="title heading-more">更多&gt&gt</a></div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
 					<ul class="cut">
@@ -177,14 +190,22 @@
 			<!-- 热门排行榜-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<span>热门排行榜</span><!-- Nav tabs -->
-					<ul class="nav nav-tabs tab-cold-overline" role="tablist">
-						<li role="presentation" class="pull-right"><a href="#profile" aria-controls="profile"
-						                                              role="tab" data-toggle="tab">一周</a></li>
-						<li role="presentation" class="active pull-right"><a href="#home" aria-controls="home"
-						                                                     role="tab" data-toggle="tab">24小时</a>
-						</li>
-					</ul>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">热门排行榜</div>
+						</div>
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs tab-cold-overline" role="tablist">
+							<li role="presentation" class="pull-right"><a href="#profile" aria-controls="profile"
+							                                              role="tab" data-toggle="tab">一周</a></li>
+							<li role="presentation" class="active pull-right"><a href="#home" aria-controls="home"
+							                                                     role="tab" data-toggle="tab">24小时</a>
+							</li>
+						</ul>
+
+					</div>
+
 				</div>
 				<div class="panel-body">
 					<!-- Tab panes -->
@@ -225,8 +246,15 @@
 			<!--媒体报道-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					媒体报道
-					<div class="pull-right"><a href="" class="title">更多>></a></div>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">媒体报道</div>
+						</div>
+						<div class="col-auto pull-right">
+							<div><a href="" class="title heading-more">更多&gt&gt</a></div>
+						</div>
+					</div>
+
 				</div>
 				<div class="panel-body">
 					<ul>

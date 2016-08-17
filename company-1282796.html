@@ -44,6 +44,11 @@
 			height: 50px;
 			width: 50px;
 		}
+		.tab-blue>li.active>a, .tab-blue>li.active>a:hover, .tab-blue>li.active>a:focus{
+			border-bottom:2px solid #717a97;
+			padding-top: 9px;
+
+		}
 	</style>
 </head>
 <body>
@@ -89,10 +94,9 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-md-2 col-sm-3">
-							<div class="hot-underline">
-								发布的信息
-							</div></div>
+						<div class="col-auto">
+							<div class="hot-underline">发布的信息 </div>
+						</div>
 					</div>
 				</div>
 				<div class="panel-body">
@@ -204,7 +208,7 @@
 						</div>
 						<!-- 人脉 -->
 						<div class="tab-pane" id="contacts">
-							<ul class="nav nav-tabs">
+							<ul class="nav nav-tabs tab-blue">
 								<li role="presentation" class="active"><a href="#all" data-toggle="tab">全部</a></li>
 								<li role="presentation"><a href="#business-friend" data-toggle="tab">商友</a></li>
 								<li role="presentation"><a href="#send-card" data-toggle="tab">发出名片</a></li>
@@ -375,10 +379,9 @@
 			<div class="panel">
 				<div class="panel-heading">
 					<div class="row">
-						<div class="col-sm-8">
-							<div class="hot-underline">
-								最近浏览的项目方
-							</div></div>
+						<div class="col-auto">
+							<div class="hot-underline">最近浏览的项目方</div>
+						</div>
 					</div>
 				</div>
 				<div class="panel-body">
@@ -387,7 +390,7 @@
 						<div class="col-sm-5">
 							<div><a href="" class="title">曹先生</a></div>
 							<div>总经理</div>
-							<div><button class="btn hot-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
 				</div>
