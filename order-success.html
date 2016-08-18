@@ -30,14 +30,52 @@
 		.colorWhite ul li{
 			width: 15%;
 		}
+		.pay-hd{
+			background-color: #c6cde6 !important;
+			padding-left: 20px;
+		}
+		.pay-box{
+			border: 1px solid #b8c0e0;
+		}
+		.lgFont{
+			background-color: #f5f4e9;
+			height: 60px;
+			padding-left: 20px;
+			font-size: 18px;
+			padding-top:17px;
+		}
+		.lgFont span{color: red;}
+		.payPrompt{
+			height: 46px;
+			padding:19px 0 9px 0;
+			margin: 0 15px;
+			border-bottom: 1px dotted #c1cecb;
+		}
+		.navBottom ul{
+			border-bottom: 1px solid #b8c0e0;
+		}
+		.navBottom li{ border-right: 1px solid  #b8c0e0;border-left: 1px solid #b8c0e0;border-top: 1px solid #b8c0e0;}
+		.navBottom ul li{margin-right: 15px;}
+		.bankWrap{
+			padding: 15px;
+		}
+		.tab-cold-overline>li.active>a, .tab-cold-overline>li.active>a:hover, .tab-cold-overline>li.active>a:focus{
+			border-top: 3px solid var(--cold-light);
+			border-right: 1px solid var(--cold-light);
+			border-left: 1px solid var(--cold-light);
+			padding-top: 9px;
+		}
+		.bankBox div{margin: 8px 0;}
+		.bankBox div input{margin-right:5px; }
+		.btnWidth{width: 180px;}
 	</style>
 </head>
 <body>
 
 <div class="container">
 	<!--订单信息-->
-	<div class="panel panel-default">
-		<div class="panel-heading">订单信息：</div>
+	<div class="panel panel-default pay-box">
+		<div class="panel-heading pay-hd">订单信息：</div>
 		<div class="panel-body">
 			<table class="table table-bordered">
 				<tr>
@@ -60,19 +98,19 @@
 		</div>
 	</div>
 	<!--应付金额-->
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="panel panel-default ">
+		<div class="panel-body lgFont">
 			<div>实际应付金额：<span>￥12800.00元</span></div>
 		</div>
 	</div>
 	<!--支付方式-->
-	<div class="panel panel-default">
-		<div class="panel-heading">支付方式</div>
+	<div class="panel panel-default pay-box">
+		<div class="panel-heading pay-hd">支付方式</div>
 		<div class="panel-body">
 			<!-- Nav tabs -->
 			<div class="panel">
-				<div class="panel-heading colorWhite">
-					<ul class="nav nav-panel-tabs tab-cold-overline text-center" role="tablist">
+				<div class="panel-heading colorWhite navBottom">
+					<ul class="nav nav-panel-tabs tab-cold-overline text-center " role="tablist">
 						<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">网银在线支付</a></li>
 						<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">快捷支付</a></li>
 						<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">第三方平台支付</a></li>
@@ -84,25 +122,30 @@
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<!-- 网银在线支付-->
-						<div role="tabpanel" class="tab-pane active" id="home">
-							<div><span class="glyphicon glyphicon-bullhorn"></span>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-3"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
-							<div class="col-md-12">
-								<button class="btn btn-hot-to-lighter btn-lg">下一步<span
-										class="glyphicon glyphicon-chevron-right"></span></button>
+						<div role="tabpanel" class="tab-pane active " id="home">
+							<div class="payPrompt"><span class="glyphicon glyphicon-bullhorn"></span>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
+							<div class="row bankWrap bankBox">
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+								<div class="col-md-3 col-sm-4"><input type="radio" name="bank"><img src="img/bank_gsyh2.gif" alt=""></div>
+
+								<div class="col-sm-12">
+									<button class="btn btn-hot-to-lighter btn-lg btnWidth">下一步<span
+											class="glyphicon glyphicon-chevron-right"></span></button>
+								</div>
+
+								<div class="col-sm-12"><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
 							</div>
-							<div><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
+
 						</div>
 						<!--快捷支付-->
 						<div role="tabpanel" class="tab-pane" id="profile">
-							<div>
+							<div class="payPrompt">
 								<i class="glyphicon glyphicon-bullhorn"></i>
 								<span>无需网银，单笔最高50万。</span>
 								支付前需确认您的身份信息，如所填的信息与开卡信息不一致将无法支付成功。
@@ -161,7 +204,7 @@
 						</div>
 						<!--第三方支付-->
 						<div role="tabpanel" class="tab-pane" id="messages">
-							<div><i class="glyphicon glyphicon-bullhorn"></i>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
+							<div class="payPrompt"><i class="glyphicon glyphicon-bullhorn"></i>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
 							<div><input type="checkbox"><img src="img/cft.gif" alt=""></div>
 							<div>
 								<button class="btn btn-hot-to-lighter  btn-lg">
@@ -173,7 +216,7 @@
 						</div>
 						<!--柜台支付-->
 						<div role="tabpanel" class="tab-pane" id="settings">
-							<div>
+							<div class="payPrompt">
 								<i class="glyphicon glyphicon-bullhorn"></i>友情提示：银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
 							</div>
 							<table class="table table-hover">
@@ -233,7 +276,7 @@
 						</div>
 						<!--  微信支付-->
 						<div role="tabpanel" class="tab-pane" id="weixinzhifu">
-							<div><i class="glyphicon glyphicon-bullhorn"></i>友情提示：请使用微信扫一扫，扫描二维码支付</div>
+							<div class="payPrompt"><i class="glyphicon glyphicon-bullhorn"></i>友情提示：请使用微信扫一扫，扫描二维码支付</div>
 							<div class="col-md-4 col-sm-12">
 								<img class="img-responsive" src="img/wxxz.gif" alt="">
 								<button class="btn btn-hot-to-lighter">扫完支付成功，点此查看订单状态</button>
