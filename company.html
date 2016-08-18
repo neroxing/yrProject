@@ -25,12 +25,23 @@
 
 	<style type="text/css">
 		.tab-blue>li.active>a, .tab-blue>li.active>a:hover, .tab-blue>li.active>a:focus{
-			background-color: #717a97;
-			padding-top: 9px;
-			color: white;
+			font-weight: bold;
+			background: none #717a97;
+			border: 1px solid #717a97;
+			color: #fff;
+			border-bottom: 0;
+		}
+		.sort li {
+		    white-space: nowrap;
+		    font: normal 12px/25px arial;
+		    cursor: pointer;
+		    text-align: center;
+		    border: 1px solid #ddd;
+		    width: 150px;
+		    border-bottom: 3px solid #717a97;
 		}
 		.tab-bottom{
-			border-bottom: 2px solid #717a97;
+			border-bottom: 3px solid #717a97;
 		}
 		.button-color{
 			background-color: #717a97;
@@ -347,7 +358,7 @@
 			</div>
 		</div>
 	</div>
-	<div>
+	<div class="sort">
 		<!-- Nav tabs -->
 		<ul class="nav nav-tabs tab-blue tab-bottom" role="tablist">
 			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"

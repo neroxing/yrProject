@@ -24,42 +24,199 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.newStep{ 
+			margin:0 auto; 
+			text-align:center;
+		}
+		.newStep h2{ 
+			color:#3a4b82; 
+			font:normal 24px/30px Hiragino Sans GB,Microsoft YaHei,\5B8B\4F53,sans-serif;
+		}
+		.newStep .line{ 
+			width:560px; 
+			height:2px; 
+			margin:35px auto; 
+			background-color:#3a4b82; 
+			overflow:hidden; 
+			line-height:2px;
+		}
+		.newStep ul{ 
+			width:700px; 
+			margin:0 auto;
+		}
+		.newStep ul li{ 
+			list-style-type:none;
+			color:#3a4b82; 
+			float:left; 
+			width:140px; 
+			position:relative; 
+			font:normal 18px/30px Hiragino Sans GB,Microsoft YaHei,\5B8B\4F53,sans-serif;
+		}
+		.newStep ul li i{ 
+			display:block; 
+			top:-48px; 
+			position:absolute; 
+			left:50%; 
+			margin-left:-12px; 
+			width:24px; 
+			height:24px; 
+			font:normal 18px/24px arial; 
+			text-align:center; 
+			color:#fff;
+			background-color: #3a4b82;
+			border-radius: 12px;
 
+		}
+		.newStepPeopleBase .line{ 
+			width:520px;
+		}
+		.newStepPeopleBase ul{ 
+			width:600px; 
+			margin:0 auto;
+		}
+		.newStepPeopleBase ul li{ 
+			list-style-type:none;
+			color:#3a4b82; 
+			float:left; 
+			width:100px; 
+			position:relative; 
+			font:normal 18px/30px Hiragino Sans GB,Microsoft YaHei,\5B8B\4F53,sans-serif;
+		}
+		.guide h2 {
+		    color: #3a4b82;
+		    height: 40px;
+		    font: normal 30px/40px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.guide h2 i {
+		    font: normal 36px/40px arial;
+		    width: 40px;
+		    height: 40px;
+		    display: inline-block;
+		    vertical-align: top;
+		    margin-right: 10px;
+		    text-align: center;
+		    color: #fff;
+		    background-color: #3a4b82;
+			border-radius: 20px;
+		}
+		.guide dl dt {
+		    padding-bottom: 5px;
+		    font: bold 18px/50px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.guide dl dd {
+		    padding: 3px 0;
+		    color: #666;
+		    font: normal 14px/24px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.tabs-look{
+			margin-bottom: -11px;
+		}
+		.tab-fund>li.active>a, .tab-fund>li.active>a:hover, .tab-fund>li.active>a:focus{
+			color: #3a4b82;
+			border-top: 3px solid #3a4b82;
+			background-color: white;
+		}
+		.guideMenu ul li {
+		    background-color: #eaefff;
+		    position: relative;
+		    text-align: center;
+		    float: left;
+		    width: 30%;
+		}
+		.li-margin-right{
+			margin-right: 5%;
+		}
+
+		.guideMenu ul li a {
+		    font: bold 22px/30px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		    color: #666;
+		    width: 100%;
+		    height: 55px;
+		    border: 1px solid #ddd;
+		    border-bottom: none;
+		    display: block;
+		    float: left;
+		}
+		.guideMenu ul li a:hover {
+			text-decoration: none;
+			color: #3a4b82;
+			background-color: #eaefff;
+		}
+		.btn-top{
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		.banner dl dt {
+		    padding-top: 10px;
+		    height: 44px;
+		    font: bold 18px/36px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.banner dl dd {
+		    color: #666;
+		    font: normal 14px/24px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.cumulative dl dt {
+		    margin-bottom: 20px;
+		    color: #666;
+		    font: normal 24px/30px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.cumulative dl dd {
+		    color: #999;
+		    height: 46px;
+		    font: normal 18px/24px Hiragino Sans GB,Microsoft YaHei,宋体,sans-serif;
+		}
+		.cumulative dl dd span {
+		    font-size: 24px;
+		    color: #333;
+		}
+		.line-fund{
+			height:1px; 
+			margin-bottom: 30px;
+			margin-top: 50px;
+			background-color:#ddd; 
+			overflow:hidden; 
+			line-height:1px;
+		}
 	</style>
 </head>
 <body>
 
 <div class="container">
-	<div>
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active">
+	<!-- Nav tabs -->
+	<div class="guideMenu">
+		<ul class="nav nav-tabs tabs-look tab-fund" role="tablist">
+			<li role="presentation" class="li-margin-right active">
 				<a href="#home" aria-controls="home" role="tab" data-toggle="tab">我要找资金</a></li>
-			<li role="presentation">
+			<li role="presentation" class="li-margin-right">
 				<a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我要找项目</a>
 			</li>
 			<li role="presentation">
 				<a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我要找人脉</a>
 			</li>
 		</ul>
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-sm-4"></div>
-							<div class="col-sm-5">
-								<div>最专业的融资服务交易平台</div>
-								<ul>
-									<li>海量资金库供您筛选，精准挖掘资金</li>
-									<li>海量资金库供您筛选，精准挖掘资金</li>
-									<li>海量资金库供您筛选，精准挖掘资金</li>
-									<li>海量资金库供您筛选，精准挖掘资金</li>
-									<li>海量资金库供您筛选，精准挖掘资金</li>
-								</ul>
+	</div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="home">
+		<!-- 找资金 -->
+			<div class="panel">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-5 col-sm-offset-4">
+							<div class="banner">	
+								<dl>
+									<dt>最专业的融资服务交易平台</dt>
+									<dd>•  海量资金库供您筛选，精准挖掘资金</dd>
+									<dd>•  线上直接约谈与合作，降低融资成本</dd>
+									<dd>•  多维度展示您的项目，尽显项目优势</dd>
+									<dd>•  会员经过实名制认证，保障信息安全</dd>
+									<dd>•  个性化信息对接服务，资金更加匹配</dd>
+									<dd>•  结交靠谱的资金人脉，商友圈更强大</dd>
+								</dl>
 							</div>
-							<div class="col-sm-3">
+						</div>
+						<div class="col-sm-3">
+							<div class="cumulative">
 								<dl>
 									<dt>累计</dt>
 									<dd><span>3454414</span> 个项目</dd>
@@ -68,357 +225,342 @@
 								</dl>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								找资金，从这里开始！
-							</div>
-							<div class="col-sm-12 text-center">
-								<img src="#">
-							</div>
-							<div class="col-sm-offset-1 col-sm-2">
-								免费注册
-							</div>
-							<div class="col-sm-2">
-								发布项目
-							</div>
-							<div class="col-sm-2">
-								寻找资金
-							</div>
-							<div class="col-sm-2">
-								约谈资金方
-							</div>
-							<div class="col-sm-2">
-								达成融资
-							</div>
-							<div class="col-sm-1"></div>
-							<div class="col-sm-12">
-								<button class="btn btn-lg btn-cold-to-lighter center-block">现在就发布我的项目</button>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12"><h1><i>1</i>免费注册</h1></div>
-							<div class="col-sm-8"><img class="img-responsive" src="img/reg_pic.png" alt="免费注册"></div>
-							<div class="col-sm-4">
-								<div>会员经过实名制认证，保障信息安全</div>
-								<ul>
-									<li>完成注册即可免费获得会员大礼包：</li>
-									<li>免费与超过130多万名会员交换名片的机会；</li>
-									<li>免费进行会员身份认证；</li>
-									<li>免费定制精选投融信息；</li>
-									<li>免费发布你的投融信息；</li>
-									<li>免费获得7天委托刷新机会。</li>
-								</ul>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12"><h1><i>2</i>发布项目</h1></div>
-							<div class="col-sm-4">
-								<div>多维度展示您的项目，尽显项目优势</div>
-								<p>
-									手上有好项目，但没有宣传渠道？怎么找资金？</br>
-									那就主动出击，发布您的项目，赢得更多资金方的关注！</br>
-									告诉大家您的项目优势、融资需求、意向资金，</br>
-									让资金方刮目相看。</br>
-								</p>
-							</div>
-							<div class="col-sm-8"><img class="img-responsive" src="img/publish_item.png"></div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12"><h1><i>3</i>寻找资金</h1></div>
-							<div class="col-sm-4">
-								<div>海量资金库供您筛选，精准挖掘资金</div>
-								<p>
-									为您准备了海量的资金库，让您有的放矢。</br>
-									资金方的实力和可行性均经过考察，保障您的安全，</br>
-									告诉大家您的项目优势、融资需求、意向资金，</br>
-									让资金方刮目相看。</br>
-								</p>
-							</div>
-							<div class="col-sm-8"><img class="img-responsive" src="img/seek_fund.png"></div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12"><h1><i>4</i>约谈资金方</h1></div>
-							<div class="col-sm-8"><img class="img-responsive" src="img/questioning_fund.png"></div>
-							<div class="col-sm-4">
-								<div>线上直接约谈与合作</div>
-								<p>
-									看到心仪的资金信息，您可以直接与对方交换联系</br>
-									方式，也可以给对方发私信，还可以评论该项目。</br>
-									如果这些都不够，您还可以进行立即投递，将您的</br>
-									信息快速发给对方，增加对接成功率！</br>
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12"><h1><i>5</i>达成融资</h1></div>
-							<div class="col-sm-8"><img class="img-responsive" src="img/achieve_financing.png"></div>
-							<div class="col-sm-4">
-								与资金方进行约谈、合作，达成融资。</br>
-								融资是一个漫长的过程，祝您成功！</br>
-							</div>
-						</div>
-						<button class="btn btn-cold-to-lighter btn-lg center-block">现在就发布我的项目</button>
 					</div>
-				</div>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="profile">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-4">
-						</div>
-						<div class="col-sm-5">
-							<dl>
-								<dt>最专业的融资服务交易平台</dt>
-								<dd>• 海量资金库供您筛选，精准挖掘资金</dd>
-								<dd>• 线上直接约谈与合作，降低融资成本</dd>
-								<dd>• 多维度展示您的项目，尽显项目优势</dd>
-								<dd>• 会员经过实名制认证，保障信息安全</dd>
-								<dd>• 个性化信息对接服务，资金更加匹配</dd>
-								<dd>• 结交靠谱的资金人脉，商友圈更强大</dd>
-							</dl>
-						</div>
-						<div class="col-sm-3">
-							<dl>
-								<dt>累计</dt>
-								<dd><span>3454414</span> 个项目</dd>
-								<dd><span>746174</span> 个资金</dd>
-								<dd><span>1000亿</span> 融资金额</dd>
-							</dl>
-						</div>
-						<div class="col-sm-12 text-center">
-							找资金，从这里开始！
-						</div>
-						<div class="col-sm-12 text-center">
-							<img src="#">
-						</div>
-						<div class="col-sm-1">
-						</div>
-						<div class="col-sm-2">
-							免费注册
-						</div>
-						<div class="col-sm-2">
-							发布项目
-						</div>
-						<div class="col-sm-2">
-							寻找资金
-						</div>
-						<div class="col-sm-2">
-							约谈资金方
-						</div>
-						<div class="col-sm-2">
-							达成融资
-						</div>
-						<div class="col-sm-1">
+					<div class="row newStep">
+						<div class="col-sm-12">
+							<h2>找资金，从这里开始！</h2>
+							<div class="line"></div>
+							<ul>
+							 <li><i>1</i>免费注册</li>
+							 <li><i>2</i>发布项目</li>
+							 <li><i>3</i>寻找资金</li>
+							 <li><i>4</i>约谈资金方</li>
+							 <li><i>5</i>达成融资</li>
+							</ul>
 						</div>
 						<div class="col-sm-12">
-							<button class="btn btn-cold-to-lighter center-block">现在就发布我的资金</button>
+							<button class="btn btn-lg btn-cold-to-lighter center-block btn-top">现在就发布我的项目</button>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>1</i>免费注册</h1>
-						<div class="col-sm-7">
-							<img src="img/reg_pic.png" alt="免费注册">
-						</div>
-						<div class="col-sm-5">
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>1</i>免费注册</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/reg_pic.png" alt="免费注册"></div>
+						<div class="col-sm-4">
 							<dl>
 								<dt>会员经过实名制认证，保障信息安全</dt>
-								<dd>• 完成注册即可免费获得会员大礼包：</dd>
-								<dd>• 免费与超过130多万名会员交换名片的机会；</dd>
-								<dd>• 免费进行会员身份认证；</dd>
-								<dd>• 免费定制精选投融信息；</dd>
-								<dd>• 免费发布你的投融信息；</dd>
-								<dd>• 免费获得7天委托刷新机会。</dd>
-							</dl>
+								<dd>•  完成注册即可免费获得会员大礼包：</dd>
+								<dd>•  免费与超过130多万名会员交换名片的机会；</dd>
+								<dd>•  免费进行会员身份认证；</dd>
+								<dd>•  免费定制精选投融信息；</dd>
+								<dd>•  免费发布你的投融信息；</dd>
+								<dd>•  免费获得7天委托刷新机会。</dd>
+						    </dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>2</i>发布项目</h1>
-						<div class="col-sm-7">
-							<img src="img/publish_item.png">
-						</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>2</i>发布项目</h2></div>
 						<div class="col-sm-5">
 							<dl>
 								<dt>多维度展示您的项目，尽显项目优势</dt>
-								<dd>手上有好项目，但没有宣传渠道？怎么找资金？<br>
-									那就主动出击，发布您的项目，赢得更多资金方的关注！<br>
-									告诉大家您的项目优势、融资需求、意向资金，<br>
-									让资金方刮目相看。
+								<dd>
+								手上有好项目，但没有宣传渠道？怎么找资金？<br>
+								那就主动出击，发布您的项目，赢得更多资金方的关注！<br>
+								告诉大家您的项目优势、融资需求、意向资金，<br>
+								让资金方刮目相看。
 								</dd>
-							</dl>
+					    	</dl>
 						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/publish_item.png"></div>
 					</div>
-					<div class="panel-body">
-						<h1><i>3</i>寻找资金</h1>
-						<div class="col-sm-7">
-							<img src="img/seek_fund.png">
-						</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>3</i>寻找资金</h2></div>
 						<div class="col-sm-5">
 							<dl>
 								<dt>海量资金库供您筛选，精准挖掘资金</dt>
-								<dd>投融界为您准备了海量的资金库，让您有的放矢。<br>
-									资金方的实力和可行性均经过考察，保障您的安全，<br>
-									解除您的后顾之忧。个性化信息对接服务，资金更加匹配！
-								</dd>
-							</dl>
+								<dd>易融圈为您准备了海量的资金库，让您有的放矢。<br>
+								资金方的实力和可行性均经过考察，保障您的安全，<br>
+								解除您的后顾之忧。个性化信息对接服务，资金更加匹配！</dd>
+					    	</dl>
 						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/seek_fund.png"></div>
 					</div>
-					<div class="panel-body">
-						<h1><i>4</i>约谈资金方</h1>
-						<div class="col-sm-7">
-							<img src="img/questioning_fund.png">
-						</div>
-						<div class="col-sm-5">
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>4</i>约谈资金方</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/questioning_fund.png"></div>
+						<div class="col-sm-4">
 							<dl>
 								<dt>线上直接约谈与合作，降低融资成本</dt>
-								<dd>看到心仪的资金信息，您可以直接与对方交换联系<br>方式，也可以给对方发私信，还可以评论该项目。<br>如果这些都不够，您还可以进行立即投递，将您的<br>信息快速发给对方，增加对接成功率！
-								</dd>
+								<dd>看到心仪的资金信息，您可以直接与对方交换联系<br>
+								方式，也可以给对方发私信，还可以评论该项目。<br>
+								如果这些都不够，您还可以进行立即投递，将您的<br>
+								信息快速发给对方，增加对接成功率！</dd>
+					    	</dl>
+						</div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>5</i>达成融资</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/achieve_financing.png"></div>
+						<div class="col-sm-4">
+							<dl>
+								<dt>
+								与资金方进行约谈、合作，达成融资。<br>
+								融资是一个漫长的过程，祝您成功！
+								</dt>
 							</dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>5</i>达成融资</h1>
-						<div class="col-sm-7">
-							<img src="img/achieve_financing.png">
-						</div>
-						<div class="col-sm-5">
-							<dl class=" pt20">
-								<dt>与资金方进行约谈、合作，达成融资。<br>融资是一个漫长的过程，祝您成功！</dt>
-							</dl>
-						</div>
-					</div>
-					<div class="panel-body">
-						<button class="btn btn-cold-to-lighter center-block">现在就发布我的资金</button>
-					</div>
+					<button class="btn btn-cold-to-lighter btn-lg center-block btn-top">现在就发布我的项目</button>
 				</div>
 			</div>
-			<div role="tabpanel" class="tab-pane" id="messages">
-				<div class="panel">
-					<div class="panel-body">
-						<div class="col-sm-4">
-						</div>
-						<div class="col-sm-5">
+		</div>
+		<div role="tabpanel" class="tab-pane" id="profile">
+		<!-- 找项目 -->
+			<div class="panel">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-5 col-sm-offset-4">
+						<div class="banner">	
 							<dl>
 								<dt>最专业的融资服务交易平台</dt>
-								<dd>• 海量资金库供您筛选，精准挖掘资金</dd>
-								<dd>• 线上直接约谈与合作，降低融资成本</dd>
-								<dd>• 多维度展示您的项目，尽显项目优势</dd>
-								<dd>• 会员经过实名制认证，保障信息安全</dd>
-								<dd>• 个性化信息对接服务，资金更加匹配</dd>
-								<dd>• 结交靠谱的资金人脉，商友圈更强大</dd>
+								<dd>•  海量资金库供您筛选，精准挖掘资金</dd>
+								<dd>•  线上直接约谈与合作，降低融资成本</dd>
+								<dd>•  多维度展示您的项目，尽显项目优势</dd>
+								<dd>•  会员经过实名制认证，保障信息安全</dd>
+								<dd>•  个性化信息对接服务，资金更加匹配</dd>
+								<dd>•  结交靠谱的资金人脉，商友圈更强大</dd>
 							</dl>
+						</div>
+			
 						</div>
 						<div class="col-sm-3">
-							<dl>
-								<dt>累计</dt>
-								<dd><span>3454414</span> 个项目</dd>
-								<dd><span>746174</span> 个资金</dd>
-								<dd><span>1000亿</span> 融资金额</dd>
-							</dl>
+							<div class="cumulative">
+								<dl>
+									<dt>累计</dt>
+									<dd><span>3454414</span> 个项目</dd>
+									<dd><span>746174</span> 个资金</dd>
+									<dd><span>1000亿</span> 融资金额</dd>
+								</dl>
+							</div>
 						</div>
-						<div class="col-sm-12 text-center">
-							找资金，从这里开始！
-						</div>
-						<div class="col-sm-12 text-center">
-							<img src="#">
-						</div>
-						<div class="col-sm-1">
-						</div>
-						<div class="col-sm-2">
-							免费注册
-						</div>
-						<div class="col-sm-2">
-							发布项目
-						</div>
-						<div class="col-sm-2">
-							寻找资金
-						</div>
-						<div class="col-sm-2">
-							约谈资金方
-						</div>
-						<div class="col-sm-2">
-							达成融资
-						</div>
-						<div class="col-sm-1">
+					</div>
+					<div class="row newStep">
+						<div class="col-sm-12">
+							<h2>找项目，从这里开始！</h2>
+							<div class="line"></div>
+							<ul>
+							 <li><i>1</i>免费注册</li>
+							 <li><i>2</i>发布资金</li>
+							 <li><i>3</i>寻找项目</li>
+							 <li><i>4</i>约谈项目方</li>
+							 <li><i>5</i>达成投资</li>
+							</ul>
 						</div>
 						<div class="col-sm-12">
-							<button class="btn btn-cold-to-lighter center-block">现在就发布我的名片</button>
+							<button class="btn btn-lg btn-cold-to-lighter center-block btn-top">现在就发布我的资金</button>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>1</i>免费注册</h1>
-						<div class="col-sm-7">
-							<img src="img/reg_pic.png" alt="免费注册">
-						</div>
-						<div class="col-sm-5">
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>1</i>免费注册</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/reg_pic.png" alt="免费注册"></div>
+						<div class="col-sm-4">
 							<dl>
 								<dt>会员经过实名制认证，保障信息安全</dt>
-								<dd>• 完成注册即可免费获得会员大礼包：</dd>
-								<dd>• 免费与超过130多万名会员交换名片的机会；</dd>
-								<dd>• 免费进行会员身份认证；</dd>
-								<dd>• 免费定制精选投融信息；</dd>
-								<dd>• 免费发布你的投融信息；</dd>
-								<dd>• 免费获得7天委托刷新机会。</dd>
-							</dl>
+								<dd>•  完成注册即可免费获得会员大礼包：</dd>
+								<dd>•  免费与超过130多万名会员交换名片的机会；</dd>
+								<dd>•  免费进行会员身份认证；</dd>
+								<dd>•  免费定制精选投融信息；</dd>
+								<dd>•  免费发布你的投融信息；</dd>
+								<dd>•  免费获得7天委托刷新机会。</dd>
+						    </dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>2</i>发布项目</h1>
-						<div class="col-sm-7">
-							<img src="img/publish_item.png">
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>2</i>发布资金</h2></div>
+						<div class="col-sm-5">
+							<dl>	
+								<dt>多维度展示您的资金，尽显资金实力</dt>
+								<dd>坐拥充足资金，却为找不到好项目发愁？<br>
+								那就主动出击，发布您的资金信息，让项目方主动<br>
+								联系您！告诉大家您的投资意向、投资理念、<br>
+								意向项目，让项目方对号入座。<br>
+								多维度展示您的资金，尽显资金实力！</dd>
+						    </dl>
 						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/publish_item.png"></div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>3</i>寻找项目</h2></div>
 						<div class="col-sm-5">
 							<dl>
-								<dt>多维度展示您的项目，尽显项目优势</dt>
-								<dd>手上有好项目，但没有宣传渠道？怎么找资金？<br>
-									那就主动出击，发布您的项目，赢得更多资金方的关注！<br>
-									告诉大家您的项目优势、融资需求、意向资金，<br>
-									让资金方刮目相看。
-								</dd>
+								<dt>海量项目库供您筛选，精准挖掘项目</dt>
+								<dd>易融圈为您准备了海量的项目库，让您有的放矢。<br>
+								项目方的实力和可行性均经过考察，保障您的安全，<br>
+								解除您的后顾之忧。个性化信息对接服务，资金更加匹配！</dd>
+							</dl>
+						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/seek_fund.png"></div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>4</i>约谈项目方</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/questioning_fund.png"></div>
+						<div class="col-sm-4">
+							<dl>
+								<dt>线上直接约谈与合作，降低投资成本</dt>
+								<dd>看到心仪的项目信息，您可以直接与对方交换联系<br>
+								方式，也可以给对方发私信，还可以评论该项目。<br>
+								如果这些都不够，您还可以进行立即投递，将您的<br>
+								信息快速发给对方，增加对接成功率！</dd>
 							</dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>3</i>寻找资金</h1>
-						<div class="col-sm-7">
-							<img src="img/seek_fund.png">
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>5</i>达成融资</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/achieve_financing.png"></div>
+						<div class="col-sm-4">
+							<dl>
+								<dt>与项目方进行约谈、合作，达成投资。<br>
+								投资是一个漫长的过程，祝您成功！</dt>
+							</dl>
 						</div>
+					</div>
+					<button class="btn btn-cold-to-lighter btn-lg center-block btn-top">现在就发布我的资金</button>
+				</div>
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="messages">
+		<!-- 找人脉 -->
+			<div class="panel">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-5 col-sm-offset-4">
+						<div class="banner">	
+							<dl>
+								<dt>最专业的融资服务交易平台</dt>
+								<dd>•  海量资金库供您筛选，精准挖掘资金</dd>
+								<dd>•  线上直接约谈与合作，降低融资成本</dd>
+								<dd>•  多维度展示您的项目，尽显项目优势</dd>
+								<dd>•  会员经过实名制认证，保障信息安全</dd>
+								<dd>•  个性化信息对接服务，资金更加匹配</dd>
+								<dd>•  结交靠谱的资金人脉，商友圈更强大</dd>
+							</dl>
+						</div>
+			
+						</div>
+						<div class="col-sm-3">
+							<div class="cumulative">
+								<dl>
+									<dt>累计</dt>
+									<dd><span>3454414</span> 个项目</dd>
+									<dd><span>746174</span> 个资金</dd>
+									<dd><span>1000亿</span> 融资金额</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					<div class="row newStep newStepPeopleBase">
+						<div class="col-sm-12">
+							<h2>找人脉，从这里开始！</h2>
+							<div class="line"></div>
+							<ul>
+							 <li><i>1</i>免费注册</li>
+							 <li><i>2</i>发布名片</li>
+							 <li><i>3</i>寻找人脉</li>
+							 <li><i>4</i>交换名片</li>
+							 <li><i>5</i>约谈</li>
+							 <li><i>6</i>达成合作</li>
+							</ul>
+						</div>
+						<div class="col-sm-12">
+							<button class="btn btn-lg btn-cold-to-lighter center-block btn-top">现在就发布我的名片</button>
+						</div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>1</i>免费注册</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/reg_pic.png" alt="免费注册"></div>
+						<div class="col-sm-4">
+							<dl>
+								<dt>会员经过实名制认证，保障信息安全</dt>
+								<dd>•  完成注册即可免费获得会员大礼包：</dd>
+								<dd>•  免费与超过130多万名会员交换名片的机会；</dd>
+								<dd>•  免费进行会员身份认证；</dd>
+								<dd>•  免费定制精选投融信息；</dd>
+								<dd>•  免费发布你的投融信息；</dd>
+								<dd>•  免费获得7天委托刷新机会。</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>2</i>发布名片</h2></div>
 						<div class="col-sm-5">
 							<dl>
-								<dt>海量资金库供您筛选，精准挖掘资金</dt>
-								<dd>投融界为您准备了海量的资金库，让您有的放矢。<br>
-									资金方的实力和可行性均经过考察，保障您的安全，<br>
-									解除您的后顾之忧。个性化信息对接服务，资金更加匹配！
-								</dd>
+								<dt>为您打造的会员展厅，尽显您的风采</dt>
+								<dd>足不出户广结投融人脉<br>
+								发布名片即可获得5次交换名片机会<br>
+								与超过20多万名实名用户共享第一手投融信息</dd>
 							</dl>
 						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/publish_item.png"></div>
 					</div>
-					<div class="panel-body">
-						<h1><i>4</i>约谈资金方</h1>
-						<div class="col-sm-7">
-							<img src="img/questioning_fund.png">
-						</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>3</i>寻找人脉</h2></div>
 						<div class="col-sm-5">
 							<dl>
-								<dt>线上直接约谈与合作，降低融资成本</dt>
-								<dd>看到心仪的资金信息，您可以直接与对方交换联系<br>方式，也可以给对方发私信，还可以评论该项目。<br>如果这些都不够，您还可以进行立即投递，将您的<br>信息快速发给对方，增加对接成功率！
-								</dd>
+								<dt>海量人脉库供您筛选，网罗投融精英</dt>
+								<dd>感叹世界太大，圈子太小？<br>
+								您可以在投融界找到他们，赶快来认识各行各业的精英吧！<br>
+								个性化信息对接服务，项目资金更加匹配！</dd>
+							</dl>
+						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/seek_fund.png"></div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>4</i>交换名片</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/questioning_fund.png"></div>
+						<div class="col-sm-4">
+							<dl>
+								<dt>结交靠谱的资金人脉，商友圈更强大</dt>
+								<dd>想认识本地的投融人士，苦于没有引荐？<br>
+								现在，看到心仪的投融精英，<br>
+								您可以直接与对方交换名片，还可以发私信噢。</dd>
 							</dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<h1><i>5</i>达成融资</h1>
-						<div class="col-sm-7">
-							<img src="img/achieve_financing.png">
-						</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>5</i>约谈</h2></div>
 						<div class="col-sm-5">
-							<dl class=" pt20">
-								<dt>与资金方进行约谈、合作，达成融资。<br>融资是一个漫长的过程，祝您成功！</dt>
+							<dl>	
+								<dt>线上直接约谈与合作，降低投融成本</dt>
+							</dl>
+						</div>
+						<div class="col-sm-7"><img class="img-responsive" src="img/achieve_financing.png"></div>
+					</div>
+					<div class="line-fund"></div>
+					<div class="row guide">
+						<div class="col-sm-12"><h2><i>6</i>达成合作</h2></div>
+						<div class="col-sm-8"><img class="img-responsive" src="img/achieve_financing.png"></div>
+						<div class="col-sm-4">
+							<dl>	
+								<dt>与项目方进行约谈、合作，达成投资。<br>
+								投资是一个漫长的过程，祝您成功！</dt>
 							</dl>
 						</div>
 					</div>
-					<div class="panel-body">
-						<button class="btn btn-cold-to-lighter center-block">现在就发布我的名片</button>
-					</div>
+					<button class="btn btn-cold-to-lighter btn-lg center-block btn-top">现在就发布我的名片</button>
 				</div>
 			</div>
 		</div>
