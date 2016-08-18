@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.li-dian-none{
+			list-style-type:none;
+		}
 		.table-overFlow {
 			height: 500px;
 			overflow-y: scroll;
@@ -48,6 +51,34 @@
 		}
 		.i-thumbs{
 			color: red;
+		}
+		.more-padding-left{
+			padding-right: 15px;
+		}
+		.more-padding{
+			padding-right: 30px;
+		}
+		.tab-org>li.active>a, .tab-org>li.active>a:hover, .tab-org>li.active>a:focus{
+			color: #54679d;
+			font-weight: bold;
+		}
+		.line-gray{
+			height:1px; 
+			margin:20px auto; 
+			background-color:#ddd; 
+			overflow:hidden; 
+			line-height:1px;
+		}
+		.org-title{
+			font-size: 18px;
+			color: #333333;
+			font-weight: bold;
+		}
+		.new-line li{
+			list-style-type:none;
+			border-bottom: 1px solid #ddd;
+			height:40px;
+			padding-top: 8px;
 		}
 	</style>
 </head>
@@ -74,12 +105,12 @@
 					<i class="fa fa-star icon-hot-light"></i>
 					投资机构
 				</div>
-				<div class="panel-body">
-					<ul class="nav nav-tabs tab-cold-overline">
+				<!-- <div class="panel-body"> -->
+					<ul class="nav nav-tabs tab-cold-overline tab-org">
 						<li class="active"><a href="#" data-toggle="tab">投资机构</a></li>
 						<li><a href="#" data-toggle="tab">投资人物</a></li>
 					</ul>
-				</div>
+				<!-- </div> -->
 			</div>
 			<!--路径图-->
 			<div>
@@ -94,30 +125,28 @@
 			<div class="panel">
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-sm-5">
 							<img class="img-responsive" src="#">
 						</div>
-						<div class="col-sm-8">
-							软银中国创业投资有限公司
+						<div class="col-sm-7 ">
+							<span class="org-title">软银中国创业投资有限公司</span>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">机构简称</div>
-						<div class="col-sm-10 col-md-11">软银中国</div>
+						<div class="col-sm-3 col-md-1">机构简称</div>
+						<div class="col-sm-9 col-md-11">软银中国</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">成立时间</div>
-						<div class="col-sm-10 col-md-11">2000年</div>
+						<div class="col-sm-3 col-md-1">成立时间</div>
+						<div class="col-sm-9 col-md-11">2000年</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">投资阶段</div>
-						<div class="col-sm-10 col-md-11">初创期（天使投资） 扩张期（>VC投资） 成熟期（>PE投资）</div>
+						<div class="col-sm-3 col-md-1">投资阶段</div>
+						<div class="col-sm-9 col-md-11">初创期（天使投资） 扩张期（>VC投资） 成熟期（>PE投资）</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">投资行业</div>
-						<div class="col-sm-10 col-md-11">能源 医疗保健 机械机电 IT互联网 文化传媒广告 商务贸易</div>
-					</div>
-					<div class="row">
+						<div class="col-sm-3 col-md-1">投资行业</div>
+						<div class="col-sm-9 col-md-11">能源 医疗保健 机械机电 IT互联网 文化传媒广告 商务贸易</div>
 					</div>
 				</div>
 				<!--跳转-->
@@ -432,6 +461,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<div class="row">
 						<div class="col-md-2 col-sm-3">
 							<img src="#" alt="头像">
@@ -446,6 +476,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<!--分页-->
 					<nav class="pull-right">
 						<ul class="pagination">
@@ -481,21 +512,23 @@
 						<div class="col-auto">
 							<div class="hot-underline">软银中国最新报道</div>
 						</div>
-						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+						<div class="pull-right col-auto ">
+							<a href="#" class="more-padding">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
+				<ul class="new-line">
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+				</ul>	
 				</div>
 			</div>
 		</div>
@@ -509,8 +542,8 @@
 						<div class="col-auto">
 							<div class="hot-underline">相关问答</div>
 						</div>
-						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+						<div class="pull-right col-auto ">
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
@@ -535,7 +568,7 @@
 							<div class="hot-underline">最新资金投资</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
@@ -560,7 +593,7 @@
 							<div class="hot-underline">热门投资人</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
@@ -587,12 +620,12 @@
 							<div class="hot-underline">热门投资机构</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="to-hot">
+					<ul class="to-hot li-dian-none">
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
@@ -622,7 +655,7 @@
 							<div class="hot-underline">其他投资机构</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
