@@ -24,7 +24,9 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-
+		.li-dian-none{
+				list-style-type:none;
+		}
 	</style>
 </head>
 <body>
@@ -140,7 +142,8 @@
 							另外，“今日优品”项目计划股权融资6000万人民币，主要用于线下体验店和电子商城的建设，以及后期推广。资金选择退出时优先考虑向公司内部其他股东转让其所持有股份，转让的价格将会由资产评估后协商确定。公司力争在较短的时间内通过和产业方向相近的公司进行资产重组，达到在国内A股市场上市的条件，使风险投资机构通过二级市场售出股票撤出资金。
 						</p>
 						<p>
-							<strong>注：本文来自易融圈最具潜力项目采访。如对本项目感兴趣，欢迎登录易融圈查看，与项目负责人取得联系。</strong>
+							<strong>注：本文来自易融圈最具潜力项目采访。如对本项目感兴趣，欢迎登录易融圈查看，与项目负责人取得联系。
+							</strong>
 						</p>
 						<p></p>
 						<img src="#">
@@ -165,25 +168,33 @@
 				</div>
 			</div>
 			<a href="#"><img class="img-responsive" src="#"></a>
+	   		<!-- 留言板 -->
 			<div class="panel">
-				<div class="panel-body">
-					<span class="pull-left">我要评论</span>
-					<span class="pull-right">您还可以输入<span>140</span>个字</span>
-
-					<div>
-						<div class=" col-sm-1">
-							<a href="#"><img src="#" alt="头像"></a>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="pull-left">我要评论</div>
+							<div class="pull-right">您还可以输入140个字</div>
 						</div>
-						<div class=" col-sm-11">
-							<textarea class="form-control"></textarea>
-						</div>
+					</div>
+				</div>
+				<div class="panel-body row">
+					<div class=" col-sm-1">
+						<a href="#"><img src="#" alt="头像"></a>
+					</div>
+					<div class=" col-sm-11">
+						<textarea class="form-control"></textarea>
+					</div>
+					<div class="col-sm-12">
 						<button type="button" class="btn  pull-right">评论</button>
 					</div>
-					<div>
-						<span class="pull-left">读者评论</span>
+				</div>
+				<div class="panel">
+					<div class="panel-heading">
+						读者评论
 					</div>
-					<div class="text-center">
-						<i class="fa fa-exclamation"></i>暂无任何评论信息
+					<div class="panel-body text-center">
+						<i class="fa fa-exclamation-circle"></i>暂无任何评论信息
 					</div>
 				</div>
 			</div>
@@ -193,10 +204,14 @@
 			<!--主编推荐-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<span>主编推荐</span>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">主编推荐</div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="li-dian-none">
 						<li><a href="#" class="to-hot">腾百万是如何失败的：天时、地利、人和皆不占优势</a></li>
 						<li><a href="#" class="to-hot">你还记得那个投资奇才王刚吗？他投资了“花卷”</a></li>
 						<li><a href="#" class="to-hot">滴滴优步并购案背后的“谋者”</a></li>
@@ -216,10 +231,14 @@
 			<!--热门咨询-->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<span>热门资讯</span>
+					<div class="row">
+						<div class="col-auto">
+							<div class="bg-cold-light">热门资讯</div>
+						</div>
+					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="li-dian-none">
 						<li><a href="#" class="to-hot">易融圈大公司周报（7.5-7.11）</a></li>
 						<li><a href="#" class="to-hot">黄有龙再次神投资：入股顺龙10天浮盈4亿港元</a></li>
 						<li><a href="#" class="to-hot">易融圈：50家资金方齐聚沙龙现场 与创业精英谈融资合作</a></li>
@@ -242,7 +261,7 @@
 							<div class="pull-left">选择行业：</div>
 						</div>
 						<div class="col-sm-7 ">
-							<select>
+							<select class="form-control">
 								<option selected="selected">金融投资</option>
 								<option>房地产</option>
 								<option>能源</option>

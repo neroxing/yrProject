@@ -55,10 +55,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-1">
-
-						</div>
-						<div class="col-sm-11">
+						<div class="col-sm-11 col-sm-offset-1">
 							所在地区<span>上海</span>
 						</div>
 					</div>
@@ -75,10 +72,15 @@
 					</div>
 				</div>
 			</div>
-
 			<!-- info commit -->
 			<div class="panel panel-default">
-				<div class="panel-heading">发布的信息</div>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">发布的信息</div>
+						</div>
+					</div>
+				</div>
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-sm-12">
@@ -135,29 +137,30 @@
 
 			<!-- overview -->
 			<div class="panel panel-default">
-				<div class="panel-body">
-					<ul class="nav nav-tabs">
+				<div class="panel-heading">
+					<ul class="nav nav-panel-tabs tab-cold-overline">
 						<li role="presentation" class="active"><a href="#overview" data-toggle="tab">概况</a></li>
 						<li role="presentation"><a href="#dynamic" data-toggle="tab">动态</a></li>
 						<li role="presentation"><a href="#contacts" data-toggle="tab">人脉</a></li>
 						<li role="presentation"><a href="#message" data-toggle="tab">留言</a></li>
 					</ul>
-
+				</div>
+				<div class="panel-body">
 					<div class="tab-content">
 						<!-- 概况 -->
 						<div class="tab-pane active" id="overview">
-							<div class="text-center">该用户暂时还没有任何概况信息</div>
+							<div class="text-center"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息</div>
 						</div>
 						<!-- 动态 -->
 						<div class="tab-pane" id="dynamic">
 							<div>
-								<h3>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></h3>
+								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
 								<div>所属行业：节能环保 | 融资金额：3000万-5亿
 									<div class="pull-right">07月12日</div>
 								</div>
 							</div>
 							<div>
-								<h3>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></h3>
+								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
 								<div>所属行业：节能环保 | 融资金额：3000万-5亿
 									<div class="pull-right">07月12日</div>
 								</div>
@@ -241,10 +244,17 @@
 									</div>
 									<div class="panel-footer">
 										<div class="row">
-											<div class="col-sm-7">
-
-											</div>
-											<div class="col-sm-3">
+											<div class="form-group">
+												<div class="col-md-2 col-sm-6">
+													<input type="text" placeholder="姓名" class="form-control">
+												</div>
+												<div class="col-md-2 col-sm-6">
+													<input type="text" placeholder="手机号码" class="form-control">
+												</div>
+												<div class="col-md-4 col-sm-12">
+													<div>输入姓名与电话留言后方便对方与您联系!</div>
+												</div>
+											<div class="col-sm-2">
 												<select class="form-control" name="message.target">
 													<option value="1">公开</option>
 													<option value="2">仅对方可见</option>
@@ -257,23 +267,38 @@
 										</div>
 									</div>
 								</div>
+							</div>
 							</form>
 							<div id="message-board">
 								<div>
-									<div class="text-center"><i class="fa fa-exclamation-circle"
-									                            aria-hidden="true"></i>暂时还没有用户留言
+									<div class="text-center">
+										<i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言
 									</div>
-									<div class="col-sm-1"><img src="img/man100.jpg" class="img-sm"></div>
+									<div class="col-sm-1">
+										<img src="img/man100.jpg" class="img-sm img-responsive">
+									</div>
 									<div class="col-sm-8">
-										<div id="message-name" class="col-sm-2"><a href="" class="title">吴先生</a>
+										<div class="row">
+											<div id="message-name" class="col-sm-2">
+												<a href="" class="title">吴先生</a>
+											</div>
+											<div id="message-company" class="col-sm-10">
+												安徽省合肥市某IT互联网公司&nbsp;董事长
+											</div>
 										</div>
-										<div id="message-company" class="col-sm-10">安徽省合肥市某IT互联网公司&nbsp;董事长
+										<div id="message-area">
+											所在地区：安徽省合肥市瑶海区
 										</div>
-										<div id="message-area">所在地区：安徽省合肥市瑶海区</div>
-										<div id="message-content">您好&nbsp;安徽首家VR应用技术公司需求合作</div>
-										<div id="message-reply"><span>回复：</span>你好 ABC</div>
+										<div id="message-content">
+											您好&nbsp;安徽首家VR应用技术公司需求合作
+										</div>
+										<div id="message-reply">
+											<span>回复：</span>你好 ABC
+										</div>
 									</div>
-									<div class="col-xs-3">2016-07-27 12:11:50</div>
+									<div class="col-sm-3">
+										2016-07-27 12:11:50
+									</div>
 								</div>
 							</div>
 						</div>
@@ -322,7 +347,13 @@
 			</div>
 			<!-- project browsed -->
 			<div class="panel panel-default">
-				<div class="panel-heading">最近浏览的项目方</div>
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">最近浏览的项目方</div>
+						</div>
+					</div>
+				</div>
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-3"><img src="img/man100.jpg" class="img-sm"></div>
