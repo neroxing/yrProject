@@ -33,6 +33,41 @@
 			height: 95px;
 			border: none;
 		}
+		.linkStyle>div {
+			padding:15px; 
+			border-bottom:1px solid #ddd;
+			border-right: 1px solid #ddd;
+			height: 108px; 
+			line-height: 20px;
+		}
+		.linkStyle>div>div {
+			padding: 5px; 
+		}
+		.noBorder {
+			border-right:none !important;  
+		}
+		.btn-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.pd20-20 {
+			padding-top: 20px; 
+			padding-bottom: 20px;
+		}
+		.mItemsHeight {
+			margin-top: 10px;
+		}
+		.mItemsHeight div {
+			height: 25px;
+		}
+		.mainTopBottom {
+			padding: 50px 0;color:#e93100;
+		}
+		.mDynamic {
+			padding: 15px; 
+			border-bottom: 1px solid #ddd;
+			line-height: 30px;
+		}
 	</style>
 </head>
 <body>
@@ -49,13 +84,13 @@
 							<img src="img/man100.jpg"></div>
 						<div class="col-sm-3">
 							张先生<br>
-							<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
+							<button href="" class="btn btn-cold-to-lighter btn-margin"><i class="fa fa-retweet"
 							                                                   aria-hidden="true"></i>交换名片
 							</button>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-11 col-sm-offset-1">
+						<div class="col-sm-11 col-sm-offset-1 btn-margin">
 							所在地区<span>上海</span>
 						</div>
 					</div>
@@ -86,20 +121,22 @@
 						<div class="col-sm-12">
 							<h5><a href="#" class="title">浙江绍兴金属表面处理（电泳漆）加工项目融资50万元</a></h5>
 						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>项目阶段&nbsp;</span><span>初创期</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>所属行业&nbsp;</span><span>化学化工</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>所在地区&nbsp;</span><span>浙江省</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>融资金额&nbsp;</span><span>50万</span>
+						<div class="mItemsHeight">
+							<div class="col-md-4 col-sm-6 ">
+								<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>项目阶段&nbsp;</span><span>初创期</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>所属行业&nbsp;</span><span>化学化工</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>所在地区&nbsp;</span><span>浙江省</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>融资金额&nbsp;</span><span>50万</span>
+							</div>
 						</div>
 						<!--<div class="col-sm-2">-->
 						<div class="pull-right">
@@ -111,20 +148,22 @@
 						<div class="col-sm-12">
 							<h5><a href="#" class="title">浙江绍兴金属表面处理（电泳漆）加工项目融资50万元</a></h5>
 						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>项目阶段&nbsp;</span><span>初创期</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>所属行业&nbsp;</span><span>化学化工</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>所在地区&nbsp;</span><span>浙江省</span>
-						</div>
-						<div class="col-md-4 col-sm-6">
-							<span>融资金额&nbsp;</span><span>50万</span>
+						<div class="mItemsHeight">
+							<div class="col-md-4 col-sm-6">
+								<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>项目阶段&nbsp;</span><span>初创期</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>所属行业&nbsp;</span><span>化学化工</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>所在地区&nbsp;</span><span>浙江省</span>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<span>融资金额&nbsp;</span><span>50万</span>
+							</div>
 						</div>
 						<!--<div class="col-sm-2">-->
 						<div class="pull-right">
@@ -148,18 +187,18 @@
 				<div class="panel-body">
 					<div class="tab-content">
 						<!-- 概况 -->
-						<div class="tab-pane active" id="overview">
-							<div class="text-center"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息</div>
+						<div class="tab-pane active " id="overview">
+							<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息</div>
 						</div>
 						<!-- 动态 -->
 						<div class="tab-pane" id="dynamic">
-							<div>
+							<div class="mDynamic">
 								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
 								<div>所属行业：节能环保 | 融资金额：3000万-5亿
 									<div class="pull-right">07月12日</div>
 								</div>
 							</div>
-							<div>
+							<div class="mDynamic">
 								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
 								<div>所属行业：节能环保 | 融资金额：3000万-5亿
 									<div class="pull-right">07月12日</div>
@@ -201,7 +240,7 @@
 										<div class="col-sm-2 col-md-1"><img src="img/man100.jpg" class="img-sm"></div>
 										<div class="col-sm-10 col-md-11">
 											<div>张先生<br>商友 31 | 发出名片 47 | 收到名片 74 | 信息 1</div>
-											<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
+											<button href="" class="btn btn-cold-to-lighter btn-sm"><i class="fa fa-retweet"
 											                                                   aria-hidden="true"></i>交换名片
 											</button>
 										</div>
@@ -209,12 +248,12 @@
 								</div>
 								<!-- 商友 -->
 								<div class="tab-pane" id="business-friend">
-									<div class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有商友信息
+									<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有商友信息
 									</div>
 								</div>
 								<!-- 发出名片 -->
 								<div class="tab-pane" id="send-card">
-									<div class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有发送过名片
+									<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有发送过名片
 									</div>
 								</div>
 								<!-- 收到名片 -->
@@ -223,7 +262,7 @@
 										<div class="col-sm-2 col-md-1"><img src="img/man100.jpg" class="img-sm"></div>
 										<div class="col-sm-10 col-md-11">
 											<div>张先生<br>商友 31 | 发出名片 47 | 收到名片 74 | 信息 1</div>
-											<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
+											<button href="" class="btn btn-cold-to-lighter btn-sm"><i class="fa fa-retweet"
 											                                                   aria-hidden="true"></i>交换名片
 											</button>
 										</div>
@@ -313,7 +352,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="text-center">
-						<div>
+						<div class="row linkStyle">
 							<div class="col-sm-4">
 								<div><i class="fa fa-tag" aria-hidden="true"></i><br>发出投递</div>
 								<div>0</div>
@@ -322,7 +361,7 @@
 								<div><i class="fa fa-folder-open" aria-hidden="true"></i><br>被约谈</div>
 								<div>0</div>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4 noBorder">
 								<div><i class="fa fa-folder-open" aria-hidden="true"></i><br>收到留言</div>
 								<div>0</div>
 							</div>
@@ -334,13 +373,13 @@
 								<div><i class="fa fa-heart" aria-hidden="true"></i><br>已发名片</div>
 								<div>0</div>
 							</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4 noBorder">
 								<div><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>收到名片</div>
 								<div>0</div>
 							</div>
 						</div>
 						<!-- contact way -->
-						<button href="" class="btn btn-hot-to-lighter">查看联系方式</button>
+						<button href="" class="btn btn-hot-to-lighter btn-margin">查看联系方式</button>
 						<div class="text-center">联系时请说明来自易融圈</div>
 					</div>
 				</div>
@@ -354,35 +393,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body pd20-20">
 					<div class="row">
-						<div class="col-md-3"><img src="img/man100.jpg" class="img-sm"></div>
-						<div class="col-md-9">
-							<div>张先生<br></div>
-							<div>zzzzzzzzzzzzzzzzzzz</div>
-							<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
-							                                                   aria-hidden="true"></i>交换名片
-							</button>
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-3"><img src="img/man100.jpg" class="img-sm"></div>
-						<div class="col-md-9">
-							<div>张先生<br></div>
-							<div>zzzzzzzzzzzzzzzzzzz</div>
-							<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
-							                                                   aria-hidden="true"></i>交换名片
-							</button>
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-3"><img src="img/man100.jpg" class="img-sm"></div>
-						<div class="col-md-9">
-							<div>张先生<br></div>
-							<div>zzzzzzzzzzzzzzzzzzz</div>
-							<button href="" class="btn btn-cold-to-lighter"><i class="fa fa-retweet"
-							                                                   aria-hidden="true"></i>交换名片
-							</button>
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
 				</div>

@@ -34,12 +34,109 @@
 		.more-padding-left{
 			padding-right: 15px;
 		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		.huodong-list-line{
+			color: #999;
+			padding-bottom: 15px;
+			border-bottom: 1px dashed #ddd;
+			margin-bottom: 15px;
+			margin-top: 10px;
+		}
+		.chuangye-li li{
+			height: 30px;
+			line-height: 30px;
+			overflow: hidden;
+			white-space: normal;
 
+		}
+		.rc-nav>li.active>a, .rc-nav>li.active>a:hover, .rc-nav>li.active>a:focus{
+			color: #fff; 
+			text-decoration: none; 
+			background-color:  #3b4a82;
+			border-radius: 0px; 
+		}
+
+		.rc-nav {
+		    height: 300px;
+		    overflow: hidden;
+		    left: 51%;
+		    top: 0;
+		   	margin-left: -650px;
+		    position: fixed;
+		    z-index: 99;
+		}
+		.rc-nav li{
+		   	color: #fff;
+			text-decoration: none;
+			background-color: #7986ab;
+			border-radius: 0px;
+			height: 60px;
+			width: 60px;
+		}
+		.rc-nav li a{
+			display: block;
+			position: relative;
+			width: 60px;
+			height: 60px;
+			font-size: 14px;
+			color: #fff;
+			text-align: center;
+			border-radius: 0px; 
+		}
+		.rc-nav li a:hover { 
+			background-color:  #3b4a82; 
+			border-color: #7986ab; 
+			border-bottom-color: #fff; 
+			border-radius: 0px;
+		}
+		.rc-nav li a:focus { 
+			background-color:  #3b4a82; 
+			border-color: #7986ab; 
+			border-bottom-color: #fff;
+			border-radius: 0px; 
+		}
+		.top-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+	
+	
 
 	</style>
 </head>
-<body>
+<body data-spy="scroll" data-target="#myScrollspy">
 
+<div class="container">
+	<div class="row">
+		<div class="col-sm-2 " id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked rc-nav" data-spy="affix" data-offset-top="125">
+                <li><a href="#">融创中国</a></li>
+                <li><a href="#" >商讯</a></li>
+                <li><a href="#">人物</a></li>
+                <li class="active"><a href="#">创业故事</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-triangle-top"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+	<ol class="breadcrumb breadcrumb-bg top-margin">
+		<i class="fa fa-home i-home"></i>
+		<li><a href="#" class="title">首页</a></li>
+		<li><a href="#" class="title">融创中国</a></li>
+		<li class="active">创业</li>
+	</ol>
+</div>
 <div class="container">
 	<!--轮播-->
 	<div class="row">
@@ -54,6 +151,7 @@
 		</div>
 	</div>
 </div>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-9 col-sm-8">
@@ -75,7 +173,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -84,7 +184,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -93,7 +195,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 				</div>
@@ -119,7 +223,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -128,7 +234,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -137,7 +245,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 				</div>
@@ -153,7 +263,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -162,7 +274,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 					<div class="row">
@@ -171,7 +285,9 @@
 							【内容摘要】国外企业级服务市场“横向联通”的趋势让还在争论做平台还是做应用，做通用型SaaS还是垂直型SaaS的国内企业级服务厂商惊出一身冷汗。8月2日，Salesforce以7.5亿美元的价格收购办公协作软件公司Quip。前不久，Salesforce还以28亿美元收购了电子商务解决方案提供商Demandware。7月...<a
 								href="#">[详情]</a>
 						</div>
-						<div>阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(1217)|<a href="javascript:;" class="to-hot">发送到我的邮箱</a><span class="pull-right">2016-08-09</span>
 						</div>
 					</div>
 				</div>
@@ -191,7 +307,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="chuangye-li">
 						<li><a href="#"><img src="#"></a><a href="#" class="to-hot">东芝白家电拟在美的旗下实现扭亏</a>
 							<div>发布时间：2016-08-09</div>
 						</li>
@@ -408,6 +524,8 @@
 		</div>
 	</div>
 </div>
+
+
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
 
