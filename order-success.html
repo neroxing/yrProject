@@ -30,6 +30,9 @@
 		.colorWhite ul li{
 			width: 15%;
 		}
+		.tabHeight tr{height: 51px;}
+		.tabHeight>tbody>tr>th{padding-top: 15px;}
+		.tabHeight>tbody>tr>td{padding-top: 15px;}
 		.pay-hd{
 			background-color: #c6cde6 !important;
 			padding-left: 20px;
@@ -68,6 +71,10 @@
 		.bankBox div{margin: 8px 0;}
 		.bankBox div input{margin-right:5px; }
 		.btnWidth{width: 180px;}
+		.bgGray{background-color: #f6f6f6;border-radius: 10px;border:1px solid #e6e6e6 !important; }
+		.pd20{padding:20px;}
+		.left20{padding-left: 20px;}s
+		                            .ts{background-color: #f1f1f1;height: 31px;padding: 5px;font-size: 14px;}
 	</style>
 </head>
 <body>
@@ -77,7 +84,7 @@
 	<div class="panel panel-default pay-box">
 		<div class="panel-heading pay-hd">订单信息：</div>
 		<div class="panel-body">
-			<table class="table table-bordered">
+			<table class="table table-bordered tabHeight">
 				<tr>
 					<th>订单号：</th>
 					<td>20160810135320850515</td>
@@ -150,9 +157,9 @@
 								<span>无需网银，单笔最高50万。</span>
 								支付前需确认您的身份信息，如所填的信息与开卡信息不一致将无法支付成功。
 							</div>
-							<div><img src="img/recharge-step.png" alt=""></div>
+							<div class="pd20"><img src="img/recharge-step.png" alt=""></div>
 							<div class="panel panel-default">
-								<div class="panel-body">
+								<div class="panel-body bgGray">
 									<h4>支付前需确认您的身份信息</h4>
 									<form class="form-horizontal">
 										<div class="form-group">
@@ -203,23 +210,23 @@
 							</div>
 						</div>
 						<!--第三方支付-->
-						<div role="tabpanel" class="tab-pane" id="messages">
+						<div role="tabpanel" class="tab-pane " id="messages">
 							<div class="payPrompt"><i class="glyphicon glyphicon-bullhorn"></i>请选择支付银行：请确保您的银行卡已开通网银支付功能</div>
-							<div><input type="checkbox"><img src="img/cft.gif" alt=""></div>
-							<div>
+							<div class="pd20"><input type="checkbox"><img src="img/cft.gif" alt=""></div>
+							<div class="left20">
 								<button class="btn btn-hot-to-lighter  btn-lg">
 									下一步<i class="glyphicon glyphicon-chevron-right"></i>
 								</button>
 								订单支付完成后请点击银行支付页“返回按钮”确保顺利完成订单确认！
 							</div>
-							<div><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
+							<div class="pd20"><input type="checkbox">已阅读并同意<a href="#" class="title">《投融界在线服务协议》</a></div>
 						</div>
 						<!--柜台支付-->
 						<div role="tabpanel" class="tab-pane" id="settings">
 							<div class="payPrompt">
 								<i class="glyphicon glyphicon-bullhorn"></i>友情提示：银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
 							</div>
-							<table class="table table-hover">
+							<table class="table table-hover pd20">
 								<tr>
 									<th>银行名称</th>
 									<th>汇款帐号</th>
@@ -263,7 +270,7 @@
 									<td><a href="" class="title">发送短信</a></td>
 								</tr>
 							</table>
-							<div><span>提示：在</span><a href="" class="title">“未完成订单列表”</a>上传汇款凭证</div>
+							<div class="ts"><span>提示：在</span><a href="" class="title">“未完成订单列表”</a>上传汇款凭证</div>
 							<div>
 								<div>请您汇款后将汇款信息（<span>汇款方式、日期、金额、购买的服务名称、汇款人真实姓名、会员ID、昵称</span>）通过以下任一方式告之投融界。</div>
 								<ol>

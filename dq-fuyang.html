@@ -24,6 +24,23 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.panelNoTB{padding:0;}
+		.capitalMes{padding:25px 20px 30px 20px; border-bottom: 1px dotted #ddd;}
+		.leaveMes{padding-top: 25px;padding-bottom: 25px;}
+		.messageH div{height: 24px;}
+		.capitalTitle{padding-bottom: 7px;}
+		.pad30{padding: 30px;}
+		.pad10{padding: 10px;}
+		.projectBorder{border-bottom: 1px dotted #ddd;}
+		.cut li{height: 35px;line-height: 35px;border-bottom: 1px solid #ddd;}
+		ul li:last-child{
+			border-bottom: none!important;
+		}
+		ol li:last-child{
+			border-bottom: none!important;
+		}
+		.book li{height: 50px;line-height: 50px;border-bottom: 1px dotted #ddd;}
+		.height35 li{height: 35px ;line-height:35px;}
 		.heading-more{
 			padding-right:10px;
 			margin-right:10px;
@@ -38,6 +55,16 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-light);
+			margin-right: 10px;
+			font-size: 16px;
+		}
 	</style>
 </head>
 <body>
@@ -50,8 +77,8 @@
 	<!--路径图-->
 	<div class="row">
 		<div class="col-sm-12">
-			<ol class="breadcrumb">
-				<li><i class="fa fa-home"></i><a href="#">&nbsp;&nbsp;首页</a></li>
+			<ol class="breadcrumb breadcrumb-bg">
+				<li><i class="fa fa-home i-home"></i><a href="#">&nbsp;&nbsp;首页</a></li>
 				<li><a href="#">找资金</a></li>
 				<li class="active">阜阳资金信息</li>
 			</ol>
@@ -74,20 +101,20 @@
 							<a class="heading-more">更多</a></div>
 					</div>
 				</div>
-				<div class="panel-body">
-					<div>
+				<div class="panel-body panelNoTB">
+					<div class="capitalMes">
 						<div class="row"><!--资金标题-->
-							<div class="col-sm-12">
+							<div class="col-sm-12 capitalTitle">
 								<a class="pull-left title"><strong>安徽阜阳某个人资金20万-30万元寻本地金融、环保项目合作</strong></a>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-4">
+							<div class="col-sm-4 messageH">
 								<div>投资资金：<span class="text-danger">20万-30万</span></div>
 								<div>投资方式：股权投资</div>
 								<div>投资行业：金融投资,节能环保</div>
 								<div>投资类型：独资/投资建厂,其它...</div>
-								<div><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
+								<div class="leaveMes"><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
 							</div>
 							<div class="col-sm-4">
 								<br>
@@ -102,19 +129,19 @@
 							</div>
 						</div><!--资金信息-->
 					</div>
-					<div>
+					<div class="capitalMes">
 						<div class="row"><!--资金标题-->
-							<div class="col-sm-12">
+							<div class="col-sm-12 capitalTitle">
 								<a class="pull-left title"><strong>安徽阜阳某个人资金20万-30万元寻本地金融、环保项目合作</strong></a>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-4">
+							<div class="col-sm-4 messageH">
 								<div>投资资金：<span class="text-danger">20万-30万</span></div>
 								<div>投资方式：股权投资</div>
 								<div>投资行业：金融投资,节能环保</div>
 								<div>投资类型：独资/投资建厂,其它...</div>
-								<div><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
+								<div class="leaveMes"><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
 							</div>
 							<div class="col-sm-4">
 								<br>
@@ -129,19 +156,19 @@
 							</div>
 						</div><!--资金信息-->
 					</div>
-					<div>
+					<div class="capitalMes">
 						<div class="row"><!--资金标题-->
-							<div class="col-sm-12">
+							<div class="col-sm-12 capitalTitle">
 								<a class="pull-left title"><strong>安徽阜阳某个人资金20万-30万元寻本地金融、环保项目合作</strong></a>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-4">
+							<div class="col-sm-4 messageH">
 								<div>投资资金：<span class="text-danger">20万-30万</span></div>
 								<div>投资方式：股权投资</div>
 								<div>投资行业：金融投资,节能环保</div>
 								<div>投资类型：独资/投资建厂,其它...</div>
-								<div><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
+								<div class="leaveMes"><i class="fa fa-envelope-o" aria-hidden="true"></i>4条留言</div><!--投递概况-->
 							</div>
 							<div class="col-sm-4">
 								<br>
@@ -156,6 +183,7 @@
 							</div>
 						</div><!--资金信息-->
 					</div>
+
 				</div>
 
 			</div>
@@ -206,7 +234,7 @@
 			<!--留言-->
 			<div class="panel panel-default">
 
-				<div class="panel-body">
+				<div class="panel-body pad30">
 					<div><p><span>用户留言（<span style="color:red">*</span>）</span> <span class="pull-right">您还可以输入<span
 							style="color:red">300</span>个字</span></p></div>
 					<div class="row">
@@ -252,7 +280,12 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<div>
+					<div class="pad10 projectBorder">
+						<div><a href="#" class="to-hot">安徽阜阳某建筑工程项目债权融资1.5亿元</a></div>
+						<div>融资资金：<span>1.5亿</span></div>
+						<div><span>债权融资 | 安徽省</span></div>
+					</div>
+					<div class="pad10">
 						<div><a href="#" class="to-hot">安徽阜阳某建筑工程项目债权融资1.5亿元</a></div>
 						<div>融资资金：<span>1.5亿</span></div>
 						<div><span>债权融资 | 安徽省</span></div>
@@ -293,7 +326,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="to-hot ">
+					<ul class="to-hot book">
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>
@@ -322,7 +355,7 @@
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="home">
-							<ol class="to-hot">
+							<ol class="to-hot height35">
 								<li><a>安徽某投资公司100万-1亿元寻</a></li>
 								<li><a>安徽某投资公司100万-1亿元寻</a></li>
 								<li><a>安徽某投资公司100万-1亿元寻</a></li>
@@ -334,7 +367,7 @@
 							</ol>
 						</div>
 						<div role="tabpanel" class="tab-pane" id="profile">
-							<ol class="to-hot">
+							<ol class="to-hot height35">
 								<li><a href="">安徽某投资公司100万-1亿元寻</a></li>
 								<li><a href="">安徽某投资公司100万-1亿元寻</a></li>
 								<li><a href="">安徽某投资公司100万-1亿元寻</a></li>
@@ -363,7 +396,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="to-hot">
+					<ul class="to-hot book">
 						<li><a>石英钟项目融资商业计划书</a></li>
 						<li><a>石英钟项目融资商业计划书</a></li>
 						<li><a>石英钟项目融资商业计划书</a></li>
@@ -390,28 +423,35 @@
 								<a href="" class="to-hot">
 									<img class="img-responsive center-block"
 									     src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif"
-									     alt="" class="center-block"></a>
+									     alt="" class="center-block">
+									<div class=" text-center">安徽省科技产业投资有限公司</div>
+								</a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+
 						</li>
 						<li>
 							<div>
 								<a href="" class="to-hot">
 									<img class="img-responsive center-block"
 									     src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif"
-									     alt="" class="center-block"></a>
+									     alt="" class="center-block">
+									<div class=" text-center">安徽省科技产业投资有限公司</div>
+								</a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+
 						</li>
 						<li>
 							<div>
 								<a href="" class="to-hot">
 									<img class="img-responsive center-block"
 									     src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif"
-									     alt="" class="center-block"></a>
+									     alt="" class="center-block">
+									<div class=" text-center">安徽省科技产业投资有限公司</div>
+								</a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+
 						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -425,7 +465,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul >
+					<ul class="book">
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>
 						<li><a class="to-hot">石英钟项目融资商业计划书</a></li>

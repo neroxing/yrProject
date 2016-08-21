@@ -24,35 +24,28 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		tr {
-			height: 74px;
+		td{
+			border: none!important;
 		}
-		.tab tr td {
-			text-align: center;
-			vertical-align: middle !important;
-		}
-
+		body {background-color: #f1f1f1;}
+		tr {height: 80px;}
+		.tab tr td {text-align: center;vertical-align: middle !important;}
 		.circle {
-			height: 100px;
-			width: 100px;
-			border-radius: 50px;
+			position: relative;
+			z-index: 100;
+			height: 130px;
+			width: 130px;
+			border-radius: 65px;
 			border: 10px solid #f1f1f1;
-			margin-top: -430px;
+			margin-bottom: -70px;
 			color: white;
 		}
-		.circle.orange{
-			background-color: orange;
-		}
-		.circle.blue{
-			background-color: blue;
-		}
-		.circle.red{
-			background-color: red;
-		}
-		body {
-			background-color: #f1f1f1;
-		}
-
+		.fontSize{margin-top:40px;font-size: 22px;font-weight: bold;}
+		.circle.orange{background-color: #fe9d2c;}
+		.circle.blue{background-color: #51bcf2;}
+		.circle.red{background-color: #ff5452;}
+		/*.noPd{padding:0 !important;}
+		.tel{font-size: 22px;font-weight: bold;background-color: #ff5452;padding: 5px 0; top: 5px;}*/
 	</style>
 </head>
 <body>
@@ -63,10 +56,13 @@
 </div>
 <div class="container">
 	<div class="row text-center ">
-		<div class=" col-sm-4" style="padding-top:50px;">
+		<div class=" col-sm-4" >
+			<div class="center-block circle orange" >
+				<div class="fontSize">服务介绍</div>
+			</div>
 			<table class="tab table table-striped ">
 				<tr>
-					<th></th>
+					<td></td>
 				</tr>
 				<tr>
 					<td>联系方式查看</td>
@@ -81,15 +77,14 @@
 					<td>套餐优惠价</td>
 				</tr>
 			</table>
-			<div class="center-block circle orange" >
-				<div style="margin-top:30px;">服务介绍</div>
-			</div>
 		</div>
-		<div class=" col-sm-4" style="padding-top:50px;">
-
+		<div class=" col-sm-4" >
+			<div class="center-block circle blue" >
+				<div class="fontSize">投资宝</div>
+			</div>
 			<table class="tab table table-striped">
 				<tr>
-					<th></th>
+					<td></td>
 				</tr>
 				<tr>
 					<td>更直接获得对方联系信息</td>
@@ -104,15 +99,15 @@
 					<td>开通服务，即可享用会员特权</td>
 				</tr>
 			</table>
-			<div class="center-block circle blue" >
-				<div style="margin-top:30px;">投资宝</div>
-			</div>
-		</div>
-		<div class=" col-sm-4" style="padding-top:50px;">
 
+		</div>
+		<div class=" col-sm-4" >
+			<div class="center-block circle red">
+				<div class="fontSize">服务内容</div>
+			</div>
 			<table class="tab table table-striped">
 				<tr>
-					<th></th>
+					<td></td>
 				</tr>
 				<tr>
 					<td>200条/3个月</td>
@@ -124,16 +119,13 @@
 					<td>200条/3个月</td>
 				</tr>
 				<tr>
-					<td>16800.00元/3个月<br>
-						<div >咨询热线-000-000-0000</div>
-					</td>
-				</tr>
-			</table>
-			<div class="center-block circle red">
-				<div style="margin-top:30px;">服务内容</div>
-			</div>
-		</div>
+					<td <!-- class="noPd" -->16800.00元/3个月<br>
+					<div <!-- class="tel" -->咨询热线-000-000-0000</div>
+		</td>
+		</tr>
+		</table>
 	</div>
+</div>
 </div>
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
