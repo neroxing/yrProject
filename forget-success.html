@@ -30,59 +30,130 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.bulge {
-			width: 0px;
-			height: 0px;
-			border: 17px solid transparent;
-			border-left-color: grey;
+		.mg-forget {
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
 
-		.bulge.active {
-			width: 0px;
-			height: 0px;
-			border: 17px solid transparent;
-			border-left-color: blue;
-		}
+		/*		.bulge {
+					width: 0px;
+					height: 0px;
+					border: 17px solid transparent;
+					border-left-color: #ddd;
+				}
 
-		.notch {
-			margin-left: -30px;
-			width: 0px;
-			height: 0px;
-			border: 17px solid grey;
-			border-left-color: transparent;
-		}
 
-		.notch.active {
-			margin-left: -30px;
-			width: 0px;
-			height: 0px;
-			border: 17px solid blue;
-			border-left-color: transparent;
-		}
+				.bulge.active {
+					width: 0px;
+					height: 0px;
+					border: 17px solid transparent;
+					border-left-color: #8892b5;
+				}
+
+				.notch {
+					margin-left: -30px;
+					width: 0px;
+					height: 0px;
+					border: 17px solid #ddd;
+					border-left-color: transparent;
+				}
+				.notch.active {
+					margin-left: -30px;
+					width: 0px;
+					height: 0px;
+					border: 17px solid #8892b5;
+					border-left-color: transparent;
+				}*/
+
 
 		.normally {
-			width: 28%;
+			line-height: 34px;
+			width: 95%;
 			height: 34px;
-			color: whitesmoke;
-			background-color: grey;
+			background-color: #ddd;
+			/*margin-left: 40px;*/
+		}
+
+		.normally:after {
+			content: '';
+			display: table;
+			box-sizing: border-box;
+			float: right;
+			margin-right: -34px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid transparent;
+			border-left-color: #ddd;
+		}
+
+		.normally:before {
+			content: '';
+			display: table;
+			box-sizing: border-box;
+			float: left;
+			margin-left: -34px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid #ddd;
+			border-left-color: transparent;
+		}
+
+		.normally.active:after {
+			content: '';
+			display: table;
+			box-sizing: border-box;
+			float: right;
+			margin-right: -34px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid transparent;
+			border-left-color: #8892b5;
+		}
+
+		.normally.active:before {
+			content: '';
+			display: table;
+			box-sizing: border-box;
+			float: left;
+			margin-left: -34px;
+			width: 0px;
+			height: 0px;
+			border: 17px solid #8892b5;
+			border-left-color: transparent;
 		}
 
 		.normally.active {
-			width: 28%;
+			line-height: 34px;
+			width: 95%;
 			height: 34px;
 			color: whitesmoke;
-			background-color: blue;
+			background-color: #8892b5;
+			/*margin-left: 40px;*/
+		}
+		.arw>div:first-child>div{
+			padding-left: 17px;
+		}
+
+		.arw>div:first-child>div:before {
+			content: none;
+		}
+
+		.arw>div:last-child>div:after {
+			content: none;
+		}
+		.arw>div:last-child>div {
+			width: 100%;
 		}
 	</style>
 </head>
 <body>
 <div id="page">
 	<!--顶部标题栏-->
-	<div id="top-bar" class="container-fluid">
+	<div id="login-banner" class="container-fluid">
 		<div class="container">
 			<div class="pull-left">
-				<img alt="logo">
-				<span>会员登录</span>
+				LOGO
+				<span>专业的融资服务交易平台</span>
 			</div>
 			<div class="pull-right">
 				<i class="glyphicon glyphicon-earphone"></i>
@@ -92,37 +163,39 @@
 	</div>
 	<!--验证账号面板-->
 	<div id="content" class="container">
-		<!--找回密码标示栏-->
-		<div class="row">
-			<div class="col-sm-12">
-				<span class="pull-left">找回密码</span>
-				<div class="pull-right">
-					<a href="#">返回首页</a>|
-					<a href="#">帮助中心</a>
-				</div>
-			</div>
-		</div>
 		<!--密码找回成功提示框-->
 		<div class="panel panel-default">
-			<div class="panel-body">
+			<div class="panel-heading">
+				<!--找回密码标示栏-->
 				<div class="row">
-					<div class="col-sm-12 ">
-						<div class="pull-left normally">
+					<div class="col-sm-12">
+						<span class="pull-left">找回密码</span>
+						<div class="pull-right">
+							<a href="#">返回首页</a>|
+							<a href="#">帮助中心</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="row arw">
+					<div class="col-sm-4">
+						<div class="pull-left  normally">
 							第一步：验证账号
 						</div>
-						<div class="pull-left bulge"></div>
-						<div class="pull-left notch"></div>
-						<div class="pull-left normally">
+					</div>
+					<div class="col-sm-4">
+						<div class="pull-left  normally ">
 							第二步：重置密码
 						</div>
-						<div class="pull-left bulge"></div>
-						<div class="pull-left notch active"></div>
-						<div class="pull-left normally active">
+					</div>
+					<div class="col-sm-4">
+						<div class="pull-left active normally">
 							第三步：完成
 						</div>
 					</div>
 				</div>
-				<div class="row text-center">
+				<div class="row text-center mg-forget">
 					<strong class="text-danger">恭喜您!密码找回成功!</strong>
 				</div>
 				<div class="row text-center">

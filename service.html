@@ -23,13 +23,44 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		#project-service {
+			margin: -10px
+		}
+
+		#project-service table tr:first-child td:first-child {
+			border-top: 0px;
+		}
+
+		#project-service table td {
+			border-top: 1px dashed #c9c9c9;
+		}
+
+		#project-service table {
+			margin-bottom: 3px;
+		}
+
+		.padding-clear {
+			padding: 0px;
+		}
+
+		.bg-red-text {
+			width: auto;
+			float: left;
+			padding-left: 10px;
+			padding-right: 10px;
+			background-color: #f43;
+			color: #fff;
+			margin: 10px 10px;
+		}
+
 		.circle {
-			width: 200px;
-			height: 200px;
+			border: 10px solid #fff;
+			width: 150px;
+			height: 150px;
 			text-align: center;
-			-moz-border-radius: 100px;
-			-webkit-border-radius: 100px;
-			border-radius: 100px;
+			-moz-border-radius: 75px;
+			-webkit-border-radius: 75px;
+			border-radius: 75px;
 			display: -moz-box;
 			display: -webkit-box;
 			-moz-box-orient: horizontal;
@@ -46,11 +77,40 @@
 		}
 
 		.circle.green {
-			background-color: lightgreen;
+			background-color: #58d9a1;
 		}
 
 		.circle.blue {
-			background-color: deepskyblue;
+			background-color: #6fbff7;
+		}
+
+		.circle-postion {
+			margin-bottom: -100px;
+			z-index: 100;
+			position: relative
+		}
+
+		.td-postion {
+			height: 120px;
+			z-index: -1;
+			position: relative
+		}
+		.bg-slogan{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			margin-top: 15px;
+			text-align: center;
+			background-color: #fafafa;
+			color: #f43;
+		}
+		#capital-service table td{
+			border: none;
+		}
+		.body-title {
+			background-color: #f5f5f5;
+			padding: 8px 10px;
+			border-bottom: 1px solid #ddd;
 		}
 	</style>
 </head>
@@ -91,14 +151,20 @@
 						</li>
 					</ul>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body ">
 					<div class="tab-content">
+						<!--项目方服务介绍-->
 						<div class="tab-pane fade in active" id="project-service">
-							<div>融资宝</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class=" bg-red-text">融资宝</div>
+									<br>
+								</div>
+							</div>
 							<table class="table  table-hover">
 								<tr>
 									<td>
-										<div class="row">
+										<div class="row ">
 											<div class="col-sm-2">
 												<img class="img-responsive" alt="service-logo">
 											</div>
@@ -166,10 +232,13 @@
 									</td>
 								</tr>
 							</table>
-							<div class="row panel-heading">
-								<div class="col-sm-2 hot-underline">
-									单项增值服务
-								</div></div>
+							<div class="body-title">
+								<div class="row">
+									<div class="col-auto hot-underline">
+										单项增值服务
+									</div>
+								</div>
+							</div>
 							<table class="table  table-hover">
 								<tr>
 									<td>
@@ -245,43 +314,88 @@
 								</tr>
 							</table>
 						</div>
+						<!--资金方服务介绍-->
 						<div class="tab-pane fade " id="capital-service">
-							<div>投资宝</div>
+							<div class="row">
+								<div class="col-sm-12 padding-clear">
+									<div class=" bg-red-text">投资宝</div>
+									<br>
+								</div>
+							</div>
 							<img class="img-responsive" alt="capitalservice-img">
-							<button class="btn btn-danger center-block">了解投资宝更多专属特权</button>
-							<div class="row panel-heading">
-								<div class="col-sm-2 hot-underline">
+							<button class="btn btn-hot-to-lighter center-block btn-lg">了解投资宝更多专属特权</button>
+							<div class="panel-heading row">
+								<div class="col-auto hot-underline">
 									申请实地认证
 								</div>
 							</div>
-							<div class="text-center">资金方申请实地认证获得更多服务</div>
+							<div class="bg-slogan">资金方申请实地认证获得更多服务</div>
 							<div class="row">
 								<div class="col-sm-6">
-									<div class="circle green text-center center-block">123</div>
+									<div class="row">
+										<div class="col-sm-offset-2 col-sm-8">
+											<div class="circle green text-center center-block circle-postion">123</div>
+											<table class="table table-striped">
+												<tr>
+													<td class="td-postion"></td>
+												</tr>
+												<tr>
+													<td class="text-center">免费参加</td>
+												</tr>
+												<tr>
+													<td class="text-center">免费参加</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<!--<div class="circle green text-center center-block">123</div>
 									<div class="text-center">免费参加</div>
-									<div class="text-center">免费参加</div>
+									<div class="text-center">免费参加</div>-->
 								</div>
 								<div class="col-sm-6">
-									<div class="circle blue text-center center-block">123</div>
+									<div class="row">
+										<div class="col-sm-offset-2 col-sm-8">
+											<div class="circle blue text-center center-block circle-postion">123</div>
+											<table class="table table-striped">
+												<tr>
+													<td class="td-postion"></td>
+												</tr>
+												<tr>
+													<td class="text-center">免费参加</td>
+												</tr>
+												<tr>
+													<td class="text-center">免费参加</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<!--<div class="circle green text-center center-block">123</div>
 									<div class="text-center">免费参加</div>
-									<div class="text-center">免费参加</div>
+									<div class="text-center">免费参加</div>-->
 								</div>
-								<button class="btn btn-danger center-block">了解实地认证</button>
+								<button class="btn btn-hot-to-lighter center-block btn-lg">了解实地认证更多专属特权</button>
 							</div>
 						</div>
+						<!--如何购买-->
 						<div class="tab-pane fade " id="how-to-buy">
-							<div>购买流程</div>
+							<div class="row">
+								<div class="col-sm-12 padding-clear">
+									<div class=" bg-red-text">投资宝</div>
+									<br>
+								</div>
+							</div>
 							<img class="img-responsive" alt="howtobuy-logo">
 							<div class="row panel-heading">
-								<div class="col-sm-2 hot-underline">
+								<div class="col-auto hot-underline">
 									付款方式
-								</div></div>
-							<div class="text-center">
-								支付宝账户转账，实时到帐实时开通（推荐）
+								</div>
 							</div>
 							<div class="panel panel-default">
 								<div class="panel-body">
 									<div class="row">
+										<div class="col-sm-12 bg-slogan">
+											支付宝账户转账，实时到帐实时开通（推荐）
+										</div>
 										<div class="col-sm-5">
 											<img class="img-responsive" alt="pay-logo">
 										</div>
@@ -290,48 +404,57 @@
 												并愿意接受所有用户监督的商户。
 											</div>
 										</div>
-										<div><i class="glyphicon glyphicon-bullhorn"></i>友情提示;银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
+										<div class=" col-sm-12 bg-slogan">柜台汇款方式</div>
+										<div class="col-sm-12"><i class="glyphicon glyphicon-bullhorn"></i>友情提示;银行转账一般1-2个工作日到账，邮局汇款一般1-5个工作日到账。
 										</div>
-										<table class="table table-hover bank">
-											<tr>
-												<td>招商银行</td>
-												<td>0000 0000 0000 000</td>
-												<td>招商银行杭州分行高新支行</td>
-												<td>杭州易融圈互联网金融服务有限公司</td>
-												<td><a>发送该账号到手机</a></td>
-											</tr>
-											<tr>
-												<td>招商银行</td>
-												<td>0000 0000 0000 000</td>
-												<td>招商银行杭州分行高新支行</td>
-												<td>杭州易融圈互联网金融服务有限公司</td>
-												<td><a>发送该账号到手机</a></td>
-											</tr>
-											<tr>
-												<td>招商银行</td>
-												<td>0000 0000 0000 000</td>
-												<td>招商银行杭州分行高新支行</td>
-												<td>杭州易融圈互联网金融服务有限公司</td>
-												<td><a>发送该账号到手机</a></td>
-											</tr>
-											<tr>
-												<td>招商银行</td>
-												<td>0000 0000 0000 000</td>
-												<td>招商银行杭州分行高新支行</td>
-												<td>杭州易融圈互联网金融服务有限公司</td>
-												<td><a>发送该账号到手机</a></td>
-											</tr>
-											<tr>
-												<td>招商银行</td>
-												<td>0000 0000 0000 000</td>
-												<td>招商银行杭州分行高新支行</td>
-												<td>杭州易融圈互联网金融服务有限公司</td>
-												<td><a>发送该账号到手机</a></td>
-											</tr>
-										</table>
-										<div><i class="fa fa-lightbulb-o"></i>提示：请您汇款后将汇款信息（汇款方式、日期、金额、购买的服务名称、汇款人真实姓名）通过以下任一方式告之易融圈。
+										<div class="col-sm-12">
+											<table class="table table-hover bank">
+												<tr>
+													<td>招商银行</td>
+													<td>0000 0000 0000 000</td>
+													<td>招商银行杭州分行高新支行</td>
+													<td>杭州易融圈互联网金融服务有限公司</td>
+													<td><a>发送该账号到手机</a></td>
+												</tr>
+												<tr>
+													<td>招商银行</td>
+													<td>0000 0000 0000 000</td>
+													<td>招商银行杭州分行高新支行</td>
+													<td>杭州易融圈互联网金融服务有限公司</td>
+													<td><a>发送该账号到手机</a></td>
+												</tr>
+												<tr>
+													<td>招商银行</td>
+													<td>0000 0000 0000 000</td>
+													<td>招商银行杭州分行高新支行</td>
+													<td>杭州易融圈互联网金融服务有限公司</td>
+													<td><a>发送该账号到手机</a></td>
+												</tr>
+												<tr>
+													<td>招商银行</td>
+													<td>0000 0000 0000 000</td>
+													<td>招商银行杭州分行高新支行</td>
+													<td>杭州易融圈互联网金融服务有限公司</td>
+													<td><a>发送该账号到手机</a></td>
+												</tr>
+												<tr>
+													<td>招商银行</td>
+													<td>0000 0000 0000 000</td>
+													<td>招商银行杭州分行高新支行</td>
+													<td>杭州易融圈互联网金融服务有限公司</td>
+													<td><a>发送该账号到手机</a></td>
+												</tr>
+											</table>
 										</div>
-										<div>（1）周一至周五致电 000 000 0000</div>
+										<div class="col-sm-12">
+											<i class="fa fa-lightbulb-o"></i>
+											提示：请您汇款后将汇款信息（汇款方式、日期、金额、购买的服务名称、汇款人真实姓名）通过以下任一方式告之易融圈。
+										</div>
+										<div class="col-sm-12">
+											<ul class="list-unstyled">
+												<li>1.周一至周五致电 000 000 0000</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
