@@ -31,16 +31,47 @@
 			color: #999;
 			background-color: #ddd;
 		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		.huodong-list-line{
+			color: #999;
+			padding-bottom: 15px;
+			border-bottom: 1px dashed #ddd;
+			margin-bottom: 15px;
+			margin-top: 10px;
+		}
+		.huodong-li li{
+			height: 30px;
+			line-height: 30px;
+			overflow: hidden;
+			white-space: normal;
+			list-style-type:none;
+		}
+		.huodong-bg-left{
+			background-color: #f3f3f3;
+		}
+		.top-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
 
 	</style>
 </head>
 <body>
 
 <div class="container">
-	<a href="#" class="to-hot">沙龙活动</a>|<a href="#" class="to-hot">站外活动</a>
+	<div class="top-margin"><a href="#" class="to-hot">沙龙活动</a>|<a href="#" class="to-hot">站外活动</a></div>
 	<!--路径导航-->
-	<ol class="breadcrumb">
-		<i class="fa fa-home"></i>
+	<ol class="breadcrumb breadcrumb-bg">
+		<i class="fa fa-home i-home"></i>
 		<li><a href="#" class="title">首页</a></li>
 		<li><a href="#" class="title">活动</a></li>
 		<li><a href="#" class="title">沙龙活动</a></li>
@@ -61,7 +92,24 @@
 							<div>活动地点：浙江省杭州市</div>
 							<div>活动简介：8月5日，由投融界主办的第220期VIP投资发展沙龙在杭州成功举办。活动现场精...</div>
 						</div>
-						<div>阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
+					</div>
+					<div class="row">
+						<div class="col-md-2 col-sm-3">
+							<a href="#"><img  class="img-responsive" src="#"></a>
+						</div>
+						<div class="col-md-10 col-sm-9">
+							<a href="#" class="title h-title">特产平台沙龙现场最具特色，资金方纷纷点评——投融界第220期VIP投资发展沙龙成功举行[沙龙活动]</a>
+							<div class="pull-right over-bg">已结束</div>
+							<div>活动时间：2016年08月05日13:30-17:30</div>
+							<div>活动地点：浙江省杭州市</div>
+							<div>活动简介：8月5日，由投融界主办的第220期VIP投资发展沙龙在杭州成功举办。活动现场精...</div>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="huodong-list-line">阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
 					</div>
 					<div class="row">
 						<div class="col-md-2 col-sm-3">
@@ -74,20 +122,9 @@
 							<div>活动地点：浙江省杭州市</div>
 							<div>活动简介：8月5日，由投融界主办的第220期VIP投资发展沙龙在杭州成功举办。活动现场精...</div>
 						</div>
-						<div>阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
 					</div>
 					<div class="row">
-						<div class="col-md-2 col-sm-3">
-							<a href="#"><img  class="img-responsive" src="#"></a>
-						</div>
-						<div class="col-md-10 col-sm-9">
-							<a href="#" class="title h-title">特产平台沙龙现场最具特色，资金方纷纷点评——投融界第220期VIP投资发展沙龙成功举行[沙龙活动]</a>
-							<div class="pull-right over-bg">已结束</div>
-							<div>活动时间：2016年08月05日13:30-17:30</div>
-							<div>活动地点：浙江省杭州市</div>
-							<div>活动简介：8月5日，由投融界主办的第220期VIP投资发展沙龙在杭州成功举办。活动现场精...</div>
-						</div>
-						<div>阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
+						<div class="huodong-list-line">阅读(2425) | <a href="javascript:;" class="to-hot">发送到我的邮箱</a></div>
 					</div>
 					<!--分页-->
 					<nav class="pull-right">
@@ -127,16 +164,22 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body huodong-bg-left">
 					<div><a href="#"><img class="img-responsive" src="#"></a></div>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016第十届投资理财金融（南京）博览会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016中国投资创业新模式发展峰会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016第四届深圳金融商博会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016（杭州）第八届投资理财金融博览会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016年第33届广州特许连锁加盟展览会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016年第十七届广州国际投资理财金融博览会</a><br>
-					<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016上海餐饮连锁加盟及数字化管理展览会</a><br>
+					<ul class="huodong-li">
+						<li>
+						<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
+						</li>
+						<li>
+						<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
+						</li>
+						<li>
+						<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
+						</li>
+						<li>
+						<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<!--图片链接-->

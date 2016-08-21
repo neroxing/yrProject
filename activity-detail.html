@@ -24,7 +24,11 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.li-dian-none{
+	.huodong-li li{
+		height: 30px;
+		line-height: 30px;
+		overflow: hidden;
+		white-space: normal;
 		list-style-type:none;
 	}
 	.title-h1 h1{
@@ -32,28 +36,59 @@
 		color: #3b4a81;
 	}
 	.bg-huodong{
-		padding: 5px;
+		padding: 7px;
 		font-weight: normal;
 		background: #f1f1f1;
+	}
+	.huodong-margin{
+		margin-bottom: 5px;
 	}
 	.red {
     	color: #e93100;
 	}
-	.line-gray{
-		height:1px; 
-		margin:20px auto; 
-		background-color:#ddd; 
-		overflow:hidden; 
-		line-height:1px;
+	.breadcrumb-bg{
+		background-color: var(--white-light);
+		margin: 0px;
+		padding: 0px;
+	}
+	.i-home{
+		color: var(--cold-dark);
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	.subTool{
+		color: #999;
+		padding-bottom: 5px;
+		height: 30px;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 10px;
+	}
+	.subTool em{
+		margin: 0 10px;
+	}
+	.huodong-line{
+		border-bottom: 2px solid #ddd;
+		height: 40px;
+		font: bold 14px/40px arial;
+	}
+	.huodong-margin-top{
+		margin-top: 40px;
+	}
+	.huodong-bg-left{
+		background-color: #f3f3f3;
+	}
+	.top-margin{
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	</style>
 </head>
 <body>
 <div class="container">
-	<a href="#" class="to-hot">沙龙活动</a>|<a href="#" class="to-hot">站外活动</a>
-	<ol class="breadcrumb">
-		<i class="fa fa-home"></i>
+	<div class="top-margin"><a href="#" class="to-hot">沙龙活动</a>|<a href="#" class="to-hot">站外活动</a></div>
+	<ol class="breadcrumb breadcrumb-bg">
+		<i class="fa fa-home i-home"></i>
 		<li><a href="#" class="title">首页</a></li>
 		<li><a href="#" class="title">活动</a></li>
 		<li><a href="#" class="title">沙龙活动</a></li>
@@ -67,11 +102,11 @@
 				<div class="panel-body title-h1 ">
 					<h1>“创刻盛会”四家优质项目方路演角逐桂冠（第23期“创刻SHOW”明星项目路演峰会圆满落幕）</h1>
 					<!--来源分享-->
-					<div>
-						<span>2016年07月15日20：12</span><em>|</em>
-						<span>来源：易融圈<em>|</em></span>
+					<div class="subTool">
+						2016年07月15日20：12<em>|</em>
+						来源：易融圈<em>|</em>
 						<a href="javascript:;" class="title">收藏</a><em>|</em>
-						<a href="javascript:;" class="title">发到我的邮箱</a><em>|</em></span>
+						<a href="javascript:;" class="title">发到我的邮箱</a><em>|</em>
 						<span class="dropdown">
 						<a href="#" class="dropdown-toggle to-hot" data-toggle="dropdown">分享到&nbsp;<i
 								class="fa fa-caret-down"></i></a>
@@ -84,18 +119,18 @@
 						</ul>
 						</span>
 					</div>
-					<div class="line-gray"></div>
 					<!--活动时间-->
-					<div class="row">
+					<div class="row huodong-margin-top">
 						<div class=" col-sm-5 col-sm-offset-1 ">
-							<div><span class="bg-huodong">活动时间</span>&nbsp;2016年07月15日13:30-17:30</div>
+							<div class="huodong-margin"><span class="bg-huodong">活动时间</span>&nbsp;2016年07月15日13:30-17:30</div>
 							<div><span class="bg-huodong">报名时间</span>&nbsp;2016年07月04日-2016年07月14日</div>
 						</div>
 						<div class=" col-sm-5 ">
-							<div><span class="bg-huodong">活动地点</span>&nbsp;浙江省杭州市</div>
+							<div class="huodong-margin"><span class="bg-huodong">活动地点</span>&nbsp;浙江省杭州市</div>
 							<div class="bg-huodong red"><span>已结束</span></div>
 						</div>
 					</div>
+					<div class="huodong-line"></div>
 					<!--文章-->
 					<div>
 						<p></p>
@@ -188,8 +223,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
-					<ul class="li-dian-none">
+				<div class="panel-body huodong-bg-left">
+					<ul class="huodong-li">
 						<li>
 						<a href="#" class="title">[站外活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
 						</li>
@@ -217,8 +252,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
-					<ul class="li-dian-none">
+				<div class="panel-body huodong-bg-left">
+					<ul class="huodong-li">
 						<li>
 						<a href="#" class="title">[沙龙活动]</a><a href="#" class="to-hot">2016国际资本峰会（ICC 2016）</a>
 						</li>
