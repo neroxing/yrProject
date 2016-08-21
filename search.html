@@ -24,6 +24,53 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.more-padding-left{
+			padding-right: 15px;
+		}
+		.li-dian-none{
+			list-style-type:none;
+		}
+		.line-gray{
+			height:1px; 
+			margin:10px auto; 
+			background-color:#ddd; 
+			overflow:hidden; 
+			line-height:1px;
+		}
+	
+		.filter {
+		    height: 30px;
+		    border-right: 1px solid #ddd;
+		    background: #f3f3f3;
+		    border-bottom: 2px solid #717a97;
+		    margin-bottom: 10px;
+		}
+		.filter strong {
+		    display: block;
+		    width: 98px;
+		    text-align: center;
+		    font: bold 14px/30px simsun;
+		    background: none #717a97;
+		    border: 1px solid #717a97;
+		    color: #fff;
+		    height: 30px;
+			margin-left: -10px;
+		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		.top-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
 
 	</style>
 </head>
@@ -31,7 +78,7 @@
 <!--热门&路径-->
 <div class="container">
 	<!--热门搜索-->
-	<div>
+	<div class="top-margin">
 		<strong>热门搜索&gt;&gt;</strong>
 		<a href="#" class="to-hot">高盛集团</a>
 		<a href="#" class="to-hot">国家扶持的农业项目</a>
@@ -41,8 +88,8 @@
 	</div>
 	<!--路径图-->
 	<div>
-		<ol class="breadcrumb">
-			<i class="fa fa-home"></i>
+		<ol class="breadcrumb breadcrumb-bg">
+			<i class="fa fa-home i-home"></i>
 			<li><a href="#" class="title">首页</a></li>
 			<li><a href="#" class="title">投资机构导航</a></li>
 			<li><span class="active">搜索列表</span></li>
@@ -403,8 +450,8 @@
 						</div>
 					</div>
 					<!--当前搜索条件-->
-					<div class="row">
-						<div class="col-sm-3">
+					<div class="row  filter">
+						<div class="col-sm-3 ">
 							<strong>当前搜索条件</strong>
 						</div>
 						<div class="col-sm-9">
@@ -423,6 +470,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<div class="row">
 						<div class="col-sm-3">
 							<a href="#"><img  class="img-responsive" src="#"> </a>
@@ -435,6 +483,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<div class="row">
 						<div class="col-sm-3">
 							<a href="#"><img  class="img-responsive" src="#"> </a>
@@ -572,29 +621,35 @@
 							<div class="bg-cold-light">热门投资机构</div>
 						</div>
 						<div class="col-auto pull-right">
-							<a href="#" class="title">更多&gt;&gt;</a>
+							<a href="#" class="title more-padding-left">更多&gt;&gt;</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="to-hot">
+					<ul class="to-hot li-dian-none">
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center">
+							<a href="#" class="to-hot ">安徽省科技产业投资有限公司</a>
+							</div>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center">
+							<a href="#" class="to-hot ">安徽省科技产业投资有限公司</a>
+							</div>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center">
+							<a href="#" class="to-hot ">安徽省科技产业投资有限公司</a>
+							</div>
 						</li>
 					</ul>
 				</div>

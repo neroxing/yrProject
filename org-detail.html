@@ -24,6 +24,9 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.li-dian-none{
+			list-style-type:none;
+		}
 		.table-overFlow {
 			height: 500px;
 			overflow-y: scroll;
@@ -49,12 +52,76 @@
 		.i-thumbs{
 			color: red;
 		}
+		.more-padding-left{
+			padding-right: 15px;
+		}
+		.more-padding{
+			padding-right: 30px;
+		}
+		.tab-org>li.active>a, .tab-org>li.active>a:hover, .tab-org>li.active>a:focus{
+			color: #54679d;
+			font-weight: bold;
+			border-left: none;
+			border-bottom: none;
+			border-radius: 0px;
+			width: 200px;
+			text-align: center;
+		}
+		.message{
+			border-bottom: 1px solid #eeeeee;
+			padding: 15px 0;
+		}
+		.org-title{
+			font-size: 18px;
+			color: #333333;
+			font-weight: bold;
+		}
+		.new-line li{
+			height: 57px;
+			border-bottom: 1px dotted #dddddd;
+			line-height: 57px;
+			padding: 0 30px;
+		}
+		.org{
+			background-color:#f8f8f8;
+		
+		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		.line-dotted {
+		    border-bottom: 1px dotted #dddddd;
+		    height: 28px;
+		    margin-bottom: 30px;
+		}
+		.margin-bottom-30 {
+			margin-bottom: 30px;
+		}
+		.capital li{
+			height: 50px;
+			line-height: 50px;
+			border-bottom: 1px dashed #dddddd;
+			text-overflow:ellipsis; 
+			overflow:hidden; 
+			white-space:nowrap; 
+		}
+		.top-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
 	</style>
 </head>
 <body>
 <!--热门搜索&广告-->
 <div class="container">
-	<div>
+	<div class="top-margin">
 		<span>热门搜索&gt;&gt;</span>
 		<a href="#">项目融资</a>
 		<a href="#">资产交易</a>
@@ -70,21 +137,21 @@
 		<div class="col-md-9 col-sm-8">
 			<!--投资机构or投资人物-->
 			<div class="panel panel-default">
-				<div class="panel-heading">
+				<div class="panel-heading" style="background-color:white;">
 					<i class="fa fa-star icon-hot-light"></i>
 					投资机构
 				</div>
-				<div class="panel-body">
-					<ul class="nav nav-tabs tab-cold-overline">
+				<div class="org">
+					<ul class="nav nav-tabs tab-cold-overline tab-org">
 						<li class="active"><a href="#" data-toggle="tab">投资机构</a></li>
 						<li><a href="#" data-toggle="tab">投资人物</a></li>
-					</ul>
+					</ul>		
 				</div>
 			</div>
 			<!--路径图-->
 			<div>
-				<ol class="breadcrumb">
-					<i class="fa fa-home"></i>
+				<ol class="breadcrumb breadcrumb-bg">
+					<i class="fa fa-home i-home"></i>
 					<li><a href="#" class="title">首页</a></li>
 					<li><a href="#" class="title">投资机构导航</a></li>
 					<li><span class="active">软银中国创业投资有限公司</span></li>
@@ -94,30 +161,28 @@
 			<div class="panel">
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-sm-5">
 							<img class="img-responsive" src="#">
 						</div>
-						<div class="col-sm-8">
-							软银中国创业投资有限公司
+						<div class="col-sm-7 ">
+							<span class="org-title">软银中国创业投资有限公司</span>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">机构简称</div>
-						<div class="col-sm-10 col-md-11">软银中国</div>
+						<div class="col-sm-3 col-md-1">机构简称</div>
+						<div class="col-sm-9 col-md-11">软银中国</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">成立时间</div>
-						<div class="col-sm-10 col-md-11">2000年</div>
+						<div class="col-sm-3 col-md-1">成立时间</div>
+						<div class="col-sm-9 col-md-11">2000年</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">投资阶段</div>
-						<div class="col-sm-10 col-md-11">初创期（天使投资） 扩张期（>VC投资） 成熟期（>PE投资）</div>
+						<div class="col-sm-3 col-md-1">投资阶段</div>
+						<div class="col-sm-9 col-md-11">初创期（天使投资） 扩张期（>VC投资） 成熟期（>PE投资）</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-2 col-md-1">投资行业</div>
-						<div class="col-sm-10 col-md-11">能源 医疗保健 机械机电 IT互联网 文化传媒广告 商务贸易</div>
-					</div>
-					<div class="row">
+						<div class="col-sm-3 col-md-1">投资行业</div>
+						<div class="col-sm-9 col-md-11">能源 医疗保健 机械机电 IT互联网 文化传媒广告 商务贸易</div>
 					</div>
 				</div>
 				<!--跳转-->
@@ -402,13 +467,14 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-dotted"></div>
 					<!--留言框-->
 					<div class="row">
-						<div class="col-auto">
+						<div class="col-auto margin-bottom-30">
 							<div class="bg-hot">我要评论</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row margin-bottom-30">
 						<div class="col-md-2 col-sm-3">
 							<img class="img-circle img-responsive" src="#" alt="头像">
 						</div>
@@ -417,8 +483,8 @@
 							<button class="btn btn-cold-to-lighter pull-right">发布评论</button>
 						</div>
 					</div>
-					<div>读者评论</div>
-					<div class="row">
+					<div class="margin-bottom-30">读者评论</div>
+					<div class="row message">
 						<div class="col-md-2 col-sm-3">
 							<img src="#" alt="头像">
 						</div>
@@ -427,12 +493,12 @@
 							<p>陈小姐您好！请关注一下我的社区O2O生鲜（连锁）超市的项目，这是一个消费者众多，能为之兴奋的项目，也是政府长期扶持的民生产业，每年有7万亿以上市场的项目。</p>
 							<div class="pull-left">2016-07-12 06:10:36</div>
 							<div class="pull-right">来自网页&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;1</a>
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="glyphicon glyphicon-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="glyphicon glyphicon-thumbs-down"></i>&nbsp;&nbsp;1</a>
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row message">
 						<div class="col-md-2 col-sm-3">
 							<img src="#" alt="头像">
 						</div>
@@ -441,8 +507,8 @@
 							<p>陈小姐您好！请关注一下我的社区O2O生鲜（连锁）超市的项目，这是一个消费者众多，能为之兴奋的项目，也是政府长期扶持的民生产业，每年有7万亿以上市场的项目。</p>
 							<div class="pull-left">2016-07-12 06:10:36</div>
 							<div class="pull-right">来自网页&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
-								|&nbsp;&nbsp;<a href="javascript:;"><i class="fa fa-thumbs-down"></i>&nbsp;&nbsp;1</a>
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="glyphicon glyphicon-thumbs-up i-thumbs"></i>&nbsp;&nbsp;1</a>&nbsp;&nbsp;
+								|&nbsp;&nbsp;<a href="javascript:;"><i class="glyphicon glyphicon-thumbs-down"></i>&nbsp;&nbsp;1</a>
 							</div>
 						</div>
 					</div>
@@ -481,21 +547,23 @@
 						<div class="col-auto">
 							<div class="hot-underline">软银中国最新报道</div>
 						</div>
-						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+						<div class="pull-right col-auto ">
+							<a href="#" class="more-padding">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
-					<a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
-						<div class="pull-right">2014/09/11</div>
-					</a><br>
+				<ul class="new-line">
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+					<li><a href="#" class="to-hot">趣医网获千万美元A轮融资 弘晖和软银中国投资
+						<div class="pull-right">2014/09/11</div></a>
+					</li>
+				</ul>	
 				</div>
 			</div>
 		</div>
@@ -509,13 +577,13 @@
 						<div class="col-auto">
 							<div class="hot-underline">相关问答</div>
 						</div>
-						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+						<div class="pull-right col-auto ">
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="capital">
 						<li><a href="#" class="to-hot">软银中国刘天民：看重创业团队 寻找下一个阿里</a></li>
 						<li><a href="#" class="to-hot">李开复：中国崛起创新不可或缺</a></li>
 						<li><a href="#" class="to-hot">阿里巨额投资银泰商业集团 O2O领域再下一城</a></li>
@@ -535,12 +603,12 @@
 							<div class="hot-underline">最新资金投资</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="capital">
 						<li><a href="#" class="to-hot">上海某企业资金10万-1000万元寻全国化学化工项目合作</a></li>
 						<li><a href="#" class="to-hot">贵州某企业资金2亿元寻节能环保项目股权合作</a></li>
 						<li><a href="#" class="to-hot">浙江某投资公司寻材料项目合作</a></li>
@@ -560,7 +628,7 @@
 							<div class="hot-underline">热门投资人</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
@@ -587,29 +655,29 @@
 							<div class="hot-underline">热门投资机构</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul class="to-hot">
+					<ul class="to-hot li-dian-none">
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center"><a href="#" class="to-hot">安徽省科技产业投资有限公司</a></div>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center"><a href="#" class="to-hot">安徽省科技产业投资有限公司</a></div>
 						</li>
 						<li>
 							<div><a href="" class="to-hot"><img
 									src="img/3a5d8e19-0c04-49a9-996f-2aa074903b29.gif" alt="" class="center-block"></a>
 							</div>
-							<a href="#" class="to-hot text-center">安徽省科技产业投资有限公司</a>
+							<div class="text-center"><a href="#" class="to-hot">安徽省科技产业投资有限公司</a></div>
 						</li>
 					</ul>
 				</div>
@@ -622,20 +690,20 @@
 							<div class="hot-underline">其他投资机构</div>
 						</div>
 						<div class="pull-right col-auto">
-							<a href="#">更多</a>
+							<a href="#" class="more-padding-left">更多</a>
 						</div>
 					</div>
 				</div>
 				<div class="panel-body">
-					<ul>
-						<li><span>·</span><a href="#" class="to-hot">广东粤财创业投资有限公司</a></li>
-						<li><span>·</span><a href="#" class="to-hot">虎童股权投资基金</a></li>
-						<li><span>·</span><a href="#" class="to-hot">深圳市融创创业投资有限公司</a></li>
-						<li><span>·</span><a href="#" class="to-hot">浙江华瓯创业投资有限公司</a></li>
-						<li><span>·</span><a href="#" class="to-hot">Ant Capital Partners Co., Ltd.</a></li>
-						<li><span>·</span><a href="#" class="to-hot">深圳市富坤创业投资有限公司</a></li>
-						<li><span>·</span><a href="#" class="to-hot">新电投资公司</a></li>
-						<li><span>·</span><a href="#" class="to-hot">愈奇创业投资公司</a></li>
+					<ul class="capital">
+						<li><a href="#" class="to-hot">广东粤财创业投资有限公司</a></li>
+						<li><a href="#" class="to-hot">虎童股权投资基金</a></li>
+						<li><a href="#" class="to-hot">深圳市融创创业投资有限公司</a></li>
+						<li><a href="#" class="to-hot">浙江华瓯创业投资有限公司</a></li>
+						<li><a href="#" class="to-hot">Ant Capital Partners Co., Ltd.</a></li>
+						<li><a href="#" class="to-hot">深圳市富坤创业投资有限公司</a></li>
+						<li><a href="#" class="to-hot">新电投资公司</a></li>
+						<li><a href="#" class="to-hot">愈奇创业投资公司</a></li>
 					</ul>
 				</div>
 			</div>

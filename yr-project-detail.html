@@ -42,6 +42,57 @@
 		color: var(--white-light);
 		text-align: center;
 	}
+	.pro-title{
+		font-size: 16px;
+		font-weight: bold;
+		color: #3b4a82;
+	}
+	.line-gray{
+			height:1px; 
+			margin:10px auto; 
+			background-color:#ddd; 
+			overflow:hidden; 
+			line-height:1px;
+	}
+	.pro-line li{
+		list-style-type:none;
+		height:50px;
+		line-height: 50px;
+		border-bottom: 1px dashed #dddddd;
+		text-overflow:ellipsis; 
+		overflow:hidden; 
+		white-space:nowrap; 
+		
+	}
+	.detail{
+		line-height: 25px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.detail-margin-bottom{
+		margin-bottom: 10px;
+	}
+	.talk-btn-center{
+		height: 100px;
+		line-height: 100px;
+	}
+	.card-lineheight{
+		line-height: 35px;
+	}
+	.detail-btn-margin{
+		margin-bottom: 10px;
+	}
+	.breadcrumb-bg{
+		background-color: var(--white-light);
+		margin: 0px;
+		padding: 0px;
+	}
+	.i-home{
+		color: var(--cold-dark);
+		margin-right: 10px;
+		font-size: 16px;
+	}
 
 
 
@@ -51,8 +102,8 @@
 <body>
 <div class="container">
 	<!--路径导航-->
-	<ol class="breadcrumb">
-		<i class="fa fa-home"></i>
+	<ol class="breadcrumb breadcrumb-bg">
+		<i class="fa fa-home i-home"></i>
 		<li><a href="#">首页</a></li>
 		<li><a href="#">选项目</a></li>
 		<li><a href="#">项目信息</a></li>
@@ -67,7 +118,7 @@
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-sm-12">
-							<h2><a href="javascript:void(0);" class="to-hot">江苏某一站式企业服务平台项目股权融资8000万-1亿元</a></h2>
+							<h2><a href="javascript:void(0);" class="to-hot pro-title ">江苏某一站式企业服务平台项目股权融资8000万-1亿元</a></h2>
 							<div class="pull-left">
 								<time>2016-07-25</time>
 								浏览数：418人
@@ -84,34 +135,36 @@
 							</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-6 detail">
 							<div>项目类型：<a href="#">项目融资</a></div>
 							<div>所在地区：江苏省扬州市</div>
 							<div>融资主体：企业</div>
 							<div>所属行业：<a href="#">其他行业</a></div>
 							<div>融资用途：扩张期需要</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-6 detail">
 							<div>融资金额：8000万元-1亿元</div>
 							<div>意向资金：不限</div>
 							<div>融资方式：<a href="#">股权融资</a></div>
 							<div>可提供资料：商业/项目计划书,公司证件,相关财务资料,其它资料</div>
 						</div>
 					</div>
+					<div class="line-gray"></div>
 					<div class="row">
-						<div class="col-auto">
+						<div class="col-auto detail-margin-bottom">
 							<div class="bg-hot">
 							股权融资
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-6 detail">
 							<div>项目所处阶段：初创期</div>
 							<div>资金方占股比例：15 - 20 %</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-6 detail">
 							<div>投资退出方式：IPO,股权转让,股份回购</div>
 							<div>最短退出年限：3 年</div>
 						</div>
@@ -124,7 +177,7 @@
 							<h2>昨日投资人发出约谈共计1858次</h2>
 							<div>对该项目感兴趣？快来约谈项目方吧，让项目方主动联系您！</div>
 						</div>
-						<div class="col-md-2 col-sm-3">
+						<div class="col-md-2 col-sm-3 talk-btn-center">
 							<a href="javascript:void(0);">
 								<button type="button" class="btn btn-from-hot">约谈项目方</button>
 							</a>
@@ -207,7 +260,7 @@
 							</div>
 						</div>
 					</div>
-				</form>
+				</form>	
 				<div class="row">
 					<div class="col-sm-2">
 						<img class="img-circle img-responsive" src="#" alt="头像">
@@ -238,19 +291,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body card-lineheight">
 					<div><a href="#"><img class="img-circle img-responsive" src="#"></a></div>
 					<div class="text-center">杨先生</div>
 					<div>所在公司：江苏省扬州市某公司</div>
 					<div>职位：董事长</div>
 					<div>所在地区：江苏省扬州市邗江区</div>
 					<div>所属行业：其他行业</div>
+					<div class="detail-btn-margin">
 					<a href="javascript:void(0);">
 						<button type="button" class="btn btn-hot-to-lighter btn-block">查看联系方式</button>
 					</a>
+					</div>
+					<div>
 					<a href="#">
 						<button type="button" class="btn btn-cold-to-lighter btn-block">进入展厅</button>
 					</a>
+					</div>
 				</div>
 			</div>
 			<!--相似的项目-->
@@ -262,14 +319,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body card-lineheight">
 					<div>
-						<h2><a href="#">山东某3D打印技术应用开发有限公司股权融资50万-100万元</a></h2>
+						<div><a href="#">山东某3D打印技术应用开发有限公司股权融资50万-100万元</a></div>
 						<div>融资金额：50万-100万</div>
 						<div>股权融资 | 种子期 | 其他行业 | 山东省</div>
 					</div>
+					<div class="line-gray"></div>
 					<div>
-						<h2><a href="#">山东某3D打印技术应用开发有限公司股权融资50万-100万元</a></h2>
+						<div><a href="#">山东某3D打印技术应用开发有限公司股权融资50万-100万元</a></div>
 						<div>融资金额：50万-100万</div>
 						<div>股权融资 | 种子期 | 其他行业 | 山东省</div>
 					</div>
@@ -285,7 +343,7 @@
 					</div>
 				</div>
 				<div class=" panel-body">
-					<ul>
+					<ul class="pro-line">
 						<li><a href="#">湖南某科技产品交易平台项目股权融资600万-5000万元</a></li>
 						<li><a href="#">山东某农业养殖销售一体化项目股权融资200万元</a></li>
 						<li><a href="#">河南洛阳某无线充电桩项目股权融资500万元</a></li>

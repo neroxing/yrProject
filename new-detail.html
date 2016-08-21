@@ -24,8 +24,48 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.li-dian-none{
-				list-style-type:none;
+		.title-h1 h1{
+			font: normal 22px/1.6 Microsoft Yahei,Simhei,Simsun;
+			color: #3b4a81;
+		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
+		.subTool{
+			color: #999;
+			padding-bottom: 5px;
+			height: 30px;
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 10px;
+		}
+		.subTool em{
+			margin: 0 10px;
+		}
+		.new-li li{
+			height: 26px;
+			line-height: 26px;
+			overflow: hidden;
+			white-space: normal;
+		}
+		.newPage{
+			overflow: hidden;
+			border-bottom: 2px solid #ddd;
+			padding: 10px 0;
+			margin-bottom: 10px;
+		}
+		.flag{
+			padding: 10px 0;
+			border-bottom: 1px dashed #dddddd; 
+		}
+		.huodong-bg-left{
+			background-color: #f3f3f3;
 		}
 	</style>
 </head>
@@ -33,8 +73,8 @@
 
 <div class="container">
 	<a href="#"><img class="img-responsive" src="#"></a>
-	<ol class="breadcrumb">
-		<i class="fa fa-home"></i>
+	<ol class="breadcrumb breadcrumb-bg">
+		<i class="fa fa-home i-home"></i>
 		<li><a href="#" class="title">首页</a></li>
 		<li><a href="#" class="title">资讯</a></li>
 		<li><a href="#" class="title">易融视界</a></li>
@@ -47,13 +87,13 @@
 		<div class="col-md-9 col-sm-8 ">
 			<div class="panel">
 				<!--文章-->
-				<div class="panel-body">
+				<div class="panel-body title-h1">
 					<h1>易融圈专访吕志勇：家装建材O2O平台那么多，这里有最好的产品和服务</h1>
-					<div>
-						<span>2016年07月14日14：14</span>&nbsp;|&nbsp;
-						<span>来源：易融圈&nbsp;|&nbsp;</span>
-						<a href="javascript:;" class="title">收藏</a>&nbsp;|&nbsp;
-						<a href="javascript:;" class="title">发到我的邮箱</a>&nbsp;|&nbsp;</span>
+					<div class="subTool">
+						2016年07月14日14：14<em>|</em>
+						来源：易融圈<em>|</em>
+						<a href="javascript:;" class="title">收藏</a><em>|</em>
+						<a href="javascript:;" class="title">发到我的邮箱</a><em>|</em>
 						<span class="dropdown">
 						<a href="#" class="dropdown-toggle to-hot" data-toggle="dropdown">
 							分享到&nbsp;<i class="fa fa-caret-down"></i>
@@ -65,7 +105,7 @@
 							<li><a href="#"><img src="#">网易微博</a></li>
 							<li><a href="#"><img src="#">腾讯微博</a></li>
 						</ul>
-					</span>
+						</span>
 					</div>
 					<div>
 						<a href="#"><img class="img-responsive" src="#"></a>
@@ -146,24 +186,31 @@
 							</strong>
 						</p>
 						<p></p>
-						<img src="#">
-						<p>转载请注明，来自易融圈<a href="javascript:;"
-						                 class="title">http://yrrongquan.com.cn/detail_158646.html</a>
-						</p>
-						<p>标签:<a href="#" class="title">O2O</a>&nbsp;<a href="#" class="title">线下体验</a>&nbsp;<a href="#"
-						                                                                                        class="title">工长监理</a>
-						</p>
 					</div>
 					<div>
+						<img src="#">
+					</div>
+					<div>
+						转载请注明，来自易融圈
+						<a href="javascript:;"class="title">http://yrrongquan.com.cn/detail_158646.html</a>
+					</div>
+					<div class="flag">
+
+						标签:
+						<a href="#" class="title">O2O</a>&nbsp;
+						<a href="#" class="title">线下体验</a>&nbsp;
+						<a href="#" class="title">工长监理</a>
+					</div>
+					<div class="row newPage">
 						<div class=" col-sm-6">
 							上一篇：<a href="#" class="title">华生怒了，1天3发声逼问宝能华润关系为哪般？</a>
 						</div>
 						<div class=" col-sm-6">
 							下一篇：<a href="#" class="title">海底捞终于上市了，但为啥上的是火锅料？</a>
 						</div>
-					</div>
+					</div>	
 					<div>
-						<span>相关资讯推荐</span>
+						<strong>相关资讯推荐</strong>
 					</div>
 				</div>
 			</div>
@@ -173,28 +220,28 @@
 				<div class="panel-heading">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="pull-left">我要评论</div>
+							<div class="pull-left"><strong>我要评论</strong></div>
 							<div class="pull-right">您还可以输入140个字</div>
 						</div>
 					</div>
 				</div>
-				<div class="panel-body row">
-					<div class=" col-sm-1">
-						<a href="#"><img src="#" alt="头像"></a>
+				<div class="panel-body ">
+					<div class="row">
+						<div class=" col-sm-1">
+							<a href="#"><img src="#" alt="头像"></a>
+						</div>
+						<div class=" col-sm-11">
+							<textarea class="form-control"></textarea>
+						</div>
+						<div class="col-sm-12">
+							<button type="button" class="btn  pull-right">评论</button>
+						</div>
 					</div>
-					<div class=" col-sm-11">
-						<textarea class="form-control"></textarea>
+					<div class="row">
+						<strong>读者评论</strong>
 					</div>
-					<div class="col-sm-12">
-						<button type="button" class="btn  pull-right">评论</button>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="panel-heading">
-						读者评论
-					</div>
-					<div class="panel-body text-center">
-						<i class="fa fa-exclamation-circle"></i>暂无任何评论信息
+					<div class="row">
+						<div class="text-center"><i class="fa fa-exclamation-circle"></i>暂无任何评论信息</div>
 					</div>
 				</div>
 			</div>
@@ -210,8 +257,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
-					<ul class="li-dian-none">
+				<div class="panel-body huodong-bg-left">
+					<ul class="new-li">
 						<li><a href="#" class="to-hot">腾百万是如何失败的：天时、地利、人和皆不占优势</a></li>
 						<li><a href="#" class="to-hot">你还记得那个投资奇才王刚吗？他投资了“花卷”</a></li>
 						<li><a href="#" class="to-hot">滴滴优步并购案背后的“谋者”</a></li>
@@ -237,8 +284,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel-body">
-					<ul class="li-dian-none">
+				<div class="panel-body huodong-bg-left">
+					<ul class="new-li">
 						<li><a href="#" class="to-hot">易融圈大公司周报（7.5-7.11）</a></li>
 						<li><a href="#" class="to-hot">黄有龙再次神投资：入股顺龙10天浮盈4亿港元</a></li>
 						<li><a href="#" class="to-hot">易融圈：50家资金方齐聚沙龙现场 与创业精英谈融资合作</a></li>
