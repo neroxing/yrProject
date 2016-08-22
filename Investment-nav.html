@@ -24,14 +24,31 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.hd h2 {
-	    color: #3a4b82;
-	    font: bold 16px arial;
-	}
-	.btn-bg{
-		background-color: antiquewhite;
-	}
+		.hd h2 {
+			color: #3a4b82;
+			font: bold 16px arial;
+		}
+		.btn-bg{
+			background-color: antiquewhite;
+		}
+		.breadcrumb-bg{
+			background-color: var(--white-light);
+			margin: 0px;
+			padding: 0px;
+		}
+		.i-home{
+			color: var(--cold-dark);
+			margin-right: 10px;
+			font-size: 16px;
+		}
 
+		.cold-overline {
+			margin-top: -5px;
+			padding: 3px 10px 0px 10px;
+			border-top: 2px solid var(--cold-light);
+			margin-left: -5px;
+		}
+		.pd10>div>a>div{padding: 10px;}
 	</style>
 </head>
 <body>
@@ -39,8 +56,8 @@
 <div class="container">
 	<a href="#"><img src="#"></a>
 	<!--路径导航-->
-	<ol class="breadcrumb">
-		<i class="fa fa-home"></i>
+	<ol class="breadcrumb breadcrumb-bg">
+		<i class="fa fa-home i-home"></i>
 		<li><a href="#" class="title">首页</a></li>
 		<li><a href="#">投资机构导航</a></li>
 	</ol>
@@ -209,47 +226,47 @@
 						推荐知名投资机构
 					</h2>
 				</div>
-				<div class="panel-body row">
+				<div class="panel-body row pd10">
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center ">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 					<div class="col-sm-2">
 						<a href="#">
-							<img src="#">
-							<div>天堂硅谷</div>
+							<img src="#" class="img-respnsive center-block">
+							<div class="text-center">天堂硅谷</div>
 						</a>
 					</div>
 				</div>
@@ -269,7 +286,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="cold-overline">
-											北京<a class="pull-right">更多>></a>
+											<div class="pull-left">北京</div><a class="pull-right">更多>></a>
 										</div>
 									</div>
 								</div>
@@ -300,7 +317,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="cold-overline">
-											广东<a class="pull-right">更多>></a>
+											<div class="pull-left">广东</div><a class="pull-right">更多>></a>
 										</div>
 									</div>
 								</div>
@@ -331,7 +348,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="cold-overline">
-											上海<a class="pull-right">更多>></a>
+											<div class="pull-left">上海</div><a class="pull-right">更多>></a>
 										</div>
 									</div>
 								</div>

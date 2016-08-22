@@ -24,1141 +24,398 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.tab-blue>li.active>a, .tab-blue>li.active>a:hover, .tab-blue>li.active>a:focus{
-			font-weight: bold;
-			background: none #717a97;
-			border: 1px solid #717a97;
-			color: #fff;
-			border-bottom: 0;
-			border-radius: 0px;
+		.img-sm {
+			width: 50px;
+			height: 50px;
 		}
-		.sort li {
-		    white-space: nowrap;
-		    font: normal 12px/25px arial;
-		    cursor: pointer;
-		    text-align: center;
-		    border: 1px solid #ddd;
-		    width: 150px;
-		    border-bottom: 3px solid #717a97;
-		    border-radius: 0px;
+
+		.message-textarea {
+			height: 95px;
+			border: none;
 		}
-		.tab-bottom{
-			border-bottom: 3px solid #717a97;
+		.linkStyle>div {
+			padding:15px;
+			border-bottom:1px solid #ddd;
+			border-right: 1px solid #ddd;
+			height: 108px;
+			line-height: 20px;
 		}
-		.button-color{
-			background-color: #717a97;
-			color: white;
+		.linkStyle>div>div {
+			padding: 5px;
 		}
-		.company-line{
-			border-bottom: 1px dashed #ddd;
-			color: #666;
-			margin-bottom: 10px;
-			padding-bottom: 10px;
+		.noBorder {
+			border-right:none !important;
+		}
+		.btn-margin{
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		.pd20-20 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.mItemsHeight {
+			margin-top: 10px;
+		}
+		.mItemsHeight div {
+			height: 25px;
+		}
+		.mainTopBottom {
+			padding: 50px 0;color:#e93100;
+		}
+		.mDynamic {
+			padding: 15px;
+			border-bottom: 1px solid #ddd;
+			line-height: 30px;
 		}
 	</style>
 </head>
 <body>
-
 <div class="container">
-	<strong>易融人脉动态&gt;&gt;</strong>
-	当前真实人脉总数 <span>4200588</span> 个,
-	当前资金方人脉 <span>746174</span> 个,
-	当前项目方人脉 <span>3454414</span> 个,
-	昨日 <span>24</span> 次项目与资金约谈记录
-
-	<!--选择框-->
-	<div class="panel">
-		<div class="panel-body">
-			<!--人脉类型-->
-			<div class="row">
-				<div class="col-sm-2">
-					人脉类型:
-				</div>
-				<div class="col-sm-10">
+	<div class="row">
+		<!-- left -->
+		<div class="col-sm-9">
+			<!-- person info -->
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="text-right">项目方展厅</div>
 					<div class="row">
 						<div class="col-sm-2">
-							<input type="radio" name="ContactsType">资金方
+							<img src="img/man100.jpg"></div>
+						<div class="col-sm-3">
+							张先生<br>
+							<button href="" class="btn btn-cold-to-lighter btn-margin"><i class="fa fa-retweet"
+							                                                              aria-hidden="true"></i>交换名片
+							</button>
 						</div>
-						<div class="col-sm-2">
-							<input type="radio" name="ContactsType">项目方
+					</div>
+					<div class="row">
+						<div class="col-sm-11 col-sm-offset-1 btn-margin">
+							所在地区<span>上海</span>
 						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-8">
+							<span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>投诉</span>
+							<span><i class="fa fa-share-alt-square" aria-hidden="true"></i>分享</span>
+						</div>
+						<!--	<div class="col-sm-4">-->
+						<div class="pull-right">
+							<button href="" class="btn btn-hot-to-lighter">约谈项目方</button>
+						</div>
+						<!--		</div>-->
 					</div>
 				</div>
 			</div>
-			<!--所属行业-->
-			<div class="row">
-				<div class="col-sm-2">
-					所属行业:
-				</div>
-				<div class="col-sm-10">
+			<!-- info commit -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
 					<div class="row">
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="1"/><span>金融投资</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="2"/><span>房地产</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="3"/><span>能源</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="4"/><span>化学化工</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="5"/><span>节能环保</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
-							   aria-controls="collapseExample1" class="to-hot">更多
-							</a>
+						<div class="col-auto">
+							<div class="hot-underline">发布的信息</div>
 						</div>
 					</div>
-					<div class="collapse" id="collapseExample1">
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="6"/><span>建筑建材</span></a>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-12">
+							<h5><a href="#" class="title">浙江绍兴金属表面处理（电泳漆）加工项目融资50万元</a></h5>
+						</div>
+						<div class="mItemsHeight">
+							<div class="col-md-4 col-sm-6 ">
+								<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="7"/><span>矿产冶金</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>项目阶段&nbsp;</span><span>初创期</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="8"/><span>基础设施</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>所属行业&nbsp;</span><span>化学化工</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="9"/><span>农林牧渔</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>所在地区&nbsp;</span><span>浙江省</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="10"/><span>国防军工</span></a>
-							</div>
-							<div class="col-sm-2">
-
+							<div class="col-md-4 col-sm-6">
+								<span>融资金额&nbsp;</span><span>50万</span>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="11"/><span>航空航天</span></a>
+						<!--<div class="col-sm-2">-->
+						<div class="pull-right">
+							<button href="" class="btn btn-hot-to-lighter">约谈项目方</button>
+						</div>
+						<!--		</div>-->
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<h5><a href="#" class="title">浙江绍兴金属表面处理（电泳漆）加工项目融资50万元</a></h5>
+						</div>
+						<div class="mItemsHeight">
+							<div class="col-md-4 col-sm-6">
+								<span>融资方式&nbsp;</span><span>债权融资,股权融资</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="12"/><span>电气设备</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>项目阶段&nbsp;</span><span>初创期</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="13"/><span>机械机电</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>所属行业&nbsp;</span><span>化学化工</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="14"/><span>交通运输</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>所在地区&nbsp;</span><span>浙江省</span>
 							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="15"/><span>仓储物流</span></a>
+							<div class="col-md-4 col-sm-6">
+								<span>融资金额&nbsp;</span><span>50万</span>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>汽车汽配</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>纺织服装饰品</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>旅游酒店</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>餐饮休闲娱乐</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>教育培训体育</span></a>
-							</div>
+						<!--<div class="col-sm-2">-->
+						<div class="pull-right">
+							<button href="" class="btn btn-hot-to-lighter">约谈项目方</button>
 						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>文化传媒广告</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>批发零售</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>家电数码</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>家居日用</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>食品饮料烟草</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>医疗保健</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>生物医药</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>IT互联网</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>电子通信</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>海洋开发</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>商务贸易</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>家政服务</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>园林园艺</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>收藏品</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>行政事业机构</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>其它行业</span></a>
-							</div>
-						</div>
+						<!--	</div>-->
 					</div>
 				</div>
 			</div>
-			<!--所在地区-->
-			<div class="row">
-				<div class="col-sm-2">
-					所在地区:
-				</div>
-				<div class="col-sm-10">
-					<div class="row">
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="1"/><span>北京市</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="2"/><span>上海市</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="3"/><span>天津市</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="4"/><span>重庆市</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a class="to-hot"><input type="checkbox" value="5"/><span>安徽省</span></a>
-						</div>
-						<div class="col-sm-2">
-							<a data-toggle="collapse" href="#collapseExample2" aria-expanded="false"
-							   aria-controls="collapseExample2" class="to-hot">更多
-							</a>
-						</div>
-					</div>
-					<div class="collapse" id="collapseExample2">
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="6"/><span>福建省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="7"/><span>甘肃省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="8"/><span>广东省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="9"/><span>广西</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="10"/><span>贵州省</span></a>
-							</div>
-							<div class="col-sm-2">
 
+			<!-- overview -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<ul class="nav nav-panel-tabs tab-cold-overline">
+						<li role="presentation" class="active"><a href="#overview" data-toggle="tab">概况</a></li>
+						<li role="presentation"><a href="#dynamic" data-toggle="tab">动态</a></li>
+						<li role="presentation"><a href="#contacts" data-toggle="tab">人脉</a></li>
+						<li role="presentation"><a href="#message" data-toggle="tab">留言</a></li>
+					</ul>
+				</div>
+				<div class="panel-body">
+					<div class="tab-content">
+						<!-- 概况 -->
+						<div class="tab-pane active " id="overview">
+							<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息</div>
+						</div>
+						<!-- 动态 -->
+						<div class="tab-pane" id="dynamic">
+							<div class="mDynamic">
+								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
+								<div>所属行业：节能环保 | 融资金额：3000万-5亿
+									<div class="pull-right">07月12日</div>
+								</div>
+							</div>
+							<div class="mDynamic">
+								<div>新发布了一个项目<a href="" class="title">江苏某环保产业园项目融资3000万-5亿元</a></div>
+								<div>所属行业：节能环保 | 融资金额：3000万-5亿
+									<div class="pull-right">07月12日</div>
+								</div>
+							</div>
+							<nav>
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- 人脉 -->
+						<div class="tab-pane" id="contacts">
+							<ul class="nav nav-tabs">
+								<li role="presentation" class="active"><a href="#all" data-toggle="tab">全部</a></li>
+								<li role="presentation"><a href="#business-friend" data-toggle="tab">商友</a></li>
+								<li role="presentation"><a href="#send-card" data-toggle="tab">发出名片</a></li>
+								<li role="presentation"><a href="#get-card" data-toggle="tab">收到名片</a></li>
+							</ul>
+
+							<div class="tab-content">
+								<!-- 全部 -->
+								<div class="tab-pane active" id="all">
+									<div class="row">
+										<div class="col-sm-2 col-md-1"><img src="img/man100.jpg" class="img-sm"></div>
+										<div class="col-sm-10 col-md-11">
+											<div>张先生<br>商友 31 | 发出名片 47 | 收到名片 74 | 信息 1</div>
+											<button href="" class="btn btn-cold-to-lighter btn-sm"><i class="fa fa-retweet"
+											                                                          aria-hidden="true"></i>交换名片
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- 商友 -->
+								<div class="tab-pane" id="business-friend">
+									<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有商友信息
+									</div>
+								</div>
+								<!-- 发出名片 -->
+								<div class="tab-pane" id="send-card">
+									<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>该用户暂时还没有发送过名片
+									</div>
+								</div>
+								<!-- 收到名片 -->
+								<div class="tab-pane" id="get-card">
+									<div class="row">
+										<div class="col-sm-2 col-md-1"><img src="img/man100.jpg" class="img-sm"></div>
+										<div class="col-sm-10 col-md-11">
+											<div>张先生<br>商友 31 | 发出名片 47 | 收到名片 74 | 信息 1</div>
+											<button href="" class="btn btn-cold-to-lighter btn-sm"><i class="fa fa-retweet"
+											                                                          aria-hidden="true"></i>交换名片
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="11"/><span>海南省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="12"/><span>河北省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="13"/><span>河南省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="14"/><span>湖北省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox" value="15"/><span>湖南省</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>吉林省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>江苏省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>江西省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>辽宁省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>内蒙古</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>宁夏</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>青海省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>山东省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>山西省</span></a>
-							</div>
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>陕西省</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>四川省</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>黑龙江省</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>西藏</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>新疆</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>云南省</span></a>
-							</div>
-						</div>
-						<div class="row">
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>浙江省</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>香港</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>澳门</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>台湾</span></a>
-							</div>
-							<div class=" col-sm-2">
-								<a class="to-hot"><input type="checkbox"/><span>国外</span></a>
+
+						<!-- 留言 -->
+						<div class="tab-pane" id="message">
+							<form id="send-message">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div>用户留言<span class="pull-right">还可以输入x字</span></div>
+										<textarea name="message.content"
+										          class="message-textarea form-control"></textarea>
+										<input type="hidden" name="message.fk_type" value="1">
+									</div>
+									<div class="panel-footer">
+										<div class="row">
+											<div class="form-group">
+												<div class="col-md-2 col-sm-6">
+													<input type="text" placeholder="姓名" class="form-control">
+												</div>
+												<div class="col-md-2 col-sm-6">
+													<input type="text" placeholder="手机号码" class="form-control">
+												</div>
+												<div class="col-md-4 col-sm-12">
+													<div>输入姓名与电话留言后方便对方与您联系!</div>
+												</div>
+												<div class="col-sm-2">
+													<select class="form-control" name="message.target">
+														<option value="1">公开</option>
+														<option value="2">仅对方可见</option>
+														<option value="3">会员可见</option>
+													</select>
+												</div>
+												<button class="btn btn-hot-to-lighter pull-right" type="submit"
+												        id="submit-message">发布留言
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<div id="message-board">
+								<div>
+									<div class="text-center">
+										<i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言
+									</div>
+									<div class="col-sm-1">
+										<img src="img/man100.jpg" class="img-sm img-responsive">
+									</div>
+									<div class="col-sm-8">
+										<div class="row">
+											<div id="message-name" class="col-sm-2">
+												<a href="" class="title">吴先生</a>
+											</div>
+											<div id="message-company" class="col-sm-10">
+												安徽省合肥市某IT互联网公司&nbsp;董事长
+											</div>
+										</div>
+										<div id="message-area">
+											所在地区：安徽省合肥市瑶海区
+										</div>
+										<div id="message-content">
+											您好&nbsp;安徽首家VR应用技术公司需求合作
+										</div>
+										<div id="message-reply">
+											<span>回复：</span>你好 ABC
+										</div>
+									</div>
+									<div class="col-sm-3">
+										2016-07-27 12:11:50
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="sort">
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs tab-blue tab-bottom" role="tablist">
-			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-			                                          data-toggle="tab">按最新动态排序</a>
-			</li>
-			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
-			                           data-toggle="tab">按最新人脉排序</a>
-			</li>
-			<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
-			                           data-toggle="tab">按人气排序</a>
-			</li>
-		</ul>
-	</div>
-	<!-- Tab panes -->
-	<div class="tab-content">
-		<!--按最新动态排序-->
-		<div role="tabpanel" class="tab-pane active" id="home">
-			<div class="row">
-				<div class="col-md-3 col-sm-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
+
+		<!-- right -->
+		<div class="col-sm-3">
+			<!-- contact -->
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="text-center">
+						<div class="row linkStyle">
+							<div class="col-sm-4">
+								<div><i class="fa fa-tag" aria-hidden="true"></i><br>发出投递</div>
+								<div>0</div>
 							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
+							<div class="col-sm-4">
+								<div><i class="fa fa-folder-open" aria-hidden="true"></i><br>被约谈</div>
+								<div>0</div>
+							</div>
+							<div class="col-sm-4 noBorder">
+								<div><i class="fa fa-folder-open" aria-hidden="true"></i><br>收到留言</div>
+								<div>0</div>
+							</div>
+							<div class="col-sm-4">
+								<div><i class="fa fa-user" aria-hidden="true"></i><br>商友</div>
+								<div>0</div>
+							</div>
+							<div class="col-sm-4">
+								<div><i class="fa fa-heart" aria-hidden="true"></i><br>已发名片</div>
+								<div>0</div>
+							</div>
+							<div class="col-sm-4 noBorder">
+								<div><i class="fa fa-thumbs-up" aria-hidden="true"></i><br>收到名片</div>
+								<div>0</div>
 							</div>
 						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-										<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
+						<!-- contact way -->
+						<button href="" class="btn btn-hot-to-lighter btn-margin">查看联系方式</button>
+						<div class="text-center">联系时请说明来自易融圈</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<!--按最新人脉排序-->
-		<div role="tabpanel" class="tab-pane" id="profile">
-			<div class="row">
-				<div class="col-md-3 col-sm-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
+			<!-- project browsed -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-auto">
+							<div class="hot-underline">最近浏览的项目方</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
+				<div class="panel-body pd20-20">
+					<div class="row">
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
+					<div class="row">
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--按人气排序-->
-		<div role="tabpanel" class="tab-pane" id="messages">
-			<div class="row">
-				<div class="col-md-3 col-sm-4">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在3小时前 通过个人身份认证
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									在4小时前 发布了评论 楼主你好，我这里有个果园，想在里面养鸡，老板有兴趣的话回复。
-								</div>
-								<div class="col-sm-12">
-									来自信息 <a href="#">云南某个人资金20万-30万元寻本地农业养殖业项目合作</a>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-body">
-							<div class="row company-line">
-								<div class="col-sm-2">
-									<a href="#" class="to-hot"><img src="#" alt="头像"></a>
-								</div>
-								<div class="col-sm-4">
-									黄先生<br>经理
-								</div>
-								<div class="col-sm-5 text-right">
-									<button class="btn btn-sm button-color ">交换名片</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									购买了服务产品 融资宝
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<button class="btn btn-from-hot center-block">立即投递</button>
+					<div class="row">
+						<div class="col-sm-3"><img src="" alt="头像" class="img-responsive img-circle"></div>
+						<div class="col-sm-5">
+							<div><a href="" class="title">曹先生</a></div>
+							<div>总经理</div>
+							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
 						</div>
 					</div>
 				</div>
@@ -1166,7 +423,6 @@
 		</div>
 	</div>
 </div>
-
 
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
@@ -1179,7 +435,82 @@
 
 <script type="text/javascript">
 
+
+	$(document).ready(function () {
+		// ajax get message
+		function getMessage() {
+			$.ajax({
+				type: 'GET',
+				// url: '115.236.94.196:30000/blade/message/list/1/1',
+				url: 'mlist.json',
+				dataType: 'json',
+				contentType: 'application/json;charset=UTF-8',
+				success: function (mdata) {
+					var str = '';
+					// set html
+					if (mdata.data[0] == undefined) {
+						var str = '<p class="text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>暂时还没有用户留言</p>';
+					} else {
+						$.each(mdata.data, function (index, object) {
+							// if (true) {
+							//pk-user link href=115.236.94.196:30000/blade/user
+							var messageInfo = '<div><div class="col-xs-1"><img src="' + object.avatar + '" class="img-sm"></div><div class="col-xs-8"><div><div id="message-name" class="col-xs-2"><a href=115.236.94.196:30000/blade/user/"' + object.ext.pk_user + '" class="title">' + object.name + '</a></div><div id="message-company" class="col-xs-10">' + object.ext.company + '&nbsp;' + object.ext.company_title + '</div></div><div id="message-area">所在地区：' + object.ext.province_id + object.ext.city_id + object.ext.area_id + '</div><div id="message-content">' + object.content + '</div>';
+							if (object.replay != undefined) {
+								messageInfo = messageInfo + '<div id="message-reply"><span>回复：</span>' + object.replay.content + '</div>';
+							}
+							str += messageInfo + '</div><div class="col-xs-3">' + object.create_time + '</div></div>';
+							// }
+						});
+					}
+					// insert str to html div
+					$('#message-board').html($(str));
+
+				},
+				error: function () {
+
+				}
+			});
+		};
+
+		// post
+		$('#submit-message').click(function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			formData = $('#send-message').serialize();
+			getMessage();
+			$.ajax({
+				url: 'http://115.236.94.196:30000/blade/message/save',
+				dataType: 'text',
+				type: 'post',
+				data: formData,
+				contentType: 'application/json;charset=UTF-8',
+				success: function (data, textStatus, jQxhr) {
+					getMessage();
+				},
+				error: function (jqXhr, textStatus, errorThrown) {
+					console.log(errorThrown);
+				}
+			});
+		});
+
+
+		// pagination
+		$.ajax({
+			type: 'GET',
+			// url: '115.236.94.196:30000/blade/message/list/1/1',
+			url: 'mlist.json',
+			dataType: 'json',
+			contentType: 'application/json;charset=UTF-8',
+			success: function (mdata) {
+
+			},
+			error: function () {
+
+			}
+		});
+
+	});
+
 </script>
-</div>
 </body>
 </html>
