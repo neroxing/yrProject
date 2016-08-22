@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
+
+	<style type="text/css">
+		.bg-tabs {
+			background-color: #eef2ff;
+			padding-top: 10px;
+			border: 1px solid #cccccc;
+			margin-bottom: 15px;
+		}
+
+		.bg-tabs a {
+			color: #3b4a82 !important;
+			margin-left: 5px;
+			background-color: #f0f0f0;
+			border: 1px solid #cccccc !important;
+			border-bottom: none !important;
+		}
+
+		.bg-tabs .active a {
+			margin-bottom: -1px;
+			border-bottom: 1px solid #fff !important;
+		}
+
+		.pd-sort a {
+			padding-left: 15px;;
+			padding-right: 15px;;
+		}
+
+		.pd-sort {
+			line-height: 34px;
+		}
+
+		#mine .panel .panel-body {
+			padding: 0px;
+			border: 1px solid rgb(221, 221, 221);
+			margin: 0px;
+		}
+
+		th {
+			text-align: center;
+			background-color: #f8f8f8;
+		}
+		.lh-22{
+			line-height: 22px;
+		}
+		#who .panel .panel-body>.row{
+			border-bottom: 1px dashed #c2c2c2;
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<!--选项-->
+					<div class="bg-tabs">
+						<ul class="nav nav-tabs">
+							<li role="presentation" class="active"><a href="#receive" data-toggle="tab">收到的投诉</a></li>
+							<li role="presentation"><a href="#send" data-toggle="tab">发出的投诉</a></li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<div class="tab-pane active" id="receive">
+							<table class="table table-bordered">
+								<tr class="text-center">
+									<th>投诉编号</th>
+									<th>投诉理由</th>
+									<th>投诉人</th>
+									<th>发起时间</th>
+									<th>状态</th>
+									<th>倒计时</th>
+									<th>操作</th>
+								</tr>
+							</table>
+						</div>
+						<div class="tab-pane " id="send">
+							<table class="table table-bordered">
+								<tr class="text-center">
+									<th>投诉编号</th>
+									<th>投诉理由</th>
+									<th>被投诉人</th>
+									<th>发起时间</th>
+									<th>状态</th>
+									<th>倒计时</th>
+									<th>操作</th>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

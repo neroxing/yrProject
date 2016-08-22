@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
+
+	<style type="text/css">
+		.bg-gary {
+			background-color: #f1f1f1;
+			padding: 15px;
+			margin-bottom: 10px;
+			line-height: 30px;
+		}
+
+		.lh-35 {
+			line-height: 35px;
+		}
+
+		textarea {
+			height: 150px!important;
+			resize: none;
+		}
+		.form-style{
+			margin-top: 20px;
+			border: 2px solid #eeeff5;
+			padding-top: 20px;
+			padding-left: 40px;
+			margin-bottom: 20px;
+		}
+		.person-tab{
+			border: 10px solid #fff;
+			width: auto;
+			margin-left: 30px;
+			float: left;
+			margin-top: 5px;
+			background-color: #fff;
+			font: bold 12px simsun;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="bg-gary">
+						<div><strong>我的资料完整度评分:</strong><span>41  分</span></div>
+						<div><strong>未完善的资料:</strong>企业名称，个人简介，投资地区</div>
+					</div>
+					<div><i class="fa fa-lightbulb-o"></i>完善资料之后，系统将自动给您生成一张名片，名片可以和投融界会员交换。完整的基本资料是会员搜索到您的重要保证，更是让对方能够初步了解您的基础。
+						<a class="btn btn-sm btn-cold-to-lighter pull-right">教你完善会员资料</a></div>
+					<div class="person-tab">个人资料</div>
+					<div  class="form-style">
+						<form class="form-horizontal">
+							<!--姓名-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">姓名:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="请输入真是姓名，保存后不可修改">
+								</div>
+								<div class="col-sm-3 col-md-2">
+									<label class="control-label "><input type="radio" name="sex">先生</label>
+									<label class="control-label "><input type="radio" name="sex">女士</label>
+								</div>
+							</div>
+							<!--联系手机-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">联系手机:</label>
+								<div class="col-sm-5 lh-35">
+									15397035975&nbsp;&nbsp;&nbsp;<span>[已认证]</span>
+								</div>
+							</div>
+							<!--企业名称-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">企业名称:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="请输入真是名称，保存后不可修改">
+								</div>
+							</div>
+							<!--营业执照-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">营业执照号:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" placeholder="请输入营业执照注册号">
+								</div>
+							</div>
+							<!--个人简历-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">个人简介:</label>
+								<div class="col-sm-7">
+								<textarea id="textarea-height" class="form-control"
+								          placeholder="个人信息+教育经历+工作经历+专业技能+自我评价等内容"></textarea>
+								</div>
+							</div>
+							<!--去年营业额-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">去年营业额：</label>
+								<div class="col-sm-2">
+									<input id="last-turnover" type="text" name="financing.turnover"
+									       class="form-control">
+								</div>
+								<div class="col-sm-3">
+									<div class="row">
+										<div class="col-sm-8 col-md-7 col-lg-5">
+											<select name="last-turnover-unit" class="form-control btn-block">
+												<option value="万元">万元</option>
+												<option value="亿元">亿元</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div id="last-turnover-error" name="last-turnover-error"
+								     class="control-label col-sm-offset-4 col-sm-2  text-align-left"></div>
+							</div>
+							<!--投资行业-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">投资行业：</label>
+								<div class="col-sm-4">
+									<select class="form-control">
+										<option>请选择行业</option>
+									</select>
+								</div>
+							</div>
+							<!--投资地区-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">投资地区：</label>
+								<div class="col-sm-4">
+									<select class="form-control">
+										<option>请选择地区</option>
+									</select>
+								</div>
+							</div>
+							<!--成功案例-->
+							<div name="successful-case">
+								<div class="form-group">
+									<label class="control-label col-sm-3 col-md-2">成功案例：</label>
+									<div class="col-sm-3">
+										<input type="date" class="form-control">
+									</div>
+									<div class="col-sm-5">
+										<input type="text" class="form-control" placeholder="投资企业名称">
+									</div>
+
+								</div>
+								<div class="form-group">
+									<div class="col-sm-3 col-sm-offset-3 col-md-offset-2">
+										<input type="text" class="form-control" placeholder="投资金额">
+									</div>
+									<div class="col-sm-4">
+										<div class="row">
+											<div class="col-sm-8 col-md-6 col-lg-5">
+												<select  class="form-control btn-block">
+													<option value="万元">万元</option>
+													<option value="亿元">亿元</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-7 col-sm-offset-3 col-md-offset-2">
+										<textarea class="form-control" placeholder="请描述本次投资的理由"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-md-offset-2 col-sm-3">
+									<button class="btn btn-to-hot btn-sm">+添加一条新的成功案例</button>
+								</div>
+								<div class="col-sm-offset-3 col-md-offset-2 col-sm-9 col-md-10">
+									<input type="checkbox">  隐藏投资的企业名称
+								</div>
+							</div>
+							<!--电话号码-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">电话号码:</label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" >
+								</div>
+							</div>
+							<!--邮箱地址-->
+							<div class="form-group">
+								<label class="control-label col-sm-3 col-md-2">邮箱地址:</label>
+								<div class="col-sm-5 lh-35">
+									00000000000000@xx.com</span>
+								</div>
+							</div>
+							<!--联系地址-->
+							<div class="form-group">
+								<label class="control-label col-sm-3  col-md-2">所在地区:</label>
+								<div class="col-sm-2">
+									<select name="project.province" class="form-control">
+										<option></option>
+										<option value="浙江省">浙江省</option>
+										<option value="福建省">福建省</option>
+										<option value="江苏省">江苏省</option>
+										<option value="广东省">广东省</option>
+									</select>
+								</div>
+								<div class="col-sm-2">
+									<select name="project.city" class="form-control">
+										<option></option>
+										<option value="杭州">杭州</option>
+										<option value="厦门">厦门</option>
+										<option value="福州">福州</option>
+									</select>
+								</div>
+								<div class="col-sm-2 ">
+									<select name="project.area" class="form-control">
+										<option></option>
+										<option value="拱墅区">拱墅区</option>
+										<option value="滨江区">滨江区</option>
+										<option value="萧山">萧山</option>
+									</select>
+								</div>
+								<div id="location-error" name="location-error"
+								     class="control-label col-sm-offset-2 col-sm-2  text-align-left"></div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-md-offset-2 col-sm-5">
+									<input type="text" class="form-control" placeholder="请输入详细街道地址">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<div class="col-sm-offset-3 col-sm-3">
+							<button class="btn btn-cold-to-lighter btn-block">保存资料</button>
+						</div>
+						<div class="col-sm-3">
+							<button class="btn btn-hot-to-lighter btn-block">预览名片</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
