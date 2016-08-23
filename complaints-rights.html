@@ -24,12 +24,8 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.invite-table{
-		background: #f8f8f8;
-		text-align: center;
-		white-space: nowrap;
-	}
-	.navBox {
+
+	/*	.navBox {
 			background: #eef2ff;
 			border: 1px solid #ccc;
 			border-bottom: 0;
@@ -55,27 +51,52 @@
 		border:1px solid #ddd;
 
 	}
-	
-
+*/
+	.invite-table{
+		background: #f8f8f8;
+		text-align: center;
+		white-space: nowrap;
+	}
+	.container{
+		border:1px solid #ddd; 
+		background-color: white;
+	} 
+	.mg10{
+		margin:10px 0; 
+	}
+	.ui-tab-head-box {
+		background: #eef2ff;
+		padding-top: 10px;
+		padding-left: 10px; 
+		border:1px solid #ddd;
+		border-bottom: 0;  
+	}
+	.nav>li{
+		margin-right: 5px;
+		background-color: #f0f0f0;
+	}    
+	.nav > li > a{
+		display: inline-block;
+		padding: 5px 15px;
+		border-radius: 5px 5px 0 0;
+		border-top:1px solid #ddd;
+		border-left:1px solid #ddd;
+		border-right:1px solid #ddd;
+	}
 	</style>
 </head>
 <body>
-
-<div class="container pd10-bg">
-	<div class="panel">
-		<div class="panel-heading head-padding">
-			<div class="navBox">
-				<ul class="nav nav-panel-tabs" role="tablist">
-					<li role="presentation" class="active"><a href="#complaints-receive" aria-controls="complaints-receive" role="tab" data-toggle="tab">收到的投诉</a></li>
-					<li role="presentation"><a href="#complaints-send" aria-controls="complaints-send" role="tab" data-toggle="tab">发出的投诉</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="panel-body">
-			<div class="tab-content">
+<div class="container">
+	<div class="mg10 ui-tab-head-box">
+        	<!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="title">收到的投诉</a></li>
+		    <li role="presentation" ><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="title">发出的投诉</a></li>
+		  </ul> 
+        </div>
+        <div class="tab-content">
 			<!-- 收到的投诉 -->
 				<div role="tabpanel" class="tab-pane active" id="complaints-receive">
-				<div class="row">
 					<table class="table table-bordered">
 						<tbody>
 							<tr class="invite-table">
@@ -89,7 +110,6 @@
 							</tr>
 						</tbody>
 					</table>
-					</div>
 				</div>
 			<!-- 发出的投诉 -->
 				<div role="tabpanel" class="tab-pane" id="complaints-send">
@@ -108,9 +128,59 @@
 					</table>
 				</div>
 			</div>
+</div>
+
+
+
+
+<!-- <div class="container pd10-bg">
+	<div class="panel">
+		<div class="panel-heading head-padding">
+			<div class="navBox">
+				<ul class="nav nav-panel-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#complaints-receive" aria-controls="complaints-receive" role="tab" data-toggle="tab">收到的投诉</a></li>
+					<li role="presentation"><a href="#complaints-send" aria-controls="complaints-send" role="tab" data-toggle="tab">发出的投诉</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="tab-content">
+			<!-- 收到的投诉 -->
+				<!-- <div role="tabpanel" class="tab-pane active" id="complaints-receive">
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="invite-table">
+								<td>投诉编号</td>
+								<td>投诉理由</td>
+								<td>投诉人</td>
+								<td>发起时间</td>
+								<td>状态</td>
+								<td>倒计时</td>
+								<td>操作</td>
+							</tr>
+						</tbody>
+					</table>
+				</div> -->
+			<!-- 发出的投诉 -->
+	<!-- 			<div role="tabpanel" class="tab-pane" id="complaints-send">
+					<table class="table table-bordered">
+						<tbody>
+							<tr class="invite-table">
+								<td>投诉编号</td>
+								<td>投诉理由</td>
+								<td>被投诉人</td>
+								<td>发起时间</td>
+								<td>状态</td>
+								<td>倒计时</td>
+								<td>操作</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</div> --> 
 
 
 <!-- jQuery -->

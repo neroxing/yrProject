@@ -33,11 +33,15 @@
 		}
 		.score-color {
 			color: #e93100;
-			font-size: 18px;
-			font-weight: normal;
+			/*font-size: 18px;*/
+			font-weight: bold;
+			margin-right: 5px;
 		}
 		.bg-color-gary{
-			background-color: #f5f5f5;
+			background-color: #f5f5f5;	
+			line-height: 30px;
+			padding: 5px 30px;
+			margin-top: 10px;
 		}
 		.progress-margin-bottom{
 			margin-bottom: 0px;
@@ -47,6 +51,7 @@
 		}
 		.i-red{
 			color: red;
+			margin-right: 5px;
 		}
 		.pd10-bg{
 			padding: 0px 10px;
@@ -54,21 +59,31 @@
 			border:1px solid #ddd;
 
 		}
-
+		
+		.line-message{
+			border-top: 1px dashed #ddd;
+			margin: 0;
+			margin-top: 10px;
+			padding-top: 10px;
+		}
+        .mg-top-35{
+        	margin-top:35px; 
+        }
+        .pd0{
+        	padding: 0;
+        }
 	</style>
 </head>
 <body>
 
 <div class="container pd10-bg">
 <!-- 说明 -->
-	<div class="panel bg-color-gary">
-		<div class="panel-body">
-			<div><i class="fa fa-certificate i-red"></i>说明：</div>
-			<ol>
-				<li>刷新：相当于新发一条信息，在按时间排序的情况下信息将靠前显示。每天可免费刷新一次。</li>
-				<li>审核中：审核中的信息除了您自己外，其他人无法看到，工作人员会在24小时内为您审核。</li>
-			</ol>
-		</div>
+	<div class=" bg-color-gary ">
+		<div><i class="fa fa-lightbulb-o i-red"></i>说明：</div>
+		<ol>
+			<li>刷新：相当于新发一条信息，在按时间排序的情况下信息将靠前显示。每天可免费刷新一次。</li>
+			<li>审核中：审核中的信息除了您自己外，其他人无法看到，工作人员会在24小时内为您审核。</li>
+		</ol>
 	</div>
 <!-- 已发布信息 -->
 	<div class="panel">
@@ -86,7 +101,7 @@
 					<div>近年来，随着社会经济发展，以及人类对健康生活高品质的追求，</div>
 					<div>项目融资 500万～1000万</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 mg-top-35">
 					<div class="text-center">已发布</div>
 				</div>
 				<div class="col-sm-3">
@@ -100,13 +115,13 @@
 					</div>
 					<div>还不错哦，再接再厉！</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 mg-top-35">
 					<div class="text-right"><a href="#" class="title">未委托</a></div>
 					<div class="text-right"><a href="#" class="title">刷新</a></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-5">
+			<div class="row line-message">
+				<div class="col-sm-6 pd0">
 					<div> 
 						浏览：<span class="score-color">720</span> 
 						留言：<span class="score-color">7</span> 
@@ -114,7 +129,7 @@
 						收到约谈：<span class="score-color">2</span> 
 					</div>
 				</div>
-				<div class="col-md-2 col-md-offset-5 col-sm-3 col-sm-offset-4 text-right">
+				<div class="col-md-2 col-md-offset-4 col-sm-3 col-sm-offset-3 text-right pd0">
 				<a href="#" class="title">权限设置</a>
 				<a href="#" class="title">修改</a>/
 				<a href="#" class="title">删除</a>

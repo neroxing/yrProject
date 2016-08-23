@@ -24,30 +24,25 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	.navBox {
-			background: #eef2ff;
-			border: 1px solid #ccc;
-			border-bottom: 0;
-			padding: 25px 5px 0 5px;
-		}  
-	.nav>li {
-		margin-right: 5px;
-		background-color: #f0f0f0;
-
-	}    
-	.nav > li > a {
-		display: inline-block;padding: 5px 15px;
+    .nav>li{
+    	margin-right: 5px;
+    	background-color: #f0f0f0;
+    	border-radius: 5px 5px 0 0;
+    }    
+	.nav > li > a{
+		display: inline-block;
+		padding: 5px 15px;
 		border-radius: 5px 5px 0 0;
 		border-top:1px solid #ddd;
 		border-left:1px solid #ddd;
 		border-right:1px solid #ddd;
-		color: var(--cold-dark);
 	}
-	.head-padding{
-		padding-top: 0px;
-	}
-	.nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
-		color: var(--hot-light);
+	.ui-tab-head-box {
+		background: #eef2ff;
+		padding-top: 10px;
+		padding-left: 10px;
+		border:1px solid #ddd;
+		border-bottom: 0;  
 	}
 	.search-part-nav{
 		background: #f1f1f1;
@@ -64,6 +59,7 @@
 		padding: 15px 0;
 		overflow: hidden;
 		border-bottom: 1px dashed #c2c2c2;
+		margin: 0;
 	}
 	.who-collect-row:last-child{
 		border-bottom: none;
@@ -81,46 +77,49 @@
 		border:1px solid #ddd;
 
 	}
-
+    .mg10{
+    	margin:10px 0; 
+    }
+    .bg-gray{
+    	background-color: #f1f1f1;
+    	padding: 5px 10px;
+    }
+    .pd-left-10{
+    	padding-left: 8px; 
+    	margin-bottom: 10px;
+    }
+    .pd-left-10 button{
+    	margin-left: 9px;
+    }
 	</style>
 </head>
 <body>
 
 <div class="container pd10-bg">
-	<div class="panel">
-		<div class="panel-heading head-padding">
-			<div class="navBox">
-				<ul class="nav nav-panel-tabs nav-Box" role="tablist">
-					<li role="presentation" class="active">
-					<a href="#my-collect" aria-controls="my-collect" role="tab" data-toggle="tab">我的收藏</a>
-					</li>
-					<li role="presentation">
-					<a href="#who-collect" aria-controls="who-collect" role="tab" data-toggle="tab">被谁收藏</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="panel-body">
+	
+		<div class="mg10 ui-tab-head-box">
+        	<!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#my-collect" aria-controls="my-collect" role="tab" data-toggle="tab" class="title">我的收藏</a></li>
+		    <li role="presentation" ><a href="#who-collect" aria-controls="who-collect" role="tab" data-toggle="tab" class="title">被谁收藏</a></li>
+		  </ul> 
+        </div>
+		<div class="">
 			<div class="tab-content">
 			<!-- 我的收藏 -->
 				<div role="tabpanel" class="tab-pane active" id="my-collect">
-					 <div class="row search-part-nav ">
-						<div class="col-sm-2 col-md-1 line-height-collect">
-							信息类型：
-						</div>
-						<div class="col-sm-2">
-							<select class="form-control">
+					 <form class="form-inline bg-gray">
+					 	<div class="form-group">
+					 		<label>信息类型：</label>
+					 		<select class="form-control">
 								<option selected="selected">全部信息</option>
 								<option>资金信息</option>
 								<option>项目信息</option>
 							</select>
-						</div>
-						
-						<div class="col-sm-2 col-md-1 line-height-collect">
-							收藏日期：
-						</div>
-						<div class="col-sm-2">
-							<select class="form-control">
+					 	</div>
+					 	<div class="form-group">
+					 		<label>收藏日期：</label>
+					 		<select class="form-control">
 								<option selected="selected">所有周期</option>
 								<option>一周内</option>
 								<option>两周内</option>
@@ -129,12 +128,10 @@
 								<option>半年内</option>
 								<option>一年内</option>
 							</select>
-						</div>
-						<div class="col-sm-1">
 							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-						</div>
-					</div>
-					<div class="row">
+					 	</div>
+					 </form>
+					<div class="">
 						<table class="table table-bordered">
 							<thead>
 							  <tr class="invite-table">
@@ -166,34 +163,29 @@
 						   </tbody>
 						</table>
 					</div>
-						<div class="row">
-							<div class="col-sm-2">
+						<div class="pd-left-10">
 								<input type="checkbox">
 								<button class="btn btn-cold-to-lighter">删除</button>
-							</div>
 						</div>
 				</div>
 			<!-- 被谁收藏 -->
 				<div role="tabpanel" class="tab-pane" id="who-collect">
-					<div class="row search-part-nav">
-						<div class="col-md-1 col-sm-2 line-height-collect">
-							会员类型：
-						</div>
-						<div class="col-sm-2">
-							<select class="form-control">
+					<form class="form-inline bg-gray">
+					 	<div class="form-group">
+					 		<label>会员类型：</label>
+					 		<select class="form-control">
 								<option selected="selected">所有会员</option>
-								<option>企业</option>
-								<option>政府</option>
-								<option>个人</option>
+								<option>企业会员</option>
+								<option>政府会员</option>
+								<option>个人会员</option>
 							</select>
-						</div>
-						<div class="col-sm-2 col-sm-offset-5">
-							<input id="inputSearch" type="text" class="form-control" placeholder="输入联系人搜索"> 
-						</div>
-						<div class="col-sm-1">
-							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-						</div>
-					</div>
+					 	</div>
+					 	<div class="form-group pull-right">
+					 		<input  class="form-control" type="text" name="" placeholder="输入联系人搜索">
+					 		<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+					 	</div>
+					 	
+					 </form>
 					<div class="row who-collect-row">
 						<div class="col-sm-1">
 							<img src="#" class="img-responsive pull-right" alt="头像">
@@ -231,7 +223,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 </div>
 
 <!-- jQuery -->

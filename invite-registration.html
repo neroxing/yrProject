@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+ -->
 	<!-- fontawesome css -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
@@ -38,20 +38,36 @@
 		border:1px solid #ddd;
 
 	}
+    .hy-bg{
+	    background: #f5f8ff;
+	    border: 1px solid #d9dce8;
+	    padding: 0 10px;
+	    height: 32px;
+	    line-height: 28px;
+	    color: #333333;
+	    font-size: 14px;
+	    font-weight: bold;
+	    margin:10px 0;
+	}
+	.lineHeight{
+		line-height: 30px;
+	}
+	
+
 
 	</style>
 </head>
 <body>
 
 <div class="container pd10-bg">
-	<div class="panel">
-		<div class="panel-heading">
+	<!-- <div class="panel"> -->
+		<div class="hy-bg">
 		邀请会员注册
 		</div>
-		<div class="panel-body">
-			<input type="text" value="http://www.trjcn.com/register.html?u=2fcb7c4e95d3551d" class="form-control" />
+		<div class="">
+			<input type="text" value="http://www.trjcn.com/register.html?u=2fcb7c4e95d3551d" class="form-control" readonly="true" />
 			<div class="copy-margin">按 Ctrl+C 键复制选中的链接</div>
-			<table class="table table-bordered">
+			<table class="table table-bordered table-hover">
 				<tbody>
 					<tr class="invite-table">
 						<td>邀请好友账号</td>
@@ -63,13 +79,14 @@
 					</tr>
 				</tbody>
 			</table>
-			<div>温馨提示：</div>
+			<div class="lineHeight">温馨提示：
 			<ol>
 			<li>请不要发送邀请信给不熟悉的人士，避免给别人带来不必要的困扰。</li>
 			<li>请把链接地址发给您的好友，每成功注册一位用户，那么您可以一次性获得200成长值的推广奖励。</li>
 			</ol>
+			</div>
 		</div>
-	</div>
+	<!-- </div> -->
 </div>
 
 <!-- jQuery -->
