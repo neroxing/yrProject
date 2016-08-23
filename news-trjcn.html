@@ -24,14 +24,22 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.cut a {
+		.noUnderline a{text-decoration:none;}
+		.noUnderline li:hover{background-color: #e2e2e2;}
+		.bgGray{background-color: #e2e2e2;}
+		.ArticleBorderB{padding-bottom: 15px;padding-top: 5px; border-bottom: 1px dotted #ddd;}
+		.bottomMore{display: block;margin: 10px 10px 5px 10px;background-color: #fff9f0;border:1px solid #e7d4a7;height: 38px;line-height: 38px;}
+		a.bottomMore:hover{text-decoration: none; }
+		.cut li{line-height: 30px;}
+	/*	.cut a {
 			display: inline-block;
 			vertical-align: middle;
 			width: 95%;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-		}
+		}*/
+		.hotRank li{line-height: 30px;border-bottom: 1px dotted #ddd;}
 		.heading-more{
 			padding-right:10px;
 			margin-right:10px;
@@ -57,8 +65,8 @@
 				<div class="panel-heading">
 					<h3 class="panel-title text-center">阅读最新鲜<br>的投融资讯</h3>
 				</div>
-				<ul class="list-group text-center">
-					<li class="list-group-item"><a href="#"> 时下热点</a></li>
+				<ul class="list-group text-center noUnderline">
+					<li class="list-group-item bgGray"><a href="#"> 时下热点</a></li>
 					<li class="list-group-item"><a href="#"> 行业融资</a></li>
 					<li class="list-group-item"><a href="#"> 融资研究</a></li>
 					<li class="list-group-item"><a href="#"> 投资人说</a></li>
@@ -123,7 +131,7 @@
 						</a>
 					</div>
 					<!--文章-->
-					<div>
+					<div class="ArticleBorderB">
 						<h3><a href="" class="title">听书软件居然要上市了 背靠三大运营商能走长远吗？</a></h3>
 						<p>【内容摘要】从巅峰走向困顿的无限讯奇创始人张志浩曾对媒体说过这样一段发人深省的话，“光靠资源就想存活的公司，是一个没有希望的公司。最重要的不在于你得到了什
 							<a href="" class="title">[详情]</a>
@@ -133,7 +141,7 @@
 							<div class="pull-right">运营商&nbsp;飞信&nbsp;听书</div>
 						</div>
 					</div>
-					<div>
+					<div class="ArticleBorderB">
 						<h3><a href="" class="title">听书软件居然要上市了 背靠三大运营商能走长远吗？</a></h3>
 						<p>【内容摘要】从巅峰走向困顿的无限讯奇创始人张志浩曾对媒体说过这样一段发人深省的话，“光靠资源就想存活的公司，是一个没有希望的公司。最重要的不在于你得到了什
 							<a href="" class="title">[详情]</a>
@@ -143,7 +151,7 @@
 							<div class="pull-right">运营商&nbsp;飞信&nbsp;听书</div>
 						</div>
 					</div>
-					<div>
+					<div class="ArticleBorderB">
 						<h3><a href="" class="title">听书软件居然要上市了 背靠三大运营商能走长远吗？</a></h3>
 						<p>【内容摘要】从巅峰走向困顿的无限讯奇创始人张志浩曾对媒体说过这样一段发人深省的话，“光靠资源就想存活的公司，是一个没有希望的公司。最重要的不在于你得到了什
 							<a href="" class="title">[详情]</a>
@@ -155,9 +163,9 @@
 					</div>
 				</div>
 				<!--加载更多-->
-				<div class="panel-footer text-center">
-					<a href=""><i class="glyphicon glyphicon-arrow-down"></i>点击查看更多<i class="glyphicon glyphicon-arrow-down"></i></a>
-				</div>
+
+				<a href="" class="text-center bottomMore"><i class="glyphicon glyphicon-arrow-down"></i>点击查看更多<i class="glyphicon glyphicon-arrow-down"></i></a>
+
 			</div>
 		</div>
 		<!--right-->
@@ -210,7 +218,7 @@
 				<div class="panel-body">
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="home">
+						<div role="tabpanel" class="tab-pane active hotRank" id="home">
 							<ol>
 								<li><a href="" class="title">2016·易融圈“优选”：优选项目，极速</a></li>
 								<li><a href="" class="title">2016·易融圈“优选”：优选项目，极速</a></li>
@@ -222,7 +230,7 @@
 								<li><a href="" class="title">2016·易融圈“优选”：优选项目，极速</a></li>
 							</ol>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="profile">
+						<div role="tabpanel" class="tab-pane hotRank" id="profile">
 							<ol>
 								<li><a href="" class="title">2016·易融圈“优选”：优选项目，</a></li>
 								<li><a href="" class="title">2016·易融圈“优选”：优选项目，</a></li>
@@ -257,7 +265,7 @@
 
 				</div>
 				<div class="panel-body">
-					<ul>
+					<ul class="cut">
 						<li><a href="" class="to-hot">易融圈荣获2015年度互联网金融先锋企业</a></li>
 						<li><a href="" class="to-hot">易融圈荣获2015年度互联网金融先锋企业</a></li>
 						<li><a href="" class="to-hot">易融圈荣获2015年度互联网金融先锋企业</a></li>
