@@ -23,6 +23,9 @@
 			--banner-light:		#484b54;
 			--banner-dark:		#3b3d45;
 		}
+		.auto-width {
+			width: auto !important;
+		}
 	/* vertical middle */
 		.v-outter-table{
 			display: table !important;
@@ -38,7 +41,6 @@
 		.title-bg{
 			background-color: var(--white-bright);
 		}
-
 /* universal */
 	*{
 		padding: 0;
@@ -64,7 +66,7 @@
 		color: var(--black-bright);
 		font-size: 1.4em;
 	}
-	ol{
+	ul, ol{
 		list-style-position: inside;
 	}
 	iframe{
@@ -113,7 +115,7 @@
 		a.animated:hover{
 			color: var(--hot-dark);
 		}
-	/* boot btn overrite */
+	/* boot btn overwrite */
 		.btn {
 			color: var(--black-bright);
 			background-color: var(--white-max);
@@ -151,10 +153,17 @@
 		.btn.btn-hot-to-lighter:hover{
 			background-color: var(--hot-light);
 		}
-
+		.btn.btn-to-hot{
+			border-color: var(--hot-light);
+			color: var(--hot-light);
+		}
 		.btn.btn-to-hot:hover{
 			background-color: var(--hot-light);
 			color: var(--white-light);
+		}
+		.btn.btn-to-cold{
+			border-color: var(--cold-dark);
+			color: var(--cold-dark);
 		}
 		.btn.btn-to-cold:hover{
 			background-color: var(--cold-light);
@@ -185,7 +194,7 @@
 		.btn.btn-animated:hover{
 			background-color: var(--hot-dark);
 		}
-	/* bootstrap panel over write */
+	/* bootstrap panel overwrite */
 		.panel {
 			margin: 10px 0;
 			background-color: var(--white-max);
@@ -210,6 +219,9 @@
 		.panel-body {
 			padding: 10px;
 		}
+		.panel-body>. {
+			padding: 10px;
+		}
 		.panel-footer {
 			padding: 10px 0px;
 			background-color: var(--white-bright);
@@ -226,7 +238,7 @@
 		}
 		/* sub panel */
 		.panel .panel {
-			margin: 5px;
+			margin: 5px 0;
 			border-radius: 0px;
 			border: none;
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
@@ -251,12 +263,18 @@
 			padding: 5px 0px;
 			border: none;
 		}
-	/* bootstrap inner colunm adding new style */
+	/* bootstrap colunm adding new style */
+		.col-auto {
+			width: auto;
+			float: left;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 		.row .row {
 			margin-left: -5px;
 			margin-right: -5px;
 		}
-		.row .row .col-xs-1, .row .row .col-sm-1, .row .row .col-md-1, .row .row .col-lg-1, .row .row .col-xs-2, .row .row .col-sm-2, .row .row .col-md-2, .row .row .col-lg-2, .row .row .col-xs-3, .row .row .col-sm-3, .row .row .col-md-3, .row .row .col-lg-3, .row .row .col-xs-4, .row .row .col-sm-4, .row .row .col-md-4, .row .row .col-lg-4, .row .row .col-xs-5, .row .row .col-sm-5, .row .row .col-md-5, .row .row .col-lg-5, .row .row .col-xs-6, .row .row .col-sm-6, .row .row .col-md-6, .row .row .col-lg-6, .row .row .col-xs-7, .row .row .col-sm-7, .row .row .col-md-7, .row .row .col-lg-7, .row .row .col-xs-8, .row .row .col-sm-8, .row .row .col-md-8, .row .row .col-lg-8, .row .row .col-xs-9, .row .row .col-sm-9, .row .row .col-md-9, .row .row .col-lg-9, .row .row .col-xs-10, .row .row .col-sm-10, .row .row .col-md-10, .row .row .col-lg-10, .row .row .col-xs-11, .row .row .col-sm-11, .row .row .col-md-11, .row .row .col-lg-11, .row .row .col-xs-12, .row .row .col-sm-12, .row .row .col-md-12, .row .row .col-lg-12 {
+		.row .row .col-auto, .row .row .col-xs-1, .row .row .col-sm-1, .row .row .col-md-1, .row .row .col-lg-1, .row .row .col-xs-2, .row .row .col-sm-2, .row .row .col-md-2, .row .row .col-lg-2, .row .row .col-xs-3, .row .row .col-sm-3, .row .row .col-md-3, .row .row .col-lg-3, .row .row .col-xs-4, .row .row .col-sm-4, .row .row .col-md-4, .row .row .col-lg-4, .row .row .col-xs-5, .row .row .col-sm-5, .row .row .col-md-5, .row .row .col-lg-5, .row .row .col-xs-6, .row .row .col-sm-6, .row .row .col-md-6, .row .row .col-lg-6, .row .row .col-xs-7, .row .row .col-sm-7, .row .row .col-md-7, .row .row .col-lg-7, .row .row .col-xs-8, .row .row .col-sm-8, .row .row .col-md-8, .row .row .col-lg-8, .row .row .col-xs-9, .row .row .col-sm-9, .row .row .col-md-9, .row .row .col-lg-9, .row .row .col-xs-10, .row .row .col-sm-10, .row .row .col-md-10, .row .row .col-lg-10, .row .row .col-xs-11, .row .row .col-sm-11, .row .row .col-md-11, .row .row .col-lg-11, .row .row .col-xs-12, .row .row .col-sm-12, .row .row .col-md-12, .row .row .col-lg-12 {
 			padding-left: 5px;
 			padding-right: 5px;
 		}
@@ -277,43 +295,110 @@
 			cursor: default;
 		}
 	/* header decoration can only used in first level panel*/
+		/* subpanel needs adujust margin. if needed please report */
+		/* lines */
 		.hot-overline{
-			/* subpanel needs adujust margin. */
 			margin-top: -10px;
-			padding-top: 8px;
+			padding: 8px 20px 0px 20px;
 			border-top: 2px solid var(--hot-light);
 			text-align: center;
 		}
 		.hot-underline{
 			margin-bottom: -10px;
-			padding-bottom: 8px;
+			padding: 0px 20px 8px 20px;
 			border-bottom: 2px solid var(--hot-light);
 			text-align: center;
 		}
 		.cold-overline{
 			margin-top: -10px;
-			padding-top: 8px;
+			padding: 8px 20px 0px 20px;
 			border-top: 2px solid var(--cold-light);
 			text-align: center;
 		}
 		.cold-underline{
 			margin-bottom: -10px;
-			padding-bottom: 8px;
+			padding: 0px 20px 8px 20px;
 			border-bottom: 2px solid var(--cold-light);
 			text-align: center;
 		}
+		/* background */
+		.bg-hot-light, .bg-cold-light, .bg-hot-dark, .bg-cold-dark{
+			margin: -10px 0;
+			padding: 10px 20px;
+		}
+		.bg-hot-light{
+			background-color: var(--hot-light);
+			color: var(--white-light);
+			text-align: center;
+		}
+		.bg-cold-light{
+			background-color: var(--cold-light);
+			color: var(--white-light);
+			text-align: center;
+		}
+		.bg-hot-dark{
+			background-color: var(--hot-dark);
+			color: var(--white-light);
+			text-align: center;
+		}
+		.bg-cold-dark{
+			background-color: var(--cold-dark);
+			color: var(--white-light);
+			text-align: center;
+		}
+		/*.row .row .bg-hot-light, .row .row .bg-cold-light, .row .row .bg-hot-dark, .row .row .bg-cold-dark{
+			margin: -5px 0;
+			padding: 5px 10px;
+		}*/
 		/* for active tab */
-		.tab-hot-overline>li.active>a{
+		.tab-hot-overline>li.active>a, .tab-hot-overline>li.active>a:hover, .tab-hot-overline>li.active>a:focus{
 			border-top: 2px solid var(--hot-light);
+			padding-top: 9px;
 		}
-		.tab-hot-underline>li.active>a{
+		.tab-hot-underline>li.active>a, .tab-hot-underline>li.active>a:hover, .tab-hot-underline>li.active>a:focus{
 			border-bottom: 2px solid var(--hot-light);
+			padding-top: 9px;
 		}
-		.tab-cold-overline>li.active>a{
+		.tab-cold-overline>li.active>a, .tab-cold-overline>li.active>a:hover, .tab-cold-overline>li.active>a:focus{
 			border-top: 2px solid var(--cold-light);
+			padding-top: 9px;
 		}
-		.tab-cold-underline>li.active>a{
+		.tab-cold-underline>li.active>a, .tab-cold-underline>li.active>a:hover, .tab-cold-underline>li.active>a:focus{
 			border-bottom: 2px solid var(--cold-light);
+			padding-top: 9px;
+		}
+		/* header icon */
+		.panel-heading i.icon-hot-light{
+			background-color: var(--hot-light);
+			color: var(--white-light);
+			padding: 5px 10px;
+			margin: -5px 0;
+		}
+
+		.panel-heading i.icon-hot-dark{
+			background-color: var(--hot-dark);
+			color: var(--white-light);
+			padding: 5px 10px;
+			margin: -5px 0;
+		}
+		.panel-heading i.icon-cold-light{
+			background-color: var(--cold-light);
+			color: var(--white-light);
+			padding: 5px 10px;
+			margin: -5px 0;
+		}
+		.panel-heading i.icon-cold-dark{
+			background-color: var(--cold-dark);
+			color: var(--white-light);
+			padding: 5px 10px;
+			margin: -5px 0;
+		}
+		.panel-heading i.title-icon{
+			width: 2px;
+			height: 15px;
+			background-color: var(--cold-dark);
+			border-top: 5px solid var(--hot-dark);
+			margin-left: 10px;
 		}
 /* banner */
 	#home-banner .row{
@@ -348,6 +433,7 @@
 	#header #slogan{
 		line-height: 70px;
 	}
+	/* header-menu */
 /* sites-links */
 	#sites-links .row .row {
 		padding: 25px 0;
@@ -360,7 +446,7 @@
 	}
 /* footer */
 	#home-footer h3{/*footer-links header*/
-		margin-top: 0px;
+		margin: 10px 0;
 		font-size: 1.2em;
 	}
 	#home-footer span{/*footer-links phone number*/
@@ -386,5 +472,84 @@
 		color: var(--white-dark);
 	}
 /* content */
+
+/* home-tabs */
+	#home-tabs .panel {
+		height: 300px;
+	}
+	#home-tabs .panel-heading {
+		width: 50px; /* same with content's left margin */
+		float: left;
+		height: 300px;
+	}
+	#home-tabs .nav-panel-tabs{
+
+	}
+	#home-tabs li>a {
+		height: 150px; /* harf of the panel's height */
+		font-size: 1.4em;
+		line-height: 1.1em;
+		padding-top: 35px;
+		font-weight: bold;
+	}
+	#home-tabs li.active>a, #home-tabs li.active-default>a:hover, #home-tabs li.active>a:focus {
+		color: var(--gray-dark);
+		background-color: var(--white-max);
+		border: 1px solid var(--white-dark);
+		margin: -1px -1px 0px -1px;
+		border-right-color: transparent;
+		cursor: default;
+	}
+	#home-tabs #home-tabs-content{
+		height: 300px;
+		margin-left: 50px;
+		padding: 30px 10px;
+	}
+	#home-tabs #search-form {
+		margin-bottom: 20px;
+		height: 35px;
+	}
+	#home-tabs #search-form>input {
+		height: 35px;
+		border: 2px solid var(--hot-light);
+	}
+	#home-tabs #search-form>button {
+		height: 35px;
+		color: var(--white-light);
+		background-color: var(--hot-light);
+		border: 0;
+	}
+	#home-tabs #capital-keyword, #home-tabs #project-keyword {
+		height: 175px;
+	}
+	#home-tabs dl {
+		margin-bottom: 0px;
+	}
+	#home-tabs #capital-body dd, #home-tabs #project-body dd  {
+		width: 50%;
+		float: left;
+	}
+	#home-tabs #capital-size dd, #home-tabs #project-size dd {
+		width: 50%;
+		float: left;
+	}
+	@media (min-width: 1200px) {
+		#home-tabs #home-tabs-content{
+			padding: 35px;
+		}
+		#home-tabs #capital-body dd, #home-tabs #project-body dd {
+			width: 33%;
+		}
+		#home-tabs #capital-size dd, #home-tabs #project-size dd {
+			width: 50%;
+		}
+	}
+	#home-tabs #search-tips {
+		height: 35px;
+		line-height: 35px;
+		border-top: 1px solid var(--white-dark);
+		text-align: right;
+	}
+
 
 
