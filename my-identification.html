@@ -31,8 +31,10 @@
 			line-height: 30px;
 		}
 
-		.i-red {
-			color: #dc3d33;
+		.i-false {
+			font-size: 30px;
+			vertical-align: middle;
+			color: red;
 		}
 
 		.i-right {
@@ -40,7 +42,13 @@
 			/*	vertical-align: middle;*/
 			color: green;
 		}
-
+		.i-minus{
+			font-size: 18px;
+			vertical-align: middle;
+			color: red;
+			line-height: 36px;
+			margin-left: 10px;
+		}
 		#pd-b-clear {
 			padding-bottom: 0px;
 		}
@@ -74,7 +82,44 @@
 			line-height: 20px;
 		}
 
-		#my-identification
+		.table-dashed {
+			margin-bottom: 0px;
+		}
+
+		.table-dashed td {
+			border: none !important;
+			border-bottom: 1px dashed #ccc !important;
+		}
+
+		.table-dashed tr:last-child td {
+			border: none !important;
+
+		}
+
+		.border-panel-body {
+			border: 1px solid #efefef !important;
+			padding: 15px !important;
+		}
+
+		.pd-clear {
+			padding: 0px !important;
+		}
+
+		.tip {
+			margin-top: 100px;
+		}
+
+		.tip div {
+			margin-bottom: 5px;
+		}
+		.success-file{
+			margin-left: 34px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.success-extra:after{
+			content: '';
+		}
 	</style>
 </head>
 <body>
@@ -100,32 +145,481 @@
 						<ul class="nav nav-tabs" id="nav-blue">
 							<li role="presentation" class="active"><a role="tab" href="#my-identification"
 							                                          data-toggle="tab">我的认证</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">手机认证</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">个人身份认证</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">企业身份认证</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">个人职务证明</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">成功案例</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">邮箱认证</a></li>
-							<li role="presentation" class=""><a role="tab" data-toggle="tab">名片认证</a></li>
+							<li role="presentation" class=""><a role="tab" href="#phone-identification"
+							                                    data-toggle="tab">手机认证</a></li>
+							<li role="presentation" class=""><a role="tab" href="#person-identification"
+							                                    data-toggle="tab">个人身份认证</a></li>
+							<li role="presentation" class=""><a role="tab" href="#esnterprises-identification"
+							                                    data-toggle="tab">企业身份认证</a></li>
+							<li role="presentation" class=""><a role="tab" href="#job-identification" data-toggle="tab">个人职务证明</a>
+							</li>
+							<li role="presentation" class=""><a role="tab" href="#success-case"
+							                                    data-toggle="tab">成功案例</a></li>
+							<li role="presentation" class=""><a role="tab" href="#email-case" data-toggle="tab">邮箱认证</a></li>
+							<li role="presentation" class=""><a role="tab" href="#card-identification" data-toggle="tab">名片认证</a></li>
 						</ul>
 					</div>
-					<div class="panel-body">
-						<div class="tab-content">
-							<div class="tab-pane active" id="my-identification">
-								<div class="row">
-									<div class="col-sm-1 text-center">
-										<i class="glyphicon glyphicon-ok-sign i-right"></i>
-									</div>
-									<div class="col-sm-11">
-										<div class="row ">
-											<div class="col-sm-12 lh-20"><strong>手机认证</strong></div>
-											<div class="col-sm-9 lh-20 text-nowrap">手机认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。
+					<div class="tab-content">
+						<!--我的认证-->
+						<div class="tab-pane active" id="my-identification">
+							<div class="panel-body border-panel-body pd-clear">
+								<table class="table table-dashed">
+									<tr>
+										<td>
+											<div class="row">
+												<div class="col-sm-1 text-center lh-40">
+													<i class="glyphicon glyphicon-ok-sign i-right"></i>
+												</div>
+												<div class="col-sm-11">
+													<div class="row ">
+														<div class="col-sm-12 lh-20"><strong>手机认证</strong></div>
+														<div class="col-sm-9 lh-20 text-nowrap">
+															手机认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。
+														</div>
+														<div class="col-sm-1 text-nowrap lh-20"></div>
+														<div class="col-sm-2">
+															<button class="btn btn-cold-to-lighter btn-xs btn-block">
+																修改
+															</button>
+														</div>
+													</div>
+												</div>
 											</div>
-											<div class="col-sm-1 text-nowrap lh-20">未认证</div>
-											<div class="col-sm-2">
-												<button class="btn btn-cold-to-lighter btn-xs btn-block">修改</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="row">
+												<div class="col-sm-1 text-center lh-20">
+													<i class="glyphicon glyphicon-remove-sign i-false"></i>
+												</div>
+												<div class="col-sm-11">
+													<div class="row ">
+														<div class="col-sm-12 lh-20"><strong>个人身份认证</strong></div>
+														<div class="col-sm-9 lh-20 text-nowrap">
+															个人认证是通过对您的身份证进行认证，保障平台会员身份的真实性。
+														</div>
+														<div class="col-sm-1 text-nowrap lh-20">未认证</div>
+														<div class="col-sm-2">
+															<button class="btn btn-cold-to-lighter btn-xs btn-block">
+																立即认证
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="row">
+												<div class="col-sm-1 text-center lh-20">
+													<i class="glyphicon glyphicon-remove-sign i-false"></i>
+												</div>
+												<div class="col-sm-11">
+													<div class="row ">
+														<div class="col-sm-12 lh-20"><strong>名片认证</strong></div>
+														<div class="col-sm-9 lh-20 text-nowrap">
+															认证未通过原因：认证信息不全
+														</div>
+														<div class="col-sm-1 text-nowrap lh-20">未认证</div>
+														<div class="col-sm-2">
+															<button class="btn btn-cold-to-lighter btn-xs btn-block">
+																修改
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!--手机认证-->
+						<div class="tab-pane" id="phone-identification">
+							<div class="panel-body border-panel-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label class="control-label col-sm-2">手机号码:</label>
+										<div class="col-sm-6 col-md-4">
+											<input class="form-control" type="text">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">图片验证码:</label>
+										<div class="col-sm-6 col-md-4">
+											<div class="input-group">
+												<input class="form-control" type="text">
+												<div class="input-group-addon">
+													<img class="img-responsive" alt="验证码">
+												</div>
 											</div>
 										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-sm-2">验证码:</label>
+										<div class="col-sm-6 col-md-4">
+											<div class="input-group">
+												<input class="form-control" type="text" placeholder="请输入验证码">
+												<div class="input-group-btn">
+													<button class="btn btn-to-hot ">免费获取验证码</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-offset-2 col-sm-3">
+											<button class="btn btn-cold-to-lighter">提交认证</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!--个人身份认证-->
+						<div class="tab-pane " id="person-identification">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">真实姓名:</label>
+												<div class="col-sm-6 ">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">身份证号码:</label>
+												<div class="col-sm-6 ">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">半身照片:</label>
+												<div class="col-sm-6 ">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">身份证照片(正面):</label>
+												<div class="col-sm-6 ">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">手持身份证照片:</label>
+												<div class="col-sm-6 ">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论3条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过个人身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!--照片示例-->
+									<div class="col-sm-3">
+										<div>半身照片示例:</div>
+										<img class="img-responsive" alt="img">
+										<div>身份证照片(正面)示例:</div>
+										<img class="img-responsive" alt="img">
+										<div>手持身份证照片示例:</div>
+										<img class="img-responsive" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--企业身份认证-->
+						<div class="tab-pane " id="esnterprises-identification">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">企业名称:</label>
+												<div class="col-sm-6">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">授权人姓名:</label>
+												<div class="col-sm-6">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">营业执照注册号:</label>
+												<div class="col-sm-6 ">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">营业执照:</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">企业授权书:</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="" type="file">
+												</div>
+												<div class="col-sm-2"><a class="title">模板下载</a></div>
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!--照片示例-->
+									<div class="col-sm-3">
+										<div>营业执照示例:</div>
+										<img class="img-responsive" alt="img">
+										<div>企业授权书示例:</div>
+										<img class="img-responsive" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--个人职务认证-->
+						<div class="tab-pane" id="job-identification">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">职务证明:</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="" type="file">
+												</div>
+												<div class="col-sm-2"><a class="title">模板下载</a></div>
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<!--照片示例-->
+									<div class="col-sm-3">
+										<div>职务证明示例:</div>
+										<img class="img-responsive" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--成功案例-->
+						<div class="tab-pane" id="success-case">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<div class="row">
+											<div class="col-sm-offset-3 col-sm-9">
+												请上传成功案例相关材料照片，需求清晰，可识别
+											</div>
+										</div>
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">成功案例名称:</label>
+												<div class="col-sm-6 ">
+													<div class="input-group">
+														<div class="input-group-addon">1</div>
+														<input class="form-control" type="text">
+													</div>
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													<input class="success-file" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+											<!--	<label class="control-label col-sm-3">成功案例名称:</label>-->
+												<div class="col-sm-offset-3 col-sm-6 ">
+													<div class="input-group text-nowrap">
+														<div class="input-group-addon">1</div>
+														<input class="form-control " type="text">
+														<i class="glyphicon glyphicon-minus-sign i-minus"></i>
+													</div>
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													<input class="success-file" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="col-sm-offset-3 col-sm-9">
+													<button class="btn btn-to-hot success-file btn-xs" type="file">+添加更多成功案例</button>
+												</div>
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--邮箱认证-->
+						<div class="tab-pane" id="email-case">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">认证邮箱:</label>
+												<div class="col-sm-6 ">
+													<input class="form-control" type="text">
+												</div>
+
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--名片认证-->
+						<div class="tab-pane" id="card-identification">
+							<div class="panel-body border-panel-body">
+								<div class="row">
+									<div class="col-sm-9">
+										<form class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-sm-3">姓名:</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="form-control" type="text">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">名片(正面):</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-sm-3">名片(背面):</label>
+												<div class="col-sm-6 col-md-4">
+													<input class="" type="file">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-9">
+													已上传  :  名片(正面)
+													<a class="title">删除</a>
+													<a class="title">查看</a>
+												</div>
+											</div>
+											<div class="row tip">
+												<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+												<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+												<div class="col-sm-offset-3 col-sm-9">（2）
+													上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+												</div>
+												<div class="col-sm-offset-3 col-sm-9">
+													备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-offset-3 col-sm-3">
+													<button class="btn btn-cold-to-lighter">提交认证</button>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
