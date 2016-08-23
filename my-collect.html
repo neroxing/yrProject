@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="title" content="">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- customized css -->
+    <link rel="stylesheet" href="css/yr.css">
+
+    <style type="text/css">
+    .navBox {
+            background: #eef2ff;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            padding: 25px 5px 0 5px;
+        }  
+    .nav>li {
+        margin-right: 5px;
+        background-color: #f0f0f0;
+
+    }    
+    .nav > li > a {
+        display: inline-block;padding: 5px 15px;
+        border-radius: 5px 5px 0 0;
+        border-top:1px solid #ddd;
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+        color: var(--cold-dark);
+    }
+    .head-padding{
+        padding-top: 0px;
+    }
+    .nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
+        color: var(--hot-light);
+    }
+    .search-part-nav{
+        background: #f1f1f1;
+        padding: 5px 10px;
+        overflow: hidden;
+        zoom: 1;
+    }
+    .invite-table{
+        background: #f8f8f8;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .who-collect-row{
+        padding: 15px 0;
+        overflow: hidden;
+        border-bottom: 1px dashed #c2c2c2;
+    }
+    .who-collect-row:last-child{
+        border-bottom: none;
+    }
+    .line-height-collect{
+        height: 35px;
+        line-height: 35px;
+    }
+    .line-margin-top{
+        margin-top: 30px;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="panel">
+        <div class="panel-heading head-padding">
+            <div class="navBox">
+                <ul class="nav nav-panel-tabs nav-Box" role="tablist">
+                    <li role="presentation" class="active">
+                    <a href="#my-collect" aria-controls="my-collect" role="tab" data-toggle="tab">我的收藏</a>
+                    </li>
+                    <li role="presentation">
+                    <a href="#who-collect" aria-controls="who-collect" role="tab" data-toggle="tab">被谁收藏</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="panel-body">
+        <div class="tab-content">
+        <!-- 我的收藏 -->
+            <div role="tabpanel" class="tab-pane active" id="my-collect">
+                 <div class="row search-part-nav ">
+                    <div class="col-sm-2 col-md-1 line-height-collect">
+                        信息类型：
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-control">
+                            <option selected="selected">全部信息</option>
+                            <option>资金信息</option>
+                            <option>项目信息</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-2 col-md-1 line-height-collect">
+                        收藏日期：
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-control">
+                            <option selected="selected">所有周期</option>
+                            <option>一周内</option>
+                            <option>两周内</option>
+                            <option>一月内</option>
+                            <option>三月内</option>
+                            <option>半年内</option>
+                            <option>一年内</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr class="invite-table">
+                             <th></th>
+                             <th>标题</th>
+                             <th>发布者</th>
+                             <th>信息类型</th>
+                             <th>收藏日期</th>
+                             <th>操作</th>
+                          </tr>
+                       </thead>
+                       <tbody>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" class="title">河南某海藻油开发项目股权融资500万-1300万元</a></td>
+                            <td><a href="#" class="title">胡先生</a></td>
+                            <td><a href="#" class="title">项目类型</a></td>
+                            <td>2016-07-20</td>
+                            <td><a href="#">删除</a></td>
+                          </tr>
+                           <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" class="title">河南某海藻油开发项目股权融资500万-1300万元</a></td>
+                            <td><a href="#" class="title">胡先生</a></td>
+                            <td><a href="#" class="title">项目类型</a></td>
+                            <td>2016-07-20</td>
+                            <td><a href="#">删除</a></td>
+                          </tr>
+                       </tbody>
+                    </table>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <input type="checkbox">
+                            <button class="btn btn-cold-to-lighter">删除</button>
+                        </div>
+                    </div>
+            </div>
+        <!-- 被谁收藏 -->
+            <div role="tabpanel" class="tab-pane" id="who-collect">
+                <div class="row search-part-nav">
+                    <div class="col-md-1 col-sm-2 line-height-collect">
+                        会员类型：
+                    </div>
+                    <div class="col-sm-2">
+                        <select class="form-control">
+                            <option selected="selected">所有会员</option>
+                            <option>企业</option>
+                            <option>政府</option>
+                            <option>个人</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-5">
+                        <input id="inputSearch" type="text" class="form-control" placeholder="输入联系人搜索"> 
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+                    </div>
+                </div>
+                <div class="row who-collect-row">
+                    <div class="col-sm-1">
+                        <img src="#" class="img-responsive pull-right" alt="头像">
+                    </div>
+                    <div class="col-sm-6">
+                        <div><a href="#" class="title">胡先生</a></div>
+                        <div>广东省东莞市某公司 </div>
+                        <div> 能源 化学化工 节能环保 建筑建材</div>
+                        <div>2016-04-13 收藏了我的 <a href="#" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a> </div>
+                    </div>
+                    <div class="col-sm-5 text-right line-margin-top">
+                        <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                        <button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+                        <button class="btn btn-cold-to-lighter btn-sm">查看联系方式</button>
+                        <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                    </div>
+                </div>
+                <div class="row who-collect-row">
+                    <div class="col-sm-1">
+                        <img src="#" class="img-responsive pull-right" alt="头像">
+                    </div>
+                    <div class="col-sm-6">
+                        <div><a href="#" class="title">胡先生</a></div>
+                        <div>广东省东莞市某公司 </div>
+                        <div> 能源 化学化工 节能环保 建筑建材</div>
+                        <div>2016-04-13 收藏了我的 <a href="#" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a> </div>
+                    </div>
+                    <div class="col-sm-5 text-right line-margin-top">
+                        <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                        <button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+                        <button class="btn btn-cold-to-lighter btn-sm">查看联系方式</button>
+                        <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

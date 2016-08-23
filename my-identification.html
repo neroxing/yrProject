@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="title" content="">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- customized css -->
+    <link rel="stylesheet" href="css/yr.css">
+
+    <style type="text/css">
+    .i-right{
+        font-size: 40px;
+        vertical-align: middle;
+        color: green;
+    }
+    .i-false{
+        font-size: 40px;
+        vertical-align: middle;
+        color: red;
+    }
+    .indentify{
+        border-bottom: 1px dashed #a5a5a5;
+        line-height: 20px;
+        margin-bottom: 15px;
+        height: 60px;
+    }
+    .bg-color-gary{
+        background-color: #f5f5f5;
+    }
+    .indentify-line-height{
+        line-height: 25px;
+    }
+    .i-red{
+        color: red;
+    }
+    .navBox {
+            background: #f6f6f6;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            padding: 25px 5px 0 5px;
+        }  
+    .nav>li {
+        margin-right: 5px;
+        background-color: #f0f0f0;
+
+    }    
+    .nav > li > a {
+        display: inline-block;padding: 5px 15px;
+        border-radius: 5px 5px 0 0;
+        border-top:1px solid #ddd;
+        border-left:1px solid #ddd;
+        border-right:1px solid #ddd;
+    }
+    .head-padding{
+        padding-top: 0px;
+    }
+    .nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
+        background: #536290;
+        color: #fff;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="panel bg-color-gary">
+        <div class="panel-body indentify-line-height">
+            <div><strong>我的认证等级：</strong>
+                <i class="glyphicon glyphicon-star i-red"></i>
+                <i class="glyphicon glyphicon-star i-red"></i>
+                <i class="glyphicon glyphicon-star i-red"></i>
+                <i class="glyphicon glyphicon-star"></i>
+                <i class="glyphicon glyphicon-star"></i>
+            </div>
+            <div><strong>已通过的认证：</strong> 手机认证 </div>
+            <div>为验证会员资料可信度，我们建立了一套信用认证等级制度，完整的认证是会员搜索到您的重要保证，更是让对方能够信任您的基础。一旦发现有违诚信的虚假认证，投融界有权作出相应处理：负面标记、限制行为、甚至封号。</div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading head-padding">
+            <div class="navBox">
+                <ul class="nav nav-panel-tabs nav-Box" role="tablist">
+                    <li role="presentation" class="active"><a href="#my-identification" aria-controls="my-identification" role="tab" data-toggle="tab">我的认证</a></li>
+                    <li role="presentation"><a href="#phone-identification" aria-controls="phone-identification" role="tab" data-toggle="tab">手机认证</a></li>
+                    <li role="presentation"><a href="#person-identification" aria-controls="person-identification" role="tab" data-toggle="tab">个人身份认证</a></li>
+                    <li role="presentation"><a href="#work-identification" aria-controls="work-identification" role="tab" data-toggle="tab">个人职务证明</a></li>
+                    <li role="presentation"><a href="#email-identification" aria-controls="email-identification" role="tab" data-toggle="tab">邮箱认证</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+            <!-- 我的认证 -->
+                <div role="tabpanel" class="tab-pane active" id="my-identification">
+                    <div class="row indentify">
+                        <div class="col-sm-1">
+                            <i class="glyphicon glyphicon-ok-sign i-right"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>手机认证</div>
+                            <div>手机认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。</div>
+                        </div>
+                        <div class="col-sm-5 text-right">
+                            <button class="btn btn-cold-to-lighter ">修改</button>
+                        </div>
+                    </div>
+                    <div class="row indentify">
+                        <div class="col-sm-1">
+                            <i class="glyphicon glyphicon-remove-sign i-false"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>个人身份认证</div>
+                            <div>个人认证是通过对您的身份证进行认证，保障平台会员身份的真实性。</div>
+                        </div>
+                        <div class="col-sm-5 text-right">
+                            <span>未认证</span>
+                            <button class="btn btn-cold-to-lighter ">立即认证</button>
+                        </div>
+                    </div>
+                    <div class="row indentify">
+                        <div class="col-sm-1">
+                            <i class="glyphicon glyphicon-remove-sign i-false"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>个人职务证明</div>
+                            <div>通过行业个人职务认证，将会得到特殊的认证徽标。</div>
+                        </div>
+                        <div class="col-sm-5 text-right">
+                            <span>未认证</span>
+                            <button class="btn btn-cold-to-lighter ">立即认证</button>
+                        </div>
+                    </div>
+                    <div class="row indentify">
+                        <div class="col-sm-1">
+                            <i class="glyphicon glyphicon-remove-sign i-false"></i>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>邮箱认证</div>
+                            <div>邮件认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。</div>
+                        </div>
+                        <div class="col-sm-5 text-right">
+                            <span>未认证</span>
+                            <button class="btn btn-cold-to-lighter ">立即认证</button>
+                        </div>
+                    </div>
+                </div>
+            <!-- 手机认证 -->
+                <div role="tabpanel" class="tab-pane" id="phone-identification">
+                    <form>
+                        <div class="row form-group">
+                            <label class="control-label col-sm-2 text-right"><span class="i-red">*</span>手机号码：</label>
+                            <div class=" col-sm-5">
+                                <input class="form-control" type="text" placeholder="1893****222">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="control-label col-sm-2 text-right">图片验证码：</label>
+                            <div class="input-group col-sm-5">
+                                <input class="form-control" type="text">
+                                <div class="input-group-addon">
+                                    <img class="img-responsive" src="#" alt="验证码">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="control-label col-sm-2 text-right">验证码：</label>
+                            <div class="input-group col-sm-5">
+                                <input type="text" placeholder="输入验证码" class="form-control">
+                                <div class="input-group-btn">
+                                    <a class="btn btn-cold-to-lighter" href="javascript:void(0);">获取验证码</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <button class="btn btn-cold-to-lighter ">提交认证</button>
+                        </div>
+                    </div>
+                </div>
+            <!-- 个人身份认证 -->
+                <div role="tabpanel" class="tab-pane" id="person-identification">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <form>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3 text-right"><span class="i-red">*</span> 真实姓名：</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text" placeholder="李先生">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3 text-right"><span class="i-red">*</span> 身份证号码：</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3   text-right"><span class="i-red">*</span> 半身照片：</label>
+                                    <div class="col-sm-5   text-left">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3   text-right"><span class="i-red">*</span> 身份证照片(正面)：</label>
+                                    <div class="col-sm-5   text-left">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3   text-right"><span class="i-red">*</span> 手持身份证照片：</label>
+                                    <div class="col-sm-5   text-left">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-sm-5 col-sm-offset-3">
+                                    <div>认证小贴士：</div>
+                                    <div> 通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过个人身份认证。
+
+                                        声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+
+                                        提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+
+                                        备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内 </div>
+                                    <button class="btn btn-cold-to-lighter ">提交认证</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div>半身照片示例：</div>
+                            <img src="#" class="img-responsive">
+                            <div>身份证照片(正面)示例：</div>
+                            <img src="#" class="img-responsive">
+                            <div>手持身份证照片示例：</div>
+                            <img src="#" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            <!-- 个人职务证明 -->
+                <div role="tabpanel" class="tab-pane" id="work-identification">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <form>
+                                <div class="row form-group">
+                                    <label class="control-label col-sm-3   text-right"><span class="i-red">*</span> 职务证明</label>
+                                    <div class="col-sm-5   text-left">
+                                        <input type="file">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <a href="#" class="title">模板下载</a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-sm-5 col-sm-offset-3">
+                                    <div>认证小贴士：</div>
+                                    <div> 通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过个人身份认证。
+
+                                        声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+
+                                        提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+
+                                        备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内 </div>
+                                    <button class="btn btn-cold-to-lighter ">提交认证</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div>职务证明示例示例：</div>
+                            <img src="#" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            <!-- 邮箱认证 -->
+                <div role="tabpanel" class="tab-pane" id="email-identification">
+                    <form>
+                       <div class="row form-group">
+                            <label class="control-label col-sm-3 text-right"><span class="i-red">*</span> 认证邮箱：</label>
+                            <div class="col-sm-5">
+                                <input class="form-control" type="text" placeholder="li3693@126.com">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-sm-5 col-sm-offset-3">
+                            <div>认证小贴士：</div>
+                            <div> 通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过个人身份认证。
+
+                                声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+
+                                提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+
+                                备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内 </div>
+                            <button class="btn btn-cold-to-lighter ">提交认证</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

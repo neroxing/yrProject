@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="title" content="">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap theme 
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- customized css -->
+    <link rel="stylesheet" href="css/yr.css">
+
+    <style type="text/css">
+        .username-color {
+            color: #c82a00;
+        }
+        .score-color {
+            color: #e93100;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .number-color {
+            display: block;
+            height: 32px;
+            line-height: 30px;
+            font-size: 30px;
+            color: #c82a00;
+        }
+        .level-color {
+            color: #c82a00;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .nav>li {
+            margin-right: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px 5px 0 0;
+
+
+        }    
+        .nav > li > a {
+            display: inline-block;padding: 5px 15px;
+            border-radius: 5px 5px 0 0;
+            border-top:1px solid #ddd;
+            border-left:1px solid #ddd;
+            border-right:1px solid #ddd;
+            color: var(--cold-dark);
+        }
+        .head-padding{
+            padding-top: 0px;
+        }
+        .nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
+            color: var(--hot-light);
+        }
+        .receive{
+            border-bottom: 1px dashed #c2c2c2;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            padding-top: 15px;
+        }
+        .receive:last-child{
+            border-bottom: none;
+        }
+        .nav-day li a {
+            display: inline-block; 
+            border-radius: 5px 5px 0 0;
+        }
+        .nav-day li {
+            display: inline-block; 
+            padding-top: 10px;
+
+        }
+        .nav-day>li.active>a, .nav-day>li.active>a:hover, .nav-day>li.active>a:focus{
+            background-color: #536290;
+            color: white;
+        }
+        .line-margin-top{
+            margin-top: 40px;
+        }
+        .card-margin-top{
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-sm-8">
+        <!-- 用户资料 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="#" class="img-responsive">
+                            <a href="#" class="to-hot">修改头像</a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div>欢迎您， <span class="username-color">李先生</span> 上次登录时间: 2016-08-19 09:56:29</div>
+                            <div>资料完整度： <span class="score-color">59分</span> <a href="#" class="title">完善</a></div>
+                            <div>认证状态：
+                                <a href="#" class="fa fa-mobile-phone"></a>
+                                <a href="#" class="fa fa-credit-card"></a>
+                                <a href="#" class="fa fa-user"></a>
+                                <a href="#" class="fa fa-envelope"></a>
+                            </div>
+                            <div>增值服务： <a href="#" class="to-hot">升级为VIP</a></div>
+                            <div>消息提醒： 
+                                <i class="glyphicon glyphicon-envelope"></i><a href="#" class="to-hot">收到的约谈(5)</a> 
+                                <i class="glyphicon glyphicon-comment"></i><a href="#" class="to-hot">系统消息(0)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- 用户数据 -->
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-2 col-sm-offset-1">
+                            <div class="text-center"><a href="#" class="fa fa-upload"></a></div>
+                            <div class="text-center"><span class="number-color">1</span></div>
+                            <div class="text-center"><a href="#" class="title">已发布信息</a></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-center"><a href="#" class="fa fa-paper-plane-o"></a></div>
+                            <div class="text-center"><span class="number-color">23</span></div>
+                            <div class="text-center"><a href="#" class="title">投递次数</a></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-center"><a href="#" class="glyphicon glyphicon-eye-open"></a></div>
+                            <div class="text-center"><span class="number-color">456</span></div>
+                            <div class="text-center"><a href="#" class="title">最近30天浏览</a></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-center"><a href="#" class="fa fa-coffee"></a></div>
+                            <div class="text-center"><span class="number-color">7</span></div>
+                            <div class="text-center"><a href="#" class="title">收到的约谈</a></div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-center"><a href="#" class="fa fa-envelope"></a></div>
+                            <div class="text-center"><span class="number-color">89</span></div>
+                            <div class="text-center"><a href="#" class="title">收到留言</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- 信息效果 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="cold-underline">信息效果</div>
+                        </div>
+                       <!--  <div class="col-auto pull-right"> -->
+                            <ul class="nav nav-panel-tabs text-center pull-right nav-day" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#week" aria-controls="week" role="tab" data-toggle="tab">最近7天</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#today" aria-controls="today" role="tab" data-toggle="tab">今天</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#month" aria-controls="month" role="tab" data-toggle="tab">最近30天</a>
+                                </li>
+                          </ul>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4">
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="week">...week</div>
+                        <div role="tabpanel" class="tab-pane" id="today">...today</div>
+                        <div role="tabpanel" class="tab-pane" id="month">...month</div>
+                    </div>
+                </div>
+            </div>
+        <!-- 信息动态 -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="cold-underline">信息动态</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">   
+                    <ul class="nav nav-tabs nav-Box" role="tablist">
+                        <li role="presentation" class="active">
+                        <a href="#message-receive" aria-controls="message-receive" role="tab" data-toggle="tab">收到的消息</a>
+                        </li>
+                        <li role="presentation">
+                        <a href="#who-look" aria-controls="who-look" role="tab" data-toggle="tab">谁看过我</a>
+                        </li>
+                        <li role="presentation">
+                        <a href="#who-collect" aria-controls="who-collect" role="tab" data-toggle="tab">谁收藏我</a>
+                        </li>
+                        <li role="presentation">
+                        <a href="#card-receive" aria-controls="card-receive" role="tab" data-toggle="tab">收到的名片</a>
+                        </li>
+                        <a href="#" class="title pull-right">更多&gt;&gt;</a>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="message-receive">
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive" alt="头像">
+                                </div>
+                                <div class="col-sm-7 col-md-8">
+                                    <div>管理员 易融圈</div>
+                                    <div><a href="#" class="title">您已经成功下单，订单：20160729113609714964，请及时付款。赶紧去付款吧，提早享受服务，提前抓住商机。</a>
+                                    </div>
+                                    <div>来源：订单：20160729113125990084</div>
+                                    <div><i class="fa fa-clock"></i>2016年7月29日 11:31</div>
+                                </div>
+                                <div class="col-sm-3 col-md-2 card-margin-top">
+                                    <div class="text-center">类型：系统消息</div>
+                                </div>
+                            </div>
+                             <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive" alt="头像">
+                                </div>
+                                <div class="col-md-8 col-sm-7">
+                                    <div>管理员 易融圈</div>
+                                    <div><a href="#" class="title">您已经成功下单，订单：20160729113609714964，请及时付款。赶紧去付款吧，提早享受服务，提前抓住商机。</a>
+                                    </div>
+                                    <div>来源：订单：20160729113125990084</div>
+                                    <div><i class="fa fa-clock"></i>2016年7月29日 11:31</div>
+                                </div>
+                                <div class="col-md-2 col-sm-3 card-margin-top">
+                                    <div class="text-center">类型：系统消息</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="who-look">
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 个人资金 企业资金 天使投资 VC投资 </div>
+                                    <div>16小时前 查看了<a href="#" class="title">我的展厅</a> </div>
+                                </div>
+                                <div class="col-sm-5 text-right card-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 个人资金 企业资金 天使投资 VC投资 </div>
+                                    <div>16小时前 查看了<a href="#" class="title">我的展厅</a> </div>
+                                </div>
+                                <div class="col-sm-5 text-right card-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="who-collect">
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 能源 化学化工 节能环保 建筑建材</div>
+                                    <div>2016-04-13 收藏了我的 <a href="#" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a> </div>
+                                </div>
+                                <div class="col-sm-5 text-right line-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                                    <button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+                                    <button class="btn btn-cold-to-lighter btn-sm">查看联系方式</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                            <div class="row receive">
+                               <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 能源 化学化工 节能环保 建筑建材</div>
+                                    <div>2016-04-13 收藏了我的 <a href="#" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a> </div>
+                                </div>
+                                <div class="col-sm-5 text-right line-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">交换名片</button>
+                                    <button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+                                    <button class="btn btn-cold-to-lighter btn-sm">查看联系方式</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="card-receive">
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 个人资金 企业资金 天使投资 VC投资 </div>
+                                    <div>2016-03-08 申请交换名片</div>
+                                </div>
+                                <div class="col-sm-5 text-right card-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">加为商友</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                            <div class="row receive">
+                                <div class="col-sm-1">
+                                    <img src="#" class="img-responsive pull-right" alt="头像">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div><a href="#" class="title">胡先生</a></div>
+                                    <div>广东省东莞市某公司 </div>
+                                    <div> 个人资金 企业资金 天使投资 VC投资 </div>
+                                    <div>2016-03-08 申请交换名片</div>
+                                </div>
+                                <div class="col-sm-5 text-right card-margin-top">
+                                    <button class="btn btn-cold-to-lighter btn-sm">加为商友</button>
+                                    <div>人脉关系：<a href="#" class="title">已递送名片(0)</a> | <a href="#" class="title">商友(0)</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4">
+            <div class="panel">
+                <div class="panel-heading">
+                    勋章等级：<span class="level-color">白银勋章</span>
+                </div>
+                <div class="panel-body">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        5994/12000
+                      </div>
+                    </div>
+                    <div class="text-center">差6006成长值升级为黄金勋章 </div>
+                    <button type="button" class="btn btn-hot-to-lighter btn-block">如何提升勋章等级</button>
+                </div>
+            </div>
+            <a href="#"><img class="img-responsive" src="#"></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
