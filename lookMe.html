@@ -1,247 +1,315 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="title" content="">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="index, follow">
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Bootstrap theme -->
-    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+	<!-- Bootstrap theme -->
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
 
-    <!-- fontawesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-    <!-- customized css -->
-    <link rel="stylesheet" href="css/yr.css">
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
 
-    <style type="text/css">
-        .bodyHeight{height: 1000px;}
-        .myFriends{padding-top: 50px;}
-        .spanOrange{color: orange;}
-        .businessCard{padding: 15px 0;border-bottom: 1px dotted #ddd;}
-        .pd15 div{padding: 10px 0;}
-        .pd10{margin: 10px; padding: 0;}
-        .navBox {
-            background: #eef2ff;
-            border: 1px solid #ccc;
-            border-bottom: 0;
-            padding: 25px 5px 0 5px;
-        }  
-        .nav>li{margin-right: 5px;background-color: #f0f0f0;}    
-        .nav > li > a{display: inline-block;padding: 5px 15px;border-radius: 5px 5px 0 0;border-top:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;}
-        .colorGray{background-color: #f1f1f1;height: 44px ;padding: 5px 10px;}
-        .pdTop10{padding-top: 6px;}
-        .lineH{line-height:34px; }
-        .noWrap{white-space: nowrap;}
-    </style>
+	<style type="text/css">
+		.bodyHeight {
+			height: 1000px;
+		}
+
+		.myFriends {
+			padding-top: 50px;
+		}
+
+		.spanOrange {
+			color: orange;
+		}
+
+		.businessCard {
+			padding: 15px 0;
+			border-bottom: 1px dotted #ddd;
+		}
+
+		.pd15 div {
+			padding: 10px 0;
+		}
+
+		.pd10 {
+			margin: 10px;
+			padding: 0;
+		}
+
+		.navBox {
+			background: #eef2ff;
+			border: 1px solid #ccc;
+			border-bottom: 0;
+			padding: 25px 5px 0 5px;
+		}
+
+		.nav > li {
+			margin-right: 5px;
+			background-color: #f0f0f0;
+		}
+
+		.nav > li > a {
+			display: inline-block;
+			padding: 5px 15px;
+			border-radius: 5px 5px 0 0;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+		}
+
+		.colorGray {
+			background-color: #f1f1f1;
+			height: 44px;
+			padding: 5px 10px;
+		}
+
+		.pdTop10 {
+			padding-top: 6px;
+		}
+
+		.lineH {
+			line-height: 34px;
+		}
+
+		.noWrap {
+			white-space: nowrap;
+		}
+	</style>
 </head>
 <body>
 <div class="container">
-    <div class="panel">
-        <div class="panel-heading pd10">
-             <!-- Nav tabs -->
-            <div class="navBox">
-                <ul class="nav nav-panel-tabs text-center " role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="title">我看过谁</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" class="title">谁看过我</a></li>
-                </ul>
-            </div> 
-        </div>
-        <div class="panel-body bodyHeight">
-            <!-- Tab panes -->
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                <!-- 会员类型 -->
-                <div class="form-inline colorGray">
-                     <div class="form-group">
-                    <label>会员类型：</label>
-                    <select class="form form-control">
-                          <option>所有会员</option>
-                          <option>企业会员</option>
-                          <option>政府会员</option>
-                          <option>个人会员</option>
-                    </select>
-                    </div>
-                    <div class="form-group pull-right">
-                        <input class="form-control" type="text" name="" placeholder="输入联系人搜索">
-                        <button class="btn btn-cold-to-lighter ">搜索</button>
-                    </div>
-                </div> 
-                <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">卢俊华 </a>(先生)</div>
-                            <div>深圳市顺程实业有限公司 董事长</div>
-                            <div class="row lineH"><div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div> 
-                            <div class="col-sm-6 ">  <div class="pull-right"> 
-                                        <button class="btn btn-sm btn-cold-to-lighter" >交换名片</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-                                    </div></div></div>
-                             <div class="row">
-                                  <div class="col-sm-7 ">
-                                      2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>      
-                        </div>
-                    </div>
-                    <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">卢俊华 </a>(先生)</div>
-                            <div>深圳市顺程实业有限公司 董事长</div>
-                            <div class="row lineH"><div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div> 
-                            <div class="col-sm-6 ">  <div class="pull-right"> 
-                                        <button class="btn btn-sm btn-cold-to-lighter" >交换名片</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-                                    </div></div></div>
-                             <div class="row">
-                                  <div class="col-sm-7 ">
-                                      2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>      
-                        </div>
-                    </div>
-                    <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">卢俊华 </a>(先生)</div>
-                            <div>深圳市顺程实业有限公司 董事长</div>
-                            <div class="row lineH"><div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div> 
-                            <div class="col-sm-6 ">  <div class="pull-right"> 
-                                        <button class="btn btn-sm btn-cold-to-lighter" >交换名片</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-                                    </div></div></div>
-                             <div class="row">
-                                  <div class="col-sm-7 ">
-                                      2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>      
-                        </div>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="profile">
-                 <!-- 会员类型 -->
-                <div class="form-inline colorGray">
-                     <div class="form-group">
-                    <label>会员类型：</label>
-                    <select class="form form-control">
-                          <option>所有会员</option>
-                          <option>企业会员</option>
-                          <option>政府会员</option>
-                          <option>个人会员</option>
-                    </select>
-                    </div>
-                    <div class="form-group pull-right">
-                        <input class="form-control" type="text" name="" placeholder="输入联系人搜索">
-                        <button class="btn btn-cold-to-lighter ">搜索</button>
-                    </div>
-                </div> 
-                    <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">李先生</a></div>
-                            <div>山东省济南市某公司 经理</div>
-                            <div class="row"> 
-                                 <div class="col-sm-6 col-sm-offset-6">
-                                     <div class="pull-right"> 
-                                        <button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="row">
-                                  <div class="col-sm-7 ">
-                                      发布了资金信息<a href="" class="title">山东某企业资金1000万-20亿元寻水务、水电等涉水项目合作</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>  
-                        </div>
-                    </div>
-                    
-                    <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">卢俊华 </a>(先生)</div>
-                            <div>深圳市顺程实业有限公司 董事长</div>
-                            <div class="row lineH"><div class="col-sm-9"> 房地产 能源 化学化工 航空航天 国防</div> 
-                            <div class="col-sm-3 "> <button class="btn btn-sm btn-cold-to-lighter pull-right"> 交换名片</button></div></div>
-                             <div class="row">
-                                  <div class="col-sm-7 ">
-                                      2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>      
-                        </div>
-                    </div>
-                    <div class="row businessCard">
-                        <div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-                        <div class="col-sm-10">
-                            <div><a href="" class="title">卢俊华 </a>(先生)</div>
-                            <div>深圳市顺程实业有限公司 董事长</div>
-                            <div class="row lineH"><div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div> 
-                            <div class="col-sm-6 ">  <div class="pull-right"> 
-                                        <button class="btn btn-sm btn-cold-to-lighter" >交换名片</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-                                        <button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-                                    </div></div></div>
-                             <div class="row">
-                                  <div class="col-sm-7 ">
-                                      2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-                                  </div>
-                            
-                                    <div class="col-sm-5 ">
-                                        <div class="pull-right">
-                                            人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
-                                        </div>
-                                    </div>
-                            </div>      
-                        </div>
-                    </div>
-                </div>
-              </div>
-        </div>
-    </div>
+	<div class="panel">
+		<div class="panel-heading pd10">
+			<!-- Nav tabs -->
+			<div class="navBox">
+				<ul class="nav nav-panel-tabs text-center " role="tablist">
+					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+					                                          data-toggle="tab" class="title">我看过谁</a></li>
+					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"
+					                           class="title">谁看过我</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel-body bodyHeight">
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="home">
+					<!-- 会员类型 -->
+					<div class="form-inline colorGray">
+						<div class="form-group">
+							<label>会员类型：</label>
+							<select class="form form-control">
+								<option>所有会员</option>
+								<option>企业会员</option>
+								<option>政府会员</option>
+								<option>个人会员</option>
+							</select>
+						</div>
+						<div class="form-group pull-right">
+							<input class="form-control" type="text" name="" placeholder="输入联系人搜索">
+							<button class="btn btn-cold-to-lighter ">搜索</button>
+						</div>
+					</div>
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">卢俊华 </a>(先生)</div>
+							<div>深圳市顺程实业有限公司 董事长</div>
+							<div class="row lineH">
+								<div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div>
+								<div class="col-sm-6 ">
+									<div class="pull-right">
+										<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">卢俊华 </a>(先生)</div>
+							<div>深圳市顺程实业有限公司 董事长</div>
+							<div class="row lineH">
+								<div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div>
+								<div class="col-sm-6 ">
+									<div class="pull-right">
+										<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">卢俊华 </a>(先生)</div>
+							<div>深圳市顺程实业有限公司 董事长</div>
+							<div class="row lineH">
+								<div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div>
+								<div class="col-sm-6 ">
+									<div class="pull-right">
+										<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile">
+					<!-- 会员类型 -->
+					<div class="form-inline colorGray">
+						<div class="form-group">
+							<label>会员类型：</label>
+							<select class="form form-control">
+								<option>所有会员</option>
+								<option>企业会员</option>
+								<option>政府会员</option>
+								<option>个人会员</option>
+							</select>
+						</div>
+						<div class="form-group pull-right">
+							<input class="form-control" type="text" name="" placeholder="输入联系人搜索">
+							<button class="btn btn-cold-to-lighter ">搜索</button>
+						</div>
+					</div>
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">李先生</a></div>
+							<div>山东省济南市某公司 经理</div>
+							<div class="row">
+								<div class="col-sm-6 col-sm-offset-6">
+									<div class="pull-right">
+										<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									发布了资金信息<a href="" class="title">山东某企业资金1000万-20亿元寻水务、水电等涉水项目合作</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">卢俊华 </a>(先生)</div>
+							<div>深圳市顺程实业有限公司 董事长</div>
+							<div class="row lineH">
+								<div class="col-sm-9"> 房地产 能源 化学化工 航空航天 国防</div>
+								<div class="col-sm-3 ">
+									<button class="btn btn-sm btn-cold-to-lighter pull-right"> 交换名片</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row businessCard">
+						<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
+						<div class="col-sm-10">
+							<div><a href="" class="title">卢俊华 </a>(先生)</div>
+							<div>深圳市顺程实业有限公司 董事长</div>
+							<div class="row lineH">
+								<div class="col-sm-6"> 房地产 能源 化学化工 航空航天 国防</div>
+								<div class="col-sm-6 ">
+									<div class="pull-right">
+										<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
+										<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-7 ">
+									2016-08-10 查看了<a href="" class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+								</div>
+
+								<div class="col-sm-5 ">
+									<div class="pull-right">
+										人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title"> 商友(3)</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- jQuery -->
