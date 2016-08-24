@@ -57,7 +57,26 @@
 		line-height: 25px;
 
 	}
-
+	.person-tab {
+			border: 10px solid #fff;
+			width: auto;
+			margin-left: 30px;
+			float: left;
+			margin-top: 5px;
+			background-color: #fff;
+			font: bold 12px simsun;
+	}
+	.form-style {
+			margin-top: 20px;
+			border: 2px solid #eeeff5;
+			padding-top: 20px;
+			padding-left: 40px;
+			margin-bottom: 20px;
+	}
+    .red{color:#e93100; }
+    .ma-bottom{
+    	margin-bottom: 30px;
+    }
 	</style>
 </head>
 <body>
@@ -75,18 +94,18 @@
 			<button class="btn btn-cold-to-lighter pull-right">交换名片</button>
 		</div>
 	</div>
-	<div class="panel">
-		<div class="panel-heading">
+   <!-- <div class="panel-heading">
 			<div class="row">
 				<div class="col-auto">
 					<div class="bg-cold-light">联系人资料</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel-body">
+		</div> -->
+		<div class="person-tab">联系人资料</div>
+		<div class="form-style">
 			<form class="form-horizontal">
 				<div class="form-group">
-					<label class="control-label col-sm-2 text-right">*姓名：</label>
+					<label class="control-label col-sm-2 text-right"><a href="" class="red">*</a>姓名：</label>
 					<div class="col-sm-5">
 						<input class="form-control" type="text">
 					</div>
@@ -133,7 +152,7 @@
 					</div>
 				</div>
 				 <div class="form-group">
-					<label class="control-label col-sm-2 text-right">*邮箱地址：</label>
+					<label class="control-label col-sm-2 text-right"><a href="" class="red">*</a>邮箱地址：</label>
 					<div class="col-sm-3"> li3693@126.com</div>
 				</div>
 				<div class="form-group">
@@ -166,21 +185,20 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
+				</div>
+				<div class="form-group">
 						<div class="col-sm-6 col-sm-offset-2">
 						<input class="form-control" placeholder="请输入详细街道地址">
 						</div> 
-					</div>     
-				</div>
+					</div>
 			</form>
 		</div>
-	</div>
 	 <div class="row">
 		<div class="col-sm-2 col-sm-offset-3">
-			<button class="btn btn-cold-to-lighter pull-right ">保存资料</button>
+			<button class="btn btn-lg btn-cold-to-lighter pull-right ma-bottom">保存资料</button>
 		</div>
 		<div class="col-sm-2">
-			<button class="btn btn-hot-to-lighter pull-right">预览名片</button>
+			<button class="btn btn-lg btn-hot-to-lighter pull-right ma-bottom">预览名片</button>
 		</div>
 	</div>
 </div>

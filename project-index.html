@@ -53,7 +53,7 @@
 
 		}    
 		.nav > li > a {
-			display: inline-block;padding: 5px 15px;
+			display: inline-block;padding: 5px 10px;
 			border-radius: 5px 5px 0 0;
 			border-top:1px solid #ddd;
 			border-left:1px solid #ddd;
@@ -63,7 +63,7 @@
 		.head-padding{
 			padding-top: 0px;
 		}
-		.nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
+		.nav-Box>li.active>a:hover,.nav-Box>li>a:hover{
 			color: var(--hot-light);
 		}
 		.receive{
@@ -100,7 +100,14 @@
 			border:1px solid #ddd;
 
 		}
-
+		.border{
+			border-bottom: 1px dotted #ddd;
+			padding-bottom: 5px;
+			margin-bottom: 5px;
+		}
+        .pd-top-10{
+        	padding-top: 10px;
+        }
 	</style>
 </head>
 <body>
@@ -112,12 +119,12 @@
 			<div class="panel">
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-sm-3">
-							<img src="#" class="img-responsive">
-							<a href="#" class="to-hot">修改头像</a>
+						<div class="col-sm-2 text-center">
+							<img src="#" class="img-responsive center-block">
+							<a href="#" class="to-hot ">修改头像</a>
 						</div>
-						<div class="col-sm-9">
-							<div>欢迎您， <span class="username-color">李先生</span> 上次登录时间: 2016-08-19 09:56:29</div>
+						<div class="col-sm-10">
+							<div class="border">欢迎您， <span class="username-color">李先生</span> 上次登录时间: 2016-08-19 09:56:29</div>
 							<div>资料完整度： <span class="score-color">59分</span> <a href="#" class="title">完善</a></div>
 							<div>认证状态：
 								<a href="#" class="fa fa-mobile-phone"></a>
@@ -223,7 +230,7 @@
 						<li role="presentation">
 						<a href="#card-receive" aria-controls="card-receive" role="tab" data-toggle="tab">收到的名片</a>
 						</li>
-						<a href="#" class="title pull-right">更多&gt;&gt;</a>
+						<div class="pd-top-10"><a href="#" class="title pull-right">更多&gt;&gt;</a></div>
 					</ul>
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane active" id="message-receive">

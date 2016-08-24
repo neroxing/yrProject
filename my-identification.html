@@ -106,7 +106,7 @@
 		height: 34px;
 		line-height: 34px;
 	}
-
+    .noWrap{white-space: nowrap;}
 	</style>
 </head>
 <body>
@@ -143,11 +143,11 @@
 						<div class="col-sm-1">
 							<i class="glyphicon glyphicon-ok-sign i-right"></i>
 						</div>
-						<div class="col-sm-8 indentify-line-height">
+						<div class="col-sm-9 indentify-line-height">
 							<div><strong>手机认证</strong></div>
 							<div>手机认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。</div>
 						</div>
-						<div class="col-sm-3 text-right">
+						<div class="col-sm-2 text-right">
 							<button class="btn btn-cold-to-lighter ">修改</button>
 						</div>
 					</div>
@@ -181,7 +181,7 @@
 						<div class="col-sm-1">
 							<i class="glyphicon glyphicon-remove-sign i-false"></i>
 						</div>
-						<div class="col-sm-8 indentify-line-height">
+						<div class="col-sm-8 indentify-line-height noWrap">
 							<div><strong>邮箱认证</strong></div>
 							<div>邮件认证可以让需求方有更多的途径和您进行深入交流，为您的真实性加分。</div>
 						</div>
@@ -196,7 +196,7 @@
 					<form class="form-horizontal">
 						<div class="form-group">
 							<label class="control-label col-sm-2 text-right"><span class="i-red">*</span>手机号码:</label>
-							<div class=" col-sm-5">
+							<div class=" input-group col-sm-5">
 								<input class="form-control" type="text" placeholder="1893****222">
 							</div>
 						</div>
@@ -210,11 +210,11 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label col-sm-2 text-right">验证码:</label>
+							<label class="control-label col-sm-2 text-right"><span class="i-red">*</span>验证码:</label>
 							<div class="input-group col-sm-5">
 								<input type="text" placeholder="输入验证码" class="form-control">
 								<div class="input-group-btn">
-									<a class="btn btn-cold-to-lighter" href="javascript:void(0);">获取验证码</a>
+									<a class="btn btn-cold-to-lighter" href="javascript:void(0);">免费获取验证码</a>
 								</div>
 							</div>
 						</div>
@@ -312,7 +312,7 @@
 						</div>
 						<div class="col-sm-3">
 							<div>职务证明示例示例：</div>
-							<img src="#" class="img-responsive">
+							<a href=""><img src="#" class="img-responsive"></a>
 						</div>
 					</div>
 				</div>
