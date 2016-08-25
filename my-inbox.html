@@ -14,8 +14,8 @@
 	<!-- Bootstrap css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<!-- Bootstrap theme 
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
 
 	<!-- fontawesome css -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -24,31 +24,6 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-	/*.navBox {
-			background: #eef2ff;
-			border: 1px solid #ccc;
-			border-bottom: 0;
-			padding: 25px 5px 0 5px;
-		}  
-	.nav>li {
-		margin-right: 5px;
-		background-color: #f0f0f0;
-
-	}    
-	.nav > li > a {
-		display: inline-block;padding: 5px 15px;
-		border-radius: 5px 5px 0 0;
-		border-top:1px solid #ddd;
-		border-left:1px solid #ddd;
-		border-right:1px solid #ddd;
-		color: var(--cold-dark);
-	}
-	.head-padding{
-		padding-top: 0px;
-	}
-	.nav-Box>li.active>a, .nav-Box>li.active>a:hover, .nav-Box>li.active>a:focus{
-		color: var(--hot-light);
-	}*/
 	.search-part-nav{
 		background: #f1f1f1;
 		padding: 5px 10px;
@@ -58,12 +33,13 @@
 	.receive{
 		border-bottom: 1px dashed #c2c2c2;
 		padding-bottom: 15px;
-		/*margin-bottom: 15px;*/
 		padding-top: 15px;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
-	.receive:hover{background-color:#f1f1f1; }
+	.receive:hover{
+		background-color:#f1f1f1; 
+	}
 	.line-margin-top{
 		margin-top: 30px;
 	}
@@ -128,22 +104,33 @@
     .pd-top-10{
     	padding-top: 10px;
     }
-    .pd-left-8{padding-left: 8px;}
-    .mg-0{
-    	margin: 0px;
+    .pd-left-8{
+    	padding-left: 8px;
     }
-    .pd-left-20{padding-left: 20px;}
+    .mg-0{
+    	margin-left: 0;
+    	margin-right: 0;
+    }
+    .pd-left-20{
+    	padding-left: 20px;
+    }
     .mg-top-50{
     	margin-top: 50px;
     	margin-bottom: 30px;
     }
-    .red{color: #e93100}
+    .red{
+    	color: #e93100
+    }
     .i-red{
     	color: orange;
     	margin-right: 5px;
     }
-    .red:hover{color: #e93100}
-    .noWrap{white-space: nowrap;}
+    .red:hover{
+    	color: #e93100
+    }
+    .noWrap{
+    	white-space: nowrap;
+    }
 
 	</style>
 </head>
@@ -167,257 +154,255 @@
 			</li>
 		</ul>
     </div>
-	<div class="">
-		<div class="tab-content">
-		<!-- 收到的消息 -->
-			<div role="tabpanel" class="tab-pane active" id="msg-receive">
-				<form class="form-inline bg-gray">
-					<div class="col-sm-4 line-height-collect">
-						<a href="#">全部</a><em>|</em><a href="#">未读</a><em>|</em><a href="#">按时间</a>
-					</div>
-					<div class="form-group">
-				 		<label>会员类型：</label>
-				 		<select class="form-control">
-							<option selected="selected">所有会员</option>
-							<option>企业会员</option>
-							<option>政府会员</option>
-							<option>个人会员</option>
-						</select>
-				 	</div>
-				 	<div class="form-group pd-left-20">
-				 		<label>消息类型：</label>
-				 		<select class="form-control">
-							<option selected="selected">全部</option>
-							<option>留言</option>
-							<option>私信</option>
-						</select>
-						<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-				 	</div>
-				</form>
-				<div class="row receive">
-					<div class="col-md-1 col-sm-2">
-						<input type="checkbox">
-						<img src="#" class="img-responsive pull-right" alt="头像">
-					</div>
-					<div class="col-sm-6">
-						<div> <a href="" class="title">黄先生</a></div>
-						<div>某公司</div>
-						<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
-						<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
-						<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-						<div class="collapse" id="collapseExample">
-						<form>
-							<textarea class="form-control"
-									  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
-							<button type="button" class="btn" >回复</button>
-						</form>
-						</div>
-					</div>
-					<div class="col-sm-2 line-margin-top">
-						<div class="text-center">类型：留言</div>
-					</div>
-					<div class="col-sm-2 line-margin-top">
-						<div class="text-right">
-							<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">查看回复
-							</button>
-						</div>
-					</div>
+	<div class="tab-content">
+	<!-- 收到的消息 -->
+		<div role="tabpanel" class="tab-pane active" id="msg-receive">
+			<form class="form-inline bg-gray">
+				<div class="col-sm-4 line-height-collect">
+					<a href="#">全部</a><em>|</em><a href="#">未读</a><em>|</em><a href="#">按时间</a>
 				</div>
-				<div class="row receive">
-					<div class="col-md-1 col-sm-2">
-						<input type="checkbox">
-						<img src="#" class="img-responsive pull-right" alt="头像">
-					</div>
-					<div class="col-sm-6">
-						<div><a href="" class="title">黄先生</a></div>
-						<div>某公司</div>
-						<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
-						<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
-						<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-						<div class="collapse" id="collapseExampleSec">
-						<form>
-							<textarea class="form-control"
-									  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
-							<button type="button" class="btn" >回复</button>
-						</form>
-						</div>
-					</div>
-					<div class="col-sm-2 line-margin-top">
-						<div class="text-center">类型：留言</div>
-					</div>
-					<div class="col-sm-2 line-margin-top">
-						<div class="text-right">
-							<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExampleSec" aria-expanded="false" aria-controls="collapseExampleSec">查看回复
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="pd-left-10 pd-top-10">
+				<div class="form-group">
+			 		<label>会员类型：</label>
+			 		<select class="form-control">
+						<option selected="selected">所有会员</option>
+						<option>企业会员</option>
+						<option>政府会员</option>
+						<option>个人会员</option>
+					</select>
+			 	</div>
+			 	<div class="form-group pd-left-20">
+			 		<label>消息类型：</label>
+			 		<select class="form-control">
+						<option selected="selected">全部</option>
+						<option>留言</option>
+						<option>私信</option>
+					</select>
+					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+			 	</div>
+			</form>
+			<div class="row receive">
+				<div class="col-md-1 col-sm-2">
 					<input type="checkbox">
-					<button class="btn btn-cold-to-lighter">删除</button>
+					<img src="#" class="img-responsive pull-right" alt="头像">
+				</div>
+				<div class="col-sm-6">
+					<div> <a href="" class="title">黄先生</a></div>
+					<div>某公司</div>
+					<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
+					<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
+					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+					<div class="collapse" id="collapseExample">
+					<form>
+						<textarea class="form-control"
+								  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+						<button type="button" class="btn" >回复</button>
+					</form>
+					</div>
+				</div>
+				<div class="col-sm-2 line-margin-top">
+					<div class="text-center">类型：留言</div>
+				</div>
+				<div class="col-sm-2 line-margin-top">
+					<div class="text-right">
+						<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">查看回复
+						</button>
+					</div>
 				</div>
 			</div>
-		<!-- 已发送的消息 -->
-			<div role="tabpanel" class="tab-pane" id="msg-send">
-				<form class="form-inline bg-gray">
-					<div class="col-sm-4 line-height-collect">
-						<a href="#">全部</a><em>|</em><a href="#">按时间</a>
+			<div class="row receive">
+				<div class="col-md-1 col-sm-2">
+					<input type="checkbox">
+					<img src="#" class="img-responsive pull-right" alt="头像">
+				</div>
+				<div class="col-sm-6">
+					<div><a href="" class="title">黄先生</a></div>
+					<div>某公司</div>
+					<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
+					<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
+					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+					<div class="collapse" id="collapseExampleSec">
+					<form>
+						<textarea class="form-control"
+								  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+						<button type="button" class="btn" >回复</button>
+					</form>
 					</div>
-				 	<div class="form-group">
-				 		<label>消息类型：</label>
-				 		<select class="form-control">
-							<option selected="selected">全部</option>
-							<option>留言</option>
-							<option>私信</option>
-						</select>
-						<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-				 	</div>
-				</form>
-				<div class="mg-top-50 text-center">
-					<i class="fa fa-exclamation-circle i-red"></i>
-					<a href="" class="red">您还没有已发送的消息，马上给资金方发消息。</a>
+				</div>
+				<div class="col-sm-2 line-margin-top">
+					<div class="text-center">类型：留言</div>
+				</div>
+				<div class="col-sm-2 line-margin-top">
+					<div class="text-right">
+						<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExampleSec" aria-expanded="false" aria-controls="collapseExampleSec">查看回复
+						</button>
+					</div>
 				</div>
 			</div>
-		<!-- 系统消息 -->
-			<div role="tabpanel" class="tab-pane" id="msg-system">
-				<div class="row bg-gray mg-0">
-					<div class="col-sm-12 line-height-collect">
-						<a href="#">全部</a><em>|</em>
-						<a href="#">浏览</a><em>|</em>
-						<a href="#">名片</a><em>|</em>
-						<a href="#">留言</a><em>|</em>
-						<a href="#">私信</a><em>|</em>
-						<a href="#">订单</a><em>|</em>
-						<a href="#">审核</a><em>|</em>
-						<a href="#">其他</a>
-					</div>
-				</div>
-				<div class="row receive">
-					<div class="col-md-1 col-sm-2">
-						<input type="checkbox">
-						<img src="#" class="img-responsive pull-right" alt="头像">
-					</div>
-					<div class="col-sm-6">
-						<div><a href="" class="title">屠先生</a></div>
-						<div>
-							<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
-						</div>
-						<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-					</div>
-					<div class="col-sm-2 col-sm-offset-2 line-margin-top">
-						<div class="text-right">
-						  <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
-						</div>
-					</div>
-				</div>
-				 <div class="row receive">
-					<div class="col-md-1 col-sm-2">
-						<input type="checkbox">
-						<img src="#" class="img-responsive pull-right" alt="头像">
-					</div>
-					<div class="col-sm-6">
-						<div><a href="" class="title">屠先生</a></div>
-						<div>
-							<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
-						</div>
-						<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-					</div>
-					<div class="col-sm-2 col-sm-offset-2 line-margin-top">
-						<div class="text-right">
-						   <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
-						</div>
-					</div>
-				</div>
-				<div class="pd-left-10 pd-top-10">
-					<input type="checkbox">
-					<button class="btn btn-cold-to-lighter">删除</button>
-				</div>
-				<nav class="pull-right">
-					<ul class="pagination">
-						<li>
-							<a href="#" aria-label="First">
-								<span aria-hidden="true">首页</span>
-							</a>
-						</li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="Next">
-								<span aria-hidden="true">下一页</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="pd-left-10 pd-top-10">
+				<input type="checkbox">
+				<button class="btn btn-cold-to-lighter">删除</button>
 			</div>
-		<!-- 订阅消息 -->
-			<div role="tabpanel" class="tab-pane" id="msg-subscribe">
-				<form class="form-inline bg-gray">
-					<div class="form-group">
-				 		<label>行业：</label>
-				 		<select class="form-control">
-							<option selected="selected">所有行业</option>
-							<option>金融投资</option>
-						</select>
-				 	</div>
-				 	<div class="form-group">
-				 		<label>地区：</label>
-				 		<select class="form-control">
-							<option selected="selected">所有地区</option>
-							<option>北京</option>
-						</select>
-						<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-						<button class="btn btn-hot-to-lighter">订阅设置</button>
-				 	</div>
-				</form>
-				<div class="row receive">
-					<div class="col-sm-1">
-						<input type="checkbox">
-					</div>
-					<div class="col-sm-5 col-md-5">
-						<div class="text-left">
-							<a href="#" class="title">北京个人500万资金寻优质项目合作</a>
-						</div>
-						<div class="text-left">
-							<i class="fa fa-clock-o"></i>2016年7月29日 11:31<a href="#" class="title pd-left-8">留言（<span>34</span>）</a>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 text-left">
-						<div>屠先生</div>
-						<div>某投资公司 总经理</div>
-					</div>
-					<div class="col-sm-3  text-right col-md-2 col-md-offset-1">
-						<button class="btn btn-cold-to-lighter btn-sm">留言</button>
-						<button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
-					</div>
+		</div>
+	<!-- 已发送的消息 -->
+		<div role="tabpanel" class="tab-pane" id="msg-send">
+			<form class="form-inline bg-gray">
+				<div class="col-sm-4 line-height-collect">
+					<a href="#">全部</a><em>|</em><a href="#">按时间</a>
 				</div>
-				<div class="row receive">
-					<div class="col-sm-1">
-						<input type="checkbox">
-					</div>
-					<div class="col-sm-5 col-md-5">
-						<div class="text-left ">
-							<a href="#" class="title">北京个人500万资金寻优质项目合作</a>
-						</div>
-						<div class="text-left ">
-							<i class="fa fa-clock-o"></i>2016年7月29日 11:31<a href="#" class="title pd-left-8">留言（<span>34</span>）</a>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 text-left">
-						<div>屠先生</div>
-						<div>某投资公司 总经理</div>
-					</div>
-					<div class="col-sm-3  text-right col-md-2 col-md-offset-1">
-						<button class="btn btn-cold-to-lighter btn-sm">留言</button>
-						<button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
-					</div>
+			 	<div class="form-group">
+			 		<label>消息类型：</label>
+			 		<select class="form-control">
+						<option selected="selected">全部</option>
+						<option>留言</option>
+						<option>私信</option>
+					</select>
+					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+			 	</div>
+			</form>
+			<div class="mg-top-50 text-center">
+				<i class="fa fa-exclamation-circle i-red"></i>
+				<a href="" class="red">您还没有已发送的消息，马上给资金方发消息。</a>
+			</div>
+		</div>
+	<!-- 系统消息 -->
+		<div role="tabpanel" class="tab-pane" id="msg-system">
+			<div class="row bg-gray mg-0">
+				<div class="col-sm-12 line-height-collect">
+					<a href="#">全部</a><em>|</em>
+					<a href="#">浏览</a><em>|</em>
+					<a href="#">名片</a><em>|</em>
+					<a href="#">留言</a><em>|</em>
+					<a href="#">私信</a><em>|</em>
+					<a href="#">订单</a><em>|</em>
+					<a href="#">审核</a><em>|</em>
+					<a href="#">其他</a>
 				</div>
-				<div class="pd-left-10 pd-top-10">
+			</div>
+			<div class="row receive">
+				<div class="col-md-1 col-sm-2">
 					<input type="checkbox">
-					<button class="btn btn-cold-to-lighter">删除</button>
+					<img src="#" class="img-responsive pull-right" alt="头像">
 				</div>
+				<div class="col-sm-6">
+					<div><a href="" class="title">屠先生</a></div>
+					<div>
+						<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
+					</div>
+					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+				</div>
+				<div class="col-sm-2 col-sm-offset-2 line-margin-top">
+					<div class="text-right">
+					  <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
+					</div>
+				</div>
+			</div>
+			 <div class="row receive">
+				<div class="col-md-1 col-sm-2">
+					<input type="checkbox">
+					<img src="#" class="img-responsive pull-right" alt="头像">
+				</div>
+				<div class="col-sm-6">
+					<div><a href="" class="title">屠先生</a></div>
+					<div>
+						<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
+					</div>
+					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+				</div>
+				<div class="col-sm-2 col-sm-offset-2 line-margin-top">
+					<div class="text-right">
+					   <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="pd-left-10 pd-top-10">
+				<input type="checkbox">
+				<button class="btn btn-cold-to-lighter">删除</button>
+			</div>
+			<nav class="pull-right">
+				<ul class="pagination">
+					<li>
+						<a href="#" aria-label="First">
+							<span aria-hidden="true">首页</span>
+						</a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+						<a href="#" aria-label="Next">
+							<span aria-hidden="true">下一页</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	<!-- 订阅消息 -->
+		<div role="tabpanel" class="tab-pane" id="msg-subscribe">
+			<form class="form-inline bg-gray">
+				<div class="form-group">
+			 		<label>行业：</label>
+			 		<select class="form-control">
+						<option selected="selected">所有行业</option>
+						<option>金融投资</option>
+					</select>
+			 	</div>
+			 	<div class="form-group">
+			 		<label>地区：</label>
+			 		<select class="form-control">
+						<option selected="selected">所有地区</option>
+						<option>北京</option>
+					</select>
+					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+					<button class="btn btn-hot-to-lighter">订阅设置</button>
+			 	</div>
+			</form>
+			<div class="row receive">
+				<div class="col-sm-1">
+					<input type="checkbox">
+				</div>
+				<div class="col-sm-5 col-md-5">
+					<div class="text-left">
+						<a href="#" class="title">北京个人500万资金寻优质项目合作</a>
+					</div>
+					<div class="text-left">
+						<i class="fa fa-clock-o"></i>2016年7月29日 11:31<a href="#" class="title pd-left-8">留言（<span>34</span>）</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3 text-left">
+					<div>屠先生</div>
+					<div>某投资公司 总经理</div>
+				</div>
+				<div class="col-sm-3  text-right col-md-2 col-md-offset-1">
+					<button class="btn btn-cold-to-lighter btn-sm">留言</button>
+					<button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+				</div>
+			</div>
+			<div class="row receive">
+				<div class="col-sm-1">
+					<input type="checkbox">
+				</div>
+				<div class="col-sm-5 col-md-5">
+					<div class="text-left ">
+						<a href="#" class="title">北京个人500万资金寻优质项目合作</a>
+					</div>
+					<div class="text-left ">
+						<i class="fa fa-clock-o"></i>2016年7月29日 11:31<a href="#" class="title pd-left-8">留言（<span>34</span>）</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-md-3 text-left">
+					<div>屠先生</div>
+					<div>某投资公司 总经理</div>
+				</div>
+				<div class="col-sm-3  text-right col-md-2 col-md-offset-1">
+					<button class="btn btn-cold-to-lighter btn-sm">留言</button>
+					<button class="btn btn-hot-to-lighter btn-sm">投递项目</button>
+				</div>
+			</div>
+			<div class="pd-left-10 pd-top-10">
+				<input type="checkbox">
+				<button class="btn btn-cold-to-lighter">删除</button>
 			</div>
 		</div>
 	</div>
