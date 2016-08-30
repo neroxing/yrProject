@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
+
+	<style type="text/css">
+		.container {
+			border: 1px solid #ddd;
+			background-color: white;
+		}
+
+		.mg10 {
+			margin: 10px 0;
+		}
+
+		.pd10 {
+			margin: 10px;
+			padding: 0;
+		}
+
+		.navBox {
+			background: #eef2ff;
+			border: 1px solid #ccc;
+			border-bottom: 0;
+			padding: 25px 5px 0 5px;
+		}
+
+		.nav > li {
+			margin-right: 5px;
+			background-color: #f0f0f0;
+		}
+
+		.nav > li > a {
+			display: inline-block;
+			padding: 5px 15px;
+			border-radius: 5px 5px 0 0;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+		}
+
+		.commonProblem {
+			padding: 15px 0;
+			margin: 0;
+			border-bottom: 1px dotted #ddd;
+		}
+
+		.noBorder {
+			padding: 15px 0;
+			margin: 0;
+		}
+
+		.table tr:first-child {
+			background-color: #f8f8f8;
+		}
+
+		.ui-tab-head-box {
+			background: #eef2ff;
+			padding-top: 10px;
+			padding-left: 10px;
+			border: 1px solid #ddd;
+			border-bottom: 0;
+		}
+
+		.thCenter th {
+			text-align: center;
+		}
+
+		.jz tr th {
+			vertical-align: middle !important;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="mg10 ui-tab-head-box">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">未完成订单</a>
+			</li>
+			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已完成订单</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="home">
+			<table class="table table-hover table-bordered text-center thCenter jz">
+				<tr>
+					<th>订单编号</th>
+					<th>服务名称</th>
+					<th>产品周期</th>
+					<th>订单金额</th>
+					<th>购买数量</th>
+					<th>下单时间</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td><a href="" class="title">20160821222609663844</a></td>
+					<td>投递项目(单条)</td>
+					<td>--</td>
+					<td>50.00</td>
+					<td>1条</td>
+					<td>2016-08-21 22:26:09</td>
+					<td><a href="">查看 </a><a href="">上传汇款凭证</a><a href="">继续支付</a><a href=""> 取消订单</a></td>
+				</tr>
+			</table>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="profile">
+			<table class="table table-hover table-bordered text-center thCenter jz">
+				<tr>
+					<th class="col-sm-3">订单编号</th>
+					<th class="col-sm-2">服务名称</th>
+					<th class="col-sm-1">订单金额</th>
+					<th class="col-sm-1">购买数量</th>
+					<th class="col-sm-1">产品周期</th>
+					<th class="col-sm-2">结束时间</th>
+					<th class="col-sm-2">操作</th>
+				</tr>
+				<tr>
+					<td><a href="" class="title">20160821222609663844</a></td>
+					<td>投递项目(单条)</td>
+					<td>50.00</td>
+					<td>1条</td>
+					<td>--</td>
+					<td>2016-08-21 22:26:09</td>
+					<td><a href="">查看 </a><a href="">上传汇款凭证</a><a href="">继续支付</a><a href=""> 取消订单</a></td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-auto ">
+					<div class="cold-underline">
+						订单常见问题
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row commonProblem">
+				<div class="col-sm-1"><img src="" class="img-responsive center-block"></div>
+				<div class="col-sm-11">
+					<div>订单管理常见问题</div>
+					<div><a class="title" href="">我忘记拿银行给我的汇款单了，怎么办？</a></div>
+					<div>答：请记住汇款时间、银行以及相应的分行等详细汇款信息，并及时与客服取得联系，进行反映。</div>
+				</div>
+			</div>
+			<div class="row noBorder">
+				<div class="col-sm-1"><img src="" class="img-responsive center-block"></div>
+				<div class="col-sm-11">
+					<div>付款方式常见问题</div>
+					<div><a class="title" href="">未完成的订单怎么在线支付？</a></div>
+					<div>答：点击未完成订单右侧“继续支付”按钮，<br>
+						<img src="" class="img-responsive center-block"><br>
+						跳转进入“网银在线支付”页面，选择所要付款的银行<br>
+						<img src="" class="responsive center-block"><br>
+						点击“下一步”，进入银行页面，进行付款操作，<br>
+						<img src="" class="responsive center-block"><br>
+						完成付款，点击“支付成功”。<br>
+						<img src="" class="responsive center-block"><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

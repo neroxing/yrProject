@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<link rel="stylesheet" href="css/yr.css">
+
+	<style type="text/css">
+		.container {
+			border: 1px solid #ddd;
+			background-color: white;
+		}
+
+		.consultingProblem {
+			background: #fffbf2;
+			border: 1px solid #d9dce8;
+			padding: 15px;
+			margin: 10px 0 0 0;
+		}
+
+		.consultingProblem div {
+			padding-top: 20px;
+		}
+
+		.red {
+			color: #e93100;
+		}
+
+		.red a:hover {
+			color: #e93100;
+		}
+
+		.left80 {
+			padding-left: 80px;
+		}
+
+		.table tr:first-child {
+			background-color: #f8f8f8;
+		}
+
+		.pd10 {
+			padding: 5px 10px;
+		}
+
+		.zxzt {
+			margin-top: 10px;
+			background-color: white;
+		}
+
+		.bgGray {
+			background-color: #f1f1f1;
+		}
+
+		.blue {
+			color: #1d86e0;
+		}
+
+		.delete {
+			padding-left: 10px;
+		}
+
+		.delete > button {
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row consultingProblem">
+		<div class="left80 red">
+			<a href="" class="red">想咨询投融资相关的问题？来这里吧！</a>
+		</div>
+		<form class="form-inline">
+			<div class="form-group">
+				<label><span class="red">*</span>问题简述：</label>
+				<input type="text" name="" class="form-control">
+			</div>
+		</form>
+		<form class="form-inline">
+			<div class="form-group">
+				<label><span class="red">*</span>问题类型：</label>
+				<select class="form-control">
+					<option>请选择</option>
+					<option>融资</option>
+					<option>投资</option>
+					<option>贷款</option>
+					<option>其他</option>
+				</select>
+			</div>
+		</form>
+		<form class="form-inline">
+			<div class="form-group">
+				<label><span class="red">*</span>问题简述：</label>
+				<textarea class="form-control" row="3"></textarea>
+			</div>
+		</form>
+		<div class="left80">
+			<button class="btn btn-cold-to-lighter">提交咨询</button>
+		</div>
+	</div>
+	<div class="zxzt">
+		<div class="pd10 bgGray">
+			<form class="form-inline">
+				<div class="form-group">
+					<label>咨询状态：</label>
+					<select>
+						<option>所有状态</option>
+						<option>已回复</option>
+						<option>未回复</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>选择分类：</label>
+					<select class="form-control">
+						<option>所有分类</option>
+						<option>融资</option>
+						<option>投资</option>
+						<option>贷款</option>
+						<option>其他</option>
+					</select>
+					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+				</div>
+			</form>
+		</div>
+		<div class="">
+			<table class="table table-hover table-bordered text-center">
+				<tr>
+					<th class=" text-center">选择</th>
+					<th class=" text-center">咨询日期</th>
+					<th class=" text-center">咨询内容</th>
+					<th class=" text-center">问题类型</th>
+					<th class=" text-center">咨询状态</th>
+					<th class=" text-center">操作</th>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+			</table>
+			<div class="delete">
+				<input type="checkbox" name="">
+				<button class="btn btn-cold-to-lighter btn-sm">删除</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

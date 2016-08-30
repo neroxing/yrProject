@@ -1,0 +1,23 @@
+.bg-tabs {
+    background-color: #eef2ff;
+    padding-top: 10px;
+    border: 1px solid #cccccc;
+    margin-bottom: 15px;
+}
+
+.bg-tabs>ul>li>a {
+    color: #3b4a82;
+    margin-left: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    border-bottom: none ;
+}
+.bg-tabs>ul>li>a:hover{
+    border: 1px solid #cccccc;
+    border-bottom: none ;
+    color: red;
+}
+.bg-tabs>ul>li.active>a , .bg-tabs>ul>li.active>a:focus{
+    margin-bottom: -1px;
+    border-bottom: 1px solid #fff ;
+}
