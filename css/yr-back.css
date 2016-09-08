@@ -1,23 +1,104 @@
 .bg-tabs {
-    background-color: #eef2ff;
-    padding-top: 10px;
-    border: 1px solid #cccccc;
-    margin-bottom: 15px;
+	background-color: #eef2ff;
+	padding-top: 10px;
+	border: 1px solid #cccccc;
+	margin-bottom: 15px;
 }
 
-.bg-tabs>ul>li>a {
-    color: #3b4a82;
-    margin-left: 5px;
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
-    border-bottom: none ;
+.bg-tabs > ul > li > a {
+	color: #3b4a82;
+	margin-left: 5px;
+	background-color: #f0f0f0;
+	border: 1px solid #cccccc;
+	border-bottom: none;
 }
-.bg-tabs>ul>li>a:hover{
-    border: 1px solid #cccccc;
-    border-bottom: none ;
-    color: red;
+
+.bg-tabs > ul > li > a:hover {
+	border: 1px solid #cccccc;
+	border-bottom: none;
+	color: red;
 }
-.bg-tabs>ul>li.active>a , .bg-tabs>ul>li.active>a:focus{
-    margin-bottom: -1px;
-    border-bottom: 1px solid #fff ;
+
+.bg-tabs > ul > li.active > a, .bg-tabs > ul > li.active > a:focus {
+	margin-bottom: -1px;
+	border-bottom: 1px solid #fff;
+}
+
+.normally {
+	line-height: 34px;
+	height: 34px;
+	background-color: #ddd;
+	/*margin-left: 40px;*/
+}
+
+.normally:after {
+	content: '';
+	display: table;
+	box-sizing: border-box;
+	float: right;
+	margin-right: -34px;
+	width: 0px;
+	height: 0px;
+	border: 17px solid transparent;
+	border-left-color: #ddd;
+}
+
+.normally:before {
+	content: '';
+	display: table;
+	box-sizing: border-box;
+	float: left;
+	margin-left: -34px;
+	width: 0px;
+	height: 0px;
+	border: 17px solid #ddd;
+	border-left-color: transparent;
+}
+
+.normally.active:after {
+	content: '';
+	display: table;
+	box-sizing: border-box;
+	float: right;
+	margin-right: -34px;
+	width: 0px;
+	height: 0px;
+	border: 17px solid transparent;
+	border-left-color: #8892b5;
+}
+
+.normally.active:before {
+	content: '';
+	display: table;
+	box-sizing: border-box;
+	float: left;
+	margin-left: -34px;
+	width: 0px;
+	height: 0px;
+	border: 17px solid #8892b5;
+	border-left-color: transparent;
+}
+
+.normally.active {
+	line-height: 34px;
+	height: 34px;
+	color: whitesmoke;
+	background-color: #8892b5;
+	/*margin-left: 40px;*/
+}
+
+.arw > div:first-child > div {
+	padding-left: 17px;
+}
+
+.arw > div:first-child > div:before {
+	content: none;
+}
+
+.arw > div:last-child > div {
+	width: 100%;
+}
+
+.arw > div:last-child > div:after {
+	content: none;
 }
