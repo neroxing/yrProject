@@ -22,8 +22,43 @@
 
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
+	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
+		@media (min-width: 768px) {
+			.normally {
+				width: 90%;
+			}
+
+			.normally.active {
+				width: 90%;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.normally {
+				width: 92%;
+			}
+
+			.normally.active {
+				width: 92%;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.normally {
+				width: 93%;
+			}
+
+			.normally.active {
+				width: 93%;
+			}
+		}
+
+		.arw {
+			margin-bottom: 20px;
+		}
+
 		.hy-bg {
 			background: #f5f8ff;
 			border: 1px solid #d9dce8;
@@ -63,7 +98,7 @@
 			width: auto;
 			margin-left: 30px;
 			float: left;
-			margin-top: -8px;
+			margin-top: -15px;
 			background-color: #fff;
 			font: bold 12px simsun;
 		}
@@ -76,7 +111,6 @@
 			padding-left: 70px;
 			margin-bottom: 20px;
 			padding-bottom: 20px;
-
 		}
 
 
@@ -88,6 +122,28 @@
 	<div class="hy-bg">
 		投诉详情<span class="font-state">投诉状态：审核中</span>
 		<button class="btn btn-xs btn-hot-to-lighter pull-right mg-top-btn">返回</button>
+	</div>
+	<div class="row arw">
+		<div class="col-sm-3">
+			<div class="pull-left  normally">
+				用户提交投诉
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="pull-left  normally ">
+				提交投诉表单
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="pull-left active normally">
+				投融界受理审核
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="pull-left normally">
+				公布处罚结果
+			</div>
+		</div>
 	</div>
 	<div class="acceptance-tab">投诉信息</div>
 	<div class="acceptance-line-height">
