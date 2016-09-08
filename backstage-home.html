@@ -24,8 +24,15 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
+		.info-item{
+			padding: 3px 0;
+			line-height: 18px;
+		}
+		.info-item.dashed{
+			border-bottom: 1px dashed #ddd;
+		}
 		.panel.panel {
-			border: 1px solid #c2c2c2;
+			border: 1px solid #ddd;
 		}
 
 		.panel .panel .panel-footer {
@@ -34,7 +41,12 @@
 
 		.p-info {
 			padding-bottom: 20px;
-			border-bottom: 1px dashed #c2c2c2;
+			border-bottom: 1px dashed #ddd;
+			margin-bottom: 10px;
+		}
+		.card-panel{
+			height: 126px;
+			background-color: #f1f1f1;
 		}
 	</style>
 </head>
@@ -48,22 +60,22 @@
 						<!--名片-->
 						<div class="col-sm-8">
 							<div class="panel panel-default">
-								<div class="panel-body">
+								<div class="panel-body card-panel">
 									<div class="row">
 										<div class="col-sm-3">
 											<img class="img-responsive" alt="头像">
 											<a class="to-hot">修改头像</a>
 										</div>
 										<div class="col-sm-9">
-											<div>欢迎您,<span>黄康亮先生</span>&nbsp;&nbsp;<span>上次登陆时间：2016-08-19 </span></div>
-											<div class="">资料完整度: <span>41分</span><a class="title">完善</a></div>
-											<div class="">认证状态:
+											<div class="info-item dashed">欢迎您,<span>黄康亮先生</span>&nbsp;&nbsp;<span>上次登陆时间：2016-08-19 </span></div>
+											<div class="info-item">资料完整度: <span>41分</span><a class="title">完善</a></div>
+											<div class="info-item">认证状态:
 												<i class="glyphicon glyphicon-phone"></i>
 												<i class="fa fa-users"></i>
 												<i class="fa fa-envelope"></i>
 											</div>
-											<div class="">增值服务: <a class="to-hot">升级为VIP</a></div>
-											<div class="">消息提醒:
+											<div class="info-item">增值服务: <a class="to-hot">升级为VIP</a></div>
+											<div class="info-item">消息提醒:
 												<i class="fa fa-envelope-o"></i><a class="to-hot">收到的投递(0)</a>
 												<i class="fa fa-comment-o "></i><a class="to-hot">收到的投递(0)</a>
 											</div>
