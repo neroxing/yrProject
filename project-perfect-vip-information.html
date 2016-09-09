@@ -131,7 +131,7 @@
 			position: relative;
 		}
 
-		nav li a {
+		nav>ul>li>a {
 			padding-top: 4px;
 			height: 26px;
 			background: #ddd;
@@ -143,9 +143,10 @@
 			text-decoration: none;
 		}
 
-		nav li a:hover {
+		nav>ul>li>a:hover,nav>ul>li>a:focus {
 			background-color: #ff6633;
 			color: white;
+			text-decoration: none;
 		}
 
 		.person-tab {
@@ -196,11 +197,11 @@
 
 		@media (min-width: 992px) {
 			.normally {
-				width: 89%;
+				width: 88%;
 			}
 
 			.normally.active {
-				width: 89%;
+				width: 88%;
 			}
 		}
 
@@ -234,7 +235,7 @@
 			<div class="log-reg-arrow-a"></div>
 			<div class="log-reg-arrow-b"></div>
 			<div class="row">
-				<div class="col-md-2 col-sm-4">
+				<div class="col-md-3 col-sm-4">
 					<div class="bg-left">
 						<div class="bg-left-one"><i class="fa fa-lightbulb-o i-red-lg pull-left"></i><span
 								class="left-font">完善资料，提交认证成为更优质的资金方</span></div>
@@ -250,7 +251,7 @@
 						<div class="bg-left-one mg-left-22">专为投融资用户<span class="font-red">定制</span>的增值服务体系</div>
 					</div>
 				</div>
-				<div class="col-md-10 col-sm-8">
+				<div class="col-md-9 col-sm-8">
 					<div>为更好的服务会员用户，请您提交相关资料和认证信息，还能获得多项特权，<a href="#">了解特权</a>！</div>
 					<div class="row arw">
 						<div class="col-sm-4">
@@ -287,7 +288,7 @@
 					<div class="form-style">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right"><span class="red">*</span>姓名：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right"><span class="red">*</span>姓名：</label>
 								<div class="col-sm-5">
 									<input class="form-control" type="text" placeholder="请输入真实姓名，保存后不可修改">
 								</div>
@@ -299,18 +300,18 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">联系手机：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">联系手机：</label>
 								<div class="col-sm-3">1893****222<span class="i-red">[已认证]</span></div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">个人简介：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">个人简介：</label>
 								<div class="col-sm-5">
 				                    <textarea class="form-control" placeholder="个人信息+教育经历+工作经历+专业技能+自我评价等内容">
 				                    </textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">电话号码：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">电话号码：</label>
 								<div class="col-sm-1">
 									<input type="text" class="form-control">
 								</div>
@@ -328,17 +329,17 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">QQ号码：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">QQ号码：</label>
 								<div class="col-sm-3">
 									<input type="text" class="form-control">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right"><span class="red">*</span>邮箱地址：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right"><span class="red">*</span>邮箱地址：</label>
 								<div class="col-sm-3"> li3693@126.com</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right">所在地区：</label>
+								<label class="control-label col-sm-3 col-md-2  text-right">所在地区：</label>
 								<div class="form-group">
 									<div class="col-sm-2">
 										<select class="form-control">
@@ -381,20 +382,20 @@
 					<div class="form-style">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right"><span class="red">*</span>企业名称：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right"><span class="red">*</span>企业名称：</label>
 								<div class="col-sm-5">
 									<input class="form-control" type="text" placeholder="请输入真实名称，保存后不可修改">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">企业简介：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">企业简介：</label>
 								<div class="col-sm-5">
 				                    <textarea class="form-control" placeholder="公司概况+发展状况+公司文化+公司产品+企业荣誉等内容">     
 				                    </textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right"><span
+								<label class="control-label col-sm-3 col-md-2  text-right"><span
 										class="red">*</span>所属行业：</label>
 								<div class="col-sm-2">
 									<select class="form-control">
@@ -403,7 +404,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right"><span
+								<label class="control-label col-sm-3 col-md-2  text-right"><span
 										class="red">*</span>注册资本：</label>
 								<div class="col-sm-2">
 									<select class="form-control">
@@ -412,7 +413,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right"><span
+								<label class="control-label col-sm-3 col-md-2  text-right"><span
 										class="red">*</span>是否有营收：</label>
 								<div class="col-sm-1">
 									<input type="radio">是
@@ -422,7 +423,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">当前净资产：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">当前净资产：</label>
 								<div class="col-sm-2">
 									<input type="text" class="form-control">
 								</div>
@@ -438,14 +439,14 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right"><span
+								<label class="control-label col-sm-3 col-md-2 text-right"><span
 										class="red">*</span>注册成立日期：</label>
 								<div class="col-sm-5">
 									<input class="form-control" type="date">请填写营业执照上成立日期
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right">注册地址：</label>
+								<label class="control-label col-sm-3 col-md-2  text-right">注册地址：</label>
 								<div class="form-group">
 									<div class="col-sm-2">
 										<select class="form-control">
@@ -487,20 +488,20 @@
 					<div class="form-style">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right"><span class="red">*</span>单位名称：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right"><span class="red">*</span>单位名称：</label>
 								<div class="col-sm-5">
 									<input class="form-control" type="text" placeholder="请输入真实名称，保存后不可修改">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2 text-right">单位简介：</label>
+								<label class="control-label col-sm-3 col-md-2 text-right">单位简介：</label>
 								<div class="col-sm-5">
 				                    <textarea class="form-control" placeholder="请输入单位简介">     
 				                    </textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right">去年财政收入：</label>
+								<label class="control-label col-sm-3 col-md-2  text-right">去年财政收入：</label>
 								<div class="col-sm-2">
 									<select class="form-control">
 										<option selected="selected">请选择</option>
@@ -508,7 +509,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-sm-2  text-right">单位地址：</label>
+								<label class="control-label col-sm-3 col-md-2  text-right">单位地址：</label>
 								<div class="form-group">
 									<div class="col-sm-2">
 										<select class="form-control">
