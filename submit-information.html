@@ -37,21 +37,21 @@
 
 		@media (min-width: 992px) {
 			.normally {
-				width: 89%;
+				width: 88%;
 			}
 
 			.normally.active {
-				width: 89%;
+				width: 88%;
 			}
 		}
 
 		@media (min-width: 1200px) {
 			.normally {
-				width: 91%;
+				width: 90%;
 			}
 
 			.normally.active {
-				width: 91%;
+				width: 90%;
 			}
 		}
 
@@ -210,12 +210,30 @@
 			padding-top: 20px;
 			padding-left: 40px;
 			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+		.tip {
+			margin-top: 100px;
 		}
 
+		.tip div {
+			margin-bottom: 5px;
+		}
 	</style>
 </head>
 <body>
-
+<div id="login-banner" class="container-fluid">
+	<div class="container">
+		<div class="pull-left">
+			LOGO|
+			<span>会员注册</span>
+		</div>
+		<div class="pull-right">
+			<i class="glyphicon glyphicon-earphone"></i>
+			<span>服务热线：000 000 0000</span>
+		</div>
+	</div>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 mg-top-20">
@@ -228,7 +246,7 @@
 			<div class="log-reg-arrow-a"></div>
 			<div class="log-reg-arrow-b"></div>
 			<div class="row">
-				<div class="col-md-2 col-sm-4">
+				<div class="col-md-3 col-sm-4">
 					<div class="bg-left">
 						<div class="bg-left-one"><i class="fa fa-lightbulb-o i-red-lg pull-left"></i><span
 								class="left-font">完善资料，提交认证成为更优质的资金方</span></div>
@@ -244,7 +262,7 @@
 						<div class="bg-left-one mg-left-22">专为投融资用户<span class="font-red">定制</span>的增值服务体系</div>
 					</div>
 				</div>
-				<div class="col-md-10 col-sm-8">
+				<div class="col-md-9 col-sm-8">
 					<div class="row arw">
 						<div class="col-sm-4">
 							<div class="pull-left   normally">
@@ -269,39 +287,45 @@
 					<div class="form-style">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-4 text-right"><span
-										class="font-red">*</span>姓名：</label>
-								<div class="col-md-5 col-sm-4">
-									<input class="form-control" type="text" placeholder="请输入真实姓名，保存后不可修改">
+								<label class="control-label col-sm-3">姓名:</label>
+								<div class="col-sm-6 col-md-4">
+									<input class="form-control" type="text">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-4  text-right"><span
-										class="font-red">*</span>名片(正面):</label>
-								<div class="col-md-5 col-sm-4  text-left">
-									<input type="file">
+								<label class="control-label col-sm-3">名片(正面):</label>
+								<div class="col-sm-6 col-md-4">
+									<input class="" type="file">
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label col-md-3 col-sm-4  text-right"><span
-										class="font-red">*</span>名片(反面):</label>
-								<div class="col-md-5 col-sm-4  text-left">
-									<input type="file">
+								<label class="control-label col-sm-3">名片(背面):</label>
+								<div class="col-sm-6 col-md-4">
+									<input class="" type="file">
+								</div>
+							</div>
+							<div class="row tip">
+								<div class="col-sm-offset-3 col-sm-9">认证小贴士:</div>
+								<div class="col-sm-offset-3 col-sm-9">（1）诚信回馈：获得免费评论2条/天，免费约谈1次/天；</div>
+								<div class="col-sm-offset-3 col-sm-9">（2）
+									上传企业授权书，并且通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过企业身份认证。
+								</div>
+								<div class="col-sm-offset-3 col-sm-9">
+									声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。
+								</div>
+								<div class="col-sm-offset-3 col-sm-9">
+									提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。
+								</div>
+								<div class="col-sm-offset-3 col-sm-9">
+									备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-offset-3 col-sm-3">
+									<button class="btn btn-cold-to-lighter">提交认证</button>
 								</div>
 							</div>
 						</form>
-						<div class="row tip-row">
-							<div class="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4">
-								<div>认证小贴士：</div>
-								<div> 通过认证后，将点亮您“个人主页”顶端的图标，表示：已通过个人身份认证。</div>
-								<div>声明：投融界严格保守用户身份信息；如未征求您本人同意，绝不向第三方透露。</div>
-								<div>提示：认证信息是会员自愿提供，目前中国无完整渠道确保100%真实，请理性对待。</div>
-								<div>备注：所上传的照片格式为gif,jpg,jpeg,png，文件大小在1.5M以内</div>
-								<button class="btn btn-cold-to-lighter btn-margin">提交认证</button>
-								<button class="btn  btn-margin">跳过</button>
-
-							</div>
-						</div>
 					</div>
 
 				</div>
