@@ -25,28 +25,29 @@
 
 	<style type="text/css">
 		.textSpacing a {
-			white-space: nowrap;
-			margin-right: 20px;
+			white-space: nowrap;/*文本不会换行*/
+			margin-right: 20px;/*右外边距控制每个词大致对齐*/
 		}
-		.site{
+		.site{/*每一行下面的分隔线*/
 			border-bottom: 1px dashed #ddd;
 			overflow: hidden;
 			padding: 10px 20px;
 			line-height: 30px;
 
 		}
-		.link a{
-			padding-right: 10px;
+		em{/*最顶上的竖线加上左右的外边距使链接词之间右空隙*/
+			margin-right: 10px;
+			margin-left: 10px;
 		}
 	</style>
 </head>
 <body>
 
-<div class="container link">
-	<a href="#" class="to-hot">网站地图</a>|
-	<a href="#" class="to-hot">最新轮播</a>|
-	<a href="#" class="to-hot">随机展示</a>|
-	<a href="#" class="to-hot">投资机构 &amp; 投资人</a>|
+<div class="container">
+	<a href="#" class="to-hot">网站地图</a><em>|</em>
+	<a href="#" class="to-hot">最新轮播</a><em>|</em>
+	<a href="#" class="to-hot">随机展示</a><em>|</em>
+	<a href="#" class="to-hot">投资机构 &amp; 投资人</a><em>|</em>
 	<a href="#" class="to-hot">找项目 &amp; 找资金</a>
 </div>
 
