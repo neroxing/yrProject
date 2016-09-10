@@ -66,11 +66,11 @@
 		border:1px solid #ddd;
 		border-bottom: 0;  
 	}
- 	.nav>li{
-    	margin-right: 5px;
-    	background-color: #f0f0f0;
-    	border-radius: 5px 5px 0 0;
-    }    
+	.nav>li{
+		margin-right: 5px;
+		background-color: #f0f0f0;
+		border-radius: 5px 5px 0 0;
+	}    
 	.nav > li > a{
 		display: inline-block;
 		padding: 5px 15px;
@@ -87,50 +87,51 @@
 		border-bottom: 0;  
 	}
 	.bg-gray{
-    	background-color: #f1f1f1;
-    	padding: 5px 10px;
-    	margin-bottom: 15px;
-    }
-    em{
-    	margin:0 20px;
-    }
-    .pd-left-10{
-    	padding-left: 8px; 
-    	margin-bottom: 10px;
-    }
-    .pd-left-10 button{
-    	margin-left: 9px;
-    }
-    .pd-top-10{
-    	padding-top: 10px;
-    }
-    .pd-left-8{
-    	padding-left: 8px;
-    }
-    .mg-0{
-    	margin-left: 0;
-    	margin-right: 0;
-    }
-    .pd-left-20{
-    	padding-left: 20px;
-    }
-    .mg-top-50{
-    	margin-top: 50px;
-    	margin-bottom: 30px;
-    }
-    .red{
-    	color: #e93100
-    }
-    .i-red{
-    	color: orange;
-    	margin-right: 5px;
-    }
-    .red:hover{
-    	color: #e93100
-    }
-    .noWrap{
-    	white-space: nowrap;
-    }
+		background-color: #f1f1f1;
+		padding: 5px 10px;
+		margin-bottom: 15px;
+		height: 46px;
+	}
+	em{
+		margin:0 5px;
+	}
+	.pd-left-10{
+		padding-left: 8px; 
+		margin-bottom: 10px;
+	}
+	.pd-left-10 button{
+		margin-left: 9px;
+	}
+	.pd-top-10{
+		padding-top: 10px;
+	}
+	.pd-left-8{
+		padding-left: 8px;
+	}
+	.mg-0{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.pd-left-20{
+		padding-left: 20px;
+	}
+	.mg-top-50{
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+	.red{
+		color: #e93100
+	}
+	.i-red{
+		color: orange;
+		margin-right: 5px;
+	}
+	.red:hover{
+		color: #e93100
+	}
+	.noWrap{
+		white-space: nowrap;
+	}
 
 	</style>
 </head>
@@ -157,32 +158,37 @@
 					<a href="#msg-subscribe" aria-controls="msg-subscribe" role="tab" data-toggle="tab" class="title">订阅消息</a>
 					</li>
 				</ul>
-		    </div>
+			</div>
 			<div class="tab-content">
 			<!-- 收到的消息 -->
 				<div role="tabpanel" class="tab-pane active" id="msg-receive">
 					<form class="form-inline bg-gray">
-						<div class="col-sm-4 line-height-collect">
+						<div class="col-sm-3 line-height-collect text-nowrap">
 							<a href="#">全部</a><em>|</em><a href="#">未读</a><em>|</em><a href="#">按时间</a>
 						</div>
-						<div class="form-group">
-					 		<label>会员类型：</label>
-					 		<select class="form-control">
-								<option selected="selected">所有会员</option>
-								<option>企业会员</option>
-								<option>政府会员</option>
-								<option>个人会员</option>
-							</select>
-					 	</div>
-					 	<div class="form-group pd-left-20">
-					 		<label>消息类型：</label>
-					 		<select class="form-control">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label>会员类型：</label>
+								<select class="form-control">
+									<option selected="selected">所有会员</option>
+									<option>企业会员</option>
+									<option>政府会员</option>
+									<option>个人会员</option>
+								</select>
+							</div>
+						</div>
+						<!-- <div class="col-sm-4"> -->
+							<div class="form-group">
+							<label>消息类型：</label>
+							<select class="form-control">
 								<option selected="selected">全部</option>
 								<option>留言</option>
 								<option>私信</option>
 							</select>
 							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-					 	</div>
+							</div>
+							
+						<!-- </div> -->
 					</form>
 					<div class="row receive">
 						<div class="col-md-1 col-sm-2">
@@ -253,15 +259,15 @@
 						<div class="col-sm-4 line-height-collect">
 							<a href="#">全部</a><em>|</em><a href="#">按时间</a>
 						</div>
-					 	<div class="form-group">
-					 		<label>消息类型：</label>
-					 		<select class="form-control">
+						<div class="form-group">
+							<label>消息类型：</label>
+							<select class="form-control">
 								<option selected="selected">全部</option>
 								<option>留言</option>
 								<option>私信</option>
 							</select>
 							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-					 	</div>
+						</div>
 					</form>
 					<div class="mg-top-50 text-center">
 						<i class="fa fa-exclamation-circle i-red"></i>
@@ -346,21 +352,21 @@
 		<div role="tabpanel" class="tab-pane" id="msg-subscribe">
 			<form class="form-inline bg-gray">
 				<div class="form-group">
-			 		<label>行业：</label>
-			 		<select class="form-control">
+					<label>行业：</label>
+					<select class="form-control">
 						<option selected="selected">所有行业</option>
 						<option>金融投资</option>
 					</select>
-			 	</div>
-			 	<div class="form-group">
-			 		<label>地区：</label>
-			 		<select class="form-control">
+				</div>
+				<div class="form-group">
+					<label>地区：</label>
+					<select class="form-control">
 						<option selected="selected">所有地区</option>
 						<option>北京</option>
 					</select>
 					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
 					<button class="btn btn-hot-to-lighter">订阅设置</button>
-			 	</div>
+				</div>
 			</form>
 			<div class="row receive">
 				<div class="col-sm-1">
