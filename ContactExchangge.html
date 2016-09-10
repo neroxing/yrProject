@@ -22,6 +22,7 @@
 
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
+	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
 		.bodyHeight {
@@ -59,25 +60,6 @@
 			padding: 0;
 		}
 
-		.navBox {
-			height: 48px;
-			background: #eef2ff;
-			border: 1px solid #ccc;
-
-			padding: 25px 5px 0 5px;
-		}
-
-		.nav > li {
-			margin-right: 5px;
-			background-color: #f0f0f0;
-			border: 1px solid #ccc;
-			border-bottom: 0;
-			border-radius: 5px 5px 0 0;
-		}
-
-		.nav > li > a {
-			padding: 5px 15px;
-		}
 
 		.colorGray {
 			background-color: #f1f1f1;
@@ -102,10 +84,9 @@
 <body>
 <div class="container">
 	<div class="panel">
-		<div class="panel-heading pd10">
-			<!-- Nav tabs -->
-			<div class="navBox">
-				<ul class="nav nav-panel-tabs text-center " role="tablist">
+		<div class="panel-body bodyHeight">
+			<div class="bg-tabs">
+				<ul class="nav nav-tabs  " role="tablist">
 					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
 					                                          data-toggle="tab" class="title">我的商友</a></li>
 					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"
@@ -116,9 +97,6 @@
 					                           class="title">已查看联系方式</a></li>
 				</ul>
 			</div>
-
-		</div>
-		<div class="panel-body bodyHeight">
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="home">
