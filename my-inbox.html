@@ -136,209 +136,213 @@
 </head>
 <body>
 
-<div class="container pd10-bg">
-	<div class="mg10 ui-tab-head-box">
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active">
-			<a href="#msg-receive" aria-controls="msg-receive" role="tab" data-toggle="tab" class="title">收到的消息</a>
-			</li>
-			<li role="presentation">
-			<a href="#msg-send" aria-controls="msg-send" role="tab" data-toggle="tab" class="title">已发送的消息</a>
-			</li>
-			<li role="presentation">
-			<a href="#msg-system" aria-controls="msg-system" role="tab" data-toggle="tab" class="title">系统消息</a>
-			</li>
-			<li role="presentation">
-			<a href="#msg-subscribe" aria-controls="msg-subscribe" role="tab" data-toggle="tab" class="title">订阅消息</a>
-			</li>
-		</ul>
-    </div>
-	<div class="tab-content">
-	<!-- 收到的消息 -->
-		<div role="tabpanel" class="tab-pane active" id="msg-receive">
-			<form class="form-inline bg-gray">
-				<div class="col-sm-4 line-height-collect">
-					<a href="#">全部</a><em>|</em><a href="#">未读</a><em>|</em><a href="#">按时间</a>
-				</div>
-				<div class="form-group">
-			 		<label>会员类型：</label>
-			 		<select class="form-control">
-						<option selected="selected">所有会员</option>
-						<option>企业会员</option>
-						<option>政府会员</option>
-						<option>个人会员</option>
-					</select>
-			 	</div>
-			 	<div class="form-group pd-left-20">
-			 		<label>消息类型：</label>
-			 		<select class="form-control">
-						<option selected="selected">全部</option>
-						<option>留言</option>
-						<option>私信</option>
-					</select>
-					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-			 	</div>
-			</form>
-			<div class="row receive">
-				<div class="col-md-1 col-sm-2">
-					<input type="checkbox">
-					<img src="#" class="img-responsive pull-right" alt="头像">
-				</div>
-				<div class="col-sm-6">
-					<div> <a href="" class="title">黄先生</a></div>
-					<div>某公司</div>
-					<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
-					<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
-					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-					<div class="collapse" id="collapseExample">
-					<form>
-						<textarea class="form-control"
-								  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
-						<button type="button" class="btn" >回复</button>
-					</form>
-					</div>
-				</div>
-				<div class="col-sm-2 line-margin-top">
-					<div class="text-center">类型：留言</div>
-				</div>
-				<div class="col-sm-2 line-margin-top">
-					<div class="text-right">
-						<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">查看回复
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="row receive">
-				<div class="col-md-1 col-sm-2">
-					<input type="checkbox">
-					<img src="#" class="img-responsive pull-right" alt="头像">
-				</div>
-				<div class="col-sm-6">
-					<div><a href="" class="title">黄先生</a></div>
-					<div>某公司</div>
-					<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
-					<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
-					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-					<div class="collapse" id="collapseExampleSec">
-					<form>
-						<textarea class="form-control"
-								  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
-						<button type="button" class="btn" >回复</button>
-					</form>
-					</div>
-				</div>
-				<div class="col-sm-2 line-margin-top">
-					<div class="text-center">类型：留言</div>
-				</div>
-				<div class="col-sm-2 line-margin-top">
-					<div class="text-right">
-						<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExampleSec" aria-expanded="false" aria-controls="collapseExampleSec">查看回复
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="pd-left-10 pd-top-10">
-				<input type="checkbox">
-				<button class="btn btn-cold-to-lighter">删除</button>
-			</div>
+<div class="container ">
+	<div class="row">
+		<div class="col-sm-2">
 		</div>
-	<!-- 已发送的消息 -->
-		<div role="tabpanel" class="tab-pane" id="msg-send">
-			<form class="form-inline bg-gray">
-				<div class="col-sm-4 line-height-collect">
-					<a href="#">全部</a><em>|</em><a href="#">按时间</a>
-				</div>
-			 	<div class="form-group">
-			 		<label>消息类型：</label>
-			 		<select class="form-control">
-						<option selected="selected">全部</option>
-						<option>留言</option>
-						<option>私信</option>
-					</select>
-					<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
-			 	</div>
-			</form>
-			<div class="mg-top-50 text-center">
-				<i class="fa fa-exclamation-circle i-red"></i>
-				<a href="" class="red">您还没有已发送的消息，马上给资金方发消息。</a>
-			</div>
-		</div>
-	<!-- 系统消息 -->
-		<div role="tabpanel" class="tab-pane" id="msg-system">
-			<div class="row bg-gray mg-0">
-				<div class="col-sm-12 line-height-collect">
-					<a href="#">全部</a><em>|</em>
-					<a href="#">浏览</a><em>|</em>
-					<a href="#">名片</a><em>|</em>
-					<a href="#">留言</a><em>|</em>
-					<a href="#">私信</a><em>|</em>
-					<a href="#">订单</a><em>|</em>
-					<a href="#">审核</a><em>|</em>
-					<a href="#">其他</a>
-				</div>
-			</div>
-			<div class="row receive">
-				<div class="col-md-1 col-sm-2">
-					<input type="checkbox">
-					<img src="#" class="img-responsive pull-right" alt="头像">
-				</div>
-				<div class="col-sm-6">
-					<div><a href="" class="title">屠先生</a></div>
-					<div>
-						<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
-					</div>
-					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-				</div>
-				<div class="col-sm-2 col-sm-offset-2 line-margin-top">
-					<div class="text-right">
-					  <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
-					</div>
-				</div>
-			</div>
-			 <div class="row receive">
-				<div class="col-md-1 col-sm-2">
-					<input type="checkbox">
-					<img src="#" class="img-responsive pull-right" alt="头像">
-				</div>
-				<div class="col-sm-6">
-					<div><a href="" class="title">屠先生</a></div>
-					<div>
-						<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
-					</div>
-					<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
-				</div>
-				<div class="col-sm-2 col-sm-offset-2 line-margin-top">
-					<div class="text-right">
-					   <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
-					</div>
-				</div>
-			</div>
-			<div class="pd-left-10 pd-top-10">
-				<input type="checkbox">
-				<button class="btn btn-cold-to-lighter">删除</button>
-			</div>
-			<nav class="pull-right">
-				<ul class="pagination">
-					<li>
-						<a href="#" aria-label="First">
-							<span aria-hidden="true">首页</span>
-						</a>
+		<div class="col-sm-10 pd10-bg">
+			<div class="mg10 ui-tab-head-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+					<a href="#msg-receive" aria-controls="msg-receive" role="tab" data-toggle="tab" class="title">收到的消息</a>
 					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span aria-hidden="true">下一页</span>
-						</a>
+					<li role="presentation">
+					<a href="#msg-send" aria-controls="msg-send" role="tab" data-toggle="tab" class="title">已发送的消息</a>
+					</li>
+					<li role="presentation">
+					<a href="#msg-system" aria-controls="msg-system" role="tab" data-toggle="tab" class="title">系统消息</a>
+					</li>
+					<li role="presentation">
+					<a href="#msg-subscribe" aria-controls="msg-subscribe" role="tab" data-toggle="tab" class="title">订阅消息</a>
 					</li>
 				</ul>
-			</nav>
-		</div>
-	<!-- 订阅消息 -->
+		    </div>
+			<div class="tab-content">
+			<!-- 收到的消息 -->
+				<div role="tabpanel" class="tab-pane active" id="msg-receive">
+					<form class="form-inline bg-gray">
+						<div class="col-sm-4 line-height-collect">
+							<a href="#">全部</a><em>|</em><a href="#">未读</a><em>|</em><a href="#">按时间</a>
+						</div>
+						<div class="form-group">
+					 		<label>会员类型：</label>
+					 		<select class="form-control">
+								<option selected="selected">所有会员</option>
+								<option>企业会员</option>
+								<option>政府会员</option>
+								<option>个人会员</option>
+							</select>
+					 	</div>
+					 	<div class="form-group pd-left-20">
+					 		<label>消息类型：</label>
+					 		<select class="form-control">
+								<option selected="selected">全部</option>
+								<option>留言</option>
+								<option>私信</option>
+							</select>
+							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+					 	</div>
+					</form>
+					<div class="row receive">
+						<div class="col-md-1 col-sm-2">
+							<input type="checkbox">
+							<img src="#" class="img-responsive pull-right" alt="头像">
+						</div>
+						<div class="col-sm-6">
+							<div> <a href="" class="title">黄先生</a></div>
+							<div>某公司</div>
+							<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
+							<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
+							<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+							<div class="collapse" id="collapseExample">
+							<form>
+								<textarea class="form-control"
+										  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+								<button type="button" class="btn" >回复</button>
+							</form>
+							</div>
+						</div>
+						<div class="col-sm-2 line-margin-top">
+							<div class="text-center">类型：留言</div>
+						</div>
+						<div class="col-sm-2 line-margin-top">
+							<div class="text-right">
+								<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">查看回复
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="row receive">
+						<div class="col-md-1 col-sm-2">
+							<input type="checkbox">
+							<img src="#" class="img-responsive pull-right" alt="头像">
+						</div>
+						<div class="col-sm-6">
+							<div><a href="" class="title">黄先生</a></div>
+							<div>某公司</div>
+							<div>李总，您好，您的项目我已经看过了，感觉各方面还是挺合适的</div>
+							<div>来源：会员展厅：<a href="" class="title">李先生</a></div>
+							<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+							<div class="collapse" id="collapseExampleSec">
+							<form>
+								<textarea class="form-control"
+										  placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+								<button type="button" class="btn" >回复</button>
+							</form>
+							</div>
+						</div>
+						<div class="col-sm-2 line-margin-top">
+							<div class="text-center">类型：留言</div>
+						</div>
+						<div class="col-sm-2 line-margin-top">
+							<div class="text-right">
+								<button class="btn btn-cold-to-lighter" data-toggle="collapse" href="#collapseExampleSec" aria-expanded="false" aria-controls="collapseExampleSec">查看回复
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="pd-left-10 pd-top-10">
+						<input type="checkbox">
+						<button class="btn btn-cold-to-lighter">删除</button>
+					</div>
+				</div>
+			<!-- 已发送的消息 -->
+				<div role="tabpanel" class="tab-pane" id="msg-send">
+					<form class="form-inline bg-gray">
+						<div class="col-sm-4 line-height-collect">
+							<a href="#">全部</a><em>|</em><a href="#">按时间</a>
+						</div>
+					 	<div class="form-group">
+					 		<label>消息类型：</label>
+					 		<select class="form-control">
+								<option selected="selected">全部</option>
+								<option>留言</option>
+								<option>私信</option>
+							</select>
+							<button class="btn btn-cold-to-lighter"><i class="fa fa-search"></i>搜索</button>
+					 	</div>
+					</form>
+					<div class="mg-top-50 text-center">
+						<i class="fa fa-exclamation-circle i-red"></i>
+						<a href="" class="red">您还没有已发送的消息，马上给资金方发消息。</a>
+					</div>
+				</div>
+			<!-- 系统消息 -->
+				<div role="tabpanel" class="tab-pane" id="msg-system">
+					<div class="row bg-gray mg-0">
+						<div class="col-sm-12 line-height-collect">
+							<a href="#">全部</a><em>|</em>
+							<a href="#">浏览</a><em>|</em>
+							<a href="#">名片</a><em>|</em>
+							<a href="#">留言</a><em>|</em>
+							<a href="#">私信</a><em>|</em>
+							<a href="#">订单</a><em>|</em>
+							<a href="#">审核</a><em>|</em>
+							<a href="#">其他</a>
+						</div>
+					</div>
+					<div class="row receive">
+						<div class="col-md-1 col-sm-2">
+							<input type="checkbox">
+							<img src="#" class="img-responsive pull-right" alt="头像">
+						</div>
+						<div class="col-sm-6">
+							<div><a href="" class="title">屠先生</a></div>
+							<div>
+								<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
+							</div>
+							<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+						</div>
+						<div class="col-sm-2 col-sm-offset-2 line-margin-top">
+							<div class="text-right">
+							  <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
+							</div>
+						</div>
+					</div>
+					 <div class="row receive">
+						<div class="col-md-1 col-sm-2">
+							<input type="checkbox">
+							<img src="#" class="img-responsive pull-right" alt="头像">
+						</div>
+						<div class="col-sm-6">
+							<div><a href="" class="title">屠先生</a></div>
+							<div>
+								<a href="#" class="title">屠先生查看了您的信息，赶紧去看看他是谁，千万别错过到手的商机哦！立即查看</a>
+							</div>
+							<div><i class="fa fa-clock-o"></i>2016年7月29日 11:31</div>
+						</div>
+						<div class="col-sm-2 col-sm-offset-2 line-margin-top">
+							<div class="text-right">
+							   <a href=""><button class="btn btn-cold-to-lighter">查看展厅</button></a>
+							</div>
+						</div>
+					</div>
+					<div class="pd-left-10 pd-top-10">
+						<input type="checkbox">
+						<button class="btn btn-cold-to-lighter">删除</button>
+					</div>
+					<nav class="pull-right">
+						<ul class="pagination">
+							<li>
+								<a href="#" aria-label="First">
+									<span aria-hidden="true">首页</span>
+								</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">下一页</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			<!-- 订阅消息 -->
 		<div role="tabpanel" class="tab-pane" id="msg-subscribe">
 			<form class="form-inline bg-gray">
 				<div class="form-group">
@@ -403,6 +407,8 @@
 			<div class="pd-left-10 pd-top-10">
 				<input type="checkbox">
 				<button class="btn btn-cold-to-lighter">删除</button>
+			</div>
+		</div>
 			</div>
 		</div>
 	</div>
