@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="${basePath}/static/css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="${basePath}/static/css/bootstrap-theme.min.css">
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="${basePath}/static/css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<link rel="stylesheet" href="${basePath}/static/css/yr.css">
+	<link rel="stylesheet" href="${basePath}/static/css/yr-back.css">
+
+	<style type="text/css">
+		.pd-sort a {
+			padding-left: 15px;;
+			padding-right: 15px;;
+		}
+
+		.pd-sort {
+			line-height: 34px;
+		}
+
+		#mine .panel .panel-body {
+			padding: 0px;
+			border: 1px solid rgb(221, 221, 221);
+			margin: 0px;
+		}
+
+		th {
+			text-align: center;
+			background-color: #f8f8f8;
+		}
+
+		.lh-22 {
+			line-height: 22px;
+		}
+
+		#who .panel .panel-body > .row {
+			border-bottom: 1px dashed #c2c2c2;
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<!--选项-->
+					<div class="bg-tabs">
+						<ul class="nav nav-tabs">
+							<li role="presentation" class="active"><a href="#mine" data-toggle="tab">我的收藏</a></li>
+							<li role="presentation"><a href="#who" data-toggle="tab">被谁收藏</a></li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<!--我的收藏-->
+						<div class="tab-pane active" id="mine">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<!--筛选排序-->
+									<div class="row mg-search">
+										<div class="col-sm-12 ">
+											<form class="form-inline">
+												<div class="form-group">
+													<label class="control-label">信息类型:</label>
+													<select class="form-control" name="inf_categories">
+														<option value="all">所有信息</option>
+														<option value="project">项目信息</option>
+														<option value="capital">资金信息</option>
+													</select>
+													<label class="control-label">收藏日期:</label>
+													<select class="form-control" name="create_time">
+														<option value="all">所有周期</option>
+														<option value="">一周内</option>
+														<option value="">两周内</option>
+														<option value="1">一月内</option>
+														<option value="3">三月内</option>
+														<option value="6">半年内</option>
+														<option value="12">一年内</option>
+													</select>
+													<button class="btn btn-cold-to-lighter btn-sm" type="button" id="searchMine"><i
+															class="fa fa-search"></i>搜索
+													</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-body" id="mine-table">
+
+								</div>
+							</div>
+							<input type="checkbox" id="selectAll">
+							<button class="btn btn-cold-to-lighter btn-xs" onclick="pluralDelete()">删除</button>
+						</div>
+						<!--被谁收藏-->
+						<div class="tab-pane" id="who">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<!--筛选排序-->
+									<div class="row mg-search">
+										<div class="col-sm-12 ">
+											<form class="form-inline">
+												<div class="form-group">
+													<label class="control-label">会员类型:</label>
+													<select class="form-control" name="type">
+														<option value="all">所有会员</option>
+														<option value="企业">企业会员</option>
+														<option value="政府">政府会员</option>
+														<option value="个人">个人会员</option>
+													</select>
+													<input type="text" class="form-control "
+													       placeholder="输入联系人搜索" name="name">
+													<button class="btn btn-cold-to-lighter btn-sm " id="searchWho" type="button"><i
+															class="fa fa-search"></i>搜索
+													</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-body" id="wholist">
+									<div class="row">
+										<div class="col-sm-2">
+											<img class="img-responsive" alt="头像">
+										</div>
+										<div class="col-sm-10">
+											<div class="row">
+												<div class="col-sm-12">
+													<a class="title"><strong>熊先生</strong></a>
+												</div>
+												<div class="col-sm-12">广东省东莞市某公司</div>
+												<div class="col-sm-3 lh-22">能源，化学化工</div>
+												<div class="col-sm-offset-3 col-sm-6">
+													<button class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
+													</button>
+													<button class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
+													</button>
+													<button class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
+													</button>
+												</div>
+												<div class="col-sm-6">
+													2016-04-13 收藏了我的 <a class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+												</div>
+												<div class="col-sm-6 text-right">
+													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>
+													<a class="title">商友(<span>0</span>)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-2">
+											<img class="img-responsive" alt="头像">
+										</div>
+										<div class="col-sm-10">
+											<div class="row">
+												<div class="col-sm-12">
+													<a class="title"><strong>熊先生</strong></a>
+												</div>
+												<div class="col-sm-12">广东省东莞市某公司</div>
+												<div class="col-sm-3 lh-22">能源，化学化工</div>
+												<div class="col-sm-offset-3 col-sm-6">
+													<button class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
+													</button>
+													<button class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
+													</button>
+													<button class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
+													</button>
+												</div>
+												<div class="col-sm-6">
+													2016-04-13 收藏了我的 <a class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
+												</div>
+												<div class="col-sm-6 text-right">
+													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>
+													<a class="title">商友(<span>0</span>)</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- jQuery -->
+<script src="${basePath}/static/js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="${basePath}/static/js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+	function ajaxLoadlist(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = ([
+					'									<table class="table table-bordered">',
+					'										<tr class="text-center">',
+					'											<th></th>',
+					'											<th>标题</th>',
+					'											<th>发布者</th>',
+					'											<th>信息类型</th>',
+					'											<th>收藏日期</th>',
+					'											<th>操作</th>',
+					'										</tr>'].join(""));
+				for (var i = 0; i < data.data.rows.length; i++) {
+					var collectInfo = ([
+						'										<tr class="text-center">',
+						'											<td><input type="checkbox" name="mine" value="'+data.data.rows[i].pk_collection+'"></td>',
+						'											<td><a class="title" href="${basePath}/'+data.data.rows[i].inf_categories+'/view/'+data.data.rows[i].id_capital_project+'">' + data.data.rows[i].title + '</a></td>',
+						'											<td><a class="title">'+data.data.rows[i].ext.NAME+'</a></td>',
+						'											<td>' + ((data.data.rows[i].inf_categories === 'project') ? '<a class="title" href="${basePath}/project/">项目信息</a>' : '<a class="title" href="${basePath}/capital/">资金信息</a>') + '</td>',
+						'											<td>' + data.data.rows[i].create_time.substring(0, 10) + '</td>',
+						'											<td><a class="from-cold" href="javascritp:void(0)" onclick="singleDelete('+data.data.rows[i].pk_collection+')">删除</a></td>',
+						'										</tr>'].join(""));
+					str += collectInfo;
+				}
+				str += (['	</table>',
+					'								</div>',
+					'							</div>'].join(""));
+				$('#mine-table').html($(str));
+			}
+		})
+	}
+	;
+	function ajaxLoadwho(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = "";
+				$.each(data.data.rows,function (n, value) {
+					var whoInfo = (['<div class="row">',
+						'										<div class="col-sm-2">',
+						'											<img class="img-responsive" alt="头像" src="'+value.ext.avatar+'">',
+						'										</div>',
+						'										<div class="col-sm-10">',
+						'											<div class="row">',
+						'												<div class="col-sm-12">',
+						'													<a class="title"><strong>'+value.ext.NAME+'</strong></a>',
+						'												</div>',
+						'												<div class="col-sm-12">'+value.ext.company+'</div>',
+						'												<div class="col-sm-3 lh-22">'+value.ext.compan_type+'</div>',
+						'												<div class="col-sm-offset-3 col-sm-6">',
+						'													<a class="btn btn-cold-to-lighter btn-xs pull-right">交换名片',
+						'													</a>',
+						'													<a class="btn btn-hot-to-lighter btn-xs pull-right">投递项目',
+						'													</a>',
+						'													<a class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式',
+						'													</a>',
+						'												</div>',
+						'												<div class="col-sm-6">',
+						'													'+value.create_time.substring(0,10)+' 收藏了我的 <a class="title" href="${basePath}/'+value.inf_categories+'/view/'+value.id_capital_project+'">'+value.title+'</a>',
+						'												</div>',
+						'												<div class="col-sm-6 text-right">',
+						'													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>',
+						'													<a class="title">商友(<span>0</span>)</a>',
+						'												</div>',
+						'											</div>',
+						'										</div>',
+						'									</div>'].join(""));
+					str+=whoInfo;
+				})
+				$('#wholist').html($(str));
+			}
+		})
+	}
+	;
+	function singleDelete(pk) {
+		event.returnValue = confirm("你确认要删除吗？");
+		if(event.returnValue){
+			$.ajax({
+				type:'GET',
+				url:'${basePath}/collection/remove/'+pk+'',
+				dataType:'json',
+				success:function (data) {
+					if (data.code==0){
+						ajaxLoadlist('${basePath}/collection/list');
+					}
+					else{
+						alert(data.message);
+					}
+				}
+			})
+		}
+	}
+	$('#selectAll').click(function () {
+		if ($(this).is(':checked')){
+			$("input[name='mine']").each(function() {
+				$(this).prop('checked',true);
+			});
+		}
+		else{
+			$("input[name='mine']").each(function() {
+				$(this).removeAttr('checked');
+			});
+		}
+	})
+	$('#searchMine').click(function () {
+		var url = '${basePath}/collection/list?';
+		var inf_categories = $('select[name="inf_categories"] option:selected').val();
+		var create_time = $('select[name="create_time"] option:selected').val();
+		(inf_categories==='all')?null:url+='inf_categories='+inf_categories+'';
+		(create_time==='all')?null:url+='&create_time='+create_time+'';
+		ajaxLoadlist(url);
+	});
+	$('#searchWho').click(function () {
+		var url = '${basePath}/collection/list/collect_me?';
+		var name = $('input[name="name"]').val();
+		var type = $('select[name="type"] option:selected').val();
+		(type==='all')?null:url+='type='+type+'';
+		if (name !== null && name !== undefined && name !== '') {
+			url+='&name='+name+'';
+		}
+		ajaxLoadwho(url);
+	})
+	function pluralDelete(){
+		var url = '${basePath}/collection/remove/';
+		var haveDelete = false;
+		$('input:checkbox[name="mine"]:checked').each(function (index,element) {
+			(haveDelete)?url=url+'-'+$(this).val():url+=$(this).val();
+			haveDelete = true;
+		})
+		if (haveDelete){
+			event.returnValue = confirm("你确认要删除吗？");
+			if(event.returnValue){
+				$.ajax({
+					type:'POST',
+					url:url,
+					dataType:'json',
+					success:function (data) {
+						if (data.code==0){
+							ajaxLoadlist('${basePath}/collection/list');
+						}
+						else{
+							alert(data.message);
+						}
+					}
+				})
+			}
+		}
+
+	}
+	$(document).ready(function () {
+		ajaxLoadlist('${basePath}/collection/list');
+		ajaxLoadwho('${basePath}/collection/list/collect_me')
+	})
+</script>
+</body>
+</html>
