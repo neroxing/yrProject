@@ -70,6 +70,7 @@
 						</ul>
 					</div>
 					<div class="tab-content">
+						<!--我的收藏-->
 						<div class="tab-pane active" id="mine">
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -112,6 +113,7 @@
 											<th>收藏日期</th>
 											<th>操作</th>
 										</tr>
+										<div  id="minelist"></div>
 										<tr class="text-center">
 											<td><input type="checkbox"></td>
 											<td><a class="title">河南某海藻开发项目股权融资500万到1300万元</a></td>
@@ -126,6 +128,7 @@
 							<input type="checkbox">
 							<button class="btn btn-cold-to-lighter btn-xs">删除</button>
 						</div>
+						<!--被谁收藏-->
 						<div class="tab-pane" id="who">
 							<div class="panel panel-default">
 								<div class="panel-heading">
@@ -164,12 +167,12 @@
 												<div class="col-sm-12">广东省东莞市某公司</div>
 												<div class="col-sm-3 lh-22">能源，化学化工</div>
 												<div class="col-sm-offset-3 col-sm-6">
-													<button class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
-													</button>
+													<a class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
+													</a>
+													<a class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
+													</a>
+													<a class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
+													</a>
 												</div>
 												<div class="col-sm-6">
 													2016-04-13 收藏了我的 <a class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
@@ -229,7 +232,77 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
-
+	/*我的收藏*/
+	function ajaxLoadmine(url) {
+		$.ajax({
+			type: 'POST',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = '';
+				/*加载表格内容*/
+				for (var i = 0; i < data.data.rows.length; i++) {
+					var collectInfo = (['<div class="panel panel-default">',
+						'								<div class="panel-heading">',
+						'									<!--筛选排序-->',
+						'									<div class="row mg-search">',
+						'										<div class="col-sm-12 ">',
+						'											<form class="form-inline">',
+						'												<div class="form-group">',
+						'													<label class="control-label">信息类型:</label>',
+						'													<select class="form-control">',
+						'														<option value="0">全部信息</option>',
+						'														<option value="capital">资金信息</option>',
+						'														<option value="project">项目信息</option>',
+						'													</select>',
+						'													<label class="control-label">收藏日期:</label>',
+						'													<select class="form-control">',
+						'														<option value="0">所有周期</option>',
+						'														<option value="1">一月内</option>',
+						'														<option value="3">三月内</option>',
+						'														<option value="6">半年内</option>',
+						'														<option value="12">一年内</option>',
+						'													</select>',
+						'													<button class="btn btn-cold-to-lighter btn-sm"><i',
+						'															class="fa fa-search"></i>搜索',
+						'													</button>',
+						'												</div>',
+						'											</form>',
+						'										</div>',
+						'									</div>',
+						'								</div>',
+						'								<div class="panel panel-body">',
+						'									<table class="table table-bordered">',
+						'										<tr class="text-center">',
+						'											<th></th>',
+						'											<th>标题</th>',
+						'											<th>发布者</th>',
+						'											<th>信息类型</th>',
+						'											<th>收藏日期</th>',
+						'											<th>操作</th>',
+						'										</tr>',
+						'										<tr class="text-center">',
+						'											<td><input type="checkbox"></td>',
+						'											<td><a class="title">' + data.data.rows[i].title + '</a></td>',
+						'											<td><a class="title">胡先生</a></td>',
+						'											<td><a class="title">' + ((data.data.rows[i].inf_categories === 'project') ? '项目信息' : '资金信息') + '</a></td>',
+						'											<td>' + data.data.rows[i].create_time.substring(0, 10) + '</td>',
+						'											<td><a class="from-cold">删除</a></td>',
+						'										</tr>',
+						'									</table>',
+						'								</div>',
+						'							</div>',
+						'							<input type="checkbox">',
+						'							<button class="btn btn-cold-to-lighter btn-xs">删除</button>'].join(""));
+					str+=collectInfo;
+				}
+				$('#minelist').html($(str));
+			}
+		})
+	};
+	$(document).ready(function () {
+		ajaxLoadmine('http://115.236.94.196:30000/blade/collection/list?collect_to=10');
+	})
 </script>
 </body>
 </html>
