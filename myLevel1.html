@@ -22,6 +22,7 @@
 
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
+	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
 		.bgWhite {
@@ -82,26 +83,8 @@
 			padding-top: 20px !important;
 		}
 
-		.nav li a {
-			display: inline-block;
-			border-radius: 10px 10px 0 0;
-		}
-
-		.nav {
-			margin-right: 10px !important;
-		}
-
-		.nav > li.active > a, .nav > li.active > a:hover, .nav > li.active > a:focus {
-			background-color: #536290;
-			color: white;
-		}
-
 		.picBox {
 			margin-left: 60px;
-		}
-
-		.noWrap {
-			white-space: nowrap;
 		}
 
 		.solid {
@@ -112,208 +95,240 @@
 		.table tr:first-child {
 			background-color: #f8f8f8;
 		}
+
+		.panel-body > .panel-border {
+			border: 1px solid #ddd;
+		}
+
+		.panel .panel .panel-heading {
+			padding: 5px 0;
+		}
 	</style>
 	}
 </head>
 <body>
-<div class="container pd10 bgWhite">
-	<!-- 头像 -->
-	<div class="row userInfo">
-		<div class="col-sm-2">
-			<div class="fn-mt-10"><img src="" class="img-responsive imgHeight center-block"></div>
-			<div class="text-center"><a href="" class="to-hot">修改头像</a></div>
-		</div>
+<div class="container ">
+	<div class="row">
+		<div class="col-sm-2"></div>
 		<div class="col-sm-10">
-			<div class="username">欢迎您， <span>15168200987 </span>最近登录时间: 2016-08-20 19:33:12</div>
-			<div class="fn-mt-20 fn-font-14">
-				<div>会员等级:<span class="ui-text-red">注册会员</span></div>
-				<div class="progress fn-mt-10 Width">
-					<div class="progress-bar" role="progressbar" aria-valuenow="300" aria-valuemin="0"
-					     aria-valuemax="1500" style="width: 60%;">
-						300/1500
-					</div>
-				</div>
-				<div class="fn-mt-10">差1200成长值升级为青铜勋章</div>
-			</div>
-		</div>
-	</div>
-	<div class="panel">
-		<div class="panel-heading">
-			<div class="row">
-				<div class="col-auto">
-					<div class="cold-underline">会员介绍
-					</div>
-				</div>
-				<!-- Nav tabs -->
-				<ul class="nav nav-panel-tabs text-center pull-right" role="tablist">
-					<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
-					                                          data-toggle="tab" class="">会员介绍</a></li>
-					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"
-					                           class="">成长值</a></li>
-					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"
-					                           class="">成长值记录</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="panel-body">
-			<div class="tab-content">
-				<div role="tabpanel" class="tab-pane active" id="home">
-					<div class="panel">
-						<div class="panel-heading">会员说明</div>
-						<div class="panel-body">
-							<p>1、投融界的会员级别共分为6个等级，分别为：注册会员、青铜勋章、白银勋章、黄金勋章、白金勋章、钻石勋章。<br>
-								2、会员级别的升降均由系统自动处理，无需申请。<br>
-								3、会员的等级由成长值决定，成长值越高会员等级超高，享受到的会员权益越大。</p>
-							<div class="row picBox">
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="userInfo">
+						<div class="row">
+							<div class="col-sm-2">
+								<div class="fn-mt-10"><img src="" class="img-responsive imgHeight center-block"></div>
+								<div class="text-center"><a href="" class="to-hot">修改头像</a></div>
+							</div>
+							<div class="col-sm-10">
+								<div class="username">欢迎您， <span>15168200987 </span>最近登录时间: 2016-08-20 19:33:12</div>
+								<div class="fn-mt-20 fn-font-14">
+									<div>会员等级:<span class="ui-text-red">注册会员</span></div>
+									<div class="progress fn-mt-10 Width">
+										<div class="progress-bar" role="progressbar" aria-valuenow="300"
+										     aria-valuemin="0"
+										     aria-valuemax="1500" style="width: 60%;">
+											300/1500
+										</div>
+									</div>
+									<div class="fn-mt-10">差1200成长值升级为青铜勋章</div>
 								</div>
-								<div class=" col-sm-1 solid"></div>
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
-								</div>
-								<div class=" col-sm-1 solid"></div>
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
-								</div>
-								<div class=" col-sm-1 solid"></div>
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
-								</div>
-								<div class=" col-sm-1 solid"></div>
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
-								</div>
-								<div class=" col-sm-1 solid"></div>
-								<div class="col-sm-1 text-center ">
-									<img src="" class="img-responsive center-block">
-									<div class="noWrap">注册会员</div>
-								</div>
-
 							</div>
 						</div>
 					</div>
-					<div class="panel">
-						<div class="panel-heading">会员级别规则</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-hover text-center thCenter">
-								<tr>
-									<th>会员级别</th>
-									<th>成长值范围</th>
-									<th>成长值有效</th>
-								</tr>
-								<tr>
-									<td>注册会员</td>
-									<td>0～1499</td>
-									<td>永久有效</td>
-								</tr>
-								<tr>
-									<td>青铜勋章</td>
-									<td>1500～3799</td>
-									<td>每年3月1日扣除1000成长值，根据剩余成长值重新计算级别</td>
-								</tr>
-								<tr>
-									<td>白银勋章</td>
-									<td>3800～11999</td>
-									<td>每年3月1日扣除2000成长值，根据剩余成长值重新计算级别</td>
-								</tr>
-							</table>
+					<div class="panel panel-default panel-border">
+						<!--会员等级-->
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-sm-3 auto-width">
+									<div class="cold-underline ">会员介绍</div>
+								</div>
+								<div class="col-auto pull-right">
+									<ul class="nav nav-tabs nav-inline " role="tablist">
+										<li role="presentation" class="pull-right"><a href="#messages"
+										                                              aria-controls="messages"
+										                                              role="tab"
+										                                              data-toggle="tab"
+										                                              class="">成长值记录</a></li>
+										<li role="presentation" class="pull-right"><a href="#profile"
+										                                              aria-controls="profile" role="tab"
+										                                              data-toggle="tab"
+										                                              class="">成长值</a></li>
+										<li role="presentation" class="active pull-right"><a href="#home"
+										                                                     aria-controls="home"
+										                                                     role="tab"
+										                                                     data-toggle="tab" class="">会员介绍</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="profile">
-					<div class="panel">
-						<div class="panel-heading">什么是成长值</div>
 						<div class="panel-body">
-							<p>成长值是投融界会员通过登录、邀请注册所获得的，成长值越高会员等级越高，享受到的会员特权越大。
-								<a href="" class="ui-text-red">查看我的成长值明细</a><br>
-								付费会员可通过“累计消费金额”加速，“累计消费金额”越高，加速系数越大。</p>
-						</div>
-					</div>
-					<div class="panel">
-						<div class="panel-heading">如何赚取成长值</div>
-						<div class="panel-body">
-							<table class="table table-bordered text-center thCenter">
-								<tr>
-									<th>成长值赚取途径</th>
-									<th>赚取成长值</th>
-									<th>付费会员成长值加速</th>
-									<th>发放时间</th>
-								</tr>
-								<tr>
-									<td>登录</td>
-									<td>50/天</td>
-									<td rowspan="2" class="pdTop">付费会员成长值=赚取成长值×（1+累计消费金额/100000）</td>
-									<td>登录成功后发放</td>
-								</tr>
-								<tr>
-									<td>邀请注册</td>
-									<td>200/个</td>
-									<td>邀请注册成功后发放</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="messages">
-					<div class="panel">
-						<div class="panel-heading">您目前的成长值为 <span class="ui-text-red">300</span>，您的会员级别为注册会员。</div>
-						<div class="panel-body">
-							<table class="table table-bordered table-hover text-center thCenter">
-								<tr>
-									<th>发放/扣减时间</th>
-									<th>成长值</th>
-									<th>成长值来源</th>
-									<th>来源详情</th>
-								</tr>
-								<tr>
-									<td>2016-08-20 14:14:28</td>
-									<td>+50</td>
-									<td>系统赠送</td>
-									<td>登录成功后发放</td>
-								</tr>
-								<tr>
-									<td>2016-08-20 14:14:28</td>
-									<td>+50</td>
-									<td>系统赠送</td>
-									<td>登录成功后发放</td>
-								</tr>
-								<tr>
-									<td>2016-08-20 14:14:28</td>
-									<td>+50</td>
-									<td>系统赠送</td>
-									<td>登录成功后发放</td>
-								</tr>
-								<tr>
-									<td>2016-08-20 14:14:28</td>
-									<td>+50</td>
-									<td>系统赠送</td>
-									<td>登录成功后发放</td>
-								</tr>
-							</table>
-							<nav class="text-right">
-								<ul class="pagination">
-									<li>
-										<a href="#" aria-label="Previous">
-											<span aria-hidden="true">上一页</span>
-										</a>
-									</li>
-									<li><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li>
-										<a href="#" aria-label="Next">
-											<span aria-hidden="true">下一页</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
+							<div class="tab-content">
+								<!--会员介绍-->
+								<div role="tabpanel" class="tab-pane active" id="home">
+									<div class="panel">
+										<div class="panel-heading">会员说明</div>
+										<div class="panel-body">
+											<p>1、投融界的会员级别共分为6个等级，分别为：注册会员、青铜勋章、白银勋章、黄金勋章、白金勋章、钻石勋章。<br>
+												2、会员级别的升降均由系统自动处理，无需申请。<br>
+												3、会员的等级由成长值决定，成长值越高会员等级超高，享受到的会员权益越大。</p>
+											<div class="row picBox">
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+												<div class=" col-sm-1 solid"></div>
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+												<div class=" col-sm-1 solid"></div>
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+												<div class=" col-sm-1 solid"></div>
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+												<div class=" col-sm-1 solid"></div>
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+												<div class=" col-sm-1 solid"></div>
+												<div class="col-sm-1 text-center ">
+													<img src="" class="img-responsive center-block">
+													<div class="text-nowrap">注册会员</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-heading">会员级别规则</div>
+										<div class="panel-body">
+											<table class="table table-bordered table-hover text-center thCenter">
+												<tr>
+													<th>会员级别</th>
+													<th>成长值范围</th>
+													<th>成长值有效</th>
+												</tr>
+												<tr>
+													<td>注册会员</td>
+													<td>0～1499</td>
+													<td>永久有效</td>
+												</tr>
+												<tr>
+													<td>青铜勋章</td>
+													<td>1500～3799</td>
+													<td>每年3月1日扣除1000成长值，根据剩余成长值重新计算级别</td>
+												</tr>
+												<tr>
+													<td>白银勋章</td>
+													<td>3800～11999</td>
+													<td>每年3月1日扣除2000成长值，根据剩余成长值重新计算级别</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!--成长值-->
+								<div role="tabpanel" class="tab-pane" id="profile">
+									<div class="panel">
+										<div class="panel-heading">什么是成长值</div>
+										<div class="panel-body">
+											<p>成长值是投融界会员通过登录、邀请注册所获得的，成长值越高会员等级越高，享受到的会员特权越大。
+												<a href="" class="ui-text-red">查看我的成长值明细</a><br>
+												付费会员可通过“累计消费金额”加速，“累计消费金额”越高，加速系数越大。</p>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="panel-heading">如何赚取成长值</div>
+										<div class="panel-body">
+											<table class="table table-bordered text-center thCenter">
+												<tr>
+													<th>成长值赚取途径</th>
+													<th>赚取成长值</th>
+													<th>付费会员成长值加速</th>
+													<th>发放时间</th>
+												</tr>
+												<tr>
+													<td>登录</td>
+													<td>50/天</td>
+													<td rowspan="2" class="pdTop">付费会员成长值=赚取成长值×（1+累计消费金额/100000）</td>
+													<td>登录成功后发放</td>
+												</tr>
+												<tr>
+													<td>邀请注册</td>
+													<td>200/个</td>
+													<td>邀请注册成功后发放</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<!--成长值记录-->
+								<div role="tabpanel" class="tab-pane" id="messages">
+									<div class="panel">
+										<div class="panel-heading">您目前的成长值为 <span class="ui-text-red">300</span>，您的会员级别为注册会员。
+										</div>
+										<div class="panel-body">
+											<table class="table table-bordered table-hover text-center thCenter">
+												<tr>
+													<th>发放/扣减时间</th>
+													<th>成长值</th>
+													<th>成长值来源</th>
+													<th>来源详情</th>
+												</tr>
+												<tr>
+													<td>2016-08-20 14:14:28</td>
+													<td>+50</td>
+													<td>系统赠送</td>
+													<td>登录成功后发放</td>
+												</tr>
+												<tr>
+													<td>2016-08-20 14:14:28</td>
+													<td>+50</td>
+													<td>系统赠送</td>
+													<td>登录成功后发放</td>
+												</tr>
+												<tr>
+													<td>2016-08-20 14:14:28</td>
+													<td>+50</td>
+													<td>系统赠送</td>
+													<td>登录成功后发放</td>
+												</tr>
+												<tr>
+													<td>2016-08-20 14:14:28</td>
+													<td>+50</td>
+													<td>系统赠送</td>
+													<td>登录成功后发放</td>
+												</tr>
+											</table>
+											<nav class="text-right">
+												<ul class="pagination">
+													<li>
+														<a href="#" aria-label="Previous">
+															<span aria-hidden="true">上一页</span>
+														</a>
+													</li>
+													<li><a href="#">1</a></li>
+													<li><a href="#">2</a></li>
+													<li><a href="#">3</a></li>
+													<li><a href="#">4</a></li>
+													<li>
+														<a href="#" aria-label="Next">
+															<span aria-hidden="true">下一页</span>
+														</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

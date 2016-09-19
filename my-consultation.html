@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.container {
+		.main {
 			border: 1px solid #ddd;
 			background-color: white;
 		}
@@ -72,11 +72,22 @@
 		.blue {
 			color: #1d86e0;
 		}
+
+		.delete {
+			padding-left: 10px;
+		}
+
+		.delete > button {
+			margin-left: 10px;
+		}
 	</style>
 </head>
 <body>
 <div class="container">
-	<div class="row consultingProblem">
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-10 main">
+				<div class="row consultingProblem">
 		<div class="left80 red">
 			<a href="" class="red">想咨询投融资相关的问题？来这里吧！</a>
 		</div>
@@ -100,7 +111,7 @@
 		</form>
 		<form class="form-inline">
 			<div class="form-group">
-				<label><span class="red">*</span>详细说明：</label>
+				<label><span class="red">*</span>问题简述：</label>
 				<textarea class="form-control" row="3"></textarea>
 			</div>
 		</form>
@@ -113,7 +124,7 @@
 			<form class="form-inline">
 				<div class="form-group">
 					<label>咨询状态：</label>
-					<select class="form-control">
+					<select>
 						<option>所有状态</option>
 						<option>已回复</option>
 						<option>未回复</option>
@@ -133,7 +144,7 @@
 			</form>
 		</div>
 		<div class="">
-			<table class="table table-hover table-bordered">
+			<table class="table table-hover table-bordered text-center">
 				<tr>
 					<th class=" text-center">选择</th>
 					<th class=" text-center">咨询日期</th>
@@ -143,10 +154,44 @@
 					<th class=" text-center">操作</th>
 				</tr>
 				<tr>
-					<td colspan="6" class="text-center"><i class="fa fa-exclamation-circle blue"></i>您尚未咨询过任何信息，专家解答的答案将在这里展现。
-					</td>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name=""></td>
+					<td>2016-07-22</td>
+					<td>123</td>
+					<td>其它</td>
+					<td>等待审核</td>
+					<td><a href="">查看</a><a href="">删除</a></td>
 				</tr>
 			</table>
+			<div class="delete">
+				<input type="checkbox" name="">
+				<button class="btn btn-cold-to-lighter btn-sm">删除</button>
+			</div>
+		</div>
+	</div>
 		</div>
 	</div>
 </div>
