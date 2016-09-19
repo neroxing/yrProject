@@ -22,6 +22,7 @@
 
 	<!-- customized css -->
 	<link rel="stylesheet" href="css/yr.css">
+	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
 		.bg-gary {
@@ -51,35 +52,6 @@
 			margin-left: 10px;
 		}
 
-		#pd-b-clear {
-			padding-bottom: 0px;
-		}
-
-		#nav-blue li {
-			width: auto;
-		}
-
-		#nav-blue a {
-			padding: 3px;
-			background-color: #e1e1e1;
-			border: none;
-		}
-
-		#nav-blue a:hover, #nav-blue a:focus {
-			padding: 3px;
-			background-color: #e1e1e1;
-			border: none;
-		}
-
-		#nav-blue .active a {
-			background-color: #3b4a82;
-			color: #fff;
-		}
-
-		.text-nowrap {
-			white-space: nowrap;
-		}
-
 		.lh-20 {
 			line-height: 20px;
 		}
@@ -88,14 +60,13 @@
 			margin-bottom: 0px;
 		}
 
-		.table-dashed td {
-			border: none !important;
-			border-bottom: 1px dashed #ccc !important;
+		.table-dashed > tbody > tr > td {
+			border: none;
+			border-bottom: 1px dashed #a5a5a5;
 		}
 
-		.table-dashed tr:last-child td {
-			border: none !important;
-
+		.table-dashed > tbody > tr:last-child > td {
+			border: none;
 		}
 
 		.border-panel-body {
@@ -131,6 +102,7 @@
 	<div class="col-sm-offset-2 col-sm-10">
 		<div class="panel panel-default">
 			<div class="panel-body">
+				<!--认证等级-->
 				<div class="bg-gary">
 					<div>
 						<strong>我的认证等级 : </strong>
@@ -144,9 +116,11 @@
 					<p><i class="fa fa-lightbulb-o"></i>为验证会员资料可信度，我们建立了一套信用认证等级制度，完整的认证是会员搜索到您的重要保证，更是让对方能够信任您的基础。一旦发现有违诚信的虚假认证，投融界有权作出相应处理：负面标记、限制行为、甚至封号。
 					</p>
 				</div>
+				<!--认证内容-->
 				<div class="panel panel-default">
-					<div class="panel-heading " id="pd-b-clear">
-						<ul class="nav nav-tabs" id="nav-blue">
+					<!--认证选项-->
+					<div class="panel-heading ">
+						<ul class="nav nav-tabs nav-inline">
 							<li role="presentation" class="active"><a role="tab" href="#my-identification"
 							                                          data-toggle="tab">我的认证</a></li>
 							<li role="presentation" class=""><a role="tab" href="#phone-identification"

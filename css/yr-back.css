@@ -1,3 +1,4 @@
+/*bg-tabs*/
 .bg-tabs {
 	background-color: #eef2ff;
 	padding-top: 10px;
@@ -23,7 +24,7 @@
 	margin-bottom: -1px;
 	border-bottom: 1px solid #fff;
 }
-
+/*arw*/
 .normally {
 	line-height: 34px;
 	height: 34px;
@@ -86,7 +87,6 @@
 	background-color: #8892b5;
 	/*margin-left: 40px;*/
 }
-
 .arw > div:first-child > div {
 	padding-left: 17px;
 }
@@ -102,3 +102,46 @@
 .arw > div:last-child > div:after {
 	content: none;
 }
+/*nav-inline*/
+.nav-inline{
+	border-bottom: none;
+	margin-bottom: -5px;
+}
+.nav-inline>li {
+	margin-bottom: 0px;
+	width: auto;
+}
+
+.nav-inline>li>a {
+	line-height: 24px;
+
+	background-color: #e1e1e1;
+	border: none;
+}
+
+.nav-inline>li>a:hover,.nav-inline>li>a:focus {
+	line-height: 24px;
+	background-color: #e1e1e1;
+	border: none;
+}
+
+.nav-inline>li.active>a,.nav-inline>li.active>a:hover,.nav-inline>li.active>a:focus {
+	background-color: #3b4a82;
+	color: #fff;
+	border: none;
+}
+@media (min-width: 768px) {
+	.nav-inline>li>a{
+		padding: 0 4px ;
+		margin-right:3px;
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-inline>li>a{
+		padding: 0 15px ;
+		margin-right:4px;
+	}
+}
+
+
