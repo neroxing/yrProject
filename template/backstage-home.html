@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	@include("/common/_cssasset.html") {}
+
+	<style type="text/css">
+		.info-item{
+			padding: 3px 0;
+			line-height: 18px;
+		}
+		.info-item.dashed{
+			border-bottom: 1px dashed #ddd;
+		}
+		.panel.panel {
+			border: 1px solid #ddd;
+		}
+
+		.panel .panel .panel-footer {
+			padding: 5px;
+		}
+
+		.p-info {
+			padding-bottom: 20px;
+			border-bottom: 1px dashed #ddd;
+			margin-bottom: 10px;
+		}
+		.card-panel{
+			height: 126px;
+			background-color: #f1f1f1;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="row">
+						<!--名片-->
+						<div class="col-sm-8">
+							<div class="panel panel-default">
+								<div class="panel-body card-panel">
+									<div class="row">
+										<div class="col-sm-3">
+											<img class="img-responsive" alt="头像">
+											<a class="to-hot">修改头像</a>
+										</div>
+										<div class="col-sm-9">
+											<div class="info-item dashed">欢迎您,<span>黄康亮先生</span>&nbsp;&nbsp;<span>上次登陆时间：2016-08-19 </span></div>
+											<div class="info-item">资料完整度: <span>41分</span><a class="title">完善</a></div>
+											<div class="info-item">认证状态:
+												<i class="glyphicon glyphicon-phone"></i>
+												<i class="fa fa-users"></i>
+												<i class="fa fa-envelope"></i>
+											</div>
+											<div class="info-item">增值服务: <a class="to-hot">升级为VIP</a></div>
+											<div class="info-item">消息提醒:
+												<i class="fa fa-envelope-o"></i><a class="to-hot">收到的投递(0)</a>
+												<i class="fa fa-comment-o "></i><a class="to-hot">收到的投递(0)</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--会员等级-->
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div>
+										勋章等级:<span>注册会员</span>
+									</div>
+								</div>
+								<div class="panel-body text-center">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="90"
+										     aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+											1350/1500
+										</div>
+									</div>
+									<div>差150成长值升级为青铜勋章</div>
+									<button class="btn btn-hot-to-lighter center-block">如何提升勋章等级</button>
+								</div>
+							</div>
+						</div>
+						<!--项目信息-->
+						<div id='info-list'></div>
+						<!--查看更多-->
+						<div class="col-sm-12">
+							<button class="btn btn-cold-to-lighter btn-block btn-sm" onclick='ajaxLoadCapital()' id='loadMore'>
+								查看更多&nbsp;<i class="fa fa-caret-down"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@include("/common/_jsasset.html") {}
+
+<script type="text/javascript">
+	function ajaxLoadCapital() {
+		var page = ($('#info-list>div').length)/9+1;
+		$.ajax({
+			type: 'GET',
+			url: '${basePath}/capital/query?page=' + page + '&size=9',
+			dataType: 'json',
+			success: function (data) {
+				var str = '';
+				$.each(data.data.rows, function (n, value) {
+					str += ['<div class="col-sm-4">',
+						'								<div class="panel panel-default">',
+						'									<div class="panel-body">',
+						'										<div class=" p-info">',
+						'											<a class="title">' + value.title + '</a>',
+						'											<div>' + value.province_id + ' ' + value.capital_type + ' ' + value.industry + ' </div>',
+						'										</div>',
+						'										<div class="row">',
+						'											<div class="col-sm-6 text-right">',
+						'												浏览:333次',
+						'											</div>',
+						'											<div class="col-sm-6 text-left">',
+						'												约谈:1次',
+						'											</div>',
+						'										</div>',
+						'									</div>',
+						'									<div class="panel-footer">',
+						'										<div class="row">',
+						'											<div class="col-sm-12">',
+						'												<a href="${basePath}/capital/view/'+value.pk_capital+'" class="btn btn-cold-to-lighter btn-xs pull-left">查看详情</a>',
+						'												<a class="btn btn-cold-to-lighter btn-xs pull-left">留言</a>',
+						'												<a class="btn btn-hot-to-lighter btn-xs pull-right">约谈</a>',
+						'											</div>',
+						'										</div>',
+						'									</div>',
+						'								</div>',
+						'							</div>'].join("");
+				})
+				$('#info-list').append($(str))
+			}
+		})
+		if(page>=3){
+			$('#loadMore').remove();
+		}
+	}
+	$(document).ready(function () {
+		ajaxLoadCapital();
+	})
+</script>
+</body>
+</html>

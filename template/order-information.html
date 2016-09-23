@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	@include("/common/_cssasset.html") {}
+
+
+	<style type="text/css">
+		.red {
+			color: red;
+		}
+
+		.heading-bg {
+			background: #e3eaff;
+			height: 28px;
+			line-height: 28px;
+			padding-left: 10px;
+			font-weight: bold;
+		}
+
+		.heading-mg-top {
+			margin-top: -10px;
+		}
+
+		.pd {
+			padding: 30px;
+			line-height: 30px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="panel">
+		<div class="panel-heading heading-bg">
+			<div class="heading-mg-top">订单详情</div>
+		</div>
+		<div class="panel-body pd">
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-lg-2">
+					订单金额：<span class="red">￥${orderDefine.money}元</span>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-3">
+					订单编号：${orderDetails.number}
+				</div>
+				<div class="col-md-4 col-sm-4 col-lg-3">
+					服务名称：${orderDefine.value}
+				</div>
+				<div class="col-md-4 col-sm-3 col-lg-2">
+					购买数量：${orderDetails.purchase}条
+				</div>
+				<div class="col-md-4 col-sm-3 col-lg-2">
+					订单状态：${orderDetails.state}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button class="btn btn-cold-to-lighter ma-bottom">继续支付</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@include("/common/_jsasset.html") {}
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

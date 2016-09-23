@@ -11,18 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<!-- Bootstrap theme -->
-	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
+	@include("/common/_cssasset.html") {}
 
 	<style type="text/css">
 		.main {
@@ -158,34 +147,17 @@
 										<option value="贷款">贷款</option>
 										<option value="其他">其他</option>
 									</select>
-									<button class="btn btn-cold-to-lighter btn-sm" id="searchConsult"><i class="fa fa-search"></i>搜索
+									<button class="btn btn-cold-to-lighter btn-sm" id="searchConsult" type="button"><i class="fa fa-search"></i>搜索
 									</button>
 								</div>
 							</form>
 						</div>
 						<div id="consultList">
-							<table class="table table-hover table-bordered text-center">
-								<tr>
-									<th class=" text-center">选择</th>
-									<th class=" text-center">咨询日期</th>
-									<th class=" text-center">咨询内容</th>
-									<th class=" text-center">问题类型</th>
-									<th class=" text-center">咨询状态</th>
-									<th class=" text-center">操作</th>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name=""></td>
-									<td>2016-07-22</td>
-									<td>123</td>
-									<td>其它</td>
-									<td>等待审核</td>
-									<td><a class="to-cold" href="">查看</a> <a class="to-cold" href="">删除</a></td>
-								</tr>
-							</table>
-							<div class="delete">
+							
+						</div>
+						<div class="delete">
 								<input type="checkbox" id="selectAll">
-								<button class="btn btn-cold-to-lighter btn-sm">删除</button>
-							</div>
+								<button class="btn btn-cold-to-lighter btn-sm" onclick="pluralDelete()">删除</button>
 						</div>
 					</div>
 				</div>
@@ -194,14 +166,7 @@
 	</div>
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
 	$('#consultation').submit(function (e) {
@@ -214,27 +179,27 @@
 		if (brief === '') {
 			$('#tips-brief').text('请输入问题简述');
 		}
-		else if (type === 0) {
+		else if(type===0){
 			$('#tips-type').text('请选择问题类型');
 		}
-		else if (consult_content === '') {
+		else if(consult_content===''){
 			$('#tips-consult_content').text('请填写详细说明');
 		}
-		else {
+		else{
 			var formObj = $(this);
-			var formUrl = '115.236.94.196:30000/blade/consult/save';
+			var formUrl = '${basePath}/consult/save';
 			var formData = $('#consultation').serialize();
 			$.ajax({
-				url: formUrl,
-				type: 'POST',
-				data: formData,
-				dataType: 'json',
-				mimeType: 'multipart/form-data',
-				contentType: false,
-				cache: false,
-				prcessData: false,
-				success: function () {
-					(data.code) ? alert(data.message) : null;
+				url:formUrl,
+				type:'POST',
+				data:formData,
+				dataType:'json',
+				mimeType:'multipart/form-data',
+				contentType:"application/x-www-form-urlencoded",
+				cache:false,
+				processData:false,
+				success:function (data) {
+					(data.code) ? alert(data.message) : ajaxLoadConsult('${basePath}/consult/consultList');
 				}
 			})
 		}
@@ -255,14 +220,14 @@
 						'									<th class=" text-center">咨询状态</th>' +
 						'									<th class=" text-center">操作</th>' +
 						'								</tr>';
-				$.each(data.rows, function (n, value) {
+				$.each(data.data.rows, function (n, value) {
 					str += '<tr>' +
 							'									<td><input type="checkbox" name="consult" value="' + value.pk_consult + '"></td>' +
 							'									<td>' + value.consult_date + '</td>' +
 							'									<td>' + value.brief + '</td>' +
 							'									<td>' + value.type + '</td>' +
 							'									<td>' + value.status + '</td>' +
-							'									<td><a class="to-cold" href="">查看</a> <a class="to-cold" href="" onclick="singleDelete(' + value.pk_consult + ')">删除</a></td>' +
+							'									<td><a class="to-cold" href="">查看</a> <a class="to-cold" href="javascript:void(0)" onclick="singleDelete(' + value.pk_consult + ')">删除</a></td>' +
 							'								</tr>';
 				})
 				str += '</table>';
@@ -270,19 +235,16 @@
 			}
 		})
 	}
-	$(document).ready(function () {
-		ajaxLoadConsult('/consult/consultList');
-	})
 	function singleDelete(pk) {
 		event.returnValue = confirm("你确认要删除吗？");
 		if(event.returnValue){
 			$.ajax({
 				type:'GET',
-				url:'/consult/remove?ids='+pk+'',
+				url:'${basePath}/consult/remove?ids='+pk+'',
 				dataType:'json',
 				success:function (data) {
 					if (data.code==0){
-						ajaxLoadlist('/consult/consultList');
+						ajaxLoadlist('${basePath}/consult/consultList');
 					}
 					else{
 						alert(data.message);
@@ -291,6 +253,9 @@
 			})
 		}
 	}
+	$(document).ready(function () {
+		ajaxLoadConsult('${basePath}/consult/consultList');
+	})
 	$('#selectAll').click(function () {
 		if ($(this).is(':checked')){
 			$("input[name='consult']").each(function() {
@@ -304,7 +269,7 @@
 		}
 	})
 	function pluralDelete(){
-		var url = '/consult/remove?ids=';
+		var url = '${basePath}/consult/remove?ids=';
 		var haveDelete = false;
 		$('input:checkbox[name="consult"]:checked').each(function (index,element) {
 			(haveDelete)?url=url+'-'+$(this).val():url+=$(this).val();
@@ -319,7 +284,7 @@
 					dataType:'json',
 					success:function (data) {
 						if (data.code==0){
-							ajaxLoadConsult('/consult/consultList');
+							ajaxLoadConsult('${basePath}/consult/consultList');
 						}
 						else{
 							alert(data.message);
@@ -331,7 +296,7 @@
 
 	}
 	$('#searchConsult').click(function () {
-		var url = '/collection/query?';
+		var url = '${basePath}/consult/query?';
 		var type = $('select[name="type"] option:selected').val();
 		var status = $('select[name="status"] option:selected').val();
 		(type==='all')?null:url+='type='+type+'';

@@ -347,7 +347,110 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+	$('.nav-inline a').click(function () {
+		$('#tabs-title').val($(this).val());
+	})
+	function ajaxLevelInfo(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = (['	<div class="row">',
+					'							<div class="col-sm-2">',
+					'								<div class="fn-mt-10"><img src="'+data.data[0].ext.avatar+'" class="img-responsive imgHeight center-block"></div>',
+					'								<div class="text-center"><a href="" class="to-hot">修改头像</a></div>',
+					'							</div>',
+					'							<div class="col-sm-10">',
+					'								<div class="username">欢迎您， <span>' + data.data[0].ext.name + '</span>最近登录时间: '+data.data[0].ext.recent_date+'</div>',
+					'								<div class="fn-mt-20 fn-font-14">',
+					'									<div>会员等级:<span class="ui-text-red">' + data.data[0].ext.level + '</span></div>',
+					'									<div class="progress fn-mt-10 Width">',
+					'										<div class="progress-bar" role="progressbar" aria-valuenow="' + data.data[0].ext.integral + '"',
+					'										     aria-valuemin="0"',
+					'										     aria-valuemax="' + data.data[0].score + '" style="width: ' + (data.data[0].ext.integral / data.data[0].score).toFixed(2).substring(2, 4) + '%;">',
+					'											' + data.data[0].ext.integral + '/' + data.data[0].score + '',
+					'										</div>',
+					'									</div>',
+					'									<div class="fn-mt-10">差' + ((data.data[0].score) - (data.data[0].ext.integral)) + '成长值升级为'+data.data[0].rank+'</div>',
+					'								</div>',
+					'							</div>',
+					'						</div>'].join(""));
+				$('.userInfo').html($(str));
+				var levelNow = (['<div>您目前的成长值为 <span class="ui-text-red">'+data.data[0].ext.integral+'</span>，您的会员级别为'+data.data[0].ext.level+'。</div>'].join(""));
+				$('#levelNow').html($(levelNow));
+			}
+		})
+	}
+	function ajaxLevelHistory(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = (['<tr>',
+					'													<th>发放/扣减时间</th>',
+					'													<th>成长值</th>',
+					'													<th>成长值来源</th>',
+					'													<th>来源详情</th>',
+					'												</tr>'].join(""));
+				$.each(data.data.rows, function (n, value) {
+					var history = (['<tr>',
+						'													<td>' + value.triggering_time + '</td>',
+						'													<td>+' + value.ext.value + '</td>',
+						'													<td>系统赠送</td>',
+						'													<td>' + value.ext.key + '成功后发放</td>',
+						'												</tr>'].join(""));
+					str += history;
+				})
+				$('#levelHistory').html($(str));
+				var pagenation = '';
+				var total = data.data.total;
+				var page = data.data.page;
+				(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+				(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+				if (total <= 5 || page < 5) {
 
+					for (var i = 1; i <= Math.min(total, 5); i++) {
+						if (i == page) {
+							pagenation += ('<li class="active"><a>' + i + '</a></li>');
+						}
+						else {
+							pagenation += ('<li><a>' + i + '</a></li>');
+						}
+					}
+					(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+				}
+				else {
+					((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+					((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+					pagenation += ('<li class="active"><a>' + page + '</a></li>');
+					((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+					((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+					(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+				}
+				(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+				(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+				$('.pagination').html($(pagenation));
+				$('.pagination li a').click(function () {
+					var pageCount = this.text;
+					if (pageCount != page) {
+						var pageUrl = '115.236.94.196:30000/blade/scoreHistory/list?';
+						(this.text === '上一页') ? pageCount = (page - 1) : null;
+						(this.text === '后一页') ? pageCount = (page + 1) : null;
+						(this.text === '首页') ? pageCount = 1 : null;
+						(this.text === '最后一页') ? pageCount = total : null;
+						pageUrl += 'page=' + pageCount;
+						ajaxLevelHistory(pageUrl);
+					}
+				})
+			}
+		})
+	}
+	$(document).ready(function () {
+		ajaxLevelInfo('115.236.94.196:30000/blade/rankDefine/list/me');
+		ajaxLevelHistory('115.236.94.196:30000/blade/scoreHistory/list')
+	})
 </script>
 </body>
 </html>

@@ -11,17 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
+	@include("/common/_cssasset.html") {}
 
 	<style type="text/css">
 		#bg-purple {
@@ -50,25 +40,9 @@
 						</div>
 						<div class="panel-body">
 							<input class="form-control" readonly="true" type="text"
-							       value="http://www.trjcn.com/register.html?u=b000617f9185b8dd">
+							       value="${url}">
 							按 Ctrl+C 键复制选中的链接
-							<div id="invite-table">
-								<table class="table table-bordered ">
-									<tr class="text-center">
-										<td>邀请好友账号</td>
-										<td>注册时间</td>
-										<td>奖励</td>
-									</tr>
-									<tr class="text-center">
-										<td>123</td>
-										<td>123</td>
-										<td>123</td>
-									</tr>
-									<tr>
-										<td colspan="3">还没有相关内容</td>
-									</tr>
-								</table>
-							</div>
+							<div id="invite-table"></div>
 							温馨提示
 							<ol>
 								<li>请不要发送邀请信给不熟悉的人士，避免给别人带来不必要的困扰。</li>
@@ -82,19 +56,12 @@
 	</div>
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
 	$.ajax({
 		typr: 'GET',
-		url: 'inregister/list',
+		url: '${basePath}/inregister/list',
 		dataType: 'json',
 		success: function (data) {
 			var str = '<table class="table table-bordered ">' +

@@ -138,7 +138,7 @@
 						'							</div>',
 						'							<div class="row">',
 						'								<div class="col-sm-6">',
-						'									浏览:0 留言:0 收藏:0 收到投递:0',
+						'									浏览:'+value.ext.record+' 留言:'+value.ext.message+' 收藏:'+value.ext.collection+' 收到约谈:'+value.ext.record+'',
 						'								</div>',
 						'								<div class="col-sm-6 text-right">',
 						'									<a class="title">权限设置</a>',
@@ -203,6 +203,7 @@
 			}
 		})
 	}
+	;
 	function infoDelete(pk) {
 		event.returnValue = confirm("你确认要删除吗？");
 		if (event.returnValue) {

@@ -257,14 +257,8 @@
 										<div class="panel-body">
 											<table class="table table-bordered table-hover text-center thCenter"
 											       id="levelHistory">
-												<tr>
-													<th>发放/扣减时间</th>
-													<th>成长值</th>
-													<th>成长值来源</th>
-													<th>来源详情</th>
-												</tr>
 											</table>
-											<nav class="pull-left">
+											<nav class="pull-right">
 												<ul class="pagination">
 													<li>
 														<a href="#" aria-label="Previous">
@@ -315,11 +309,11 @@
 			success: function (data) {
 				var str = (['	<div class="row">',
 					'							<div class="col-sm-2">',
-					'								<div class="fn-mt-10"><img src="" class="img-responsive imgHeight center-block"></div>',
+					'								<div class="fn-mt-10"><img src="'+data.data[0].ext.avatar+'" class="img-responsive imgHeight center-block"></div>',
 					'								<div class="text-center"><a href="" class="to-hot">修改头像</a></div>',
 					'							</div>',
 					'							<div class="col-sm-10">',
-					'								<div class="username">欢迎您， <span>' + data.data[0].ext.name + '</span>最近登录时间: 2016-08-20 19:33:12</div>',
+					'								<div class="username">欢迎您， <span>' + data.data[0].ext.name + '</span>最近登录时间: '+data.data[0].ext.recent_date+'</div>',
 					'								<div class="fn-mt-20 fn-font-14">',
 					'									<div>会员等级:<span class="ui-text-red">' + data.data[0].ext.level + '</span></div>',
 					'									<div class="progress fn-mt-10 Width">',
@@ -329,11 +323,13 @@
 					'											' + data.data[0].ext.integral + '/' + data.data[0].score + '',
 					'										</div>',
 					'									</div>',
-					'									<div class="fn-mt-10">差' + ((data.data[0].score) - (data.data[0].ext.integral)) + '成长值升级为青铜勋章</div>',
+					'									<div class="fn-mt-10">差' + ((data.data[0].score) - (data.data[0].ext.integral)) + '成长值升级为'+data.data[0].rank+'</div>',
 					'								</div>',
 					'							</div>',
 					'						</div>'].join(""));
 				$('.userInfo').html($(str));
+				var levelNow = (['<div>您目前的成长值为 <span class="ui-text-red">'+data.data[0].ext.integral+'</span>，您的会员级别为'+data.data[0].ext.level+'。</div>'].join(""));
+				$('#levelNow').html($(levelNow));
 			}
 		})
 	}
@@ -359,21 +355,11 @@
 					str += history;
 				})
 				$('#levelHistory').html($(str));
-				var levelNow = (['<div>您目前的成长值为 <span class="ui-text-red">300</span>，您的会员级别为注册会员。</div>'].join(""));
-				$('#levelNow').html($(levelNow));
 				var pagenation = '';
 				var total = data.data.total;
 				var page = data.data.page;
-				(page!=1) ? pagenation += (['<li>',
-					'														<a href="#">',
-					'															<span>首页</span>',
-					'														</a>',
-					'													</li>'].join("")) : null;
-				(total > 1 && page > 1) ? pagenation += (['<li>',
-					'														<a href="#" aria-label="Previous">',
-					'															<span aria-hidden="true">上一页</span>',
-					'														</a>',
-					'													</li>'].join("")) : null;
+				(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+				(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
 				if (total <= 5 || page < 5) {
 
 					for (var i = 1; i <= Math.min(total, 5); i++) {
@@ -385,15 +371,6 @@
 						}
 					}
 					(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
-					if (total > 1 && page < total) {
-						pagenation += ('<li><a>后一页</a></li>');
-					}
-					(page!=total) ? pagenation += (['<li>',
-						'														<a href="#">',
-						'															<span>最后一页</span>',
-						'														</a>',
-						'													</li>'].join("")) : null;
-
 				}
 				else {
 					((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
@@ -402,23 +379,19 @@
 					((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
 					((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
 					(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
-					if (total > 1 && page < total) {
-						pagenation += (('<li><a>后一页</a></li>'));
-					}
-					(page!=total) ? pagenation += (['<li>',
-						'														<a href="#">',
-						'															<span>最后一页</span>',
-						'														</a>',
-						'													</li>'].join("")) : null;
 				}
+				(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+				(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
 				$('.pagination').html($(pagenation));
 				$('.pagination li a').click(function () {
 					var pageCount = this.text;
-					if(pageCount!=page){
+					if (pageCount != page) {
 						var pageUrl = '${basePath}/scoreHistory/list?';
-						(this.text === '前一页') ? pageCount = (page - 1) : null;
+						(this.text === '上一页') ? pageCount = (page - 1) : null;
 						(this.text === '后一页') ? pageCount = (page + 1) : null;
-						pageUrl += '&page=' + pageCount;
+						(this.text === '首页') ? pageCount = 1 : null;
+						(this.text === '最后一页') ? pageCount = total : null;
+						pageUrl += 'page=' + pageCount;
 						ajaxLevelHistory(pageUrl);
 					}
 				})

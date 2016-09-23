@@ -11,18 +11,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	@include("/common/_cssasset.html") {}
 
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
 		.pd-sort a {
@@ -54,14 +44,6 @@
 			padding-bottom: 10px;
 			padding-top: 10px;
 		}
-
-		.jz tr th, .jz tr td {
-			vertical-align: middle !important;
-			word-wrap: break-word;
-			word-break: break-all;
-			width: 14% !important;
-		}
-
 	</style>
 </head>
 <body>
@@ -79,7 +61,7 @@
 					</div>
 					<div class="tab-content">
 						<div class="tab-pane active" id="receive">
-							<table class="table table-bordered jz">
+							<table class="table table-bordered">
 								<tr class="text-center">
 									<th>投诉编号</th>
 									<th>投诉理由</th>
@@ -88,17 +70,6 @@
 									<th>状态</th>
 									<th>倒计时</th>
 									<th>操作</th>
-								</tr>
-								<tr class="text-center">
-									<td>2016082414106</td>
-									<td>虚假项目</td>
-									<td>1327253389</td>
-									<td>2016-08-24</td>
-									<td>投诉失败</td>
-									<td>倒计时</td>
-									<td>
-										<button class="btn btn-hot-to-lighter btn-sm">查看</button>
-									</td>
 								</tr>
 							</table>
 						</div>
@@ -121,20 +92,13 @@
 		</div>
 	</div>
 </div>
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
 	/*收到的投诉*/
 	$.ajax({
 		type: 'GET',
-		url: '/complain/byComplainList',
+		url: '${basePath}/complain/byComplainList',
 		dataType: 'json',
 		success: function (data) {
 			var str = '<table class="table table-bordered jz">' +
@@ -151,12 +115,12 @@
 				str += '<tr class="text-center">' +
 						'									<td>' + value.complain_code + '</td>' +
 						'									<td>' + value.complain_reason + '</td>' +
-						'									<td>' + value.complain_to + '</td>' +
+						'									<td>' + value.ext.name + '</td>' +
 						'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
 						'									<td>' + value.complain_status + '</td>' +
 						'									<td>' + value.countdown + '</td>' +
 						'									<td>' +
-						'										<a class="btn btn-hot-to-lighter btn-sm" href="">查看</a>' +
+						'										<a class="btn btn-hot-to-lighter btn-xs" href="">查看</a>' +
 						'									</td>' +
 						'								</tr>';
 			})
@@ -167,10 +131,10 @@
 	/*发起的投诉*/
 	$.ajax({
 		type: 'GET',
-		url: '/complain/complainToList',
+		url: '${basePath}/complain/complainToList',
 		dataType: 'json',
 		success: function (data) {
-			str += '<table class="table table-bordered">' +
+			var str = '<table class="table table-bordered">' +
 					'								<tr class="text-center">' +
 					'									<th>投诉编号</th>' +
 					'									<th>投诉理由</th>' +
@@ -184,7 +148,7 @@
 				str += '<tr class="text-center">' +
 						'									<td>' + value.complain_code + '</td>' +
 						'									<td>' + value.complain_reason + '</td>' +
-						'									<td>' + value.by_complain + '</td>' +
+						'									<td>' + value.ext.name + '</td>' +
 						'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
 						'									<td>' + value.complain_status + '</td>' +
 						'									<td>' + value.countdown + '</td>' +

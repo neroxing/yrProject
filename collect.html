@@ -233,75 +233,164 @@
 
 <script type="text/javascript">
 	/*我的收藏*/
-	function ajaxLoadmine(url) {
+	function ajaxLoadlist(url) {
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: url,
 			dataType: 'json',
 			success: function (data) {
-				var str = '';
-				/*加载表格内容*/
+				var str = ([
+					'									<table class="table table-bordered">',
+					'										<tr class="text-center">',
+					'											<th></th>',
+					'											<th>标题</th>',
+					'											<th>发布者</th>',
+					'											<th>信息类型</th>',
+					'											<th>收藏日期</th>',
+					'											<th>操作</th>',
+					'										</tr>'].join(""));
 				for (var i = 0; i < data.data.rows.length; i++) {
-					var collectInfo = (['<div class="panel panel-default">',
-						'								<div class="panel-heading">',
-						'									<!--筛选排序-->',
-						'									<div class="row mg-search">',
-						'										<div class="col-sm-12 ">',
-						'											<form class="form-inline">',
-						'												<div class="form-group">',
-						'													<label class="control-label">信息类型:</label>',
-						'													<select class="form-control">',
-						'														<option value="0">全部信息</option>',
-						'														<option value="capital">资金信息</option>',
-						'														<option value="project">项目信息</option>',
-						'													</select>',
-						'													<label class="control-label">收藏日期:</label>',
-						'													<select class="form-control">',
-						'														<option value="0">所有周期</option>',
-						'														<option value="1">一月内</option>',
-						'														<option value="3">三月内</option>',
-						'														<option value="6">半年内</option>',
-						'														<option value="12">一年内</option>',
-						'													</select>',
-						'													<button class="btn btn-cold-to-lighter btn-sm"><i',
-						'															class="fa fa-search"></i>搜索',
-						'													</button>',
-						'												</div>',
-						'											</form>',
-						'										</div>',
-						'									</div>',
-						'								</div>',
-						'								<div class="panel panel-body">',
-						'									<table class="table table-bordered">',
+					var collectInfo = ([
 						'										<tr class="text-center">',
-						'											<th></th>',
-						'											<th>标题</th>',
-						'											<th>发布者</th>',
-						'											<th>信息类型</th>',
-						'											<th>收藏日期</th>',
-						'											<th>操作</th>',
-						'										</tr>',
-						'										<tr class="text-center">',
-						'											<td><input type="checkbox"></td>',
-						'											<td><a class="title">' + data.data.rows[i].title + '</a></td>',
-						'											<td><a class="title">胡先生</a></td>',
-						'											<td><a class="title">' + ((data.data.rows[i].inf_categories === 'project') ? '项目信息' : '资金信息') + '</a></td>',
+						'											<td><input type="checkbox" name="mine" value="'+data.data.rows[i].pk_collection+'"></td>',
+						'											<td><a class="title" href="115.236.94.196:30000/blade/'+data.data.rows[i].inf_categories+'/view/'+data.data.rows[i].id_capital_project+'">' + data.data.rows[i].title + '</a></td>',
+						'											<td><a class="title">'+data.data.rows[i].ext.NAME+'</a></td>',
+						'											<td>' + ((data.data.rows[i].inf_categories === 'project') ? '<a class="title" href="115.236.94.196:30000/blade/project/">项目信息</a>' : '<a class="title" href="115.236.94.196:30000/blade/capital/">资金信息</a>') + '</td>',
 						'											<td>' + data.data.rows[i].create_time.substring(0, 10) + '</td>',
-						'											<td><a class="from-cold">删除</a></td>',
-						'										</tr>',
-						'									</table>',
-						'								</div>',
-						'							</div>',
-						'							<input type="checkbox">',
-						'							<button class="btn btn-cold-to-lighter btn-xs">删除</button>'].join(""));
-					str+=collectInfo;
+						'											<td><a class="from-cold" href="javascritp:void(0)" onclick="singleDelete('+data.data.rows[i].pk_collection+')">删除</a></td>',
+						'										</tr>'].join(""));
+					str += collectInfo;
 				}
-				$('#minelist').html($(str));
+				str += (['	</table>',
+					'								</div>',
+					'							</div>'].join(""));
+				$('#mine-table').html($(str));
 			}
 		})
-	};
+	}
+	;
+	function ajaxLoadwho(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = "";
+				$.each(data.data.rows,function (n, value) {
+					var whoInfo = (['<div class="row">',
+						'										<div class="col-sm-2">',
+						'											<img class="img-responsive" alt="头像" src="'+value.ext.avatar+'">',
+						'										</div>',
+						'										<div class="col-sm-10">',
+						'											<div class="row">',
+						'												<div class="col-sm-12">',
+						'													<a class="title"><strong>'+value.ext.NAME+'</strong></a>',
+						'												</div>',
+						'												<div class="col-sm-12">'+value.ext.company+'</div>',
+						'												<div class="col-sm-3 lh-22">'+value.ext.compan_type+'</div>',
+						'												<div class="col-sm-offset-3 col-sm-6">',
+						'													<a class="btn btn-cold-to-lighter btn-xs pull-right">交换名片',
+						'													</a>',
+						'													<a class="btn btn-hot-to-lighter btn-xs pull-right">投递项目',
+						'													</a>',
+						'													<a class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式',
+						'													</a>',
+						'												</div>',
+						'												<div class="col-sm-6">',
+						'													'+value.create_time.substring(0,10)+' 收藏了我的 <a class="title" href="115.236.94.196:30000/blade/'+value.inf_categories+'/view/'+value.id_capital_project+'">'+value.title+'</a>',
+						'												</div>',
+						'												<div class="col-sm-6 text-right">',
+						'													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>',
+						'													<a class="title">商友(<span>0</span>)</a>',
+						'												</div>',
+						'											</div>',
+						'										</div>',
+						'									</div>'].join(""));
+					str+=whoInfo;
+				})
+				$('#wholist').html($(str));
+			}
+		})
+	}
+	;
+	function singleDelete(pk) {
+		event.returnValue = confirm("你确认要删除吗？");
+		if(event.returnValue){
+			$.ajax({
+				type:'GET',
+				url:'115.236.94.196:30000/blade/collection/remove/'+pk+'',
+				dataType:'json',
+				success:function (data) {
+					if (data.code==0){
+						ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
+					}
+					else{
+						alert(data.message);
+					}
+				}
+			})
+		}
+	}
+	$('#selectAll').click(function () {
+		if ($(this).is(':checked')){
+			$("input[name='mine']").each(function() {
+				$(this).prop('checked',true);
+			});
+		}
+		else{
+			$("input[name='mine']").each(function() {
+				$(this).removeAttr('checked');
+			});
+		}
+	})
+	$('#searchMine').click(function () {
+		var url = '115.236.94.196:30000/blade/collection/list?';
+		var inf_categories = $('select[name="inf_categories"] option:selected').val();
+		var create_time = $('select[name="create_time"] option:selected').val();
+		(inf_categories==='all')?null:url+='inf_categories='+inf_categories+'';
+		(create_time==='all')?null:url+='&create_time='+create_time+'';
+		ajaxLoadlist(url);
+	});
+	$('#searchWho').click(function () {
+		var url = '115.236.94.196:30000/blade/collection/list/collect_me?';
+		var name = $('input[name="name"]').val();
+		var type = $('select[name="type"] option:selected').val();
+		(type==='all')?null:url+='type='+type+'';
+		if (name !== null && name !== undefined && name !== '') {
+			url+='&name='+name+'';
+		}
+		ajaxLoadwho(url);
+	})
+	function pluralDelete(){
+		var url = '115.236.94.196:30000/blade/collection/remove/';
+		var haveDelete = false;
+		$('input:checkbox[name="mine"]:checked').each(function (index,element) {
+			(haveDelete)?url=url+'-'+$(this).val():url+=$(this).val();
+			haveDelete = true;
+		})
+		if (haveDelete){
+			event.returnValue = confirm("你确认要删除吗？");
+			if(event.returnValue){
+				$.ajax({
+					type:'POST',
+					url:url,
+					dataType:'json',
+					success:function (data) {
+						if (data.code==0){
+							ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
+						}
+						else{
+							alert(data.message);
+						}
+					}
+				})
+			}
+		}
+
+	}
 	$(document).ready(function () {
-		ajaxLoadmine('http://115.236.94.196:30000/blade/collection/list?collect_to=10');
+		ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
+		ajaxLoadwho('115.236.94.196:30000/blade/collection/list/collect_me')
 	})
 </script>
 </body>

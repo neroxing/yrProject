@@ -11,18 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<!-- Bootstrap theme -->
-	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
+	@include("/common/_cssasset.html") {}
 
 	<style type="text/css">
 
@@ -62,22 +51,25 @@
 			text-align: center;
 		}
 
-		.jz tr th ,.jz tr td{
+		.jz tr th {
 			vertical-align: middle !important;
 			word-wrap: break-word;
 			word-break: break-all;
 			width: 14% !important;
 		}
-
-		.border {
+		.jz tr td {
+			vertical-align: middle !important;
+			word-wrap: break-word;
+			word-break: break-all;
+			width: 14% !important;
+		}
+		.border{
 			border: 1px solid #ddd !important;
 		}
-
-		.dotted {
+		.dotted{
 			border-bottom: 1px dotted #ddd;
 			margin: 0 10px;
 		}
-
 		.cold-underline {
 			margin-bottom: -6px;
 			margin-left: 0;
@@ -85,8 +77,7 @@
 			border-bottom: 2px solid var(--cold-light);
 			text-align: center;
 		}
-
-		.col-auto {
+		.col-auto{
 			padding-left: 0 !important;
 		}
 	</style>
@@ -114,52 +105,9 @@
 					<div class="tab-content">
 						<!--未完成订单-->
 						<div role="tabpanel" class="tab-pane active" id="uncompleted">
-							<table class="table table-hover table-bordered text-center thCenter jz">
-								<tr>
-									<th>订单编号</th>
-									<th>服务名称</th>
-									<th>产品周期</th>
-									<th>订单金额</th>
-									<th>购买数量</th>
-									<th>下单时间</th>
-									<th>操作</th>
-								</tr>
-								<tr>
-									<td><a href="" class="title">20160821222609663844</a></td>
-									<td>投递项目(单条)</td>
-									<td>--</td>
-									<td>50.00</td>
-									<td>1条</td>
-									<td><span class="text-nowrap">2016-08-21</span> <br>22:26:09</td>
-									<td><a href="">查看 </a><br><a href="" class="text-nowrap">上传汇款凭证</a><br><a href="">继续支付</a><br><a
-											href=""> 取消订单</a>
-									</td>
-								</tr>
-							</table>
 						</div>
 						<!--已完成订单-->
 						<div role="tabpanel" class="tab-pane" id="completed">
-							<table class="table table-hover table-bordered text-center thCenter jz">
-								<tr>
-									<th class="col-sm-3">订单编号</th>
-									<th class="col-sm-2">服务名称</th>
-									<th class="col-sm-1">订单金额</th>
-									<th class="col-sm-1">购买数量</th>
-									<th class="col-sm-1">产品周期</th>
-									<th class="col-sm-2">结束时间</th>
-									<th class="col-sm-2">操作</th>
-								</tr>
-								<tr>
-									<td><a href="" class="title">20160821222609663844</a></td>
-									<td>投递项目(单条)</td>
-									<td>50.00</td>
-									<td>1条</td>
-									<td>--</td>
-									<td><span class="text-nowrap">2016-08-21</span> <br>22:26:09</td>
-									<td><a href="">查看 </a><br>
-									</td>
-								</tr>
-							</table>
 						</div>
 					</div>
 					<!--订单常见问题-->
@@ -205,22 +153,16 @@
 			</div>
 		</div>
 	</div>
+
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
 	function ajaxLoadOrder() {
 		$.ajax({
 			type: 'GET',
-			url: '/orderDetails/list',
+			url: '${basePath}/orderDetails/list',
 			dataType: 'json',
 			success: function (data) {
 				var uncompleted = '<table class="table table-hover table-bordered text-center thCenter jz">' +
@@ -263,10 +205,10 @@
 						completed += '<tr>' +
 								'									<td><a href="" class="title">'+value.number+'</a></td>' +
 								'									<td>'+value.ext.value+'</td>' +
-								'									<td>'+value.money+'</td>' +
+								'									<td>'+value.ext.money+'</td>' +
 								'									<td>'+value.purchase+'</td>' +
 								'									<td>'+value.ext.valid+'</td>' +
-								'									<td><span class="text-nowrap">'+value.time_end.substring(0,10)+'</span> <br>'+value.time_end.substring(12,19)+'</td>' +
+								'									<td><span class="text-nowrap">'+value.time_end.substring(0,10)+'</span> <br>'+value.time_end.substring(11,19)+'</td>' +
 								'									<td><a href="">查看 </a><br>' +
 								'									</td>' +
 								'								</tr>';
@@ -284,7 +226,7 @@
 		if(event.returnValue){
 			$.ajax({
 				type:'GET',
-				url:'orderDetails/remove/'+pk+'',
+				url:'${basePath}/orderDetails/remove/'+pk+'',
 				dataType:'json',
 				success:function (data) {
 					if (data.code==0){

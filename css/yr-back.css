@@ -143,5 +143,8 @@
 		margin-right:4px;
 	}
 }
-
+textarea {
+	height: 150px !important;
+	resize: none;
+}
 
