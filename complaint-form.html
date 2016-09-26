@@ -84,65 +84,86 @@
 		.control-label {
 			padding-top: 0 !important;
 		}
-
+		.tips {
+			margin-bottom: 0;
+			padding-top: 7px;
+		}
 	</style>
 </head>
 <body>
 
-<div class="container pd10-bg">
-	<div>投诉流程：</div>
-	<div class="row arw">
-		<div class="col-sm-3">
-			<div class="pull-left  normally">
-				用户提交投诉
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div>投诉流程：</div>
+			<div class="row arw">
+				<div class="col-sm-3">
+					<div class="pull-left  normally">
+						用户提交投诉
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="pull-left active normally ">
+						提交投诉表单
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="pull-left normally">
+						投融界受理审核
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="pull-left normally">
+						公布处罚结果
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="pull-left active normally ">
-				提交投诉表单
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="pull-left normally">
-				投融界受理审核
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<div class="pull-left normally">
-				公布处罚结果
+			<form class="form-horizontal"  id="complaint" method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label class="control-label col-sm-3 col-md-2 col-md-offset-1"><span class="red">*</span>我要投诉的信息：</label>
+					<div class="col-sm-9">四川某油用牡丹种植项目股权融资2000万元</div>
+					<input class="hidden" name="complain.by_complain" value="">
+					<input class="hidden" name="complain.channel_type" value="">
+					<input class="hidden" name="complain.channel_id" value="">
+					<input class="hidden" name="complain.complain_title" value="">
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉理由：</label>
+					<div class="col-sm-5">
+						<textarea class="form-control" name="complain.complain_reason"></textarea>
+					</div>
+					<label id="tips-reason" class="col-sm-3 tips ">
+						<i class="glyphicon glyphicon-remove-sign  red" aria-hidden="true"></i>
+						请输入您的投诉理由
+					</label>
+					<!--<div class="col-sm-4">
+						<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>请输入您的投诉理由
+					</div>-->
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉凭证：</label>
+					<div class="col-sm-7">
+						<input type="file" name="complain_avatar">
+						<ul id="fileList" class="list-unstyled">
+							<li>已上传凭证:<a class="title">前台未完成部分</a>  <a class="title">删除</a></li>
+							<li>已上传凭证:<a class="title">前台未完成部分</a>  <a class="title">删除</a></li>
+							<li>已上传凭证:<a class="title">前台未完成部分</a>  <a class="title">删除</a></li>
+						</ul>
+						<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>上传的文件不得超过了1.5M！支持JPG，JPEG，GIF，PNG，ZIP，RAR，doc，docx，xls，xlsx，pdf格式！
+					</div>
+				</div>
+			</form>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-3">
+					<button class="btn btn-cold-to-lighter ma-bottom btn-block" type="submit">提交投诉</button>
+				</div>
+				<div class="col-sm-2">
+					<button class="btn btn-default ma-bottom btn-block">取消</button>
+				</div>
 			</div>
 		</div>
 	</div>
-	<form class="form-horizontal">
-		<div class="form-group">
-			<label class="control-label col-sm-3 col-md-2 col-md-offset-1"><span class="red">*</span>我要投诉的信息：</label>
-			<div class="col-sm-9">四川某油用牡丹种植项目股权融资2000万元</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉理由：</label>
-			<div class="col-sm-5">
-				<textarea class="form-control"></textarea>
-			</div>
-			<div class="col-sm-4">
-				<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>请输入您的投诉理由
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉凭证：</label>
-			<div class="col-sm-7">
-				<input type="file">
-				<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>上传的文件不得超过了1.5M！支持JPG，JPEG，GIF，PNG，ZIP，RAR，doc，docx，xls，xlsx，pdf格式！
-			</div>
-		</div>
-	</form>
-	<div class="row">
-		<div class="col-sm-2 col-sm-offset-3">
-			<button class="btn btn-cold-to-lighter ma-bottom btn-block">提交投诉</button>
-		</div>
-		<div class="col-sm-2">
-			<button class="btn btn-default ma-bottom btn-block">取消</button>
-		</div>
-	</div>
+
 </div>
 
 <!-- jQuery -->
@@ -155,7 +176,34 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
-
+	$('#complaint').submit(function (e) {
+		$('#tips-reason').html('');
+		var reason = $('input[name="complain.complain_reason"]').val();
+		if(reason===''){
+			$('#tips-reason').html($('<i class="glyphicon glyphicon-remove-sign  red" aria-hidden="true"></i>请输入您的投诉理由'));
+		}
+		else{
+			var formData=$('#complaint').serialize();
+			$.ajax({
+				type:'POST',
+				url:'/complain/save',
+				data:formData,
+				dataType:'json',
+				mimeType:'multipart/form-data',
+				contentType:"application/x-www-form-urlencoded",
+				cache:false,
+				processData:false,
+				success:function (data) {
+					if (data.code==0) {
+						window.location.href='/complain/viewresult/'+data.data+''
+					}else{
+						alert(data.message);
+					}
+				}
+			})
+		}
+		e.preventDefault();
+	})
 </script>
 </body>
 </html>
