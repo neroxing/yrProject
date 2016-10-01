@@ -11,18 +11,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	@include("/common/_cssasset.html") {}
 
-	<!-- Bootstrap theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
 		.bg-gary {
@@ -123,24 +113,41 @@
 						<ul class="nav nav-tabs nav-inline">
 							<li role="presentation" class="active"><a role="tab" href="#my-identification"
 							                                          data-toggle="tab">我的认证</a></li>
+							@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#phone-identification"
 							                                    data-toggle="tab">手机认证</a></li>
+							@}
+							@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#person-identification"
 							                                    data-toggle="tab">个人身份认证</a></li>
+							@}
+							@if(usertype=="5"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#esnterprises-identification"
 							                                    data-toggle="tab">企业身份认证</a></li>
+							@}
+							@if(usertype=="1"||usertype=="2"){
 							<li role="presentation" class=""><a role="tab" href="#job-identification" data-toggle="tab">个人职务证明</a>
 							</li>
+							@}
+							@if(usertype=="2"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#success-case"
 							                                    data-toggle="tab">成功案例</a></li>
+							@}
+							@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#email-case" data-toggle="tab">邮箱认证</a>
 							</li>
+							@}
+
 							<li role="presentation" class=""><a role="tab" href="#card-identification"
 							                                    data-toggle="tab">名片认证</a></li>
+							@if(usertype=="5"||usertype=="6"){
 							<li role="presentation" class=""><a role="tab" href="#bank-identification"
 							                                    data-toggle="tab">银行账户认证</a></li>
+							@}
+							@if(usertype=="5"){
 							<li role="presentation" class=""><a role="tab" href="#honor-identification"
-							                                    data-toggle="tab">企业荣誉认证</a></li>
+							                                    data-toggle="tab">银行荣誉认证</a></li>
+							@}
 						</ul>
 					</div>
 					<div class="tab-content">
@@ -220,6 +227,8 @@
 								</table>
 							</div>
 						</div>
+
+						@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 						<!--手机认证-->
 						<div class="tab-pane fade" id="phone-identification">
 							<div class="panel-body border-panel-body">
@@ -260,6 +269,8 @@
 								</form>
 							</div>
 						</div>
+						@}
+						@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 						<!--个人身份认证-->
 						<div class="tab-pane fade" id="person-identification">
 							<div class="panel-body border-panel-body">
@@ -332,6 +343,10 @@
 								</div>
 							</div>
 						</div>
+						@}
+
+
+						@if(usertype=="5"||usertype=="6"){
 						<!--企业身份认证-->
 						<div class="tab-pane fade" id="esnterprises-identification">
 							<div class="panel-body border-panel-body">
@@ -402,6 +417,9 @@
 								</div>
 							</div>
 						</div>
+						@}
+
+						@if(usertype=="1"||usertype=="2"){
 						<!--个人职务认证-->
 						<div class="tab-pane fade" id="job-identification">
 							<div class="panel-body border-panel-body">
@@ -446,6 +464,9 @@
 								</div>
 							</div>
 						</div>
+						@}
+
+						@if(usertype=="2"||usertype=="6"){
 						<!--成功案例-->
 						<div class="tab-pane fade" id="success-case">
 							<div class="panel-body border-panel-body">
@@ -504,6 +525,9 @@
 								</div>
 							</div>
 						</div>
+						@}
+
+						@if(usertype=="1"||usertype=="5"||usertype=="3"||usertype=="4"||usertype=="2"||usertype=="6"){
 						<!--邮箱认证-->
 						<div class="tab-pane fade" id="email-case">
 							<div class="panel-body border-panel-body">
@@ -543,6 +567,8 @@
 								</div>
 							</div>
 						</div>
+						@}
+
 						<!--名片认证-->
 						<div class="tab-pane fade" id="card-identification">
 							<div class="panel-body border-panel-body">
@@ -593,6 +619,8 @@
 								</div>
 							</div>
 						</div>
+
+						@if(usertype=="5"||usertype=="6"){
 						<!--银行账户认证-->
 						<div class="tab-pane fade" id="bank-identification">
 							<div class="panel-body border-panel-body">
@@ -654,6 +682,9 @@
 								</div>
 							</div>
 						</div>
+						@}
+
+						@if(usertype=="5"){
 						<!--企业荣誉认证-->
 						<div class="tab-pane fade" id="honor-identification">
 							<div class="panel-body border-panel-body">
@@ -723,6 +754,8 @@
 								</div>
 							</div>
 						</div>
+						@}
+
 					</div>
 				</div>
 			</div>
@@ -756,45 +789,41 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-4 col-sm-offset-2">
-						<a class="btn btn-hot-to-lighter btn-block">继续认证</a>
+						<a class="btn btn-hot-to-lighter btn-block" href="${basePath}/auth/">继续认证</a>
 					</div>
 					<div class="col-sm-4">
-						<a class="btn btn-hot-to-lighter btn-block">返回我的投融界</a>
+						<a class="btn btn-hot-to-lighter btn-block" href="${basePath}/home/">返回我的投融界</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
+<script src="${basePath}/static/js/vendor/jquery.ui.widget.js"></script>
+<script src="${basePath}/static/js/jquery.fileupload.js"></script>
+<script src="${basePath}/static/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 
 <script type="text/javascript">
 	$('input[type=file]').fileupload({
-		url: '/uploadify/upload',
-		paramName: 'imgFile',
+		url: '${basePath}/uploadify/upload',
+		paramName:'imgFile',
 		dataType: 'json',
-		dir: 'file',
+		dir:'file',
 		done: function (e, data) {
-			if (data.jqXHR.responseJSON.error == 0) {
-				$('input[name="' + $(this).attr('name') + '"]').attr("value", data.jqXHR.responseJSON.url);
-				var str = '<div>' +
-						'							已上传凭证:<a class="title" href="' + data.jqXHR.responseJSON.url + '" target="_blank">' + data.jqXHR.responseJSON.fileName + '</a>' +
-						'                           <input type="hidden" name="' + $(this).attr('name') + '" value="' + data.jqXHR.responseJSON.url + '">' +
+			if (data.jqXHR.responseJSON.error==0) {
+				$('input[name="'+$(this).attr('name')+'"]').attr("value",data.jqXHR.responseJSON.url);
+				var str='<div>'+
+						'							已上传凭证:<a class="title" href="'+data.jqXHR.responseJSON.url+'" target="_blank">'+data.jqXHR.responseJSON.fileName +'</a>' +
+						'                           <input type="hidden" name="'+$(this).attr('name')+'" value="'+data.jqXHR.responseJSON.url+'">'+
 						'						</div>';
-				if ($(this).next().val() == null) {
+				if($(this).next().val()==null){
 					$(this).after(str);
-				} else {
+				}else{
 					$(this).next().html($(str));
 				}
-			}
-			;
+			};
 		}
 	});
 	$('form').submit(function (e) {
@@ -805,7 +834,7 @@
 		})
 		$.ajax({
 			type:'POST',
-			url:'/auth/save ',
+			url:'${basePath}/auth/save ',
 			data:$(this).serialize(),
 			dataType:'json',
 			mimeType:'multipart/form-data',
@@ -815,9 +844,6 @@
 			success:function (data) {
 				if (data.code==0) {
 					$('#identife-complete').modal('show')
-				}
-				else{
-					alert(data.message);
 				}
 			}
 		})

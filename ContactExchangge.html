@@ -89,25 +89,27 @@
 		<div class="col-sm-2"></div>
 		<div class="col-sm-10">
 			<div class="panel">
-				<div class="panel-body bodyHeight">
+				<div class="panel-body">
 					<div class="bg-tabs">
 						<ul class="nav nav-tabs  " role="tablist">
-							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+							<li role="presentation" class="active"><a href="#business" aria-controls="business"
+							                                          role="tab"
 							                                          data-toggle="tab" class="title">我的商友</a></li>
-							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+							<li role="presentation"><a href="#sendCard" aria-controls="sendCard" role="tab"
 							                           data-toggle="tab"
 							                           class="title">已递送名片</a></li>
-							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+							<li role="presentation"><a href="#receiveCard" aria-controls="receiveCard" role="tab"
 							                           data-toggle="tab"
 							                           class="title">收到的名片</a></li>
-							<li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+							<li role="presentation"><a href="#contact" aria-controls="contact" role="tab"
 							                           data-toggle="tab"
 							                           class="title">已查看联系方式</a></li>
 						</ul>
 					</div>
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="home">
+						<!--我的商友-->
+						<div role="tabpanel" class="tab-pane active" id="business" url="">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group ">
@@ -129,7 +131,8 @@
 							                                                                          class="aRed ">您还没有和任何人成为商友，马上主动出击，向资金方交换名片。</a>
 							</div>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="profile">
+						<!--已递送名片-->
+						<div role="tabpanel" class="tab-pane" id="sendCard" url="">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group ">
@@ -146,6 +149,7 @@
 									<button class="btn btn-cold-to-lighter">搜索</button>
 								</div>
 							</div>
+							<div id="sendCardList"></div>
 							<div class="row businessCard">
 								<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
 								<div class="col-sm-10">
@@ -174,8 +178,27 @@
 									</div>
 								</div>
 							</div>
+							<nav class="pull-right">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">上一页</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">下一页</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="messages">
+						<!--收到的名片-->
+						<div role="tabpanel" class="tab-pane" id="receiveCard" url="">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group ">
@@ -192,6 +215,7 @@
 									<button class="btn btn-cold-to-lighter">搜索</button>
 								</div>
 							</div>
+							<div id="reveiveCardList"></div>
 							<div class="row businessCard">
 								<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
 								<div class="col-sm-10">
@@ -216,8 +240,27 @@
 									</div>
 								</div>
 							</div>
+							<nav class="pull-right">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">上一页</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">下一页</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="settings">
+						<!--已查看联系方式-->
+						<div role="tabpanel" class="tab-pane" id="contact" url="">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group ">
@@ -285,6 +328,25 @@
 									</div>
 								</div>
 							</div>
+							<div id="contactList"></div>
+							<nav class="pull-right">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">上一页</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">下一页</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
 					</div>
 				</div>
@@ -292,6 +354,7 @@
 		</div>
 	</div>
 </div>
+
 
 <!-- jQuery -->
 <script src="js/jquery-1.11.3.js"></script>
@@ -303,7 +366,170 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+	function ajaxLoadPagination(id, total, page) {
+		var pagenation = '';
+		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+		if (total <= 5 || page < 5) {
 
+			for (var i = 1; i <= Math.min(total, 5); i++) {
+				if (i == page) {
+					pagenation += ('<li class="active"><a>' + i + '</a></li>');
+				}
+				else {
+					pagenation += ('<li><a>' + i + '</a></li>');
+				}
+			}
+			(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+		}
+		else {
+			((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+			((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+			pagenation += ('<li class="active"><a>' + page + '</a></li>');
+			((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+			((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+			(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+		}
+		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+		$('#' + id + ' .pagination').html($(pagenation));
+		$('#' + id + ' .pagination li a').click(function () {
+			var pageCount = this.text;
+			if (pageCount != page) {
+				var pageUrl = $('#' + id + '').attr('url');
+				(this.text === '上一页') ? pageCount = (page - 1) : null;
+				(this.text === '后一页') ? pageCount = (page + 1) : null;
+				(this.text === '首页') ? pageCount = 1 : null;
+				(this.text === '最后一页') ? pageCount = total : null;
+				pageUrl += 'page=' + pageCount;
+				switch (id) {
+					case 'business':
+						ajaxLoadmyBusiness(pageUrl);
+						break;
+					case 'sendCard':
+						ajaxLoadsendCard(pageUrl)
+						break;
+					case 'receiveCard':
+						ajaxLoadreceiveCard(pageUrl)
+						break;
+					case 'contact':
+						ajaxLoadContact(pageUrl)
+						break;
+				}
+				ajaxLoadinfo(pageUrl);
+			}
+		})
+	}
+	function ajaxLoadmyBusiness(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+
+			}
+		})
+	}
+	function ajaxLoadsendCard(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = '';
+				$.each(data.data.rows, function (n, value) {
+					str += '<div class="row businessCard">' +
+							'								<div class="col-sm-2"><a href=""><img src="'+value.ext.avatar+'" class="img-responsive"></a></div>' +
+							'								<div class="col-sm-10">' +
+							'									<div><a href="" class="title">'+value.ext.name+'</a></div>' +
+							'									<div>'+value.ext.company+' '+value.ext.company_role+'</div>' +
+							'									<div class="row">' +
+							'										<div class="col-sm-7 col-sm-offset-5">' +
+							'											<div class="pull-right">' +
+							'												<button class="btn btn-sm" disabled="disabled">已递送名片</button>' +
+							'												<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>' +
+							'												<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>' +
+							'											</div>' +
+							'										</div>' +
+							'									</div>' +
+							'									<div class="row">' +
+							'										<div class="col-sm-6 col-md-7">' +
+							'											发布了资金信息<a href="" class="title">山东某企业资金1000万-20亿元寻水务、水电等涉水项目合作</a>' +
+							'										</div>' +
+							'										<div class="col-sm-6 col-md-5">' +
+							'											<div class="pull-right">' +
+							'												人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href="" class="title">' +
+							'												商友()</a>' +
+							'											</div>' +
+							'										</div>' +
+							'									</div>' +
+							'								</div>' +
+							'							</div>';
+				});
+				$('#sendCardList').html($(str));
+				var pagenation = '';
+				var total = data.data.total;
+				var page = data.data.page;
+				(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+				(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+				if (total <= 5 || page < 5) {
+
+					for (var i = 1; i <= Math.min(total, 5); i++) {
+						if (i == page) {
+							pagenation += ('<li class="active"><a>' + i + '</a></li>');
+						}
+						else {
+							pagenation += ('<li><a>' + i + '</a></li>');
+						}
+					}
+					(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+				}
+				else {
+					((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+					((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+					pagenation += ('<li class="active"><a>' + page + '</a></li>');
+					((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+					((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+					(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+				}
+				(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+				(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+				$('#sendCard .pagination').html($(pagenation));
+				$('#sendCard .pagination li a').click(function () {
+					var pageCount = this.text;
+					if (pageCount != page) {
+						var pageUrl = '';
+						(this.text === '上一页') ? pageCount = (page - 1) : null;
+						(this.text === '后一页') ? pageCount = (page + 1) : null;
+						(this.text === '首页') ? pageCount = 1 : null;
+						(this.text === '最后一页') ? pageCount = total : null;
+						pageUrl += 'page=' + pageCount;
+						ajaxLoadinfo(pageUrl);
+					}
+				})
+			}
+		})
+	}
+	function ajaxLoadreceiveCard(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+
+			}
+		})
+	}
+	function ajaxLoadContact(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+
+			}
+		})
+	}
 </script>
 </body>
 </html>

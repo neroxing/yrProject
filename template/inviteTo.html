@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	@include("/common/_cssasset.html") {}
+
+
+	<style type="text/css">
+		.bg-geay {
+			background-color: #f1f1f1;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+		.pd-10 {
+			padding: 10px;
+		}
+
+		.center-text {
+			text-align: center !important;
+		}
+
+		.mg-bottom-clear {
+			margin-bottom: 0px;
+		}
+
+		.mg-r-15 {
+			margin-right: 15px;
+		}
+
+		.panel .panel .panel-body {
+			border: 1px solid #f1f1f1;
+			padding: 0px;
+		}
+
+		.panel .panel .panel-body > div {
+			border-right: 1px solid #f1f1f1;;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			height: 80px;
+		}
+
+		.lh-60 {
+			line-height: 60px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<!--查询-->
+					<div class="bg-geay">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-5">
+									<div class="row">
+										<label class="control-label col-sm-4">接受人:</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" name="name">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="row">
+										<label class="control-label col-sm-3">发起时间:</label>
+										<div class="col-sm-4">
+											<input class="form-control" type="date" name="starttime">
+										</div>
+										<label class="control-label col-sm-1 center-text">到</label>
+										<div class="col-sm-4">
+											<input class="form-control" type="date" name="endtime">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-5">
+									<div class="row">
+										<label class="control-label col-sm-4">处理状态:</label>
+										<div class="col-sm-8">
+											<select class="form-control" name="invite_status">
+												<option value="all">全部</option>
+												<option value="等待约谈">等待约谈</option>
+												<option value="约谈成功">约谈成功</option>
+												<option value="约谈中">约谈中</option>
+												<option value="拒绝约谈">拒绝约谈</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="row">
+										<label class="control-label col-sm-3">评价:</label>
+										<div class="col-sm-4">
+											<select class="form-control" name="invite_evaluate">
+												<option value="all">全部</option>
+												<option value="满意">满意</option>
+												<option value="不满意">不满意</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group mg-bottom-clear">
+								<div class="col-sm-5">
+									<div class="row">
+										<div class="col-sm-offset-4 col-sm-4">
+											<button class="btn btn-cold-to-lighter btn-block" type="button" onclick="searchInviteTo()">搜索</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--内容标题-->
+					<div class="bg-geay">
+						<div class="row text-center">
+							<div class="col-sm-5">收到的内容</div>
+							<div class="col-sm-3">接受人</div>
+							<div class="col-sm-2">状态</div>
+							<div class="col-sm-2">评价</div>
+						</div>
+					</div>
+					<!--收到的约谈-->
+
+					<div id="inviteTo" url="/invite/InviteToList?">
+
+					</div>
+					<nav class="pull-right">
+						<ul class="pagination">
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">上一页</span>
+								</a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">下一页</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@include("/common/_jsasset.html") {}
+
+<script type="text/javascript">
+	function ajaxLoadinviteTo(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = '';
+				$.each(data.data.rows, function (n, value) {
+					str += '<div class="panel panel-default">' +
+							'						<div class="panel-heading">' +
+							'							<span class="mg-r-15">约谈编号：'+value.invite_code+'</span>' +
+							'							<span class="mg-r-15">约谈时间：' + value.invite_date + '</span>' +
+							'							<span>来自于：'+((value.channel_type=='2')?'<a class="title" href="'+value.channel_id+'">我的会员展厅</a>':'我的项目信息:<a class="title" href="/project/view/'+value.channel_id+'">'+value.channel_title+'</a>')+'</span>' +
+							'						</div>' +
+							'						<div class="panel-body">' +
+							'							<!--内容-->' +
+							'							<div class="col-sm-5">您好，我是'+value.ext.name+'，对您的'+value.channel_title+'信息感兴趣，请尽快与我联系！</div>' +
+							'							<!--发起人-->' +
+							'							<div class="col-sm-3">' +
+							'								<div class="row">' +
+							'									<div class="col-sm-6 text-right">'+value.ext.name+'</div>' +
+							'									<div class="col-sm-6"><img class="img-responsive" alt="头像" src="'+value.ext.avatar+'"></div>' +
+							'								</div>' +
+							'							</div>' +
+							'							<!--状态-->' +
+							'							<div class="col-sm-2 text-center lh-60">' +
+							'								'+value.invite_status+'' +
+							'							</div>' +
+							'							<!--评价-->' +
+							'							<div class="col-sm-2 text-center lh-60">' +
+							'								'+value.invite_evaluate+'' +
+							'							</div>' +
+							'						</div>' +
+							'					</div>';
+				})
+				$('#inviteTo').html($(str));
+				var pagenation = '';
+				var total = data.data.total;
+				var page = data.data.page;
+				(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+				(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+				if (total <= 5 || page < 5) {
+
+					for (var i = 1; i <= Math.min(total, 5); i++) {
+						if (i == page) {
+							pagenation += ('<li class="active"><a>' + i + '</a></li>');
+						}
+						else {
+							pagenation += ('<li><a>' + i + '</a></li>');
+						}
+					}
+					(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+				}
+				else {
+					((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+					((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+					pagenation += ('<li class="active"><a>' + page + '</a></li>');
+					((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+					((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+					(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+				}
+				(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+				(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+				$('.pagination').html($(pagenation));
+				$('.pagination li a').click(function () {
+					var pageCount = this.text;
+					if (pageCount != page) {
+						var pageUrl = $('#inviteTo').attr('url');
+						(this.text === '上一页') ? pageCount = (page - 1) : null;
+						(this.text === '后一页') ? pageCount = (page + 1) : null;
+						(this.text === '首页') ? pageCount = 1 : null;
+						(this.text === '最后一页') ? pageCount = total : null;
+						pageUrl += '&page=' + pageCount;
+						ajaxLoadinviteTo(pageUrl);
+					}
+				})
+			}
+		})
+	}
+	function searchInviteTo() {
+		var url = '${basePath}/invite/query/1?';
+		var name = $('input[name="name"]').val();
+		var starttime = $('input[name="starttime"]').val();
+		var endtime = $('input[name="endtime"]').val();
+		var invite_status = $('select[name="invite_status"] option:selected').val();
+		var invite_evaluate = $('select[name="invite_evaluate"] option:selected').val();
+		if (name !== null && name !== undefined && name !== '') {
+			url += 'inviteName=' + name + '';
+		}
+		if (starttime !== null && starttime !== undefined && starttime !== '') {
+			url += '&start_date=' + starttime + '';
+		}
+		if (endtime !== null && endtime !== undefined && endtime !== '') {
+			url += '&end_date=' + endtime + '';
+		}
+		(invite_status === 'all') ? null : url += '&status=' + invite_status + '';
+		(invite_evaluate === 'all') ? null : url += '&evaluate=' + invite_evaluate + '';
+		$('#inviteTo').attr('url', url);
+		ajaxLoadinviteTo(url);
+	}
+	$(document).ready(function () {
+		ajaxLoadinviteTo("${basePath}/invite/inviteToList?")
+	})
+</script>
+</body>
+</html>

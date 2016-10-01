@@ -78,42 +78,47 @@
 						</ul>
 					</div>
 					<div class="tab-content">
-						<div class="tab-pane active" id="receive">
-							<table class="table table-bordered jz">
-								<tr class="text-center">
-									<th>投诉编号</th>
-									<th>投诉理由</th>
-									<th>投诉人</th>
-									<th>发起时间</th>
-									<th>状态</th>
-									<th>倒计时</th>
-									<th>操作</th>
-								</tr>
-								<tr class="text-center">
-									<td>2016082414106</td>
-									<td>虚假项目</td>
-									<td>1327253389</td>
-									<td>2016-08-24</td>
-									<td>投诉失败</td>
-									<td>倒计时</td>
-									<td>
-										<button class="btn btn-hot-to-lighter btn-sm">查看</button>
-									</td>
-								</tr>
-							</table>
+						<div class="tab-pane active" id="receive" url="/complain/byComplainList">
+							<div id="receive-table"></div>
+							<nav class="pull-right">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">上一页</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">下一页</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
-						<div class="tab-pane " id="send">
-							<table class="table table-bordered">
-								<tr class="text-center">
-									<th>投诉编号</th>
-									<th>投诉理由</th>
-									<th>被投诉人</th>
-									<th>发起时间</th>
-									<th>状态</th>
-									<th>倒计时</th>
-									<th>操作</th>
-								</tr>
-							</table>
+						<div class="tab-pane " id="send" url="/complain/complainToList">
+							<div id="send-table"></div>
+							<nav class="pull-right">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">上一页</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">下一页</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
 					</div>
 				</div>
@@ -131,71 +136,128 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+	function ajaxLoadPagination(id,total,page) {
+		var pagenation = '';
+		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+		if (total <= 5 || page < 5) {
+
+			for (var i = 1; i <= Math.min(total, 5); i++) {
+				if (i == page) {
+					pagenation += ('<li class="active"><a>' + i + '</a></li>');
+				}
+				else {
+					pagenation += ('<li><a>' + i + '</a></li>');
+				}
+			}
+			(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+		}
+		else {
+			((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+			((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+			pagenation += ('<li class="active"><a>' + page + '</a></li>');
+			((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+			((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+			(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+		}
+		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+		$('#'+id+' .pagination').html($(pagenation));
+		$('#'+id+' .pagination li a').click(function () {
+			var pageCount = this.text;
+			if (pageCount != page) {
+				var pageUrl = $('#'+id+'').attr('url');
+				(this.text === '上一页') ? pageCount = (page - 1) : null;
+				(this.text === '后一页') ? pageCount = (page + 1) : null;
+				(this.text === '首页') ? pageCount = 1 : null;
+				(this.text === '最后一页') ? pageCount = total : null;
+				pageUrl += '?page=' + pageCount;
+				switch(id){
+					case 'receive':
+						ajaxLoadReceive(pageUrl);
+						break;
+					case 'send':
+						ajaxLoadSend(pageUrl);
+						break;
+				}
+			}
+		})
+	}
 	/*收到的投诉*/
-	$.ajax({
-		type: 'GET',
-		url: '/complain/byComplainList',
-		dataType: 'json',
-		success: function (data) {
-			var str = '<table class="table table-bordered jz">' +
-					'								<tr class="text-center">' +
-					'									<th>投诉编号</th>' +
-					'									<th>投诉理由</th>' +
-					'									<th>投诉人</th>' +
-					'									<th>发起时间</th>' +
-					'									<th>状态</th>' +
-					'									<th>倒计时</th>' +
-					'									<th>操作</th>' +
-					'								</tr>';
-			$.each(data.data.rows, function (n, value) {
-				str += '<tr class="text-center">' +
-						'									<td>' + value.complain_code + '</td>' +
-						'									<td>' + value.complain_reason + '</td>' +
-						'									<td>' + value.complain_to + '</td>' +
-						'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
-						'									<td>' + value.complain_status + '</td>' +
-						'									<td>' + value.countdown + '</td>' +
-						'									<td>' +
-						'										<a class="btn btn-hot-to-lighter btn-sm" href="">查看</a>' +
-						'									</td>' +
+	function ajaxLoadReceive(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = '<table class="table table-bordered jz">' +
+						'								<tr class="text-center">' +
+						'									<th>投诉编号</th>' +
+						'									<th>投诉理由</th>' +
+						'									<th>投诉人</th>' +
+						'									<th>发起时间</th>' +
+						'									<th>状态</th>' +
+						'									<th>倒计时</th>' +
+						'									<th>操作</th>' +
 						'								</tr>';
-			})
-			str += '</table>';
-			$('#receive').html($(str));
-		}
-	})
+				$.each(data.data.rows, function (n, value) {
+					str += '<tr class="text-center">' +
+							'									<td>' + value.complain_code + '</td>' +
+							'									<td>' + value.complain_reason + '</td>' +
+							'									<td>' + value.ext.name + '</td>' +
+							'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
+							'									<td>' + value.complain_status + '</td>' +
+							'									<td>' + value.countdown + '</td>' +
+							'									<td>' +
+							'										<a class="btn btn-hot-to-lighter btn-xs" href="">查看</a>' +
+							'									</td>' +
+							'								</tr>';
+				})
+				str += '</table>';
+				$('#receive-table').html($(str));
+				ajaxLoadPagination('receive',data.data.total,data.data.page)
+			}
+		})
+	}
 	/*发起的投诉*/
-	$.ajax({
-		type: 'GET',
-		url: '/complain/complainToList',
-		dataType: 'json',
-		success: function (data) {
-			str += '<table class="table table-bordered">' +
-					'								<tr class="text-center">' +
-					'									<th>投诉编号</th>' +
-					'									<th>投诉理由</th>' +
-					'									<th>被投诉人</th>' +
-					'									<th>发起时间</th>' +
-					'									<th>状态</th>' +
-					'									<th>倒计时</th>' +
-					'									<th>操作</th>' +
-					'								</tr>';
-			$.each(data.data.rows, function (n, value) {
-				str += '<tr class="text-center">' +
-						'									<td>' + value.complain_code + '</td>' +
-						'									<td>' + value.complain_reason + '</td>' +
-						'									<td>' + value.by_complain + '</td>' +
-						'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
-						'									<td>' + value.complain_status + '</td>' +
-						'									<td>' + value.countdown + '</td>' +
-						'									<td>' +
-						'										<a class="btn btn-hot-to-lighter btn-xs" href="">查看</a>' +
-						'									</td>' +
+	function ajaxLoadSend(url) {
+		$.ajax({
+			type: 'GET',
+			url: url,
+			dataType: 'json',
+			success: function (data) {
+				var str = '<table class="table table-bordered">' +
+						'								<tr class="text-center">' +
+						'									<th>投诉编号</th>' +
+						'									<th>投诉理由</th>' +
+						'									<th>被投诉人</th>' +
+						'									<th>发起时间</th>' +
+						'									<th>状态</th>' +
+						'									<th>倒计时</th>' +
+						'									<th>操作</th>' +
 						'								</tr>';
-			})
-			str += '</table>';
-			$('#send').html($(str));
-		}
+				$.each(data.data.rows, function (n, value) {
+					str += '<tr class="text-center">' +
+							'									<td>' + value.complain_code + '</td>' +
+							'									<td>' + value.complain_reason + '</td>' +
+							'									<td>' + value.ext.name + '</td>' +
+							'									<td>' + value.complain_date.substring(0, 10) + '</td>' +
+							'									<td>' + value.complain_status + '</td>' +
+							'									<td>' + value.countdown + '</td>' +
+							'									<td>' +
+							'										<a class="btn btn-hot-to-lighter btn-xs" href="">查看</a>' +
+							'									</td>' +
+							'								</tr>';
+				})
+				str += '</table>';
+				$('#send-table').html($(str));
+				ajaxLoadPagination('send',data.data.total,data.data.page)
+			}
+		})
+	}
+	$(document).ready(function () {
+		ajaxLoadSend($('#send').attr('url'))
+		ajaxLoadReceive($('#receive').attr('url'))
 	})
 </script>
 </body>

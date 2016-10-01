@@ -71,7 +71,7 @@
 					</div>
 					<div class="tab-content">
 						<!--我的收藏-->
-						<div class="tab-pane active" id="mine">
+						<div class="tab-pane active" id="mine" url="${basePath}/collection/list">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<!--筛选排序-->
@@ -106,12 +106,30 @@
 								<div class="panel panel-body" id="mine-table">
 
 								</div>
+								<nav class="pull-right">
+									<ul class="pagination">
+										<li>
+											<a href="#" aria-label="Previous">
+												<span aria-hidden="true">上一页</span>
+											</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li>
+											<a href="#" aria-label="Next">
+												<span aria-hidden="true">下一页</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 							<input type="checkbox" id="selectAll">
 							<button class="btn btn-cold-to-lighter btn-xs" onclick="pluralDelete()">删除</button>
 						</div>
 						<!--被谁收藏-->
-						<div class="tab-pane" id="who">
+						<div class="tab-pane" id="who" url="${basePath}/collection/list/collect_me">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<!--筛选排序-->
@@ -137,65 +155,26 @@
 									</div>
 								</div>
 								<div class="panel panel-body" id="wholist">
-									<div class="row">
-										<div class="col-sm-2">
-											<img class="img-responsive" alt="头像">
-										</div>
-										<div class="col-sm-10">
-											<div class="row">
-												<div class="col-sm-12">
-													<a class="title"><strong>熊先生</strong></a>
-												</div>
-												<div class="col-sm-12">广东省东莞市某公司</div>
-												<div class="col-sm-3 lh-22">能源，化学化工</div>
-												<div class="col-sm-offset-3 col-sm-6">
-													<button class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
-													</button>
-												</div>
-												<div class="col-sm-6">
-													2016-04-13 收藏了我的 <a class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-												</div>
-												<div class="col-sm-6 text-right">
-													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>
-													<a class="title">商友(<span>0</span>)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2">
-											<img class="img-responsive" alt="头像">
-										</div>
-										<div class="col-sm-10">
-											<div class="row">
-												<div class="col-sm-12">
-													<a class="title"><strong>熊先生</strong></a>
-												</div>
-												<div class="col-sm-12">广东省东莞市某公司</div>
-												<div class="col-sm-3 lh-22">能源，化学化工</div>
-												<div class="col-sm-offset-3 col-sm-6">
-													<button class="btn btn-cold-to-lighter btn-xs pull-right">交换名片
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">投递项目
-													</button>
-													<button class="btn btn-hot-to-lighter btn-xs pull-right">查看联系方式
-													</button>
-												</div>
-												<div class="col-sm-6">
-													2016-04-13 收藏了我的 <a class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-												</div>
-												<div class="col-sm-6 text-right">
-													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>
-													<a class="title">商友(<span>0</span>)</a>
-												</div>
-											</div>
-										</div>
-									</div>
+
 								</div>
+								<nav class="pull-right">
+									<ul class="pagination">
+										<li>
+											<a href="#" aria-label="Previous">
+												<span aria-hidden="true">上一页</span>
+											</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li>
+											<a href="#" aria-label="Next">
+												<span aria-hidden="true">下一页</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -214,6 +193,53 @@
 <script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
+	function ajaxLoadPagination(id,total,page) {
+		var pagenation = '';
+		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+		if (total <= 5 || page < 5) {
+
+			for (var i = 1; i <= Math.min(total, 5); i++) {
+				if (i == page) {
+					pagenation += ('<li class="active"><a>' + i + '</a></li>');
+				}
+				else {
+					pagenation += ('<li><a>' + i + '</a></li>');
+				}
+			}
+			(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+		}
+		else {
+			((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+			((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+			pagenation += ('<li class="active"><a>' + page + '</a></li>');
+			((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+			((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+			(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+		}
+		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+		$('#'+id+' .pagination').html($(pagenation));
+		$('#'+id+' .pagination li a').click(function () {
+			var pageCount = this.text;
+			if (pageCount != page) {
+				var pageUrl = $('#'+id+'').attr('url');
+				(this.text === '上一页') ? pageCount = (page - 1) : null;
+				(this.text === '后一页') ? pageCount = (page + 1) : null;
+				(this.text === '首页') ? pageCount = 1 : null;
+				(this.text === '最后一页') ? pageCount = total : null;
+				pageUrl += '&page=' + pageCount;
+				switch(id){
+					case 'mine':
+						ajaxLoadlist(pageUrl);
+						break;
+					case 'who':
+						ajaxLoadwho(pageUrl);
+						break;
+				}
+			}
+		})
+	}
 	function ajaxLoadlist(url) {
 		$.ajax({
 			type: 'GET',
@@ -244,6 +270,7 @@
 				}
 				str += (['	</table>'].join(""));
 				$('#mine-table').html($(str));
+				ajaxLoadPagination('mine',data.data.total,data.data.page)
 			}
 		})
 	}
@@ -266,7 +293,7 @@
 						'													<a class="title"><strong>'+value.ext.NAME+'</strong></a>',
 						'												</div>',
 						'												<div class="col-sm-12">'+value.ext.company+'</div>',
-						'												<div class="col-sm-3 lh-22">'+value.ext.compan_type+'</div>',
+						'												<div class="col-sm-3 lh-22">'+value.ext.company_type+'</div>',
 						'												<div class="col-sm-offset-3 col-sm-6">',
 						'													<a class="btn btn-cold-to-lighter btn-xs pull-right">交换名片',
 						'													</a>',
@@ -288,6 +315,7 @@
 					str+=whoInfo;
 				})
 				$('#wholist').html($(str));
+				ajaxLoadPagination('who',data.data.total,data.data.page);
 			}
 		})
 	}
@@ -328,6 +356,7 @@
 		var create_time = $('select[name="create_time"] option:selected').val();
 		(inf_categories==='all')?null:url+='inf_categories='+inf_categories+'';
 		(create_time==='all')?null:url+='&create_time='+create_time+'';
+		$('#mine').attr('url',url);
 		ajaxLoadlist(url);
 	});
 	$('#searchWho').click(function () {
@@ -338,6 +367,7 @@
 		if (name !== null && name !== undefined && name !== '') {
 			url+='&name='+name+'';
 		}
+		$('#who').attr('url',url);
 		ajaxLoadwho(url);
 	})
 	function pluralDelete(){
@@ -368,8 +398,8 @@
 
 	}
 	$(document).ready(function () {
-		ajaxLoadlist('${basePath}/collection/list');
-		ajaxLoadwho('${basePath}/collection/list/collect_me')
+		ajaxLoadlist('${basePath}/collection/list?');
+		ajaxLoadwho('${basePath}/collection/list/collect_me?')
 	})
 </script>
 </body>

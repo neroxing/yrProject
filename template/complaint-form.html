@@ -11,48 +11,38 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	@include("/common/_cssasset.html") {}
 
-	<!-- Bootstrap theme
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
 
 	<style type="text/css">
-		@media (min-width: 768px) {
-			.normally {
-				width: 90%;
-			}
-
-			.normally.active {
-				width: 90%;
-			}
+		\@media (min-width: 768px) {
+		.normally {
+			width: 90%;
 		}
 
-		@media (min-width: 992px) {
-			.normally {
-				width: 92%;
-			}
-
-			.normally.active {
-				width: 92%;
-			}
+		.normally.active {
+			width: 90%;
+		}
 		}
 
-		@media (min-width: 1200px) {
-			.normally {
-				width: 93%;
-			}
+		\@media (min-width: 992px) {
+		.normally {
+			width: 92%;
+		}
 
-			.normally.active {
-				width: 93%;
-			}
+		.normally.active {
+			width: 92%;
+		}
+		}
+
+		\@media (min-width: 1200px) {
+		.normally {
+			width: 93%;
+		}
+
+		.normally.active {
+			width: 93%;
+		}
 		}
 
 		.arw {
@@ -121,11 +111,11 @@
 			<form class="form-horizontal"  id="complaint" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label class="control-label col-sm-3 col-md-2 col-md-offset-1"><span class="red">*</span>我要投诉的信息：</label>
-					<div class="col-sm-9">四川某油用牡丹种植项目股权融资2000万元</div>
-					<input class="hidden" name="complain.by_complain" value="">
-					<input class="hidden" name="complain.channel_type" value="">
-					<input class="hidden" name="complain.channel_id" value="">
-					<input class="hidden" name="complain.complain_title" value="">
+					<div class="col-sm-9">${title}</div>
+					<input class="hidden" name="complain.by_complain" value="${by_complain}">
+					<input class="hidden" name="complain.channel_type" value="${channel_type}">
+					<input class="hidden" name="complain.channel_id" value="${channel_id}">
+					<input class="hidden" name="complain.complain_title" value="${title}">
 				</div>
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉理由：</label>
@@ -133,12 +123,8 @@
 						<textarea class="form-control" name="complain.complain_reason"></textarea>
 					</div>
 					<label id="tips-reason" class="col-sm-3 tips ">
-						<i class="glyphicon glyphicon-remove-sign  red" aria-hidden="true"></i>
-						请输入您的投诉理由
+
 					</label>
-					<!--<div class="col-sm-4">
-						<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>请输入您的投诉理由
-					</div>-->
 				</div>
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-sm-offset-1"><span class="red">*</span>投诉凭证：</label>
@@ -147,9 +133,7 @@
 						<input type="hidden" name="complain.complain_avatar">
 					</div>
 					<div class="col-sm-4 col-sm-offset-3" id="file">
-						<div>
-							已上传凭证:<a class="title" href="" target="_blank">前台未完成部分</a>
-						</div>
+
 					</div>
 				</div>
 				<div class="form-group">
@@ -157,32 +141,30 @@
 						<i class="fa fa-exclamation-circle i-blue" aria-hidden="true"></i>上传的文件不得超过了1.5M！支持JPG，JPEG，GIF，PNG，ZIP，RAR，doc，docx，xls，xlsx，pdf格式！
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-sm-2 col-sm-offset-3">
+						<button class="btn btn-cold-to-lighter ma-bottom btn-block" type="submit">提交投诉</button>
+					</div>
+					<div class="col-sm-2">
+						<button class="btn btn-default ma-bottom btn-block">取消</button>
+					</div>
+				</div>
 			</form>
-			<div class="row">
-				<div class="col-sm-2 col-sm-offset-3">
-					<button class="btn btn-cold-to-lighter ma-bottom btn-block" type="submit">提交投诉</button>
-				</div>
-				<div class="col-sm-2">
-					<button class="btn btn-default ma-bottom btn-block">取消</button>
-				</div>
-			</div>
+
 		</div>
 	</div>
-
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
+@include("/common/_jsasset.html") {}
+<script src="${basePath}/static/js/vendor/jquery.ui.widget.js"></script>
+<script src="${basePath}/static/js/jquery.fileupload.js"></script>
+<script src="${basePath}/static/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
 
 <script type="text/javascript">
 	$('input[type=file]').fileupload({
-		url: '/uploadify/upload?dir=allfile',
+		url: '${basePath}/uploadify/upload?dir=allfile',
 		maxChunkSize:1024*1024*1.5,
 		paramName:'imgFile',
 		dataType: 'json',
@@ -199,15 +181,16 @@
 	});
 	$('#complaint').submit(function (e) {
 		$('#tips-reason').html('');
-		var reason = $('input[name="complain.complain_reason"]').val();
+		var reason = $('textarea[name="complain.complain_reason"]').val();
 		if(reason===''){
-			$('#tips-reason').html($('<i class="glyphicon glyphicon-remove-sign  red" aria-hidden="true"></i>请输入您的投诉理由'));
+			$('#tips-reason').html($('<i class="glyphicon glyphicon-remove-sign  red" aria-hidden="true"></i>'+
+					'						<span>请输入您的投诉理由</span>'));
 		}
 		else{
 			var formData=$('#complaint').serialize();
 			$.ajax({
 				type:'POST',
-				url:'/complain/save',
+				url:'${basePath}/complain/save',
 				data:formData,
 				dataType:'json',
 				mimeType:'multipart/form-data',
@@ -216,7 +199,7 @@
 				processData:false,
 				success:function (data) {
 					if (data.code==0) {
-						window.location.href='/complain/viewresult/'+data.data+''
+						window.location.href='${basePath}/complain/viewresult/'+data.data+''
 					}else{
 						alert(data.message);
 					}

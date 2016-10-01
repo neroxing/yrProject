@@ -11,18 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="robots" content="index, follow">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-
-	<!-- Bootstrap theme -->
-	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-
-	<!-- fontawesome css -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-
-	<!-- customized css -->
-	<link rel="stylesheet" href="css/yr.css">
-	<link rel="stylesheet" href="css/yr-back.css">
+	@include("/common/_cssasset.html") {}
 
 	<style type="text/css">
 		.bodyHeight {
@@ -74,7 +63,7 @@
 		<div class="col-sm-2"></div>
 		<div class="col-sm-10">
 			<div class="panel">
-				<div class="panel-body bodyHeight">
+				<div class="panel-body">
 					<div class="bg-tabs">
 						<ul class="nav nav-tabs  " role="tablist">
 							<li role="presentation" class="active"><a href="#iSee" aria-controls="iSee" role="tab"
@@ -85,7 +74,7 @@
 					</div>
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="iSee" url="/record/whoiseeList">
+						<div role="tabpanel" class="tab-pane active" id="iSee" url="${basePath}/record/whoiseeList?">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group">
@@ -103,99 +92,7 @@
 								</div>
 							</div>
 							<div id="iSeeList">
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">卢俊华 </a>(先生)</div>
-										<div>深圳市顺程实业有限公司 董事长</div>
-										<div class="row lineH">
-											<div class="col-sm-5"> 房地产 能源 化学化工 航空航天 国防</div>
-											<div class="col-sm-7 ">
-												<div class="pull-right">
-													<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												2016-08-10 查看了<a href=""
-												                 class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-											</div>
 
-											<div class="col-sm-6 col-md-5 ">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">卢俊华 </a>(先生)</div>
-										<div>深圳市顺程实业有限公司 董事长</div>
-										<div class="row lineH">
-											<div class="col-sm-5"> 房地产 能源 化学化工 航空航天 国防</div>
-											<div class="col-sm-7 ">
-												<div class="pull-right">
-													<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												2016-08-10 查看了<a href=""
-												                 class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-											</div>
-
-											<div class="col-sm-6 col-md-5 ">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">卢俊华 </a>(先生)</div>
-										<div>深圳市顺程实业有限公司 董事长</div>
-										<div class="row lineH">
-											<div class="col-sm-5"> 房地产 能源 化学化工 航空航天 国防</div>
-											<div class="col-sm-7 ">
-												<div class="pull-right">
-													<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												2016-08-10 查看了<a href=""
-												                 class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-											</div>
-
-											<div class="col-sm-6 col-md-5 ">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 							<nav class="pull-right">
 								<ul class="pagination">
@@ -216,7 +113,7 @@
 								</ul>
 							</nav>
 						</div>
-						<div role="tabpanel" class="tab-pane" id="seeMe" url="/record/whoseemeList?">
+						<div role="tabpanel" class="tab-pane" id="seeMe" url="${basePath}/record/whoseemeList?">
 							<!-- 会员类型 -->
 							<div class="form-inline colorGray">
 								<div class="form-group">
@@ -230,97 +127,10 @@
 								</div>
 								<div class="form-group pull-right">
 									<input class="form-control" type="text" name="name" placeholder="输入联系人搜索">
-									<button class="btn btn-cold-to-lighter" type="button" id="searchseeMe">搜索</button>
+									<button class="btn btn-cold-to-lighter" id="searchseeMe">搜索</button>
 								</div>
 							</div>
 							<div id="seeMeList">
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">李先生</a></div>
-										<div>山东省济南市某公司 经理</div>
-										<div class="row">
-											<div class="col-sm-7 col-sm-offset-5">
-												<div class="pull-right">
-													<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												发布了资金信息<a href="" class="title">山东某企业资金1000万-20亿元寻水务、水电等涉水项目合作</a>
-											</div>
-
-											<div class="col-sm-6 col-md-5">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">卢俊华 </a>(先生)</div>
-										<div>深圳市顺程实业有限公司 董事长</div>
-										<div class="row lineH">
-											<div class="col-sm-9"> 房地产 能源 化学化工 航空航天 国防</div>
-											<div class="col-sm-3 ">
-												<button class="btn btn-sm btn-cold-to-lighter pull-right"> 交换名片</button>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												2016-08-10 查看了<a href=""
-												                 class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-											</div>
-
-											<div class="col-sm-6 col-md-5">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row businessCard">
-									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>
-									<div class="col-sm-10">
-										<div><a href="" class="title">卢俊华 </a>(先生)</div>
-										<div>深圳市顺程实业有限公司 董事长</div>
-										<div class="row lineH">
-											<div class="col-sm-5"> 房地产 能源 化学化工 航空航天 国防</div>
-											<div class="col-sm-7 ">
-												<div class="pull-right">
-													<button class="btn btn-sm btn-cold-to-lighter">交换名片</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 投递项目</button>
-													<button class="btn btn-sm btn-hot-to-lighter"> 查看联系方式</button>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6 col-md-7">
-												2016-08-10 查看了<a href=""
-												                 class="title">广东新型节能时尚速热饮水机项目股权融资500万-1000万元</a>
-											</div>
-
-											<div class="col-sm-6 col-md-5">
-												<div class="pull-right">
-													人脉关系： <a href="" class="title">已递送名片(1) </a>|<a href=""
-													                                                class="title">
-													商友(3)</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 							<nav class="pull-right">
 								<ul class="pagination">
@@ -348,14 +158,7 @@
 	</div>
 </div>
 
-<!-- jQuery -->
-<script src="js/jquery-1.11.3.js"></script>
-
-<!-- Bootstrap JavaScript -->
-<script src="js/bootstrap.js"></script>
-
-<!-- custom js
-<script src="js/请输入.js"></script>-->
+@include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
 	function ajaxLoadIsee(url) {
@@ -383,7 +186,7 @@
 							'										</div>' +
 							'										<div class="row">' +
 							'											<div class="col-sm-6 col-md-7">' +
-							'												'+value.create_date+' 查看了<a href="/'+value.type+'/view/'+value.channel_id+'" class="title">'+value.channel_title+'</a>' +
+							'												'+value.create_date+' 查看了<a href="${basePath}/'+value.type+'/view/'+value.channel_id+'" class="title">'+value.channel_title+'</a>' +
 							'											</div>' +
 							'											<div class="col-sm-6 col-md-5 ">' +
 							'												<div class="pull-right">' +
@@ -448,7 +251,7 @@
 				var str = '';
 				$.each(data.data.rows, function (n, value) {
 					str += '	<div class="row businessCard">' +
-							'									<div class="col-sm-2"><a href=""><img src="" class="img-responsive"></a></div>' +
+							'									<div class="col-sm-2"><a href=""><img src="'+value.ext.avatar+'" class="img-responsive"></a></div>' +
 							'									<div class="col-sm-10">' +
 							'										<div><a href="" class="title">'+value.ext.name+'</a></div>' +
 							'										<div>'+value.ext.company+'</div>' +
@@ -463,7 +266,7 @@
 							'										</div>' +
 							'										<div class="row">' +
 							'											<div class="col-sm-6 col-md-7">' +
-							'												发布了'+value.type+'信息<a href="/'+value.type+'/view/'+value.channel_id+'" class="title">'+value.channel_title+'</a>' +
+							'												发布了'+value.type+'信息<a href="${basePath}/'+value.type+'/view/'+value.channel_id+'" class="title">'+value.channel_title+'</a>' +
 							'											</div>' +
 							'											<div class="col-sm-6 col-md-5">' +
 							'												<div class="pull-right">' +
@@ -521,30 +324,30 @@
 		})
 	}
 	$('#searchiSee').click(function () {
-		var url = '/record/queryisee?';
+		var url = '${basePath}/record/queryisee?';
 		var name = $('#iSee input[name="name"]').val();
 		var type = $('#iSee select[name="type"] option:selected').val();
 		(type === 'all') ? null : url += 'vip_type=' + type + '';
 		if (name !== null && name !== undefined && name !== '') {
 			url += '&by_view_name=' + name + '';
 		}
-		ajaxLoadIsee('url');
+		ajaxLoadIsee(url);
 		$('#iSee').attr('url',url);
 	})
 	$('#searchseeMe').click(function () {
-		var url = '/record/queryseeme?';
+		var url = '${basePath}/record/queryseeme?';
 		var name = $('#seeMe input[name="name"]').val();
 		var type = $('#seeMe select[name="type"] option:selected').val();
 		(type === 'all') ? null : url += 'vip_type=' + type + '';
 		if (name !== null && name !== undefined && name !== '') {
 			url += '&view_to_name=' + name + '';
 		}
-		ajaxLoadIsee('url');
+		ajaxLoadSeeme(url);
 		$('#seeMe').attr('url',url);
 	})
 	$(document).ready(function () {
-		ajaxLoadIsee('/record/whoiseeList');
-		ajaxLoadSeeme('/record/whoseemeList');
+		ajaxLoadIsee('${basePath}/record/whoiseeList');
+		ajaxLoadSeeme('${basePath}/record/whoseemeList');
 	})
 </script>
 </body>

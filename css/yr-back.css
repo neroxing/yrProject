@@ -147,4 +147,14 @@ textarea {
 	height: 150px !important;
 	resize: none;
 }
-
+.panel .panel .cold-underline{
+	margin-left: -5px;
+	margin-bottom: -5px;
+	padding: 0px 20px 3px 20px;
+	border-bottom: 2px solid var(--cold-light);
+	text-align: center
+}
+.modal-header{
+	padding: 10px;
+	background-color: #e3eaff;
+}

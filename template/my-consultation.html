@@ -127,7 +127,7 @@
 						</form>
 					</div>
 					<!--咨询记录-->
-					<div class="panel panel-default">
+					<div class="panel panel-default" id="consult" url="${basePath}/consult/consultList">
 						<div class="panel-heading">
 							<form class="form-inline">
 								<div class="form-group">
@@ -152,9 +152,26 @@
 								</div>
 							</form>
 						</div>
-						<div id="consultList">
-							
+						<div id="consultList" >
 						</div>
+						<nav class="pull-right">
+							<ul class="pagination">
+								<li>
+									<a href="#" aria-label="Previous">
+										<span aria-hidden="true">上一页</span>
+									</a>
+								</li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span aria-hidden="true">下一页</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
 						<div class="delete">
 								<input type="checkbox" id="selectAll">
 								<button class="btn btn-cold-to-lighter btn-sm" onclick="pluralDelete()">删除</button>
@@ -169,6 +186,46 @@
 @include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
+	function ajaxLoadPagination(id,total,page) {
+		var pagenation = '';
+		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+		if (total <= 5 || page < 5) {
+
+			for (var i = 1; i <= Math.min(total, 5); i++) {
+				if (i == page) {
+					pagenation += ('<li class="active"><a>' + i + '</a></li>');
+				}
+				else {
+					pagenation += ('<li><a>' + i + '</a></li>');
+				}
+			}
+			(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+		}
+		else {
+			((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+			((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+			pagenation += ('<li class="active"><a>' + page + '</a></li>');
+			((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+			((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+			(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+		}
+		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+		$('#'+id+' .pagination').html($(pagenation));
+		$('#'+id+' .pagination li a').click(function () {
+			var pageCount = this.text;
+			if (pageCount != page) {
+				var pageUrl = $('#'+id+'').attr('url');
+				(this.text === '上一页') ? pageCount = (page - 1) : null;
+				(this.text === '后一页') ? pageCount = (page + 1) : null;
+				(this.text === '首页') ? pageCount = 1 : null;
+				(this.text === '最后一页') ? pageCount = total : null;
+				pageUrl += '&page=' + pageCount;
+				ajaxLoadConsult(pageUrl);
+			}
+		})
+	}
 	$('#consultation').submit(function (e) {
 		$('#tips-brief').text('');
 		$('#tips-type').text('');
@@ -231,7 +288,8 @@
 							'								</tr>';
 				})
 				str += '</table>';
-				$('#consultList').html($(str))
+				$('#consultList').html($(str));
+				ajaxLoadPagination('consult',data.data.total,data.data.page);
 			}
 		})
 	}
@@ -301,6 +359,7 @@
 		var status = $('select[name="status"] option:selected').val();
 		(type==='all')?null:url+='type='+type+'';
 		(status==='all')?null:url+='&status='+status+'';
+		$('#consult').attr('url',url)
 		ajaxLoadConsult(url);
 	})
 </script>
