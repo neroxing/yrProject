@@ -30,48 +30,47 @@
 	<link rel="stylesheet" href="css/yr.css">
 
 	<style type="text/css">
-		.arw>div:last-child>div {
+		@media (min-width: 768px) {
+			.normally {
+				width: 92%;
+			}
+
+			.normally.active {
+				width: 92%;
+			}
+		}
+
+		@media (min-width: 992px) {
+			.normally {
+				width: 94%;
+			}
+
+			.normally.active {
+				width: 94%;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.normally {
+				width: 95%;
+			}
+
+			.normally.active {
+				width: 95%;
+			}
+		}
+
+		.arw > div:last-child > div {
 			width: 100%;
 		}
+
 		.mg-forget {
 			margin-top: 50px;
 			margin-bottom: 50px;
 		}
 
-		/*		.bulge {
-					width: 0px;
-					height: 0px;
-					border: 17px solid transparent;
-					border-left-color: #ddd;
-				}
-
-
-				.bulge.active {
-					width: 0px;
-					height: 0px;
-					border: 17px solid transparent;
-					border-left-color: #8892b5;
-				}
-
-				.notch {
-					margin-left: -30px;
-					width: 0px;
-					height: 0px;
-					border: 17px solid #ddd;
-					border-left-color: transparent;
-				}
-				.notch.active {
-					margin-left: -30px;
-					width: 0px;
-					height: 0px;
-					border: 17px solid #8892b5;
-					border-left-color: transparent;
-				}*/
-
-
 		.normally {
 			line-height: 34px;
-			width: 95%;
 			height: 34px;
 			background-color: #ddd;
 			/*margin-left: 40px;*/
@@ -127,21 +126,21 @@
 
 		.normally.active {
 			line-height: 34px;
-			width: 95%;
 			height: 34px;
 			color: whitesmoke;
 			background-color: #8892b5;
 			/*margin-left: 40px;*/
 		}
-		.arw>div:first-child>div{
+
+		.arw > div:first-child > div {
 			padding-left: 17px;
 		}
 
-		.arw>div:first-child>div:before {
+		.arw > div:first-child > div:before {
 			content: none;
 		}
 
-		.arw>div:last-child>div:after {
+		.arw > div:last-child > div:after {
 			content: none;
 		}
 	</style>

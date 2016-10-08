@@ -25,36 +25,125 @@
 
 	<style type="text/css">
 		.container-fluid {
-			background: #3876c4 url(img/header.jpg) no-repeat center top;height: 340px;overflow: hidden;
-			*zoom：1;position: relative;width: 100% !important;
+			background: #3876c4 url(img/header.jpg) no-repeat center top;
+			height: 340px;
+			overflow: hidden;
+			*zoom：1;
+			position: relative;
+			width: 100% !important;
 		}
-		.ytBtn{margin-top: 5px;margin-bottom: 50px;}
-		.txs>div{padding-bottom: 10px; }
 
-		.businessCard{ }
-		.top {float: right;margin-top: 10px;margin-right: 300px;color: white;}
-		.img-sm {height: 50px;width: 50px;}
-		.tab-blue>li.active>a, .tab-blue>li.active>a:hover, .tab-blue>li.active>a:focus{
-			border-bottom:2px solid #717a97;
-			padding-top: 9px;}
-		.mainTopBottom{padding: 50px 0;color:#e93100;}
-		.mItems{ padding:20px;}
-		.mItemsHeight{margin-top: 10px;}
-		.mItemsHeight div{height: 25px;}
-		.mDynamic{padding: 30px; border-bottom: 1px solid #ddd;}
-		.all{padding: 10px;}
-		.messageTopBottom{margin-top:20px;margin-bottom: 40px;}
-		.message{border-top: 1px solid #ddd; padding:30px 0 23px 0;}
-		.textFont{ background-color: white !important;margin-bottom: 15px;}
-		.textFont span{font-size:16px ;}
-		.textFont div span{font-size:12px; }
-		textarea{resize:none;height: 95px;}
-		.linkStyle>div{padding:15px; border-bottom:1px solid #ddd;border-right: 1px solid #ddd;height: 108px; }
-		.linkStyle>div>div{padding: 5px; }
-		.pd20{padding-top: 20px;}
-		.pd20-10{padding-top: 20px; padding-bottom: 10px;}
-		.pd20-20{padding-top: 20px; padding-bottom: 20px;}
-		.noBorder{border-right:none !important;  }
+		.ytBtn {
+			margin-top: 5px;
+			margin-bottom: 50px;
+		}
+
+		.txs > div {
+			padding-bottom: 10px;
+		}
+
+		.businessCard {
+		}
+
+		.top {
+			float: right;
+			margin-top: 10px;
+			margin-right: 300px;
+			color: white;
+		}
+
+		.img-sm {
+			height: 50px;
+			width: 50px;
+		}
+
+		.tab-blue > li.active > a, .tab-blue > li.active > a:hover, .tab-blue > li.active > a:focus {
+			border-bottom: 2px solid #717a97;
+			padding-top: 9px;
+		}
+
+		.mainTopBottom {
+			padding: 50px 0;
+			color: #e93100;
+		}
+
+		.mItems {
+			padding: 20px;
+		}
+
+		.mItemsHeight {
+			margin-top: 10px;
+		}
+
+		.mItemsHeight div {
+			height: 25px;
+		}
+
+		.mDynamic {
+			padding: 30px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		.all {
+			padding: 10px;
+		}
+
+		.messageTopBottom {
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+
+		.message {
+			border-top: 1px solid #ddd;
+			padding: 30px 0 23px 0;
+		}
+
+		.textFont {
+			background-color: white !important;
+			margin-bottom: 15px;
+		}
+
+		.textFont span {
+			font-size: 16px;
+		}
+
+		.textFont div span {
+			font-size: 12px;
+		}
+
+		textarea {
+			resize: none;
+			height: 95px;
+		}
+
+		.linkStyle > div {
+			padding: 15px;
+			border-bottom: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			height: 108px;
+		}
+
+		.linkStyle > div > div {
+			padding: 5px;
+		}
+
+		.pd20 {
+			padding-top: 20px;
+		}
+
+		.pd20-10 {
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		.pd20-20 {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.noBorder {
+			border-right: none !important;
+		}
 	</style>
 </head>
 <body>
@@ -79,7 +168,9 @@
 						<div class="col-sm-9 ">浙江</div>
 						<div class="col-sm-3 ">意向资金</div>
 						<div class="col-sm-9 ">个人资金</div>
-						<div class="col-sm-6 col-sm-offset-3 ytBtn"><button class="btn center-block btn-hot-to-lighter btn-block">约谈项目方</button></div>
+						<div class="col-sm-6 col-sm-offset-3 ytBtn">
+							<button class="btn center-block btn-hot-to-lighter btn-block">约谈项目方</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -101,7 +192,7 @@
 				<div class="panel-heading">
 					<div class="row">
 						<div class="col-auto">
-							<div class="hot-underline">发布的信息 </div>
+							<div class="hot-underline">发布的信息</div>
 						</div>
 					</div>
 				</div>
@@ -138,10 +229,13 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<ul class="nav nav-panel-tabs tab-cold-overline">
-						<li role="presentation" class="active"><a href="#overview" data-toggle="tab" class="title">概况</a></li>
+						<li role="presentation" class="active"><a href="#overview" data-toggle="tab"
+						                                          class="title">概况</a></li>
 						<li role="presentation"><a href="#dynamic" data-toggle="tab" class="title">动态</a></li>
-						<li role="presentation"><a href="#contacts" data-toggle="tab" class="title">人脉（<span>0</span>）</a></li>
-						<li role="presentation"><a href="#message" data-toggle="tab" class="title">留言（<span>0</span>）</a>
+						<li role="presentation"><a href="#contacts" data-toggle="tab"
+						                           class="title">人脉（<span>0</span>）</a></li>
+						<li role="presentation"><a href="#message" data-toggle="tab"
+						                           class="title">留言（<span>0</span>）</a>
 						</li>
 					</ul>
 				</div>
@@ -149,7 +243,8 @@
 					<div class="tab-content">
 						<!-- 概况 -->
 						<div class="tab-pane active" id="overview">
-							<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息</div>
+							<div class="text-center mainTopBottom"><i class="fa fa-exclamation-circle"></i>该用户暂时还没有任何概况信息
+							</div>
 						</div>
 						<!-- 动态 -->
 						<div class="tab-pane" id="dynamic">
@@ -271,7 +366,8 @@
 											<div class="pull-right"><span>还可以输入x字</span></div>
 										</div>
 										<div class="panel-body row">
-											<textarea class="col-sm-12" placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
+											<textarea class="col-sm-12"
+											          placeholder="提示：严禁发布含有联系方式和广告性质的内容，违者一律删除！"></textarea>
 										</div>
 										<div class="panel-footer col-sm-12">
 											<div class="form-group">
@@ -285,7 +381,7 @@
 													<div>输入姓名与电话留言后方便对方与您联系!</div>
 												</div>
 												<div class="col-md-2 col-sm-6">
-													<select  class="form-control">
+													<select class="form-control">
 														<option value="公开" selected="selected">公开</option>
 														<option value="仅对方可见">仅对方可见</option>
 														<option value="会员可见">会员可见</option>
@@ -293,7 +389,8 @@
 												</div>
 												<div class="col-md-2 col-sm-6">
 													<a href="javascript:void(0);">
-														<button type="button" class="btn btn-hot-to-lighter pull-right">发布留言
+														<button type="button" class="btn btn-hot-to-lighter pull-right">
+															发布留言
 														</button>
 													</a>
 												</div>
@@ -384,7 +481,9 @@
 							</div>
 						</div>
 						<!-- contact way -->
-						<div class="pd20"><button href="" class="btn btn-hot-to-lighter">查看联系方式</button></div>
+						<div class="pd20">
+							<button href="" class="btn btn-hot-to-lighter">查看联系方式</button>
+						</div>
 						<div class="pd20-10">联系时请说明来自易融圈</div>
 					</div>
 				</div>
@@ -403,7 +502,9 @@
 						<div class="col-sm-5">
 							<div><a href="" class="title">曹先生</a></div>
 							<div>总经理</div>
-							<div><button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button></div>
+							<div>
+								<button class="btn btn-cold-to-lighter"><i class="fa fa-retweet"></i>交换名片</button>
+							</div>
 						</div>
 					</div>
 				</div>
