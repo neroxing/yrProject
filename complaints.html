@@ -78,8 +78,31 @@
 						</ul>
 					</div>
 					<div class="tab-content">
-						<div class="tab-pane active" id="receive" url="/complain/byComplainList">
-							<div id="receive-table"></div>
+						<div class="tab-pane fade in active" id="receive" url="/complain/byComplainList">
+							<div id="receive-table">
+								<table class="table table-bordered jz">
+									<tr class="text-center">
+										<th>投诉编号</th>
+										<th>投诉理由</th>
+										<th>投诉人</th>
+										<th>发起时间</th>
+										<th>状态</th>
+										<th>倒计时</th>
+										<th>操作</th>
+									</tr>
+									<tr class="text-center">
+										<td>2016082414106</td>
+										<td>虚假项目</td>
+										<td>1327253389</td>
+										<td>2016-08-24</td>
+										<td>投诉失败</td>
+										<td>倒计时</td>
+										<td>
+											<button class="btn btn-hot-to-lighter btn-sm">查看</button>
+										</td>
+									</tr>
+								</table>
+							</div>
 							<nav class="pull-right">
 								<ul class="pagination">
 									<li>
@@ -99,8 +122,31 @@
 								</ul>
 							</nav>
 						</div>
-						<div class="tab-pane " id="send" url="/complain/complainToList">
-							<div id="send-table"></div>
+						<div class="tab-pane fade" id="send" url="/complain/complainToList">
+							<div id="send-table">
+								<table class="table table-bordered jz">
+									<tr class="text-center">
+										<th>投诉编号</th>
+										<th>投诉理由</th>
+										<th>被投诉人</th>
+										<th>发起时间</th>
+										<th>状态</th>
+										<th>倒计时</th>
+										<th>操作</th>
+									</tr>
+									<tr class="text-center">
+										<td>2016082414106</td>
+										<td>虚假项目</td>
+										<td>1327253389</td>
+										<td>2016-08-24</td>
+										<td>投诉失败</td>
+										<td>倒计时</td>
+										<td>
+											<button class="btn btn-hot-to-lighter btn-sm">查看</button>
+										</td>
+									</tr>
+								</table>
+							</div>
 							<nav class="pull-right">
 								<ul class="pagination">
 									<li>
@@ -167,10 +213,23 @@
 			var pageCount = this.text;
 			if (pageCount != page) {
 				var pageUrl = $('#'+id+'').attr('url');
-				(this.text === '上一页') ? pageCount = (page - 1) : null;
-				(this.text === '后一页') ? pageCount = (page + 1) : null;
-				(this.text === '首页') ? pageCount = 1 : null;
-				(this.text === '最后一页') ? pageCount = total : null;
+				switch (this.text) {
+					case '上一页':
+						pageCount = (page - 1);
+						break;
+					case '后一页':
+						pageCount = (page + 1);
+						break;
+					case '首页':
+						pageCount = 1;
+						break;
+					case '最后一页':
+						pageCount = total;
+						break;
+					default:
+						console.log("页数不存在");
+						break;
+				}
 				pageUrl += '?page=' + pageCount;
 				switch(id){
 					case 'receive':

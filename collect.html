@@ -71,7 +71,7 @@
 					</div>
 					<div class="tab-content">
 						<!--我的收藏-->
-						<div class="tab-pane active" id="mine">
+						<div class="tab-pane active" id="mine" url="blade/collection/list">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<!--筛选排序-->
@@ -80,22 +80,23 @@
 											<form class="form-inline">
 												<div class="form-group">
 													<label class="control-label">信息类型:</label>
-													<select class="form-control">
-														<option>所有周期</option>
-														<option>一周内</option>
-														<option>两周内</option>
-														<option>一月内</option>
-														<option>三月内</option>
-														<option>半年内</option>
-														<option>一年内</option>
+													<select class="form-control" name="inf_categories">
+														<option value="all">所有信息</option>
+														<option value="project">项目信息</option>
+														<option value="capital">资金信息</option>
 													</select>
 													<label class="control-label">收藏日期:</label>
-													<select class="form-control">
-														<option>所有周期</option>
-														<option>留言</option>
-														<option>北京</option>
+													<select class="form-control" name="create_time">
+														<option value="all">所有周期</option>
+														<option value="">一周内</option>
+														<option value="">两周内</option>
+														<option value="1">一月内</option>
+														<option value="3">三月内</option>
+														<option value="6">半年内</option>
+														<option value="12">一年内</option>
 													</select>
-													<button class="btn btn-cold-to-lighter btn-sm"><i
+													<button class="btn btn-cold-to-lighter btn-sm" type="button"
+													        id="searchMine"><i
 															class="fa fa-search"></i>搜索
 													</button>
 												</div>
@@ -103,7 +104,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="panel panel-body">
+								<div class="panel panel-body" id="mine-table">
 									<table class="table table-bordered">
 										<tr class="text-center">
 											<th></th>
@@ -124,12 +125,30 @@
 										</tr>
 									</table>
 								</div>
+								<nav class="pull-right">
+									<ul class="pagination">
+										<li>
+											<a href="#" aria-label="Previous">
+												<span aria-hidden="true">上一页</span>
+											</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li>
+											<a href="#" aria-label="Next">
+												<span aria-hidden="true">下一页</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
-							<input type="checkbox">
-							<button class="btn btn-cold-to-lighter btn-xs">删除</button>
+							<input type="checkbox" id="selectAll">
+							<button class="btn btn-cold-to-lighter btn-xs" onclick="pluralDelete()">删除</button>
 						</div>
 						<!--被谁收藏-->
-						<div class="tab-pane" id="who">
+						<div class="tab-pane" id="who" rl="blade/collection/list/collect_me">
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<!--筛选排序-->
@@ -138,15 +157,16 @@
 											<form class="form-inline">
 												<div class="form-group">
 													<label class="control-label">会员类型:</label>
-													<select class="form-control">
-														<option>所有会员</option>
-														<option>企业会员</option>
-														<option>政府会员</option>
-														<option>个人会员</option>
+													<select class="form-control" name="type">
+														<option value="all">所有会员</option>
+														<option value="企业">企业会员</option>
+														<option value="政府">政府会员</option>
+														<option value="个人">个人会员</option>
 													</select>
 													<input type="text" class="form-control "
-													       placeholder="输入联系人搜索">
-													<button class="btn btn-cold-to-lighter btn-sm "><i
+													       placeholder="输入联系人搜索" name="name">
+													<button class="btn btn-cold-to-lighter btn-sm " id="searchWho"
+													        type="button"><i
 															class="fa fa-search"></i>搜索
 													</button>
 												</div>
@@ -154,7 +174,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="panel panel-body">
+								<div class="panel panel-body" id="wholist">
 									<div class="row">
 										<div class="col-sm-2">
 											<img class="img-responsive" alt="头像">
@@ -214,6 +234,24 @@
 										</div>
 									</div>
 								</div>
+								<nav class="pull-right">
+									<ul class="pagination">
+										<li>
+											<a href="#" aria-label="Previous">
+												<span aria-hidden="true">上一页</span>
+											</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li>
+											<a href="#" aria-label="Next">
+												<span aria-hidden="true">下一页</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -233,6 +271,66 @@
 
 <script type="text/javascript">
 	/*我的收藏*/
+	function ajaxLoadPagination(id, total, page) {
+		var pagenation = '';
+		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
+		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
+		if (total <= 5 || page < 5) {
+
+			for (var i = 1; i <= Math.min(total, 5); i++) {
+				if (i == page) {
+					pagenation += ('<li class="active"><a>' + i + '</a></li>');
+				}
+				else {
+					pagenation += ('<li><a>' + i + '</a></li>');
+				}
+			}
+			(total > 5) ? pagenation += ('<li><span>···</span></li><li><a>' + total + '</a></li>') : null;
+		}
+		else {
+			((page - 2) > 0) ? pagenation += ('<li><a>' + (page - 2) + '</a></li>') : null;
+			((page - 1) > 0) ? pagenation += ('<li><a>' + (page - 1) + '</a></li>') : null;
+			pagenation += ('<li class="active"><a>' + page + '</a></li>');
+			((page + 1) <= total) ? pagenation += ('<li><a>' + (page + 1) + '</a></li>') : null;
+			((page + 2) <= total) ? pagenation += ('<li><a>' + (page + 2) + '</a></li>') : null;
+			(total > (page + 2)) ? pagenation += ('<li><span>···</span></li></li><li><a>' + total + '</a></li>') : null;
+		}
+		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
+		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
+		$('#' + id + ' .pagination').html($(pagenation));
+		$('#' + id + ' .pagination li a').click(function () {
+			var pageCount = this.text;
+			if (pageCount != page) {
+				var pageUrl = $('#' + id + '').attr('url');
+				switch (this.text) {
+					case '上一页':
+						pageCount = (page - 1);
+						break;
+					case '后一页':
+						pageCount = (page + 1);
+						break;
+					case '首页':
+						pageCount = 1;
+						break;
+					case '最后一页':
+						pageCount = total;
+						break;
+					default:
+						console.log("页数不存在");
+						break;
+				}
+				pageUrl += '&page=' + pageCount;
+				switch (id) {
+					case 'mine':
+						ajaxLoadlist(pageUrl);
+						break;
+					case 'who':
+						ajaxLoadwho(pageUrl);
+						break;
+				}
+			}
+		})
+	}
 	function ajaxLoadlist(url) {
 		$.ajax({
 			type: 'GET',
@@ -252,19 +350,18 @@
 				for (var i = 0; i < data.data.rows.length; i++) {
 					var collectInfo = ([
 						'										<tr class="text-center">',
-						'											<td><input type="checkbox" name="mine" value="'+data.data.rows[i].pk_collection+'"></td>',
-						'											<td><a class="title" href="115.236.94.196:30000/blade/'+data.data.rows[i].inf_categories+'/view/'+data.data.rows[i].id_capital_project+'">' + data.data.rows[i].title + '</a></td>',
-						'											<td><a class="title">'+data.data.rows[i].ext.NAME+'</a></td>',
-						'											<td>' + ((data.data.rows[i].inf_categories === 'project') ? '<a class="title" href="115.236.94.196:30000/blade/project/">项目信息</a>' : '<a class="title" href="115.236.94.196:30000/blade/capital/">资金信息</a>') + '</td>',
+						'											<td><input type="checkbox" name="mine" value="' + data.data.rows[i].pk_collection + '"></td>',
+						'											<td><a class="title" href="${basePath}/' + data.data.rows[i].inf_categories + '/view/' + data.data.rows[i].id_capital_project + '">' + data.data.rows[i].title + '</a></td>',
+						'											<td><a class="title">' + data.data.rows[i].ext.NAME + '</a></td>',
+						'											<td>' + ((data.data.rows[i].inf_categories === 'project') ? '<a class="title" href="${basePath}/project/">项目信息</a>' : '<a class="title" href="${basePath}/capital/">资金信息</a>') + '</td>',
 						'											<td>' + data.data.rows[i].create_time.substring(0, 10) + '</td>',
-						'											<td><a class="from-cold" href="javascritp:void(0)" onclick="singleDelete('+data.data.rows[i].pk_collection+')">删除</a></td>',
+						'											<td><a class="from-cold" href="javascritp:void(0)" onclick="singleDelete(' + data.data.rows[i].pk_collection + ')">删除</a></td>',
 						'										</tr>'].join(""));
 					str += collectInfo;
 				}
-				str += (['	</table>',
-					'								</div>',
-					'							</div>'].join(""));
+				str += (['	</table>'].join(""));
 				$('#mine-table').html($(str));
+				ajaxLoadPagination('mine', data.data.total, data.data.page)
 			}
 		})
 	}
@@ -276,18 +373,18 @@
 			dataType: 'json',
 			success: function (data) {
 				var str = "";
-				$.each(data.data.rows,function (n, value) {
+				$.each(data.data.rows, function (n, value) {
 					var whoInfo = (['<div class="row">',
 						'										<div class="col-sm-2">',
-						'											<img class="img-responsive" alt="头像" src="'+value.ext.avatar+'">',
+						'											<img class="img-responsive" alt="头像" src="' + value.ext.avatar + '">',
 						'										</div>',
 						'										<div class="col-sm-10">',
 						'											<div class="row">',
 						'												<div class="col-sm-12">',
-						'													<a class="title"><strong>'+value.ext.NAME+'</strong></a>',
+						'													<a class="title"><strong>' + value.ext.NAME + '</strong></a>',
 						'												</div>',
-						'												<div class="col-sm-12">'+value.ext.company+'</div>',
-						'												<div class="col-sm-3 lh-22">'+value.ext.compan_type+'</div>',
+						'												<div class="col-sm-12">' + value.ext.company + '</div>',
+						'												<div class="col-sm-3 lh-22">' + value.ext.company_type + '</div>',
 						'												<div class="col-sm-offset-3 col-sm-6">',
 						'													<a class="btn btn-cold-to-lighter btn-xs pull-right">交换名片',
 						'													</a>',
@@ -297,7 +394,7 @@
 						'													</a>',
 						'												</div>',
 						'												<div class="col-sm-6">',
-						'													'+value.create_time.substring(0,10)+' 收藏了我的 <a class="title" href="115.236.94.196:30000/blade/'+value.inf_categories+'/view/'+value.id_capital_project+'">'+value.title+'</a>',
+						'													' + value.create_time.substring(0, 10) + ' 收藏了我的 <a class="title" href="${basePath}/' + value.inf_categories + '/view/' + value.id_capital_project + '">' + value.title + '</a>',
 						'												</div>',
 						'												<div class="col-sm-6 text-right">',
 						'													人脉关系：<a class="title">已投递名片(<span>0</span>)</a>',
@@ -306,25 +403,26 @@
 						'											</div>',
 						'										</div>',
 						'									</div>'].join(""));
-					str+=whoInfo;
+					str += whoInfo;
 				})
 				$('#wholist').html($(str));
+				ajaxLoadPagination('who', data.data.total, data.data.page);
 			}
 		})
 	}
 	;
 	function singleDelete(pk) {
 		event.returnValue = confirm("你确认要删除吗？");
-		if(event.returnValue){
+		if (event.returnValue) {
 			$.ajax({
-				type:'GET',
-				url:'115.236.94.196:30000/blade/collection/remove/'+pk+'',
-				dataType:'json',
-				success:function (data) {
-					if (data.code==0){
-						ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
+				type: 'GET',
+				url: '${basePath}/collection/remove/' + pk + '',
+				dataType: 'json',
+				success: function (data) {
+					if (data.code == 0) {
+						ajaxLoadlist('${basePath}/collection/list');
 					}
-					else{
+					else {
 						alert(data.message);
 					}
 				}
@@ -332,54 +430,56 @@
 		}
 	}
 	$('#selectAll').click(function () {
-		if ($(this).is(':checked')){
-			$("input[name='mine']").each(function() {
-				$(this).prop('checked',true);
+		if ($(this).is(':checked')) {
+			$("input[name='mine']").each(function () {
+				$(this).prop('checked', true);
 			});
 		}
-		else{
-			$("input[name='mine']").each(function() {
+		else {
+			$("input[name='mine']").each(function () {
 				$(this).removeAttr('checked');
 			});
 		}
 	})
 	$('#searchMine').click(function () {
-		var url = '115.236.94.196:30000/blade/collection/list?';
+		var url = 'blade/collection/list?';
 		var inf_categories = $('select[name="inf_categories"] option:selected').val();
 		var create_time = $('select[name="create_time"] option:selected').val();
-		(inf_categories==='all')?null:url+='inf_categories='+inf_categories+'';
-		(create_time==='all')?null:url+='&create_time='+create_time+'';
+		(inf_categories === 'all') ? null : url += 'inf_categories=' + inf_categories + '';
+		(create_time === 'all') ? null : url += '&create_time=' + create_time + '';
+		$('#mine').attr('url', url);
 		ajaxLoadlist(url);
 	});
 	$('#searchWho').click(function () {
-		var url = '115.236.94.196:30000/blade/collection/list/collect_me?';
+		var url = '${basePath}/collection/list/collect_me?';
 		var name = $('input[name="name"]').val();
 		var type = $('select[name="type"] option:selected').val();
-		(type==='all')?null:url+='type='+type+'';
+		(type === 'all') ? null : url += 'type=' + type + '';
 		if (name !== null && name !== undefined && name !== '') {
-			url+='&name='+name+'';
+			url += '&name=' + name + '';
 		}
+		$('#who').attr('url', url);
 		ajaxLoadwho(url);
 	})
-	function pluralDelete(){
-		var url = '115.236.94.196:30000/blade/collection/remove/';
+	function pluralDelete() {
+		var url = '${basePath}/collection/remove/';
 		var haveDelete = false;
-		$('input:checkbox[name="mine"]:checked').each(function (index,element) {
-			(haveDelete)?url=url+'-'+$(this).val():url+=$(this).val();
+		$('input:checkbox[name="mine"]:checked').each(function (index, element) {
+			(haveDelete) ? url = url + '-' + $(this).val() : url += $(this).val();
 			haveDelete = true;
 		})
-		if (haveDelete){
+		if (haveDelete) {
 			event.returnValue = confirm("你确认要删除吗？");
-			if(event.returnValue){
+			if (event.returnValue) {
 				$.ajax({
-					type:'POST',
-					url:url,
-					dataType:'json',
-					success:function (data) {
-						if (data.code==0){
-							ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
+					type: 'POST',
+					url: url,
+					dataType: 'json',
+					success: function (data) {
+						if (data.code == 0) {
+							ajaxLoadlist('${basePath}/collection/list');
 						}
-						else{
+						else {
 							alert(data.message);
 						}
 					}
@@ -389,8 +489,8 @@
 
 	}
 	$(document).ready(function () {
-		ajaxLoadlist('115.236.94.196:30000/blade/collection/list');
-		ajaxLoadwho('115.236.94.196:30000/blade/collection/list/collect_me')
+		ajaxLoadlist('blade/collection/list?');
+		ajaxLoadwho('blade/collection/list/collect_me?')
 	})
 </script>
 </body>

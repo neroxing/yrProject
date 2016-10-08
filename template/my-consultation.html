@@ -217,10 +217,23 @@
 			var pageCount = this.text;
 			if (pageCount != page) {
 				var pageUrl = $('#'+id+'').attr('url');
-				(this.text === '上一页') ? pageCount = (page - 1) : null;
-				(this.text === '后一页') ? pageCount = (page + 1) : null;
-				(this.text === '首页') ? pageCount = 1 : null;
-				(this.text === '最后一页') ? pageCount = total : null;
+				switch (this.text) {
+					case '上一页':
+						pageCount = (page - 1);
+						break;
+					case '后一页':
+						pageCount = (page + 1);
+						break;
+					case '首页':
+						pageCount = 1;
+						break;
+					case '最后一页':
+						pageCount = total;
+						break;
+					default:
+						console.log("页数不存在");
+						break;
+				}
 				pageUrl += '&page=' + pageCount;
 				ajaxLoadConsult(pageUrl);
 			}

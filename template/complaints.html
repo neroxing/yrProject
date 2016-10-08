@@ -111,7 +111,7 @@
 @include("/common/_jsasset.html") {}
 
 <script type="text/javascript">
-	function ajaxLoadPagination(id,total,page) {
+	function ajaxLoadPagination(id, total, page) {
 		var pagenation = '';
 		(page != 1) ? pagenation += ('<li><a>首页</a></li>') : null;
 		(total > 1 && page > 1) ? pagenation += ('<li><a>上一页</a></li>') : null;
@@ -137,17 +137,30 @@
 		}
 		(total > 1 && page < total) ? pagenation += ('<li><a>后一页</a></li>') : null;
 		(page != total && total > 0) ? pagenation += ('<li><a>最后一页</a></li>') : null;
-		$('#'+id+' .pagination').html($(pagenation));
-		$('#'+id+' .pagination li a').click(function () {
+		$('#' + id + ' .pagination').html($(pagenation));
+		$('#' + id + ' .pagination li a').click(function () {
 			var pageCount = this.text;
 			if (pageCount != page) {
-				var pageUrl = $('#'+id+'').attr('url');
-				(this.text === '上一页') ? pageCount = (page - 1) : null;
-				(this.text === '后一页') ? pageCount = (page + 1) : null;
-				(this.text === '首页') ? pageCount = 1 : null;
-				(this.text === '最后一页') ? pageCount = total : null;
+				var pageUrl = $('#' + id + '').attr('url');
+				switch (this.text) {
+					case '上一页':
+						pageCount = (page - 1);
+						break;
+					case '后一页':
+						pageCount = (page + 1);
+						break;
+					case '首页':
+						pageCount = 1;
+						break;
+					case '最后一页':
+						pageCount = total;
+						break;
+					default:
+						console.log("页数不存在");
+						break;
+				}
 				pageUrl += '?page=' + pageCount;
-				switch(id){
+				switch (id) {
 					case 'receive':
 						ajaxLoadReceive(pageUrl);
 						break;
@@ -190,7 +203,7 @@
 				})
 				str += '</table>';
 				$('#receive-table').html($(str));
-				ajaxLoadPagination('receive',data.data.total,data.data.page)
+				ajaxLoadPagination('receive', data.data.total, data.data.page)
 			}
 		})
 	}
@@ -226,14 +239,14 @@
 				})
 				str += '</table>';
 				$('#send-table').html($(str));
-				ajaxLoadPagination('send',data.data.total,data.data.page)
+				ajaxLoadPagination('send', data.data.total, data.data.page)
 			}
 		})
 	}
-$(document).ready(function () {
-	ajaxLoadSend("${basePath}/complain/complainToList")
-	ajaxLoadReceive("${basePath}/complain/byComplainList")
-})
+	$(document).ready(function () {
+		ajaxLoadSend("${basePath}/complain/complainToList")
+		ajaxLoadReceive("${basePath}/complain/byComplainList")
+	})
 </script>
 </body>
 </html>

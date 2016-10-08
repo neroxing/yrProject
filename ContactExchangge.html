@@ -397,10 +397,23 @@
 			var pageCount = this.text;
 			if (pageCount != page) {
 				var pageUrl = $('#' + id + '').attr('url');
-				(this.text === '上一页') ? pageCount = (page - 1) : null;
-				(this.text === '后一页') ? pageCount = (page + 1) : null;
-				(this.text === '首页') ? pageCount = 1 : null;
-				(this.text === '最后一页') ? pageCount = total : null;
+				switch (this.text) {
+					case '上一页':
+						pageCount = (page - 1);
+						break;
+					case '后一页':
+						pageCount = (page + 1);
+						break;
+					case '首页':
+						pageCount = 1;
+						break;
+					case '最后一页':
+						pageCount = total;
+						break;
+					default:
+						console.log("页数不存在");
+						break;
+				}
 				pageUrl += 'page=' + pageCount;
 				switch (id) {
 					case 'business':
@@ -439,10 +452,10 @@
 				var str = '';
 				$.each(data.data.rows, function (n, value) {
 					str += '<div class="row businessCard">' +
-							'								<div class="col-sm-2"><a href=""><img src="'+value.ext.avatar+'" class="img-responsive"></a></div>' +
+							'								<div class="col-sm-2"><a href=""><img src="' + value.ext.avatar + '" class="img-responsive"></a></div>' +
 							'								<div class="col-sm-10">' +
-							'									<div><a href="" class="title">'+value.ext.name+'</a></div>' +
-							'									<div>'+value.ext.company+' '+value.ext.company_role+'</div>' +
+							'									<div><a href="" class="title">' + value.ext.name + '</a></div>' +
+							'									<div>' + value.ext.company + ' ' + value.ext.company_role + '</div>' +
 							'									<div class="row">' +
 							'										<div class="col-sm-7 col-sm-offset-5">' +
 							'											<div class="pull-right">' +
